@@ -11,7 +11,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 ## Progress 
 
 
-- [ ] ☸ 1 > [test](Days/Day1.md)
+- [ ] ☸ 1 > [test](Days/day1.md)
 - [ ] ☸ 2 > [](Days/Day2.md)
 - [ ] ☸ 3 > [](Days/Day3.md)
 - [ ] ☸ 4 > [](Days/Day4.md)
