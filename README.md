@@ -43,13 +43,13 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Understand Networking
 
-- [ ] ☸ 21 > [](Days/day21.md)
-- [ ] ☸ 22 > [](Days/day22.md)
-- [ ] ☸ 23 > [](Days/day23.md)
-- [ ] ☸ 24 > [](Days/day24.md)
-- [ ] ☸ 25 > [](Days/day25.md)
-- [ ] ☸ 26 > [](Days/day26.md)
-- [ ] ☸ 27 > [](Days/day27.md)
+- [ ] 🌐 21 > [](Days/day21.md)
+- [ ] 🌐 22 > [](Days/day22.md)
+- [ ] 🌐 23 > [](Days/day23.md)
+- [ ] 🌐 24 > [](Days/day24.md)
+- [ ] 🌐 25 > [](Days/day25.md)
+- [ ] 🌐 26 > [](Days/day26.md)
+- [ ] 🌐 27 > [](Days/day27.md)
 
 ### Stick to one Cloud Provider
 
