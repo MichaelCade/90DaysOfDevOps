@@ -10,56 +10,56 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ## Progress 
 
-- [ ] ☸ 1 > [Introduction](Days/day1.md)
+- [ ] ♾️ 1 > [Introduction](Days/day1.md)
 
 ### What is and why do we use DevOps
 
 
-- [ ] ☸ 2 > [](Days/day2.md)
-- [ ] ☸ 3 > [](Days/day3.md)
-- [ ] ☸ 4 > [](Days/day4.md)
-- [ ] ☸ 5 > [](Days/day5.md)
-- [ ] ☸ 6 > [](Days/day6.md)
+- [ ] ♾️ 2 > [](Days/day2.md)
+- [ ] ♾️ 3 > [](Days/day3.md)
+- [ ] ♾️ 4 > [](Days/day4.md)
+- [ ] ♾️ 5 > [](Days/day5.md)
+- [ ] ♾️ 6 > [](Days/day6.md)
 
 ### Learning a Programming Language
 
-- [ ] ☸ 7 > [](Days/day7.md)
-- [ ] ☸ 8 > [](Days/day8.md)
-- [ ] ☸ 9 > [](Days/day9.md)
-- [ ] ☸ 10 > [](Days/day10.md)
-- [ ] ☸ 11 > [](Days/day11.md)
-- [ ] ☸ 12 > [](Days/day12.md)
-- [ ] ☸ 13 > [](Days/day13.md)
+- [ ] ⌨️ 7 > [](Days/day7.md)
+- [ ] ⌨️ 8 > [](Days/day8.md)
+- [ ] ⌨️ 9 > [](Days/day9.md)
+- [ ] ⌨️ 10 > [](Days/day10.md)
+- [ ] ⌨️ 11 > [](Days/day11.md)
+- [ ] ⌨️ 12 > [](Days/day12.md)
+- [ ] ⌨️ 13 > [](Days/day13.md)
 
 ### Knowing Linux Basics
 
-- [ ] ☸ 14 > [](Days/day14.md)
-- [ ] ☸ 15 > [](Days/day15.md)
-- [ ] ☸ 16 > [](Days/day16.md)
-- [ ] ☸ 17 > [](Days/day17.md)
-- [ ] ☸ 18 > [](Days/day18.md)
-- [ ] ☸ 19 > [](Days/day19.md)
-- [ ] ☸ 20 > [](Days/day20.md)
+- [ ] 🐧 14 > [](Days/day14.md)
+- [ ] 🐧 15 > [](Days/day15.md)
+- [ ] 🐧 16 > [](Days/day16.md)
+- [ ] 🐧 17 > [](Days/day17.md)
+- [ ] 🐧 18 > [](Days/day18.md)
+- [ ] 🐧 19 > [](Days/day19.md)
+- [ ] 🐧 20 > [](Days/day20.md)
 
 ### Understand Networking
 
-- [ ] ☸ 21 > [](Days/day21.md)
-- [ ] ☸ 22 > [](Days/day22.md)
-- [ ] ☸ 23 > [](Days/day23.md)
-- [ ] ☸ 24 > [](Days/day24.md)
-- [ ] ☸ 25 > [](Days/day25.md)
-- [ ] ☸ 26 > [](Days/day26.md)
-- [ ] ☸ 27 > [](Days/day27.md)
+- [ ] 🌐 21 > [](Days/day21.md)
+- [ ] 🌐 22 > [](Days/day22.md)
+- [ ] 🌐 23 > [](Days/day23.md)
+- [ ] 🌐 24 > [](Days/day24.md)
+- [ ] 🌐 25 > [](Days/day25.md)
+- [ ] 🌐 26 > [](Days/day26.md)
+- [ ] 🌐 27 > [](Days/day27.md)
 
 ### Stick to one Cloud Provider
 
-- [ ] ☸ 28 > [](Days/day28.md)
-- [ ] ☸ 29 > [](Days/day29.md)
-- [ ] ☸ 30 > [](Days/day30.md)
-- [ ] ☸ 31 > [](Days/day31.md)
-- [ ] ☸ 32 > [](Days/day32.md)
-- [ ] ☸ 33 > [](Days/day33.md)
-- [ ] ☸ 34 > [](Days/day34.md)
+- [ ] ☁️ 28 > [](Days/day28.md)
+- [ ] ☁️ 29 > [](Days/day29.md)
+- [ ] ☁️ 30 > [](Days/day30.md)
+- [ ] ☁️ 31 > [](Days/day31.md)
+- [ ] ☁️ 32 > [](Days/day32.md)
+- [ ] ☁️ 33 > [](Days/day33.md)
+- [ ] ☁️ 34 > [](Days/day34.md)
 
 ### Use Git Effectively
 
