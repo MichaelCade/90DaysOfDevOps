@@ -23,13 +23,13 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Learning a Programming Language
 
-- [ ] ☸ 7 > [](Days/day7.md)
-- [ ] ☸ 8 > [](Days/day8.md)
-- [ ] ☸ 9 > [](Days/day9.md)
-- [ ] ☸ 10 > [](Days/day10.md)
-- [ ] ☸ 11 > [](Days/day11.md)
-- [ ] ☸ 12 > [](Days/day12.md)
-- [ ] ☸ 13 > [](Days/day13.md)
+- [ ] ⌨️ 7 > [](Days/day7.md)
+- [ ] ⌨️ 8 > [](Days/day8.md)
+- [ ] ⌨️ 9 > [](Days/day9.md)
+- [ ] ⌨️ 10 > [](Days/day10.md)
+- [ ] ⌨️ 11 > [](Days/day11.md)
+- [ ] ⌨️ 12 > [](Days/day12.md)
+- [ ] ⌨️ 13 > [](Days/day13.md)
 
 ### Knowing Linux Basics
 
