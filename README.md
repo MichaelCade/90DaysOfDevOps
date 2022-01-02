@@ -15,7 +15,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 ### What is and why do we use DevOps
 
 
-- [ ] ♾️ 2 > [](Days/day2.md)
+- [ ] ♾️ 2 > [Responsibilities of a DevOps Engineer](Days/day2.md)
 - [ ] ♾️ 3 > [](Days/day3.md)
 - [ ] ♾️ 4 > [](Days/day4.md)
 - [ ] ♾️ 5 > [](Days/day5.md)
