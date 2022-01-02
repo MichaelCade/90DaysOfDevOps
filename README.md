@@ -63,23 +63,23 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Use Git Effectively
 
-- [ ] ☸ 35 > [](Days/day35.md)
-- [ ] ☸ 36 > [](Days/day36.md)
-- [ ] ☸ 37 > [](Days/day37.md)
-- [ ] ☸ 38 > [](Days/day38.md)
-- [ ] ☸ 39 > [](Days/day39.md)
-- [ ] ☸ 40 > [](Days/day40.md)
-- [ ] ☸ 41 > [](Days/day41.md)
+- [ ] 📚 35 > [](Days/day35.md)
+- [ ] 📚 36 > [](Days/day36.md)
+- [ ] 📚 37 > [](Days/day37.md)
+- [ ] 📚 38 > [](Days/day38.md)
+- [ ] 📚 39 > [](Days/day39.md)
+- [ ] 📚 40 > [](Days/day40.md)
+- [ ] 📚 41 > [](Days/day41.md)
 
-### Containers
+### Containers 
 
-- [ ] ☸ 42 > [](Days/day42.md)
-- [ ] ☸ 43 > [](Days/day43.md)
-- [ ] ☸ 44 > [](Days/day44.md)
-- [ ] ☸ 45 > [](Days/day45.md)
-- [ ] ☸ 46 > [](Days/day46.md)
-- [ ] ☸ 47 > [](Days/day47.md)
-- [ ] ☸ 48 > [](Days/day48.md)
+- [ ] 🏗️ 42 > [](Days/day42.md)
+- [ ] 🏗️ 43 > [](Days/day43.md)
+- [ ] 🏗️ 44 > [](Days/day44.md)
+- [ ] 🏗️ 45 > [](Days/day45.md)
+- [ ] 🏗️ 46 > [](Days/day46.md)
+- [ ] 🏗️ 47 > [](Days/day47.md)
+- [ ] 🏗️ 48 > [](Days/day48.md)
 
 ### Kubernetes
 
@@ -93,50 +93,50 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Learn Infrastructure as Code
 
-- [ ] ☸ 56 > [](Days/day56.md)
-- [ ] ☸ 57 > [](Days/day57.md)
-- [ ] ☸ 58 > [](Days/day58.md)
-- [ ] ☸ 59 > [](Days/day59.md)
-- [ ] ☸ 60 > [](Days/day60.md)
-- [ ] ☸ 61 > [](Days/day61.md)
-- [ ] ☸ 62 > [](Days/day62.md)
+- [ ] 🤖 56 > [](Days/day56.md)
+- [ ] 🤖 57 > [](Days/day57.md)
+- [ ] 🤖 58 > [](Days/day58.md)
+- [ ] 🤖 59 > [](Days/day59.md)
+- [ ] 🤖 60 > [](Days/day60.md)
+- [ ] 🤖 61 > [](Days/day61.md)
+- [ ] 🤖 62 > [](Days/day62.md)
 
 ### Automate Configuration Management
 
-- [ ] ☸ 63 > [](Days/day63.md)
-- [ ] ☸ 64 > [](Days/day64.md)
-- [ ] ☸ 65 > [](Days/day65.md)
-- [ ] ☸ 66 > [](Days/day66.md)
-- [ ] ☸ 67 > [](Days/day67.md)
-- [ ] ☸ 68 > [](Days/day68.md)
-- [ ] ☸ 69 > [](Days/day69.md)
+- [ ] 📜 63 > [](Days/day63.md)
+- [ ] 📜 64 > [](Days/day64.md)
+- [ ] 📜 65 > [](Days/day65.md)
+- [ ] 📜 66 > [](Days/day66.md)
+- [ ] 📜 67 > [](Days/day67.md)
+- [ ] 📜 68 > [](Days/day68.md)
+- [ ] 📜 69 > [](Days/day69.md)
 
 ### Create CI/CD Pipelines 
 
-- [ ] ☸ 70 > [](Days/day70.md)
-- [ ] ☸ 71 > [](Days/day71.md)
-- [ ] ☸ 72 > [](Days/day72.md)
-- [ ] ☸ 73 > [](Days/day73.md)
-- [ ] ☸ 74 > [](Days/day74.md)
-- [ ] ☸ 75 > [](Days/day75.md)
-- [ ] ☸ 76 > [](Days/day76.md)
+- [ ] 🔄 70 > [](Days/day70.md)
+- [ ] 🔄 71 > [](Days/day71.md)
+- [ ] 🔄 72 > [](Days/day72.md)
+- [ ] 🔄 73 > [](Days/day73.md)
+- [ ] 🔄 74 > [](Days/day74.md)
+- [ ] 🔄 75 > [](Days/day75.md)
+- [ ] 🔄 76 > [](Days/day76.md)
 
 ### Monitoring, Log Management, and Data Visualisation
 
-- [ ] ☸ 77 > [](Days/day77.md)
-- [ ] ☸ 78 > [](Days/day78.md)
-- [ ] ☸ 79 > [](Days/day79.md)
-- [ ] ☸ 80 > [](Days/day80.md)
-- [ ] ☸ 81 > [](Days/day81.md)
-- [ ] ☸ 82 > [](Days/day82.md)
-- [ ] ☸ 83 > [](Days/day83.md)
+- [ ] 📈 77 > [](Days/day77.md)
+- [ ] 📈 78 > [](Days/day78.md)
+- [ ] 📈 79 > [](Days/day79.md)
+- [ ] 📈 80 > [](Days/day80.md)
+- [ ] 📈 81 > [](Days/day81.md)
+- [ ] 📈 82 > [](Days/day82.md)
+- [ ] 📈 83 > [](Days/day83.md)
 
 ### Store & Protect Your Data
 
-- [ ] ☸ 84 > [](Days/day84.md)
-- [ ] ☸ 85 > [](Days/day85.md)
-- [ ] ☸ 86 > [](Days/day86.md)
-- [ ] ☸ 87 > [](Days/day87.md)
-- [ ] ☸ 88 > [](Days/day88.md)
-- [ ] ☸ 89 > [](Days/day89.md)
-- [ ] ☸ 90 > [](Days/day90.md)
+- [ ] 🗃️ 84 > [](Days/day84.md)
+- [ ] 🗃️ 85 > [](Days/day85.md)
+- [ ] 🗃️ 86 > [](Days/day86.md)
+- [ ] 🗃️ 87 > [](Days/day87.md)
+- [ ] 🗃️ 88 > [](Days/day88.md)
+- [ ] 🗃️ 89 > [](Days/day89.md)
+- [ ] 🗃️ 90 > [](Days/day90.md)
