@@ -50,8 +50,8 @@ I am always open to adding additional resources to these readme files as it is h
 
 My advice is to watch all of the below and hopefully you also picked something up from the text and explanations above. 
 
-[What is DevOps? - Github YouTube](https://www.youtube.com/watch?v=kBV8gPVZNEE)
-[What is DevOps? - IBM YouTube](https://www.youtube.com/watch?v=UbtB4sMaaNM)
-[What is DevOps? - AWS ](https://aws.amazon.com/devops/what-is-devops/)
+- [What is DevOps? - Github YouTube](https://www.youtube.com/watch?v=kBV8gPVZNEE)
+- [What is DevOps? - IBM YouTube](https://www.youtube.com/watch?v=UbtB4sMaaNM)
+- [What is DevOps? - AWS ](https://aws.amazon.com/devops/what-is-devops/)
 
 If you made it this far then you will know if this is where you want to be or not. See you on Day 3.  
