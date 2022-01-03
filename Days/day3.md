@@ -1,6 +1,6 @@
 ## DevOps Lifecycle - Application Focused
 
-As we continue through these next few weeks we are 100% going to come across these titles (Continous Development, Testing, Deployment, Monitor) over and over again, If you are heading towards the DevOps Engineer role then repeatability will be something you will get used to but constantly enhancing each time is another thing that keeps things interesting. 
+As we continue through these next few weeks we are 100% going to come across these titles (Continuous Development, Testing, Deployment, Monitor) over and over again, If you are heading towards the DevOps Engineer role then repeatability will be something you will get used to but constantly enhancing each time is another thing that keeps things interesting. 
 
 In this hour we are going to take a look at the high level view of the application from start to finish and then back round again like a constant loop. 
 
@@ -13,7 +13,7 @@ As a DevOps engineer, remember you are probably not the one creating this plan o
 
 But it also would not hurt for you to be able to read some of the code so that you can make the best infrastructure decisions moving forward for your application.
 
-We previously mentioned that this application can be written in any language. Importantly this should be mainted using a version control system, this is something we will cover also in detail later on and in particular we will dive into **Git**. 
+We previously mentioned that this application can be written in any language. Importantly this should be maintained using a version control system, this is something we will cover also in detail later on and in particular we will dive into **Git**. 
 
 It is also likely that it will not be one developer working on this project although this could be the case but even so best practices would require a code repository to store and collaborate on the code, this could be private or public and could be hosted or privately deployed generally speaking you would hear the likes of **GitHub or GitLab** being used as a code repository. Again we will cover these as part of our section on **Git** later on. 
 
@@ -23,7 +23,7 @@ At this stage we have our requirements and we have our application being develop
 
 This phase enables QA to test for bugs, more frequently we see containers being used for simulating the test environment which overall can improve on cost overheads of physical or cloud infrastructure. 
 
-This phase is also likely going to be automated as part of the next area which is Continous Integration.
+This phase is also likely going to be automated as part of the next area which is Continuous Integration.
 
 The ability to automate this testing vs 10s,100s or even 1000s of QA engineers having to do this manually speaks for itself, these engineers can focus on something else within the stack to ensure you are moving faster and developing more functionality vs testing bugs and software which tends to be the hold up on most traditional software releases that use a waterfall methodology. 
 
@@ -33,7 +33,7 @@ Quite importantly Integration is at the middle of the DevOps lifecycle. It is th
 
 With every commit your application can go through the automated testing phases and this allows for early detection of issues or bugs before the next phase. 
 
-Now you might at this stage be saying "but we don't create applications, we buy it off the shelf from a sofware vendor" Don't worry many companies do this and will continue to do this and it will be the software vendor that is concentrating on the above 3 phases but you might want to still adopt the final phase as this will enable for faster and more effcient deployments of your off the shelf deployments. 
+Now you might at this stage be saying "but we don't create applications, we buy it off the shelf from a software vendor" Don't worry many companies do this and will continue to do this and it will be the software vendor that is concentrating on the above 3 phases but you might want to still adopt the final phase as this will enable for faster and more efficient deployments of your off the shelf deployments. 
 
 I would also suggest just having this above knowledge is very important as you might buy off the shelf software today, but what about tomorrow or down the line... next job maybe? 
 
@@ -46,13 +46,13 @@ All of these bold topics we will go into more detail over the next few weeks to 
 
 ### Monitoring 
 
-Things are moving fast here and we have our Application that we are continously updating with new features and functionality and we have our testing making sure no gremlins are being found. We have the application running in our environment that can be continually keeping the required configuration and performance. 
+Things are moving fast here and we have our Application that we are continuously updating with new features and functionality and we have our testing making sure no gremlins are being found. We have the application running in our environment that can be continually keeping the required configuration and performance. 
 
-But now we need to be sure that our end users are getting the experience they require. Here we need to make sure that our Application Performance is continously being monitored, this phase is going to allow your developers to make better decisions about enhancements to the application in future releases to better serve the end users. 
+But now we need to be sure that our end users are getting the experience they require. Here we need to make sure that our Application Performance is continuously being monitored, this phase is going to allow your developers to make better decisions about enhancements to the application in future releases to better serve the end users. 
 
 This section is also where we are going to capture that feedback wheel about the features that have been implemented and how the end users would like to make these better for them. 
 
-Reliability is a key factor here as well, at the end of the day we want our Application to be available all the time it is required. This then lends to other **observability, security and data management** areas that should be continously monitored and feedback can always be used to better enhance, update and release the application continously. 
+Reliability is a key factor here as well, at the end of the day we want our Application to be available all the time it is required. This then lends to other **observability, security and data management** areas that should be continuously monitored and feedback can always be used to better enhance, update and release the application continuously. 
 
 ## Resources 
 
@@ -60,10 +60,10 @@ I am always open to adding additional resources to these readme files as it is h
 
 My advice is to watch all of the below and hopefully you also picked something up from the text and explanations above. 
 
-- [Continous Development](https://www.youtube.com/watch?v=UnjwVYAN7Ns) I will also add that this is focused on manufacturing but the lean culture can be closely followed with DevOps. 
-- [Continous Testing - IBM YouTube](https://www.youtube.com/watch?v=RYQbmjLgubM)
-- [Continous Integration - IBM YouTube](https://www.youtube.com/watch?v=1er2cjUq1UI)
-- [Continous Monitoring](https://www.youtube.com/watch?v=Zu53QQuYqJ0)
+- [Continuous Development](https://www.youtube.com/watch?v=UnjwVYAN7Ns) I will also add that this is focused on manufacturing but the lean culture can be closely followed with DevOps. 
+- [Continuous Testing - IBM YouTube](https://www.youtube.com/watch?v=RYQbmjLgubM)
+- [Continuous Integration - IBM YouTube](https://www.youtube.com/watch?v=1er2cjUq1UI)
+- [Continuous Monitoring](https://www.youtube.com/watch?v=Zu53QQuYqJ0)
 - [**NOT FREE** The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win](https://www.amazon.co.uk/Phoenix-Project-DevOps-Helping-Business-ebook/dp/B00AZRBLHO)
 
 If you made it this far then you will know if this is where you want to be or not. See you on Day 3.  
