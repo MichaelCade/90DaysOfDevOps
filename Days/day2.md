@@ -54,4 +54,4 @@ My advice is to watch all of the below and hopefully you also picked something u
 - [What is DevOps? - IBM YouTube](https://www.youtube.com/watch?v=UbtB4sMaaNM)
 - [What is DevOps? - AWS ](https://aws.amazon.com/devops/what-is-devops/)
 
-If you made it this far then you will know if this is where you want to be or not. See you on [Day 3](Days/day3.md).  
+If you made it this far then you will know if this is where you want to be or not. See you on [Day 3](day3.md).  
