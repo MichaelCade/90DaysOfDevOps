@@ -17,8 +17,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [ ] ♾️ 2 > [Responsibilities of a DevOps Engineer](Days/day2.md)
 - [ ] ♾️ 3 > [DevOps Lifecycle - Application Focused](Days/day3.md)
 - [ ] ♾️ 4 > [DevOps & Agile](Days/day4.md)
-- [ ] ♾️ 5 > [Plan > Code > Build > Test >](Days/day5.md)
-- [ ] ♾️ 6 > [Release > Operate > Monitor >](Days/day6.md)
+- [ ] ♾️ 5 > [](Days/day5.md)
+- [ ] ♾️ 6 > [](Days/day6.md)
 
 ### Learning a Programming Language
 
