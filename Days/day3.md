@@ -54,6 +54,8 @@ This section is also where we are going to capture that feedback wheel about the
 
 Reliability is a key factor here as well, at the end of the day we want our Application to be available all the time it is required. This then lends to other **observability, security and data management** areas that should be continuously monitored and feedback can always be used to better enhance, update and release the application continuously. 
 
+Some input from the community here specifcally [@_ediri](https://twitter.com/_ediri) mentioned also part of this continous process we should also have the FinOps teams involved. Apps & Data are running and stored somewhere you should be monitoring this continously to make sure if things change from a resources point of view your costs are not causing some major financial pain on your Cloud Bills.  
+
 ## Resources 
 
 I am always open to adding additional resources to these readme files as it is here as a learning tool.  
