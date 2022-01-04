@@ -66,4 +66,4 @@ My advice is to watch all of the below and hopefully you also picked something u
 - [Continuous Monitoring](https://www.youtube.com/watch?v=Zu53QQuYqJ0)
 - [**NOT FREE** The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win](https://www.amazon.co.uk/Phoenix-Project-DevOps-Helping-Business-ebook/dp/B00AZRBLHO)
 
-If you made it this far then you will know if this is where you want to be or not. See you on Day 3.  
+If you made it this far then you will know if this is where you want to be or not. See you on [Day 4](Days/day4.md).  

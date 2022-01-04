@@ -4,7 +4,7 @@ Day 1 of our 90 days and adventure to learn a good foundational understanding of
 
 This learning journey started for me a few years back but my focus then was around virtualisation platforms and cloud based technologies, I was looking mostly into Infrastructure as Code and Application configuration management with Terraform and Chef. 
 
-Fast forward to March 2021, I was given an amazing oppurtunity to concentrate my efforts around the Cloud Native strategy at Kasten by Veeam. Which was going to be a massive focus on Kubernetes and DevOps and the community surrounding these technologies. I started my learning journey and quickly realised there was a very wide world aside from just learning the fundamentals of Kubernetes and Containerisation and it was then when I started speaking to the community and learning more and more about the DevOps culture, tooling and processes so I started documenting some of the areas I wanted to learn in public. 
+Fast forward to March 2021, I was given an amazing opportunity to concentrate my efforts around the Cloud Native strategy at Kasten by Veeam. Which was going to be a massive focus on Kubernetes and DevOps and the community surrounding these technologies. I started my learning journey and quickly realised there was a very wide world aside from just learning the fundamentals of Kubernetes and Containerisation and it was then when I started speaking to the community and learning more and more about the DevOps culture, tooling and processes so I started documenting some of the areas I wanted to learn in public. 
 
 [So you want to learn DevOps?](https://blog.kasten.io/devops-learning-curve)
 
@@ -26,7 +26,7 @@ I found this a great resource when I was creating my initial list and blog post 
 
 There are so many blog articles and YouTube videos to list here, but as we start the 90 day challenge and we focus on spending around an hour a day learning something new or about DevOps I thought it was good to get some of the high level of "what DevOps is" down to begin. 
 
-Firstly, DevOps is not a tool. You cannot buy it, it is not a software sku or an open source github repository you can download. It is also not a programming language, it is also not some dark art magic either. 
+Firstly, DevOps is not a tool. You cannot buy it, it is not a software sku or an open source GitHub repository you can download. It is also not a programming language, it is also not some dark art magic either. 
 
 DevOps is a way to do smarter things in Software Development. - Hold up... But if you are not a software developer should you turn away right now and not dive into this project??? No Not at all, Stay... Because DevOps brings together a combination of software development and operations. I mentioned earlier that I was more on the VM side and that would generally fall under the Operations side of the house, but within the community there are people with all different backgrounds where DevOps is 100% going to benefit the individual, Developers, Operations and QA Engineers all can equally learn these best practices by having a better understanding of DevOps. 
 
@@ -38,7 +38,7 @@ The high level take away is with a DevOps mindset or culture its about taking a 
 
 From a DevOps perspective, **Development, Testing and Deployment** all land with the DevOps team. 
 
-The final point I will make is to make this as effective and effcient as possible we must leverage **Automation** 
+The final point I will make is to make this as effective and efficient as possible we must leverage **Automation** 
 
 ## Resources 
 
@@ -50,4 +50,4 @@ My advice is to watch all of the below and hopefully you also picked something u
 - [What is DevOps? Easy Way](https://www.youtube.com/watch?v=_Gpe1Zn-1fE&t=43s)
 - [DevOps roadmap 2022 | Success Roadmap 2022](https://www.youtube.com/watch?v=7l_n97Mt0ko)
 
-If you made it this far then you will know if this is where you want to be or not. See you on Day 2.  
+If you made it this far then you will know if this is where you want to be or not. See you on [Day 2](Days/day2.md).  

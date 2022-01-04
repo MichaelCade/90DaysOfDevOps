@@ -30,7 +30,7 @@ I will say at this point though, you don't need to be a Network or Infrastructur
 
 You will also most likely not take over the management of these servers or the application on a daily basis. 
 
-We have been talking about servers but the liklihood is that your application will be developed to run as containers, Which still runs on a server for the most part but you will also need an understanding of not only virtualisation, Cloud Infrastructure as a Service (IaaS) but also containerisation as well, The focus in these 90 days will be more catered towards containers. 
+We have been talking about servers but the likelihood is that your application will be developed to run as containers, Which still runs on a server for the most part but you will also need an understanding of not only virtualisation, Cloud Infrastructure as a Service (IaaS) but also containerisation as well, The focus in these 90 days will be more catered towards containers. 
 
 ## High Level Overview
 
@@ -40,7 +40,7 @@ On the other side we have some sort of environment, infrastructure or servers wh
 
 The big question is how do we get those features and bug fixes into our production and make it available to those end users? 
 
-How do we release the new application version? This is one of the main tasks for a DevOps engineer, and the important thing here is not to just figure out how to do this once but we need to do this continously and in an automated, efficient way which also needs to include testing! 
+How do we release the new application version? This is one of the main tasks for a DevOps engineer, and the important thing here is not to just figure out how to do this once but we need to do this continuously and in an automated, efficient way which also needs to include testing! 
 
 This is where we are going to end this day of learning, hopefully this was useful. Over the next few days we are going to dive a little deeper into some more areas of DevOps and then we will get into the sections that dive deeper into the tooling and processes and the benefits of these. 
 
@@ -50,8 +50,8 @@ I am always open to adding additional resources to these readme files as it is h
 
 My advice is to watch all of the below and hopefully you also picked something up from the text and explanations above. 
 
-- [What is DevOps? - Github YouTube](https://www.youtube.com/watch?v=kBV8gPVZNEE)
+- [What is DevOps? - GitHub YouTube](https://www.youtube.com/watch?v=kBV8gPVZNEE)
 - [What is DevOps? - IBM YouTube](https://www.youtube.com/watch?v=UbtB4sMaaNM)
 - [What is DevOps? - AWS ](https://aws.amazon.com/devops/what-is-devops/)
 
-If you made it this far then you will know if this is where you want to be or not. See you on Day 3.  
+If you made it this far then you will know if this is where you want to be or not. See you on [Day 3](Days/day3.md).  
