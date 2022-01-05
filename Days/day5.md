@@ -2,7 +2,7 @@
 
 Today we are going to focus on the individual steps from start to finish and the continous cycle of an Application in a DevOps world. 
 
-![DevOps](Images\Day5_DevOps8.png)
+![DevOps](Images/Day5_DevOps8.png)
 
 ### Plan 
 
