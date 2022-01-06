@@ -1,3 +1,5 @@
+
+
 Why we are choosing Golang to learn - https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s
 
 https://www.youtube.com/watch?v=C8LgvuEBraI&t=312s - Jake Wright - Learn Go in 12 minutes 
