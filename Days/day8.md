@@ -4,11 +4,7 @@ Before we get into some of the fundamentals of Go we should get Go installed on 
 
 First of all, let's head on over to [go.dev/dl](https://go.dev/dl/) and you will be greeted with some available options for downloads. 
 
-<<<<<<< HEAD
 ![](Images/Day8_Go1.png)
-=======
-![](images/Day8_Go1.png)
->>>>>>> 0ac66ebc9a84c60bf075f488d4e3e9d836828e2b
 
 If we made it this far you probably know which workstation operating system you are running so select the appropriate download and then we can get installing. I am using Windows for this walkthrough, basically, from this next screen, we can leave all the defaults in place for now. ***(I will note that at the time of writing this was the latest version so screenshots might be out of date)*** 
 
