@@ -23,7 +23,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 ### Learning a Programming Language
 
 - [ ] ⌨️ 7 > [The Big Picture - DevOps & Learning a Programming Language](Days/day7.md)
-- [ ] ⌨️ 8 > [](Days/day8.md)
+- [ ] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day8.md)
 - [ ] ⌨️ 9 > [](Days/day9.md)
 - [ ] ⌨️ 10 > [](Days/day10.md)
 - [ ] ⌨️ 11 > [](Days/day11.md)
