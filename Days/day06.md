@@ -58,7 +58,7 @@ I have added some other stories where DevOps has changed the game within some of
 
 - DevOps is a software development approach through which software can be delivered and developed reliably and quickly. You may also see this referenced as **Continuous Development, Testing, Deployment, Monitoring**
 
-If you made it this far then you will know if this is where you want to be or not. See you on [Day 7](day7.md). 
+If you made it this far then you will know if this is where you want to be or not. See you on [Day 7](day07.md). 
 
 Day 7 will be us diving into a programming language, I am not aiming to be a developer but I want to be able to understand what the developers are doing. 
 
