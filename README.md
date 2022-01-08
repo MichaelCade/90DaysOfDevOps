@@ -10,21 +10,21 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ## Progress 
 
-- [ ] ♾️ 1 > [Introduction](Days/day1.md)
+- [ ] ♾️ 1 > [Introduction](Days/day01.md)
 
 ### What is and why do we use DevOps
 
-- [ ] ♾️ 2 > [Responsibilities of a DevOps Engineer](Days/day2.md)
-- [ ] ♾️ 3 > [DevOps Lifecycle - Application Focused](Days/day3.md)
-- [ ] ♾️ 4 > [DevOps & Agile](Days/day4.md)
-- [ ] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day5.md)
-- [ ] ♾️ 6 > [DevOps - The real stories](Days/day6.md)
+- [ ] ♾️ 2 > [Responsibilities of a DevOps Engineer](Days/day02.md)
+- [ ] ♾️ 3 > [DevOps Lifecycle - Application Focused](Days/day03.md)
+- [ ] ♾️ 4 > [DevOps & Agile](Days/day04.md)
+- [ ] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)
+- [ ] ♾️ 6 > [DevOps - The real stories](Days/day06.md)
 
 ### Learning a Programming Language
 
-- [ ] ⌨️ 7 > [The Big Picture - DevOps & Learning a Programming Language](Days/day7.md)
-- [ ] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day8.md)
-- [ ] ⌨️ 9 > [](Days/day9.md)
+- [ ] ⌨️ 7 > [The Big Picture - DevOps & Learning a Programming Language](Days/day07.md)
+- [ ] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day08.md)
+- [ ] ⌨️ 9 > [](Days/day09.md)
 - [ ] ⌨️ 10 > [](Days/day10.md)
 - [ ] ⌨️ 11 > [](Days/day11.md)
 - [ ] ⌨️ 12 > [](Days/day12.md)
