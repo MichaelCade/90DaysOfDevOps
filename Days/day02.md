@@ -1,6 +1,6 @@
 ## Responsibilities of a DevOps Engineer 
 
-Hopefully you are coming into this off the back of going through the resources and post on [Day1 of #90DaysOfDevOps](Days/day01.md) 
+Hopefully you are coming into this off the back of going through the resources and post on [Day1 of #90DaysOfDevOps](day01.md) 
 
 It was briefly touched on in the first post but now we must get deeper into this concept and understand that there are two main parts when creating an application. We have the **Development** part where software developers program the application and test it. Then we have the **Operations** part where the application is deployed and maintained on a server. 
 
