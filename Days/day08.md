@@ -87,6 +87,6 @@ go build main.go
 - [FreeCodeCamp -  Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s) 
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
 
-See you on [Day 9](day9.md).
+See you on [Day 9](day09.md).
 
 ![](images\Day8_Go13.png)

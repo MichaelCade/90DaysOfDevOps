@@ -73,4 +73,4 @@ This last bit was a bit of a recap for me on Day 3 but think this actually makes
 
 If you made it this far then you will know if this is where you want to be or not. 
 
-See you on [Day 6](day6.md). 
+See you on [Day 6](day06.md). 
