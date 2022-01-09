@@ -2,7 +2,7 @@
 
 ### How Go works 
 
-On [Day 9](day09.md) we walked through getting Go installed on your workstation and we then created our first Go application. 
+On [Day 8](day08.md) we walked through getting Go installed on your workstation and we then created our first Go application. 
  
 In this section, we are going to take a deeper look into the code and understand a few more things about the Go language. 
 
@@ -13,7 +13,7 @@ Programming languages that we commonly use such as Python, Java, Go and C++ are 
 
 ![](Images/Day9_Go1.png)
 
-From the above you can see what we did on Day 8 here, we created a simple Hello World main.go and we then used the command `go build main.go` to compile our executable. 
+From the above you can see what we did on [Day 8](day08.md) here, we created a simple Hello World main.go and we then used the command `go build main.go` to compile our executable. 
 
 ### What are packages?
 A package is a collection of source files in the same directory that are compiled together. We can simplify this further, a package is a bunch of .go files in the same directory. Remember our Hello folder from Day 8? If and when you get into more complex Go programs you might find that you have folder1 folder2 and folder3 containing different .go files that make up your program with multiple packages. 
