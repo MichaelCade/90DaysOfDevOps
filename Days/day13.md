@@ -1,3 +1,7 @@
+Arrays and Slices 
+Loops 
+Conditionals (if / else ) and boolean data types 
+Switch statement 
 
 
 
