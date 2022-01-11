@@ -1,6 +1,12 @@
 ## DevOps & Agile
 
-I think a good place to start is understanding a little more about a common angle I have seen in learning this area and that is DevOps vs Agile even though they have similar goals and processes. In this section, I am going to summarise this hopefully. 
+Do you know the difference between DevOps and Agile ? They were formed as standalone concepts. But now the two terms are getting fused.
+
+In this post we will examine the crucial differences between agile and DevOps and find out why the two are connected so tightly.
+
+I think a good place to start is understanding a little more about a common angle I have seen in learning this area and that is DevOps vs Agile. Even though they have similar goals and processes. In this section, I am going to summarise this hopefully. 
+
+let's start with definitions. 
 
 ### Agile Development 
 
