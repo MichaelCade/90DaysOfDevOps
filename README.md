@@ -26,7 +26,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [ ] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day08.md)
 - [ ] ⌨️ 9 > [Let's explain the Hello World code](Days/day09.md)
 - [ ] ⌨️ 10 > [The Go Workspace & Compiling & running code](Days/day10.md)
-- [ ] ⌨️ 11 > [](Days/day11.md)
+- [ ] ⌨️ 11 > [Variables, Constants & Data Types](Days/day11.md)
 - [ ] ⌨️ 12 > [](Days/day12.md)
 - [ ] ⌨️ 13 > [](Days/day13.md)
 

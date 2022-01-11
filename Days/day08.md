@@ -90,4 +90,4 @@ go build main.go
 
 See you on [Day 9](day09.md).
 
-![](images\Day8_Go13.png)
+![](images/Day8_Go13.png)
