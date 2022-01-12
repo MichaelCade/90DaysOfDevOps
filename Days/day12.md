@@ -1,6 +1,6 @@
 ## Getting user input with Pointers and a finished program
 
-Yesterday ([Day 11](day11.md)), we created our first Go program that was self contained and the parts we wanted to really get user input for were created as variables within our code and given values, we now want to ask the user for their input to give the variable the value for the end message. 
+Yesterday ([Day 11](day11.md)), we created our first Go program that was self-contained and the parts we wanted to get user input for were created as variables within our code and given values, we now want to ask the user for their input to give the variable the value for the end message. 
 
 ## Getting user input
 
@@ -12,9 +12,9 @@ Let's now add a new variable called `TwitterName` you can find this new code at 
 
 ![](Images/Day12_Go1.png)
 
-We are on day 12 and we would need to change that `dayscomplete` every day and compile our code each day if this was hard coded which doesn't sound so great. 
+We are on day 12 and we would need to change that `dayscomplete` every day and compile our code each day if this was hardcoded which doesn't sound so great. 
 
-Getting user input, we want to get the value of maybe a name and the amount of days completed. For us to do this we can use another function from within the `fmt` package. 
+Getting user input, we want to get the value of maybe a name and the number of days completed. For us to do this we can use another function from within the `fmt` package. 
 
 Recap on the `fmt` package, different functions for: formatted input and output (I/O)
 
@@ -37,7 +37,7 @@ Let's now run our program and you see we have input for both of the above.
 
 Ok, that's great we got some user input and we printed a message but what about getting our program to tell us how many days we have left in our challenge.
 
-In order for us to do that we have created a variable called `remainingDays` and we have hard valued this in our code as `90` we then need to change the value of this value to print out the remaining days when we get our user input of `DaysCompleted` we can do this with this simple variable change. 
+For us to do that we have created a variable called `remainingDays` and we have hard valued this in our code as `90` we then need to change the value of this value to print out the remaining days when we get our user input of `DaysCompleted` we can do this with this simple variable change. 
 
 ```
 remainingDays = remainingDays - DaysCompleted
@@ -48,14 +48,13 @@ If we now run this program you can see that simple calculation is made based on 
 
 ![](Images/Day12_Go3.png)
 
-
 ## What is a pointer? (Special Variables)
 
 A pointer is a (special) variable that points to the memory address of another variable. 
 
 A great explanation of this can be found here at [geeksforgeeks](https://www.geeksforgeeks.org/pointers-in-golang/)
 
-Let's simplify our code now and show with and without the `&` in front of one of our print commands,this gives us the memory address of the pointer. I have added this code example here. [day12_example4.go](Go/day12_example4.go) 
+Let's simplify our code now and show with and without the `&` in front of one of our print commands, this gives us the memory address of the pointer. I have added this code example here. [day12_example4.go](Go/day12_example4.go) 
 
 Below is running this code. 
 
@@ -72,3 +71,4 @@ Below is running this code.
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
 
 See you on [Day 13](day13.md).
+

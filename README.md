@@ -28,7 +28,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [ ] ⌨️ 10 > [The Go Workspace & Compiling & running code](Days/day10.md)
 - [ ] ⌨️ 11 > [Variables, Constants & Data Types](Days/day11.md)
 - [ ] ⌨️ 12 > [Getting user input with Pointers and a finished program](Days/day12.md)
-- [ ] ⌨️ 13 > [](Days/day13.md)
+- [ ] ⌨️ 13 > [Tweet your progress with our new App](Days/day13.md)
 
 ### Knowing Linux Basics
 
