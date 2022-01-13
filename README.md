@@ -32,7 +32,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Knowing Linux Basics
 
-- [ ] 🐧 14 > [](Days/day14.md)
+- [ ] 🐧 14 > [The Big Picture - DevOps and Linux](Days/day14.md)
 - [ ] 🐧 15 > [](Days/day15.md)
 - [ ] 🐧 16 > [](Days/day16.md)
 - [ ] 🐧 17 > [](Days/day17.md)
