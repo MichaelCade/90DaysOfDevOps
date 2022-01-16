@@ -34,7 +34,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 - [ ] 🐧 14 > [The Big Picture - DevOps and Linux](Days/day14.md)
 - [ ] 🐧 15 > [Linux Commands for DevOps (Actually everyone)](Days/day15.md)
-- [ ] 🐧 16 > [](Days/day16.md)
+- [ ] 🐧 16 > [Managing your Linux System, Filesystem & Storage](Days/day16.md)
 - [ ] 🐧 17 > [](Days/day17.md)
 - [ ] 🐧 18 > [](Days/day18.md)
 - [ ] 🐧 19 > [](Days/day19.md)
