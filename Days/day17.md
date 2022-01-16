@@ -70,10 +70,8 @@ Another pointer to navigate around in vim we can use `H,J,K,L` as well as our ar
 ## Resources 
 
 - [Vim in 100 Seconds](https://www.youtube.com/watch?v=-txKSRn0qeA)
-- [Vim tutorial](https://www.youtube.com/watch?v=IiwGbcd8S7I)
-
-
+- [Vim tutorial](https://www.youtube.com/watch?v=IiwGbcd8S7I)s
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
-See you on [Day17](Day17.md)
+See you on [Day18](Day18.md)
