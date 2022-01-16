@@ -1,16 +1,16 @@
 ## Managing your Linux System, Filesystem & Storage
 
-So far we have had a brief overview of Linux and DevOps and then we  got our lab environment set up using vagant [(Day 14)](Day14.md), we then touched on a small portion of commands that will be in your daily toolkit when in the terminal and getting things done [(Day 15)](Day15.md). 
+So far we have had a brief overview of Linux and DevOps and then we got our lab environment set up using vagant [(Day 14)](Day14.md), we then touched on a small portion of commands that will be in your daily toolkit when in the terminal and getting things done [(Day 15)](Day15.md). 
 
 Here we are going to look into three key areas of looking after your Linux systems with updates, installing software, understanding what system folders are used for and we will also take a look at storage. 
 
 ## Managing Ubuntu & Software
 
-The first thing we are going to look at is how  we update our operating system. Most of you will be familiar with this process in a Windows OS and macOS, this looks slightly different on a Linux desktop and server.  
+The first thing we are going to look at is how we update our operating system. Most of you will be familiar with this process in a Windows OS and macOS, this looks slightly different on a Linux desktop and server.  
 
-We are going to be looking at the apt package manager, this is what we are going to use on our Ubuntu VM for updates and software  installation. 
+We are going to be looking at the apt package manager, this is what we are going to use on our Ubuntu VM for updates and software installation. 
 
-Generally, at least on dev workstations I run this command to make sure that I have the latest available updates from the central repositories, before any software installation.  
+Generally, at least on dev workstations, I run this command to make sure that I have the latest available updates from the central repositories, before any software installation.  
 
 `sudo apt-get update`
 
@@ -40,7 +40,7 @@ If we want to remove that or any of our software installations we can also do th
 
 There are third party repositories that we can also add to our system, the ones we have access to out of the box are the Ubuntu default repositories. 
 
-If for example we wanted to install vagrant on our Ubuntu VM we would not be able to right now and you can see this below on the first command issued. We then add the key to trust the HashiCorp repository, then add the repository to our system.  
+If for example, we wanted to install vagrant on our Ubuntu VM we would not be able to right now and you can see this below on the first command issued. We then add the key to trust the HashiCorp repository, then add the repository to our system.  
 
 ![](Images/Day16_Linux6.png)
 
@@ -50,16 +50,15 @@ Once we have the HashiCorp repository added we can go ahead and run `sudo apt in
 
 There are so many options when it comes to software installation, different options for package managers, built into Ubuntu we could also use snaps for our software installations. 
 
-Hopefully this gives you a feel about how to manage your OS and software installations on Linux. 
+Hopefully, this gives you a feel about how to manage your OS and software installations on Linux. 
 
 ## File System Explained 
 
 Linux is made up of configuration files, if you want to change anything then you change these configuration files. 
 
-On Windows you have C: drive and that is what we consider the root. On linux we have `/` this is where we are going to find the important folders on our Linux system. 
+On Windows, you have C: drive and that is what we consider the root. On Linux we have `/` this is where we are going to find the important folders on our Linux system. 
 
 ![](Images/Day16_Linux8.png)
-
 
 - `/bin` - Short for binary, the bin folder is where our binaries that your system needs, executables and tools will mostly be found here.  
 
@@ -81,7 +80,7 @@ On Windows you have C: drive and that is what we consider the root. On linux we 
 
 ![](Images/Day16_Linux13.png)
 
-- `/lib` - We mentioned that `/bin` is where our binaries and executables live, `/lib` is where you will find the shared libaries for those. 
+- `/lib` - We mentioned that `/bin` is where our binaries and executables live, `/lib` is where you will find the shared libraries for those. 
 
 ![](Images/Day16_Linux14.png)
 
@@ -109,7 +108,7 @@ On Windows you have C: drive and that is what we consider the root. On linux we 
 
 ![](Images/Day16_Linux20.png)
 
-- `/sbin` - Sudo bin, similar to the bin folder but these tools are intended for elevated super user priveleges on the system.
+- `/sbin` - Sudo bin, similar to the bin folder but these tools are intended for elevated superuser privileges on the system.
 
 ![](Images/Day16_Linux21.png)
 
@@ -133,7 +132,7 @@ When we come to a Linux system or any system we might want to know the available
 
 ![](Images/Day16_Linux25.png)
 
-- `df` gives us a little more detail about those partitions, total, used and available. You can parse other flags here I generally use `df -h` gives us a human output of the data. 
+- `df` gives us a little more detail about those partitions, total, used and available. You can parse other flags here I generally use `df -h` to give us a human output of the data. 
 
 ![](Images/Day16_Linux26.png)
 
@@ -143,7 +142,7 @@ We would then need to mount our newly formatted disk so that it was useable. We 
 
 It is also possible that you will need to unmount storage from your system safely vs just pulling it from the configuration. We can do this with `sudo umount /dev/sdb` 
 
-If you did not want to unmount that disk and you were going to be using this disk for a database or some other persistent use case then you want it to be there when you reboot your system. For this to happen we need to add this disk to our `/etc/fstab` configuration file for it to persist, if you don't it won't be useable when the machine reboots and you would manually have to go through the above process. The data will still be there on the disk but it wont auto mount unless you add the configuration to this file. 
+If you did not want to unmount that disk and you were going to be using this disk for a database or some other persistent use case then you want it to be there when you reboot your system. For this to happen we need to add this disk to our `/etc/fstab` configuration file for it to persist, if you don't it won't be useable when the machine reboots and you would manually have to go through the above process. The data will still be there on the disk but it won't automount unless you add the configuration to this file. 
 
 Once you have edited the `fstab` configuration file you can check your workings with `sudo mount -a` if no errors then your changes will now be persistent across restarts. 
 
@@ -152,6 +151,6 @@ We will cover how you would edit a file using a text editor in a future session.
 ## Resources 
 
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
-- [Linux for hackers (don't worry you don't need be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
+- [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
 See you on [Day17](Day17.md)
