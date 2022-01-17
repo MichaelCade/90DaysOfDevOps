@@ -1,5 +1,7 @@
 ## Automate tasks with bash scripts
 
+BASH - **B**orn **A**gain **Sh**ell
+
 We could almost dedicate a whole section of 7 days to bash scripting much like the programming languages, bash gives us the capability of working alongside other automation tools to get things done. 
 
 I still speak to a lot of people where they have set up some complex shell scripts to make something happen and they rely on this script for some of the most important things in the business, I am not saying we need to understand shell/bash scripting for this purpose, this is not the way. But we should learn shell/bash scripting to work alongside our automation tools and for ad-hoc tasks. 
