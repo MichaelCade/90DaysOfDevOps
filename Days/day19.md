@@ -168,6 +168,8 @@ Think about any repeatable tasks that you do every day or week or month and how 
 
 I don't feel like I have maybe shown the power of bash scripting here in particular from a DevOps point of view so I am going to be looking for examples that will allow us to better create a script that does something or automates something for us. 
 
+I have created a very simple bash file that helps me spin up a Kubernetes cluster using minikube on my local machine along with data services and Kasten K10 to help demonstrate the requirements and needs around data management. [Project Pace](https://github.com/MichaelCade/project_pace/blob/main/singlecluster_demo.sh) But I did not feel this appropriate to raise here as we have not covered Kubernetes yet. 
+
 ## Resources 
 
 - [Bash in 100 seconds](https://www.youtube.com/watch?v=I4EWvMFj37g)
