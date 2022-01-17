@@ -1,6 +1,6 @@
 ## Automate tasks with bash scripts
 
-BASH - **B**orn **A**gain **Sh**ell
+BASH - **B**ourne **A**gain **Sh**ell
 
 We could almost dedicate a whole section of 7 days to bash scripting much like the programming languages, bash gives us the capability of working alongside other automation tools to get things done. 
 
