@@ -1,8 +1,10 @@
 ## Automate tasks with bash scripts
 
+The shell that we are going to use today is the bash but we will cover another shell tomorrow when we dive into ZSH. 
+
 BASH - **B**ourne **A**gain **Sh**ell
 
-We could almost dedicate a whole section of 7 days to bash scripting much like the programming languages, bash gives us the capability of working alongside other automation tools to get things done. 
+We could almost dedicate a whole section of 7 days to shell scripting much like the programming languages, bash gives us the capability of working alongside other automation tools to get things done. 
 
 I still speak to a lot of people where they have set up some complex shell scripts to make something happen and they rely on this script for some of the most important things in the business, I am not saying we need to understand shell/bash scripting for this purpose, this is not the way. But we should learn shell/bash scripting to work alongside our automation tools and for ad-hoc tasks. 
 
@@ -62,6 +64,7 @@ Now we can run our script again using `./90DaysOfDevOps.sh` after running the sc
 Pretty basic stuff but you can start to see hopefully how this could be used to call on other tools as part of ways to make your life easier and automate things. 
 
 ### Variables, Conditionals
+A lot of this section is really a repeat to what we covered when we were learning Golang but I think its worth us diving in here again. 
 
 - ### Variables 
 
@@ -164,9 +167,117 @@ You can hopefully see how this can be used to save you time when searching throu
 
 I found this amazing repository on GitHub that has what seems to be an endless amount of scripts [DevOps Bash Tools](https://github.com/HariSekhon/DevOps-Bash-tools/blob/master/README.md)
 
-Think about any repeatable tasks that you do every day or week or month and how could you better automate that, first option is likely going to be using a bash script before moving into more complex territory. 
+### Example 
 
-I don't feel like I have maybe shown the power of bash scripting here in particular from a DevOps point of view so I am going to be looking for examples that will allow us to better create a script that does something or automates something for us. 
+**Scenario**: We have our company called "90DaysOfDevOps" and we have been running a while and now it is time to expand the team from 1 person to lots more over the coming weeks, I am the only one so far that knows the onboarding process so we want to reduce that bottleneck by automating some of these tasks. 
+
+**Requirements**: 
+- A user can be passed in as a command line argument. 
+- A user is created with the name of command line argument. 
+- A password can be parsed in as a command line argument. 
+- The password is set for the user 
+- A message of successful account creation is displayed. 
+
+Let's start with creating our shell script with `touch create_user.sh`
+
+Before we move on lets also make this executable using `chmod +x create_user.sh`
+
+then we can use `nano create_user.sh` to start editing our script for the scenario we have been set. 
+
+We can take a look at the first requirement "A user can be passed in as a command line argument" we can use the following 
+
+```
+#! /usr/bin/bash
+
+#A user can be passed in as a command line argument
+echo "$1"
+```
+
+![](Images/Day19_Linux9.png)
+
+Go ahead and run this using `./create_user.sh Michael` replace Michael with your name when you run the script. 
+
+![](Images/Day19_Linux10.png)
+
+Next up we can take that second requirement "A user is created with the name of command line argument" this can be done with the `useradd` command. The `-m` option is to create the user home directory as /home/username
+
+```
+#! /usr/bin/bash
+
+#A user can be passed in as a command line argument
+echo "$1 user account being created."
+
+#A user is created with the name of command line argument
+sudo useradd -m "$1"
+
+```
+
+Warning: If you do not provide a user account name then it will error as we have not filled the variable `$1`
+
+We can then check this account has been created with the `awk -F: '{ print $1}' /etc/passwd` command. 
+
+![](Images/Day19_Linux11.png)
+
+Our next requirement is "A password can be parsed in as a command line argument." First of all we are not going to ever do this in production it is more for us to work through a list of requirements in the lab to understand. 
+
+```
+#! /usr/bin/bash
+
+#A user can be passed in as a command line argument
+echo "$1 user account being created."
+
+#A user is created with the name of command line argument
+sudo useradd -m "$1"
+
+#A password can be parsed in as a command line argument.
+sudo chpasswd <<< "$1":"$2"
+```
+
+If we then run this script with the two parameters `./create_user.sh 90DaysOfDevOps password`
+
+You can see from the below image that we executed our script it created our user and password and then we manually jumped into that user and confirmed with the `whoami` command. 
+
+![](Images/Day19_Linux12.png)
+
+The final requirement is "A message of successful account creation is displayed." We actually already have this in the top line of our code and we can see on the above screen shot that we have `90DaysOfDevOps user account being created` is shown. This was left from our testing with the `$1` parameter. 
+
+Now this script can be used to quickly onboard and set up new users on to our Linux systems. But maybe instead of a few of the historic people having to work through this and then having to get other people their new usernames or passwords we could add some user input that we have previously covered earlier on to capture our variables. 
+
+``` 
+#! /usr/bin/bash
+
+echo "What is your intended username?"
+read  username
+echo "What is your password"
+read  password
+
+#A user can be passed in as a command line argument
+echo "$username user account being created."
+
+#A user is created with the name of command line argument
+sudo useradd -m $username
+
+#A password can be parsed in as a command line argument.
+sudo chpasswd <<< $username:$password
+```
+
+With the steps being more interactive, 
+
+![](Images/Day19_Linux14.png)
+
+Just to finish this off maybe we do want to output a successful output to say that our new user account has finished being created.
+
+![](Images/Day19_Linux15.png)
+
+One thing I did notice was that we are displaying the password on our input we can hide this by using the `-s` flag in the line of code `read -s password`
+
+![](Images/Day19_Linux16.png)
+
+If you do want to delete the user you have created for lab purposes then you can do that with `sudo userdel test_user`
+
+Once again I am not saying this is going to be something that you do create in your day to day but it was something I thought of that would highlight the flexibility of what you could use shell scripting for. 
+
+Think about any repeatable tasks that you do every day or week or month and how could you better automate that, first option is likely going to be using a bash script before moving into more complex territory. 
 
 I have created a very simple bash file that helps me spin up a Kubernetes cluster using minikube on my local machine along with data services and Kasten K10 to help demonstrate the requirements and needs around data management. [Project Pace](https://github.com/MichaelCade/project_pace/blob/main/singlecluster_demo.sh) But I did not feel this appropriate to raise here as we have not covered Kubernetes yet. 
 
