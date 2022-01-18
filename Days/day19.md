@@ -292,4 +292,4 @@ I have created a very simple bash file that helps me spin up a Kubernetes cluste
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
-See you on [Day20](Day20.md)
+See you on [Day20](day20.md)

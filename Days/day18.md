@@ -196,4 +196,4 @@ Then providing everything is configured correctly you will be able to access via
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
-See you on [Day19](Day19.md)
+See you on [Day19](day19.md)

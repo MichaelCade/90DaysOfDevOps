@@ -92,5 +92,5 @@ There are going to be lots of resources I find as we go through and much like th
 
 As I mentioned next up we will take a look at the commands we might be using on the daily whilst in our Linux environments. 
 
-See you on [Day15](Day15.md)
+See you on [Day15](day15.md)
 
