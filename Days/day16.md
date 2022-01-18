@@ -153,4 +153,4 @@ We will cover how you would edit a file using a text editor in a future session.
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
-See you on [Day17](Day17.md)
+See you on [Day17](day17.md)
