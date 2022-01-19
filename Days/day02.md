@@ -49,7 +49,7 @@ This is where we are going to end this day of learning, hopefully this was usefu
 I am always open to adding additional resources to these readme files as it is here as a learning tool.  
 
 My advice is to watch all of the below and hopefully you also picked something up from the text and explanations above. 
-
+- [What is DevOps? - TechWorld with Nana](https://www.youtube.com/watch?v=0yWAtQ6wYNM)
 - [What is DevOps? - GitHub YouTube](https://www.youtube.com/watch?v=kBV8gPVZNEE)
 - [What is DevOps? - IBM YouTube](https://www.youtube.com/watch?v=UbtB4sMaaNM)
 - [What is DevOps? - AWS ](https://aws.amazon.com/devops/what-is-devops/)
