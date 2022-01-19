@@ -4,7 +4,7 @@ This repository is used to document my journey on getting a better foundational 
 
 The reason for documenting these days is so that others can take something from it and also hopefully enhance the resources. 
 
-The gooal is to take 90 days, 1 hour a day, to tackle over 13 areas of DevOps to a foundational knowledge. 
+The goal is to take 90 days, 1 hour a day, to tackle over 13 areas of DevOps to a foundational knowledge. 
 
 This will not cover all things DevOps but it will cover the areas that I feel will benefit my learning and understanding overall. 
 
