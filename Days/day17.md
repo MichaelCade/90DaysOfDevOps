@@ -74,4 +74,4 @@ Another pointer to navigate around in vim we can use `H,J,K,L` as well as our ar
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
-See you on [Day18](Day18.md)
+See you on [Day18](day18.md)
