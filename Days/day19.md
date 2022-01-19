@@ -275,6 +275,8 @@ One thing I did notice was that we are displaying the password on our input we c
 
 If you do want to delete the user you have created for lab purposes then you can do that with `sudo userdel test_user`
 
+[Example Script](Linux/create-user.sh)
+
 Once again I am not saying this is going to be something that you do create in your day to day but it was something I thought of that would highlight the flexibility of what you could use shell scripting for. 
 
 Think about any repeatable tasks that you do every day or week or month and how could you better automate that, first option is likely going to be using a bash script before moving into more complex territory. 
