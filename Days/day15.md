@@ -87,6 +87,27 @@ If you have a long complex configuration file and you want or need to find somet
 
 If you are like me and you use that `clear` command a lot then you might miss some of the commands previously ran, we can use `history` to find out all those commands we have run prior. `history -c` will remove the history. 
 
+When you run `history` and you would like to pick a specific command you can use `!3` to choose the 3rd command in the list. 
+
+You are also able to use `history | grep "Command` to search for something specific. 
+
+On servers to trace back when was a command executed, it can be useful to append the date and time to each command in the history file.
+
+The following system variable controls this behaviour:
+```
+HISTTIMEFORMAT="%d-%m-%Y %T "
+```
+You can easily add to your bash_profile:
+```
+echo 'export HISTTIMEFORMAT="%d-%m-%Y %T "' >> ~/.bash_profile
+```
+So as useful to allow the history file grow bigger:
+
+```
+echo 'export HISTSIZE=100000' >> ~/.bash_profile
+echo 'export HISTFILESIZE=10000000' >> ~/.bash_profile
+```
+
 ![](Images/Day15_Linux21.png)
 
 Need to change your password? `passwd` is going allow us to change our password. Note that when you add your password in like this when it is hidden it will not be shown in `history` however if your command has `-p PASSWORD` then this will be visible in your `history`. 
