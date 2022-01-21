@@ -99,6 +99,7 @@ If a section of a network is compromised, it can be quarantined, making it diffi
 
 ![](Images/Day23_Networking9.png)
 
+
 ## Resources 
 
 - [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
