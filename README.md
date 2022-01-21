@@ -44,8 +44,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 - [✔️] 🌐 21 > [The Big Picture - DevOps and Networking](Days/day21.md)
 - [✔️] 🌐 22 > [The OSI Model - The 7 Layers](Days/day22.md)
-- [🚧] 🌐 23 > [](Days/day23.md)
-- [] 🌐 24 > [](Days/day24.md)
+- [✔️] 🌐 23 > [Network Protocols](Days/day23.md)
+- [🚧] 🌐 24 > [](Days/day24.md)
 - [] 🌐 25 > [](Days/day25.md)
 - [] 🌐 26 > [](Days/day26.md)
 - [] 🌐 27 > [](Days/day27.md)
