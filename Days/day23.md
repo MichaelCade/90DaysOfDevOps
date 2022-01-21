@@ -105,6 +105,6 @@ If a section of a network is compromised, it can be quarantined, making it diffi
 - [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 - [Practical Networking](http://www.practicalnetworking.net/)
 
-See you on [Day24](day24.md)
+See you on [Day 24](day24.md)
 
 
