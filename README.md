@@ -47,8 +47,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] 🌐 23 > [Network Protocols](Days/day23.md)
 - [✔️] 🌐 24 > [Network Automation](Days/day24.md)
 - [✔️] 🌐 25 > [Python for Network Automation](Days/day25.md)
-- [🚧] 🌐 26 > [](Days/day26.md)
-- [] 🌐 27 > [](Days/day27.md)
+- [✔️] 🌐 26 > [Building our Lab](Days/day26.md)
+- [🚧] 🌐 27 > [](Days/day27.md)
 
 ### Stick to one Cloud Provider
 

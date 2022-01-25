@@ -2,7 +2,7 @@
 
 Python is the standard language used for automated network operations. 
 
-Whilst it is not only for network automation it seems to be everywhere when you are looking for resources and as previously mentioned if it's not Python then its generally Ansible which is in fact written also in Python. 
+Whilst it is not only for network automation it seems to be everywhere when you are looking for resources and as previously mentioned if it's not Python then it's generally Ansible which is written also in Python. 
 
 I think I have mentioned this already but during the "Learn a programming language" section I chose Golang over Python for reasons around my company are developing in Go so that was a good reason for me to learn but if that was not the case then Python would have taken that time. 
 
@@ -10,11 +10,11 @@ I think I have mentioned this already but during the "Learn a programming langua
 
 Pycharm might be another IDE worth mentioning here. 
 
-- Libaries - The exensibility of Python is the real gold mine here, I mentioned before that this is not just for Network Automation but in fact there are libraries a plenty for all sorts of devices and configurations. You can see the vast amount here [PyPi](https://pypi.python.org/pypi)
+- Libraries - The extensibility of Python is the real gold mine here, I mentioned before that this is not just for Network Automation but in fact, there are libraries plenty for all sorts of devices and configurations. You can see the vast amount here [PyPi](https://pypi.python.org/pypi)
 
 When you want to download the library to your workstation, then you use a tool called `pip` to connect to PyPI and download it locally. Network vendors such as Cisco, Juniper, and Arista developed libraries to facilitate access to their devices.
 
-- Powerful & Effcient - Remember during the Go days I went through the "Hello World" scenario and we went through I think 6 lines of code? In Python it is
+- Powerful & Efficient - Remember during the Go days I went through the "Hello World" scenario and we went through I think 6 lines of code? In Python it is
 
 ``` 
 print('hello world')
@@ -22,19 +22,19 @@ print('hello world')
 
 Put all of the above points together and it should be easy to see why Python is generally mentioned as the de-facto tool when working on automating. 
 
-I think it's important to note that it's possible that a number of years back there were scripts that might have interacted with your network devices to maybe automate the backup of configuration or to gather logs and other insights into your devices. The automation we are talking here is a little different and thats because the overall networking landscape has also changed to suit this way of thinking better and enabled more automation. 
+I think it's important to note that it's possible that several years back there were scripts that might have interacted with your network devices to maybe automate the backup of configuration or to gather logs and other insights into your devices. The automation we are talking about here is a little different and that's because the overall networking landscape has also changed to suit this way of thinking better and enabled more automation. 
 
-- Software Defined Network - SDN Controllers take the responsibility of delivering the control plane configuration to all devices on the network, meaning just a single point of contact for any network changes, no longer having to telnet or SSH into each and every device and also rely on humans to do this which has a repeatable chance of failure or misconfiguration. 
+- Software-Defined Network - SDN Controllers take the responsibility of delivering the control plane configuration to all devices on the network, meaning just a single point of contact for any network changes, no longer having to telnet or SSH into every device and also relying on humans to do this which has a repeatable chance of failure or misconfiguration. 
 
-- High Level Orchestration - Go up a level from those SDN controllers and this allows for orchestration of service levels then there is the integration of this orchestration layer into your platforms of choice, VMware, Kubernetes, Public Clouds etc. 
+- High-Level Orchestration - Go up a level from those SDN controllers and this allows for orchestration of service levels then there is the integration of this orchestration layer into your platforms of choice, VMware, Kubernetes, Public Clouds etc. 
 
-- Policy based management - What do you want to have? What is the desired state? You describe this and the system has all the details on how to figure it out to become the desired state. 
+- Policy-based management - What do you want to have? What is the desired state? You describe this and the system has all the details on how to figure it out to become the desired state. 
 
-## Setting up lab environment
+## Setting up the lab environment
 
 Not everyone has access to physical routers, switches and other networking devices. 
 
-I wanted to make it possible for us to actually look at some of the tooling pre mentioned but also getting hands on and learn how to automate the configuration of our networks. 
+I wanted to make it possible for us to look at some of the tooling pre-mentioned but also get hands-on and learn how to automate the configuration of our networks. 
 
 When it comes to options there are a few that we can choose from.  
 
@@ -42,7 +42,7 @@ When it comes to options there are a few that we can choose from.
 - [Eve-ng](https://www.eve-ng.net/)
 - [Unimus](https://unimus.net/) Not a lab environment but an interesting concept. 
 
-We will build our lab out using [Eve-ng](https://www.eve-ng.net/) as mentioned before you can use a phsyical device but to be honest a virtual environment means that we can have a sandbox environment to test many different scenarios. Plus being able to play with different devices and topoligies might be of interest. 
+We will build our lab out using [Eve-ng](https://www.eve-ng.net/) as mentioned before you can use a physical device but to be honest a virtual environment means that we can have a sandbox environment to test many different scenarios. Plus being able to play with different devices and topologies might be of interest. 
 
 We are going to do everything on EVE-NG with the community edition. 
 
@@ -54,13 +54,13 @@ We will be using the OVF download but with the ISO there is the option to build 
 
 ![](Images/Day25_Networking1.png)
 
-For the purposes of our walkthrough we will be using VMware Workstation as I have a license via my vExpert but you can equally use VMware Player or many of the other options mentioned in the [documentation](https://www.eve-ng.net/index.php/documentation/installation/system-requirement/)Unfortunatly we cannot use our previously used Virtual box! 
+For our walkthrough, we will be using VMware Workstation as I have a license via my vExpert but you can equally use VMware Player or any of the other options mentioned in the [documentation](https://www.eve-ng.net/index.php/documentation/installation/system-requirement/)Unfortunately we cannot use our previously used Virtual box! 
 
 This is also where I had an issue with GNS3 with Virtual Box even though supported. 
 
 [Download VMware Workstation Player - FREE](https://www.vmware.com/uk/products/workstation-player.html) 
 
-[VMware Workstation PRO](https://www.vmware.com/uk/products/workstation-pro.html) Also noted that there is an evalutation period for free! 
+[VMware Workstation PRO](https://www.vmware.com/uk/products/workstation-pro.html) Also noted that there is an evaluation period for free! 
 
 ### Installation on VMware Workstation PRO 
 
@@ -68,11 +68,11 @@ Now we have our hypervisor software downloaded and installed, and we have the EV
 
 We are now ready to get things configured. 
 
-Open VMware workstation and then select `file` and `open` 
+Open VMware Workstation and then select `file` and `open` 
 
 ![](Images/Day25_Networking2.png)
 
-When you download the EVE-NG OVF Image it is going to be within a compressed file. Extract the contents out into its own folder so it looks like. 
+When you download the EVE-NG OVF Image it is going to be within a compressed file. Extract the contents out into its folder so it looks like. 
 
 ![](Images/Day25_Networking3.png)
 
@@ -82,9 +82,9 @@ Give it a recognisable name and store the virtual machine somewhere on your syst
 
 ![](Images/Day25_Networking4.png)
 
-When the import is complete increase the number of processors to 4 and the memory allocated to 8 GB. (This should be the case after import with the latest version if not then edit vm settings)
+When the import is complete increase the number of processors to 4 and the memory allocated to 8 GB. (This should be the case after import with the latest version if not then edit VM settings)
 
-Also make sure the Virtualise Intel VT-x/EPT or AMD-V/RVI checkbox is enabled. This option instructs VMware workstation to pass the virtualisation flags to the guest OS (nested virtualisation) This was the issue I was having with GNS3 with Virtual Box even though clearly my CPU allows this. 
+Also, make sure the Virtualise Intel VT-x/EPT or AMD-V/RVI checkbox is enabled. This option instructs VMware workstation to pass the virtualisation flags to the guest OS (nested virtualisation) This was the issue I was having with GNS3 with Virtual Box even though my CPU allows this. 
 
 ![](Images/Day25_Networking5.png)
 
@@ -92,7 +92,7 @@ Also make sure the Virtualise Intel VT-x/EPT or AMD-V/RVI checkbox is enabled. T
 
 Sidenote & Rabbit hole: Remember I mentioned that this would not work with VirtualBox! Well yeah had the same issue with VMware Workstation and EVE-NG but it was not the fault of the virtualisation platform! 
 
-I have WSL2 running on my Windows Machine and this seems to remove the capability of being able to run anything nested inside of your environment. I am actually really confused as to why the Ubuntu VM does run as it seems to take out the Intel VT-d virtualisation aspect of the CPU when using WSL2. 
+I have WSL2 running on my Windows Machine and this seems to remove the capability of being able to run anything nested inside of your environment. I am confused as to why the Ubuntu VM does run as it seems to take out the Intel VT-d virtualisation aspect of the CPU when using WSL2. 
 
 To resolve this we can run the following command on our Windows machine and reboot the system, note that whilst this is off then you will not be able to use WSL2. 
 
@@ -104,7 +104,7 @@ When you want to go back and use WSL2 then you will need to run this command and
 
 Both of these commands should be ran as administrator! 
 
-Ok back to the show, You should now have a powered on machine in VMware Workstation and you should have a prompt looking similar to this. 
+Ok back to the show, You should now have a powered-on machine in VMware Workstation and you should have a prompt looking similar to this. 
 
 ![](Images/Day25_Networking6.png)
 
@@ -113,13 +113,13 @@ On the prompt above you can use:
 username = root
 password = eve
 
-You will then be asked to provide root password again, this will be used to SSH into the host later on.  
+You will then be asked to provide the root password again, this will be used to SSH into the host later on.  
 
 We then can change the hostname. 
 
 ![](Images/Day25_Networking7.png)
 
-Next we define a DNS Domain Name, I have used the one below but I am not sure if this will need to be changed later on. 
+Next, we define a DNS Domain Name, I have used the one below but I am not sure if this will need to be changed later on. 
 
 ![](Images/Day25_Networking8.png)
 
@@ -127,7 +127,7 @@ We then configure networking, I am selecting static so that the IP address given
 
 ![](Images/Day25_Networking9.png)
 
-Final step, provide a static IP address from a network that is reachable from your workstation. 
+The final step, provide a static IP address from a network that is reachable from your workstation. 
 
 ![](Images/Day25_Networking10.png)
 
@@ -163,6 +163,3 @@ Next up we are going to:
 - [Python Network Automation](https://www.youtube.com/watch?v=xKPzLplPECU&list=WL&index=126)
 
 See you on [Day 26](day26.md)
-
-
-
