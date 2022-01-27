@@ -48,11 +48,11 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] 🌐 24 > [Network Automation](Days/day24.md)
 - [✔️] 🌐 25 > [Python for Network Automation](Days/day25.md)
 - [✔️] 🌐 26 > [Building our Lab](Days/day26.md)
-- [🚧] 🌐 27 > [Getting Hands-On with Python & Network](Days/day27.md)
+- [✔️] 🌐 27 > [Getting Hands-On with Python & Network](Days/day27.md)
 
 ### Stick to one Cloud Provider
 
-- [] ☁️ 28 > [](Days/day28.md)
+- [🚧] ☁️ 28 > [](Days/day28.md)
 - [] ☁️ 29 > [](Days/day29.md)
 - [] ☁️ 30 > [](Days/day30.md)
 - [] ☁️ 31 > [](Days/day31.md)
