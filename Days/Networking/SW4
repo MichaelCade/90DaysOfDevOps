@@ -21,7 +21,7 @@ enable password access123
 username admin password access123
 no ip domain-lookup
 
-ip domain-name PythonTraining.net
+ip domain-name 90DaysOfDevOps.net
 ip ssh version 2
 ip scp server enable
 crypto key generate rsa general-keys modulus 1024
