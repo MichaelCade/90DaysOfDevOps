@@ -52,8 +52,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Stick to one Cloud Provider
 
-- [🚧] ☁️ 28 > [](Days/day28.md)
-- [] ☁️ 29 > [](Days/day29.md)
+- [✔️] ☁️ 28 > [The Big Picture - DevOps & The Cloud](Days/day28.md)
+- [🚧] ☁️ 29 > [](Days/day29.md)
 - [] ☁️ 30 > [](Days/day30.md)
 - [] ☁️ 31 > [](Days/day31.md)
 - [] ☁️ 32 > [](Days/day32.md)
