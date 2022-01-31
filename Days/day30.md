@@ -87,17 +87,31 @@ We can also use the check access tab if we want to check an account against this
 
 ![](Images/Day30_Cloud7.png)
 
-### Azure Security Centre 
+### Microsoft Defender for Cloud 
 
-- Microsoft Azure Security Centre provides insight into the security of the entire Azure environment. 
+- Microsoft Defender for Cloud (formerly known as Azure Security Center) provides insight into the security of the entire Azure environment. 
 
-- A single dashboard for the overall security health of all Azure resources. 
+- A single dashboard for visibility into the overall security health of all Azure and non-Azure resources (via Azure Arc) and security hardening guidance.
 
-- Free and Standard SKU
+- Free tier includes continuous assessment and security recommendations.
 
-I have switched to another subscription to view the Azure Security centre and you can see here based on very few resources that I have some recommendations in one place. 
+- Paid plans for protected resources types (e.g. Servers, AppService, SQL, Storage, Containers, KeyVault).
+
+I have switched to another subscription to view the Azure Security Center and you can see here based on very few resources that I have some recommendations in one place. 
 
 ![](Images/Day30_Cloud8.png)
+
+### Azure Policy
+
+- Azure Policy is an Azure native service that helps to enforce organizational standards and assess compliance at-scale.
+
+- Integrated into Microsoft Defender for Cloud. Azure Policy audits non-compliant resources and applies remediation.
+
+- Commonly used for governing resource consistency, regulatory compliance, security, cost, and management standards.
+
+- Uses JSON format to store evaluation logic and determine whether a resource is compliant or not, and any actions to take for non-compliance (e.g. Audit, AuditIfNotExists, Deny, Modify, DeployIfNotExists).
+
+- Free for use. The exception being Azure Arc connected resources charged per server/month for Azure Policy Guest Configuration usage.
 
 ### Hands-On
 
