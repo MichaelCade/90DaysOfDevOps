@@ -137,6 +137,12 @@ Now if we login to the Azure Portal with our new user account, you can see that 
 
 ![](Images/Day30_Cloud16.png)
 
+The above is great if this is a user that has access to resources inside of your Azure portal but not every user needs to be aware of the portal, but in order to check access we can use the [Apps Portal](https://myapps.microsoft.com/) This is a single sign on portal for us to test. 
+
+![](Images/Day30_Cloud17.png)
+
+You are able to customise this portal with your own branding and this might be something we come back to later on. 
+
 ## Resources 
 
 - [Hybrid Cloud and MultiCloud](https://www.youtube.com/watch?v=qkj5W98Xdvw)
