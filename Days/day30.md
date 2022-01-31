@@ -8,7 +8,7 @@ This is one area that Microsoft Azure seemingly works differently from other pub
 
 ### Directory Services 
 
-- Azure Activ Directory hosts the security principles used by Microsoft Azure and other Microsoft cloud services. 
+- Azure Active Directory hosts the security principles used by Microsoft Azure and other Microsoft cloud services. 
 - Authentication is accomplished through protocols such as SAML, WS-Federation, OpenID Connect and OAuth2. 
 - Queries are accomplished through REST API called Microsoft Graph API. 
 - Tenants have a tenant.onmicrosoft.com default name but can also have custom domain names. 
