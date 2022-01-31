@@ -133,8 +133,6 @@ Now we can go to our Resource Group and specify that on the 90DaysOfDevOps resou
 
 We can equally go in here and deny assignments access to our resource group as well. 
 
-
-
 ## Resources 
 
 - [Hybrid Cloud and MultiCloud](https://www.youtube.com/watch?v=qkj5W98Xdvw)
