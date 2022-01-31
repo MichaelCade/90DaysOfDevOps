@@ -99,6 +99,42 @@ I have switched to another subscription to view the Azure Security centre and yo
 
 ![](Images/Day30_Cloud8.png)
 
+### Hands-On
+
+I have gone out and I have purchased www.90DaysOfDevOps.com and I would like to add this domain to my Azure Active Directory portal, [Add your custom domain name using the Azure Active Directory Portal](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain)
+
+![](Images/Day30_Cloud9.png)
+
+With that now we can create a new user on our new Active Directory Domain. 
+
+![](Images/Day30_Cloud10.png)
+
+Now we want to create a group for all of our new 90DaysOfDevOps users in one group. We can create a group as per the below, notice that I am using "Dynamic User" this means Azure AD will query user accounts and add them dynamically vs assigned which is where you manually add the user to your group. 
+
+![](Images/Day30_Cloud11.png)
+
+There are lots of options when it comes to creating your query, my plan is to simply find the principal name and make sure that the name contains @90DaysOfDevOps.com. 
+
+![](Images/Day30_Cloud12.png)
+
+Now because we have created our user account already for michael.cade@90DaysOfDevOps.com we can validate the rules are working. For comparison I have also added another account I have associated to another domain here and you can see that because of this rule our user will not land in this group.  
+
+![](Images/Day30_Cloud13.png)
+
+I have since added a new user1@90DaysOfDevOps.com and if we go and check the group we can see our members. 
+
+![](Images/Day30_Cloud14.png)
+
+If we have this requirement x100 then we are not going to want to do this all in the console we are going to want to take advantage of either bulk options to create, invite, delete users or you are going to want to look into PowerShell to achieve this automated approach to scale. 
+
+Now we can go to our Resource Group and specify that on the 90DaysOfDevOps resource group we want the owner to be the group we just created. 
+
+![](Images/Day30_Cloud15.png)
+
+We can equally go in here and deny assignments access to our resource group as well. 
+
+
+
 ## Resources 
 
 - [Hybrid Cloud and MultiCloud](https://www.youtube.com/watch?v=qkj5W98Xdvw)
