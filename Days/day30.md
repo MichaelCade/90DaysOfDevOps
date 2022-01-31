@@ -133,6 +133,10 @@ Now we can go to our Resource Group and specify that on the 90DaysOfDevOps resou
 
 We can equally go in here and deny assignments access to our resource group as well. 
 
+Now if we login to the Azure Portal with our new user account, you can see that we only have access to our 90DaysOfDevOps resource group and not the others seen in previous pictures because we do not have the access. 
+
+![](Images/Day30_Cloud16.png)
+
 ## Resources 
 
 - [Hybrid Cloud and MultiCloud](https://www.youtube.com/watch?v=qkj5W98Xdvw)
