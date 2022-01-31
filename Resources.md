@@ -1,4 +1,4 @@
 ## Resources 
 
-
-https://github.com/bregman-arie/devops-exercises
+- https://exercism.org/ 
+- https://github.com/bregman-arie/devops-exercises
