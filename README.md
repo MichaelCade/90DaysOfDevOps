@@ -57,8 +57,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] ☁️ 30 > [Microsoft Azure Security Models](Days/day30.md)
 - [✔️] ☁️ 31 > [Microsoft Azure Compute Models](Days/day31.md)
 - [✔️] ☁️ 32 > [Microsoft Azure Storage & Database Models](Days/day32.md)
-- [🚧] ☁️ 33 > [Microsoft Azure Networking Models + Azure Management](Days/day33.md)
-- [] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](Days/day34.md)
+- [✔️] ☁️ 33 > [Microsoft Azure Networking Models + Azure Management](Days/day33.md)
+- [🚧] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](Days/day34.md)
 
 ### Use Git Effectively
 
