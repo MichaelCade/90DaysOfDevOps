@@ -62,8 +62,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Use Git Effectively
 
-- [🚧] 📚 35 > [## Git: The Big Picture](Days/day35.md)
-- [] 📚 36 > [](Days/day36.md)
+- [✔️] 📚 35 > [Git - Version Control: The Big Picture](Days/day35.md)
+- [🚧] 📚 36 > [](Days/day36.md)
 - [] 📚 37 > [](Days/day37.md)
 - [] 📚 38 > [](Days/day38.md)
 - [] 📚 39 > [](Days/day39.md)
