@@ -106,9 +106,20 @@ But then equally we will want to move forward as well and we can do this the sam
 
 ![](Images/Day35_Git18.png)
 
+The TLDR; 
+
+- Tracking a projects history
+- Managing multiple versions of a project
+- Sharing code amongst developers and a wider scope of teams and tools
+- Coordinating teamwork
+- Oh and there is some time travel! 
+
+
 This might have seemed a jump around but hopefully, you can see without really knowing the commands used the powers and the big picture behind Version Control. 
 
 Next up we will be getting git installed and set up on your local machine and diving a little deeper into some other use cases and commands that we can achieve in Git. 
+
+
 
 ## Resources 
 
