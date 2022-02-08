@@ -66,8 +66,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] 📚 36 > [Installing & Configuring Git](Days/day36.md)
 - [✔️] 📚 37 > [Gitting to know Git](Days/day37.md)
 - [✔️] 📚 38 > [Staging & Changing](Days/day38.md)
-- [🚧] 📚 39 > [Viewing, unstaging, discarding & restoring](Days/day39.md)
-- [] 📚 40 > [Social Network for code](Days/day40.md)
+- [✔️] 📚 39 > [Viewing, unstaging, discarding & restoring](Days/day39.md)
+- [🚧] 📚 40 > [Social Network for code](Days/day40.md)
 - [] 📚 41 > [The Open Source Workflow](Days/day41.md)
 
 ### Containers 
