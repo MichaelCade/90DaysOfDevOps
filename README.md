@@ -68,11 +68,11 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] 📚 38 > [Staging & Changing](Days/day38.md)
 - [✔️] 📚 39 > [Viewing, unstaging, discarding & restoring](Days/day39.md)
 - [✔️] 📚 40 > [Social Network for code](Days/day40.md)
-- [🚧] 📚 41 > [The Open Source Workflow](Days/day41.md)
+- [✔️] 📚 41 > [The Open Source Workflow](Days/day41.md)
 
 ### Containers 
 
-- [] 🏗️ 42 > [](Days/day42.md)
+- [🚧] 🏗️ 42 > [](Days/day42.md)
 - [] 🏗️ 43 > [](Days/day43.md)
 - [] 🏗️ 44 > [](Days/day44.md)
 - [] 🏗️ 45 > [](Days/day45.md)
