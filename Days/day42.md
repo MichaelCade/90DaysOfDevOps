@@ -31,7 +31,11 @@ Ok, probably sounds great and exciting but we still need to understand what is a
 
 When we run applications on our computer, the web browser or VScode that you are using to read this post. That application is running as a process or what is known as a process. On our laptops or systems we tend to run multiple applications or as we said processes. When we open a new application or click on our application icon this is an application we would like to run, sometimes this application might be a service that we just want to run in the background, our operating system is full of services that are running in the background providing you with the user experience you get with your system. 
 
-That application icon represents a link to an executable so that the operating system can load that executable into memory. And interestingly, this executable is oftentimes referred to as an image when we're talking about a process.
+That application icon represents a link to an executable so that the operating system can load that executable into memory. Interestingly, that executable is sometimes referred to as an image when we're talking about a process. I also just mentioned image in the last section when it comes to how and why containers and images combined made containers popular in our ecosystem. 
+
+
+
+
 
 ### What is an Image? 
 
