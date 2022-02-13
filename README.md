@@ -75,8 +75,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] 🏗️ 42 > [The Big Picture - Containers](Days/day42.md)
 - [✔️] 🏗️ 43 > [What is Docker & Getting installed](Days/day43.md)
 - [✔️] 🏗️ 44 > [Docker Images & Hands-On with Docker Desktop](Days/day44.md)
-- [🚧] 🏗️ 45 > [](Days/day45.md)
-- [] 🏗️ 46 > [](Days/day46.md)
+- [✔️] 🏗️ 45 > [The anatomy of a Docker Image](Days/day45.md)
+- [🚧] 🏗️ 46 > [](Days/day46.md)
 - [] 🏗️ 47 > [](Days/day47.md)
 - [] 🏗️ 48 > [](Days/day48.md)
 
