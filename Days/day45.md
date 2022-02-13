@@ -12,7 +12,7 @@ A dockerfile is a text file that contains commands you would normally execute ma
 
 Each of the files that make up a docker image is known as a layer. these layers form a series of images, built on top of each other in stages. Each layer is dependant on the layer immediatly below it. The order of your layers is key to the effciency of the lifecycle management of your docker images. 
 
-We should organise our layers that change most often as high in the stack as possible, this is because when you make changes to a layer in your image, Docker not onl y rebuilds that particular layer but all layers built from it. Therefore a change to a layer at the top involves the least amount of work to rebuild the entire image. 
+We should organise our layers that change most often as high in the stack as possible, this is because when you make changes to a layer in your image, Docker not only rebuilds that particular layer but all layers built from it. Therefore a change to a layer at the top involves the least amount of work to rebuild the entire image. 
 
 Each time docker launches a container from an image (like we ran yesterday) it adds a writeable layer, known as the container layer. This stores all changes to the container throughout its runtime. This layer is the only difference between a live operational container and the source image itself. Any number of like for like containers can share access to the same underlying image while maintaining their own individual state. 
 
@@ -53,6 +53,8 @@ The following table shows some of the dockerfile statements we will be using or 
 | CMD        | Arguments passed to the entrypoint. If ENTRYPOINT is not set (defaults to /bin/sh -c), the CMD will be the commands the container executes. |
 | EXPOSE     | To define which port through which to access your container application.                                                                    |
 | LABEL      | To add metadata to the image.                                                                                                               |
+
+
 Now we have the detail on how to build our first dockerfile we can create a working directory and create our dockerfile. I have created a working directory within this repository where you can see the files and folders I have to walk through. [Containers](Days/Containers)
 
 In this directory I am going to create a .dockerignore file similar to the .gitignore we used in the last section. This file will list any files that would otherwise be created during the Docker build process, which you want to exclude from the final build.
