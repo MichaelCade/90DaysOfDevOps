@@ -105,5 +105,7 @@ Then if we go and take a look in our DockerHub repository you can see that we ju
 - [Programming with Mosh - Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI)
 - [Docker Tutorial for Beginners - What is Docker? Introduction to Containers](https://www.youtube.com/watch?v=17Bl31rlnRM&list=WL&index=128&t=61s)
 - [WSL 2 with Docker getting started](https://www.youtube.com/watch?v=5RQbdMn04Oc)
+- [Blog on gettng started building a docker image](https://stackify.com/docker-build-a-beginners-guide-to-building-docker-images/)
+- [Docker documentation for building an image](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
 See you on [Day 46](day46.md) 
