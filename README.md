@@ -76,9 +76,9 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] 🏗️ 43 > [What is Docker & Getting installed](Days/day43.md)
 - [✔️] 🏗️ 44 > [Docker Images & Hands-On with Docker Desktop](Days/day44.md)
 - [✔️] 🏗️ 45 > [The anatomy of a Docker Image](Days/day45.md)
-- [🚧] 🏗️ 46 > [](Days/day46.md)
-- [] 🏗️ 47 > [](Days/day47.md)
-- [] 🏗️ 48 > [](Days/day48.md)
+- [✔️] 🏗️ 46 > [Docker Compose](Days/day46.md)
+- [✔️] 🏗️ 47 > [Docker Networking & Security](Days/day47.md)
+- [🚧] 🏗️ 48 > [Alternatives to Docker](Days/day48.md)
 
 ### Kubernetes
 
