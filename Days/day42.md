@@ -1,4 +1,4 @@
-## The Big Picture - Containers 
+## The Big Picture: Containers
 
 We are now starting the next section and this section is going to be focused on containers in particular we are going to be looking into Docker getting into some of the key areas to understand more about Containers. 
 

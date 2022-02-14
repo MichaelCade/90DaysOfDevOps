@@ -1,4 +1,4 @@
-## The Big Picture - DevOps and Linux
+## The Big Picture: DevOps and Linux
 
 Linux and DevOps share very similar cultures and perspectives; both are focused on customisation and scalability. Both of these aspects of Linux is a particular importance for DevOps.
 

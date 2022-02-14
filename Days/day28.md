@@ -1,4 +1,4 @@
-## The Big Picture - DevOps & The Cloud 
+## The Big Picture: DevOps & The Cloud
 
 When it comes to cloud computing and what is offered, it goes very nicely with the DevOps ethos and processes. We can think of Cloud Computing bringing the technology and services whilst DevOps as we have mentioned many times before is about the process and process improvement. 
 

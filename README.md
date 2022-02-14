@@ -22,7 +22,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Learning a Programming Language
 
-- [✔️] ⌨️ 7 > [The Big Picture - DevOps & Learning a Programming Language](Days/day07.md)
+- [✔️] ⌨️ 7 > [The Big Picture: DevOps & Learning a Programming Language](Days/day07.md)
 - [✔️] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day08.md)
 - [✔️] ⌨️ 9 > [Let's explain the Hello World code](Days/day09.md)
 - [✔️] ⌨️ 10 > [The Go Workspace & Compiling & running code](Days/day10.md)
@@ -32,7 +32,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Knowing Linux Basics
 
-- [✔️] 🐧 14 > [The Big Picture - DevOps and Linux](Days/day14.md)
+- [✔️] 🐧 14 > [The Big Picture: DevOps and Linux](Days/day14.md)
 - [✔️] 🐧 15 > [Linux Commands for DevOps (Actually everyone)](Days/day15.md)
 - [✔️] 🐧 16 > [Managing your Linux System, Filesystem & Storage](Days/day16.md)
 - [✔️] 🐧 17 > [Text Editors - nano vs vim](Days/day17.md)
@@ -42,7 +42,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Understand Networking
 
-- [✔️] 🌐 21 > [The Big Picture - DevOps and Networking](Days/day21.md)
+- [✔️] 🌐 21 > [The Big Picture: DevOps and Networking](Days/day21.md)
 - [✔️] 🌐 22 > [The OSI Model - The 7 Layers](Days/day22.md)
 - [✔️] 🌐 23 > [Network Protocols](Days/day23.md)
 - [✔️] 🌐 24 > [Network Automation](Days/day24.md)
@@ -52,7 +52,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Stick to one Cloud Provider
 
-- [✔️] ☁️ 28 > [The Big Picture - DevOps & The Cloud](Days/day28.md)
+- [✔️] ☁️ 28 > [The Big Picture: DevOps & The Cloud](Days/day28.md)
 - [✔️] ☁️ 29 > [Microsoft Azure Fundamentals](Days/day29.md)
 - [✔️] ☁️ 30 > [Microsoft Azure Security Models](Days/day30.md)
 - [✔️] ☁️ 31 > [Microsoft Azure Compute Models](Days/day31.md)
@@ -62,7 +62,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Use Git Effectively
 
-- [✔️] 📚 35 > [Git - Version Control: The Big Picture](Days/day35.md)
+- [✔️] 📚 35 > [The Big Picture: Git - Version Control](Days/day35.md)
 - [✔️] 📚 36 > [Installing & Configuring Git](Days/day36.md)
 - [✔️] 📚 37 > [Gitting to know Git](Days/day37.md)
 - [✔️] 📚 38 > [Staging & Changing](Days/day38.md)
@@ -72,7 +72,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Containers 
 
-- [✔️] 🏗️ 42 > [The Big Picture - Containers](Days/day42.md)
+- [✔️] 🏗️ 42 > [The Big Picture: Containers](Days/day42.md)
 - [✔️] 🏗️ 43 > [What is Docker & Getting installed](Days/day43.md)
 - [✔️] 🏗️ 44 > [Docker Images & Hands-On with Docker Desktop](Days/day44.md)
 - [✔️] 🏗️ 45 > [The anatomy of a Docker Image](Days/day45.md)
@@ -82,7 +82,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Kubernetes
 
-- [🚧] ☸ 49 > [](Days/day49.md)
+- [🚧] ☸ 49 > [The Big Picture: Kubernetes](Days/day49.md)
 - [] ☸ 50 > [](Days/day50.md)
 - [] ☸ 51 > [](Days/day51.md)
 - [] ☸ 52 > [](Days/day52.md)

@@ -1,4 +1,4 @@
-## The Big Picture - DevOps and Networking
+## The Big Picture: DevOps and Networking
 
 Welcome to Day 21! We are going to be getting into Networking over the next 7 days, Networking and DevOps is the overarching theme but we will need to get into some of the networking fundamentals as well. 
 

@@ -1,4 +1,4 @@
-## Git - Version Control: The Big Picture 
+## The Big Picture: Git - Version Control
 
 Before we get into git, we need to understand what version control is and why? In this opener for Git, we will take a look at what version control is, the basics of git.  
 
