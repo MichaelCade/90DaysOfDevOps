@@ -78,11 +78,11 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] 🏗️ 45 > [The anatomy of a Docker Image](Days/day45.md)
 - [✔️] 🏗️ 46 > [Docker Compose](Days/day46.md)
 - [✔️] 🏗️ 47 > [Docker Networking & Security](Days/day47.md)
-- [🚧] 🏗️ 48 > [Alternatives to Docker](Days/day48.md)
+- [✔️] 🏗️ 48 > [Alternatives to Docker](Days/day48.md)
 
 ### Kubernetes
 
-- [] ☸ 49 > [](Days/day49.md)
+- [🚧] ☸ 49 > [](Days/day49.md)
 - [] ☸ 50 > [](Days/day50.md)
 - [] ☸ 51 > [](Days/day51.md)
 - [] ☸ 52 > [](Days/day52.md)
