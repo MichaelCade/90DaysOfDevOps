@@ -83,8 +83,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 ### Kubernetes
 
 - [✔️] ☸ 49 > [The Big Picture: Kubernetes](Days/day49.md)
-- [🚧] ☸ 50 > [](Days/day50.md)
-- [] ☸ 51 > [](Days/day51.md)
+- [✔️] ☸ 50 > [Choosing your Kubernetes platform ](Days/day50.md)
+- [🚧] ☸ 51 > [](Days/day51.md)
 - [] ☸ 52 > [](Days/day52.md)
 - [] ☸ 53 > [](Days/day53.md)
 - [] ☸ 54 > [](Days/day54.md)
