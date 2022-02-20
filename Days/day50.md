@@ -58,9 +58,6 @@ I have been through a bit of a journey with my learning around Kubernetes so I a
 - Persistant Storage 
 - Stateful Apps 
 
-Demo Overview - Should be demos throughout of building a simple pod deployment but then we want to build additional pods and storage with ingress and services included. 
-
-
 ## Resources 
 
 - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
