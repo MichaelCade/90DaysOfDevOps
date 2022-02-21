@@ -85,8 +85,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] ☸ 49 > [The Big Picture: Kubernetes](Days/day49.md)
 - [✔️] ☸ 50 > [Choosing your Kubernetes platform ](Days/day50.md)
 - [✔️] ☸ 51 > [Deploying your first Kubernetes Cluster](Days/day51.md)
-- [🚧] ☸ 52 > [](Days/day52.md)
-- [] ☸ 53 > [](Days/day53.md)
+- [✔️] ☸ 52 > [Setting up a multinode Kubernetes Cluster](Days/day52.md)
+- [🚧] ☸ 53 > [](Days/day53.md)
 - [] ☸ 54 > [](Days/day54.md)
 - [] ☸ 55 > [](Days/day55.md)
 
