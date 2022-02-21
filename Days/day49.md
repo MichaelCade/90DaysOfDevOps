@@ -48,7 +48,6 @@ It also has many other responsibilities: ​
 
 - Health management detects and replaces unhealthy​ containers and nodes.
 
-
 ### Main Kubernetes Components 
 
 Kubernetes is a container orchestrator to provision, manage, and scale apps. You can use it to manage the lifecycle of containerized apps in a cluster of nodes, which is a collection of worker machines such as VMs or physical machines.​
@@ -59,12 +58,26 @@ The key paradigm of Kubernetes is its declarative model. You provide the state t
 
 ### Node
 
+**Control Plane**
+
+Every Kubernetes cluster requires a Control Plane node, the control plane's components make global decisions about the cluster (for example, scheduling), as well as detecting and responding to cluster events. 
+
+![](Images/Day49_Kubernetes1.png)
+
+**Worker Node**
+ A worker machine that runs Kubernetes workloads. It can be a physical (bare metal) machine or a virtual machine (VM). Each node can host one or more pods. Kubernetes nodes are managed by a control plane
+
+![](Images/Day49_Kubernetes2.png)
+
+There are other node types but I won't be covering them here. 
+
 **kubelet**​
 
 An agent that runs on each node in the cluster. It makes sure that containers are running in a Pod.​
 
 The kubelet takes a set of PodSpecs that are provided through various mechanisms and ensures that the containers described in those PodSpecs are running and healthy. The kubelet doesn't manage containers which were not created by Kubernetes.​
 
+![](Images/Day49_Kubernetes3.png)
 
 **kube-proxy​**
 
@@ -74,15 +87,47 @@ kube-proxy maintains network rules on nodes. These network rules allow network c
 
 kube-proxy uses the operating system packet filtering layer if there is one and it's available. Otherwise, kube-proxy forwards the traffic itself.​
 
+![](Images/Day49_Kubernetes4.png)
+
 **Container runtime**​
 
 The container runtime is the software that is responsible for running containers.​
 
 Kubernetes supports several container runtimes: Docker, containerd, CRI-O, and any implementation of the Kubernetes CRI (Container Runtime Interface).​
+
+![](Images/Day49_Kubernetes5.png)
 ​
 ### Cluster
 
 A cluster is a group of nodes, where a node can be a physical machine or virtual machines. Each of the nodes will have the container runtime (Docker) and will also be running a kubelet service, which is an agent that takes in the commands from the Master controller (more on that later) and a Proxy, that is used to proxy connections to the Pods from another component (Services, that we will see later).​
+
+On our control plane which can be made highly available will contain some unique roles compared to the worker nodes, the most important will be the kube API server, this is where any communication will take place in order to get information or push information to our Kubernetes cluster. 
+
+**Kube API-Server**
+
+The Kubernetes API server validates and configures data for the api objects which include pods, services, replicationcontrollers, and others. The API Server services REST operations and provides the frontend to the cluster's shared state through which all other components interact.
+
+**Scheduler**
+
+The Kubernetes scheduler is a control plane process which assigns Pods to Nodes. The scheduler determines which Nodes are valid placements for each Pod in the scheduling queue according to constraints and available resources. The scheduler then ranks each valid Node and binds the Pod to a suitable Node.
+
+**Controller Manager**
+
+The Kubernetes controller manager is a daemon that embeds the core control loops shipped with Kubernetes. In applications of robotics and automation, a control loop is a non-terminating loop that regulates the state of the system. In Kubernetes, a controller is a control loop that watches the shared state of the cluster through the apiserver and makes changes attempting to move the current state towards the desired state.
+
+**etcd**
+
+Consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
+
+![](Images/Day49_Kubernetes6.png)
+
+**kubectl**
+
+In order to manage this from a CLI point of view we have kubectl, kubectl interacts with the API server. 
+
+The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs.
+
+![](Images/Day49_Kubernetes7.png)
 
 ### Pods
 
@@ -96,6 +141,7 @@ A Pod is a group of containers that form a logical application. For e.g. If you 
 
 - Pods live on Worker Nodes.​
 
+![](Images/Day49_Kubernetes8.png)
 ​
 ### Deployments
 
@@ -106,6 +152,8 @@ A Pod is a group of containers that form a logical application. For e.g. If you 
 - Deployments allow you to update a running app without downtime. ​
 
 - Deployments also specify a strategy to restart Pods when they die
+
+![](Images/Day49_Kubernetes9.png)
 
 ### ReplicaSets
 
@@ -130,6 +178,7 @@ A Pod is a group of containers that form a logical application. For e.g. If you 
 
 - Each Pod has a unique, persistent identifier that the controller maintains over any rescheduling.​
 
+![](Images/Day49_Kubernetes10.png)
 
 ### DaemonSets
 
@@ -143,6 +192,7 @@ A Pod is a group of containers that form a logical application. For e.g. If you 
 
 ​- Each Pod has a unique, persistent identifier that the controller maintains over any rescheduling.
 
+![](Images/Day49_Kubernetes11.png)
 
 ### Services 
 
@@ -152,7 +202,9 @@ A Pod is a group of containers that form a logical application. For e.g. If you 
 
 - By using a Service, Pods can be brought up and down without affecting anything..
 
-This is just a quick overview and notes around the fundamental building blocks of Kubernetes, we can take this knowledge and add in some other areas around Storage and Ingress to enhance our applications but we then also have a lot of choices on where our Kubernetes cluster runs. The next session will focus on those options on where can I run a Kubernetes cluster, whilst also exploring some specifics around Storage. 
+This is just a quick overview and notes around the fundamental building blocks of Kubernetes, we can take this knowledge and add in some other areas around Storage and Ingress to enhance our applications but we then also have a lot of choices on where our Kubernetes cluster runs. The next session will focus on those options on where can I run a Kubernetes cluster, whilst also exploring some specifics around Storage.
+
+![](Images/Day49_Kubernetes12.png)
 
 ### What we will cover in the series on Kubernetes 
 
