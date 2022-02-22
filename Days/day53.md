@@ -88,7 +88,7 @@ We can then repeat the registration process for each of the worker nodes with th
 sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kubernetes:/etc/kubernetes -v /var/run:/var/run  rancher/rancher-agent:v2.6.3 --server https://10.0.0.1 --token mpq8cbjjwrj88z4xmf7blqxcfmwdsmq92bmwjpphdkklfckk5hfwc2 --ca-checksum a81944423cbfeeb92be0784edebba1af799735ebc30ba8cbe5cc5f996094f30b --worker
 ```
 
-<Picture of complete rancher cluster deployed>
+![](Images/Day53_Kubernetes14.png)
 
 Over the last 3 sessions we have used a few different ways to get up and running with a Kubernetes cluster, over the remaining days we are going to look at the application side of the platform arguably the most important. We will look into services and being able to provision and use our service in Kubernetes. 
 
