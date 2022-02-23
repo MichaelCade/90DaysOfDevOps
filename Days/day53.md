@@ -92,6 +92,8 @@ sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kube
 
 Over the last 3 sessions we have used a few different ways to get up and running with a Kubernetes cluster, over the remaining days we are going to look at the application side of the platform arguably the most important. We will look into services and being able to provision and use our service in Kubernetes. 
 
+I have been told since that the requirements around bootstrapping rancher nodes requires those VMs to have 4GB ram or they will crash-loop, I have since updated as our worker nodes had 2GB. 
+
 ### What we will cover in the series on Kubernetes 
 
 We have started covering some of these mentioned below but we are going to get more hands on tomorrow with our second cluster deployment then we can start deploying applications into our clusters. 
