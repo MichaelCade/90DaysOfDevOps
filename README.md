@@ -87,8 +87,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] ☸ 51 > [Deploying your first Kubernetes Cluster](Days/day51.md)
 - [✔️] ☸ 52 > [Setting up a multinode Kubernetes Cluster](Days/day52.md)
 - [✔️] ☸ 53 > [Rancher Overview - Hands On](Days/day53.md)
-- [🚧] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
-- [] ☸ 55 > [](Days/day55.md)
+- [✔️] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
+- [🚧] ☸ 55 > [](Days/day55.md)
 
 ### Learn Infrastructure as Code
 
