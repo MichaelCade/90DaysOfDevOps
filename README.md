@@ -88,11 +88,11 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] ☸ 52 > [Setting up a multinode Kubernetes Cluster](Days/day52.md)
 - [✔️] ☸ 53 > [Rancher Overview - Hands On](Days/day53.md)
 - [✔️] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
-- [🚧] ☸ 55 > [](Days/day55.md)
+- [✔️] ☸ 55 > [State and Ingress in Kubernetes](Days/day55.md)
 
 ### Learn Infrastructure as Code
 
-- [] 🤖 56 > [](Days/day56.md)
+- [🚧] 🤖 56 > [The Big Picture: IaC](Days/day56.md)
 - [] 🤖 57 > [](Days/day57.md)
 - [] 🤖 58 > [](Days/day58.md)
 - [] 🤖 59 > [](Days/day59.md)
@@ -102,7 +102,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Automate Configuration Management
 
-- [] 📜 63 > [](Days/day63.md)
+- [] 📜 63 > [The Big Picture: Configuration Management](Days/day63.md)
 - [] 📜 64 > [](Days/day64.md)
 - [] 📜 65 > [](Days/day65.md)
 - [] 📜 66 > [](Days/day66.md)
@@ -112,7 +112,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Create CI/CD Pipelines 
 
-- [] 🔄 70 > [](Days/day70.md)
+- [] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
 - [] 🔄 71 > [](Days/day71.md)
 - [] 🔄 72 > [](Days/day72.md)
 - [] 🔄 73 > [](Days/day73.md)
@@ -122,9 +122,9 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Monitoring, Log Management, and Data Visualisation
 
-- [] 📈 77 > [](Days/day77.md)
-- [] 📈 78 > [](Days/day78.md)
-- [] 📈 79 > [](Days/day79.md)
+- [] 📈 77 > [The Big Picture: Monitoring](Days/day77.md)
+- [] 📈 78 > [The Big Picture: Log Management](Days/day78.md)
+- [] 📈 79 > [The Big Picture: Data Visualisation](Days/day79.md)
 - [] 📈 80 > [](Days/day80.md)
 - [] 📈 81 > [](Days/day81.md)
 - [] 📈 82 > [](Days/day82.md)
@@ -132,7 +132,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Store & Protect Your Data
 
-- [] 🗃️ 84 > [](Days/day84.md)
+- [] 🗃️ 84 > [The Big Picture: Data Management](Days/day84.md)
 - [] 🗃️ 85 > [](Days/day85.md)
 - [] 🗃️ 86 > [](Days/day86.md)
 - [] 🗃️ 87 > [](Days/day87.md)
