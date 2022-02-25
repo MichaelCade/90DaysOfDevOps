@@ -84,13 +84,15 @@ Declartive
 - declare end result 
 - 2 Servers 
 
-Mutable vs Immutable 
+Mutable (pets) vs Immutable (cattle)
 
 Mutable 
 - Change instead of replace
+- Generally long lived 
 
 Immutable
 - Replace instead of change
+- Possibly short lived 
 
 This is really why we have lots of different options for Infrastructure as Code because there is no one tool to rule them all. 
 
