@@ -1,6 +1,6 @@
 ## The Big Picture: IaC
 
-Humans make mistake! Automation is the way to go! 
+Humans make mistakes! Automation is the way to go! 
 
 How do you build your systems today? 
 
@@ -20,15 +20,86 @@ We are going to concentrate on Infrastructure as code in this section. You might
 
 ### Pets vs Cattle 
 
-### The Release Pipeline 
+If we take a look at pre DevOps, if we had the requirement to build a new Application, we would need to prepare our servers manually for the most part. 
 
-### Source
+- Deploy VMs | Physical Servers and install operating system
+- Configure networking 
+- Create routing tables 
+- Install software and updates 
+- Configure software 
+- Install database 
 
-### Build 
+This would be a manual process performed by Systems Administrators. The bigger the application the more resource and servers required the more manual effort it would take to bring up those systems. This would take a huge amount of human effort and time but also as a business you would have to pay for that resource to build out this environment. As I opened the section with "Humans make mistakes! Automation is the way to go!"
 
-### Test 
+Ongoing from the above initial setup phase you then have maintenance of these servers. 
 
-### Release 
+- Update versions 
+- Deploy new releases 
+- Data Management 
+- Recovery of Applications 
+- Add, Remove and Scale Servers 
+- Network Configuration
+
+Add the complexity of multiple test and dev environments. 
+
+This is where Infrastructure as Code comes in, the above was very much a time where we would look after those servers as if they were pets, people even called them servers pet names or at least named them something because they were going to be around for a while, they were going to hopefully be part of the "family" for a while. 
+
+With Infrastructure as Code we have the ability to automate all these tasks end to end. Infrastructure as code is a concept and there are tools that carry out this automated provisioning of infrastructure, at this point if something bad happens to a server you throw it away and you spin up a new one. This process is automated and the server is exactly as defined in code. At this point we don't care what they are called they are there in the field serving their purpose until they are no longer in the field and we have another to replace it either because of a failure or because we updated part or all of our application. 
+
+This can be used in almost all platforms, virtualisation, cloud based workloads and also cloud-native infrastructure such as Kubernetes and containers. 
+
+### Infrastructure Provisioning 
+Not all IaC cover all of the below, You will find that the tool we are going to be using during this section only really covers the the first 2 areas of below; Terraform is that tool we will be covering and this allows us to start from nothing and define in code what our infrastructure should look like and then deploy that, it will also enable us to manage that infrastructure and also initially deploy an application but at that point it is going to lose track of the application which is where the next section comes in and something like Ansible as a configuration management tool might work better on that front. 
+
+Without jumping ahead tools like chef, puppet and ansible are best suited to deal with the initial application setup and then to manage those applications and their configuration. 
+
+Initial installation & configuration of software 
+
+- Spinning up new servers 
+- Network configuration 
+- Creating load balancers 
+- Configuration on infrastructure level
+
+### Configuration of provisioned infrastructure 
+
+- Installing application on servers 
+- Prepare the servers to deploy your application. 
+
+### Deployment of Application 
+
+- Deploy and Manage Application 
+- Maintain phase
+- Software updates 
+- Reconfiguration 
+
+### Difference of IaC tools 
+
+Declarative vs procedural 
+
+Procedural 
+- Step by step instruction 
+- Create a server > Add a server > Make this change 
+
+Declartive 
+- declare end result 
+- 2 Servers 
+
+Mutable vs Immutable 
+
+Mutable 
+- Change instead of replace
+
+Immutable
+- Replace instead of change
+
+This is really why we have lots of different options for Infrastructure as Code because there is no one tool to rule them all. 
+
+We are going to be mostly using terraform and getting hands on as this is the best way to start seeing the benefits of Infrastructure as Code when it is in action. Getting hands on is also the best way to pick up the skills as you are going to be writing code. 
+
+Next up we will start looking into Terraform with a 101 before we get some hands on get using. 
+
+## Resources 
+I have listed a lot of resources down below and I think this topic has been covered so many times out there, If you have additional resources be sure to raise a PR with your resources and I will be happy to review and add them to the list. 
 
 - [What is Infrastructure as Code? Difference of Infrastructure as Code Tools ](https://www.youtube.com/watch?v=POPP2WTJ8es)
 - [Terraform Tutorial | Terraform Course Overview 2021](https://www.youtube.com/watch?v=m3cKkYXl-8o)
@@ -40,3 +111,5 @@ We are going to concentrate on Infrastructure as code in this section. You might
 - [Terraform Simple Projects](https://terraform.joshuajebaraj.com/)
 - [Terraform Tutorial - The Best Project Ideas](https://www.youtube.com/watch?v=oA-pPa0vfks)
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
+
+See you on [Day 57](day57.md)

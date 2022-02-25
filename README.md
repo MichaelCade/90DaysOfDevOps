@@ -92,8 +92,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Learn Infrastructure as Code
 
-- [🚧] 🤖 56 > [The Big Picture: IaC](Days/day56.md)
-- [] 🤖 57 > [](Days/day57.md)
+- [✔️] 🤖 56 > [The Big Picture: IaC](Days/day56.md)
+- [🚧] 🤖 57 > [](Days/day57.md)
 - [] 🤖 58 > [](Days/day58.md)
 - [] 🤖 59 > [](Days/day59.md)
 - [] 🤖 60 > [](Days/day60.md)

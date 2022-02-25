@@ -208,6 +208,8 @@ But I am still not able to gain access to 192.168.49.2 and play my pacman game.
 
 If anyone has or can get this working on Windows and WSL I would appreciate the feedback. I will raise an issue on the repository for this and come back to it once I have time and a fix. 
 
+UPDATE: I feel like this blog helps identify maybe the cause of this not working with WSL [Configuring Ingress to run Minikube on WSL2 using Docker runtime](https://hellokube.dev/posts/configure-minikube-ingress-on-wsl2/)
+
 ## Resources 
 
 If you have FREE resources that you have used then please feel free to add them in here via a PR to the repository and I will be happy to include them. 
