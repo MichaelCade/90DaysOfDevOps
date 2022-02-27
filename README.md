@@ -97,7 +97,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] 🤖 58 > [HashiCorp Configuration Language (HCL)](Days/day58.md)
 - [✔️] 🤖 59 > [Create a VM with Terraform & Variables](Days/day59.md)
 - [✔️] 🤖 60 > [Docker Containers, Provisioners & Modules](Days/day60.md)
-- [✔️] 🤖 61 > [](Days/day61.md)
+- [✔️] 🤖 61 > [Kubernetes & Multiple Environments](Days/day61.md)
 - [🚧] 🤖 62 > [](Days/day62.md)
 
 ### Automate Configuration Management

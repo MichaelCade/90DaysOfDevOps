@@ -1,5 +1,9 @@
 ## 
 
+Terragrunt 
+
+Terraform Cloud 
+
 ## Resources 
 I have listed a lot of resources down below and I think this topic has been covered so many times out there, If you have additional resources be sure to raise a PR with your resources and I will be happy to review and add them to the list. 
 

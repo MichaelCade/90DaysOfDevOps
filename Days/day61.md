@@ -20,9 +20,29 @@ Each of the above do have their pros and cons though.
 ### terraform workspaces 
 
 Pros 
-- 
+- Easy to get started 
+- Convenient terraform.workspace expression 
+- Minimises code duplication 
+
+Cons
+- Prone to human error (we were trying to eliminate this by using TF)
+- State stored within the same backend 
+- Codebase doesnt unambiguously show deployment configurations.
+
+### File Structure 
+
+Pros 
+- Isolation of backends 
+    - improved security 
+    - decreased potential for human error 
+- Codebase fully represents deployed state
 
 Cons 
+- Multiple terraform apply required to provision environments 
+- More code duplication, but can be minimised with modules. 
+
+
+
 
 ## Resources 
 I have listed a lot of resources down below and I think this topic has been covered so many times out there, If you have additional resources be sure to raise a PR with your resources and I will be happy to review and add them to the list. 
