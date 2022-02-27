@@ -94,11 +94,11 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 - [✔️] 🤖 56 > [The Big Picture: IaC](Days/day56.md)
 - [✔️] 🤖 57 > [An intro to Terraform ](Days/day57.md)
-- [🚧] 🤖 58 > [](Days/day58.md)
-- [] 🤖 59 > [](Days/day59.md)
-- [] 🤖 60 > [](Days/day60.md)
-- [] 🤖 61 > [](Days/day61.md)
-- [] 🤖 62 > [](Days/day62.md)
+- [✔️] 🤖 58 > [HashiCorp Configuration Language (HCL)](Days/day58.md)
+- [✔️] 🤖 59 > [Create a VM with Terraform & Variables](Days/day59.md)
+- [✔️] 🤖 60 > [Docker Containers, Provisioners & Modules](Days/day60.md)
+- [✔️] 🤖 61 > [](Days/day61.md)
+- [🚧] 🤖 62 > [](Days/day62.md)
 
 ### Automate Configuration Management
 
