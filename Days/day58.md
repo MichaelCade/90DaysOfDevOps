@@ -2,7 +2,7 @@
 
 Before we start making stuff with Terraform we have to dive a little into HashiCorp Configuration Language (HCL). So far during our challenge we have looked at a few different scripting and programming languages and here is another one. We touched on the [Go programming language](Days/day07.md) then [bash scripts](Days/day19.md) we even touched on a little python when it came to [network automation](Days/day27.md)
 
-Now we must cover HashiCorp Configuration Language (HCL) if this is the first time you are seeing the language it might look a little daunting but its quite simple and ver powerful.
+Now we must cover HashiCorp Configuration Language (HCL) if this is the first time you are seeing the language it might look a little daunting but its quite simple and very powerful.
 
 As we move through this section, we are going to be using examples that we can run locally on our system regardless of what OS you are using, we will be using virtualbox albeit not the infrastructure platform you would be using with Terraform it is free and will allow us to achieve what we are looking to do we can also do this with Docker and Kubernetes.
 
