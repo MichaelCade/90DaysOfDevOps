@@ -8,6 +8,8 @@ Purely demo purpose but the concept is the same we are going to have our desired
 
 The first thing we are going to do is create a new folder called virtualbox, we can then create a virtualbox.tf file and this is going to be where we define our resources. The code below which can be found in the VirtualBox folder as virtualbox.tf this is going to create 2 VMs in Virtualbox. 
 
+You can find more about the community virtualbox provider [here](https://registry.terraform.io/providers/terra-farm/virtualbox/latest/docs/resources/vm)
+
 ```
 terraform {
   required_providers {
