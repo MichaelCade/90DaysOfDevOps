@@ -1,10 +1,110 @@
 ## Kubernetes & Multiple Environments 
 
-Kubernetes Demo
+So far during this section on Infrastructure as code we have looked at deploying virtual machines albeit to virtualbox but the premise is the same really as we define in code what we want our virtual machine to look like and then we deploy. The same for Docker containers and in this session we are going to take a look at how Terraform can be used to interact with resources supported by Kubernetes.
 
-`terraform init`
+I have been using Terraform to deploy my Kubernetes clusters for demo purposes across the 3 main cloud providers and you can find the repository [tf_k8deploy](https://github.com/MichaelCade/tf_k8deploy)
+
+However you can also use Terraform to interact with objects within the Kubernetes cluster, this could be using the [Kubernetes provider](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs) or it could be using the [Helm provider](https://registry.terraform.io/providers/hashicorp/helm/latest) to manage your chart deployments. 
+
+Now we could use `kubectl` as we have showed in previous sections. But there are some benefits to using Terraform in your Kubernetes environment. 
+
+- Unified workflow - if you have used terraform to deploy your clusters, you could use the same workflow and tool to deploy within your Kubernetes clusters
+
+- Lifecycle management - Terraform is not just a provisioning tool, its going to enable change, updates and deletions. 
+
+### Simple Kubernetes Demo
+
+Much like the demo we created in the last session we can now deploy nginx into our Kubernetes cluster, I will be using minikube here again for demo purposes. We create our Kubernetes.tf file and you can find this in the [folder](/Days/IaC/Kubernetes/kubernetes.tf)
+
+In that file we are going to define our Kubernetes provider, we are going to point to our kubeconfig file, create a namespace called nginx, then we will create a deployment which contains 2 replicas and finally a service. 
+
+```
+terraform {
+  required_providers {
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = ">= 2.0.0"
+    }
+  }
+}
+provider "kubernetes" {
+  config_path = "~/.kube/config"
+}
+resource "kubernetes_namespace" "test" {
+  metadata {
+    name = "nginx"
+  }
+}
+resource "kubernetes_deployment" "test" {
+  metadata {
+    name      = "nginx"
+    namespace = kubernetes_namespace.test.metadata.0.name
+  }
+  spec {
+    replicas = 2
+    selector {
+      match_labels = {
+        app = "MyTestApp"
+      }
+    }
+    template {
+      metadata {
+        labels = {
+          app = "MyTestApp"
+        }
+      }
+      spec {
+        container {
+          image = "nginx"
+          name  = "nginx-container"
+          port {
+            container_port = 80
+          }
+        }
+      }
+    }
+  }
+}
+resource "kubernetes_service" "test" {
+  metadata {
+    name      = "nginx"
+    namespace = kubernetes_namespace.test.metadata.0.name
+  }
+  spec {
+    selector = {
+      app = kubernetes_deployment.test.spec.0.template.0.metadata.0.labels.app
+    }
+    type = "NodePort"
+    port {
+      node_port   = 30201
+      port        = 80
+      target_port = 80
+    }
+  }
+}
+```
+
+The first thing we have to do in our new project folder is run the `terraform init` command. 
 
 ![](Images/Day61_IAC1.png)
+
+And then before we run the `terraform apply` command, let me show you that we have no namespaces. 
+
+![](Images/Day61_IAC2.png)
+
+When we run our apply command this is going to create those 3 new resources, namespace, deployment and service within our Kubernetes cluster. 
+
+![](Images/Day61_IAC3.png)
+
+We can now take a look at the deployed resources within our cluster. 
+
+![](Images/Day61_IAC4.png)
+
+Now because we are using minikube and you will have seen in the previous section this has its own limitations when we try and play with the docker networking for ingress. But if we simply issue the `kubectl port-forward -n nginx svc/nginx 30201:80` command and open a browser to http://localhost:30201/ we should see our NGINX page. 
+
+![](Images/Day61_IAC5.png)
+
+If you want to try out more detailed demos with Terraform and Kubernetes then the [HashiCorp Learn site](https://learn.hashicorp.com/tutorials/terraform/kubernetes-provider) is fantastic to run through. 
 
 
 ### Multiple Environments 
@@ -40,9 +140,6 @@ Pros
 Cons 
 - Multiple terraform apply required to provision environments 
 - More code duplication, but can be minimised with modules. 
-
-
-
 
 ## Resources 
 I have listed a lot of resources down below and I think this topic has been covered so many times out there, If you have additional resources be sure to raise a PR with your resources and I will be happy to review and add them to the list. 
