@@ -2,13 +2,13 @@
 
 Before we start making stuff with Terraform we have to dive a little into HashiCorp Configuration Language (HCL). So far during our challenge we have looked at a few different scripting and programming languages and here is another one. We touched on the [Go programming language](Days/day07.md) then [bash scripts](Days/day19.md) we even touched on a little python when it came to [network automation](Days/day27.md)
 
-Now we must cover HashiCorp Configuration Language (HCL) if this is the first time you are seeing the language it might look a little daunting but its quite simple and ver powerful.
+Now we must cover HashiCorp Configuration Language (HCL) if this is the first time you are seeing the language it might look a little daunting but its quite simple and very powerful.
 
-As we move through this section, we are going to be using examples that we can run locally on our system regardless of what OS you are using, we will be using virtualbox albeit not the infrastructure platform you would be using with Terraform it is free and will allow us to achieve what we are looking to do we can also do this with Docker and Kubernetes.
+As we move through this section, we are going to be using examples that we can run locally on our system regardless of what OS you are using, we will be using virtualbox, albeit not the infrastructure platform you would usually be using with Terraform. However running this locally, it is free and will allow us to achieve what we are looking for in this post. We could also extend this posts concepts to docker or Kubernetes as well. 
 
-In general though you would or should be using Terraform to deploy your infrastructure in the public cloud (AWS, Google, Microsoft Azure) but then also in your virtualisation environments such as (VMware, Microsoft Hyper-V, Nutanix AHV) In the public cloud Terraform allows for us to do a lot more than just Virtual Machine automated deployment, we can create all the required infrastructure such as PaaS workloads and all of the networking required assets such as VPCs and Security Groups. 
+In general though, you would or should be using Terraform to deploy your infrastructure in the public cloud (AWS, Google, Microsoft Azure) but then also in your virtualisation environments such as (VMware, Microsoft Hyper-V, Nutanix AHV). In the public cloud Terraform allows for us to do a lot more than just Virtual Machine automated deployment, we can create all the required infrastructure such as PaaS workloads and all of the networking required assets such as VPCs and Security Groups. 
 
-There are two important aspects to Terraform we have the code which we are going to get into here and then we also have the state both of this together could be called the Terraform core. We then have the environment we wish to speak to and deploy into and we do this via providers, briefly mentioned in the last session but we have an AWS provider, we have an Azure providers etc. There are hundreds. 
+There are two important aspects to Terraform, we have the code which we are going to get into in this post and then we also have the state. Both of these together could be called the Terraform core. We then have the environment we wish to speak to and deploy into, which is executed using Terraform providers, briefly mentioned in the last session, but we have an AWS provider, we have an Azure providers etc. There are hundreds. 
 
 ### Basic Terraform Usage
 
@@ -17,7 +17,7 @@ Let's take a look at a Terraform `.tf` file to see how they are made up. The fir
 
 ### Providers
 
-At the top of our `.tf` generally called main.tf at least until we make things more complex. Here we will define the providers that we have mentioned before. Our source of the aws provider as you can see is `hashicorp/aws` this means this provider is maintained or has been published by hashicorp themselves. 
+At the top of our `.tf` file structure, generally called `main.tf` at least until we make things more complex. Here we will define the providers that we have mentioned before. Our source of the aws provider as you can see is `hashicorp/aws` this means the provider is maintained or has been published by hashicorp themselves. By default you will reference providers that are available from the [Terraform Registry](https://registry.terraform.io/), you also have the ability to write your own providers, and use these locally, or self-publish to the Terraform Registry.
 
 ```
 terraform {
