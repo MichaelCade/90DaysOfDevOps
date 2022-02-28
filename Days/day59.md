@@ -6,28 +6,69 @@ Purely demo purpose but the concept is the same we are going to have our desired
 
 ### Create virtual machine in VirtualBox 
 
-The first thing we are going to do is create a new folder called virtualbox, we can then create a virtualbox.tf file and this is going to be where we define our resources. 
+The first thing we are going to do is create a new folder called virtualbox, we can then create a virtualbox.tf file and this is going to be where we define our resources. The code below which can be found in the VirtualBox folder as virtualbox.tf this is going to create 2 VMs in Virtualbox. 
 
+```
+terraform {
+  required_providers {
+    virtualbox = {
+      source = "terra-farm/virtualbox"
+      version = "0.2.2-alpha.1"
+    }
+  }
+}
 
-<code>
+# There are currently no configuration options for the provider itself.
+
+resource "virtualbox_vm" "node" {
+  count     = 2
+  name      = format("node-%02d", count.index + 1)
+  image     = "https://app.vagrantup.com/ubuntu/boxes/bionic64/versions/20180903.0.0/providers/virtualbox.box"
+  cpus      = 2
+  memory    = "512 mib"
+
+  network_adapter {
+    type           = "hostonly"
+    host_interface = "vboxnet1"
+  }
+}
+
+output "IPAddr" {
+  value = element(virtualbox_vm.node.*.network_adapter.0.ipv4_address, 1)
+}
+
+output "IPAddr_2" {
+  value = element(virtualbox_vm.node.*.network_adapter.0.ipv4_address, 2)
+}
+
+```
 
 Now that we have our code defined we can now perform the `terraform init` on our folder to download the provider for virtualbox. 
 
 ![](Images/Day59_IAC1.png)
 
 
-Obviously you will also need to have virtualbox installed on your system as well. We can then next run `terraform plan` to see what our code will create for us. Followed by `terraform apply` 
+Obviously you will also need to have virtualbox installed on your system as well. We can then next run `terraform plan` to see what our code will create for us. Followed by `terraform apply` the below image shows your completed process.
 
+![](Images/Day59_IAC2.png)
 
+In Virtualbox you will now see your 2 virtual machines. 
 
+![](Images/Day59_IAC3.png)
 
-### Change configuration so that it then becomes a web server 
+### Change configuration 
 
+Lets add another node to our deployment. We can simply change the count line to show our newly desired number of nodes. When we run our `terraform apply` it will look something like below. 
 
+![](Images/Day59_IAC4.png)
 
-### Add additional virtual machine to change our desired state 
+Once complete in virtualbox you can see we now have 3 nodes up and running. 
 
+![](Images/Day59_IAC5.png)
 
+When we are finished we can clear this up using the `terraform destroy` and our machines will be removed. 
+
+![](Images/Day59_IAC6.png)
 
 ### Variables & Outputs 
 
@@ -59,19 +100,6 @@ variable "some resource"  {
 
 }
 ```
-
-
-
-
-Variables and Outputs
-Additional Language Features
-Project Organization + Modules
-Managing Multiple Environments
-Testing Terraform Code
-Developer Workflows and Automation
-
-
-
 
 ## Resources 
 I have listed a lot of resources down below and I think this topic has been covered so many times out there, If you have additional resources be sure to raise a PR with your resources and I will be happy to review and add them to the list. 

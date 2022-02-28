@@ -1,5 +1,10 @@
 ## Docker Containers, Provisioners & Modules 
 
+On [Day 59](day59.md) we provisioned a virtual machine using Terraform to our local FREE virtualbox environment. In this section we are going to be deploy a Docker container with some configuration to our local Docker environment. 
+
+
+
+
 Docker demo
 
 `terraform init`

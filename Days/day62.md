@@ -1,8 +1,38 @@
-## 
+## Testing, Tools & Alternatives
+
+### Code Rot 
+
+- Out of band changes 
+- Unpinned versions 
+- Deprecated dependancies 
+- Unapplied changes 
+
+### Testing 
+
+Built in 
+
+- terraform fmt 
+- terraform validate 
+- terraform plan 
+- custom validation rules 
+
+External tools 
+- tflint 
+- Scanning tools - checkov, tfsec, terrascan, terraform-compliance, snyk 
+- Managed Cloud offering - terraform sentinal 
+
+Automated testing - Terratest / Shell Scripts 
+
+Terraform Cloud
 
 Terragrunt 
 
-Terraform Cloud 
+runatlantis.io 
+
+### Alternatives 
+
+Pulumi 
+ 
 
 ## Resources 
 I have listed a lot of resources down below and I think this topic has been covered so many times out there, If you have additional resources be sure to raise a PR with your resources and I will be happy to review and add them to the list. 

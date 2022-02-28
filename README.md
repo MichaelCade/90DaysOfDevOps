@@ -98,12 +98,12 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] 🤖 59 > [Create a VM with Terraform & Variables](Days/day59.md)
 - [✔️] 🤖 60 > [Docker Containers, Provisioners & Modules](Days/day60.md)
 - [✔️] 🤖 61 > [Kubernetes & Multiple Environments](Days/day61.md)
-- [🚧] 🤖 62 > [](Days/day62.md)
+- [✔️] 🤖 62 > [Testing, Tools & Alternatives](Days/day62.md)
 
 ### Automate Configuration Management
 
-- [] 📜 63 > [The Big Picture: Configuration Management](Days/day63.md)
-- [] 📜 64 > [](Days/day64.md)
+- [🚧] 📜 63 > [The Big Picture: Configuration Management](Days/day63.md)
+- [] 📜 64 > [Ansible: Getting Started](Days/day64.md)
 - [] 📜 65 > [](Days/day65.md)
 - [] 📜 66 > [](Days/day66.md)
 - [] 📜 67 > [](Days/day67.md)
@@ -113,7 +113,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 ### Create CI/CD Pipelines 
 
 - [] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
-- [] 🔄 71 > [](Days/day71.md)
+- [] 🔄 71 > [GitHub Actions Overview](Days/day71.md)
 - [] 🔄 72 > [](Days/day72.md)
 - [] 🔄 73 > [](Days/day73.md)
 - [] 🔄 74 > [](Days/day74.md)
