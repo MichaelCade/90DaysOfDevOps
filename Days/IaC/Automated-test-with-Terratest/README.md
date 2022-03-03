@@ -1,5 +1,4 @@
-# terra-form-test-techhub
-
+# Terratest
 Terratest is a Go library developed at Gruntwork, that makes it easier to write automated tests for our infrastructure code. It provides a variety of helper functions and patterns for common infrastructure testing tasks but here we will be discussing about Testing Terraform code.
 
 # To Run this application
