@@ -47,7 +47,7 @@ tasks:
 
 ### Vagrant to setup our environment
 
-We are going to use Vagrant to set up our node environment, I am going to keep this at a reasonable number 4 nodes but you can hopefully see that this could easily be 300 or 3000 and this is the power of Ansible and other configuration management tools to be able to configure your servers.
+We are going to use Vagrant to set up our node environment, I am going to keep this at a reasonable  4 nodes but you can hopefully see that this could easily be 300 or 3000 and this is the power of Ansible and other configuration management tools to be able to configure your servers.
 
 You can find this file located here ([Vagrantfile](/Days/Configmgmt/Vagrantfile))
 
@@ -57,29 +57,31 @@ Vagrant.configure("2") do |config|
     {
       :hostname => "db01",
       :box => "bento/ubuntu-21.10",
-      :ip => "10.0.2.16",
+      :ip => "192.168.169.130",
       :ssh_port => '2210'
     },
     {
       :hostname => "web01",
       :box => "bento/ubuntu-21.10",
-      :ip => "10.0.2.17",
+      :ip => "192.168.169.131",
       :ssh_port => '2211'
     },
     {
       :hostname => "web02",
       :box => "bento/ubuntu-21.10",
-      :ip => "10.0.2.18",
+      :ip => "192.168.169.132",
       :ssh_port => '2212'
     },
     {
       :hostname => "loadbalancer",
       :box => "bento/ubuntu-21.10",
-      :ip => "10.0.2.19",
+      :ip => "192.168.169.134",
       :ssh_port => '2213'
     }
 
   ]
+
+config.vm.base_address = 600
 
   servers.each do |machine|
 
@@ -87,11 +89,11 @@ Vagrant.configure("2") do |config|
       node.vm.box = machine[:box]
       node.vm.hostname = machine[:hostname]
     
-      node.vm.network :private_network, ip: machine[:ip]
+      node.vm.network :public_network, bridge: "Intel(R) Ethernet Connection (7) I219-V", ip: machine[:ip]
       node.vm.network "forwarded_port", guest: 22, host: machine[:ssh_port], id: "ssh"
 
       node.vm.provider :virtualbox do |v|
-        v.customize ["modifyvm", :id, "--memory", 512]
+        v.customize ["modifyvm", :id, "--memory", 2048]
         v.customize ["modifyvm", :id, "--name", machine[:hostname]]
       end
     end
@@ -102,16 +104,78 @@ end
 
 Use the `vagrant up` command to spin these machines up in VirtualBox, You might be able to add more memory and you might also want to define a different private_network address for each machine but this works in my environment. Remember our control box is the Ubuntu desktop we deployed during the Linux section. 
 
+If you are resource contrained then you can also run `vagrant up web01 web02` to only bring up the webservers that we are using here. 
+
 ### Ansible host configuration
 
-Now that we have our environment ready, we can check ansible and for this we will use our Ubuntu desktop as our control, let’s also add the new nodes to our group in the ansible hosts file, you can think of this file as an inventory, an alternative to this could be another inventory file that is called on as part of your ansible command with `-i filename` this could be useful vs using the ansible.cfg file as you can have different files for different environments, maybe production, test and staging. Because we are using the default hosts file we do not need to specify as this would be the default used.
+Now that we have our environment ready, we can check ansible and for this we will use our Ubuntu desktop (You could use this but you can equally use any Linux based machine on your network accessible to the network below) as our control, let’s also add the new nodes to our group in the ansible hosts file, you can think of this file as an inventory, an alternative to this could be another inventory file that is called on as part of your ansible command with `-i filename` this could be useful vs using the host file as you can have different files for different environments, maybe production, test and staging. Because we are using the default hosts file we do not need to specify as this would be the default used.
+
+I have added the following to the default hosts file. 
+
+```
+[control]
+ansible-control
+
+[proxy] 
+loadbalancer
+
+[webservers] 
+web01
+web02
+
+[database] 
+db01
+
+```
+![](Images/Day65_config2.png)
 
 Before moving on we want to make sure we can run a command against our nodes, let’s run `ansible nodes -m command -a hostname` this simple command will test that we have connectivity and report back our host names.
 
 Also note that I have added these nodes and IPs to my Ubuntu control node within the /etc/hosts file to ensure connectivity. We might also need to do SSH configuration for each node from the Ubuntu box.
 
+```
+192.168.169.140 ansible-control
+192.168.169.130 db01
+192.168.169.131 web01
+192.168.169.132 web02
+192.168.169.133 loadbalancer
+```
+![](Images/Day65_config3.png)
+
+At this stage we want to run through setting up SSH keys between your control and your server nodes. This is what we are going to do next, another way here could be to add variables into your hosts file to give username and password. I would advise against this as this is never going to be a best practice. 
+
+To set up SSH and share amongst your nodes, follow the steps below, you will be prompted for passwords (`vagrant`) and you will likely need to hit `y` a few times to accept. 
+
+`ssh-keygen`
+
+![](Images/Day65_config5.png)
+
+`ssh-copy-id localhost`
+
+![](Images/Day65_config6.png)
+
+Now if you have all of your VMs switched on then you can run the `ssh-copy-id web01 && ssh-copy-id web02 && ssh-copy-id loadbalancer && ssh-copy-id db01` this will prompt you for your password in our case our password is `vagrant`
+
+I am not running all my VMs and only running the webservers so I issued `ssh-copy-id web01 && ssh-copy-id web02` 
+
+![](Images/Day65_config7.png)
+
+Before running any playbooks I like to make sure that I have simple connectivity with my groups so I have ran `ansible webservers -m ping` to test connectivity. 
+
+![](Images/Day65_config4.png)
+
+
 ### Our First "real" Ansible Playbook
-Our first Ansible playbook is going to configure our webservers, we have grouped these in our hosts file under the grouping.  
+Our first Ansible playbook is going to configure our webservers, we have grouped these in our hosts file under the grouping [webservers].  
+
+Before we run our playbook we can confirm that our web01 and web02 do not have apache installed. The top of the screenshot below is showing you the folder and file layout I have created within my ansible control to run this playbook, we have the `playbook1.yml`, then in the templates folder we have the `index.html.j2` and `ports.conf.j2` files. You can find these files in the folder listed above in the repository. 
+
+Then we SSH into web01 to check if we have apache installed? 
+
+![](Images/Day65_config8.png)
+
+You can see from the above that we have not got apache installed on our web01 so we can fix this by running the below playbook. 
+
 
 ```
 - hosts: webservers
@@ -172,14 +236,31 @@ At this stage you might be thinking but we have deployed 5 VMs (including our Ub
 
 ### Run our Playbook
 
-We are now ready to run our playbook against our nodes.
+We are now ready to run our playbook against our nodes. To run our playbook we can use the `ansible-playbook playbook1.yml` We have defined our hosts that our playbook will run against within the playbook and this will walkthrough our tasks that we have defined. 
 
-(The command to run our playbook - ‘ansible-playbook nodes playbook1.YAML’)
+When the command is complete we get an output showing our plays and tasks, this may take some time you can see from the below image that this took a while to go and install our desired state. 
 
-When the command is complete we get an output showing our plays and tasks
+![](Images/Day65_config9.png)
 
 We can then double check this by jumping into a node and checking we have the installed software on our node.
+
+![](Images/Day65_config10.png)
+
+Just to round this out as we have deployed two standalone webservers with the above we can now navigate to the respective IPs that we defined and get our new website. 
+
+![](Images/Day65_config11.png)
 
 We are going to build on this playbook as we move through the rest of this section. I am interested as well in taking our Ubuntu desktop and seeing if we could actually bootstrap our applications and configuration using Ansible so we might also touch this. You saw that we can use local host in our commands we can also run playbooks against our local host for example.
 
 Another thing to add here is that we are only really working with Ubuntu VMs but Ansible is agnostic to the target systems. The alternatives that we have previously mentioned to manage your systems could be server by server (not scalable when you get over a large amount of servers, plus a pain even with 3 nodes) we can also use shell scripting which again we covered in the Linux section but these nodes are potentially different so yes it can be done but then someone needs to maintain and manage those scripts. Ansible is free and hits the easy button vs having to have a specialised script.
+
+## Resources 
+
+- [What is Ansible](https://www.youtube.com/watch?v=1id6ERvfozo)
+- [Ansible 101 - Episode 1 - Introduction to Ansible](https://www.youtube.com/watch?v=goclfp6a2IQ)
+- [NetworkChuck - You need to learn Ansible right now!](https://www.youtube.com/watch?v=5hycyr-8EKs&t=955s)
+- [Your complete guide to Ansible](https://www.youtube.com/playlist?list=PLnFWJCugpwfzTlIJ-JtuATD2MBBD7_m3u)
+
+This final playlist listed above is where a lot of the code and ideas came from for this section, a great resource and walkthrough in video format. 
+
+See you on [Day 66](day66.md)

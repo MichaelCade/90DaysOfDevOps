@@ -104,8 +104,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 - [✔️] 📜 63 > [The Big Picture: Configuration Management](Days/day63.md)
 - [✔️] 📜 64 > [Ansible: Getting Started](Days/day64.md)
-- [🚧] 📜 65 > [Ansible Playbooks](Days/day65.md)
-- [] 📜 66 > [](Days/day66.md)
+- [✔️] 📜 65 > [Ansible Playbooks](Days/day65.md)
+- [🚧] 📜 66 > [Ansible Playbooks Continued...](Days/day66.md)
 - [] 📜 67 > [](Days/day67.md)
 - [] 📜 68 > [](Days/day68.md)
 - [] 📜 69 > [](Days/day69.md)
