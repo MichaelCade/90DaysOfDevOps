@@ -4,7 +4,7 @@ I think it is fair to say to be successful in the long term as a DevOps engineer
 
 I think if I was to ask out on social do you need to have programming skills for DevOps related roles, the answer will be most likely a hard yes? Let me know if you think otherwise? Ok but then a bigger question and this is where you won't get such a clear answer is which programming language?  The most common answer I have seen here has been Python or increasingly more often, we're seeing Golang or Go should be the language that you learn. 
 
-To be successful in DevOps you have to have a good knowledge of programming skills is my takeaway from that at least. But we have to under why we need it to choose the right path. 
+To be successful in DevOps you have to have a good knowledge of programming skills is my takeaway from that at least. But we have to understand why we need it to choose the right path. 
 
 ## Understand why you need to learn a programming language. 
 
