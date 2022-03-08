@@ -17,7 +17,9 @@ we are basically going to copy our tasks into their own file within a folder.
   apt: name=apache2 state=latest
 
 - name: write the apache2 ports.conf config file
-  template: src=templates/ports.conf.j2 dest=/etc/apache2/ports.conf
+  template: 
+    src=templates/ports.conf.j2 
+    dest=/etc/apache2/ports.conf
   notify: restart apache
 
 - name: write a basic index.html file
