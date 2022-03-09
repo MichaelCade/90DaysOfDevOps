@@ -98,8 +98,6 @@ I am pretty confident that what we have installed is all good but let's use an a
 
 ![](Images/Day67_config3.png)
 
-
-
 ## Resources 
 
 - [What is Ansible](https://www.youtube.com/watch?v=1id6ERvfozo)
