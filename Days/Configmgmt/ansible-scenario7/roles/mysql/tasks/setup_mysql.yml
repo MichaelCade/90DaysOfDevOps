@@ -19,3 +19,12 @@
     login_password: "{{ db_pass }}"     
     name: "{{ db_name }}"
     state: present
+
+- name: Enable remote login to mysql
+  lineinfile:
+    path: /etc/mysql/mysql.conf.d/mysqld.cnf
+    regexp: '^bind-address'
+    line: 'bind-address = 0.0.0.0'
+    backup: yes
+  notify:
+      - Restart mysql

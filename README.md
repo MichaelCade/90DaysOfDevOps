@@ -108,11 +108,11 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] 📜 66 > [Ansible Playbooks Continued...](Days/day66.md)
 - [✔️] 📜 67 > [Using Roles & Deploying a Loadbalancer](Days/day67.md)
 - [✔️] 📜 68 > [Tags, Variables, Inventory & Database Server config](Days/day68.md)
-- [🚧] 📜 69 > [](Days/day69.md)
+- [✔️] 📜 69 > [All other things Ansible - Automation Controller, AWX, Vault](Days/day69.md)
 
 ### Create CI/CD Pipelines 
 
-- [] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
+- [🚧] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
 - [] 🔄 71 > [GitHub Actions Overview](Days/day71.md)
 - [] 🔄 72 > [](Days/day72.md)
 - [] 🔄 73 > [](Days/day73.md)
