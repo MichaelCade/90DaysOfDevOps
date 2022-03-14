@@ -114,9 +114,9 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 - [✔️] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
 - [✔️] 🔄 71 > [What is Jenkins?](Days/day71.md)
-- [🚧] 🔄 72 > [Getting hands on with Jenkins](Days/day72.md)
-- [] 🔄 73 > [GitHub Actions Overview](Days/day73.md)
-- [] 🔄 74 > [](Days/day74.md)
+- [✔️] 🔄 72 > [Getting hands on with Jenkins](Days/day72.md)
+- [🚧] 🔄 73 > [Building a Jenkins pipeline](Days/day73.md)
+- [] 🔄 74 > [GitHub Actions Overview](Days/day74.md)
 - [] 🔄 75 > [](Days/day75.md)
 - [] 🔄 76 > [](Days/day76.md)
 
