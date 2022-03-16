@@ -116,9 +116,9 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] 🔄 71 > [What is Jenkins?](Days/day71.md)
 - [✔️] 🔄 72 > [Getting hands on with Jenkins](Days/day72.md)
 - [✔️] 🔄 73 > [Building a Jenkins pipeline](Days/day73.md)
-- [🚧] 🔄 74 > [GitHub Actions Overview](Days/day74.md)
-- [] 🔄 75 > [](Days/day75.md)
-- [] 🔄 76 > [](Days/day76.md)
+- [✔️] 🔄 74 > [Hello World - Jenkinsfile App Pipeline](Days/day74.md)
+- [🚧] 🔄 75 > [GitHub Actions Overview](Days/day75.md)
+- [] 🔄 76 > [ArgoCD Overview](Days/day76.md)
 
 ### Monitoring, Log Management, and Data Visualisation
 
