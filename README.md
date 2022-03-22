@@ -124,8 +124,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 - [✔️] 📈 77 > [The Big Picture: Monitoring](Days/day77.md)
 - [✔️] 📈 78 > [Hands-On Monitoring Tools](Days/day78.md)
-- [🚧] 📈 79 > [The Big Picture: Log Management](Days/day79.md)
-- [] 📈 80 > [](Days/day80.md)
+- [✔️] 📈 79 > [The Big Picture: Log Management](Days/day79.md)
+- [🚧] 📈 80 > [ELK Stack & Fluentd](Days/day80.md)
 - [] 📈 81 > [The Big Picture: Data Visualisation](Days/day81.md)
 - [] 📈 82 > [](Days/day82.md)
 - [] 📈 83 > [](Days/day83.md)
