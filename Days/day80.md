@@ -96,4 +96,4 @@ I was reading this article from MetricFire [Prometheus vs. ELK](https://www.metr
 - [What is ELK Stack?](https://www.youtube.com/watch?v=4X0WLg05ASw)
 - [Fluentd simply explained](https://www.youtube.com/watch?v=5ofsNyHZwWE&t=14s) 
 
-See you on [Day 80](day80.md)
+See you on [Day 81](day81.md)
