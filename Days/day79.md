@@ -2,9 +2,7 @@
 
 A continuation to the infrastructure monitoring challenges and solutions, log management is another puzzle peice to the overall observability jigsaw. 
 
-
 ### Log Management & Aggregation 
-
 
 Let's talk about two core concepts the first of which is log aggregation and it's a way of collecting and tagging application logs from many different services and to a single dashboard that can easily be searched. 
 
@@ -45,6 +43,7 @@ Examples of log management platforms there's
 - Fluentd - popular open source choice
 - Datadog - hosted offering, commonly used at larger enterprises, 
 - LogDNA - hosted offering 
+- Splunk 
 
 Cloud providers also provide logging such as AWS CloudWatch Logs, Microsoft Azure Monitor and Google Cloud Logging. 
 
