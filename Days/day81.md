@@ -1,4 +1,4 @@
-## Fluentd
+## Fluentd & FluentBit
 
 Another data collector that I wanted to explore as part of this observability section was [Fluentd](https://docs.fluentd.org/). An Open-Source unified logging layer. 
 
