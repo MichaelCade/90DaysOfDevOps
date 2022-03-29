@@ -132,8 +132,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 
 ### Store & Protect Your Data
 
-- [🚧] 🗃️ 84 > [The Big Picture: Data Management](Days/day84.md)
-- [] 🗃️ 85 > [](Days/day85.md)
+- [✔️] 🗃️ 84 > [The Big Picture: Data Management](Days/day84.md)
+- [🚧] 🗃️ 85 > [](Days/day85.md)
 - [] 🗃️ 86 > [](Days/day86.md)
 - [] 🗃️ 87 > [](Days/day87.md)
 - [] 🗃️ 88 > [](Days/day88.md)
