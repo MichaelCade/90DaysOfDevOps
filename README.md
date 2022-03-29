@@ -127,8 +127,8 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [✔️] 📈 79 > [The Big Picture: Log Management](Days/day79.md)
 - [✔️] 📈 80 > [ELK Stack](Days/day80.md)
 - [✔️] 📈 81 > [Fluentd & FluentBit](Days/day81.md)
-- [🚧] 📈 82 > [EFK Stack](Days/day82.md)
-- [] 📈 83 > [Data Visualisation - Grafana](Days/day83.md)
+- [✔️] 📈 82 > [EFK Stack](Days/day82.md)
+- [🚧] 📈 83 > [Data Visualisation - Grafana](Days/day83.md)
 
 ### Store & Protect Your Data
 
