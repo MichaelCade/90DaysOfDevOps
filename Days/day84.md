@@ -1,6 +1,6 @@
 ## The Big Picture: Data Management
 
-![](Images/Day84_Monitoring1.png)
+![](Images/Day84_Data1.png)
 
 Data Management is by no means a new wall to climb, although we do know that data is more important than it maybe was a few years ago. Valuable and ever changing it can also be a massive nightmare when we are talking about automation and continuously integrate, test and deploy frequent software releases. Enter the persistent data and underlying data services often the main culprit when things go wrong. 
 

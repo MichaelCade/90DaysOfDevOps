@@ -12,14 +12,19 @@ This is the essence of a good log aggregation platform efficiently collect logs 
 
 ### Example App 
 
-Our example application is a web browser, we have a typical front end and backend storing our critical data to a MongoDB database. 
+Our example application is a web app, we have a typical front end and backend storing our critical data to a MongoDB database. 
 
 If a user told us the page turned all white and printed an error message we would be hard-pressed to diagnose the problem with our current stack the user would need to manually send us the error and we'd need to match it with relevant logs in the other three services. 
 
 ### ELK 
 
-Let's take a look at elk a popular open source log aggregation stack named after its three components elasticsearch logstash and kibana if we installed it in our example app we'd get three new services so the user's web browser again would connect to our front end and back end the back end would connect to and all of these services the browser the front end the back end and would all send logs to logstash and then the way that these three components work the components of elk elasticsearch logstash and Kibana is that all of the other services send logs to logstash, logstash takes these logs which are text emitted by the application for example the the web browser when you visit a web page, the web page might log this visitor access this page at this time and that's an example of a log message those logs would be sent to logstash.
+Let's take a look at ELK, a popular open source log aggregation stack named after its three components elasticsearch, logstash and kibana if we installed it in the same environment as our example app. 
 
+The web application would connect to the frontend which then connects to the backend, the backend would send logs to logstash and then the way that these three components work 
+
+### The components of elk 
+
+Elasticsearch, logstash and Kibana is that all of  services send logs to logstash, logstash takes these logs which are text emitted by the application. For example the web application when you visit a web page, the web page might log this visitor access to this page at this time and that's an example of a log message those logs would be sent to logstash.
 
 Logstash would then extract things from them so for that log message user did **thing**, at **time**. It would extract the time and extract the message and extract the user and include those all as tags so the message would be an object of tags and message so that you could search them easily you could find all of the requests made by a specific user but logstash doesn't store things itself it stores things in elasticsearch which is a efficient database for querying text and elasticsearch exposes the results as Kibana and Kibana is a web server that connects to elasticsearch and allows administrators as the devops person or other people on your team, the on-call engineer to view the logs in production whenever there's a major fault. You as the administrator would connect to Kibana, Kibana would query elasticsearch for logs matching whatever you wanted. 
 
