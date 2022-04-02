@@ -10,7 +10,7 @@ Let's start with definitions.
 
 ### Agile Development 
 
-Agile is an approach that focuses on delivering  small results faster rather than releasing one big interaction of the product software is developed in iterations the team releases a new version every week or month with non-incremental updates the final goal of agile is to deliver an optimal experience to the end-users 
+Agile is an approach that focuses on delivering  small results faster rather than releasing one big interaction of the product, software is developed in iterations. The team releases a new version every week or month with non-incremental updates the final goal of agile is to deliver an optimal experience to the end-users 
 
 ### DevOps 
 
@@ -19,7 +19,7 @@ and delivery practices based on cooperation between software developers and oper
 
 ## What is the difference between Agile and DevOps 
 
-The difference is mainly the preocupations. Agile and devops have different preocupations but they are helping each other. Agile want short iteration, which is only possible with the automation that Devops brings. Agile want customer to try a specific version and quickly give feedback which is only possible if devops make creation of new environment easy.
+The difference is mainly the preoccupations. Agile and devops have different preoccupations but they are helping each other. Agile want short iteration, which is only possible with the automation that Devops brings. Agile want customer to try a specific version and quickly give feedback which is only possible if devops make creation of new environment easy.
 
 ### Different participants 
 
