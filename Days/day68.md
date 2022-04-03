@@ -6,7 +6,7 @@ As we left our playbook in the session yesterday we would need to run every task
 
 However tags can enable us to seperate these out if we want. This could be an effcient move if we have extra large and long playbooks in our environments. 
 
-In our playbook file, in this case we are using [ansible-scenario5](Days/Configmgmt/ansible-scenario5/playbook5.yml)
+In our playbook file, in this case we are using [ansible-scenario5](Configmgmt/ansible-scenario5/playbook5.yml)
 
 ```
 - hosts: webservers
@@ -56,7 +56,7 @@ Each time we have ran our playbooks, we have had a task that we have not defined
 
 ![](Images/Day68_config3.png)
 
-If we were to run the following `ansible proxy -m setup` command we should see a lot of output in JSON format. There is going to be a lot of information on your terminal though to really use this so we would like to output this to a file using `ansible proxy -m setup >> facts.json` you can see this file in this repository, [ansible-scenario5](Days/Configmgmt/ansible-scenario5/facts.json)
+If we were to run the following `ansible proxy -m setup` command we should see a lot of output in JSON format. There is going to be a lot of information on your terminal though to really use this so we would like to output this to a file using `ansible proxy -m setup >> facts.json` you can see this file in this repository, [ansible-scenario5](Configmgmt/ansible-scenario5/facts.json)
 
 ![](Images/Day68_config4.png)
 
@@ -106,7 +106,7 @@ User created variables are what we have created ourselves. If you take a look in
   tags: proxy
 ```
 
-We can however keep our playbook clear of variables by moving them to their own file. We are going to do this but we will move into the [ansible-scenario6](Days/Configmgmt/ansible-scenario6) folder. In the root of that folder we are going to create a group_vars folder. We are then going to create another folder called all (all groups are going to get these variables). In there we will create a file called `common_variables.yml` and we will copy our variables from our playbook into this file. Removing them from the playbook along with vars: as well. 
+We can however keep our playbook clear of variables by moving them to their own file. We are going to do this but we will move into the [ansible-scenario6](Configmgmt/ansible-scenario6) folder. In the root of that folder we are going to create a group_vars folder. We are then going to create another folder called all (all groups are going to get these variables). In there we will create a file called `common_variables.yml` and we will copy our variables from our playbook into this file. Removing them from the playbook along with vars: as well. 
 
 ```
 http_port: 8000
@@ -176,7 +176,7 @@ We can create multiple files for our different inventory of servers and nodes. W
 
 We still have one more machine we have not powered up yet and configured. We can do this using `vagrant up db01` from where our Vagrantfile is located. When this is up and accessible we then need to make sure the SSH key is copied over using `ssh-copy-id db01` so that we can access. 
 
-We are going to be working from the [ansible-scenario7](Days/Configmgmt/ansible-scenario7) folder
+We are going to be working from the [ansible-scenario7](Configmgmt/ansible-scenario7) folder
 
 Let's then use `ansible-galaxy init roles/mysql` to create a new folder structure for a new role called "mysql" 
 
