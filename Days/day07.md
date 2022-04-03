@@ -29,7 +29,7 @@ As I have also mentioned some of the most known DevOps tools and platforms are w
 What are some of the characteristics of Go that make it great for DevOps?
 
 ## Build and Deployment of Go Programs 
-An advantage of using a language like Python that is interpreted in a DevOps role is that you don’t need to compile a python program before running it. Especially for smaller automation tasks, you don’t want to be slowed down by a build process that requires compilation even though, even though Go is a compiled programming language, **Go compiles directly into machine code**.  Go is known also for fast compilation times. 
+An advantage of using a language like Python that is interpreted in a DevOps role is that you don’t need to compile a python program before running it. Especially for smaller automation tasks, you don’t want to be slowed down by a build process that requires compilation even though, Go is a compiled programming language, **Go compiles directly into machine code**.  Go is known also for fast compilation times. 
 
 ## Go vs Python for DevOps 
 
