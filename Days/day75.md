@@ -2,7 +2,7 @@
 
 In this section I wanted to move on and take a look at maybe a different approach to what we just spent time on. GitHub Actions is where we will focus on in this session. 
 
-GitHub Actions is a CI/CD platform that allows us to build, test and deploy amongst other tasks our pipeline. It has the concept of workdlows that build and test against a GitHub repository. You could also use GitHub Actions to drive other workflows based on events that happen within your repository. 
+GitHub Actions is a CI/CD platform that allows us to build, test and deploy amongst other tasks our pipeline. It has the concept of workflows that build and test against a GitHub repository. You could also use GitHub Actions to drive other workflows based on events that happen within your repository. 
 
 ### Workflows
 
