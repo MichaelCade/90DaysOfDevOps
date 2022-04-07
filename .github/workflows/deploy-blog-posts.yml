@@ -1,0 +1,57 @@
+# This workflow will push and update articles on dev.to each time a new
+# commit is pushed to the main branch.
+#
+# To make it work, you need a dev.to API key, see:
+# https://developers.forem.com/api/#section/Authentication/api_key
+#
+# Once you have generated the token, you need to add them as a secret in your
+# GitHub repository:
+# - DEVTO_TOKEN: your dev.to API key
+# See https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets#creating-encrypted-secrets
+# for more information about GitHub secrets.
+
+name: publish
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Publish articles on dev.to
+      uses: sinedied/publish-devto@v2
+      id: publish_devto
+      with:
+        # Your dev.to personal API key to publish and update articles.
+        # See https://docs.dev.to/api/#section/Authentication/api_key
+        devto_key: ${{ secrets.DEVTO_TOKEN }}
+        # Your GitHub personal access token, used to create commits for updated files.
+        # If you have a protected branch, you need to use a personal access token
+        # with the 'repo' permission.
+        # See https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        # (Optional) The files to publish. Default is "posts/**/*.md"
+        files: 'Days/**/*.md'
+        # (Optional) The git branch to use. Default is 'main'.
+        branch: main
+        # (Optional) Use conventional commit messages. Default is false.
+        # See https://www.conventionalcommits.org. 
+        conventional_commits: false
+        # (Optional) Do not make actual changes on dev.to if it's a pull request.
+        dry_run: ${{ github.event_name == 'pull_request' }}
+
+    # (Optional) Add comment with dev.to changes if it's a pull request.
+    - uses: actions-ecosystem/action-create-comment@v1
+      if: ${{ github.event_name == 'pull_request' }}
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        body: |
+          Changes result:
+          ```
+          ${{ steps.publish_devto.outputs.result_summary }}
+          ```
