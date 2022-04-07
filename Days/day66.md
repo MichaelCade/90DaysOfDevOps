@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Ansible Playbooks Continued... - Day 66"
 published: false
 description: 90DaysOfDevOps - Ansible Playbooks Continued...
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day66.md 
 ---

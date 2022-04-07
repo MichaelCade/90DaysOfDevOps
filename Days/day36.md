@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Installing & Configuring Git - Day 36"
 published: false
 description: 90DaysOfDevOps - Installing & Configuring Git
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day36.md 
 ---

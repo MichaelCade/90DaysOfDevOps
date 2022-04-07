@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - GitHub Actions Overview - Day 75"
 published: false
 description: 90DaysOfDevOps - GitHub Actions Overview
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day75.md 
 ---

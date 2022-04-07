@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - The Big Picture: Data Management - Day 84"
 published: false
 description: "90DaysOfDevOps - The Big Picture: Data Management"
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability, backup'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day84.md 
 ---

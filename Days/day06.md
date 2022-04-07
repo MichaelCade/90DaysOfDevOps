@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - DevOps - The real stories - Day 6"
 published: false
 description: 90DaysOfDevOps - DevOps - The real stories
-tags: 'devops, 90daysofdevops, learning, sre, operations'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day06.md 
 ---

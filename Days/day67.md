@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Using Roles & Deploying a Loadbalancer - Day 67"
 published: false
 description: 90DaysOfDevOps - Using Roles & Deploying a Loadbalancer
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day67.md 
 ---

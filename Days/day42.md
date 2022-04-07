@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - The Big Picture: Containers - Day 42"
 published: false
 description: "90DaysOfDevOps - The Big Picture: Containers" 
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git docker, containers'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day42.md 
 ---

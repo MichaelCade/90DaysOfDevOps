@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Data & Application Mobility - Day 90"
 published: false
 description: 90DaysOfDevOps - Data & Application Mobility
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability, backup'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day90.md 
 ---

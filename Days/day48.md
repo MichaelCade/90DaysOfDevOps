@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Alternatives to Docker - Day 48"
 published: false
 description: 90DaysOfDevOps - Alternatives to Docker
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day48.md 
 ---

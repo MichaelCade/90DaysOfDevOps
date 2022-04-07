@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Building our Lab - Day 26"
 published: false
 description: 90DaysOfDevOps - Building our Lab 
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day26.md 
 ---

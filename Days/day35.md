@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - The Big Picture: Git - Version Control - Day 35"
 published: false
 description: "90DaysOfDevOps - The Big Picture: Git - Version Control"
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day35.md 
 ---

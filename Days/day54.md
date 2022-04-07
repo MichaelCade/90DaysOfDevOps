@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Kubernetes Application Deployment - Day 54"
 published: false
 description: 90DaysOfDevOps - Kubernetes Application Deployment 
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day54.md 
 ---

@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Microsoft Azure Security Models - Day 30"
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Security Models
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day30.md 
 ---

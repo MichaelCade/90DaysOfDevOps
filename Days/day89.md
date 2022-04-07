@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Disaster Recovery - Day 89"
 published: false
 description: 90DaysOfDevOps - Disaster Recovery
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability, backup'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day89.md 
 ---

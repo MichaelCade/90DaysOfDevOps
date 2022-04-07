@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Tweet your progress with our new App - Day 13"
 published: false
 description: 90DaysOfDevOps - Tweet your progress with our new App
-tags: 'devops, 90daysofdevops, learning, sre, operations'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day13.md 
 ---

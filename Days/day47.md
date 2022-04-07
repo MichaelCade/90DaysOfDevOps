@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Docker Networking & Security - Day 47"
 published: false
 description: 90DaysOfDevOps - Docker Networking & Security
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day47.md 
 ---

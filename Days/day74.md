@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Hello World - Jenkinsfile App Pipeline - Day 74"
 published: false
 description: 90DaysOfDevOps - Hello World - Jenkinsfile App Pipeline
-tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD'
+tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day74.md 
 ---
