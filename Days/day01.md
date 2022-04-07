@@ -1,5 +1,5 @@
 ---
-title: Introduction - Day 1
+title: 90DaysOfDevOps - Introduction - Day 1
 published: false
 description: 90DaysOfDevOps - Introduction
 tags: 'devops, 90daysofdevops, learning'
