@@ -1,7 +1,7 @@
 ---
 title: '#90DaysOfDevOps - Ansible: Getting Started'
 published: false
-description: "90DaysOfDevOps - Ansible: Getting Started"
+description: '90DaysOfDevOps - Ansible: Getting Started'
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null

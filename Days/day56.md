@@ -1,7 +1,7 @@
 ---
 title: '#90DaysOfDevOps - The Big Picture: IaC'
 published: false
-description: "90DaysOfDevOps - The Big Picture: IaC" 
+description: '90DaysOfDevOps - The Big Picture: IaC' 
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null

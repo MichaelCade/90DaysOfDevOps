@@ -1,7 +1,7 @@
 ---
 title: '#90DaysOfDevOps - The Big Picture: Containers'
 published: false
-description: "90DaysOfDevOps - The Big Picture: Containers" 
+description: '90DaysOfDevOps - The Big Picture: Containers' 
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
