@@ -5,6 +5,7 @@ description: 90DaysOfDevOps - The Big Picture DevOps & Learning a Programming La
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048316
 ---
 ## The Big Picture: DevOps & Learning a Programming Language
 
