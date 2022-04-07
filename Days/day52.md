@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Setting up a multinode Kubernetes Cluster  - Day 52"
 published: false
 description: 90DaysOfDevOps - Setting up a multinode Kubernetes Cluster  
-tags: 'devops, 90daysofdevops, learning, sre'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day52.md 
 ---

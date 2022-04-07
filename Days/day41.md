@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - The Open Source Workflow - Day 41"
 published: false
 description: 90DaysOfDevOps - The Open Source Workflow 
-tags: 'devops, 90daysofdevops, learning, sre'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day41.md 
 ---
