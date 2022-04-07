@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - ELK Stack - Day 80"
+title: '#90DaysOfDevOps - ELK Stack'
 published: false
 description: 90DaysOfDevOps - ELK Stack 
 tags: 'devops, 90daysofdevops, learning'

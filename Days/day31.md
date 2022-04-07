@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Microsoft Azure Compute Models - Day 31"
+title: '#90DaysOfDevOps - Microsoft Azure Compute Models'
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Compute Models
 tags: 'devops, 90daysofdevops, learning'

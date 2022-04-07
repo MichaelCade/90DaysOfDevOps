@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Hands-On Monitoring Tools - Day 78"
+title: '#90DaysOfDevOps - Hands-On Monitoring Tools'
 published: false
 description: 90DaysOfDevOps - Hands-On Monitoring Tools
 tags: 'devops, 90daysofdevops, learning'

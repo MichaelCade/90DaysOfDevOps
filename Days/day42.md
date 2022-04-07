@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - The Big Picture: Containers - Day 42"
+title: '#90DaysOfDevOps - The Big Picture: Containers'
 published: false
 description: "90DaysOfDevOps - The Big Picture: Containers" 
 tags: 'devops, 90daysofdevops, learning'

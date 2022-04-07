@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Microsoft Azure Security Models - Day 30"
+title: '#90DaysOfDevOps - Microsoft Azure Security Models'
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Security Models
 tags: 'devops, 90daysofdevops, learning'

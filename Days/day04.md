@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - DevOps & Agile - Day 3"
+title: '#90DaysOfDevOps - DevOps & Agile'
 published: false
 description: 90DaysOfDevOps - DevOps & Agile
 tags: 'devops, 90daysofdevops, learning'

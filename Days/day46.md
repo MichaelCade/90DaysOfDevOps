@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Docker Compose - Day 46"
+title: '#90DaysOfDevOps - Docker Compose'
 published: false
 description: 90DaysOfDevOps - Docker Compose
 tags: 'devops, 90daysofdevops, learning'

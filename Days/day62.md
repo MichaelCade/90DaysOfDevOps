@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Testing, Tools & Alternatives - Day 62"
+title: '#90DaysOfDevOps - Testing, Tools & Alternatives'
 published: false
 description: 90DaysOfDevOps - Testing, Tools & Alternatives
 tags: 'devops, 90daysofdevops, learning'

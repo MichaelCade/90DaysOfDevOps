@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - The Go Workspace - Day 10"
+title: '#90DaysOfDevOps - The Go Workspace'
 published: false
 description: 90DaysOfDevOps - The Go Workspace
 tags: 'devops, 90daysofdevops, learning'

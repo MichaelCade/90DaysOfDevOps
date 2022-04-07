@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Hands-On Backup & Recovery - Day 87"
+title: '#90DaysOfDevOps - Hands-On Backup & Recovery'
 published: false
 description: 90DaysOfDevOps - Hands-On Backup & Recovery
 tags: 'devops, 90daysofdevops, learning'

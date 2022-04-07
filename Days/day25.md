@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Python for Network Automation - Day 25"
+title: '#90DaysOfDevOps - Python for Network Automation'
 published: false
 description: 90DaysOfDevOps - Python for Network Automation 
 tags: 'devops, 90daysofdevops, learning'

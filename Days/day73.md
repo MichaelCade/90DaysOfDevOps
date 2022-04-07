@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Building a Jenkins Pipeline - Day 73"
+title: '#90DaysOfDevOps - Building a Jenkins Pipeline'
 published: false
 description: 90DaysOfDevOps - Building a Jenkins Pipeline 
 tags: 'devops, 90daysofdevops, learning'

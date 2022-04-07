@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Alternatives to Docker - Day 48"
+title: '#90DaysOfDevOps - Alternatives to Docker'
 published: false
 description: 90DaysOfDevOps - Alternatives to Docker
 tags: 'devops, 90daysofdevops, learning'

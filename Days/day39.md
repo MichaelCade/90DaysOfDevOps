@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Viewing, unstaging, discarding & restoring - Day 39"
+title: '#90DaysOfDevOps - Viewing, unstaging, discarding & restoring'
 published: false
 description: 90DaysOfDevOps - Viewing, unstaging, discarding & restoring
 tags: 'devops, 90daysofdevops, learning'

@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Choosing your Kubernetes platform - Day 50"
+title: '#90DaysOfDevOps - Choosing your Kubernetes platform'
 published: false
 description: 90DaysOfDevOps - Choosing your Kubernetes platform
 tags: 'devops, 90daysofdevops, learning'

@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - The Big Picture: Kubernetes - Day 49"
+title: '#90DaysOfDevOps - The Big Picture: Kubernetes'
 published: false
 description: "90DaysOfDevOps - The Big Picture: Kubernetes"
 tags: 'devops, 90daysofdevops, learning'

@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Social Network for code - Day 40"
+title: '#90DaysOfDevOps - Social Network for code'
 published: false
 description: 90DaysOfDevOps - Social Network for code
 tags: 'devops, 90daysofdevops, learning'

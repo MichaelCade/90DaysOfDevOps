@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Text Editors - nano vs vim - Day 17"
+title: '#90DaysOfDevOps - Text Editors - nano vs vim'
 published: false
 description: 90DaysOfDevOps - Text Editors - nano vs vim
 tags: 'devops, 90daysofdevops, learning'

@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Setting up your DevOps environment for Go & Hello World - Day 8"
+title: '#90DaysOfDevOps - Setting up your DevOps environment for Go & Hello World'
 published: false
 description: 90DaysOfDevOps - Setting up your DevOps environment for Go & Hello World
 tags: 'devops, 90daysofdevops, learning'

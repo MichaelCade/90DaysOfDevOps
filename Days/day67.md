@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Using Roles & Deploying a Loadbalancer - Day 67"
+title: '#90DaysOfDevOps - Using Roles & Deploying a Loadbalancer'
 published: false
 description: 90DaysOfDevOps - Using Roles & Deploying a Loadbalancer
 tags: 'devops, 90daysofdevops, learning'

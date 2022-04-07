@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Create a VM with Terraform & Variables - Day 59"
+title: '#90DaysOfDevOps - Create a VM with Terraform & Variables'
 published: false
 description: 90DaysOfDevOps - Create a VM with Terraform & Variables
 tags: 'devops, 90daysofdevops, learning'

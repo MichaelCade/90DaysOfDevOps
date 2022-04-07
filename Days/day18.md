@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - SSH & Web Server - Day 18"
+title: '#90DaysOfDevOps - SSH & Web Server'
 published: false
 description: 90DaysOfDevOps - SSH & Web Server
 tags: 'devops, 90daysofdevops, learning'

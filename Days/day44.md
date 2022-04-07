@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Docker Images & Hands-On with Docker Desktop - Day 44"
+title: '#90DaysOfDevOps - Docker Images & Hands-On with Docker Desktop'
 published: false
 description: 90DaysOfDevOps - Docker Images & Hands-On with Docker Desktop
 tags: 'devops, 90daysofdevops, learning'

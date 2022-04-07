@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - The OSI Model - The 7 Layers - Day 22"
+title: '#90DaysOfDevOps - The OSI Model - The 7 Layers'
 published: false
 description: 90DaysOfDevOps - The OSI Model - The 7 Layers
 tags: 'devops, 90daysofdevops, learning'

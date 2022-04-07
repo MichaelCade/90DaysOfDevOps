@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - The Open Source Workflow - Day 41"
+title: '#90DaysOfDevOps - The Open Source Workflow'
 published: false
 description: 90DaysOfDevOps - The Open Source Workflow 
 tags: 'devops, 90daysofdevops, learning'

@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Microsoft Azure Storage Models - Day 32"
+title: '#90DaysOfDevOps - Microsoft Azure Storage Models'
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Storage Models
 tags: 'devops, 90daysofdevops, learning'

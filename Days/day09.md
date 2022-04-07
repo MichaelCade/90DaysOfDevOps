@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Let's explain the Hello World code - Day 9"
+title: '#90DaysOfDevOps - Let's explain the Hello World code'
 published: false
 description: 90DaysOfDevOps - Let's explain the Hello World code
 tags: 'devops, 90daysofdevops, learning'

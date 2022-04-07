@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - State and Ingress in Kubernetes - Day 55"
+title: '#90DaysOfDevOps - State and Ingress in Kubernetes'
 published: false
 description: 90DaysOfDevOps - State and Ingress in Kubernetes 
 tags: 'devops, 90daysofdevops, learning'

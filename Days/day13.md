@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Tweet your progress with our new App - Day 13"
+title: '#90DaysOfDevOps - Tweet your progress with our new App'
 published: false
 description: 90DaysOfDevOps - Tweet your progress with our new App
 tags: 'devops, 90daysofdevops, learning'

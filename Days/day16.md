@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Managing your Linux System, Filesystem & Storage - Day 16"
+title: '#90DaysOfDevOps - Managing your Linux System, Filesystem & Storage'
 published: false
 description: 90DaysOfDevOps - Managing your Linux System, Filesystem & Storage
 tags: 'devops, 90daysofdevops, learning'

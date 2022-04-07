@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Network Protocols - Day 23"
+title: '#90DaysOfDevOps - Network Protocols'
 published: false
 description: 90DaysOfDevOps - Network Protocols
 tags: 'devops, 90daysofdevops, learning'

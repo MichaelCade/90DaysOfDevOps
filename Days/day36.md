@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Installing & Configuring Git - Day 36"
+title: '#90DaysOfDevOps - Installing & Configuring Git'
 published: false
 description: 90DaysOfDevOps - Installing & Configuring Git
 tags: 'devops, 90daysofdevops, learning'

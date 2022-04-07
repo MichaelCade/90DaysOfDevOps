@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - DevOps - The real stories - Day 6"
+title: '#90DaysOfDevOps - DevOps - The real stories'
 published: false
 description: 90DaysOfDevOps - DevOps - The real stories
 tags: 'devops, 90daysofdevops, learning'

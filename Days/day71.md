@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - What is Jenkins? - Day 71"
+title: '#90DaysOfDevOps - What is Jenkins?'
 published: false
 description: 90DaysOfDevOps - What is Jenkins?
 tags: 'devops, 90daysofdevops, learning'

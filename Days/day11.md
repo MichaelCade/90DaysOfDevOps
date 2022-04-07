@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Variables & Constants in Go - Day 11"
+title: '#90DaysOfDevOps - Variables & Constants in Go'
 published: false
 description: 90DaysOfDevOps - Variables & Constants in Go
 tags: 'devops, 90daysofdevops, learning'

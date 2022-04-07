@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Backup all the platforms - Day 86"
+title: '#90DaysOfDevOps - Backup all the platforms'
 published: false
 description: 90DaysOfDevOps - Backup all the platforms
 tags: 'devops, 90daysofdevops, learning'

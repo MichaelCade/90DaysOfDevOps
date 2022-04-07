@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Application Focused - Day 3"
+title: '#90DaysOfDevOps - Application Focused'
 published: false
 description: 90DaysOfDevOps - Application Focused
 tags: 'devops, 90daysofdevops, learning'

@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - ArgoCD Overview - Day 76"
+title: '#90DaysOfDevOps - ArgoCD Overview'
 published: false
 description: 90DaysOfDevOps - ArgoCD Overview
 tags: 'devops, 90daysofdevops, learning'

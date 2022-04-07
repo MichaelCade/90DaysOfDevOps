@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Deploying your first Kubernetes Cluster - Day 51"
+title: '#90DaysOfDevOps - Deploying your first Kubernetes Cluster'
 published: false
 description: 90DaysOfDevOps - Deploying your first Kubernetes Cluster 
 tags: 'devops, 90daysofdevops, learning'

@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Microsoft Azure Networking Models + Azure Management - Day 33"
+title: '#90DaysOfDevOps - Microsoft Azure Networking Models + Azure Management'
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Networking Models + Azure Management
 tags: 'devops, 90daysofdevops, learning'

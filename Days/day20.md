@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Dev workstation setup - All the pretty things - Day 20"
+title: '#90DaysOfDevOps - Dev workstation setup - All the pretty things'
 published: false
 description: 90DaysOfDevOps - Dev workstation setup - All the pretty things
 tags: 'devops, 90daysofdevops, learning'

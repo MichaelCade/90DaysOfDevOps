@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Docker Containers, Provisioners & Modules - Day 60"
+title: '#90DaysOfDevOps - Docker Containers, Provisioners & Modules'
 published: false
 description: 90DaysOfDevOps - Docker Containers, Provisioners & Modules 
 tags: 'devops, 90daysofdevops, learning'

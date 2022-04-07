@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Fluentd & FluentBit - Day 81"
+title: '#90DaysOfDevOps - Fluentd & FluentBit'
 published: false
 description: 90DaysOfDevOps - Fluentd & FluentBit
 tags: 'devops, 90daysofdevops, learning'

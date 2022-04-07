@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - The Big Picture: IaC - Day 56"
+title: '#90DaysOfDevOps - The Big Picture: IaC'
 published: false
 description: "90DaysOfDevOps - The Big Picture: IaC" 
 tags: 'devops, 90daysofdevops, learning'

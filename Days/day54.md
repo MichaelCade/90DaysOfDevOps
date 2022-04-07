@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Kubernetes Application Deployment - Day 54"
+title: '#90DaysOfDevOps - Kubernetes Application Deployment'
 published: false
 description: 90DaysOfDevOps - Kubernetes Application Deployment 
 tags: 'devops, 90daysofdevops, learning'

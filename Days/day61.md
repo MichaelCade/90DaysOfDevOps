@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Kubernetes & Multiple Environments - Day 61"
+title: '#90DaysOfDevOps - Kubernetes & Multiple Environments'
 published: false
 description: 90DaysOfDevOps - Kubernetes & Multiple Environments 
 tags: 'devops, 90daysofdevops, learning'

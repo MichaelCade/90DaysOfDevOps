@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Getting user input with Pointers and a finished program - Day 12"
+title: '#90DaysOfDevOps - Getting user input with Pointers and a finished program'
 published: false
 description: 90DaysOfDevOps - Getting user input with Pointers and a finished program
 tags: 'devops, 90daysofdevops, learning'

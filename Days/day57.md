@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - An intro to Terraform - Day 57"
+title: '#90DaysOfDevOps - An intro to Terraform'
 published: false
 description: 90DaysOfDevOps - An intro to Terraform  
 tags: 'devops, 90daysofdevops, learning'

@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Getting hands on with Jenkins - Day 72"
+title: '#90DaysOfDevOps - Getting hands on with Jenkins'
 published: false
 description: 90DaysOfDevOps - Getting hands on with Jenkins
 tags: 'devops, 90daysofdevops, learning'

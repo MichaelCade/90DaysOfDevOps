@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Responsibilities of a DevOps Engineer - Day 2"
+title: '#90DaysOfDevOps - Responsibilities of a DevOps Engineer'
 published: false
 description: 90DaysOfDevOps - Responsibilities of a DevOps Engineer
 tags: 'devops, 90daysofdevops, learning'

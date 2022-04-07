@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Building our Lab - Day 26"
+title: '#90DaysOfDevOps - Building our Lab'
 published: false
 description: 90DaysOfDevOps - Building our Lab 
 tags: 'devops, 90daysofdevops, learning'

@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Application Focused Backups - Day 88"
+title: '#90DaysOfDevOps - Application Focused Backups'
 published: false
 description: 90DaysOfDevOps - Application Focused Backups
 tags: 'devops, 90daysofdevops, learning'

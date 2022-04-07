@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - The Big Picture: CI/CD Pipelines - Day 70"
+title: '#90DaysOfDevOps - The Big Picture: CI/CD Pipelines'
 published: false
 description: "90DaysOfDevOps - The Big Picture: CI/CD Pipelines"
 tags: 'devops, 90daysofdevops, learning'

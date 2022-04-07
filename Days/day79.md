@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - The Big Picture: Log Management - Day 79"
+title: '#90DaysOfDevOps - The Big Picture: Log Management'
 published: false
 description: "90DaysOfDevOps - The Big Picture: Log Management"
 tags: 'devops, 90daysofdevops, learning'

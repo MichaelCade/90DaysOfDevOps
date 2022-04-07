@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Ansible Playbooks - Day 65"
+title: '#90DaysOfDevOps - Ansible Playbooks'
 published: false
 description: 90DaysOfDevOps - Ansible Playbooks
 tags: 'devops, 90daysofdevops, learning'

@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - The anatomy of a Docker Image - Day 45"
+title: '#90DaysOfDevOps - The anatomy of a Docker Image'
 published: false
 description: 90DaysOfDevOps - The anatomy of a Docker Image
 tags: 'devops, 90daysofdevops, learning'

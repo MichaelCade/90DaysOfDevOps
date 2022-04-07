@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Staging & Changing - Day 38"
+title: '#90DaysOfDevOps - Staging & Changing'
 published: false
 description: 90DaysOfDevOps - Staging & Changing
 tags: 'devops, 90daysofdevops, learning'

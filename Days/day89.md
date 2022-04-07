@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Disaster Recovery - Day 89"
+title: '#90DaysOfDevOps - Disaster Recovery'
 published: false
 description: 90DaysOfDevOps - Disaster Recovery
 tags: 'devops, 90daysofdevops, learning'

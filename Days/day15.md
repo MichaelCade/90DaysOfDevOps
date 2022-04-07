@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Linux Commands for DevOps (Actually everyone) - Day 15"
+title: '#90DaysOfDevOps - Linux Commands for DevOps (Actually everyone)'
 published: false
 description: 90DaysOfDevOps - Linux Commands for DevOps (Actually everyone)
 tags: 'devops, 90daysofdevops, learning'

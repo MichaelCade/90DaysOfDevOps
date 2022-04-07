@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Microsoft Azure Hands-On Scenarios - Day 34"
+title: '#90DaysOfDevOps - Microsoft Azure Hands-On Scenarios'
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Hands-On Scenarios
 tags: 'devops, 90daysofdevops, learning'

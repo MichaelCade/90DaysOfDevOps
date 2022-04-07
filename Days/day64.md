@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Ansible: Getting Started - Day 64"
+title: '#90DaysOfDevOps - Ansible: Getting Started'
 published: false
 description: "90DaysOfDevOps - Ansible: Getting Started"
 tags: 'devops, 90daysofdevops, learning'

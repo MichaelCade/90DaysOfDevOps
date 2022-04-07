@@ -1,5 +1,5 @@
 ---
-title: "#90DaysOfDevOps - Gitting to know Git - Day 37"
+title: '#90DaysOfDevOps - Gitting to know Git'
 published: false
 description: 90DaysOfDevOps - Gitting to know Git
 tags: 'devops, 90daysofdevops, learning'
