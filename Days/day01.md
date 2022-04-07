@@ -5,7 +5,6 @@ description: 90DaysOfDevOps - Introduction
 tags: 'devops, 90daysofdevops, learning, sre'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day01.md 
-id: 1047799
 ---
 
 ## Introduction - Day 1 
