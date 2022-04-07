@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - The Big Picture: DevOps and Networking - Day 21"
 published: false
 description: "90DaysOfDevOps - The Big Picture: DevOps and Networking"
-tags: 'devops, 90daysofdevops, learning, sre'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 ---

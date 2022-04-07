@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Application Focused Backups - Day 88"
 published: false
 description: 90DaysOfDevOps - Application Focused Backups
-tags: 'devops, 90daysofdevops, learning, sre'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 ---

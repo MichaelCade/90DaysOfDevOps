@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - State and Ingress in Kubernetes - Day 55"
 published: false
 description: 90DaysOfDevOps - State and Ingress in Kubernetes 
-tags: 'devops, 90daysofdevops, learning, sre'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 ---

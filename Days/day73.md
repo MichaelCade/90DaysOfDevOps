@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Building a Jenkins Pipeline - Day 73"
 published: false
 description: 90DaysOfDevOps - Building a Jenkins Pipeline 
-tags: 'devops, 90daysofdevops, learning, sre'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 ---

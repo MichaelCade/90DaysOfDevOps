@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Testing, Tools & Alternatives - Day 62"
 published: false
 description: 90DaysOfDevOps - Testing, Tools & Alternatives
-tags: 'devops, 90daysofdevops, learning, sre'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 ---

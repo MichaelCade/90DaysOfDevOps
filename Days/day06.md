@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - DevOps - The real stories - Day 6"
 published: false
 description: 90DaysOfDevOps - DevOps - The real stories
-tags: 'devops, 90daysofdevops, learning, sre'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 ---

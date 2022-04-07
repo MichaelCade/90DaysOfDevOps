@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Getting Hands-On with Python & Network - Day 27"
 published: false
 description: 90DaysOfDevOps - Getting Hands-On with Python & Network 
-tags: 'devops, 90daysofdevops, learning, sre'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 ---

@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - EFK Stack - Day 82"
 published: false
 description: 90DaysOfDevOps - EFK Stack
-tags: 'devops, 90daysofdevops, learning, sre'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 ---
