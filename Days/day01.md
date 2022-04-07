@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Introduction
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day01.md 
+canonical_url: "https://github.com/MichaelCade/90DaysOfDevOps/Days/day01.md"
 ---
 
 ## Introduction - Day 1 
