@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Social Network for code - Day 40"
 published: false
 description: 90DaysOfDevOps - Social Network for code
-tags: 'devops, 90daysofdevops, learning'
+#tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day40.md 
 ---

@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Docker Images & Hands-On with Docker Desktop - Day 44"
 published: false
 description: 90DaysOfDevOps - Docker Images & Hands-On with Docker Desktop
-tags: 'devops, 90daysofdevops, learning'
+#tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day44.md 
 ---

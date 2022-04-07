@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Managing your Linux System, Filesystem & Storage - Day 16"
 published: false
 description: 90DaysOfDevOps - Managing your Linux System, Filesystem & Storage
-tags: 'devops, 90daysofdevops, learning'
+#tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day16.md 
 ---

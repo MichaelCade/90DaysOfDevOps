@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Viewing, unstaging, discarding & restoring - Day 39"
 published: false
 description: 90DaysOfDevOps - Viewing, unstaging, discarding & restoring
-tags: 'devops, 90daysofdevops, learning'
+#tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day39.md 
 ---

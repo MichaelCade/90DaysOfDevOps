@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Rancher Overview - Hands On - Day 53"
 published: false
 description: 90DaysOfDevOps - Rancher Overview - Hands On
-tags: 'devops, 90daysofdevops, learning'
+#tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day53.md 
 ---
