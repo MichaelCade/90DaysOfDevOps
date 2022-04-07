@@ -1,7 +1,7 @@
 ---
 title: '#90DaysOfDevOps - The Big Picture: DevOps & The Cloud'
 published: false
-description: '90DaysOfDevOps - The Big Picture: DevOps & The Cloud' 
+description: 90DaysOfDevOps - The Big Picture DevOps & The Cloud
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null

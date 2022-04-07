@@ -1,7 +1,7 @@
 ---
 title: '#90DaysOfDevOps - The Big Picture: DevOps and Linux'
 published: false
-description: '90DaysOfDevOps - The Big Picture: DevOps and Linux'
+description: 90DaysOfDevOps - The Big Picture DevOps and Linux
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null

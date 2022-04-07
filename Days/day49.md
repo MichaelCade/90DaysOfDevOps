@@ -1,7 +1,7 @@
 ---
 title: '#90DaysOfDevOps - The Big Picture: Kubernetes'
 published: false
-description: '90DaysOfDevOps - The Big Picture: Kubernetes'
+description: 90DaysOfDevOps - The Big Picture Kubernetes
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
