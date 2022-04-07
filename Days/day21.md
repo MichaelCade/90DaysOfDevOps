@@ -4,7 +4,7 @@ published: false
 description: "90DaysOfDevOps - The Big Picture: DevOps and Networking"
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day21.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day21.md
 ---
 ## The Big Picture: DevOps and Networking
 

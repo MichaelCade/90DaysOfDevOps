@@ -4,7 +4,7 @@ published: false
 description: "90DaysOfDevOps - The Big Picture: Git - Version Control"
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day35.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day35.md
 ---
 ## The Big Picture: Git - Version Control
 

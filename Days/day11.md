@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Variables & Constants in Go
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day11.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day11.md
 ---
 
 Before we get into the topics for today I want to give a massive shout out to [Techworld with Nana](https://www.youtube.com/watch?v=yyUHQIec83I) and this fantastic concise journey through the fundamentals of Go. 

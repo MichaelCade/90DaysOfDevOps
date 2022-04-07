@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - The OSI Model - The 7 Layers
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day22.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day22.md
 ---
 ## The OSI Model - The 7 Layers
 

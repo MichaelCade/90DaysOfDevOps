@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Data & Application Mobility
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day90.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day90.md
 ---
 ## Data & Application Mobility
 

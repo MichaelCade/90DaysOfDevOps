@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Tags, Variables, Inventory & Database Server config
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day68.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day68.md
 ---
 ## Tags, Variables, Inventory & Database Server config
 

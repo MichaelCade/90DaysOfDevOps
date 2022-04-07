@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Let's explain the Hello World code
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day09.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day09.md
 ---
 ## Let's explain the Hello World code
 

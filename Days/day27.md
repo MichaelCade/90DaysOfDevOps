@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Getting Hands-On with Python & Network 
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day27.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day27.md
 ---
 ## Getting Hands-On with Python & Network
 

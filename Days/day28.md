@@ -4,7 +4,7 @@ published: false
 description: "90DaysOfDevOps - The Big Picture: DevOps & The Cloud" 
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day28.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day28.md
 ---
 ## The Big Picture: DevOps & The Cloud
 

@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Hands-On Backup & Recovery
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day87.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day87.md
 ---
 ## Hands-On Backup & Recovery
 

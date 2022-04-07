@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Microsoft Azure Compute Models
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day31.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day31.md
 ---
 ## Microsoft Azure Compute Models
 

@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Docker Networking & Security
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day47.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day47.md
 ---
 ## Docker Networking & Security
 

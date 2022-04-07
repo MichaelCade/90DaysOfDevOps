@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Deploying your first Kubernetes Cluster 
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day51.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day51.md
 ---
 ## Deploying your first Kubernetes Cluster 
 

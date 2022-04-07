@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - ELK Stack 
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day80.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day80.md
 ---
 ## ELK Stack  
 

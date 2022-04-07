@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Docker Images & Hands-On with Docker Desktop
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day44.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day44.md
 ---
 ## Docker Images & Hands-On with Docker Desktop
 

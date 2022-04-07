@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Ansible Playbooks
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day65.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day65.md
 ---
 ### Ansible Playbooks 
 

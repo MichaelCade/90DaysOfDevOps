@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Staging & Changing
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day38.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day38.md
 ---
 ## Staging & Changing
 
@@ -22,11 +22,11 @@ This is where the details of the git repository are stored as well as the inform
 
 ### Staging Files
 
-We then start working on our empty folder and maybe we add some source code as a first days work. We create our readme.md file and we can see that file in the directory, next we check our `git status` and it knows about the new readme.md file but we have not committed the file yet. 
+We then start working on our empty folder and maybe we add some source code as a first days work. We create our readme.mdfile and we can see that file in the directory, next we check our `git status` and it knows about the new readme.mdfile but we have not committed the file yet. 
 
 ![](Images/Day38_Git3.png)
 
-We can stage our readme.md file with the `git add README.md` command then we can see changes to be committed which we did not have before and a green new file.
+We can stage our readme.mdfile with the `git add README.md` command then we can see changes to be committed which we did not have before and a green new file.
 
 ![](Images/Day38_Git4.png)
 
@@ -38,7 +38,7 @@ Next up we want to commit this, our first commit or our first snapshot of our pr
 
 We are going to most likely want to add more files or even change the files we have in our directory. We have already done our first commit above. But now we are going to add more details and more files. 
 
-We could repeat our process from before, create or edit our file > `git add .` to add all files to the staging area then `git commit -m "meaningful message"` and this would work just fine. But to be able to offer a meaningful message on commit of what has changed you might not want to write something out like `git commit -m "Well, I changed some code because it did not work and when I fixed that I also added something new to the readme.md to ensure everyone knew about the user experience and then I made a tea."` I mean this would work as well although probably make it descriptive but the preferred way here is to add this with a text editor. 
+We could repeat our process from before, create or edit our file > `git add .` to add all files to the staging area then `git commit -m "meaningful message"` and this would work just fine. But to be able to offer a meaningful message on commit of what has changed you might not want to write something out like `git commit -m "Well, I changed some code because it did not work and when I fixed that I also added something new to the readme.mdto ensure everyone knew about the user experience and then I made a tea."` I mean this would work as well although probably make it descriptive but the preferred way here is to add this with a text editor. 
 
 If we run `git commit` after running `git add` it will open our default text editor which in my case here is nano. Here are the steps I took to add some changes to the file, ran `git status` to show what is and what is not staged. Then I used `git add` to add the file to the staging area, then ran `git commit` which opened nano.
 

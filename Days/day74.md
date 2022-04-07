@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Hello World - Jenkinsfile App Pipeline
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day74.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day74.md
 ---
 ## Hello World - Jenkinsfile App Pipeline
 

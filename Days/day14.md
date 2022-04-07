@@ -4,7 +4,7 @@ published: false
 description: "90DaysOfDevOps - The Big Picture: DevOps and Linux"
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day14.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day14.md
 ---
 ## The Big Picture: DevOps and Linux
 Linux and DevOps share very similar cultures and perspectives; both are focused on customization and scalability. Both of these aspects of Linux are of particular importance for DevOps.

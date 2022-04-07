@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Automate tasks with bash scripts
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day19.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day19.md
 ---
 ## Automate tasks with bash scripts
 

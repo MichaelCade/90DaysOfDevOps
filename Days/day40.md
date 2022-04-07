@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Social Network for code
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day40.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day40.md
 ---
 ## Social Network for code
 Exploring GitHub | GitLab | BitBucket 
@@ -70,7 +70,7 @@ We can then drill down into the building block of GitHub, the repositories. Here
 
 As the repository is so important to GitHub let me choose a pretty busy one of late and run through some of the core functionality that we can use here on top of everything I am already using when it comes to editing our "code" in git on my local system. 
 
-First of all from the previous window I have selected the 90DaysOfDevOps repository and we get to see this view. You can see from this view we have a lot of information, we have our main code structure in the middle showing our files and folders that are stored in our repository. We have our readme.md being displayed down at the bottom. Over to the right of the page we have an about section where the repository has a description and purpose. Then we have lot of information underneath this showing how many people have starred the project, forked, and watching. 
+First of all from the previous window I have selected the 90DaysOfDevOps repository and we get to see this view. You can see from this view we have a lot of information, we have our main code structure in the middle showing our files and folders that are stored in our repository. We have our readme.mdbeing displayed down at the bottom. Over to the right of the page we have an about section where the repository has a description and purpose. Then we have lot of information underneath this showing how many people have starred the project, forked, and watching. 
 
 ![](Images/Day40_Git8.png)
 
@@ -176,7 +176,7 @@ Let's now make some changes, I want to make a change to all those links and repl
 
 ![](Images/Day40_Git27.png)
 
-Now if we check back on GitHub and we find our readme.md in that repository, you should be able to see a few changes that I made to the file. 
+Now if we check back on GitHub and we find our readme.mdin that repository, you should be able to see a few changes that I made to the file. 
 
 ![](Images/Day40_Git28.png)
 

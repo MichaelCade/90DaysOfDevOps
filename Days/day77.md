@@ -4,7 +4,7 @@ published: false
 description: "90DaysOfDevOps - The Big Picture: Monitoring"
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day77.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day77.md
 ---
 ## The Big Picture: Monitoring
 

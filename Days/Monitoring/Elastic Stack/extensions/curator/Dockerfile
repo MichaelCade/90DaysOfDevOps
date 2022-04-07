@@ -14,4 +14,4 @@ RUN install_packages cron && \
         >>/etc/crontab
 
 ENTRYPOINT ["cron"]
-CMD ["-f", "-L8"]
+.md["-f", "-L8"]

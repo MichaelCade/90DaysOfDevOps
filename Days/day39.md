@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Viewing, unstaging, discarding & restoring
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day39.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day39.md
 ---
 ## Viewing, unstaging, discarding & restoring
 
@@ -147,7 +147,7 @@ As an example let's go and delete our most important file in our directory, noti
 
 ![](/Days/Images/Day39_Git24.png)
 
-Now we have no readme.md in our working directory. We could have used `git rm readme.md` and this would then be reflected in our git database. Let's also delete from here to simiulate it being removed completely. 
+Now we have no readme.mdin our working directory. We could have used `git rm readme.md` and this would then be reflected in our git database. Let's also delete from here to simiulate it being removed completely. 
 
 ![](/Days/Images/Day39_Git25.png)
 

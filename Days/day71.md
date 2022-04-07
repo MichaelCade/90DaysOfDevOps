@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - What is Jenkins?
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day71.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day71.md
 ---
 ## What is Jenkins?
 

@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - SSH & Web Server
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day18.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day18.md
 ---
 ## SSH & Web Server
 

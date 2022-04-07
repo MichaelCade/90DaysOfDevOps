@@ -4,7 +4,7 @@ published: false
 description: "90DaysOfDevOps - Ansible: Getting Started"
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day64.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day64.md
 ---
 ## Ansible: Getting Started
 

@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Docker Compose
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day46.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day46.md
 ---
 ## Docker Compose 
 

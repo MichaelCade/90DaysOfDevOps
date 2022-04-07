@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Linux Commands for DevOps (Actually everyone)
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day15.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day15.md
 ---
 ## Linux Commands for DevOps (Actually everyone)
 
@@ -33,7 +33,7 @@ For one off jobs like installing applications or services you might need that `s
 
 ![](Images/Day15_Linux5.png)
 
-I find myself using `clear` all the time, the `clear` command does exactly what it says it is going to clear the screen of all previous commands, putting your prompt to the top and giving you a nice clean workspace. Windows I think is `cls` in the cmd prompt. 
+I find myself using `clear` all the time, the `clear` command does exactly what it says it is going to clear the screen of all previous commands, putting your prompt to the top and giving you a nice clean workspace. Windows I think is `cls` in the .mdprompt. 
 
 ![](Images/Day15_Linux6.png)
 

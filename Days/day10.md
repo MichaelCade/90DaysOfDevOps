@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - The Go Workspace
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day10.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day10.md
 ---
 ### The Go Workspace 
 On [Day 8](day08.md) we briefly covered the Go workspace to get Go up and running to get to the demo of `Hello #90DaysOfDevOps` But we should explain a little more about the Go workspace. 

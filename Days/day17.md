@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Text Editors - nano vs vim
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day17.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day17.md
 ---
 ## Text Editors - nano vs vim
 

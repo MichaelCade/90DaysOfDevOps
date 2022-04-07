@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Setting up a multinode Kubernetes Cluster  
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day52.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day52.md
 ---
 ## Setting up a multinode Kubernetes Cluster 
 

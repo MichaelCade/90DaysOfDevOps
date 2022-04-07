@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Gitting to know Git
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day37.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day37.md
 ---
 ## Gitting to know Git
 

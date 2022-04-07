@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Building our Lab 
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day26.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day26.md
 ---
 ## Building our Lab
 

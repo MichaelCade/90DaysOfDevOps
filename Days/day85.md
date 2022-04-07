@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Data Services
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day85.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day85.md
 ---
 ## Data Services
 

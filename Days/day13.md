@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Tweet your progress with our new App
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day13.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day13.md
 ---
 ## Tweet your progress with our new App
 

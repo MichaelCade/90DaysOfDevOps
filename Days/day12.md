@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Getting user input with Pointers and a finished program
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day12.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day12.md
 ---
 ## Getting user input with Pointers and a finished program
 

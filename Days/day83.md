@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Data Visualisation - Grafana
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day83.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day83.md
 ---
 ## Data Visualisation - Grafana
 

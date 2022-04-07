@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Building a Jenkins Pipeline 
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day73.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day73.md
 ---
 ## Building a Jenkins Pipeline 
 

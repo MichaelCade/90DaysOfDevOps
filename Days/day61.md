@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Kubernetes & Multiple Environments 
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day61.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day61.md
 ---
 ## Kubernetes & Multiple Environments 
 

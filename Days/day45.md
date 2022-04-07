@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - The anatomy of a Docker Image
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day45.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day45.md
 ---
 ## The anatomy of a Docker Image
 
@@ -58,7 +58,7 @@ The following table shows some of the dockerfile statements we will be using or 
 | COPY       | To copy over files or directories from a specific location.                                                                                 |
 | ADD        | As COPY, but also able to handle remote URLs and unpack compressed files.                                                                   |
 | ENTRYPOINT | Command that will always be executed when the container starts. If not specified, the default is /bin/sh -c                                 |
-| CMD        | Arguments passed to the entrypoint. If ENTRYPOINT is not set (defaults to /bin/sh -c), the CMD will be the commands the container executes. |
+| .md       | Arguments passed to the entrypoint. If ENTRYPOINT is not set (defaults to /bin/sh -c), the .mdwill be the commands the container executes. |
 | EXPOSE     | To define which port through which to access your container application.                                                                    |
 | LABEL      | To add metadata to the image.                                                                                                               |
 

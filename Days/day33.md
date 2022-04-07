@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Microsoft Azure Networking Models + Azure Management
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day33.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day33.md
 ---
 ## Microsoft Azure Networking Models + Azure Management
 
@@ -174,7 +174,7 @@ Azure PowerShell
 - Cross-platform PowerShell module, runs on Windows, macOS, Linux
 - Requires Windows PowerShell or PowerShell
 
-If there is a reason you cannot use PowerShell in your environment but you can use cmd or bash then the Azure CLI is going to be your choice. 
+If there is a reason you cannot use PowerShell in your environment but you can use .mdor bash then the Azure CLI is going to be your choice. 
 
 Next up we take all the theory we have been through and create some scenarios and get hands-on in Azure. 
 

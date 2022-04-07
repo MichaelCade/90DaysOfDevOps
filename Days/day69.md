@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - All other things Ansible - Automation Controller (Tower), AWX, Vault
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day69.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day69.md
 ---
 ## All other things Ansible - Automation Controller (Tower), AWX, Vault
 

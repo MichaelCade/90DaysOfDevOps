@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Testing, Tools & Alternatives
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day62.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day62.md
 ---
 ## Testing, Tools & Alternatives
 

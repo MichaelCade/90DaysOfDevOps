@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Responsibilities of a DevOps Engineer
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day02.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day02.md
 ---
 
 ## Responsibilities of a DevOps Engineer 

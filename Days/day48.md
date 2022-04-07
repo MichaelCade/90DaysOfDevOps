@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Alternatives to Docker
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day48.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day48.md
 ---
 ## Alternatives to Docker
 

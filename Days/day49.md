@@ -4,7 +4,7 @@ published: false
 description: "90DaysOfDevOps - The Big Picture: Kubernetes"
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day49.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day49.md
 ---
 ## The Big Picture: Kubernetes
 

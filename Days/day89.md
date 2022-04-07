@@ -4,7 +4,7 @@ published: false
 description: 90DaysOfDevOps - Disaster Recovery
 
 
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day89.md 
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day89.md
 ---
 ## Disaster Recovery
 
