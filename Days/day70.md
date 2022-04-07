@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - The Big Picture: CI/CD Pipelines - Day 70"
 published: false
 description: "90DaysOfDevOps - The Big Picture: CI/CD Pipelines"
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day70.md 
 ---
 ## The Big Picture: CI/CD Pipelines

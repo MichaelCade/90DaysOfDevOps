@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Microsoft Azure Networking Models + Azure Management -
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Networking Models + Azure Management
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day33.md 
 ---
 ## Microsoft Azure Networking Models + Azure Management

@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Ansible Playbooks Continued... - Day 66"
 published: false
 description: 90DaysOfDevOps - Ansible Playbooks Continued...
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day66.md 
 ---
 ## Ansible Playbooks Continued...

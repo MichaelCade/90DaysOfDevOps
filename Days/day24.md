@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Network Automation - Day 24"
 published: false
 description: 90DaysOfDevOps - Network Automation 
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day24.md 
 ---
 ## Network Automation 

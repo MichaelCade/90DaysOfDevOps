@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Network Protocols - Day 23"
 published: false
 description: 90DaysOfDevOps - Network Protocols
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day23.md 
 ---
 ## Network Protocols 

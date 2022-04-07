@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Building a Jenkins Pipeline - Day 73"
 published: false
 description: 90DaysOfDevOps - Building a Jenkins Pipeline 
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day73.md 
 ---
 ## Building a Jenkins Pipeline 

@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Dev workstation setup - All the pretty things - Day 20
 published: false
 description: 90DaysOfDevOps - Dev workstation setup - All the pretty things
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day20.md 
 ---
 ## Dev workstation setup - All the pretty things

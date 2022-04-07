@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Fluentd & FluentBit - Day 81"
 published: false
 description: 90DaysOfDevOps - Fluentd & FluentBit
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day81.md 
 ---
 ## Fluentd & FluentBit

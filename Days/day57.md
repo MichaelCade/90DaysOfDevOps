@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - An intro to Terraform - Day 57"
 published: false
 description: 90DaysOfDevOps - An intro to Terraform  
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day57.md 
 ---
 ## An intro to Terraform 

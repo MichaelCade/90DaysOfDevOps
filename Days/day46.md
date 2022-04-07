@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Docker Compose - Day 46"
 published: false
 description: 90DaysOfDevOps - Docker Compose
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day46.md 
 ---
 ## Docker Compose 

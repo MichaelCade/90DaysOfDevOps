@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - The Big Picture: DevOps & Learning a Programming Langu
 published: false
 description: "90DaysOfDevOps - The Big Picture: DevOps & Learning a Programming Language"
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day07.md 
 ---
 ## The Big Picture: DevOps & Learning a Programming Language

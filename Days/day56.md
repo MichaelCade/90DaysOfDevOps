@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - The Big Picture: IaC - Day 56"
 published: false
 description: "90DaysOfDevOps - The Big Picture: IaC" 
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day56.md 
 ---
 ## The Big Picture: IaC

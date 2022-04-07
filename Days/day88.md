@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Application Focused Backups - Day 88"
 published: false
 description: 90DaysOfDevOps - Application Focused Backups
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day88.md 
 ---
 ## Application Focused Backups

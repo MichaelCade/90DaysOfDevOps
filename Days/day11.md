@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Variables & Constants in Go - Day 11"
 published: false
 description: 90DaysOfDevOps - Variables & Constants in Go
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day11.md 
 ---
 

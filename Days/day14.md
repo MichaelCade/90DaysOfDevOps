@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - The Big Picture: DevOps and Linux - Day 14"
 published: false
 description: "90DaysOfDevOps - The Big Picture: DevOps and Linux"
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day14.md 
 ---
 ## The Big Picture: DevOps and Linux

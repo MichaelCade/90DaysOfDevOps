@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - The Big Picture: Configuration Management - Day 63"
 published: false
 description: "90DaysOfDevOps - The Big Picture: Configuration" Management
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day63.md 
 ---
 ## The Big Picture: Configuration Management

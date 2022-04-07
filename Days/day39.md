@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Viewing, unstaging, discarding & restoring - Day 39"
 published: false
 description: 90DaysOfDevOps - Viewing, unstaging, discarding & restoring
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day39.md 
 ---
 ## Viewing, unstaging, discarding & restoring

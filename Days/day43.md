@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - What is Docker & Getting installed - Day 43"
 published: false
 description: 90DaysOfDevOps - What is Docker & Getting installed 
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day43.md 
 ---
 ## What is Docker & Getting installed

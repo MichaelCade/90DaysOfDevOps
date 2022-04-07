@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - The Big Picture: Containers - Day 42"
 published: false
 description: "90DaysOfDevOps - The Big Picture: Containers" 
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day42.md 
 ---
 ## The Big Picture: Containers

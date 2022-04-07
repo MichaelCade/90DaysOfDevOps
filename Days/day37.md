@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Gitting to know Git - Day 37"
 published: false
 description: 90DaysOfDevOps - Gitting to know Git
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day37.md 
 ---
 ## Gitting to know Git

@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Setting up your DevOps environment for Go & Hello Worl
 published: false
 description: 90DaysOfDevOps - Setting up your DevOps environment for Go & Hello World
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day08.md 
 ---
 ## Setting up your DevOps environment for Go & Hello World

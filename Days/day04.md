@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - DevOps & Agile - Day 3"
 published: false
 description: 90DaysOfDevOps - DevOps & Agile
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day04.md 
 ---
 ## DevOps & Agile

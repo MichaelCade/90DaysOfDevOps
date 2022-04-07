@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Building our Lab - Day 26"
 published: false
 description: 90DaysOfDevOps - Building our Lab 
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day26.md 
 ---
 ## Building our Lab

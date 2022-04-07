@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Staging & Changing - Day 38"
 published: false
 description: 90DaysOfDevOps - Staging & Changing
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day38.md 
 ---
 ## Staging & Changing

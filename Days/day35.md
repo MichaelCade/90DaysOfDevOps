@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - The Big Picture: Git - Version Control - Day 35"
 published: false
 description: "90DaysOfDevOps - The Big Picture: Git - Version Control"
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day35.md 
 ---
 ## The Big Picture: Git - Version Control

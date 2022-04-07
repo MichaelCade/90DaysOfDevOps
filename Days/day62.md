@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Testing, Tools & Alternatives - Day 62"
 published: false
 description: 90DaysOfDevOps - Testing, Tools & Alternatives
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day62.md 
 ---
 ## Testing, Tools & Alternatives

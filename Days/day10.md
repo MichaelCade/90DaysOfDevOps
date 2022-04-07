@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - The Go Workspace - Day 10"
 published: false
 description: 90DaysOfDevOps - The Go Workspace
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day10.md 
 ---
 ### The Go Workspace 

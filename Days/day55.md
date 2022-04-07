@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - State and Ingress in Kubernetes - Day 55"
 published: false
 description: 90DaysOfDevOps - State and Ingress in Kubernetes 
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day55.md 
 ---
 ## State and Ingress in Kubernetes

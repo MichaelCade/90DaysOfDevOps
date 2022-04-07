@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Kubernetes Application Deployment - Day 54"
 published: false
 description: 90DaysOfDevOps - Kubernetes Application Deployment 
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day54.md 
 ---
 ## Kubernetes Application Deployment 

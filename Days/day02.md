@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Responsibilities of a DevOps Engineer - Day 2"
 published: false
 description: 90DaysOfDevOps - Responsibilities of a DevOps Engineer
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day02.md 
 ---
 

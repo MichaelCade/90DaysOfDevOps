@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Getting hands on with Jenkins - Day 72"
 published: false
 description: 90DaysOfDevOps - Getting hands on with Jenkins
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day72.md 
 ---
 ## Getting hands on with Jenkins 

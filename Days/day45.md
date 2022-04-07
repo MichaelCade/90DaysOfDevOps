@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - The anatomy of a Docker Image - Day 45"
 published: false
 description: 90DaysOfDevOps - The anatomy of a Docker Image
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day45.md 
 ---
 ## The anatomy of a Docker Image

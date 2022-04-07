@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - The Big Picture: Data Management - Day 84"
 published: false
 description: "90DaysOfDevOps - The Big Picture: Data Management"
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day84.md 
 ---
 ## The Big Picture: Data Management

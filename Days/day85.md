@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Data Services - Day 85"
 published: false
 description: 90DaysOfDevOps - Data Services
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day85.md 
 ---
 ## Data Services

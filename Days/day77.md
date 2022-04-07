@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - The Big Picture: Monitoring - Day 77"
 published: false
 description: "90DaysOfDevOps - The Big Picture: Monitoring"
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day77.md 
 ---
 ## The Big Picture: Monitoring

@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Microsoft Azure Hands-On Scenarios - Day 34"
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Hands-On Scenarios
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day34.md 
 ---
 ## Microsoft Azure Hands-On Scenarios

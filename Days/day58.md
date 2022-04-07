@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - HashiCorp Configuration Language (HCL) - Day 58"
 published: false
 description: 90DaysOfDevOps - HashiCorp Configuration Language (HCL) 
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day58.md 
 ---
 ## HashiCorp Configuration Language (HCL)

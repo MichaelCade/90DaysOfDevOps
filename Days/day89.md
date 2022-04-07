@@ -3,7 +3,7 @@ title: "#90DaysOfDevOps - Disaster Recovery - Day 89"
 published: false
 description: 90DaysOfDevOps - Disaster Recovery
 
-cover_image: null
+
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day89.md 
 ---
 ## Disaster Recovery
