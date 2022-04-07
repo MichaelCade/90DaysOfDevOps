@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Ansible: Getting Started - Day 64"
 published: false
 description: "90DaysOfDevOps - Ansible: Getting Started"
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day64.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Ansible: Getting Started
 

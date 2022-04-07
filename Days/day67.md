@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Using Roles & Deploying a Loadbalancer - Day 67"
 published: false
 description: 90DaysOfDevOps - Using Roles & Deploying a Loadbalancer
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day67.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Using Roles & Deploying a Loadbalancer
 

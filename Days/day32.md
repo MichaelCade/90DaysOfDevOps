@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Microsoft Azure Storage Models - Day 32"
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Storage Models
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day32.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Microsoft Azure Storage Models
 

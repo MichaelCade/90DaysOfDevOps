@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Automate tasks with bash scripts - Day 19"
 published: false
 description: 90DaysOfDevOps - Automate tasks with bash scripts
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day19.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Automate tasks with bash scripts
 

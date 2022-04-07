@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Microsoft Azure Compute Models - Day 31"
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Compute Models
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day31.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Microsoft Azure Compute Models
 

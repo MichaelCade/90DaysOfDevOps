@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Getting hands on with Jenkins - Day 72"
 published: false
 description: 90DaysOfDevOps - Getting hands on with Jenkins
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day72.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Getting hands on with Jenkins 
 

@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Staging & Changing - Day 38"
 published: false
 description: 90DaysOfDevOps - Staging & Changing
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day38.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Staging & Changing
 

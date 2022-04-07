@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Social Network for code - Day 40"
 published: false
 description: 90DaysOfDevOps - Social Network for code
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day40.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Social Network for code
 Exploring GitHub | GitLab | BitBucket 

@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - What is Jenkins? - Day 71"
 published: false
 description: 90DaysOfDevOps - What is Jenkins?
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day71.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## What is Jenkins?
 

@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor > - Day 5"
 published: false
 description: 90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day05.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor > 
 

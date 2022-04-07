@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Getting user input with Pointers and a finished program - Day 12"
 published: false
 description: 90DaysOfDevOps - Getting user input with Pointers and a finished program
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day12.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Getting user input with Pointers and a finished program
 

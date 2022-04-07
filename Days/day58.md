@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - HashiCorp Configuration Language (HCL) - Day 58"
 published: false
 description: 90DaysOfDevOps - HashiCorp Configuration Language (HCL) 
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day58.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## HashiCorp Configuration Language (HCL)
 

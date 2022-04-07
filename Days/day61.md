@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Kubernetes & Multiple Environments - Day 61"
 published: false
 description: 90DaysOfDevOps - Kubernetes & Multiple Environments 
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day61.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Kubernetes & Multiple Environments 
 

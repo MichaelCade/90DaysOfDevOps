@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Network Automation - Day 24"
 published: false
 description: 90DaysOfDevOps - Network Automation 
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day24.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Network Automation 
 

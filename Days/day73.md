@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Building a Jenkins Pipeline - Day 73"
 published: false
 description: 90DaysOfDevOps - Building a Jenkins Pipeline 
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day73.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Building a Jenkins Pipeline 
 

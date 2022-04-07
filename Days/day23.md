@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Network Protocols - Day 23"
 published: false
 description: 90DaysOfDevOps - Network Protocols
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day23.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Network Protocols 
 

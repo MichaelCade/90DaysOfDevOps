@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - The anatomy of a Docker Image - Day 45"
 published: false
 description: 90DaysOfDevOps - The anatomy of a Docker Image
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day45.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## The anatomy of a Docker Image
 

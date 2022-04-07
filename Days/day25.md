@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Python for Network Automation - Day 25"
 published: false
 description: 90DaysOfDevOps - Python for Network Automation 
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day25.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Python for Network Automation 
 

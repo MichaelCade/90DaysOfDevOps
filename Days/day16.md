@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Managing your Linux System, Filesystem & Storage - Day 16"
 published: false
 description: 90DaysOfDevOps - Managing your Linux System, Filesystem & Storage
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day16.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Managing your Linux System, Filesystem & Storage
 

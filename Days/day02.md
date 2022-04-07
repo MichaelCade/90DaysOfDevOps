@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Responsibilities of a DevOps Engineer - Day 2"
 published: false
 description: 90DaysOfDevOps - Responsibilities of a DevOps Engineer
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day02.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 
 ## Responsibilities of a DevOps Engineer 

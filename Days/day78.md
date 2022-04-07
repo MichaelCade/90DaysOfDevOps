@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Hands-On Monitoring Tools - Day 78"
 published: false
 description: 90DaysOfDevOps - Hands-On Monitoring Tools
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day78.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Hands-On Monitoring Tools
 

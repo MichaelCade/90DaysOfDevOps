@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Dev workstation setup - All the pretty things - Day 20"
 published: false
 description: 90DaysOfDevOps - Dev workstation setup - All the pretty things
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day20.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Dev workstation setup - All the pretty things
 

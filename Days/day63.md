@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - The Big Picture: Configuration Management - Day 63"
 published: false
 description: "90DaysOfDevOps - The Big Picture: Configuration" Management
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day63.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## The Big Picture: Configuration Management
 

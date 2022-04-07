@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - An intro to Terraform - Day 57"
 published: false
 description: 90DaysOfDevOps - An intro to Terraform  
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day57.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## An intro to Terraform 
 

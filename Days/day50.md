@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Choosing your Kubernetes platform - Day 50"
 published: false
 description: 90DaysOfDevOps - Choosing your Kubernetes platform
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day50.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 ## Choosing your Kubernetes platform 
 

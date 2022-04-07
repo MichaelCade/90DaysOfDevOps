@@ -2,9 +2,9 @@
 title: "#90DaysOfDevOps - Variables & Constants in Go - Day 11"
 published: false
 description: 90DaysOfDevOps - Variables & Constants in Go
-
-
-canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day11.md
+tags: 'devops, 90daysofdevops, learning, sre'
+cover_image: null
+canonical_url: null
 ---
 
 Before we get into the topics for today I want to give a massive shout out to [Techworld with Nana](https://www.youtube.com/watch?v=yyUHQIec83I) and this fantastic concise journey through the fundamentals of Go. 
