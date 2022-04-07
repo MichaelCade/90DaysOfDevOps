@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - The Big Picture: Log Management - Day 79"
 published: false
 description: "90DaysOfDevOps - The Big Picture: Log Management"
-#tags: 'devops, 90daysofdevops, learning'
+
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day79.md 
 ---

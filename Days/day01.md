@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Introduction - Day 1'
 published: false
 description: 90DaysOfDevOps - Introduction
-#tags: 'devops, 90daysofdevops, learning'
+
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day01.md 
 ---

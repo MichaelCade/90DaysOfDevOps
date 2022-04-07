@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - SSH & Web Server - Day 18"
 published: false
 description: 90DaysOfDevOps - SSH & Web Server
-#tags: 'devops, 90daysofdevops, learning'
+
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day18.md 
 ---

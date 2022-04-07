@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Docker Containers, Provisioners & Modules - Day 60"
 published: false
 description: 90DaysOfDevOps - Docker Containers, Provisioners & Modules 
-#tags: 'devops, 90daysofdevops, learning'
+
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day60.md 
 ---

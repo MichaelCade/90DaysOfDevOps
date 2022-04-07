@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Create a VM with Terraform & Variables - Day 59"
 published: false
 description: 90DaysOfDevOps - Create a VM with Terraform & Variables
-#tags: 'devops, 90daysofdevops, learning'
+
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day59.md 
 ---

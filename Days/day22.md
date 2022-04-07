@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - The OSI Model - The 7 Layers - Day 22"
 published: false
 description: 90DaysOfDevOps - The OSI Model - The 7 Layers
-#tags: 'devops, 90daysofdevops, learning'
+
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day22.md 
 ---

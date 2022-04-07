@@ -2,7 +2,7 @@
 title: "#90DaysOfDevOps - Linux Commands for DevOps (Actually everyone) - Day 15"
 published: false
 description: 90DaysOfDevOps - Linux Commands for DevOps (Actually everyone)
-#tags: 'devops, 90daysofdevops, learning'
+
 cover_image: null
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day15.md 
 ---
