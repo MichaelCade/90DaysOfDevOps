@@ -1,10 +1,14 @@
 ---
-title: "#90DaysOfDevOps - Introduction - Day 1"
+title: '#90DaysOfDevOps - Introduction - Day 1'
 published: false
 description: 90DaysOfDevOps - Introduction
 tags: 'devops, 90daysofdevops, learning, sre, operations'
 cover_image: null
+<<<<<<< HEAD
 canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day01.md 
+=======
+canonical_url: 'https://github.com/MichaelCade/90DaysOfDevOps'
+>>>>>>> 571bee67bb883aa83e731a6a05fa3d37c2a8099d
 id: 1047799
 ---
 
