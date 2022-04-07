@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Managing your Linux System, Filesystem & Storage - Day 16"
+published: false
+description: 90DaysOfDevOps - Managing your Linux System, Filesystem & Storage
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day16.md 
+---
 ## Managing your Linux System, Filesystem & Storage
 
 So far we have had a brief overview of Linux and DevOps and then we got our lab environment set up using vagant [(Day 14)](day14.md), we then touched on a small portion of commands that will be in your daily toolkit when in the terminal and getting things done [(Day 15)](day15.md). 

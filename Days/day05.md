@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor > - Day 5"
+published: false
+description: 90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >
+tags: 'devops, 90daysofdevops, learning, sre, operations'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day05.md 
+---
 ## Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor > 
 
 Today we are going to focus on the individual steps from start to finish and the continous cycle of an Application in a DevOps world. 

@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Staging & Changing - Day 38"
+published: false
+description: 90DaysOfDevOps - Staging & Changing
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day38.md 
+---
 ## Staging & Changing
 
 We have already covered some of the basics but putting things into a walkthrough makes it better for me to learn and understand how and why we are doing it this way. Before we get into any git-based services such as GitHub, git has its powers that we can take advantage of on our local workstation. 

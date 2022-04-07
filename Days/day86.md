@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Backup all the platforms - Day 86"
+published: false
+description: 90DaysOfDevOps - Backup all the platforms
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability, backup'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day86.md 
+---
 ## Backup all the platforms
 
 During this whole challenge we have discussed many different platforms and environments. One thing all of those have in common is the fact they all need some level of data protection!

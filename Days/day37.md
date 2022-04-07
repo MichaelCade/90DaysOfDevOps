@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Gitting to know Git - Day 37"
+published: false
+description: 90DaysOfDevOps - Gitting to know Git
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day37.md 
+---
 ## Gitting to know Git
 
 Apoligies for the terrible puns in the title and throughout. I am surely not the first person to turn Git into a dad joke! 

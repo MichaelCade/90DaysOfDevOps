@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Let's explain the Hello World code - Day 9"
+published: false
+description: 90DaysOfDevOps - Let's explain the Hello World code
+tags: 'devops, 90daysofdevops, learning, sre, operations'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day09.md 
+---
 ## Let's explain the Hello World code
 
 ### How Go works 

@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Disaster Recovery - Day 89"
+published: false
+description: 90DaysOfDevOps - Disaster Recovery
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability, backup'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day89.md 
+---
 ## Disaster Recovery
 
 We have mentioned already how different failure scenarios will warrant different recovery requirements. When it comes to Fire, Flood and Blood scenarios we can consider these mostly disaster situations where we might need our worklods up and running in a completely different location as fast as possible or at least with near-zero recovery time objectives (RTO) 

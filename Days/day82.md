@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - EFK Stack - Day 82"
+published: false
+description: 90DaysOfDevOps - EFK Stack
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day82.md 
+---
 ### EFK Stack
 
 In the previous section, we spoke about ELK Stack, which uses Logstash as the log collector in the stack, in the EFK Stack we are swapping that out for FluentD or FluentBit.

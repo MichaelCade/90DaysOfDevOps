@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Docker Networking & Security - Day 47"
+published: false
+description: 90DaysOfDevOps - Docker Networking & Security
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day47.md 
+---
 ## Docker Networking & Security
 
 During this container session so far we have made things happen but we have not really looked at how things have worked behind the scenes either from a networking point of view but also we have not touched on security, that is the plan for this session. 

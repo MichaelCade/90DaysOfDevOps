@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Microsoft Azure Fundamentals - Day 29"
+published: false
+description: 90DaysOfDevOps - Microsoft Azure Fundamentals 
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day29.md 
+---
 ## Microsoft Azure Fundamentals 
 
 Before we get going, the winner of the Twitter poll was Microsoft Azure, hence the title of the page. It was close and also quite interesting to see the results come in over the 24 hours. 

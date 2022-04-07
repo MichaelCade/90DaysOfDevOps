@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Tweet your progress with our new App - Day 13"
+published: false
+description: 90DaysOfDevOps - Tweet your progress with our new App
+tags: 'devops, 90daysofdevops, learning, sre, operations'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day13.md 
+---
 ## Tweet your progress with our new App
 
 On the final day of looking into this programming language, we have only just touched the surface here of the language but it is that start that I think we need to get interested and excited and want to dive more into it. 

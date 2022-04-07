@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - ELK Stack - Day 80"
+published: false
+description: 90DaysOfDevOps - ELK Stack 
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day80.md 
+---
 ## ELK Stack  
 
 In this session, we are going to get a little more hands-on with some of the options we have mentioned. 

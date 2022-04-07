@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Tags, Variables, Inventory & Database Server config - Day 68"
+published: false
+description: 90DaysOfDevOps - Tags, Variables, Inventory & Database Server config
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day68.md 
+---
 ## Tags, Variables, Inventory & Database Server config
 
 ### Tags 

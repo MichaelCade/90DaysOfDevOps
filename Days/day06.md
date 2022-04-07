@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - DevOps - The real stories - Day 6"
+published: false
+description: 90DaysOfDevOps - DevOps - The real stories
+tags: 'devops, 90daysofdevops, learning, sre, operations'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day06.md 
+---
 ## DevOps - The real stories 
 
 DevOps to begin with was seen to be out of reach for a lot of us as we didn't have an environment or requirement anything like a Netflix or fortune 500 but think now that is beginning to sway into the normal when adopting a DevOps practice within any type of business. 

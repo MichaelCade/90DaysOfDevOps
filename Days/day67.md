@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Using Roles & Deploying a Loadbalancer - Day 67"
+published: false
+description: 90DaysOfDevOps - Using Roles & Deploying a Loadbalancer
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day67.md 
+---
 ## Using Roles & Deploying a Loadbalancer
 
 In the last session we covered roles and used the `ansible-galaxy` command to help create our folder structures for some roles that we are going to use. We finished up with a much tidier working repository for our configuration code as everything is hidden away in our role folders. 

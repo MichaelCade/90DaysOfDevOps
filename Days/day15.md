@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Linux Commands for DevOps (Actually everyone) - Day 15"
+published: false
+description: 90DaysOfDevOps - Linux Commands for DevOps (Actually everyone)
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day15.md 
+---
 ## Linux Commands for DevOps (Actually everyone)
 
 I mentioned it [yesterday](day14.md) that we are going to be spending a lot of time in the terminal with some commands to get stuff done. 

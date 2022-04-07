@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Setting up a multinode Kubernetes Cluster  - Day 52"
+published: false
+description: 90DaysOfDevOps - Setting up a multinode Kubernetes Cluster  
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day52.md 
+---
 ## Setting up a multinode Kubernetes Cluster 
 
 I wanted this title to be "Setting up a multinode Kubernetes cluster with Vagrant" but thought it might be a little too long! 

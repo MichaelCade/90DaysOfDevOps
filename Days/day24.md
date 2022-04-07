@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Network Automation - Day 24"
+published: false
+description: 90DaysOfDevOps - Network Automation 
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day24.md 
+---
 ## Network Automation 
 
 ### Basics of network automation

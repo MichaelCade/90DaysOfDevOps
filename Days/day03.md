@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Application Focused - Day 3"
+published: false
+description: 90DaysOfDevOps - Application Focused
+tags: 'devops, 90daysofdevops, learning, sre, operations'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day03.md 
+---
 ## DevOps Lifecycle - Application Focused
 
 As we continue through these next few weeks we are 100% going to come across these titles (Continuous Development, Testing, Deployment, Monitor) over and over again, If you are heading towards the DevOps Engineer role then repeatability will be something you will get used to but constantly enhancing each time is another thing that keeps things interesting. 

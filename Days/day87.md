@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Hands-On Backup & Recovery - Day 87"
+published: false
+description: 90DaysOfDevOps - Hands-On Backup & Recovery
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability, backup'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day87.md 
+---
 ## Hands-On Backup & Recovery
 
 In the last session we touched on [Kopia](https://kopia.io/) an Open-Source backup tool that we used to get some important data off to a local NAS and off to some cloud based object storage. 

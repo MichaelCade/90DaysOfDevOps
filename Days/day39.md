@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Viewing, unstaging, discarding & restoring - Day 39"
+published: false
+description: 90DaysOfDevOps - Viewing, unstaging, discarding & restoring
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day39.md 
+---
 ## Viewing, unstaging, discarding & restoring
 
 Continuing on from where we finished yesterday around some of the commands that we have with git and how to leverage git with your projects. Remember we have not touched GitHub or any other git based services yet this is all to help you keep control of your projects locally at the moment, but they will all become useful when we start to integrate into those tools. 

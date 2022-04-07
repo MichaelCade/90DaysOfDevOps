@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Docker Images & Hands-On with Docker Desktop - Day 44"
+published: false
+description: 90DaysOfDevOps - Docker Images & Hands-On with Docker Desktop
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day44.md 
+---
 ## Docker Images & Hands-On with Docker Desktop
 
 We now have Docker Desktop installed on our system. (If you are running Linux then you still have options but no GUI but docker obviously does work on Linux.)[Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/) (Other distributions also available.)

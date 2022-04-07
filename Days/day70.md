@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - The Big Picture: CI/CD Pipelines - Day 70"
+published: false
+description: "90DaysOfDevOps - The Big Picture: CI/CD Pipelines"
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day70.md 
+---
 ## The Big Picture: CI/CD Pipelines
 
 A CI/CD (Continous Integration/Continous Deployment) Pipeline implementation is the backbone of the modern DevOps environment. 

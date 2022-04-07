@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - SSH & Web Server - Day 18"
+published: false
+description: 90DaysOfDevOps - SSH & Web Server
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day18.md 
+---
 ## SSH & Web Server
 
 As we have mentioned throughout you are going to most likely be managing lots of remote Linux servers, because of this, you will need to make sure that your connectivity to these remote servers is secure. In this section, we want to cover some of the basics of SSH that everyone should know that will help you with that secure tunnel to your remote systems. 

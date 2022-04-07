@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Building a Jenkins Pipeline - Day 73"
+published: false
+description: 90DaysOfDevOps - Building a Jenkins Pipeline 
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day73.md 
+---
 ## Building a Jenkins Pipeline 
 
 In the last section we got Jenkins deployed to our Minikube cluster and we set up a very basic Jenkins Pipeline, that didn't do much at all other than echo out the stages of a Pipeline. 

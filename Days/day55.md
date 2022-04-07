@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - State and Ingress in Kubernetes - Day 55"
+published: false
+description: 90DaysOfDevOps - State and Ingress in Kubernetes 
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day55.md 
+---
 ## State and Ingress in Kubernetes
 In this closing section of Kubernetes, we are going to take a look at State and ingress. 
 

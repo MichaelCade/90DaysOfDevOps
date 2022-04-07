@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Application Focused Backups - Day 88"
+published: false
+description: 90DaysOfDevOps - Application Focused Backups
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability, backup'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day88.md 
+---
 ## Application Focused Backups
 
 We have already spent some time talking about data services or data intensive applications such as databases on [Day 85](day85.md). For these data services we have to consider how we manage consistency, especially when it comes application consistency. 

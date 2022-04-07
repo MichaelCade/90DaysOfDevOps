@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Rancher Overview - Hands On - Day 53"
+published: false
+description: 90DaysOfDevOps - Rancher Overview - Hands On
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day53.md 
+---
 ## Rancher Overview - Hands On
 
 In this section we are going to take a look at Rancher, so far everything we have done has been in the cli and using kubectl but we have  a few really good UIs and multi cluster management tools to give our operations teams  good visibility into our cluster management. 

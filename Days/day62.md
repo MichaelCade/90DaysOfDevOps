@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Testing, Tools & Alternatives - Day 62"
+published: false
+description: 90DaysOfDevOps - Testing, Tools & Alternatives
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day62.md 
+---
 ## Testing, Tools & Alternatives
 
 As we close out this section on Infrastructure as Code we must mention about testing our code, the various different tools available and then some of the alternatives to Terraform to achieve this. As I said at the start of the section my focus was on Terraform because it is firstly free and open source, secondly it is cross platform and agnostic to environments. But there are also alternatives out there that should be considered but the overall goal is to make people aware that this is the way to deploy your infrastructure. 

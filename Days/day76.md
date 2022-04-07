@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - ArgoCD Overview - Day 76"
+published: false
+description: 90DaysOfDevOps - ArgoCD Overview
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day76.md 
+---
 ## ArgoCD Overview
 
 “Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes”

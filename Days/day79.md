@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - The Big Picture: Log Management - Day 79"
+published: false
+description: "90DaysOfDevOps - The Big Picture: Log Management"
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day79.md 
+---
 ## The Big Picture: Log Management
 
 A continuation to the infrastructure monitoring challenges and solutions, log management is another puzzle peice to the overall observability jigsaw. 

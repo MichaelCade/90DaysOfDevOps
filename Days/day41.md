@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - The Open Source Workflow - Day 41"
+published: false
+description: 90DaysOfDevOps - The Open Source Workflow 
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day41.md 
+---
 ## The Open Source Workflow 
     
 Hopefully through the last 7 sections of Git we have a better understanding of what git is and then how a git based service such as GitHub integrates with git to provide a source code repository but also a way in which the wider community can collaborate on code and projects together. 

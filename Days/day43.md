@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - What is Docker & Getting installed - Day 43"
+published: false
+description: 90DaysOfDevOps - What is Docker & Getting installed 
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day43.md 
+---
 ## What is Docker & Getting installed
 
 In the previous post I mentioned Docker at least once and that is because Docker is really innovative in the making containers popular even though they have been around for such a long time. 

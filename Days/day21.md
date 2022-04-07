@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - The Big Picture: DevOps and Networking - Day 21"
+published: false
+description: "90DaysOfDevOps - The Big Picture: DevOps and Networking"
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day21.md 
+---
 ## The Big Picture: DevOps and Networking
 
 Welcome to Day 21! We are going to be getting into Networking over the next 7 days, Networking and DevOps is the overarching theme but we will need to get into some of the networking fundamentals as well. 

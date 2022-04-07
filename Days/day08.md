@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Setting up your DevOps environment for Go & Hello World - Day 8"
+published: false
+description: 90DaysOfDevOps - Setting up your DevOps environment for Go & Hello World
+tags: 'devops, 90daysofdevops, learning, sre, operations'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day08.md 
+---
 ## Setting up your DevOps environment for Go & Hello World
 
 Before we get into some of the fundamentals of Go we should get Go installed on our workstation and do what every "learning programming 101" module teaches us which is to create the Hello World app. As this one is going to be walking through the steps to get Go installed on your workstation we are going to attempt to document the process in pictures so people can easily follow along. 

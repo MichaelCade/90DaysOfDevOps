@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - GitHub Actions Overview - Day 75"
+published: false
+description: 90DaysOfDevOps - GitHub Actions Overview
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day75.md 
+---
 ## GitHub Actions Overview
 
 In this section I wanted to move on and take a look at maybe a different approach to what we just spent time on. GitHub Actions is where we will focus on in this session. 

@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Dev workstation setup - All the pretty things - Day 20"
+published: false
+description: 90DaysOfDevOps - Dev workstation setup - All the pretty things
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day20.md 
+---
 ## Dev workstation setup - All the pretty things
 
 Not to be confused with us setting Linux servers up this way but I wanted to also show off the choice and flexibility that we have within the Linux desktop. 

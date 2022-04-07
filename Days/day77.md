@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - The Big Picture: Monitoring - Day 77"
+published: false
+description: "90DaysOfDevOps - The Big Picture: Monitoring"
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day77.md 
+---
 ## The Big Picture: Monitoring
 
 In this section we are going to talk about monitoring, what is it why do we need it? 

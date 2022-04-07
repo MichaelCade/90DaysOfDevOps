@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - The OSI Model - The 7 Layers - Day 22"
+published: false
+description: 90DaysOfDevOps - The OSI Model - The 7 Layers
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day22.md 
+---
 ## The OSI Model - The 7 Layers
 
 The overall purpose of networking as an industry is to allow two hosts to share data before networking if I want to get data from this host to this host I'd have to plug something into this host walk it over to the other host plug it into the other host.

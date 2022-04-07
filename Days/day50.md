@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Choosing your Kubernetes platform - Day 50"
+published: false
+description: 90DaysOfDevOps - Choosing your Kubernetes platform
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day50.md 
+---
 ## Choosing your Kubernetes platform 
 
 I wanted to use this session to breakdown some of the platforms or maybe distributions is a better term to use here, one thing that has been a challenge in the Kubernetes world is removing complexity. 

@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Alternatives to Docker - Day 48"
+published: false
+description: 90DaysOfDevOps - Alternatives to Docker
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day48.md 
+---
 ## Alternatives to Docker
 
 I did say at the very beginning of this section that we were going to be using Docker, simply because resource wise there is so much and the community is very big, but also this was really where the indents to making containers popular really came from. I would encourage you to go and watch some of the history around Docker and how it came to be, I found it very useful. 

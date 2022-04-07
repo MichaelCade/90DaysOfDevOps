@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Docker Compose - Day 46"
+published: false
+description: 90DaysOfDevOps - Docker Compose
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day46.md 
+---
 ## Docker Compose 
 
 The ability to run one container could be great if you have a self contained image that has everything you need for your single use case, where things get interesting is when you are looking to build multiple applications between different container images. For example if I had a website front end but had a requirement for a backend database I could put everything in one container but better and more efficient would be to have its own container for the database. 

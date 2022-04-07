@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - An intro to Terraform - Day 57"
+published: false
+description: 90DaysOfDevOps - An intro to Terraform  
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day57.md 
+---
 ## An intro to Terraform 
 
 "Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently" 

@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - The Big Picture: Kubernetes - Day 49"
+published: false
+description: "90DaysOfDevOps - The Big Picture: Kubernetes"
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day49.md 
+---
 ## The Big Picture: Kubernetes
 
 In the last section we covered Containers, Containers fall short when it comes to scale and orchestration alone. The best we can do is use docker-compose to bring up multiple containers together. When it comes to Kubernetes which is a Container Orchestrator, this gives us the ability to scale up and down in an automated way or based on the load of your applications and services. 

@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - The Big Picture: Git - Version Control - Day 35"
+published: false
+description: "90DaysOfDevOps - The Big Picture: Git - Version Control"
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day35.md 
+---
 ## The Big Picture: Git - Version Control
 
 Before we get into git, we need to understand what version control is and why? In this opener for Git, we will take a look at what version control is, the basics of git.  

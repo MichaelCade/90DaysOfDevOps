@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Hello World - Jenkinsfile App Pipeline - Day 74"
+published: false
+description: 90DaysOfDevOps - Hello World - Jenkinsfile App Pipeline
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day74.md 
+---
 ## Hello World - Jenkinsfile App Pipeline
 
 In the last section we built a simple Pipeline in Jenkins that would push our docker image from our dockerfile in a public GitHub repository to our private Dockerhub repository. 

@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Ansible Playbooks Continued... - Day 66"
+published: false
+description: 90DaysOfDevOps - Ansible Playbooks Continued...
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day66.md 
+---
 ## Ansible Playbooks Continued...
 
 In our last section we started with creating our small lab using a Vagrantfile to deploy 4 machines and we used our Linux machine we created in that section as our ansible control system. 

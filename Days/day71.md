@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - What is Jenkins? - Day 71"
+published: false
+description: 90DaysOfDevOps - What is Jenkins?
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day71.md 
+---
 ## What is Jenkins?
 
 Jenkins is a continous integration tool that allows continous development, test and deployment of newly created code. 

@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Data Visualisation - Grafana - Day 83"
+published: false
+description: 90DaysOfDevOps - Data Visualisation - Grafana
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day83.md 
+---
 ## Data Visualisation - Grafana
 
 We saw a lot of Kibana over this section around Observability. But we have to also take some time to cover Grafana. But also they are not the same and they are not completely competing against each other. 

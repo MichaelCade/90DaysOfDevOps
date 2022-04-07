@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Docker Containers, Provisioners & Modules - Day 60"
+published: false
+description: 90DaysOfDevOps - Docker Containers, Provisioners & Modules 
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day60.md 
+---
 ## Docker Containers, Provisioners & Modules 
 
 On [Day 59](day59.md) we provisioned a virtual machine using Terraform to our local FREE virtualbox environment. In this section we are going to be deploy a Docker container with some configuration to our local Docker environment. 

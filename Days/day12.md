@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Getting user input with Pointers and a finished program - Day 12"
+published: false
+description: 90DaysOfDevOps - Getting user input with Pointers and a finished program
+tags: 'devops, 90daysofdevops, learning, sre, operations'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day12.md 
+---
 ## Getting user input with Pointers and a finished program
 
 Yesterday ([Day 11](day11.md)), we created our first Go program that was self-contained and the parts we wanted to get user input for were created as variables within our code and given values, we now want to ask the user for their input to give the variable the value for the end message. 

@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Kubernetes Application Deployment - Day 54"
+published: false
+description: 90DaysOfDevOps - Kubernetes Application Deployment 
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day54.md 
+---
 ## Kubernetes Application Deployment 
 
 Now we finally get to actually deploying some applications into our clusters, some would say this is the reason Kubernetes exists, for Application delivery. 

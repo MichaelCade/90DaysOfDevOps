@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Kubernetes & Multiple Environments - Day 61"
+published: false
+description: 90DaysOfDevOps - Kubernetes & Multiple Environments 
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day61.md 
+---
 ## Kubernetes & Multiple Environments 
 
 So far during this section on Infrastructure as code we have looked at deploying virtual machines albeit to virtualbox but the premise is the same really as we define in code what we want our virtual machine to look like and then we deploy. The same for Docker containers and in this session we are going to take a look at how Terraform can be used to interact with resources supported by Kubernetes.

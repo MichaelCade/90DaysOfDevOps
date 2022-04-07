@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Hands-On Monitoring Tools - Day 78"
+published: false
+description: 90DaysOfDevOps - Hands-On Monitoring Tools
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day78.md 
+---
 ## Hands-On Monitoring Tools
 
 In the last session, I spoke about the big picture of monitoring and I took a look into Nagios, there was two reasons for doing this. The first was this is a peice of software I have heard a lot of over the years so wanted to know a little more about its capabilities. 

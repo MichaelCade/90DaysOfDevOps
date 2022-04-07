@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Ansible: Getting Started - Day 64"
+published: false
+description: "90DaysOfDevOps - Ansible: Getting Started"
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day64.md 
+---
 ## Ansible: Getting Started
 
 We covered a little what Ansible is in the [big picture session yesterday](day63.md) But we are going to get started with a little more information on top of that here. Firstly Ansible comes from RedHat. Secondly it is agentles, connects via SSH and runs commands. Thirdly it is cross platform (Linux & macOS, WSL2) and open-source (there is also a paid for enterprise option) Ansible pushes configuration vs other models. 

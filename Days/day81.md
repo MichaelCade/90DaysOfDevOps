@@ -1,3 +1,11 @@
+---
+title: "#90DaysOfDevOps - Fluentd & FluentBit - Day 81"
+published: false
+description: 90DaysOfDevOps - Fluentd & FluentBit
+tags: 'devops, 90daysofdevops, learning, sre, operations, linux, networking, cloud, git, docker, containers, kubernetes, iac, terraform, ansible, CICD, observability'
+cover_image: null
+canonical_url: https://github.com/MichaelCade/90DaysOfDevOps/Days/day81.md 
+---
 ## Fluentd & FluentBit
 
 Another data collector that I wanted to explore as part of this observability section was [Fluentd](https://docs.fluentd.org/). An Open-Source unified logging layer. 
