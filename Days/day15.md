@@ -1,6 +1,6 @@
 ## Linux Commands for DevOps (Actually everyone)
 
-I mentioned it [yesterday](Day14.md) that we are going to be spending a lot of time in the terminal with some commands to get stuff done. 
+I mentioned it [yesterday](day14.md) that we are going to be spending a lot of time in the terminal with some commands to get stuff done. 
 
 I also mentioned that with our vagrant provisioned VM we can use `vagrant ssh` and gain access to our box. You will need to be in the same directory as we provisioned it from.
 
