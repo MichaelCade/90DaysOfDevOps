@@ -1,7 +1,7 @@
 # 90DaysOfDevOps
 
 <p align="center">
-  <img src="https://github.com/waldyr/Sublime-Installer/blob/master/sublime_text.png?raw=true" alt="90DaysOfDevOps Logo"/>
+  <img src="https://github.com/MichaelCade/90DaysOfDevOps/blob/main/logo.png?raw=true" alt="90DaysOfDevOps Logo"/>
 </p>
 
 
