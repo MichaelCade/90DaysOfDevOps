@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Hands-On Monitoring Tools - Day 78"
+title: '#90DaysOfDevOps - Hands-On Monitoring Tools - Day 78'
 published: false
-description: "90DaysOfDevOps - Hands-On Monitoring Tools"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Hands-On Monitoring Tools
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1049056
 ---
 ## Hands-On Monitoring Tools
 
