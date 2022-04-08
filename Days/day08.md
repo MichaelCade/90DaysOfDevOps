@@ -103,4 +103,4 @@ If we run that
 
 See you on [Day 9](day09.md).
 
-![](images/Day8_Go13.png)
+![](Images/Day8_Go13.png)
