@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - SSH & Web Server'
+title: "#90DaysOfDevOps - SSH & Web Server - Day 18"
 published: false
-description: 90DaysOfDevOps - SSH & Web Server
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - SSH & Web Server"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 ---

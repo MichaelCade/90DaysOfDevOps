@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Tweet your progress with our new App'
+title: "#90DaysOfDevOps - Tweet your progress with our new App - Day 13"
 published: false
-description: 90DaysOfDevOps - Tweet your progress with our new App
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - Tweet your progress with our new App"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 ---

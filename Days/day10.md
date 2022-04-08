@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - The Go Workspace'
+title: "#90DaysOfDevOps - The Go Workspace - Day 10"
 published: false
-description: 90DaysOfDevOps - The Go Workspace
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - The Go Workspace"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 ---

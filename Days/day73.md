@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Building a Jenkins Pipeline'
+title: "#90DaysOfDevOps - Building a Jenkins Pipeline - Day 73"
 published: false
-description: 90DaysOfDevOps - Building a Jenkins Pipeline 
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - Building a Jenkins Pipeline"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 ---

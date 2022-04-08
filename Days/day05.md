@@ -1,11 +1,10 @@
 ---
-title: '#90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >'
+title: "#90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor > - Day 5"
 published: false
-description: 90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
-id: 1048315
 ---
 ## Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor > 
 

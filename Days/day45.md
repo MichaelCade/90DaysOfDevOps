@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - The anatomy of a Docker Image'
+title: "#90DaysOfDevOps - The anatomy of a Docker Image - Day 45"
 published: false
-description: 90DaysOfDevOps - The anatomy of a Docker Image
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - The anatomy of a Docker Image"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 ---

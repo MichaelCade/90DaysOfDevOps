@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - What is Jenkins?'
+title: "#90DaysOfDevOps - What is Jenkins? - Day 71"
 published: false
-description: 90DaysOfDevOps - What is Jenkins?
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - What is Jenkins?"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 ---

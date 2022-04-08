@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Alternatives to Docker'
+title: "#90DaysOfDevOps - Alternatives to Docker - Day 48"
 published: false
-description: 90DaysOfDevOps - Alternatives to Docker
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - Alternatives to Docker"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 ---

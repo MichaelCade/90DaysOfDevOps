@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Application Focused'
+title: "#90DaysOfDevOps - Application Focused - Day 3"
 published: false
-description: 90DaysOfDevOps - Application Focused
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - Application Focused"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 ---

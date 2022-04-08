@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Automate tasks with bash scripts'
+title: "#90DaysOfDevOps - Automate tasks with bash scripts - Day 19"
 published: false
-description: 90DaysOfDevOps - Automate tasks with bash scripts
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - Automate tasks with bash scripts"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 ---

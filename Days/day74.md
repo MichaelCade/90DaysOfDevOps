@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Hello World - Jenkinsfile App Pipeline'
+title: "#90DaysOfDevOps - Hello World - Jenkinsfile App Pipeline - Day 74"
 published: false
-description: 90DaysOfDevOps - Hello World - Jenkinsfile App Pipeline
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - Hello World - Jenkinsfile App Pipeline"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 ---

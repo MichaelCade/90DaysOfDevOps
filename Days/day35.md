@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - The Big Picture: Git - Version Control'
+title: "#90DaysOfDevOps - The Big Picture: Git - Version Control - Day 35"
 published: false
-description: 90DaysOfDevOps - The Big Picture Git - Version Control
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - The Big Picture Git - Version Control"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 ---
