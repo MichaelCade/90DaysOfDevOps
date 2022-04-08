@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Gitting to know Git - Day 37"
+title: '#90DaysOfDevOps - Gitting to know Git - Day 37'
 published: false
-description: "90DaysOfDevOps - Gitting to know Git"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Gitting to know Git
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048707
 ---
 ## Gitting to know Git
 

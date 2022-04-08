@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - All other things Ansible - Automation Controller (Tower), AWX, Vault - Day 69"
+title: '#90DaysOfDevOps - All other things Ansible - Automation Controller (Tower), AWX, Vault - Day 69'
 published: false
-description: "90DaysOfDevOps - All other things Ansible - Automation Controller (Tower), AWX, Vault"
-tags: "devops, 90daysofdevops, learning"
+description: '90DaysOfDevOps - All other things Ansible - Automation Controller (Tower), AWX, Vault'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048714
 ---
 ## All other things Ansible - Automation Controller (Tower), AWX, Vault
 

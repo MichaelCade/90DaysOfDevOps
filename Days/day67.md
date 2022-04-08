@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Using Roles & Deploying a Loadbalancer - Day 67"
+title: '#90DaysOfDevOps - Using Roles & Deploying a Loadbalancer - Day 67'
 published: false
-description: "90DaysOfDevOps - Using Roles & Deploying a Loadbalancer"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Using Roles & Deploying a Loadbalancer
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048713
 ---
 ## Using Roles & Deploying a Loadbalancer
 

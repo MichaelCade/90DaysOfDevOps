@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Disaster Recovery - Day 89"
+title: '#90DaysOfDevOps - Disaster Recovery - Day 89'
 published: false
-description: "90DaysOfDevOps - Disaster Recovery"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Disaster Recovery
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048718
 ---
 ## Disaster Recovery
 

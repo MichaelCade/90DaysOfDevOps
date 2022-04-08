@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Ansible Playbooks Continued... - Day 66"
+title: '#90DaysOfDevOps - Ansible Playbooks Continued... - Day 66'
 published: false
-description: "90DaysOfDevOps - Ansible Playbooks Continued..."
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Ansible Playbooks Continued...
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048712
 ---
 ## Ansible Playbooks Continued...
 

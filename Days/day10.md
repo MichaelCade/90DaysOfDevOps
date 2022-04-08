@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - The Go Workspace - Day 10"
+title: '#90DaysOfDevOps - The Go Workspace - Day 10'
 published: false
-description: "90DaysOfDevOps - The Go Workspace"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - The Go Workspace
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048701
 ---
 ### The Go Workspace 
 On [Day 8](day08.md) we briefly covered the Go workspace to get Go up and running to get to the demo of `Hello #90DaysOfDevOps` But we should explain a little more about the Go workspace. 
