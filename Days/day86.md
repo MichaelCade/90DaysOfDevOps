@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Backup all the platforms - Day 86"
+title: '#90DaysOfDevOps - Backup all the platforms - Day 86'
 published: false
-description: "90DaysOfDevOps - Backup all the platforms"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Backup all the platforms
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1049058
 ---
 ## Backup all the platforms
 
