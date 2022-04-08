@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - The Big Picture: Log Management - Day 79"
+title: '#90DaysOfDevOps - The Big Picture: Log Management - Day 79'
 published: false
-description: "90DaysOfDevOps - The Big Picture Log Management"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - The Big Picture Log Management
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1049057
 ---
 ## The Big Picture: Log Management
 
