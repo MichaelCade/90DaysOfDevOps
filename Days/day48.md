@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Alternatives to Docker - Day 48'
 published: false
 description: 90DaysOfDevOps - Alternatives to Docker
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048807

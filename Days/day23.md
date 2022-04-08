@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Network Protocols - Day 23'
 published: false
 description: 90DaysOfDevOps - Network Protocols
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048704

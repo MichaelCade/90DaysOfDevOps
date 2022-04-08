@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Ansible: Getting Started - Day 64'
 published: false
 description: '90DaysOfDevOps - Ansible: Getting Started'
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048765

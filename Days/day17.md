@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Text Editors - nano vs vim - Day 17'
 published: false
 description: 90DaysOfDevOps - Text Editors - nano vs vim
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048703

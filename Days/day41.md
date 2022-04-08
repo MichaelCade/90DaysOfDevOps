@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - The Open Source Workflow - Day 41'
 published: false
 description: 90DaysOfDevOps - The Open Source Workflow
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048806
