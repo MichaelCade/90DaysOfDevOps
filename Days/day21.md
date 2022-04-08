@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - The Big Picture: DevOps and Networking - Day 21"
+title: '#90DaysOfDevOps - The Big Picture: DevOps and Networking - Day 21'
 published: false
-description: "90DaysOfDevOps - The Big Picture DevOps and Networking"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - The Big Picture DevOps and Networking
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048761
 ---
 ## The Big Picture: DevOps and Networking
 

@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Data Visualisation - Grafana - Day 83"
+title: '#90DaysOfDevOps - Data Visualisation - Grafana - Day 83'
 published: false
-description: "90DaysOfDevOps - Data Visualisation - Grafana"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Data Visualisation - Grafana
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048767
 ---
 ## Data Visualisation - Grafana
 

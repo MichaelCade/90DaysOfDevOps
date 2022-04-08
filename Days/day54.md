@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Kubernetes Application Deployment - Day 54"
+title: '#90DaysOfDevOps - Kubernetes Application Deployment - Day 54'
 published: false
-description: "90DaysOfDevOps - Kubernetes Application Deployment"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Kubernetes Application Deployment
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048764
 ---
 ## Kubernetes Application Deployment 
 
