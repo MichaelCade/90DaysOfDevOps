@@ -85,6 +85,11 @@ go build main.go
 ``` 
 ![](Images/Day8_Go12.png)
 
+If we run that
+
+![](Images/Day8_Go13.png)
+
+
 ## Resources
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
