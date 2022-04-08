@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Application Focused Backup - Day 88"
+title: '#90DaysOfDevOps - Application Focused Backup - Day 88'
 published: false
-description: "90DaysOfDevOps - Application Focused Backups"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Application Focused Backups
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048749
 ---
 ## Application Focused Backups
 

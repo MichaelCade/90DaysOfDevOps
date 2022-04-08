@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Docker Compose - Day 46"
+title: '#90DaysOfDevOps - Docker Compose - Day 46'
 published: false
-description: "90DaysOfDevOps - Docker Compose"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Docker Compose
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048740
 ---
 ## Docker Compose 
 

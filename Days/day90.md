@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Data & Application Mobility - Day 90"
+title: '#90DaysOfDevOps - Data & Application Mobility - Day 90'
 published: false
-description: "90DaysOfDevOps - Data & Application Mobility"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Data & Application Mobility
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048748
 ---
 ## Data & Application Mobility
 

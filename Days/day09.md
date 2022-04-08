@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Let's explain the Hello World code - Day 9"
+title: '#90DaysOfDevOps - Let''s explain the Hello World code - Day 9'
 published: false
-description: "90DaysOfDevOps - Let's explain the Hello World code"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Let's explain the Hello World code
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048732
 ---
 ## Let's explain the Hello World code
 

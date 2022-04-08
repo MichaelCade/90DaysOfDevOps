@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - The Big Picture: DevOps & The Cloud - Day 28"
+title: '#90DaysOfDevOps - The Big Picture: DevOps & The Cloud - Day 28'
 published: false
-description: "90DaysOfDevOps - The Big Picture DevOps & The Cloud"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - The Big Picture DevOps & The Cloud
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048737
 ---
 ## The Big Picture: DevOps & The Cloud
 

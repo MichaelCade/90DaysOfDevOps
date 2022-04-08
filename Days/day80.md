@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - ELK Stack - Day 80"
+title: '#90DaysOfDevOps - ELK Stack - Day 80'
 published: false
-description: "90DaysOfDevOps - ELK Stack"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - ELK Stack
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048746
 ---
 ## ELK Stack  
 
