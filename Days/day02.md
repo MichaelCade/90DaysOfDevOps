@@ -6,7 +6,7 @@ tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048699
- ---
+---
 ## Responsibilities of a DevOps Engineer 
 
 Hopefully you are coming into this off the back of going through the resources and post on [Day1 of #90DaysOfDevOps](day01.md) 
