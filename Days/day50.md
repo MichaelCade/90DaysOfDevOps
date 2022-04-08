@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Choosing your Kubernetes platform - Day 50"
+title: '#90DaysOfDevOps - Choosing your Kubernetes platform - Day 50'
 published: false
-description: "90DaysOfDevOps - Choosing your Kubernetes platform"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Choosing your Kubernetes platform
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1049046
 ---
 ## Choosing your Kubernetes platform 
 
