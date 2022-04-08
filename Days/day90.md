@@ -1,5 +1,5 @@
 ---
-title: '#90DaysOfDevOps - Data & Application Mobility - Day 90"
+title: '#90DaysOfDevOps - Data & Application Mobility - Day 90'
 published: false
 description: "90DaysOfDevOps - Data & Application Mobility"
 tags: "devops, 90daysofdevops, learning"
