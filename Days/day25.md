@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Python for Network Automation - Day 25"
+title: '#90DaysOfDevOps - Python for Network Automation - Day 25'
 published: false
-description: "90DaysOfDevOps - Python for Network Automation"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Python for Network Automation
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1049038
 ---
 ## Python for Network Automation 
 
