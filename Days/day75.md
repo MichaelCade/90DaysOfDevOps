@@ -6,8 +6,6 @@ tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 ---
-
-
 ## GitHub Actions Overview
 
 In this section I wanted to move on and take a look at maybe a different approach to what we just spent time on. GitHub Actions is where we will focus on in this session. 
@@ -118,7 +116,7 @@ You can see from the above that for one of our steps we have an action called gi
 
 Also in the code snippet above it mentions GITHUB_TOKEN so I was interested to find out why and what this does and needed for. 
 
-"NOTE: If you pass the Environment variable GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} in your workflow, then the GitHub Super-Linter will mark the status of each individual linter run in the Checks section of a pull request. Without this you will only see the overall status of the full run. **There is no need to set the GitHub Secret as it is automatically set by GitHub, it only needs to be passed to the action.**" 
+"NOTE: If you pass the Environment variable `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}` in your workflow, then the GitHub Super-Linter will mark the status of each individual linter run in the Checks section of a pull request. Without this you will only see the overall status of the full run. **There is no need to set the GitHub Secret as it is automatically set by GitHub, it only needs to be passed to the action.**" 
 
 The bold text being important to note at this stage. We are using it but we do not need to set any environment variable within our repository. 
 
