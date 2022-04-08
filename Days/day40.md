@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Social Network for code - Day 40"
+title: '#90DaysOfDevOps - Social Network for code - Day 40'
 published: false
-description: "90DaysOfDevOps - Social Network for code"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Social Network for code
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1049044
 ---
 ## Social Network for code
 Exploring GitHub | GitLab | BitBucket 
