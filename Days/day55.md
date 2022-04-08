@@ -210,8 +210,6 @@ Then if we run `kubectl get ingress -n pacman`
 
 I am then told because we are using minikube running on WSL2 in Windows we have to create the minikube tunnel using `minikube tunnel --profile=mc-demo` 
 
-![](Images/Day55_Kubernetes17.png)
-
 But I am still not able to gain access to 192.168.49.2 and play my pacman game. 
 
 If anyone has or can get this working on Windows and WSL I would appreciate the feedback. I will raise an issue on the repository for this and come back to it once I have time and a fix. 
