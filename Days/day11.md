@@ -1,10 +1,11 @@
 ---
-title: "#90DaysOfDevOps - Variables & Constants in Go - Day 11"
+title: '#90DaysOfDevOps - Variables & Constants in Go - Day 11'
 published: false
-description: "90DaysOfDevOps - Variables & Constants in Go"
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - Variables & Constants in Go
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
+id: 1048862
 ---
 
 Before we get into the topics for today I want to give a massive shout out to [Techworld with Nana](https://www.youtube.com/watch?v=yyUHQIec83I) and this fantastic concise journey through the fundamentals of Go. 
