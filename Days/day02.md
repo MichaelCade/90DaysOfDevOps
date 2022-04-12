@@ -43,7 +43,7 @@ We have been talking about servers but the likelihood is that your application w
 
 ## High Level Overview
 
-On one side we have our developers creating new features and functionality (as well as bug fixes) for the application on one side. 
+On one side we have our developers creating new features and functionality (as well as bug fixes) for the application. 
 
 On the other side we have some sort of environment, infrastructure or servers which are configured and managed to run this application and communitcate with all its required services. 
 
