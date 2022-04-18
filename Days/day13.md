@@ -50,7 +50,7 @@ Remember the code we are starting within our application as well [day13_example1
 
 We now need to think about the code to get our output or message to Twitter in the form of a tweet. We are going to be using [go-twitter](https://github.com/dghubble/go-twitter) This is a Go client library for the Twitter API. 
 
-To test this before putting this into our main application, I created a new directory in our `src` folder called go-twitter-bot, issued the `go mod init github.com/michaelcade/go-twitter-bot on the folder which then created a `go.mod` file and then we can start writing our new main.go and test this out. 
+To test this before putting this into our main application, I created a new directory in our `src` folder called go-twitter-bot, issued the `go mod init github.com/michaelcade/go-twitter-bot` on the folder which then created a `go.mod` file and then we can start writing our new main.go and test this out. 
 
 We now need those keys, tokens and secrets we gathered from the Twitter developer portal. We are going to set these in our environment variables. This will depend on the OS you are running: 
 
