@@ -155,19 +155,20 @@ Day-20
 - https://www.youtube.com/watch?v=VbEx7B_PTOE  Linux for hackers (don't worry you don't need to be a hacker!)
 
 Day-21
+- https://www.youtube.com/watch?v=IPvYjXCsTg8  Computer Networking full course
 
 Day-22
 - https://www.youtube.com/watch?v=IPvYjXCsTg8  Computer Networking full course
-http://www.practicalnetworking.net/  Practical Networking
+- http://www.practicalnetworking.net/  Practical Networking
 
 Day-23
 - https://www.youtube.com/watch?v=IPvYjXCsTg8  Computer Networking full course
-http://www.practicalnetworking.net/  Practical Networking
+- http://www.practicalnetworking.net/  Practical Networking
 
 Day-24
 - https://www.youtube.com/watch?v=KhiJ7Fu9kKA&amp;list=WL&amp;index=122&amp;t=89s  3 Necessary Skills for Network Automation
 - https://www.youtube.com/watch?v=IPvYjXCsTg8  Computer Networking full course
-http://www.practicalnetworking.net/  Practical Networking
+- http://www.practicalnetworking.net/  Practical Networking
 - https://www.youtube.com/watch?v=xKPzLplPECU&amp;list=WL&amp;index=126  Python Network Automation
 
 Day-25
@@ -178,7 +179,7 @@ Day-25
 - https://www.youtube.com/watch?v=9dPWARirtK8  EVE-NG - Creating your first lab
 - https://www.youtube.com/watch?v=KhiJ7Fu9kKA&amp;list=WL&amp;index=122&amp;t=89s  3 Necessary Skills for Network Automation
 - https://www.youtube.com/watch?v=IPvYjXCsTg8  Computer Networking full course
-http://www.practicalnetworking.net/  Practical Networking
+- http://www.practicalnetworking.net/  Practical Networking
 - https://www.youtube.com/watch?v=xKPzLplPECU&amp;list=WL&amp;index=126  Python Network Automation
 
 Day-26
@@ -186,7 +187,7 @@ Day-26
 - https://www.youtube.com/watch?v=9dPWARirtK8  EVE-NG - Creating your first lab
 - https://www.youtube.com/watch?v=KhiJ7Fu9kKA&amp;list=WL&amp;index=122&amp;t=89s  3 Necessary Skills for Network Automation
 - https://www.youtube.com/watch?v=IPvYjXCsTg8  Computer Networking full course
-http://www.practicalnetworking.net/  Practical Networking
+- http://www.practicalnetworking.net/  Practical Networking
 - https://www.youtube.com/watch?v=xKPzLplPECU&amp;list=WL&amp;index=126  Python Network Automation
 - https://www.packtpub.com/product/hands-on-enterprise-automation-with-python/9781788998512  Hands-On Enterprise Automation with Python (Book)
 
@@ -195,7 +196,7 @@ Day-27
 - https://www.youtube.com/watch?v=9dPWARirtK8  EVE-NG - Creating your first lab
 - https://www.youtube.com/watch?v=KhiJ7Fu9kKA&amp;list=WL&amp;index=122&amp;t=89s  3 Necessary Skills for Network Automation
 - https://www.youtube.com/watch?v=IPvYjXCsTg8  Computer Networking full course
-http://www.practicalnetworking.net/  Practical Networking
+- http://www.practicalnetworking.net/  Practical Networking
 - https://www.youtube.com/watch?v=xKPzLplPECU&amp;list=WL&amp;index=126  Python Network Automation
 - https://www.packtpub.com/product/hands-on-enterprise-automation-with-python/9781788998512  Hands-On Enterprise Automation with Python (Book)
 
