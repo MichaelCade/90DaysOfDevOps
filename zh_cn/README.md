@@ -5,90 +5,90 @@
 </p>
 
 
-This repository is used to document my journey on getting a better foundational knowledge of DevOps. I will be starting this journey on the 1st January 2022 but the idea is that we take 90 days which just so happens to be January 1st to March 31st. 
+这个仓库是用来记录我在深入理解 DevOps 基础知识的过程的。我会在2022年1月1日开始我的旅程，我打算一共花90天，恰好这个时间就是1月1日到3月31日。
 
-The reason for documenting these days is so that others can take something from it and also hopefully enhance the resources. 
+我记录下这些过程是希望其他人能够从中获益，也希望能够丰富相关的资源。 
 
-The goal is to take 90 days, 1 hour a day, to tackle over 13 areas of DevOps to a foundational knowledge. 
+我的目标是在90天的时间内，每天花费一个小时，去攻克 DevOps 13个方面的基础知识。 
 
-This will not cover all things DevOps but it will cover the areas that I feel will benefit my learning and understanding overall. 
+这个过程不会覆盖到有关 DevOps 的所有知识，但它会介绍我认为会有益于我的学习和理解的方面。
 
 ## 目录
 > 🔍 - 正在翻译
 
-- [🔍] ♾️ 1 > [Introduction](zh_cn/Days/day01.md)
+- [🔍] ♾️ 1 > [简介](zh_cn/Days/day01.md)
 
-### What is and why do we use DevOps
+### 什么是 DevOps 以及为什么我们需要 DevOps
 
-- [🔍] ♾️ 2 > [Responsibilities of a DevOps Engineer](Days/day02.md)
-- [🔍] ♾️ 3 > [DevOps Lifecycle - Application Focused](Days/day03.md)
-- [🔍] ♾️ 4 > [DevOps & Agile](Days/day04.md)
-- [🔍] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)
-- [🔍] ♾️ 6 > [DevOps - The real stories](Days/day06.md)
+- [🔍] ♾️ 2 > [DevOps 工程师的职责](Days/day02.md)
+- [🔍] ♾️ 3 > [DevOps 生命周期 - 从应用的角度](Days/day03.md)
+- [🔍] ♾️ 4 > [DevOps 与敏捷](Days/day04.md)
+- [🔍] ♾️ 5 > [计划 > 编码 > 构建 > 测试 > 发布 > 部署 > 操作 > 监控 >](Days/day05.md)
+- [🔍] ♾️ 6 > [DevOps - 真实经历](Days/day06.md)
 
-### Learning a Programming Language
+### 学习一门编程语言
 
-- [🔍] ⌨️ 7 > [The Big Picture: DevOps & Learning a Programming Language](Days/day07.md)
-- [🔍] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day08.md)
-- [🔍] ⌨️ 9 > [Let's explain the Hello World code](Days/day09.md)
-- [🔍] ⌨️ 10 > [The Go Workspace & Compiling & running code](Days/day10.md)
-- [🔍] ⌨️ 11 > [Variables, Constants & Data Types](Days/day11.md)
-- [🔍] ⌨️ 12 > [Getting user input with Pointers and a finished program](Days/day12.md)
-- [🔍] ⌨️ 13 > [Tweet your progress with our new App](Days/day13.md)
+- [🔍] ⌨️ 7 > [概述：DevOps 与学习一门编程语言](Days/day07.md)
+- [🔍] ⌨️ 8 > [配置 Go 语言的 DevOps 环境 & Hello World](Days/day08.md)
+- [🔍] ⌨️ 9 > [解释 Hello World 代码](Days/day09.md)
+- [🔍] ⌨️ 10 > [Go 工作空间及编译运行](Days/day10.md)
+- [🔍] ⌨️ 11 > [变量、常量和数据类型](Days/day11.md)
+- [🔍] ⌨️ 12 > [从指针获取用户输入及一个完整的程序](Days/day12.md)
+- [🔍] ⌨️ 13 > [使用我们的新App发送一条推特](Days/day13.md)
 
-### Knowing Linux Basics
+### 学习 Linux 基础
 
-- [🔍] 🐧 14 > [The Big Picture: DevOps and Linux](Days/day14.md)
-- [🔍] 🐧 15 > [Linux Commands for DevOps (Actually everyone)](Days/day15.md)
-- [🔍] 🐧 16 > [Managing your Linux System, Filesystem & Storage](Days/day16.md)
-- [🔍] 🐧 17 > [Text Editors - nano vs vim](Days/day17.md)
-- [🔍] 🐧 18 > [SSH & Web Server(LAMP)](Days/day18.md)
-- [🔍] 🐧 19 > [Automate tasks with bash scripts](Days/day19.md)
-- [🔍] 🐧 20 > [Dev workstation setup - All the pretty things](Days/day20.md)
+- [🔍] 🐧 14 > [概览： DevOps 与 Linux](Days/day14.md)
+- [🔍] 🐧 15 > [DevOps 中的Linux命令 (通用)](Days/day15.md)
+- [🔍] 🐧 16 > [管理你的 Linux 系统, 文件系统及存储](Days/day16.md)
+- [🔍] 🐧 17 > [文本编辑器 - nano vs vim](Days/day17.md)
+- [🔍] 🐧 18 > [SSH & Web 服务器(LAMP)](Days/day18.md)
+- [🔍] 🐧 19 > [使用bash脚本自动化任务](Days/day19.md)
+- [🔍] 🐧 20 > [开发环境配置 - All the pretty things](Days/day20.md)
 
-### Understand Networking
+### 理解计算机网络
 
-- [🔍] 🌐 21 > [The Big Picture: DevOps and Networking](Days/day21.md)
-- [🔍] 🌐 22 > [The OSI Model - The 7 Layers](Days/day22.md)
-- [🔍] 🌐 23 > [Network Protocols](Days/day23.md)
-- [🔍] 🌐 24 > [Network Automation](Days/day24.md)
-- [🔍] 🌐 25 > [Python for Network Automation](Days/day25.md)
-- [🔍] 🌐 26 > [Building our Lab](Days/day26.md)
-- [🔍] 🌐 27 > [Getting Hands-On with Python & Network](Days/day27.md)
+- [🔍] 🌐 21 > [概述：DevOps 与计算机网络](Days/day21.md)
+- [🔍] 🌐 22 > [OSI 7层模型](Days/day22.md)
+- [🔍] 🌐 23 > [网络协议](Days/day23.md)
+- [🔍] 🌐 24 > [网络自动化](Days/day24.md)
+- [🔍] 🌐 25 > [使用 Python 进行网络自动化](Days/day25.md)
+- [🔍] 🌐 26 > [搭建实验环境](Days/day26.md)
+- [🔍] 🌐 27 > [实验 Python 和 计算机网络](Days/day27.md)
 
-### Stick to one Cloud Provider
+### 选择一个云服务商
 
-- [🔍] ☁️ 28 > [The Big Picture: DevOps & The Cloud](Days/day28.md)
-- [🔍] ☁️ 29 > [Microsoft Azure Fundamentals](Days/day29.md)
-- [🔍] ☁️ 30 > [Microsoft Azure Security Models](Days/day30.md)
-- [🔍] ☁️ 31 > [Microsoft Azure Compute Models](Days/day31.md)
-- [🔍] ☁️ 32 > [Microsoft Azure Storage & Database Models](Days/day32.md)
+- [🔍] ☁️ 28 > [概述： DevOps 与云服务](Days/day28.md)
+- [🔍] ☁️ 29 > [Microsoft Azure 基础](Days/day29.md)
+- [🔍] ☁️ 30 > [Microsoft Azure 安全模型](Days/day30.md)
+- [🔍] ☁️ 31 > [Microsoft Azure 计算模型](Days/day31.md)
+- [🔍] ☁️ 32 > [Microsoft Azure 存储和数据库模型](Days/day32.md)
 - [🔍] ☁️ 33 > [Microsoft Azure Networking Models + Azure Management](Days/day33.md)
 - [🔍] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](Days/day34.md)
 
-### Use Git Effectively
+### 高效地使用 Git
 
-- [🔍] 📚 35 > [The Big Picture: Git - Version Control](Days/day35.md)
-- [🔍] 📚 36 > [Installing & Configuring Git](Days/day36.md)
-- [🔍] 📚 37 > [Gitting to know Git](Days/day37.md)
-- [🔍] 📚 38 > [Staging & Changing](Days/day38.md)
+- [🔍] 📚 35 > [概述： Git - 版本控制](Days/day35.md)
+- [🔍] 📚 36 > [安装和配置 Git](Days/day36.md)
+- [🔍] 📚 37 > [了解 Git](Days/day37.md)
+- [🔍] 📚 38 > [暂存与变更](Days/day38.md)
 - [🔍] 📚 39 > [Viewing, unstaging, discarding & restoring](Days/day39.md)
-- [🔍] 📚 40 > [Social Network for code](Days/day40.md)
-- [🔍] 📚 41 > [The Open Source Workflow](Days/day41.md)
+- [🔍] 📚 40 > [代码的社交网络](Days/day40.md)
+- [🔍] 📚 41 > [开源工作流](Days/day41.md)
 
-### Containers 
+### 容器
 
-- [🔍] 🏗️ 42 > [The Big Picture: Containers](Days/day42.md)
-- [🔍] 🏗️ 43 > [What is Docker & Getting installed](Days/day43.md)
-- [🔍] 🏗️ 44 > [Docker Images & Hands-On with Docker Desktop](Days/day44.md)
-- [🔍] 🏗️ 45 > [The anatomy of a Docker Image](Days/day45.md)
+- [🔍] 🏗️ 42 > [概览： 容器](Days/day42.md)
+- [🔍] 🏗️ 43 > [Docker 简介及安装](Days/day43.md)
+- [🔍] 🏗️ 44 > [Docker 镜像及 Docker Desktop 体验](Days/day44.md)
+- [🔍] 🏗️ 45 > [Docker 镜像详解](Days/day45.md)
 - [🔍] 🏗️ 46 > [Docker Compose](Days/day46.md)
-- [🔍] 🏗️ 47 > [Docker Networking & Security](Days/day47.md)
-- [🔍] 🏗️ 48 > [Alternatives to Docker](Days/day48.md)
+- [🔍] 🏗️ 47 > [Docker 网络与安全](Days/day47.md)
+- [🔍] 🏗️ 48 > [Docker 替代](Days/day48.md)
 
 ### Kubernetes
 
-- [🔍] ☸ 49 > [The Big Picture: Kubernetes](Days/day49.md)
+- [🔍] ☸ 49 > [概览： Kubernetes](Days/day49.md)
 - [🔍] ☸ 50 > [Choosing your Kubernetes platform ](Days/day50.md)
 - [🔍] ☸ 51 > [Deploying your first Kubernetes Cluster](Days/day51.md)
 - [🔍] ☸ 52 > [Setting up a multinode Kubernetes Cluster](Days/day52.md)
@@ -96,7 +96,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [🔍] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
 - [🔍] ☸ 55 > [State and Ingress in Kubernetes](Days/day55.md)
 
-### Learn Infrastructure as Code
+### 学习代码作为基础设施（ Infrastructure as Code ）
 
 - [🔍] 🤖 56 > [The Big Picture: IaC](Days/day56.md)
 - [🔍] 🤖 57 > [An intro to Terraform ](Days/day57.md)
@@ -106,7 +106,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [🔍] 🤖 61 > [Kubernetes & Multiple Environments](Days/day61.md)
 - [🔍] 🤖 62 > [Testing, Tools & Alternatives](Days/day62.md)
 
-### Automate Configuration Management
+### 自动化配置管理
 
 - [🔍] 📜 63 > [The Big Picture: Configuration Management](Days/day63.md)
 - [🔍] 📜 64 > [Ansible: Getting Started](Days/day64.md)
@@ -116,7 +116,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [🔍] 📜 68 > [Tags, Variables, Inventory & Database Server config](Days/day68.md)
 - [🔍] 📜 69 > [All other things Ansible - Automation Controller, AWX, Vault](Days/day69.md)
 
-### Create CI/CD Pipelines 
+### 创建 CI/CD 流程 
 
 - [🔍] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
 - [🔍] 🔄 71 > [What is Jenkins?](Days/day71.md)
@@ -126,7 +126,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [🔍] 🔄 75 > [GitHub Actions Overview](Days/day75.md)
 - [🔍] 🔄 76 > [ArgoCD Overview](Days/day76.md)
 
-### Monitoring, Log Management, and Data Visualisation
+### 监控，日志管理及数据可视化
 
 - [🔍] 📈 77 > [The Big Picture: Monitoring](Days/day77.md)
 - [🔍] 📈 78 > [Hands-On Monitoring Tools](Days/day78.md)
@@ -136,7 +136,7 @@ This will not cover all things DevOps but it will cover the areas that I feel wi
 - [🔍] 📈 82 > [EFK Stack](Days/day82.md)
 - [🔍] 📈 83 > [Data Visualisation - Grafana](Days/day83.md)
 
-### Store & Protect Your Data
+### 存储和保护你的数据
 
 - [🔍] 🗃️ 84 > [The Big Picture: Data Management](Days/day84.md)
 - [🔍] 🗃️ 85 > [Data Services](Days/day85.md)

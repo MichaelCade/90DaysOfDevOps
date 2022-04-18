@@ -7,7 +7,7 @@ cover_image: null
 canonical_url: null
 id: 1048731
 ---
-## Introduction - Day 1 
+## 简介 - Day 1 
 
 Day 1 of our 90 days and adventure to learn a good foundational understanding of DevOps and tools that help with a DevOps mindset. 
 
@@ -17,7 +17,7 @@ Fast forward to March 2021, I was given an amazing opportunity to concentrate my
 
 [So you want to learn DevOps?](https://blog.kasten.io/devops-learning-curve)
 
-## Let the journey begin
+## 开始我们的旅程吧
 
 If you read the above blog you will see this is a high level contents for my learning journey and I will say at this point I am no where near an expert in any of these sections but what I wanted to do was share some resources both FREE and some paid for but an option for both as we all have different circumstances. 
 
@@ -31,7 +31,7 @@ Another resource I will share at this point that I think everyone should have a 
 
 I found this a great resource when I was creating my initial list and blog post on this topic. You can also see there are other areas that go into a lot more detail outside of the 12 topics I have listed here in this repository. 
 
-## First Steps - What is DevOps? 
+## 第一步 - 什么是 DevOps? 
 
 There are so many blog articles and YouTube videos to list here, but as we start the 90 day challenge and we focus on spending around an hour a day learning something new or about DevOps I thought it was good to get some of the high level of "what DevOps is" down to begin. 
 
