@@ -1,7 +1,7 @@
 # 90DaysOfDevOps 中文版本
 
 <p align="center">
-  <img src="https://github.com/MichaelCade/90DaysOfDevOps/blob/main/logo.png?raw=true" alt="90DaysOfDevOps Logo"/>
+  <img src="https://github.com/MichaelCade/90DaysOfDevOps/blob/main/logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
 
