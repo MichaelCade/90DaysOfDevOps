@@ -61,3 +61,5 @@ My advice is to watch all of the below and hopefully you have also picked someth
 - [DevOps roadmap 2022 | Success Roadmap 2022](https://www.youtube.com/watch?v=7l_n97Mt0ko)
 
 If you made it this far, then you will know if this is where you want to be or not. See you on [Day 2](day02.md).  
+
+I have been able to complete Day 1.. Looking forward to day 2.
