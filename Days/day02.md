@@ -46,7 +46,7 @@ We have been talking about servers but the likelihood is that your application w
 
 On one side we have our developers creating new features and functionality (as well as bug fixes) for the application. 
 
-On the other side we have some sort of environment, infrastructure or servers which are configured and managed to run this application and communitcate with all its required services. 
+On the other side we have some sort of environment, infrastructure or servers which are configured and managed to run this application and communicate with all its required services. 
 
 The big question is how do we get those features and bug fixes into our production and make it available to those end users? 
 
