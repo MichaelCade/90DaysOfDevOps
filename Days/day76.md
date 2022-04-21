@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - ArgoCD Overview - Day 76'
 published: false
 description: 90DaysOfDevOps - ArgoCD Overview
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048809
