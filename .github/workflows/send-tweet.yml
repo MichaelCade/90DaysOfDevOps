@@ -1,0 +1,13 @@
+name: Send a Tweet
+on: [push]
+jobs:
+  tweet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: ethomson/send-tweet-action@v1
+        with:
+          status: "👋 Hey Everyone!. This is an automated message 🤖 to let you know that there has been an update on the #90DaysOfDevOps repository, You can check it out https://github.com/MichaelCade/90DaysOfDevOps"
+          consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
+          consumer-secret: ${{ secrets.TWITTER_CONSUMER_API_SECRET }}
+          access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
