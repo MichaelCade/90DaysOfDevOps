@@ -96,16 +96,16 @@
 - [✔️] ☸ 50 > [選擇你的 Kubernetes 平台 ](Days/day50.md)
 - [✔️] ☸ 51 > [部署第一個 Kubernetes 叢集](Days/day51.md)
 - [✔️] ☸ 52 > [設置多節點 Kubernetes 叢集](Days/day52.md)
-- [✔️] ☸ 53 > [Rancher Overview - Hands On](Days/day53.md)
-- [✔️] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
+- [✔️] ☸ 53 > [Rancher 概述 - Hands On](Days/day53.md)
+- [✔️] ☸ 54 > [如何部署應用程式至 Kubernetes](Days/day54.md)
 - [✔️] ☸ 55 > [State and Ingress in Kubernetes](Days/day55.md)
 
 ### 學習基礎架構即程式碼(Infrastructure as Code)
 
-- [✔️] 🤖 56 > [概述: Infrastructure as Code(IaC)](Days/day56.md)
-- [✔️] 🤖 57 > [An intro to Terraform ](Days/day57.md)
-- [✔️] 🤖 58 > [HashiCorp Configuration Language (HCL)](Days/day58.md)
-- [✔️] 🤖 59 > [Create a VM with Terraform & Variables](Days/day59.md)
+- [✔️] 🤖 56 > [概述: 學習基礎架構即程式碼(IaC)](Days/day56.md)
+- [✔️] 🤖 57 > [Terraform 簡介](Days/day57.md)
+- [✔️] 🤖 58 > [HashiCorp Configuration Language 配置語言簡介 (HCL)](Days/day58.md)
+- [✔️] 🤖 59 > [使用 Terraform 在 VirtualBox 創建 VM & 變數](Days/day59.md)
 - [✔️] 🤖 60 > [Docker Containers, Provisioners & Modules](Days/day60.md)
 - [✔️] 🤖 61 > [Kubernetes & Multiple Environments](Days/day61.md)
 - [✔️] 🤖 62 > [Testing, Tools & Alternatives](Days/day62.md)
@@ -122,8 +122,8 @@
 
 ### 創建 CI/CD Pipelines 
 
-- [✔️] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
-- [✔️] 🔄 71 > [What is Jenkins?](Days/day71.md)
+- [✔️] 🔄 70 > [概述: CI/CD Pipelines](Days/day70.md)
+- [✔️] 🔄 71 > [什麼是 Jenkins?](Days/day71.md)
 - [✔️] 🔄 72 > [Getting hands on with Jenkins](Days/day72.md)
 - [✔️] 🔄 73 > [Building a Jenkins pipeline](Days/day73.md)
 - [✔️] 🔄 74 > [Hello World - Jenkinsfile App Pipeline](Days/day74.md)
@@ -132,22 +132,22 @@
 
 ### 監控, 日誌管理和資料可視化
 
-- [✔️] 📈 77 > [The Big Picture: Monitoring](Days/day77.md)
+- [✔️] 📈 77 > [概述: Monitoring](Days/day77.md)
 - [✔️] 📈 78 > [Hands-On Monitoring Tools](Days/day78.md)
-- [✔️] 📈 79 > [The Big Picture: Log Management](Days/day79.md)
+- [✔️] 📈 79 > [概述: 日誌管理系統](Days/day79.md)
 - [✔️] 📈 80 > [ELK Stack](Days/day80.md)
 - [✔️] 📈 81 > [Fluentd & FluentBit](Days/day81.md)
 - [✔️] 📈 82 > [EFK Stack](Days/day82.md)
-- [✔️] 📈 83 > [Data Visualisation - Grafana](Days/day83.md)
+- [✔️] 📈 83 > [資料視覺化 - Grafana](Days/day83.md)
 
 ### 儲存並保護你的資料
 
-- [✔️] 🗃️ 84 > [The Big Picture: Data Management](Days/day84.md)
-- [✔️] 🗃️ 85 > [Data Services](Days/day85.md)
-- [✔️] 🗃️ 86 > [Backup all the platforms](Days/day86.md)
+- [✔️] 🗃️ 84 > [概述: Data Management](Days/day84.md)
+- [✔️] 🗃️ 85 > [認識資料庫系統](Days/day85.md)
+- [✔️] 🗃️ 86 > [備份所有平台](Days/day86.md)
 - [✔️] 🗃️ 87 > [Hands-On Backup & Recovery](Days/day87.md)
 - [✔️] 🗃️ 88 > [Application Focused Backups](Days/day88.md)
-- [✔️] 🗃️ 89 > [Disaster Recovery](Days/day89.md)
+- [✔️] 🗃️ 89 > [災難復原](Days/day89.md)
 - [✔️] 🗃️ 90 > [Data & Application Mobility](Days/day90.md)
 
 ## License
