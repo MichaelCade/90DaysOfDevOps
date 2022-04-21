@@ -1,0 +1,30 @@
+- name: Create my.cnf configuration file
+  template: src=templates/my.cnf.j2 dest=/etc/mysql/conf.d/mysql.cnf
+  notify: restart mysql
+
+- name: Create database user with name 'devops' and password 'DevOps90' with all database privileges
+  community.mysql.mysql_user:
+    login_unix_socket: /var/run/mysqld/mysqld.sock
+    login_user: "{{ mysql_user_name }}" 
+    login_password: "{{ mysql_user_password }}" 
+    name: "{{db_user}}"
+    password: "{{db_pass}}"
+    priv: '*.*:ALL,GRANT'
+    host: '%'
+    state: present
+
+- name: Create a new database with name '90daysofdevops'
+  mysql_db:
+    login_user: "{{ db_user }}" 
+    login_password: "{{ db_pass }}"     
+    name: "{{ db_name }}"
+    state: present
+
+- name: Enable remote login to mysql
+  lineinfile:
+    path: /etc/mysql/mysql.conf.d/mysqld.cnf
+    regexp: '^bind-address'
+    line: 'bind-address = 0.0.0.0'
+    backup: yes
+  notify:
+      - Restart mysql
