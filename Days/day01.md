@@ -1,6 +1,6 @@
 ---
 title: '#90DaysOfDevOps - Introduction - Day 1'
-published: false
+published: true
 description: 90DaysOfDevOps - Introduction
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
