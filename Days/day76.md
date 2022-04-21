@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - ArgoCD Overview - Day 76'
 published: false
 description: 90DaysOfDevOps - ArgoCD Overview
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048809
@@ -79,4 +79,4 @@ The next section we move into is around Observability, another concept or area t
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 76](day76.md)
+See you on [Day 77](day77.md)
