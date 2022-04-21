@@ -1,0 +1,17 @@
+- hosts: webservers
+  become: yes
+  vars:
+    http_port: 8000
+    https_port: 4443
+    html_welcome_msg: "Hello 90DaysOfDevOps - Welcome to Day 66!"
+  roles:
+    - common
+    - apache2
+  tags: web
+
+- hosts: proxy 
+  become: yes
+  roles: 
+    - common
+    - nginx
+  tags: proxy
