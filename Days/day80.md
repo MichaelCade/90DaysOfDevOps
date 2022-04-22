@@ -34,7 +34,7 @@ On top of the above mentioned components you might also see Beats which are ligh
 
 - Kibana uses Elasticsearch DB to Explore, Visualize, and Share
 
-![](https://www.guru99.com/images/tensorflow/082918_1504_ELKStackTut1.png)
+![](Images/Day80_Monitoring8.png)
 
 [Picture taken from Guru99](https://www.guru99.com/elk-stack-tutorial.html)
 
