@@ -38,3 +38,5 @@ When you have the converted file we will want to add
 
 ### Resources 
 - [Casey Watts - Self Publishing](https://gist.github.com/caseywatts/3d8150fe04e0d8462cfc4d51b9856d39#:~:text=Markdown%20to%20eBook,the%20kindlegen%20command%20line%20command.)
+- [Kindle Direct Publishing](https://kdp.amazon.com/en_US/)
+- [LeanPub](https://leanpub.com/create/book)
