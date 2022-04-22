@@ -7,19 +7,19 @@ cover_image: null
 canonical_url: null
 id: 1049041
 ---
-## The Big Picture: Git - Version Control
+## 概述: Git - 版本控制
 
-Before we get into git, we need to understand what version control is and why? In this opener for Git, we will take a look at what version control is, the basics of git.  
+在開始 Git 工具之前, 我們需要瞭解什麼是版本控制? 為什麼要使用它? 作為 Git 教學的開端, 我們會粗略帶過何謂版本控制和 Git 基礎概念.  
 
-### What is Version Control? 
+### 甚麼是版本控制? 
 
-Git is not the only version control system so here we want to cover what options and what methodologies are available around version control. 
+由於 Git 並不是唯一的版本控制工具，所以在這裡將會涵蓋版本控制有哪些選項和使用方法. 
 
-The most obvious and a big benefit of Version Control is the ability to track a project's history. We can look back over this repository using `git log` and see that we have many commits and many comments and what has happened so far in the project. Don't worry we will get into the commands later. Now think if this was an actual software project full of source code and multiple people are committing to our software at different times, different authors and then reviewers all are logged here so that we know what has happened, when, by whom and who reviewed. 
+版本控制最明顯且重要的功能是可以追蹤專案的歷史. 我們可以利用`git log` 指令回顧倉儲內,過去專案提交的紀錄和註解. 無須擔心,稍後就會說明要如何下指令. 讓我們想想, 如果這是實際的軟體專案, 有著滿滿的原始碼,許多開發者在不同的時間點提交軟體, 不同的作者和審稿人在這裡做紀錄, 我們得以知道發生了什麼事, 何時發生, 又是誰在審稿. 
 
 ![](Images/Day35_Git1.png)
 
-Version Control before it was cool, would have been something like manually creating a copy of your version before you made changes. It might be that you also comment out old useless code with the just in case mentality. 
+版本控制很炫, 就像是你在更動程式碼前手動複製一份檔案一樣. 你可能會為了以防萬一, 註解掉無用的舊程式碼, 而你隨時可以還原. 
 
 ![](Images/Day35_Git2.png)
 
@@ -75,11 +75,11 @@ Then we want to go ahead and commit our files, we do this with the `git commit -
 
 ![](Images/Day35_Git8.png)
 
-We can now see what has happened within the history of the project. Using the `git log` command.
+現在我們可以透過 `git log` 指令, 知道專案的歷史和發生何事.
 
 ![](Images/Day35_Git9.png)
 
-We can also check the status of our repository by using `git status` this shows we have nothing to commit and we can add a new file called samplecode.ps1. If we then run the same `git status you will see that we file to be committed. 
+我們還能透過 `git status` 指令來檢查倉儲的狀態, 如下圖的前三行, 這表示我們還沒有提交檔案. 如果我們添加一個新檔 samplecode.ps1 , 再次輸入 `git status` 的時候, 會看到我們準備要提交的文件. 
 
 ![](Images/Day35_Git10.png)
 
@@ -115,20 +115,18 @@ But then equally we will want to move forward as well and we can do this the sam
 
 ![](Images/Day35_Git18.png)
 
-The TLDR; 
+摘要 (TLDR) 
 
-- Tracking a projects history
-- Managing multiple versions of a project
-- Sharing code amongst developers and a wider scope of teams and tools
-- Coordinating teamwork
-- Oh and there is some time travel! 
-
-
-This might have seemed a jump around but hopefully, you can see without really knowing the commands used the powers and the big picture behind Version Control. 
-
-Next up we will be getting git installed and set up on your local machine and diving a little deeper into some other use cases and commands that we can achieve in Git. 
+- 追蹤專案的歷史
+- 管理一個專案內不同版本的程式碼
+- 在開發人員在開發人員和更廣泛的團隊和工具之間共享程式碼
+- 協調團隊合作
+- 哦，還有一些做時間旅行! 
 
 
+這個章節的內容似乎跳的有些快, 希望在尚未解說 Git 指令的強大之前, 你能對版本控制的功能有大致上的了解. 
+
+下一章,我們將會在你的電腦安裝和設置 Git ,並且更深入的解說 Git 的命令和使用案例, 以及 Git 能做到什麼.
 
 ## Resources 
 
@@ -139,5 +137,5 @@ Next up we will be getting git installed and set up on your local machine and di
 - [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk&t=8s) 
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 
-See you on [Day 36](day36.md) 
+See you on [第 36 天](day36.md) 
 
