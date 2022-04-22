@@ -9,43 +9,43 @@ id: 1049041
 ---
 ## 概述: Git - 版本控制
 
-在開始 Git 工具之前, 我們需要瞭解什麼是版本控制? 為什麼要使用它? 作為 Git 教學的開端, 我們會粗略帶過何謂版本控制和 Git 基礎概念.  
+在開始 Git 工具之前, 我們需要瞭解什麼是版本控制,還有為什麼要使用它. 作為 Git 教學的開端, 我們會稍微帶過何謂版本控制以及 Git 基礎概念.  
 
 ### 甚麼是版本控制? 
 
-由於 Git 並不是唯一的版本控制工具，所以在這裡將會涵蓋版本控制有哪些選項和使用方法. 
+由於 Git 並不是唯一的版本控制工具，所以這一節將會涵蓋版本控制有哪些選項和使用方法. 
 
-版本控制最明顯且重要的功能是可以追蹤專案的歷史. 我們可以利用`git log` 指令回顧倉儲內,過去專案提交的紀錄和註解. 無須擔心,稍後就會說明要如何下指令. 讓我們想想, 如果這是實際的軟體專案, 有著滿滿的原始碼,許多開發者在不同的時間點提交軟體, 不同的作者和審稿人在這裡做紀錄, 我們得以知道發生了什麼事, 何時發生, 又是誰在審稿. 
+版本控制最明顯且重要的功能是可以追蹤專案的歷史. 我們可以利用`git log` 指令回顧儲存庫(repository)內,過去專案提交的紀錄和註解. 讓我們想想, 如果這是實際的軟體專案, 有滿滿的原始碼, 而且許多開發者在不同的時間點提交軟體, 不同的作者和審稿人在這裡做紀錄, 有了歷史追蹤, 我們得以知道發生了什麼事, 何時發生, 又是誰在審稿. 
 
 ![](Images/Day35_Git1.png)
 
-版本控制很炫, 就像是你在更動程式碼前手動複製一份檔案一樣. 你可能會為了以防萬一, 註解掉無用的舊程式碼, 而你隨時可以還原. 
+版本控制很酷, 就像你在異動程式碼前, 手動複製一份. 你可能會為了以防萬一, 註解掉無用的舊程式碼, 而你隨時可以還原. 
 
 ![](Images/Day35_Git2.png)
 
-I have started using version control over not just source code but pretty much anything, talks about projects like this (90DaysOfDevOps) because why would you not want that rollback and log of everything that has gone on. 
+我不僅僅對原始碼做版本控制, 我甚至幾乎對所有的東西做版本控制, 就像談到這個 90DaysOfDevOps 這個專案, 當你不小心刪到你想要的文字, 然到不會想要擁有歷史紀錄和做資料回朔? 
 
-However, a big disclaimer **Version Control is not a Backup!**
+然而, 在此聲明 **版本控制不是備份!**
 
-Another benefit of Version Control is the ability to manage multiple versions of a project, Let's create an example, we have a free app that is available on all operating systems and then we have a paid-for app also available on all operating systems. The majority of the code is shared between both applications. We could copy and paste our code each commit to each app but that is going to be very messy especially as you scale your development to more than just one person, also mistakes will be made. 
+版本控制的另外一個好處是它可以對一個專案管理很多版本, 舉一個例子, 我們分別有一個免費版(FREE)和付費版(PAID)的程式, 兩者都能在所有的作業系統上面執行, 而且共享大部分的程式碼, 每次提交程式碼的時候, 都會複製並貼上到所有程式. 這樣做將會非常混亂, 尤其是當程式開發不只一個人的時候, 將會更容易發生錯誤. 
 
-The premium app is where we are going to have additional features, let's call them premium commits, the free edition will just contain the normal commits. 
+白金方案(Premium)的軟體擁有額外的功能, 在這裡我們稱為 premium commits, 免費版只包含 normal commits. 
 
-The way this is achieved in Version Control is through branching. 
+在版本控制中, 想要處理上述的問題就是透過分支(Branching). 
 
 ![](Images/Day35_Git3.png)
 
-Branching allows for two code streams for the same app as we stated above. But we will still want new features that land in our source code free version to be in our premium and to achieve this we have something called merging. 
+如上所述, 分支(Branching) 允許同一支程式擁有兩個程式碼流. 當我們想要把免費版本的額外功能變成白金付費方案的時候, 我們可以透過合併(merging). 
 
 ![](Images/Day35_Git4.png)
 
-Now, this same easy but merging can be complicated because you could have a team working on the free edition and you could have another team working on the premium paid for version and what if both change code that affects aspects of the overall code. Maybe a variable gets updated and breaks something. Then you have a conflict that breaks one of the features. Version Control cannot fix the conflicts that are down to you. But version control allows this to be easily managed. 
+現在, 合併(merging) 既可以簡單但也可以複雜, 如果你有一個團隊在免費版工作, 另一個團隊在白金付費版工作, 兩個團隊同時更改會影響整個程式碼的行為. 說不定只是更新了某個變數導致破壞某樣功能. 版本控制無法解決上述的衝突, 但是讓你更容易更輕鬆的管理. 
 
-The primary reason if you have not picked up so far for version control, in general, is the ability to collaborate. The ability to share code amongst developers and when I say code as I said before more and more we are seeing much more use cases for other reasons to use source control, maybe its a joint presentation you are working on with a colleague or a 90DaysOfDevOps challenge where you have the community offering their corrections and updates throughout the project. 
+目前為止, 我看到沒有使用版本控制的主要理由就是開發者間的協調能力夠好. 但是有越來越多的案例, 開發者之間正在用版本控制來分享程式碼, 也許是你和你的同事加入一個簡報, 或是你在加入一個社群, 對一個項目共向修正和更新, 就像這個儲存庫 90DaysOfDevOps. 
 
-Without version control how did teams of software developers even handle this? I find it hard enough when I am working on my projects to keep track of things. I expect they would split out the code into each functional module. Maybe a little part of the puzzle then was bringing the pieces together and then problems and issues before anything would get released. 
+我無法想像軟體開發團隊在沒有版本控制的情況下要怎麼處理問題? 當在我追蹤我自己的項目時, 我就發現他已經夠難了. 我希望團隊們能先把程式碼拆分一小部分的函數, 解決每一小部分的函數的問題之後再予與發佈, 事情將簡單的多. 
 
-With version control, we have a single source of truth. We might all still work on different modules but it enables us to collaborate better. 
+也就是說, 有了版本控制, 我們才有辦法做統整. 也許團隊們正在對不同的模組上進行開發, 但是就能夠協同合作的更好. 
 
 ![](Images/Day35_Git5.png)
 
@@ -87,7 +87,7 @@ Add our new file using the `git add samplecode.ps1` command and then we can run 
 
 ![](Images/Day35_Git11.png)
 
-Then issue `git commit -m "My Second Commit"` command.
+然後下 `git commit -m "My Second Commit"` 指令.
 
 ![](Images/Day35_Git12.png)
 
