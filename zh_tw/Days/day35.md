@@ -1,7 +1,7 @@
 ---
-title: '#90DaysOfDevOps - The Big Picture: Git - Version Control - Day 35'
+title: '#90DaysOfDevOps - 概述: Git - 版本控制 - 第 35 天'
 published: false
-description: 90DaysOfDevOps - The Big Picture Git - Version Control
+description: 90DaysOfDevOps - 概述 Git - 版本控制
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
@@ -23,59 +23,59 @@ id: 1049041
 
 ![](Images/Day35_Git2.png)
 
-我不僅僅對原始碼做版本控制, 我甚至幾乎對所有的東西做版本控制, 就像談到這個 90DaysOfDevOps 這個專案, 當你不小心刪到你想要的文字, 然到不會想要擁有歷史紀錄和做資料回朔? 
+我不僅對原始碼做版本控制, 甚至是幾乎對所有的東西做版本控制, 就像談到 90DaysOfDevOps 這個專案, 當你不小心刪到你想要的文字, 難道說不會想要擁有歷史紀錄和做資料回朔的機制? 
 
 然而, 在此聲明 **版本控制不是備份!**
 
-版本控制的另外一個好處是它可以對一個專案管理很多版本, 舉一個例子, 我們分別有一個免費版(FREE)和付費版(PAID)的程式, 兩者都能在所有的作業系統上面執行, 而且共享大部分的程式碼, 每次提交程式碼的時候, 都會複製並貼上到所有程式. 這樣做將會非常混亂, 尤其是當程式開發不只一個人的時候, 將會更容易發生錯誤. 
+版本控制的另外一個好處是它可以對一個專案同時管理很多個版本, 舉一個例子, 我們分別有一個免費版(FREE)和付費版(PAID)的程式, 兩者都能在所有的作業系統上面執行, 而且共享大部分的程式碼, 每次提交程式碼的時候, 都會複製並貼上到其他程式. 這樣做是不是會非常混亂, 尤其是當程式開發不只一個人的時候, 更容易發生錯誤. 
 
 白金方案(Premium)的軟體擁有額外的功能, 在這裡我們稱為 premium commits, 免費版只包含 normal commits. 
 
-在版本控制中, 想要處理上述的問題就是透過分支(Branching). 
+在版本控制中, 想要處理上述的問題需要透過分支(Branching). 
 
 ![](Images/Day35_Git3.png)
 
-如上所述, 分支(Branching) 允許同一支程式擁有兩個程式碼流. 當我們想要把免費版本的額外功能變成白金付費方案的時候, 我們可以透過合併(merging). 
+如上所述, 分支(Branching) 允許同一支程式擁有兩個程式碼分流. 當我們想要把免費版本的額外功能變成白金付費方案的時候, 我們會透過合併(merging). 
 
 ![](Images/Day35_Git4.png)
 
-現在, 合併(merging) 既可以簡單但也可以複雜, 如果你有一個團隊在免費版工作, 另一個團隊在白金付費版工作, 兩個團隊同時更改會影響整個程式碼的行為. 說不定只是更新了某個變數導致破壞某樣功能. 版本控制無法解決上述的衝突, 但是讓你更容易更輕鬆的管理. 
+現在, 合併(merging) 既可以簡單但也可以複雜, 譬如說你有一個團隊在開發免費版, 另一個團隊在開發白金付費版, 兩個團隊同時改動會影響整個程式碼的代碼, 又或只是更新了某個變數導致破壞某樣功能. 版本控制無法解決上述的衝突, 但是讓你更容易更輕鬆的管理. 
 
-目前為止, 我看到沒有使用版本控制的主要理由就是開發者間的協調能力夠好. 但是有越來越多的案例, 開發者之間正在用版本控制來分享程式碼, 也許是你和你的同事加入一個簡報, 或是你在加入一個社群, 對一個項目共向修正和更新, 就像這個儲存庫 90DaysOfDevOps. 
+目前為止, 我看到沒有使用版本控制的主要理由就是開發者間的協調能力夠好. 但是有越來越多的案例, 開發者之間正在用版本控制來分享程式碼, 可能是你和你的同事加入一個簡報, 或是你加入一個社群, 對一個項目共向修正和更新, 就像這個儲存庫 90DaysOfDevOps. 
 
-我無法想像軟體開發團隊在沒有版本控制的情況下要怎麼處理問題? 當在我追蹤我自己的項目時, 我就發現他已經夠難了. 我希望團隊們能先把程式碼拆分一小部分的函數, 解決每一小部分的函數的問題之後再予與發佈, 事情將簡單的多. 
+我無法想像軟體開發團隊在沒有版本控制的情況下要怎麼處理問題? 當在我追蹤我自己的項目時, 我就發現他已經夠難了. 我希望團隊們能先把程式碼拆分一小部分的函數, 解決每一小部分函數的問題之後再予與發佈, 事情將簡單的多. 
 
-也就是說, 有了版本控制, 我們才有辦法做統整. 也許團隊們正在對不同的模組上進行開發, 但是就能夠協同合作的更好. 
+也就是說, 有了版本控制, 才有辦法做統整. 像是團隊們正在對不同的模組上進行開發, 這時就能夠協同合作的更好. 
 
 ![](Images/Day35_Git5.png)
 
-Another thing to mention here is that it's not just developers that can benefit from Version Control, it's all members of the team to have visibility but also tools all having awareness or leverage, Project Management tools can be linked here, tracking the work. We might also have a build machine for example Jenkins which we will talk about in another module. A tool that Builds and Packages the system, automating the deployment tests and metrics. 
+另外值得一提的事情是版本控制不只僅受益於開發者, 團隊中的所有成員和其他工具也都有了能見度, 一些專案管理工具可以跟 git 建立鏈結, 跟蹤工作的狀況. 最知名的例子就是  Jenkinus. 一個可以建置、打包、自動測試和佈署軟體的系統. 
 
-### What is Git? 
+### 什麼是 Git? 
 
-Git is a tool that tracks changes to source code or any file, or we could also say Git is an open-source distributed version control system. 
+Git 是一個用來追蹤原始碼或任何檔案每次異動的工具, 或者我們可以說 Git 是一個開源的分布式版本控制系統. 
 
-There are many ways in which git can be used on our systems, most commonly or at least for me I have seen it in at the command line, but we also have graphical user interfaces and tools like Visual Studio Code that have git aware operations we can take advantage of. 
+我們的系統有很多種 Git 使用方法, 對我來說最常看到的用法是輸入指令, 但它也有圖形使用者介面, 如微軟開發的 Visual Studio Code 只要透過界面按鈕就可輕鬆管理. 
 
-Now we are going to run through a high-level overview before we even get Git installed on our local machine. 
+在教學如何安裝 Git 之前, 我們先瀏覽了一下 Git 怎麼使用. 
 
-Let's take the folder we created earlier. 
+我們先用之前建立的資料夾來當範例. 
 
 ![](Images/Day35_Git2.png)
 
-To use this folder with version control we first need to initiate this directory using the `git init command. For now, just think that this command puts our directory as a repository in a database somewhere on our computer. 
+首先, 如果想要對資料夾做版本控管, 就要輸入指令`git init`. 現在只要知道這個指令會把目錄建構成儲存庫(repository). 
 
 ![](Images/Day35_Git6.png)
 
-Now we can create some files and folders and our source code can begin or maybe it already has and we have something in here already. We can use the `git add .` command which puts all files and folders in our directory into a snapshot but we have not yet committed anything to that database. We are just saying all files with the `.` are ready to be added.   
+現在我們可以創建一些檔案或資料夾, 也或許你已經有放一些檔案了!? 我們可以輸入指令 `git add .` 將尚未提交的檔案做快照. 圖片中的句點代表的是把所有新增的檔案都添加進去.   
 
 ![](Images/Day35_Git7.png)
 
-Then we want to go ahead and commit our files, we do this with the `git commit -m "My First Commit"` command. We can give a reason for our commit and this is suggested so we know what has happened for each commit. 
+然後我們想要進一步提交檔案, 這個時候就可以輸入 `git commit -m "My First Commit"` . 建議提交時寫一些註解, 這將幫助我們了解發生了什麼事. 
 
 ![](Images/Day35_Git8.png)
 
-現在我們可以透過 `git log` 指令, 知道專案的歷史和發生何事.
+現在我們可以透過 `git log` 指令, 回顧專案的歷史和註解.
 
 ![](Images/Day35_Git9.png)
 
@@ -83,7 +83,7 @@ Then we want to go ahead and commit our files, we do this with the `git commit -
 
 ![](Images/Day35_Git10.png)
 
-Add our new file using the `git add samplecode.ps1` command and then we can run `git status` again and see our file is ready to be committed. 
+輸入指令 `git add samplecode.ps1` 可以添加新檔案 samplecode.ps1. 然後可以再次輸入 `git status` 確認檔案準備被提交. 
 
 ![](Images/Day35_Git11.png)
 
@@ -91,7 +91,7 @@ Add our new file using the `git add samplecode.ps1` command and then we can run 
 
 ![](Images/Day35_Git12.png)
 
-Another `git status` now shows everything is clean again.
+再輸入一次 `git status` 可以看見檔案都已提交.
 
 ![](Images/Day35_Git13.png)
 
@@ -99,19 +99,19 @@ We can then use the `git log` command which shows the latest changes and first c
 
 ![](Images/Day35_Git14.png)
 
-If we wanted to see the changes between our commits i.e what files have been added or modified we can use the `git diff b8f8 709a`
+如果你想要審查兩個提交的版本之間的差異, 就可以輸入 `git diff b8f87d394 709a8256ab` 來看出有何檔案被新增或修改.
 
 ![](Images/Day35_Git15.png)
 
-Which then displays what has changed in our case we added a new file. 
+於是以我們的案例來看, 很清楚的顯示我們添加了一個文件. 
 
 ![](Images/Day35_Git16.png)
 
-We can also and we will go deeper into this later on but we can jump around our commits i.e we can go time travelling! By using our commit number we can use the `git checkout 709a` command to jump back in time without losing our new file. 
+我們還可以透過指令 `git checkout 709a8256ab` 跳回之前提交的版本, 是不是很像時間旅行, 而且不會丟失我們的新檔案. 之後我們將會深入研究這個議題. 
 
 ![](Images/Day35_Git17.png)
 
-But then equally we will want to move forward as well and we can do this the same way with the commit number or you can see here we are using the `git switch -` command to undo our operation. 
+同理的我們可以用相同方法跳回 b8f87d394 版本, 或者你可以看到我用 `git switch -` 取消我的操作. 
 
 ![](Images/Day35_Git18.png)
 
