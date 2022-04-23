@@ -95,7 +95,7 @@ Git 是一個用來追蹤原始碼或任何檔案每次異動的工具, 或者�
 
 ![](Images/Day35_Git13.png)
 
-We can then use the `git log` command which shows the latest changes and first commit. 
+我們可以輸入指令 `git log` 顯示最後的異動和第一次提交. 
 
 ![](Images/Day35_Git14.png)
 
