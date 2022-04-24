@@ -28,10 +28,10 @@ If you read the above blog you will see this is a high level contents for my lea
 在接下来的90天里，我想记录这些资料并涵盖那些基础领域。我希望社区参与进来，分享你的相关经历和资源，以便我们一起学习共同进步。
 Over the next 90 days I want to document these resources and cover those foundational areas, I would love for the community to also get involved share your journey and resources so we can learn in public and help each other. 
 
-在该项目开头的README中，你会了解到我已经将内容拆分成多个小节，基本上是由12周加6天组成。前6天，我们会大致探讨DevOps的基础，后续再深入到一些特定领域。这份清单不是完美的，再次希望社区参与进来并使它成为有用的资源。
+在该项目开头的README中，你会了解到我已经将内容拆分成多个小节，基本上是由12周加6天组成。前6天，我们会大致探讨DevOps的基础，后续再深入到一些特定领域。这份清单不是完美的，再次希望社区参与进来并一起帮助它成为有用的资源。
 You will see from the opening readme in the project repository that I have split things into sections and it is basically 12 weeks plus 6 days. The first 6 days we will explore the fundamentals of DevOps in general before diving into some of the specific areas, by no way is this list exhaustive and again would love for the community to assist in making this a useful resource. 
 
-在这里我会分享另一个资源，我认为每个人都应认真了解或是制作自己的思维导图，它的地址如下：
+在这里我会分享另一个资源，我认为每个人都应认真了解，或是根据自身需求制作自己的思维导图，它的地址如下：
 Another resource I will share at this point that I think everyone should have a good look at and maybe create your own mind map for yourself and your interest and position is the following: 
 
 [DevOps Roadmap](https://roadmap.sh/devops)
@@ -47,7 +47,7 @@ There are so many blog articles and YouTube videos to list here, but as we start
 首先，DevOps不是工具。你不能购买它，它不是可下载的软件sku或开源GitHub仓库。DevOps也不是编程语言或什么黑魔法。
 Firstly, DevOps is not a tool. You cannot buy it, it is not a software sku or an open source GitHub repository you can download. It is also not a programming language, it is also not some dark art magic either. 
 
-DevOps是一种在软件开发中更明智的做事方式。- 等一下... 但如果你不是一个软件开发人员，你现在应该关闭这个页面并离开吗？？不，继续读下去... 因为DevOps将软件开发和运维运营结合在了一起。我先前提及到，我更多关注的是虚拟机方面的工作，而这些经验在运维运营方面通常是无效的。但在社区中，不同背景的人们都可以通过更好地了解DevOps来学习那些实践案例。DevOps将100%造福于个人、开发者、运维运营和QA工程师。
+DevOps是一种在软件开发中更明智的做事方式。- 等一下... 但如果你不是一个软件开发人员，你现在应该关闭这个页面并离开吗？？不，继续读下去... 因为DevOps将软件开发和运维运营结合在了一起。我先前提及到，我更多关注的是虚拟机方面的工作，而这些通常属于运营。但在社区中，不同背景的人们都可以通过更好地了解DevOps来学习那些实践案例。DevOps将100%造福于个人、开发者、运维运营和QA工程师。
 DevOps is a way to do smarter things in Software Development. - Hold up... But if you are not a software developer should you turn away right now and not dive into this project??? No Not at all, Stay... Because DevOps brings together a combination of software development and operations. I mentioned earlier that I was more on the VM side and that would generally fall under the Operations side of the house, but within the community there are people with all different backgrounds where DevOps is 100% going to benefit the individual, Developers, Operations and QA Engineers all can equally learn these best practices by having a better understanding of DevOps. 
 
 DevOps是一系列有助于达成这一目标的实践：减少产品从构思到发布阶段，到最终用户或内部团队或客户的任何人所需要的时间。
@@ -65,6 +65,7 @@ From a DevOps perspective, **Development, Testing and Deployment** all land with
 最后一点，我们必须通过**自动化**使得整个过程尽可能有效和高效。
 The final point I will make is to make this as effective and efficient as possible we must leverage **Automation** 
 
+##信息来源
 ## Resources 
 
 I am always open to adding additional resources to these readme files as it is here as a learning tool.  
