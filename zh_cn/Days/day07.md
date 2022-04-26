@@ -10,10 +10,10 @@ id: 1048856
 ## 介绍：DevOps & 学习编程语言
 ## The Big Picture: DevOps & Learning a Programming Language
 
-我认为公平地来说，要想在长期成为一名成功的DevOps工程师，你需要了解至少一种编程语言的用法。我想通过本节的第一部分来探究，为什么这是一项重要的技能。同时也希望在本周或本节结束时，你会更好地理解在这个学习过程中，为什么、如何做和做什么。
+我认为，要想在长期成为一名成功的DevOps工程师，你需要了解至少一种编程语言的基本用法。我想通过本节的第一部分来探究，为什么这是一项重要的技能。同时也希望在本周或本节结束时，你会更好地理解在这个学习过程中，为什么、如何做和做什么。
 I think it is fair to say to be successful in the long term as a DevOps engineer you've got to know at least one programming language at a foundational level. I want to take this first session of this section to explore why this is such a critical skill to have, and hopefully, by the end of this week or section, you are going to have a better understanding of the why, how and what to do to progress with your learning journey. 
 
-我想如果我在社交平台上提问，扮演DevOps的相关角色是否需要具备编程能力，得到的答案很可能是肯定的？如果你不这么认为，可以让我知道？OK，但还有一个更大的问题，你无法明确地知道大家讨论的是哪种编程语言。？一个最常见的回答是，我看到Python正变得越来越热门，而我们应该选择学习Golang或Go语言。
+我想如果我在社交平台上提问，从事与DevOps的相关工作是否需要具备编程能力，得到的答案很可能是肯定的？如果你不这么认为，欢迎告诉我。但一个更大的问题是，你无法明确知道所需的是哪种编程语言？一个最常见的回答是，我看到Python正变得越来越热门，而我们应该选择学习Golang或Go语言。
 I think if I was to ask out on social do you need to have programming skills for DevOps related roles, the answer will be most likely a hard yes? Let me know if you think otherwise? Ok but then a bigger question and this is where you won't get such a clear answer is which programming language?  The most common answer I have seen here has been Python or increasingly more often, we're seeing Golang or Go should be the language that you learn. 
 
 为了在DevOps中获得成功，至少在我看来，你应该具备良好的编程知识。但我们也该知道为什么我们需要它来选择正确的方向。
@@ -22,7 +22,7 @@ To be successful in DevOps you have to have a good knowledge of programming skil
 ## 了解为什么需要学习编程语言
 ## Understand why you need to learn a programming language. 
 
-许多DevOps的工具是用Python或Go编写的，如果你要构建DevOps工具，这将为你提供便利。这也成为了DevOps推荐Python和Go的原因。如今这会影响你决定学习哪一种编程语言，并可能是对你最有益的。如果你想构建DevOps工具或是加入一个团队，选择学习与之相同的语言将是有意义的。如果你需要大量使用Kubernetes或Containers，那么你很可能会将Go作为你的编程语言。对我来说，我工作的公司(Kasten by Veeam) 位于云原生态系统领域(Cloud-Native ecosystem)，专注于Kubernetes的数据管理并且所有工作都用Go来编写。
+许多DevOps的工具是用Python或Go编写的，如果你要构建DevOps工具，这将为你提供便利。这也成为了DevOps推荐Python和Go的原因。如今这会影响你决定学习哪一种编程语言，并可能是对你最有益的。如果你想构建DevOps工具或是加入一个从事相关工作的团队，选择学习与之相同的语言将是有意义的。如果你需要大量使用Kubernetes或Containers，那么你很可能会将Go作为你的编程语言。对我来说，我工作的公司(Kasten by Veeam) 位于云原生态系统领域(Cloud-Native ecosystem)，专注于Kubernetes的数据管理并且所有工作都用Go来编写。
 The reason that Python and Go are recommended so often for DevOps engineers is that a lot of the DevOps tooling is written in either Python or Go, which makes sense if you are going be build DevOps tools. Now this is important as this will determine really what you should learn and that would likely be the most beneficial. If you are going to be building DevOps tools or you are joining a team that does then it would make sense to learn that same language, if you are going to be heavily involved in Kubernetes or Containers then it's more than likely that you would want to choose Go as your programming language. For me, the company I work for (Kasten by Veeam) is in the Cloud-Native ecosystem focused on data management for Kubernetes and everything is written in Go. 
 
 但或许你是一名学生或过渡职业，可能没有像这样明确的方向来帮助你做出选择。我觉得在这个情况下，你应该选择一个与你感兴趣的应用程序有相近特点的。
@@ -31,7 +31,7 @@ But then you might not have clear cut reasoning like that to choose you might be
 请记住，我在这里并不是为了成为一名程序开发者。我只是想去更多地了解编程语言，从而让我能够阅读和理解那些工具在做些什么，进而有可能启发我们如何改进相关的工作。
 Remember I am not looking to become a software developer here I just want to understand a little more about the programming language so that I can read and understand what those tools are doing and then that leads to possibly how we can help improve things. 
 
-另一个重要的点是了解如何与DevOps工具(Kasten K10, Terraform 又或是HCL)进行交互。这些就是我们所说的配置文件(config files)，它就是帮助你与那些DevOps工具成功交互的东西，通常它们会以YAML的格式出现。(我们可能会在本节的最后一天深入了解YAML)
+另一个重要的点是了解如何与DevOps工具(Kasten K10, Terraform 又或是HCL)进行交互。这些就是我们所说的配置文件(config files)，它就是帮助你与那些DevOps工具成功交互的东西，通常它们会以YAML的格式出现。(我们可能会在本节的最后一天稍微讲解YAML)
 I would also it is also important to know how you interact with those DevOps tools which could be Kasten K10 or it could be Terraform and HCL. These are what we will call config files and this is how you interact with those DevOps tools to make things happen, commonly these are going to be YAML. (We may use the last day of this section to dive a little into YAML) 
 
 ## 我只是自说自话而不是学习编程语言吗？
