@@ -16,7 +16,6 @@ id: 1048856
 为了在DevOps中获得成功，至少在我看来，你应该具备良好的编程知识。但我们也该知道为什么我们需要它来选择正确的方向。
 
 ## 了解为什么需要学习编程语言
-## Understand why you need to learn a programming language. 
 
 许多DevOps的工具是用Python或Go编写的，如果你要构建DevOps工具，这将为你提供便利。这也成为了DevOps推荐Python和Go的原因。如今这会影响你决定学习哪一种编程语言，并可能是对你最有益的。如果你想构建DevOps工具或是加入一个从事相关工作的团队，选择学习与之相同的语言将是有意义的。如果你需要大量使用Kubernetes或Containers，那么你很可能会将Go作为你的编程语言。对我来说，我工作的公司(Kasten by Veeam) 位于云原生态系统领域(Cloud-Native ecosystem)，专注于Kubernetes的数据管理并且所有工作都用Go来编写。
 
