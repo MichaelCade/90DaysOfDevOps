@@ -8,31 +8,31 @@ canonical_url: null
 id: 1048731
 date: '2022-04-17T10:12:40Z'
 ---
-## Introduction - Day 1 
+## 介紹 - Day 1 
 
-Day 1 of our 90 days and adventure to learn a good foundational understanding of DevOps and tools that help with a DevOps mindset. 
+在90天旅途的第1天，學習基本的DevOps和工具可以幫助我們建立基本的心境
 
-This learning journey started for me a few years back but my focus then was around virtualisation platforms and cloud based technologies, I was looking mostly into Infrastructure as Code and Application configuration management with Terraform and Chef. 
+這趟學習旅程開始於我幾年前專注在虛擬化和雲平台相關的技術，我當時主要使用 Terraform 和 Chef 研究 Infrastructure as Code 和 Application configuration management
 
-Fast forward to March 2021, I was given an amazing opportunity to concentrate my efforts around the Cloud Native strategy at Kasten by Veeam. Which was going to be a massive focus on Kubernetes and DevOps and the community surrounding these technologies. I started my learning journey and quickly realised there was a very wide world aside from just learning the fundamentals of Kubernetes and Containerisation and it was then when I started speaking to the community and learning more and more about the DevOps culture, tooling and processes so I started documenting some of the areas I wanted to learn in public. 
+時間快轉到2021 3月，Veeam 為我提供了一個絕佳的機會讓我能將精力專注於Kasten的Cloud Native strategy。也因為如此我花了很大的時間在 Kubernetes 和 DevOps 及圍繞這些技術的社群上。我開始了我的學習之旅，並很快意識到除了學習 Kubernetes 和容器化的基礎知識之外，還有一個非常廣闊的世界，那時我開始與社群交流並越來越瞭解 DevOps 文化、工具和流程，所以我開始公開紀錄一些我想學的領域。
 
-[So you want to learn DevOps?](https://blog.kasten.io/devops-learning-curve)
+[想學DevOps?(英文)](https://blog.kasten.io/devops-learning-curve)
 
-## Let the journey begin
+## 讓旅途開始吧!
 
-If you read the above blog, you will see this is a high level contents for my learning journey and I will say at this point I am no where near an expert in any of these sections but what I wanted to do was share some resources both FREE and some paid for but an option for both as we all have different circumstances. 
+如果你讀了上面的Blog，你會發現這是我學習之旅裡的高品質內容，我會說在這些領域都不是專家，但我想做的是分享一些免費和付費資源，你可以自由選擇，因為我們都有不同的情況。
 
-Over the next 90 days I want to document these resources and cover those foundational areas. I would love for the community to also get involved. Share your journey and resources so we can learn in public and help each other. 
+在接下來的 90 天裡，我想記錄這些資源並涵蓋不同領域的基礎。 我希望社群也能參與其中。 分享你的旅程和資源，以便我們可以公開學習並互相幫助彼此。
 
-You will see from the opening readme in the project repository that I have split things into sections and it is basically 12 weeks plus 6 days. The first 6 days we will explore the fundamentals of DevOps in general before diving into some of the specific areas. By no way is this list exhaustive and again,I would love for the community to assist in making this a useful resource. 
+從repo中的readme中可以看到，我將內容拆分為多個部分，基本上是 12 週加 6 天。前 6 天，我們將大致探討 DevOps 的基礎知識，然後再深入一些特定領域。 這份清單絕不是詳盡無遺的，我希望社群能夠協助使其成為有用的資源。
 
-Another resource I will share at this point and that I think everyone should have a good look at, maybe create your own mind map for yourself and your interest and position, is the following: 
+另外一個我想分享的資源，這能幫助你拓展你有興趣的部分並找到自己的定位:
 
-[DevOps Roadmap](https://roadmap.sh/devops)
+[DevOps 路線圖](https://roadmap.sh/devops)
 
-I found this a great resource when I was creating my initial list and blog post on this topic. You can also see there are other areas that go into a lot more detail outside of the 12 topics I have listed here in this repository. 
+當我開始建立關於這個主題相關的列表和Blog時，我發現這是一個很好的資源。你還可以看到，除了我在這份repo中列出的 12 個主題之外，還有其他更詳細的領域。
 
-## First Steps - What is DevOps? 
+## 第一步 - 何謂DevOps? 
 
 There are so many blog articles and YouTube videos to list here, but as we start the 90 day challenge and we focus on spending around an hour a day learning something new or about DevOps, I thought it was good to get some of the high level of "what DevOps is" down to begin. 
 
@@ -50,14 +50,15 @@ From a DevOps perspective, **Development, Testing and Deployment** all land with
 
 The final point I will make is to make this as effective and efficient as possible we must leverage **Automation**.
 
-## Resources 
+## 資源
 
-I am always open to adding additional resources to these readme files as it is here as a learning tool.  
+我把這份readme當作一個學習工具，並且保持開放的心態希望能新增更多的資源
 
-My advice is to watch all of the below and hopefully you have also picked something up from the text and explanations above. 
+My advice is to watch all of the below and hopefully you have also picked something up from the text and explanations above.
+我建議看完下列的影片，希望你能從中學到一些基本的名詞
 
 - [DevOps in 5 Minutes](https://www.youtube.com/watch?v=Xrgk023l4lI)
 - [What is DevOps? Easy Way](https://www.youtube.com/watch?v=_Gpe1Zn-1fE&t=43s)
 - [DevOps roadmap 2022 | Success Roadmap 2022](https://www.youtube.com/watch?v=7l_n97Mt0ko)
 
-If you made it this far, then you will know if this is where you want to be or not. See you on [Day 2](day02.md).  
+如果你已經看到這裡了, 那你大概會知道你想不想學習DevOps. 我們[Day 2](day02.md)見.  
