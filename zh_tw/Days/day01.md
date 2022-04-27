@@ -34,27 +34,30 @@ date: '2022-04-17T10:12:40Z'
 
 ## 第一步 - 何謂DevOps? 
 
-There are so many blog articles and YouTube videos to list here, but as we start the 90 day challenge and we focus on spending around an hour a day learning something new or about DevOps, I thought it was good to get some of the high level of "what DevOps is" down to begin. 
+有很多Blog和YouTube影片在探討關於DevOps，但是當我們開始 90 天挑戰時，我們得專注於每天花大約一個小時學習新的東西或關於 DevOps，我認為獲得一些高品質的東西是件好事，而我們將從"什麼是 DevOps"開始。
 
-Firstly, DevOps is not a tool. You cannot buy it, it is not a software sku or an open source GitHub repository you can download. It is also not a programming language, it is also not some dark art magic either. 
+首先，DevOps 不是一種工具。 你不能買它，它不是你可以下載的軟體 sku 或開源 GitHub repo。 它也不是一種程式語言，更不是什麼黑魔法。
 
-DevOps is a way to do smarter things in Software Development. - Hold up... But if you are not a software developer should you turn away right now and not dive into this project??? No. Not at all. Stay... Because DevOps brings together a combination of software development and operations. I mentioned earlier that I was more on the VM side and that would generally fall under the Operations side of the house, but within the community there are people with all different backgrounds where DevOps is 100% going to benefit the individual, Developers, Operations and QA Engineers all can equally learn these best practices by having a better understanding of DevOps. 
+DevOps 是一種在軟體開發中更聰明的做事情的方法。 - 但休但幾勒……如果你不是軟體開發人員，你不是應該現在就轉身離開而不是深入研究這個項目嗎？
+一點都不。 留下來，因為 DevOps 將軟體開發和運營結合在一起。
+我之前提過，我主要研究在虛擬機相關的技能，這通常屬於運營方面，但在DevOps社群中，有不同背景的人，DevOps 將 100% 造福於個人、開發人員、運營和 QA 工程師都可以通過更好地了解 DevOps 來學習這些最佳實踐。
 
-DevOps is a set of practices that help to reach the goal of this movement: reducing the time between the ideation phase of a product and its release in production to the end-user or whomever it could be an internal team or customer. 
+DevOps 是一組幫助達成目標的實踐方法：減少產品的構思階段和產品發佈到最終用戶或任何可能是內部團隊或客戶的人之間的時間。
+ 
+我們將在第一週深入探討的另一個領域是**敏捷開發**。 DevOps 和敏捷一起被廣泛採用，以實現您的**應用程序**的持續交付。
 
-Another area we will dive into in this first week is around **The Agile Methodology**. DevOps and Agile are widely adopted together to achieve continuous delivery of your **Application**. 
+從較高層次的方面來解讀，DevOps 想塑造的情境是將可能數年冗長的軟體發佈週期，縮短至更平凡而較小的版本變動。
+而另一個關鍵點是 DevOps 工程師有責任打破我之前提到的團隊之間的隔閡：開發人員、運維人員和 QA。
 
-The high level take away is that a DevOps mindset or culture is about shrinking the long, drawn out software release process from potentially years to being able to drop smaller releases more frequently. The other key fundamental point to understand here is the the responsibility of a DevOps engineer to break down silos between the teams I previously mentioned: Developers, Operations and QA. 
-
-From a DevOps perspective, **Development, Testing and Deployment** all land with the DevOps team. 
+從 DevOps 的角度來看，**開發、測試和部署**都屬於 DevOps 團隊。
 
 The final point I will make is to make this as effective and efficient as possible we must leverage **Automation**.
+最後我想說的是，我們必須利用 **自動化** 使其盡可能有效和高效。
 
 ## 資源
 
 我把這份readme當作一個學習工具，並且保持開放的心態希望能新增更多的資源
 
-My advice is to watch all of the below and hopefully you have also picked something up from the text and explanations above.
 我建議看完下列的影片，希望你能從中學到一些基本的名詞
 
 - [DevOps in 5 Minutes](https://www.youtube.com/watch?v=Xrgk023l4lI)
