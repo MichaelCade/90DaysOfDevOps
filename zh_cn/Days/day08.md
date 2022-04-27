@@ -7,7 +7,7 @@ cover_image: null
 canonical_url: null
 id: 1048857
 ---
-## 配置你的DevOps环境 Go & Hello World
+## 配置Go语言的DevOps环境 & Hello World
 ## Setting up your DevOps environment for Go & Hello World
 
 在我们开始学习Go的基础知识之前，我们要在我们的工作站上安装Go，并按照“学习编程101”的教程来创建Hello World程序。这一小节将一步步在你的机器上完成Go的安装，我们会使用截图来记录整个过程，从而让大家能更好地跟进。
