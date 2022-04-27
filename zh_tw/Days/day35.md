@@ -128,7 +128,7 @@ Git 是一個用來追蹤原始碼或任何檔案每次異動的工具，或者�
 
 下一章,我們將會在你的電腦安裝和設置 Git，並且更深入的解說 Git 的命令和使用案例，以及 Git 能做到什麼。
 
-## Resources 
+## 資源
 
 - [What is Version Control?](https://www。youtube。com/watch?v=Yc8sCSeMhi4)
 - [Types of Version Control System](https://www。youtube。com/watch?v=kr62e_n6QuQ)
