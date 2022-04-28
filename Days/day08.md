@@ -104,4 +104,3 @@ If we run that
 
 See you on [Day 9](day09.md).
 
-![](Images/Day8_Go13.png)
