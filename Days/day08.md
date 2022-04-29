@@ -86,10 +86,12 @@ go build main.go
 ``` 
 ![](Images/Day8_Go12.png)
 
-If we run that
+If we run that, we would see the same output:
 
-![](Images/Day8_Go13.png)
-
+```bash
+$ ./main.exe
+Hello #90DaysOfDevOps
+```
 
 ## Resources
 
@@ -104,3 +106,4 @@ If we run that
 
 See you on [Day 9](day09.md).
 
+![](Images/Day8_Go13.png)
