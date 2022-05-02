@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - An intro to Terraform - Day 57'
 published: false
 description: 90DaysOfDevOps - An intro to Terraform
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048710
@@ -56,7 +56,7 @@ Another thing to mention is that there are also modules available, and this is s
 The Terraform workflow looks like this: (*taken from the terraform site*)
 
 
-![](https://www.terraform.io/_next/static/images/how-tf-works-2-88c36cecdbf1d3a92cc3976dd85ff8ad.png?fit=max&fm=webp&q=80&w=2500)
+![](Images/Day57_IAC3.png)
 
 ### Terraform vs Vagrant
 
