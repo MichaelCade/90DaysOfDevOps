@@ -23,7 +23,7 @@ Pull approach - If you are talking to thousands of microservices or systems and 
 
 Once again we see YAML for configuration for Prometheus. 
 
-![](https://cdn.jsdelivr.net/gh/prometheus/prometheus@c34257d069c630685da35bcef084632ffd5d6209/documentation/images/architecture.svg)
+![](Images/Day78_Monitoring7.png)
 
 Later on you are going to see how this looks when deployed into Kubernetes, in particular we have the **PushGateway** which pulls our metrics from our jobs/exporters. 
 
