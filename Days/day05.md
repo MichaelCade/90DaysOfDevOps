@@ -54,15 +54,15 @@ Once that's in place you go right back to the beginning to the planning stage an
 
 Many tools help us achieve the above continuous process, all this code and the ultimate goal of being completely automated, cloud infrastructure or any environment is often described as Continuous Integration/ Continuous Delivery/Continous Deployment or “CI/CD” for short. We will spend a whole week on CI/CD later on in the 90 Days with some examples and walkthroughs to grasp the fundamentals. 
 
-### Continuous Delivery:
-
-Continuous Delivery = Plan > Code > Build > Test 
-
 ### Continuous Integration:
+
+Continuous Integration = Plan > Code > Build > Test 
+
+### Continuous Delivery:
 
 This is effectively the outcome of the Continuous Delivery phases above plus the outcome of the Release phase. This is the case for both failure and success but this is fed back into continuous delivery or moved to Continuous Deployment. 
 
-Continuous Integration = Plan > Code > Build > Test > Release 
+Continuous Delivery = Plan > Code > Build > Test > Release 
 
 ### Continuous Deployment: 
 
