@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  logspout:
+    build:
+      context: extensions/logspout
+    volumes:
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+        read_only: true
+    environment:
+      ROUTE_URIS: logstash://logstash:5000
+      LOGSTASH_TAGS: docker-elk
+    networks:
+      - elk
+    depends_on:
+      - logstash
+    restart: on-failure
