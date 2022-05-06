@@ -209,7 +209,7 @@ A Pod is a group of containers that form a logical application. For e.g. If you 
 
 - a unified way to route traffic to a cluster and eventually to a list of Pods. ​
 
-- By using a Service, Pods can be brought up and down without affecting anything..
+- By using a Service, Pods can be brought up and down without affecting anything.
 
 This is just a quick overview and notes around the fundamental building blocks of Kubernetes, we can take this knowledge and add in some other areas around Storage and Ingress to enhance our applications but we then also have a lot of choices on where our Kubernetes cluster runs. The next session will focus on those options on where can I run a Kubernetes cluster, whilst also exploring some specifics around Storage.
 

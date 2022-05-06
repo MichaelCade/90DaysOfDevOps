@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Alternatives to Docker - Day 48'
 published: false
 description: 90DaysOfDevOps - Alternatives to Docker
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048807
@@ -113,7 +113,6 @@ We could also mention toolings and options around Rancher, VirtualBox but we can
 - [YAML Tutorial: Everything You Need to Get Started in Minute](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started)
 - [Podman | Daemonless Docker | Getting Started with Podman](https://www.youtube.com/watch?v=Za2BqzeZjBk)
 - [LXC - Guide to building a LXC Lab](https://www.youtube.com/watch?v=cqOtksmsxfg)
-- 
 
 
 See you on [Day 49](day49.md) 
