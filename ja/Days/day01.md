@@ -1,63 +1,63 @@
 ---
-title: '#90DaysOfDevOps - Introduction - Day 1'
+title: '#90DaysOfDevOps - はじめに - 一日目'
 published: true
-description: 90DaysOfDevOps - Introduction
+description: 90DaysOfDevOps - はじめに
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048731
-date: '2022-04-17T10:12:40Z'
+date: '2022-05-06'
 ---
-## Introduction - Day 1 
+## はじめに - 一日目
 
-Day 1 of our 90 days and adventure to learn a good foundational understanding of DevOps and tools that help with a DevOps mindset. 
+90日間の冒険の1日目は、DevOpsとDevOpsマインドセットに役立つツールの基礎知識を学びます。
 
-This learning journey started for me a few years back but my focus then was around virtualisation platforms and cloud based technologies, I was looking mostly into Infrastructure as Code and Application configuration management with Terraform and Chef. 
+この学びの旅は数年前に始まりましたが、当時は仮想化プラットフォームやクラウドベースの技術に焦点を当て、Infrastructure as CodeやTerraformやChefによるアプリケーション構成管理について主に研究していました。
 
-Fast forward to March 2021, I was given an amazing opportunity to concentrate my efforts around the Cloud Native strategy at Kasten by Veeam. Which was going to be a massive focus on Kubernetes and DevOps and the community surrounding these technologies. I started my learning journey and quickly realised there was a very wide world aside from just learning the fundamentals of Kubernetes and Containerisation and it was then when I started speaking to the community and learning more and more about the DevOps culture, tooling and processes so I started documenting some of the areas I wanted to learn in public. 
+2021年3月、Kasten by Veeamのクラウドネイティブ戦略に専念する素晴らしい機会を得ました。KubernetesとDevOps、そしてこれらの技術を取り巻くコミュニティーに大きくフォーカスすることになりました。私は学習の旅を始め、Kubernetesとコンテナ化の基礎を学ぶ以外にも非常に広い世界があることにすぐに気づきました。その時、私はコミュニティと話し始め、DevOps文化、ツール、プロセスについてますます学び、私が学びたい分野のいくつかを公に文書化し始めました。
 
-[So you want to learn DevOps?](https://blog.kasten.io/devops-learning-curve)
+[では、DevOpsを学びたいのですか？](https://blog.kasten.io/devops-learning-curve)
 
-## Let the journey begin
+## 旅を始めよう
 
-If you read the above blog, you will see this is a high level contents for my learning journey and I will say at this point I am no where near an expert in any of these sections but what I wanted to do was share some resources both FREE and some paid for but an option for both as we all have different circumstances. 
+上記のブログを読んでいただければ、これが私の学習の旅のハイレベルな内容であることがお分かりいただけると思います。この時点で、私はこれらのセクションの専門家には程遠い状態ですが、私がしたかったことは、無料のリソースと有料のリソースの両方を共有することです。
 
-Over the next 90 days I want to document these resources and cover those foundational areas. I would love for the community to also get involved. Share your journey and resources so we can learn in public and help each other. 
+これから90日間、これらのリソースを記録し、基礎となる分野をカバーしたいと思います。私は、コミュニティにも参加してほしいと思っています。あなたの旅路とリソースを共有することで、私たちは公開で学び、互いに助け合うことができます。
 
-You will see from the opening readme in the project repository that I have split things into sections and it is basically 12 weeks plus 6 days. The first 6 days we will explore the fundamentals of DevOps in general before diving into some of the specific areas. By no way is this list exhaustive and again,I would love for the community to assist in making this a useful resource. 
+プロジェクトリポジトリの冒頭のReadmeを見れば、私が物事をセクションに分割していることがわかると思いますが、基本的には12週間＋6日間です。最初の6日間は具体的な分野に入る前に、一般的なDevOpsの基本を探ります。このリストは決して網羅的なものではありませんし、これを有用なリソースにするために、ぜひともコミュニティに協力してもらいたいと思います。
 
-Another resource I will share at this point and that I think everyone should have a good look at, maybe create your own mind map for yourself and your interest and position, is the following: 
+この時点で共有するもう1つのリソースは、誰もがよく見ておくべきであり、おそらく自分自身と自分の興味や立場について自分のマインドマップを作成するべきだと思います。
 
 [DevOps Roadmap](https://roadmap.sh/devops)
 
-I found this a great resource when I was creating my initial list and blog post on this topic. You can also see there are other areas that go into a lot more detail outside of the 12 topics I have listed here in this repository. 
+このトピックに関する最初のリストとブログ記事を作成したとき、これは素晴らしいリソースだと思いました。また、このリポジトリに掲載した12個のトピック以外にも、もっと詳しく説明している部分があることがおわかりいただけると思います。
 
-## First Steps - What is DevOps? 
+## はじめの一歩 - DevOpsとは？
 
-There are so many blog articles and YouTube videos to list here, but as we start the 90 day challenge and we focus on spending around an hour a day learning something new or about DevOps, I thought it was good to get some of the high level of "what DevOps is" down to begin. 
+しかし、90日間のチャレンジを開始し、1日1時間程度、新しいことやDevOpsについて学ぶことに焦点を当てるにあたり、まず「DevOpsとは何か」というハイレベルなことをいくつか押さえておくと良いと思いました。
 
-Firstly, DevOps is not a tool. You cannot buy it, it is not a software sku or an open source GitHub repository you can download. It is also not a programming language, it is also not some dark art magic either. 
+まず、DevOpsはツールではありません。購入することはできませんし、ソフトウェアのスクーやダウンロードできるオープンソースのGitHubリポジトリでもありません。また、プログラミング言語でもありませんし、ダークアートのような魔法でもありません。
 
-DevOps is a way to do smarter things in Software Development. - Hold up... But if you are not a software developer should you turn away right now and not dive into this project??? No. Not at all. Stay... Because DevOps brings together a combination of software development and operations. I mentioned earlier that I was more on the VM side and that would generally fall under the Operations side of the house, but within the community there are people with all different backgrounds where DevOps is 100% going to benefit the individual, Developers, Operations and QA Engineers all can equally learn these best practices by having a better understanding of DevOps. 
+DevOpsは、ソフトウェア開発においてよりスマートなことを行うための方法なのです。- ちょっと待ってください。でも、もしあなたがソフトウェア開発者でないなら、今すぐこのプロジェクトに飛び込まないで、目を背けた方がいいでしょうか？いいえ、そんなことはありません。そのまま... なぜなら、DevOps はソフトウェア開発と運用を組み合わせたものだからです。先ほど、私はどちらかというとVM側にいて、一般的には運用側に属すると言いましたが、コミュニティ内にはDevOpsが100%個人にとって有益となる様々なバックグラウンドの人々がいます。
 
-DevOps is a set of practices that help to reach the goal of this movement: reducing the time between the ideation phase of a product and its release in production to the end-user or whomever it could be an internal team or customer. 
+DevOpsは、このムーブメントの目標に到達するための一連のプラクティスです。製品のアイデア段階から、エンドユーザや社内チーム、顧客など誰であれ、本番環境でのリリースまでの時間を短縮することです。
 
-Another area we will dive into in this first week is around **The Agile Methodology**. DevOps and Agile are widely adopted together to achieve continuous delivery of your **Application**. 
+この最初の週で取り上げるもう1つの分野は、**アジャイル方法論**の周辺です。DevOpsとアジャイルは、アプリケーションの継続的デリバリー**を実現するために広く採用されています。
 
-The high level take away is that a DevOps mindset or culture is about shrinking the long, drawn out software release process from potentially years to being able to drop smaller releases more frequently. The other key fundamental point to understand here is the the responsibility of a DevOps engineer to break down silos between the teams I previously mentioned: Developers, Operations and QA. 
+ハイレベルな要点は、DevOpsの考え方や文化は、長く引き延ばされる可能性のあるソフトウェアのリリースプロセスを縮小して、より頻繁に小さなリリースを行えるようにすることです。ここで理解すべきもう1つの重要な基本ポイントは、先に述べたチーム間のサイロを破壊するのがDevOpsエンジニアの責任であることです。開発者、運用、そしてQAです。
 
-From a DevOps perspective, **Development, Testing and Deployment** all land with the DevOps team. 
+DevOpsの観点では、**開発、テスト、デプロイメント**のすべてがDevOpsチームに集約されます。
 
-The final point I will make is to make this as effective and efficient as possible we must leverage **Automation**.
+最後に、これを可能な限り効果的かつ効率的にするために、**自動化**を活用しなければならないことを指摘したいと思います。 無料版のDeepL翻訳（www.DeepL.com/Translator）で翻訳しました。
 
-## Resources 
+## リソース
 
-I am always open to adding additional resources to these readme files as it is here as a learning tool.  
+このReadmeファイルは、学習用として用意したものなので、いつでも追加リソースを受け付けています。
 
-My advice is to watch all of the below and hopefully you have also picked something up from the text and explanations above. 
+私のアドバイスは、以下のビデオをすべて見て、上記のテキストや説明から何かを感じ取っていただければと思います。
 
 - [DevOps in 5 Minutes](https://www.youtube.com/watch?v=Xrgk023l4lI)
 - [What is DevOps? Easy Way](https://www.youtube.com/watch?v=_Gpe1Zn-1fE&t=43s)
 - [DevOps roadmap 2022 | Success Roadmap 2022](https://www.youtube.com/watch?v=7l_n97Mt0ko)
 
-If you made it this far, then you will know if this is where you want to be or not. See you on [Day 2](day02.md).  
+ここまで来れば、ここが自分の居場所かどうかが分かるはずです。では、[2日目](day02.md)でお会いしましょう。
