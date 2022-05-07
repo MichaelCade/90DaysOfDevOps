@@ -90,11 +90,11 @@ Git 對使用的人並不友善，事實上我們必須花費時間討論命令�
 ### Git Rewriting History
 
 
-| 指令       | 範例                 | 描述                                                                                                              |
-| ------------ | ---------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| git commit | `git commit --amend` | 將變更過的暫存區和最後的提交合併後取代最後一次的提交。 如果暫存區沒有變更就可以修改註解。                         |
-| git rebase | `git rebase <base>`  | 重新定義現在的分支，將其它分支當作現在分支的基礎，目標可以是一個 ID、分支名稱、一個標籤或一個 HEAD 的相對參考點。 |
-| git reflog | `git reflog`         | 顯示本機儲存庫HEAD變動的歷史紀錄。加配置選項 --relative-date 可以顯示日期，加 --all 顯示所有的參照.               |
+| 指令       | 範例                 | 描述                                                                                                          |
+| ------------ | ---------------------- | --------------------------------------------------------------------------------------------------------------- |
+| git commit | `git commit --amend` | 將變更過的暫存區和最後的提交合併後取代最後一次的提交。 如果暫存區沒有變更就可以修改註解。                     |
+| git rebase | `git rebase <base>`  | 重新定義現在的分支，將現在分支嫁接到其他分支，目標可以是一個 ID、分支名稱、一個標籤或一個 HEAD 的相對參考點。 |
+| git reflog | `git reflog`         | 顯示本機儲存庫HEAD變動的歷史紀錄。加配置選項 --relative-date 可以顯示日期，加 --all 顯示所有的參照.           |
 
 ### Git Branches
 
@@ -108,12 +108,12 @@ Git 對使用的人並不友善，事實上我們必須花費時間討論命令�
 ### Git Remote Repositories
 
 
-| 指令           | 範例                          | 描述                                                                                                                                |
-| ---------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| git remote add | `git remote add <name> <url>` | Create a new connection to a remote repo. After adding a remote, you can use<name> as a shortcut for <url> in other commands.       |
-| git fetch      | `git fetch <remote> <branch>` | Fetches a specific<branch>, from the repo. Leave off <branch> to fetch all remote refs.                                             |
-| git pull       | `git pull <remote>`           | Fetch the specified remote’s copy of current branch and immediately merge it into the local copy.                                  |
-| git push       | `git push <remote> <branch>`  | Push the branch to<remote>, along with necessary commits and objects. Creates named branch in the remote repo if it doesn’t exist. |
+| 指令           | 範例                          | 描述                                                                         |
+| ---------------- | ------------------------------- | ------------------------------------------------------------------------------ |
+| git remote add | `git remote add <name> <url>` | 為遠端的倉儲庫建立簡稱，方便之後進行推送。                                   |
+| git fetch      | `git fetch <remote> <branch>` | 取回指定分支的更新。如果沒有指定則取回所有的更新到索引，工作目錄不會被更動。 |
+| git pull       | `git pull <remote>`           | 取回指定分支的更新，並且立即更新工作目錄上的檔案。                           |
+| git push       | `git push <remote> <branch>`  | 將你提交的檔案推送到遠端。如果遠端不存在推送的分支，將會建立新的分支。       |
 
 ### Git Diff
 
@@ -126,27 +126,27 @@ Git 對使用的人並不友善，事實上我們必須花費時間討論命令�
 ### Git Config
 
 
-| 指令                                                | 範例                                                   | 描述                                                                                                                                         |
-| ----------------------------------------------------- | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| git config --global user.name<name>                 | `git config --global user.name <name>`                 | Define the author name to be used for all commits by the current user.                                                                       |
-| git config --global user.email<email>               | `git config --global user.email <email>`               | Define author email to be used for all commits by the current user.                                                                          |
-| git config --global alias<alias-name> <git-command> | `git config --global alias <alias-name> <git-command>` | Create shortcut for a git command .                                                                                                          |
-| git config --system core.editor<editor>             | `git config --system core.editor <editor>`             | Set the text editor to be used by commands for all users on the machine.<editor> arg should be the comamnd that launches the desired editor. |
-| git config --global --edit                          | `git config --global --edit `                          | Open the global configuration file in a text editor for manual editing.                                                                      |
+| 指令                                                | 範例                                                   | 描述                                                                                                                  |
+| ----------------------------------------------------- | -------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| git config --global user.name<name>                 | `git config --global user.name <name>`                 | 為系統現在登入的帳號定義每次使用 Git 提交時所用的作者名。                                                             |
+| git config --global user.email<email>               | `git config --global user.email <email>`               | 為系統現在登入的帳號定義每次使用 Git 提交時所用的信箱。                                                               |
+| git config --global alias<alias-name> <git-command> | `git config --global alias <alias-name> <git-command>` | 幫 Git 指令建立簡稱。                                                                                                 |
+| git config --system core.editor<editor>             | `git config --system core.editor <editor>`             | 為所有的系統帳戶設定 Git 預設的文字編輯器，當 Git 需要輸入訊息的時候會用到。<editor> 參數應該指向系統有的文字編輯器。 |
+| git config --global --edit                          | `git config --global --edit `                          | 用文件編輯器開啟全域的 Git 設定檔。                                                                                   |
 
 ### Git Rebase
 
 
-| 指令                | 範例                   | 描述                                                                                                                                       |
-| --------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| git rebase -i<base> | `git rebase -i <base>` | Interactively rebase current branch onto<base>. Launches editor to enter commands for how each commit will be transferred to the new base. |
+| 指令                | 範例                   | 描述                                                                                                 |
+| --------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------ |
+| git rebase -i<base> | `git rebase -i <base>` | 用非互動的方式將現在的分支嫁接到其他分支。另外啟動文字編輯器提供輸入每次提交時如何轉移到新的分支上。 |
 
 ### Git Pull
 
 
-| 指令                      | 範例                         | 描述                                                                                                                                       |
-| --------------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| git pull --rebase<remote> | `git pull --rebase <remote>` | Fetch the remote’s copy of current branch and rebases it into the local copy. Uses git rebase instead of merge to integrate the branches. |
+| 指令                      | 範例                         | 描述                                           |
+| --------------------------- | ------------------------------ | ------------------------------------------------ |
+| git pull --rebase<remote> | `git pull --rebase <remote>` | 抓取放在遠端的分支並且嫁接在現在的工作目錄上。 |
 
 ### Git Reset
 
