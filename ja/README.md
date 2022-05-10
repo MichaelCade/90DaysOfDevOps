@@ -4,7 +4,7 @@
  <img src="logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
-English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)
+English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md) | [日本語版](ja/README.md)
 
 このリポジトリは、"DevOps "の基礎知識を得るための私の旅を記録するために使用されます。2022年1月1日から3月31日(90日間)にかけて旅をするというアイデアです。
 
