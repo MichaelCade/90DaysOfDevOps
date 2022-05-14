@@ -1,68 +1,67 @@
 ---
-title: '#90DaysOfDevOps - Responsibilities of a DevOps Engineer - Day 2'
+title: '#90DaysOfDevOps - DevOpsエンジニアの責務 - 二日目'
 published: false
-description: 90DaysOfDevOps - Responsibilities of a DevOps Engineer
+description: 90DaysOfDevOps - DevOpsエンジニアの責務
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048699
-date: '2022-04-17T21:15:34Z'
 ---
-## Responsibilities of a DevOps Engineer 
+## DevOpsエンジニアの責務
 
-Hopefully you are coming into this off the back of going through the resources and post on [Day1 of #90DaysOfDevOps](day01.md) 
+希望的には、[#90DaysOfDevOps の一日目](day01.md)のリソースと投稿に目を通した後に、本稿を読んでほしい。
 
-It was briefly touched on in the first post but now we must get deeper into this concept and understand that there are two main parts when creating an application. We have the **Development** part where software developers program the application and test it. Then we have the **Operations** part where the application is deployed and maintained on a server. 
+最初の投稿で簡単に触れましたが、このコンセプトをより深く理解し、アプリケーションを作成する際に2つの主要な部分があることを理解する必要があります。まず、ソフトウェア開発者がアプリケーションをプログラムし、それをテストする**開発**の部分があります。そして、アプリケーションをサーバーにデプロイし、維持する**運用**の部分があります。
 
-## DevOps is the link between the two
+## DevOps は両者をつなぐもの
 
-To get to grips with DevOps or the tasks in which a DevOps engineer would be carrying out we need to understand the tools or the process and overview of those and how they come together. 
+DevOpsやDevOpsエンジニアが行う作業を理解するためには、ツールやプロセス、それらの概要、そしてそれらがどのように組み合わされているかを理解する必要があります。
 
-Everything starts with the application! You will see so much throughout that it is all about the application when it comes to DevOps.
+すべてはアプリケーションから始まる DevOpsに関しては、アプリケーションがすべてであることがよくわかると思います。
 
-Developers will create an application, this can be done with many different technology stacks and lets leave that to the imagination for now as we get into this later. This can also involve many different programming languages, build tools, code repository etc. 
+開発者はアプリケーションを作成します。これは様々なテクノロジースタックを使って行うことができますが、これについては後で説明するので、今は想像にお任せします。また、多くの異なるプログラミング言語、ビルドツール、コードリポジトリなどが含まれることもあります。
 
-As a DevOps engineer you won't be programming the application but having a good understanding of the concepts of how a developer works and the systems, tools and processes they are using is key to success. 
+DevOpsエンジニアとして、あなたはアプリケーションをプログラミングすることはありませんが、開発者がどのように働いているか、彼らが使っているシステム、ツール、プロセスの概念をよく理解していることが成功への鍵となります。
 
-At a very high level you are going to need to know how the application is configured to talk to all of its required services or data services and then also sprinkle a requirement of how this can or should be tested. 
+非常に高いレベルでは、アプリケーションが必要なすべてのサービスやデータサービスと対話するためにどのように構成されるかを知る必要がありますし、これをどのようにテストできるか、またはすべきかの要件も必要です。
 
-The application will need to be deployed somewhere, lets keep it generally simple here and make this a server, doesn't matter where but a server. This is then expected to be accessed by the customer or end user depending on the application that has been created. 
+アプリケーションは、どこかに配置される必要があります。ここでは、一般的にシンプルにして、サーバーとします。このアプリケーションは、作成されたアプリケーションに応じて、顧客やエンドユーザがアクセスすることが期待されます。
 
-This server needs to run somewhere, on-premises, in a public cloud, serverless (Ok I have gone too far, we won't be covering serverless but its an option and more and more enterprises are heading this way) Someone needs to create and configure these servers and get them ready for the application to run. Now this element might land to you as a DevOps engineer to deploy and configure these servers. 
+このサーバーは、オンプレミス、パブリッククラウド、サーバーレス（ここではサーバーレスについては触れませんが、選択肢の一つであり、ますます多くの企業がこの方向に向かっています）など、どこかで実行される必要があります。この要素は、DevOpsエンジニアとして、これらのサーバーをデプロイし、設定するために、あなたに降りかかるかもしれません。
 
-These servers will have to run an Operating System and generally speaking this is going to be Linux but we have a whole section or week where we cover some of the foundational knowledge you should gain here. 
+これらのサーバーはオペレーティング・システムを実行する必要があり、一般的に言えば、これはLinuxになるのですが、このセクションまたは週で、ここで得るべき基礎知識をいくつか取り上げます。
 
-It is also likely that we need to communicate with other services in our network or environment, so we also need to have that level of knowledge around networking and configuring that, this might to some degree also land at the feet of the DevOps engineer. Again we will cover this in more detail in a dedicated section talking all things DNS, DHCP, Load Balancing etc. 
+また、ネットワークや環境内の他のサービスと通信する必要がある場合もあるので、ネットワーキングやその設定に関する知識も必要です。ここでもまた、DNS、DHCP、ロードバランシングなどに関する専門的なセクションでより詳しく説明します。
 
-## Jack of all trades, Master of none 
+## なんでも屋
 
-I will say at this point though, you don't need to be a Network or Infrastructure specialist you need a foundational knowledge of how to get things up and running and talking to each other, much the same as maybe having a foundational knowledge of a programming language but you don't need to be a developer. However you might be coming into this as a specialist in an area and that is a great footing to adapt to other areas. 
+ネットワークやインフラの専門家である必要はありませんが、プログラミング言語の基礎知識は必要ですが、開発者である必要はありません。しかし、ある分野のスペシャリストとして入社すれば、他の分野に適応するための大きな足がかりになるでしょう。
 
-You will also most likely not take over the management of these servers or the application on a daily basis. 
+また、サーバーやアプリケーションの管理を日常的に行うことはほとんどないでしょう。
 
-We have been talking about servers but the likelihood is that your application will be developed to run as containers, Which still runs on a server for the most part but you will also need an understanding of not only virtualisation, Cloud Infrastructure as a Service (IaaS) but also containerisation as well, The focus in these 90 days will be more catered towards containers. 
+これまでサーバーについて説明してきましたが、アプリケーションはコンテナとして動作するように開発される可能性が高いです。それでも大部分はサーバ上で動作しますが、仮想化、IaaS (Cloud Infrastructure as a Service) だけでなく、コンテナ化についても理解する必要があります。
 
-## High Level Overview
+## ハイレベルの概要
 
-On one side we have our developers creating new features and functionality (as well as bug fixes) for the application. 
+一方では、開発者がアプリケーションの新機能（およびバグフィックス）を作成しています。
 
-On the other side we have some sort of environment, infrastructure or servers which are configured and managed to run this application and communicate with all its required services. 
+もう一方では、このアプリケーションを実行し、必要なすべてのサービスと通信するために構成され管理される、ある種の環境、インフラストラクチャ、またはサーバーがあります。
 
-The big question is how do we get those features and bug fixes into our production and make it available to those end users? 
+大きな問題は、これらの機能やバグフィックスをどのように本番環境に導入し、エンドユーザーが利用できるようにするかということです。
 
-How do we release the new application version? This is one of the main tasks for a DevOps engineer, and the important thing here is not to just figure out how to do this once but we need to do this continuously and in an automated, efficient way which also needs to include testing! 
+新しいアプリケーションのバージョンをどのようにリリースするのでしょうか？これはDevOpsエンジニアの主なタスクの1つで、ここで重要なのは、これを1回だけ行う方法を見つけ出すことではなく、継続的に、自動化された効率的な方法で行う必要があり、テストも含める必要があります。
 
-This is where we are going to end this day of learning, hopefully this was useful. Over the next few days we are going to dive a little deeper into some more areas of DevOps and then we will get into the sections that dive deeper into the tooling and processes and the benefits of these. 
+ここで、今日の学習を終了します。これが役に立つことを願っています。次の数日間で、DevOpsのいくつかの領域をもう少し深く掘り下げていきます。そして、ツールやプロセス、これらの利点について深く掘り下げたセクションに入ります。
 
-## Resources 
+## 参考情報
 
-I am always open to adding additional resources to these readme files as it is here as a learning tool.  
+このReadmeファイルは学習用として用意したものなので、いつでも追加リソースを受け付けています。
+私のアドバイスは、以下のビデオをすべて見ること、そして上記のテキストや説明から何かを感じ取っていただけることを願っています。
 
-My advice is to watch all of the below and hopefully you also picked something up from the text and explanations above. 
 - [What is DevOps? - TechWorld with Nana](https://www.youtube.com/watch?v=0yWAtQ6wYNM)
 - [What is DevOps? - GitHub YouTube](https://www.youtube.com/watch?v=kBV8gPVZNEE)
 - [What is DevOps? - IBM YouTube](https://www.youtube.com/watch?v=UbtB4sMaaNM)
 - [What is DevOps? - AWS ](https://aws.amazon.com/devops/what-is-devops/)
 - [What is DevOps? - Microsoft](https://docs.microsoft.com/en-us/devops/what-is-devops)
 
-If you made it this far then you will know if this is where you want to be or not. See you on [Day 3](day03.md).  
+ここまで来れば、ここが自分の望むところかどうかが分かるはずです。それでは、[3日目](day03.md)でお会いしましょう。
