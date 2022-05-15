@@ -33,7 +33,7 @@ When you are in your directory then you can simply run `vagrant up` and if all i
 
 ![](Images/Day52_Kubernetes2.png)
 
-From the above you can see that we are going to build out 3 virtual machines, we will have a control plane node and then two worker nodes. If you head back to [Day 49](Days/day49.md) You will see some more description on these areas we see in the image. 
+From the above you can see that we are going to build out 3 virtual machines, we will have a control plane node and then two worker nodes. If you head back to [Day 49](day49.md) You will see some more description on these areas we see in the image. 
 
 Also in the image we indicate that our kubectl access will come from outside of the cluster and hit that kube apiserver when in fact as part of the vagrant provisioning we are deploying kubectl on each of these nodes so that we can access the cluster from within each of our nodes. 
 
