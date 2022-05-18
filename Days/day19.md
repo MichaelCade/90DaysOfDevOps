@@ -152,7 +152,7 @@ We might also use bash scripting to determine information about files and folder
 - `-d file` True if the file is a directory
 - `-e file` True if the file exists
 - `-f file` True if the provided string is a file 
-- `g file` True if the group id is set on a file
+- `-g file` True if the group id is set on a file
 - `-r file` True if the file is readable
 - `-s file` True if the file has a non-zero size
 
