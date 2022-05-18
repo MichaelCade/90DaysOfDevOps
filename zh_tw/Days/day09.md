@@ -7,18 +7,19 @@ cover_image: null
 canonical_url: null
 id: 1048732
 ---
-## Let's explain the Hello World code
+## 讓我們解釋一下 Hello World 編碼
 
-### How Go works 
+### GO程式語言如何運作 
 
-On [Day 8](day08.md) we walked through getting Go installed on your workstation and we then created our first Go application. 
+在第 8 天，我們瀏覽了您在工作站上安裝 Go 的過程，然後我們創建了我們第一個 Go的應用程序。 
  
-In this section, we are going to take a deeper look into the code and understand a few more things about the Go language. 
+在本章節中，我們將更深入地研究代碼並了解更多關於 Go 程式語言的內容。
 
-### What is Compiling?
-Before we get into the [6 lines of the Hello World code](Go/hello.go) we need to have a bit of an understanding about compiling.
+### 什麼是編譯？ 
+在我們進入第6行Hello World代碼之前，[6 lines of the Hello World code](Go/hello.go) 我們必需要對編譯有一點了解。 
 
-Programming languages that we commonly use such as Python, Java, Go and C++ are high-level languages. Meaning they are human-readable but when a machine is trying to execute a program it needs to be in a form that a machine can understand. We have to translate our human-readable code to machine code which is called compiling. 
+像我們常用的Python, Java, Go and C++編程語言都是高階的程試語言。
+這意味著它們是人類可辨別的，但是當機器嘗試執行程序時，它需要採用機器可以理解的形式。我們必須將人類可辨別的代碼翻譯成為機器代碼這就稱為編譯。 
 
 ![](Images/Day9_Go1.png)
 
