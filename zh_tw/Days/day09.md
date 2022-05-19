@@ -23,10 +23,11 @@ id: 1048732
 
 ![](Images/Day9_Go1.png)
 
-From the above you can see what we did on [Day 8](day08.md) here, we created a simple Hello World main.go and we then used the command `go build main.go` to compile our executable. 
+從上面你可以看到我們在第 8 天做了什麼 [Day 8](day08.md)，我們創建了一個簡單的 Hello World main.go檔然後我們使用指令 `go build main.go` 來編譯我們可執行的檔案。 
 
-### What are packages?
-A package is a collection of source files in the same directory that are compiled together. We can simplify this further, a package is a bunch of .go files in the same directory. Remember our Hello folder from Day 8? If and when you get into more complex Go programs you might find that you have folder1 folder2 and folder3 containing different .go files that make up your program with multiple packages. 
+### 什麼是套件？
+套件是在同一目錄中收藏的源碼檔所形成的編譯。我們可以進一步簡化這一點，一個套件是在同一個目錄底下的一堆.go檔案。還記得第 8 天的 Hello 文件檔嗎？如果當您進入更複雜的 Go 程式語言時，您可能會發現你有文件1、文件2、文件3與許多套件所編輯而成的數個.go檔案。 
+
 
 We use packages so we can reuse other peoples code, we don't have to write everything from scratch. Maybe we are wanting a calculator as part of our program, you could probably find an existing Go Package that contains the mathematical functions that you could import into your code saving you a lot of time and effort in the long run.  
 
