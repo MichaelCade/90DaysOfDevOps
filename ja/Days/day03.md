@@ -1,79 +1,82 @@
 ---
-title: '#90DaysOfDevOps - Application Focused - Day 3'
+title: '#90DaysOfDevOps - アプリケーションフォーカス - 3日目'
 published: false
-description: 90DaysOfDevOps - Application Focused
+description: 90DaysOfDevOps - アプリケーションフォーカス
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048825
 ---
-## DevOps Lifecycle - Application Focused
+## DevOps ライフサイクル - アプリケーションフォーカス
+もしあなたがDevOpsエンジニアの役割を目指しているのであれば、繰り返し行うことに慣れるでしょうが、毎回常に向上させることは、物事を面白く保つもう1つのポイントです。
 
-As we continue through these next few weeks we are 100% going to come across these titles (Continuous Development, Testing, Deployment, Monitor) over and over again, If you are heading towards the DevOps Engineer role then repeatability will be something you will get used to but constantly enhancing each time is another thing that keeps things interesting. 
+この時間では、アプリケーションの開始から終了までのハイレベルなビューを見て、一定のループのように戻ってくることにします。
 
-In this hour we are going to take a look at the high level view of the application from start to finish and then back round again like a constant loop. 
+### 開発
 
-### Development 
-Let's take a brand new example of an Application, to start with we have nothing created, maybe as a developer you have to discuss with your client or end user on the requirements and come up with some sort of plan or requirements for your Application. We then need to create from the requirements our brand new application. 
+開発者として、クライアントやエンドユーザーと要件について話し合い、アプリケーションのためのある種の計画や要件を考え出さなければならないかもしれません。次に、要件から新しいアプリケーションを作成する必要があります。
 
-In regards to tooling at this stage there is no real requirement here other than choosing your IDE and the programming language you wish to use to write your application. 
+この段階では、IDEとアプリケーションを書くのに使いたいプログラミング言語を選択する以外には、ツールに関する本当の要件はありません。
 
-As a DevOps engineer, remember you are probably not the one creating this plan or coding the application for the end user, this will be a skilled developer. 
+DevOpsエンジニアとして、あなたはおそらくこの計画を作成したり、エンド・ユーザーのためにアプリケーションをコーディングしたりする人ではないことを忘れないでください。
 
-But it also would not hurt for you to be able to read some of the code so that you can make the best infrastructure decisions moving forward for your application.
+しかし、アプリケーションのために前進する最適なインフラストラクチャの決定を行うことができるように、コードの一部を読むことができても問題ないでしょう。
 
-We previously mentioned that this application can be written in any language. Importantly this should be maintained using a version control system, this is something we will cover also in detail later on and in particular we will dive into **Git**. 
+このアプリケーションはどのような言語でも書けることは前述しました。重要なのは、バージョン管理システムを使って保守することです。これは後ほど詳しく説明し、特に **Git** について掘り下げます。
 
-It is also likely that it will not be one developer working on this project although this could be the case but even so best practices would require a code repository to store and collaborate on the code, this could be private or public and could be hosted or privately deployed generally speaking you would hear the likes of **GitHub or GitLab** being used as a code repository. Again we will cover these as part of our section on **Git** later on. 
+また、このプロジェクトに取り組む開発者は一人ではないと思われますが、それでもベストプラクティスでは、コードを保存して共同作業するためのコードリポジトリが必要です。これはプライベートでもパブリックでもよく、ホスティングでもプライベートでも展開できます。後ほど、**Git**のセクションの一部として、これらもカバーします。
 
 
-### Testing 
-At this stage we have our requirements and we have our application being developed. But we need to make sure we are testing our code in all the various different environments that we have available to us or specifically maybe to the programming language chosen. 
+### テスト
 
-This phase enables QA to test for bugs, more frequently we see containers being used for simulating the test environment which overall can improve on cost overheads of physical or cloud infrastructure. 
+この段階で、私たちは要件を満たし、アプリケーションを開発することができます。しかし、私たちは、私たちが利用可能なすべての様々な異なる環境、または特に選択したプログラミング言語で私たちのコードをテストしていることを確認する必要があります。
 
-This phase is also likely going to be automated as part of the next area which is Continuous Integration.
+このフェーズでは、QAがバグをテストすることができます。テスト環境のシミュレーションにコンテナが使用されることが多くなり、物理インフラやクラウドインフラのコスト・オーバーヘッドを全体的に改善することができます。
 
-The ability to automate this testing vs 10s,100s or even 1000s of QA engineers having to do this manually speaks for itself, these engineers can focus on something else within the stack to ensure you are moving faster and developing more functionality vs testing bugs and software which tends to be the hold up on most traditional software releases that use a waterfall methodology. 
+このフェーズは、次の継続的インテグレーション（Continuous Integration）の一部として自動化される可能性も高い。
 
-### Integration 
+QAエンジニアが数十人、数百人、あるいは千人単位で手作業でテストを行うのに対して、このテストを自動化できることは、それを物語っています。このエンジニアはスタック内で他のことに集中できるので、ウォーターフォール手法を使用した従来のソフトウェアのリリースで滞りがちだったバグやソフトウェアのテストではなく、より速く、より機能的に開発することが可能になります。
 
-Quite importantly Integration is at the middle of the DevOps lifecycle. It is the practice of in which developers require to commit changes to the source code more frequently. This could be on a daily or weekly basis. 
+### インテグレーション
 
-With every commit your application can go through the automated testing phases and this allows for early detection of issues or bugs before the next phase. 
+インテグレーションは、DevOpsのライフサイクルの中で最も重要なものです。これは、開発者がより頻繁にソースコードに変更をコミットすることを必要とするプラクティスである。これは、日次または週次ベースで可能です。
 
-Now you might at this stage be saying "but we don't create applications, we buy it off the shelf from a software vendor" Don't worry many companies do this and will continue to do this and it will be the software vendor that is concentrating on the above 3 phases but you might want to still adopt the final phase as this will enable for faster and more efficient deployments of your off the shelf deployments. 
+コミットするたびに、アプリケーションは自動テストフェーズを通過することができ、次のフェーズの前に問題やバグを早期に発見することができるようになります。
 
-I would also suggest just having this above knowledge is very important as you might buy off the shelf software today, but what about tomorrow or down the line... next job maybe? 
+この段階で、「でも、うちはアプリケーションを作らずに、ソフトウェアベンダーから既製品を買っています」と言うかもしれません。心配しないでください。多くの企業がそうしていますし、これからもそうするでしょう。
 
-### Deployment 
-Ok so we have our application built and tested against the requirements of our end user and we now need to go ahead and deploy this application into production for our end users to consume. 
+また、このような知識を持つことは非常に重要です。今日は既製のソフトウェアを購入するかもしれませんが、明日やその先...次の仕事ではどうでしょうか？
 
-This is the stage where the code is deployed to the production servers, now this is where things get extremely interesting and it is where the rest of our 86 days dives deeper into these areas. Because different applications require different possibly hardware or configurations. This is where **Application Configuration Management** and **Infrastructure as Code** could play a key part in your DevOps lifecycle. It might be that your application is **Containerised** but also available to run on a virtual machine. Which then also leads us onto platforms like **Kubernetes** which would be orchestrating those containers and making sure you have the desired state available to your end users. 
+### デプロイメント
 
-All of these bold topics we will go into more detail over the next few weeks to get a better foundational knowledge of what they are and when to use them. 
+さて、私たちはアプリケーションを構築し、エンドユーザーの要求に対してテストを行いました。
 
-### Monitoring 
+これは、コードを本番サーバーにデプロイする段階ですが、ここが非常に面白くなるところで、86日間の残りの時間は、これらの領域に深く潜っていきます。なぜなら、アプリケーションによって、必要となるハードウェアや構成が異なるからです。そこで、**アプリケーション構成管理**と**Infrastructure as Code**がDevOpsライフサイクルの中で重要な役割を果たすことになります。アプリケーションは**コンテナ化**されているかもしれませんが、仮想マシン上で実行することも可能です。そして、コンテナをオーケストレーションし、エンドユーザーが望む状態を利用できるようにする **Kubernetes** のようなプラットフォームにもつながっていくのです。
 
-Things are moving fast here and we have our Application that we are continuously updating with new features and functionality and we have our testing making sure no gremlins are being found. We have the application running in our environment that can be continually keeping the required configuration and performance. 
+これらの大胆なトピックはすべて、今後数週間でさらに詳しく説明し、それらが何であり、どのような場合に使用するのかについての基礎知識を深めていきます。
 
-But now we need to be sure that our end users are getting the experience they require. Here we need to make sure that our Application Performance is continuously being monitored, this phase is going to allow your developers to make better decisions about enhancements to the application in future releases to better serve the end users. 
+### モニタリング
 
-This section is also where we are going to capture that feedback wheel about the features that have been implemented and how the end users would like to make these better for them. 
+私たちは、新しい機能や特徴を持つアプリケーションを継続的に更新し、グレムリンが発見されていないことを確認するためのテストを行っています。必要な構成とパフォーマンスを継続的に維持できる環境で、アプリケーションを実行させています。
 
-Reliability is a key factor here as well, at the end of the day we want our Application to be available all the time it is required. This then lends to other **observability, security and data management** areas that should be continuously monitored and feedback can always be used to better enhance, update and release the application continuously. 
+しかし、今度は、エンドユーザーが必要とする体験を得られるかどうかを確認する必要があります。ここでは、アプリケーションのパフォーマンスが継続的に監視されていることを確認する必要があります。このフェーズでは、開発者が将来のリリースでアプリケーションを強化し、エンドユーザにより良いサービスを提供するためのより良い決定を下すことができるようになります。
 
-Some input from the community here specifcally [@_ediri](https://twitter.com/_ediri) mentioned also part of this continous process we should also have the FinOps teams involved. Apps & Data are running and stored somewhere you should be monitoring this continously to make sure if things change from a resources point of view your costs are not causing some major financial pain on your Cloud Bills.
+また、このセクションでは、実装された機能と、エンドユーザがそれらをどのように改善したいかについてのフィードバックの輪を捉えるところでもあります。
 
-I think it is also a good time to bring up the "DevOps Engineer" mentions above, albeit there are many DevOps Engineer positions in the wild that people hold, this is not really the ideal way of positioning the process of DevOps. What I mean is from speaking to others in the community the title of DevOps Engineer should not be the goal for anyone because really any position should be adopting DevOps processes and the culture explained here. DevOps should be used in many different positions such as Cloud-Native engineer/architect, virtualisation admin, cloud architect/engineer, infrastructure admin. This is to name a few but the reason for using DevOps Engineer above was really to highlight the scope or the process used by any of the above positions and more. 
+信頼性はここでも重要な要素です。結局のところ、私たちはアプリケーションが必要とされるときはいつでも利用できるようにしたいのです。これは、継続的に監視されるべき他の**監視性、セキュリティ、およびデータ管理**の分野につながり、フィードバックは常に、アプリケーションを継続的に強化、更新、およびリリースするために使用することができます。
 
-## Resources 
+この継続的なプロセスには、FinOpsチームも関与すべきであると、特に[@_ediri](https://twitter.com/_ediri)はコミュニティからのいくつかの意見に言及しました。アプリとデータはどこかで実行され、保存されています。リソースの観点から物事が変化した場合、そのコストがクラウド請求書に大きな財務的苦痛を与えていないことを確認するために、これを継続的に監視する必要があります。
 
-I am always open to adding additional resources to these readme files as it is here as a learning tool.  
+また、上記の「DevOpsエンジニア」の話を持ち出す良い機会だと思います。世間には多くのDevOpsエンジニアのポジションがありますが、これはDevOpsのプロセスを位置づける上で理想的な方法ではありません。私が言いたいのは、コミュニティの他の人たちと話すと、DevOpsエンジニアという肩書きは誰にとってもゴールではないはずだということです。なぜなら、本当にどんなポジションでも、DevOpsプロセスやここで説明したカルチャーを採用すべきだからです。DevOpsは、Cloud-Nativeエンジニア/アーキテクト、仮想化管理者、クラウドアーキテクト/エンジニア、インフラ管理者など、様々なポジションで使用されるべきものです。これはほんの一例ですが、上記のDevOps Engineerを使用した理由は、上記のポジションやその他のポジションで使用される範囲やプロセスを強調するためです。
+ 無料版のDeepL翻訳（www.DeepL.com/Translator）で翻訳しました。
 
-My advice is to watch all of the below and hopefully you also picked something up from the text and explanations above. 
+## リソース
 
-- [Continuous Development](https://www.youtube.com/watch?v=UnjwVYAN7Ns) I will also add that this is focused on manufacturing but the lean culture can be closely followed with DevOps. 
+このReadmeファイルは学習用として用意したものなので、いつでも追加リソースを受け付けています。
+
+私のアドバイスは、以下のビデオをすべて見ること、そして上記のテキストや説明から何かを感じ取っていただけることを願っています。
+
+- [Continuous Development](https://www.youtube.com/watch?v=UnjwVYAN7Ns) I will also add that this is focused on manufacturing but the lean culture can be closely followed with DevOps.
 - [Continuous Testing - IBM YouTube](https://www.youtube.com/watch?v=RYQbmjLgubM)
 - [Continuous Integration - IBM YouTube](https://www.youtube.com/watch?v=1er2cjUq1UI)
 - [Continuous Monitoring](https://www.youtube.com/watch?v=Zu53QQuYqJ0)
@@ -81,4 +84,4 @@ My advice is to watch all of the below and hopefully you also picked something u
 - [FinOps Foundation - What is FinOps](https://www.finops.org/introduction/what-is-finops/)
 - [**NOT FREE** The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win](https://www.amazon.co.uk/Phoenix-Project-DevOps-Helping-Business-ebook/dp/B00AZRBLHO)
 
-If you made it this far then you will know if this is where you want to be or not. See you on [Day 4](day04.md).  
+ここまで来れば、ここが自分の居場所かどうかが分かるはずです。では、[4日目](day04.md)でお会いしましょう。
