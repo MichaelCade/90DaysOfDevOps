@@ -9,7 +9,7 @@ id: 1048738
 ---
 ## Installing & Configuring Git
 
-Git is a open source, cross platform tool for version control. If you are like me, using Ubuntu or most Linux environments you might find that you already git installed but we are going to run through the install and configuration. 
+Git is a open source, cross platform tool for version control. If you are like me, using Ubuntu or most Linux environments you might find that you already have git installed but we are going to run through the install and configuration. 
 
 Even if you already have git installed on your system it is also a good idea to make sure we are up to date. 
 
