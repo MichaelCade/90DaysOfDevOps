@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Automate tasks with bash scripts - Day 19'
 published: false
 description: 90DaysOfDevOps - Automate tasks with bash scripts
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048774
@@ -25,7 +25,7 @@ I think another thing I am at least hearing is that hands-on scripting questions
 
 As with a lot of things we are covering in this whole 90 days, the only real way to learn is through doing. Hands-on experience is going to help soak all of this into your muscle memory. 
 
-First of all, we are going to need a text editor. On [Day 17](Day17.md) we covered probably the two most common text editors and a little on how to use them. 
+First of all, we are going to need a text editor. On [Day 17](day17.md) we covered probably the two most common text editors and a little on how to use them. 
 
 Let's get straight into it and create our first shell script. 
 
@@ -48,7 +48,7 @@ I sometimes use figlet, a program we installed earlier in the Linux section to c
 
 ![](Images/Day19_Linux1.png)
 
-All of the commands we have been through earlier in this Linux section ([Day15](Day15.md)) could be used here as a simple command to test our script. 
+All of the commands we have been through earlier in this Linux section ([Day15](day15.md)) could be used here as a simple command to test our script. 
 
 Let's add a simple block of code to our script. 
 

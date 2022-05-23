@@ -30,7 +30,7 @@ The application will need to be deployed somewhere, lets keep it generally simpl
 
 This server needs to run somewhere, on-premises, in a public cloud, serverless (Ok I have gone too far, we won't be covering serverless but its an option and more and more enterprises are heading this way) Someone needs to create and configure these servers and get them ready for the application to run. Now this element might land to you as a DevOps engineer to deploy and configure these servers. 
 
-These servers will have to run an Operating System and generally speaking this is going to be Linux but we have a whole section or week where we cover some of the foundational knowledge you should gain here. 
+These servers run an operating system and generally speaking this is going to be Linux but we have a whole section or week where we cover some of the foundational knowledge you should gain here. 
 
 It is also likely that we need to communicate with other services in our network or environment, so we also need to have that level of knowledge around networking and configuring that, this might to some degree also land at the feet of the DevOps engineer. Again we will cover this in more detail in a dedicated section talking all things DNS, DHCP, Load Balancing etc. 
 

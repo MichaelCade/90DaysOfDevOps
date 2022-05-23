@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - The Big Picture: DevOps and Networking - Day 21'
 published: false
 description: 90DaysOfDevOps - The Big Picture DevOps and Networking
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048761
@@ -57,7 +57,7 @@ A logical group of hosts which require similar connectivity.
 
 **Router** facilitate communication between networks. If we said before that a switch looks after communication within a network a router allows us to join these networks together or at least give them access to each other if permitted. 
 
-A router can provide a traffic contol point (security, filtering, redirting) More and more switches also provide some of these functions now. 
+A router can provide a traffic control point (security, filtering, redirecting) More and more switches also provide some of these functions now. 
 
 Routers learn which networks they are attached to. This is known as routes, a routing table is all the networks a router knows about. 
 

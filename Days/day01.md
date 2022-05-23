@@ -44,7 +44,7 @@ DevOps is a set of practices that help to reach the goal of this movement: reduc
 
 Another area we will dive into in this first week is around **The Agile Methodology**. DevOps and Agile are widely adopted together to achieve continuous delivery of your **Application**. 
 
-The high level take away is that a DevOps mindset or culture is about shrinking the long, drawn out software release process from potentially years to being able to drop smaller releases more frequently. The other key fundamental point to understand here is the the responsibility of a DevOps engineer to break down silos between the teams I previously mentioned: Developers, Operations and QA. 
+The high level take away is that a DevOps mindset or culture is about shrinking the long, drawn out software release process from potentially years to being able to drop smaller releases more frequently. The other key fundamental point to understand here is the responsibility of a DevOps engineer to break down silos between the teams I previously mentioned: Developers, Operations and QA. 
 
 From a DevOps perspective, **Development, Testing and Deployment** all land with the DevOps team. 
 
