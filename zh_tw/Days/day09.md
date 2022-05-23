@@ -18,7 +18,7 @@ id: 1048732
 ### 什麼是編譯？ 
 在我們進入第6行Hello World代碼之前[6 lines of the Hello World code](Go/hello.go)，我們必需要對編譯有一點了解。 
 
-像我們常用的Python, Java, Go and C++編程語言都是高階的程試語言。
+像我們常用的Python、 Java、Go和C++編程語言都是高階的程試語言。
 這意味著它們是人類可辨別的，但是當機器嘗試執行程序時，它需要採用機器可以理解的形式。我們必須將人類可辨別的代碼翻譯成為機器代碼這就稱為編譯。 
 
 ![](Images/Day9_Go1.png)
@@ -28,19 +28,18 @@ id: 1048732
 ### 什麼是套件？
 套件是在同一目錄中收藏的源碼檔所形成的編譯。我們可以進一步簡化這一點，一個套件是在同一個目錄底下的一堆.go檔案。還記得第 8 天的 Hello 文件檔嗎？如果當您進入更複雜的 Go 程式語言時，您可能會發現你有文件1、文件2、文件3與許多套件所編輯而成的數個.go檔案。 
 
+我們使用套件所以我們可以重複使用其他人的代碼，我們不必從頭開始編寫所有東西。或許我們想擁有一個從長遠來看可以為你節省大量時間與精力的計算器作為我們編程的一部分，在此你可能會找到現有的一個 Go 套件裡，包含你可以導入到代碼中的數學函數。
 
-We use packages so we can reuse other peoples code, we don't have to write everything from scratch. Maybe we are wanting a calculator as part of our program, you could probably find an existing Go Package that contains the mathematical functions that you could import into your code saving you a lot of time and effort in the long run.  
+Go 程式語言鼓勵您將代碼統整在套件中，以便於重新使用和維護源代碼。
 
-Go encourages you to organise your code in packages so that it is easy to reuse and maintain source code. 
-
-### Hello #90DaysOfDevOps Line by Line 
-Now let's take a look at our Hello #90DaysOfDevOps main.go file and walk through the lines. 
+### Hello #90DaysOfDevOps 並行 
+現在讓我們看一下我們的 Hello #90DaysOfDevOps main.go檔並逐行查看。
 
 ![](Images/Day9_Go2.png)
 
-In the first line, you have `package main` which means that this file belongs to a package called main. All .go files need to belong to a package, they should also have `package something` in the opening line. 
+在第一行，你有'main套件'這意味著這個檔案附屬於一個稱作main的資料包。所有.go檔案都必須隸屬於這個套件，它們在初始行應該也有像套件的東西。
 
-A package can be named whatever you wish. We have to call this `main` as this is the starting point of the program that is going to be in this package, this is a rule. (I need to understand more about this rule?)    
+一個套件可以任意命名。我們必須在編程的一開頭就下'main'的指令，此動作將會在此套件運行，這就是規則。（還有需要再更加了解的嗎?）
 
 ![](Images/Day9_Go3.png)
 
