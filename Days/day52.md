@@ -23,7 +23,7 @@ I am going to be using a baseline this [blog and repository](https://devopscube.
 
 ### Kubernetes Lab environment 
 
-I have uploaded in [Kubernetes folder](days/kubernetes) the vagrantfile that we will be using to build out our environment. Grab this and navigate to this directory in your terminal. I am again using Windows so I will be using PowerShell to perform my workstation commands with vagrant. If you do not have vagrant then you can use arkade, we covered this yesterday when installing minikube and other tools. A simple command `arkade get vagrant` should see you download and install the latest version of vagrant. 
+I have uploaded in [Kubernetes folder](Kubernetes) the vagrantfile that we will be using to build out our environment. Grab this and navigate to this directory in your terminal. I am again using Windows so I will be using PowerShell to perform my workstation commands with vagrant. If you do not have vagrant then you can use arkade, we covered this yesterday when installing minikube and other tools. A simple command `arkade get vagrant` should see you download and install the latest version of vagrant. 
 
 When you are in your directory then you can simply run `vagrant up` and if all is configured correctly then you should see the following kick off in your terminal. 
 
@@ -33,7 +33,7 @@ When you are in your directory then you can simply run `vagrant up` and if all i
 
 ![](Images/Day52_Kubernetes2.png)
 
-From the above you can see that we are going to build out 3 virtual machines, we will have a control plane node and then two worker nodes. If you head back to [Day 49](Days/day49.md) You will see some more description on these areas we see in the image. 
+From the above you can see that we are going to build out 3 virtual machines, we will have a control plane node and then two worker nodes. If you head back to [Day 49](day49.md) You will see some more description on these areas we see in the image. 
 
 Also in the image we indicate that our kubectl access will come from outside of the cluster and hit that kube apiserver when in fact as part of the vagrant provisioning we are deploying kubectl on each of these nodes so that we can access the cluster from within each of our nodes. 
 
