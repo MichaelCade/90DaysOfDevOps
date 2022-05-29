@@ -17,7 +17,7 @@ I would argue that we should have our networking devices configured using infras
 
 ### What is NetDevOps | Network DevOps?
 
-You may also hear the terms Network DevOps or NetDevOps. Maybe you are already a Network engineer and have a great grasp on the network components within the infrastructure you understand the elements used around networking such as DHCP, DNS, NAT etc etc. You will also have a good understanding around the hardware or software defined networking options, switches, routers etc etc. 
+You may also hear the terms Network DevOps or NetDevOps. Maybe you are already a Network engineer and have a great grasp on the network components within the infrastructure you understand the elements used around networking such as DHCP, DNS, NAT etc etc. You will also have a good understanding around the hardware or software defined networking options, switches, routers etc. 
 
 But if you are not a network engineer then we probably need to get a foundational knowledge across the board on some of those areas so that we can understand the end goal of Network DevOps. 
 
