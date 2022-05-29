@@ -1,99 +1,98 @@
 ---
-title: '#90DaysOfDevOps - DevOps & Agile - Day 4'
+title: '#90DaysOfDevOps - DevOps & アジャイル - 四日目'
 published: false
-description: 90DaysOfDevOps - DevOps & Agile
+description: 90DaysOfDevOps - DevOps & アジャイル
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048700
 ---
 
-## DevOps & Agile
+## DevOps & アジャイル
 
-Do you know the difference between DevOps and Agile? They were formed as standalone concepts. But now the two terms are getting fused.
+DevOpsとアジャイルの違いをご存知でしょうか？これらは独立した概念として形成されていました。しかし、今ではこの2つの用語は融合しつつある。
 
-In this post, we will examine the crucial differences between Agile and DevOps and find out why the two are connected so tightly.
+この記事では、アジャイルとDevOpsの決定的な違いを検証し、なぜこの2つが密接に結びついているのかを探っていきます。
 
-I think a good place to start is understanding a little more about a common angle I have seen in learning this area and that is DevOps vs Agile, even though they have similar goals and processes. In this section, I am going to summarise this hopefully.
+私がこの分野を学ぶ上でよく目にする角度、それはDevOps vs アジャイルで、両者は同じような目標とプロセスを持っているにもかかわらず、もう少し理解することから始めると良いと思います。このセクションでは、このことを希望的にまとめていこうと思います。
 
-Let's start with definitions.
+まず、定義から始めましょう。
 
-### Agile Development
 
-Agile is an approach that focuses on delivering small results faster rather than releasing one big interaction of the product; software is developed in iterations. The team releases a new version every week or month with incremental updates. The final goal of Agile is to deliver an optimal experience to the end-users.
+### アジャイル開発
+
+アジャイルは、製品の1つの大きなインタラクションをリリースするのではなく、小さな成果をより早く提供することに焦点を当てたアプローチであり、ソフトウェアはイテレーションで開発される。チームは、毎週または毎月、インクリメンタルアップデートで新バージョンをリリースします。アジャイルの最終目標は、エンドユーザーに最適なエクスペリエンスを提供することです。
 
 ### DevOps
 
-We have been covering this for the past few days with a few different ways of describing the end goals of DevOps. DevOps usually describes software development
-and delivery practices based on cooperation between software developers and operations specialists. The main DevOps benefits are delivering a simplified development process and minimising miscommunication.
+ここ数日、DevOpsの最終目標を説明するいくつかの異なる方法で、これを取り上げてきました。DevOpsは通常、ソフトウェア開発者と運用スペシャリストの協力に基づくソフトウェア開発とデリバリープラクティスを説明するものです。DevOpsの主な利点は、簡素化された開発プロセスを提供し、ミスコミュニケーションを最小限に抑えることです。
 
-## What is the difference between Agile and DevOps
+## アジャイルとDevOpsの違いとは
 
-The difference is mainly the preoccupations. Agile and DevOps have different preoccupations but they are helping each other. Agile wants short iteration, which is only possible with the automation that DevOps brings. Agile wants the customer to try a specific version and quickly give feedback which is only possible if DevOps make the creation of new environment easy.
+その違いは、主に先入観です。アジャイルとDevOpsは、それぞれ異なる関心事を持っていますが、互いに助け合っているのです。アジャイルは短いイテレーションを求めますが、それはDevOpsがもたらす自動化によってのみ可能になります。アジャイルは、顧客が特定のバージョンを試し、すぐにフィードバックを得られることを望んでいるが、これはDevOpsが新しい環境の作成を容易にする場合にのみ可能です。
 
-### Different participants
+### 参加者が異なる
 
-Agile focuses on optimising communication between end-users and developers while DevOps targets developers and operation team members. We could say that agile is outward-oriented towards customers whereas DevOps is a set of internal practices.
+アジャイルはエンドユーザーと開発者のコミュニケーションの最適化に焦点を当て、DevOpsは開発者と運用チームメンバーを対象としています。アジャイルは顧客に対して外向きであるのに対し、DevOpsは社内向けのプラクティスの集合体であるとも言えます。
 
-### Team
+### チーム
 
-Agile usually applies to software developers and project managers. The competencies of DevOps engineers lie in the intersection of development, QA (quality assurance) and operations as they are involved in all stages of the product cycle and are part of the Agile team.
+アジャイルは通常、ソフトウェア開発者とプロジェクトマネージャに適用されます。DevOpsエンジニアのコンピテンシーは、製品サイクルの全段階に関わり、アジャイルチームの一員であることから、開発、QA（品質保証）、運用が交差するところにあります。
 
-### Applied Frameworks
+### 応用フレームワーク
 
-Agile has a lot of management frameworks to achieve flexibility and transparency: Scrum > Kanban > Lean > Extreme > Crystal > Dynamic > Feature-Driven. DevOps focuses on the development approach in collaboration but doesn't offer specific methodologies. However, DevOps promote practices like Infrastructure as Code, Architecture as Code, Monitoring, Self Healing, end to end test automation ... But per se this is not a framework, rather practices.
+アジャイルには、柔軟性と透明性を実現するために、多くのマネジメントフレームワークがあります。スクラム＞カンバン＞リーン＞エクストリーム＞クリスタル＞ダイナミック＞フィーチャードリブン。DevOpsは、コラボレーションによる開発アプローチに焦点を当てていますが、特定の方法論を提供しているわけではありません。しかし、DevOpsは、Infrastructure as Code、Architecture as Code、モニタリング、セルフヒーリング、エンドツーエンドのテスト自動化などのプラクティスを推進している。しかし、それ自体はフレームワークではなく、むしろプラクティスです。
 
-### Feedback
+### フィードバック
 
-In Agile the main source of feedback is the end-user while in DevOps the feedback from stakeholders and the team itself has a higher priority.
+アジャイルではエンドユーザーが主なフィードバック元ですが、DevOpsではステークホルダーやチーム自身からのフィードバックがより優先されます。
 
-### Target areas
+### 対象領域
 
-Agile focuses on software development more than on deployment and maintenance. DevOps focuses on software development as well but its values and tools also cover deployment and post-release stages like monitoring, high availability, security and data protection.
+アジャイルは、デプロイメントやメンテナンスよりも、ソフトウェア開発に重点を置いています。DevOpsはソフトウェア開発にも焦点を当てていますが、その価値観やツールはデプロイメントやモニタリング、高可用性、セキュリティ、データ保護などのリリース後の段階も対象としています。
 
-### Documentation
+### ドキュメンテーション
 
-Agile prioritises flexibility and tasks at hand over documentation and monitoring. DevOps on the other hand regards project documentation as one of the essential project components.
+アジャイルは、文書化や監視よりも、柔軟性や目の前の作業を優先します。一方、DevOpsでは、プロジェクトのドキュメンテーションをプロジェクトの重要な構成要素の1つとみなしています。
 
-### Risks
+### リスク
 
-Agile risks derive from the flexibility of the methodology. Agile projects are difficult to predict or evaluate as priorities and requirements are continually changing.
+アジャイルのリスクは、その手法の柔軟性に由来する。アジャイルプロジェクトは、優先順位と要件が絶えず変化するため、予測や評価が困難です。
 
-DevOps risks derive from a misunderstanding of the term and the lack of suitable tools. Some people see DevOps as a collection of software for the deployment and continuous integration failing to change the underlying structure of the development process.
+DevOpsのリスクは、この用語の誤解と適切なツールの欠如に由来する。一部の人々は、DevOpsをデプロイと継続的統合のためのソフトウェアの集合体であり、開発プロセスの根本的な構造を変更することはできないと見ています。
 
-### The Tools Used
+### 使用ツール
 
-Agile tools are focused on management communication collaboration, metrics and feedback processing. The most popular agile tools include JIRA, Trello, Slack, Zoom, SurveyMonkey and others.
+アジャイルツールは、管理コミュニケーションコラボレーション、メトリクス、フィードバック処理に重点を置いています。最も人気のあるアジャイルツールには、JIRA、Trello、Slack、Zoom、SurveyMonkeyなどがあります。
 
-DevOps uses tools for team communication, software development, deployment and integration like Jenkins, GitHub Actions, BitBucket, etc. Even though agile and DevOps have slightly different focuses and scopes the key values are almost identical, therefore you can combine the two.
+DevOpsは、Jenkins、GitHub Actions、BitBucketなど、チームコミュニケーション、ソフトウェア開発、デプロイメント、統合のためのツールを使用します。アジャイルとDevOpsは、フォーカスやスコープが若干異なるものの、重要な価値はほぼ同じであるため、この2つを組み合わせることが可能です。
 
-## Bring it all together… good idea or not? Discuss?
+## 全部まとめて...良いアイデアかどうか？議論する？
 
-The combination of Agile and DevOps brings the following benefits you will get:
+アジャイルとDevOpsの組み合わせは、あなたが得られる次のようなメリットをもたらします。
 
--   Flexible management and powerful technology.
--   Agile practices help DevOps teams to communicate their priorities more efficiently.
--   The automation cost that you have to pay for your DevOps practices is justified by your agile requirement of deploying quickly and frequently.
--   It leads to strengthening: the team adopting agile practices will improve collaboration, increase the team's motivation and decrease employee turnover rates.
--   As a result, you get better product quality.
+- 柔軟なマネジメントと強力なテクノロジー。
+- アジャイルプラクティスは、DevOpsチームが優先順位をより効率的に伝えるのに役立ちます。
+- DevOpsプラクティスのために支払わなければならない自動化コストは、迅速かつ頻繁にデプロイするというアジャイルの要件によって正当化される。
+- 強化につながる：アジャイルプラクティスを採用したチームは、コラボレーションを改善し、チームのモチベーションを高め、従業員の離職率を低下させることができます。
+- その結果、より良い製品品質を得ることができる。
 
-Agile allows coming back to previous product development stages to fix errors and prevent the accumulation of technical debt. To adopt agile and DevOps
-simultaneously just follow 7 steps:
+アジャイルでは、以前の製品開発段階まで戻ってエラーを修正し、技術的負債の蓄積を防ぐことができます。アジャイルとDevOpsを同時に採用するには、7つのステップを踏むだけです。
 
-1. Unite the development and operation teams.
-2. Create build and run teams, all development and operational concerns are discussed by the entire DevOps team.
-3. Change your approach to sprints, and assign priority ratings to offer DevOps tasks that have the same value than development tasks. Encourage development and operations teams to exchange their opinion on other teams workflow and possible issues.
-4. Include QA in all development stages.
-5. Choose the right tools.
-6. Automate everything you can.
-7. Measure and control by using tangible numeric deliverables.
+1. 開発チームと運用チームを統合する
+2. ビルドと実行のチームを作り、開発と運用に関するすべての問題をDevOpsチーム全体で議論する
+3. スプリントへのアプローチを変更し、開発タスクと同じ価値を持つDevOpsタスクを提供するために、優先順位の評価を割り当てる。開発チームと運用チームが、他のチームのワークフローや考えられる問題について意見交換することを奨励する
+4. QAをすべての開発ステージに含める
+5. 適切なツールを選択する
+6. できることはすべて自動化する
+7. 具体的な数値化された成果物を用いて、測定と管理を行う
 
-What do you think? Do you have different views? I want to hear from Developers, Operations, QA or anyone that has a better understanding of Agile and DevOps that can pass comments and feedback on this?
+いかがでしょうか？異なる見解を持っていますか？開発者、オペレーション、QA、あるいは、アジャイルとDevOpsをよりよく理解している人からのコメントやフィードバックが欲しいのですが。
 
-### Resources
+### リソース
 
 -   [DevOps for Developers – Day in the Life: DevOps Engineer in 2021](https://www.youtube.com/watch?v=2JymM0YoqGA)
 -   [3 Things I wish I knew as a DevOps Engineer](https://www.youtube.com/watch?v=udRNM7YRdY4)
 -   [How to become a DevOps Engineer feat. Shawn Powers](https://www.youtube.com/watch?v=kDQMjAQNvY4)
 
-If you made it this far then you will know if this is where you want to be or not. See you on [Day 5](day05.md).
+ここまで来れば、ここが自分の望むところかどうかが分かるはずです。[5日目](day05.md)でお会いしましょう。
