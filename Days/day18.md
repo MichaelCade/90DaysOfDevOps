@@ -37,13 +37,13 @@ If we use our client to connect with the correct credentials or SSH key then we 
 
 ### Adding a bridged network adapter to our system
 
-In order for us to use this with our current virtual box VM, we need to add a bridged network adapter to our machine. 
+For us to use this with our current virtual box VM, we need to add a bridged network adapter to our machine. 
 
 Power down your virtual machine, right-click on your machine within Virtual Box and select settings. In the new window then select networking. 
 
 ![](Images/Day18_Linux2.png)
 
-Now power your machine back on and you will now have an IP address on your local machine. You can confirm this with the `ip addr` command. 
+Now power your machine back on and you will now have an IP address on your local machine. You can confirm this with the `IP addr` command. 
 
 ### Confirming SSH server is running
 
@@ -53,13 +53,13 @@ We know SSH is already configured on our machine as we have been using it with v
 
 ![](Images/Day18_Linux3.png)
 
-If your system does not have the SSH server then you can install it by issuing this command `sudo apt install openssh-server` 
+If your system does not have the SSH server then you can install it by issuing this command `sudo apt install OpenSSH-server` 
 
 You then want to make sure that our SSH is allowed if the firewall is running. We can do this with `sudo ufw allow ssh` this is not required on our configuration as we automated this with our vagrant provisioning. 
 
 ### Remote Access - SSH Password 
 
-Now that we have our SSH Server listening out on port 22 for any incoming connection requests and we have added the bridged networking we could use putty or an SSH client on our local machine to connect into our system using SSH. 
+Now that we have our SSH Server listening out on port 22 for any incoming connection requests and we have added the bridged networking we could use putty or an SSH client on our local machine to connect to our system using SSH. 
 
 ![](Images/Day18_Linux4.png)
 
@@ -87,9 +87,9 @@ I am not going to get into what `ed25519` is and means here but you can have a s
 
 ![](Images/Day18_Linux7.png)
 
-At this point we have our created SSH key stored in `C:\Users\micha/.ssh/`
+At this point, we have our created SSH key stored in `C:\Users\micha/.ssh/`
 
-But in order to link this with our Linux VM we need to copy the key. We can do this by using the `ssh-copy-id vagrant@192.168.169.135`
+But to link this with our Linux VM we need to copy the key. We can do this by using the `ssh-copy-id vagrant@192.168.169.135`
 
 I used Powershell to create my keys on my Windows client but there is no `ssh-copy-id` available here. There are ways in which you can do this on Windows and a small search online will find you an alternative, but I will just use git bash on my Windows machine to make the copy. 
 
@@ -111,7 +111,7 @@ there is a line in here with `PasswordAuthentication yes` this will be `#` comme
 
 Not specifically related to what we have just done with SSH above but I wanted to include this as this is again another task that you might find a little daunting but it really should not be. 
 
-We have our Linux playground VM and at this stage, we want to add an apache webserver to our VM so that we can host a simple website from it that serves out to my home network. Note that this web page will not be accessible from the internet, this can be done but it will not be covered here.  
+We have our Linux playground VM and at this stage, we want to add an apache webserver to our VM so that we can host a simple website from it that serves my home network. Note that this web page will not be accessible from the internet, this can be done but it will not be covered here.  
 
 You might also see this referred to as a LAMP stack. 
 
@@ -137,7 +137,7 @@ MySQL is a database in which we will be storing our data for our simple website.
 ### PHP
 PHP is a server-side scripting language, we will use this to interact with a MySQL database. The final installation is to get PHP and dependencies installed using `sudo apt-get install php libapache2-mod-php php-mysql` 
 
-The first configuration change we want to make it out of the box apache is using index.html and we want it to use index.php instead. 
+The first configuration change we want to make out of the box apache is using index.html and we want it to use index.php instead. 
 
 We are going to use `sudo nano /etc/apache2/mods-enabled/dir.conf` and we are going to move index.php to the first item in the list. 
 
@@ -163,8 +163,7 @@ Now navigate to your Linux VM IP again with the additional 90Days.php on the end
 
 ### WordPress Installation
 
-I then walked through this tutorial to get WordPress up on our LAMP stack, some commands are shown below if not shown correctly in the walkthrough [How to install wordpress on Ubuntu with LAMP](https://blog.ssdnodes.com/blog/how-to-install-wordpress-on-ubuntu-18-04-with-lamp-tutorial/)
-
+I then walked through this tutorial to get WordPress up on our LAMP stack, some commands are shown below if not shown correctly in the walkthrough [How to install WordPress on Ubuntu with LAMP](https://blog.ssdnodes.com/blog/how-to-install-wordpress-on-ubuntu-18-04-with-lamp-tutorial/)
 
 `sudo mysql -u root -p`
 
@@ -190,7 +189,7 @@ I then walked through this tutorial to get WordPress up on our LAMP stack, some 
 
 `sudo rm latest.tar.gz`
 
-At this point you are Step 4 in the linked article, you will need to follow the steps to make sure all correct permissions are in place for the WordPress directory. 
+At this point you are in Step 4 in the linked article, you will need to follow the steps to make sure all correct permissions are in place for the WordPress directory. 
 
 Because this is internal only you do not need to "generate security keys" in this step. Move to Step 5 which is changing the Apache configuration to WordPress. 
 
