@@ -15,7 +15,7 @@ We will be using an SSH tunnel to connect to our devices from our client vs teln
 
 ## Access our virtual emulated environment
 
-For us to interact with our switches we either need a workstation inside the EVE-NG network and you can deploy a Linux box there with Python installed to perform your automation ([Resource for setting up Linux inside EVE-NG](https://www.youtube.com/watch?v=3Qstk3zngrY)) or you can do something like me and define a cloud for access from your workstation. 
+For us to interact with our switches we either need a workstation inside the EVE-NG network or you can deploy a Linux box there with Python installed to perform your automation ([Resource for setting up Linux inside EVE-NG](https://www.youtube.com/watch?v=3Qstk3zngrY)) or you can do something like me and define a cloud for access from your workstation. 
 
 ![](Images/Day27_Networking3.png)
 
@@ -25,13 +25,13 @@ To do this, we have right-clicked on our canvas and we have selected network and
 
 However, we do not have anything inside this network so we need to add connections from the new network to each of our devices. (My networking knowledge needs more attention and I feel that you could just do this next step to the top router and then have connectivity to the rest of the network through this one cable?)
 
-I have then logged on to each of our devices and I have run through the following commands for the interfaces applicable for where the cloud comes in. 
+I have then logged on to each of our devices and I have run through the following commands for the interfaces applicable to where the cloud comes in. 
 
 ```
 enable
 config t
 int gi0/0
-ip add dhcp 
+IP add DHCP 
 no sh 
 exit 
 exit
@@ -74,7 +74,7 @@ We can use [netmiko_sendchange.py](Networking/netmiko_sendchange.py) to achieve 
 
 ![](Images/Day27_Networking7.png)
 
-Now for those that look at the code, you will see the message appears and tells us `sending configuration to device` but there is no confirmation that this has happened to we could add additional code to our script to perform that check and validation on our switch or we could modify our script before to show us this. [netmiko_con_multi_vlan.py](Networking/netmiko_con_multi_vlan.py)
+Now for those that look at the code, you will see the message appears and tells us `sending configuration to device` but there is no confirmation that this has happened we could add additional code to our script to perform that check and validation on our switch or we could modify our script before to show us this. [netmiko_con_multi_vlan.py](Networking/netmiko_con_multi_vlan.py)
 
 ![](Images/Day27_Networking8.png)
 
