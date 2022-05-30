@@ -29,11 +29,11 @@ and delivery practices based on cooperation between software developers and oper
 
 ## What is the difference between Agile and DevOps
 
-The difference is mainly the preoccupations. Agile and DevOps have different preoccupations but they are helping each other. Agile wants short iteration, which is only possible with the automation that DevOps brings. Agile wants the customer to try a specific version and quickly give feedback which is only possible if DevOps make the creation of new environment easy.
+The difference is mainly the preoccupations. Agile and DevOps have different preoccupations but they are helping each other. Agile wants short iteration, which is only possible with the automation that DevOps brings. Agile wants the customer to try a specific version and quickly give feedback which is only possible if DevOps make the creation of a new environment easily.
 
 ### Different participants
 
-Agile focuses on optimising communication between end-users and developers while DevOps targets developers and operation team members. We could say that agile is outward-oriented towards customers whereas DevOps is a set of internal practices.
+Agile focuses on optimising communication between end-users and developers while DevOps targets developers and operation, team members. We could say that agile is outward-oriented toward customers whereas DevOps is a set of internal practices.
 
 ### Team
 
@@ -41,7 +41,7 @@ Agile usually applies to software developers and project managers. The competenc
 
 ### Applied Frameworks
 
-Agile has a lot of management frameworks to achieve flexibility and transparency: Scrum > Kanban > Lean > Extreme > Crystal > Dynamic > Feature-Driven. DevOps focuses on the development approach in collaboration but doesn't offer specific methodologies. However, DevOps promote practices like Infrastructure as Code, Architecture as Code, Monitoring, Self Healing, end to end test automation ... But per se this is not a framework, rather practices.
+Agile has a lot of management frameworks to achieve flexibility and transparency: Scrum > Kanban > Lean > Extreme > Crystal > Dynamic > Feature-Driven. DevOps focuses on the development approach in collaboration but doesn't offer specific methodologies. However, DevOps promote practices like Infrastructure as Code, Architecture as Code, Monitoring, Self Healing, end to end test automation ... But per se this is not a framework, but rather practice.
 
 ### Feedback
 
@@ -82,7 +82,7 @@ simultaneously just follow 7 steps:
 
 1. Unite the development and operation teams.
 2. Create build and run teams, all development and operational concerns are discussed by the entire DevOps team.
-3. Change your approach to sprints, and assign priority ratings to offer DevOps tasks that have the same value than development tasks. Encourage development and operations teams to exchange their opinion on other teams workflow and possible issues.
+3. Change your approach to sprints, and assign priority ratings to offer DevOps tasks that have the same value as development tasks. Encourage development and operations teams to exchange their opinion on other teams' workflow and possible issues.
 4. Include QA in all development stages.
 5. Choose the right tools.
 6. Automate everything you can.
