@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Setting up your DevOps environment for Go & Hello World - Day 8'
 published: false
 description: 90DaysOfDevOps - Setting up your DevOps environment for Go & Hello World
-tags: 'devops, 90daysofdevops, learning'
+tags: 'DevOps, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048857
@@ -21,7 +21,7 @@ If we made it this far you probably know which workstation operating system you 
 
 Also note if you do have an older version of Go installed you will have to remove this before installing, Windows has this built into the installer and will remove and install as one. 
 
-Once finished you should now open a command prompt/terminal and we want to check that we have Go installed. If you do not get the output that we see below then Go is not installed and you will need to retrace your steps. 
+Once finished you should now open a command prompt/terminal and we want to check that we have to Go installed. If you do not get the output that we see below then Go is not installed and you will need to retrace your steps. 
 
 `go version`
 
@@ -35,17 +35,17 @@ Did you check? Are you following along? You will probably get something like the
 
 ![](Images/Day8_Go5.png)
 
-Ok, let's create that directory for ease I am going to use the mkdir command in my powershell terminal. We also need to create 3 folders within the Go folder as you will see also below. 
+Ok, let's create that directory for ease I am going to use the mkdir command in my PowerShell terminal. We also need to create 3 folders within the Go folder as you will see also below. 
 
 ![](Images/Day8_Go6.png)
 
-Now we have Go installed and we have our Go working directory ready for action. We now need an  integrated development environment (IDE) Now there are many out there available that you can use but the most common and the one I use is Visual Studio Code or Code. You can learn more about IDEs [here](https://www.youtube.com/watch?v=vUn5akOlFXQ). 
+Now we have to Go installed and we have our Go working directory ready for action. We now need an integrated development environment (IDE) Now there are many out there available that you can use but the most common and the one I use is Visual Studio Code or Code. You can learn more about IDEs [here](https://www.youtube.com/watch?v=vUn5akOlFXQ). 
 
 If you have not downloaded and installed VSCode already on your workstation then you can do so by heading [here](https://code.visualstudio.com/download). As you can see below you have your different OS options. 
 
 ![](Images/Day8_Go7.png)
 
-Much the same as with the Go installation we are going to download and install and keep the defaults. Once complete you can open VSCode and you can select Open File and navigate to our Go directory that we created above. 
+Much the same as with the Go installation we are going to download and install and keep the defaults. Once complete you can open VSCode you can select Open File and navigate to our Go directory that we created above. 
 
 ![](Images/Day8_Go8.png)
 
@@ -55,13 +55,13 @@ Now you should see the three folders we also created earlier as well and what we
 
 ![](Images/Day8_Go9.png)
 
-Pretty easy stuff I would say up till this point? Now we are going to create our first Go Program with no understanding about anything we put in this next phase. 
+Pretty easy stuff I would say up till this point? Now we are going to create our first Go Program with no understanding of anything we put in this next phase. 
 
-Next create a file called `main.go` in your `Hello` folder. As soon as you hit enter on the main.go you will be asked if you want to install the Go extension and also packages you can also check that empty pkg file that we made a few steps back and notice that we should have some new packages in there now? 
+Next, create a file called `main.go` in your `Hello` folder. As soon as you hit enter on the main.go you will be asked if you want to install the Go extension and also packages you can also check that empty pkg file that we made a few steps back and notice that we should have some new packages in there now? 
 
 ![](Images/Day8_Go10.png)
 
-Now let's get this Hello World app going, copy for the following code into your new main.go file and save that. 
+Now let's get this Hello World app going, copy the following code into your new main.go file and save that. 
 
 ```
 package main
@@ -72,7 +72,7 @@ func main() {
     fmt.Println("Hello #90DaysOfDevOps")
 }
 ```
-Now I appreciate that the above might make no sense at all, but we will cover more about functions, packages and more in later days. For now let's run our app. Back in the terminal and in our Hello folder we can now check that all is working. Using the command below we can check to see if our generic learning program is working. 
+Now I appreciate that the above might make no sense at all, but we will cover more about functions, packages and more in later days. For now, let's run our app. Back in the terminal and in our Hello folder we can now check that all is working. Using the command below we can check to see if our generic learning program is working. 
 
 ```
 go run main.go
@@ -102,7 +102,6 @@ Hello #90DaysOfDevOps
 - [**NOT FREE** Nigel Poulton Pluralsight - Go Fundamentals - 3 hours 26 mins](https://www.pluralsight.com/courses/go-fundamentals) 
 - [FreeCodeCamp -  Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s) 
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
-
 
 See you on [Day 9](day09.md).
 
