@@ -9,11 +9,11 @@ id: 1048834
 ---
 ## Linux Commands for DevOps (Actually everyone)
 
-I mentioned it [yesterday](day14.md) that we are going to be spending a lot of time in the terminal with some commands to get stuff done. 
+I mentioned [yesterday](day14.md) that we are going to be spending a lot of time in the terminal with some commands to get stuff done. 
 
 I also mentioned that with our vagrant provisioned VM we can use `vagrant ssh` and gain access to our box. You will need to be in the same directory as we provisioned it from.
 
-For SSH you won't need the username and password, you will only need that if you decide to login to the Virtual Box console. 
+For SSH you won't need the username and password, you will only need that if you decide to log in to the Virtual Box console. 
 
 This is where we want to be as per below: 
 
@@ -21,16 +21,16 @@ This is where we want to be as per below:
 
 ## Commands 
 
-Obviously I cannot cover all the commands here, there are  pages and pages of documentation that cover these but also if you are ever in your terminal and you just need to understand options to a specific command we have the `man` pages short for manual. We can use this to go through each of the commands we touch on during this post to find out more options for each one. We can run `man man` which will give you the help for manual pages. To escape the man pages you should press `q` for quit. 
+I cannot cover all the commands here, there are pages and pages of documentation that cover these but also if you are ever in your terminal and you just need to understand options to a specific command we have the `man` pages short for manual. We can use this to go through each of the commands we touch on during this post to find out more options for each one. We can run `man man` which will give you the help for manual pages. To escape the man pages you should press `q` for quit. 
 
 ![](Images/Day15_Linux2.png)
 ![](Images/Day15_Linux3.png)
 
-`sudo` If you are familar with Windows and the right click `run as administrator` we can think of `sudo` as very much this. When you run a command with this command you will be running it as `root` it will prompt you for the password before running the command. 
+`sudo` If you are familiar with Windows and the right click `run as administrator` we can think of `sudo` as very much this. When you run a command with this command you will be running it as `root` it will prompt you for the password before running the command. 
 
 ![](Images/Day15_Linux4.png)
 
-For one off jobs like installing applications or services you might need that `sudo command` but what if you have several tasks to deal with and you want to live as `sudo` for a while? This is where you can use `sudo su` again the same as `sudo` once entered you will be prompted for your `root` password. In a test VM like ours this is fine but I would find it very hard for us to be rolling around as `root` for prolonged periods, bad things can happen. To get out of this elevated position you simply type in `exit` 
+For one off jobs like installing applications or services, you might need that `sudo command` but what if you have several tasks to deal with and you want to live as `sudo` for a while? This is where you can use `sudo su` again the same as `sudo` once entered you will be prompted for your `root` password. In a test VM like ours, this is fine but I would find it very hard for us to be rolling around as `root` for prolonged periods, bad things can happen. To get out of this elevated position you simply type in `exit` 
 
 ![](Images/Day15_Linux5.png)
 
@@ -38,11 +38,11 @@ I find myself using `clear` all the time, the `clear` command does exactly what 
 
 ![](Images/Day15_Linux6.png)
 
-Let's now look at some commands where we can actually create things within our system and then visualise them in our terminal, first of all we have `mkdir` this will allow us to create a folder in our system. With the following command we can create a folder in our home directory called Day15 `mkdir Day15`
+Let's now look at some commands where we can actually create things within our system and then visualise them in our terminal, first of all, we have `mkdir` which will allow us to create a folder in our system. With the following command, we can create a folder in our home directory called Day15 `mkdir Day15`
 
 ![](Images/Day15_Linux7.png)
 
-With `cd` this allows us to change directory, so for us to move into our newly created directory we can do this with `cd Day15` tab can also be used to autocomplete the directory available. If we want to get back to where we started we can use `cd ..`
+With `cd` this allows us to change the directory, so for us to move into our newly created directory we can do this with `cd Day15` tab can also be used to autocomplete the directory available. If we want to get back to where we started we can use `cd ..`
 
 ![](Images/Day15_Linux8.png)
 
@@ -50,19 +50,19 @@ With `cd` this allows us to change directory, so for us to move into our newly c
 
 ![](Images/Day15_Linux9.png)
 
-I am sure we have all done it where we have navigated to the depths of our file system to a directory and not known where we are. `pwd` gives us the print out of the working directory, pwd as much as it looks like password it stands for print working directory. 
+I am sure we have all done it where we have navigated to the depths of our file system to a directory and not known where we are. `pwd` gives us the printout of the working directory, pwd as much as it looks like password it stands for print working directory. 
 
 ![](Images/Day15_Linux10.png)
 
-We know how to create folders and directories but how do we create files? We can create files using the `touch` command if we were to run `touch Day15` this would create a file. Ignore `mkdir` we are going see this again later.
+We know how to create folders and directories but how do we create files? We can create files using the `touch` command if we were to run `touch Day15` this would create a file. Ignore `mkdir` we are going to see this again later.
 
 ![](Images/Day15_Linux11.png)
 
-`ls` I can put my house on this, you will use this command so many times, this is going to list the all the files and folders in the current directory. Let's see if we can see that file we just created. 
+`ls` I can put my house on this, you will use this command so many times, this is going to list all the files and folders in the current directory. Let's see if we can see that file we just created. 
 
 ![](Images/Day15_Linux12.png)
 
-How can we find files on our Linux system? `locate` is going to allow us to search our file system. If we use `locate Day15` it will report back that location of the file. Bonus round is that if you know that the file does exist but you get a blank result then run `sudo updatedb` which will index all the files in the file system then run your `locate` again. If you do not have `locate` available to you, you can install it using this command `sudo apt install mlocate` 
+How can we find files on our Linux system? `locate` is going to allow us to search our file system. If we use `locate Day15` it will report back the location of the file. The bonus round is that if you know that the file does exist but you get a blank result then run `sudo updatedb` which will index all the files in the file system then run your `locate` again. If you do not have `locate` available to you, you can install it using this command `sudo apt install mlocate` 
 
 ![](Images/Day15_Linux13.png)
 
@@ -82,7 +82,7 @@ We have looked at moving files around but what if I just want to copy files from
 
 ![](Images/Day15_Linux17.png)
 
-We have created folders and files but we haven't actually put any contents into our folder, we can add contents a few ways but an easy way is `echo` we can also use `echo` to print out a lot of things in our terminal, I personally use echo a lot to print out system variables to know if they are set or not at least. we can use `echo "Hello #90DaysOfDevOps" > Day15` and this will add this to our file. We can also append to our file using `echo "Commands are fun!" >> Day15` 
+We have created folders and files but we haven't put any contents into our folder, we can add contents a few ways but an easy way is `echo` we can also use `echo` to print out a lot of things in our terminal, I use echo a lot to print out system variables to know if they are set or not at least. we can use `echo "Hello #90DaysOfDevOps" > Day15` and this will add this to our file. We can also append to our file using `echo "Commands are fun!" >> Day15` 
 
 ![](Images/Day15_Linux18.png)
 
@@ -110,7 +110,7 @@ You can easily add to your bash_profile:
 ```
 echo 'export HISTTIMEFORMAT="%d-%m-%Y %T "' >> ~/.bash_profile
 ```
-So as useful to allow the history file grow bigger:
+So as useful to allow the history file to grow bigger:
 
 ```
 echo 'export HISTSIZE=100000' >> ~/.bash_profile
@@ -119,7 +119,7 @@ echo 'export HISTFILESIZE=10000000' >> ~/.bash_profile
 
 ![](Images/Day15_Linux21.png)
 
-Need to change your password? `passwd` is going allow us to change our password. Note that when you add your password in like this when it is hidden it will not be shown in `history` however if your command has `-p PASSWORD` then this will be visible in your `history`. 
+Need to change your password? `passwd` is going to allow us to change our password. Note that when you add your password like this when it is hidden it will not be shown in `history` however if your command has `-p PASSWORD` then this will be visible in your `history`. 
 
 ![](Images/Day15_Linux22.png)
 
@@ -131,7 +131,7 @@ Creating a group again requires `sudo` and we can use `sudo groupadd DevOps` the
 
 ![](Images/Day15_Linux24.png)
 
-How do we add users to the `sudo` group, this would be a very rare occassion for this to happen but in order to do this it would be `usermod -a -G sudo NewUser` 
+How do we add users to the `sudo` group, this would be a very rare occasion for this to happen but to do this it would be `usermod -a -G sudo NewUser` 
 
 ### Permissions 
 
@@ -150,7 +150,7 @@ A full list:
 
 You will also see `777` or `775` and these represent the same numbers as the list above but each one represents **User - Group - Everyone**
 
-Let's take a look at our file. `ls -al Day15` you can see the 3 groups mentioned above, user and group has read & write but everyone only has read. 
+Let's take a look at our file. `ls -al Day15` you can see the 3 groups mentioned above, user and group have read & write but everyone only has read. 
 
 ![](Images/Day15_Linux25.png)
 
@@ -162,11 +162,11 @@ What about changing the owner of the file? We can use `chown` for this operation
 
 ![](Images/Day15_Linux27.png)
 
-A command that you will come across is `awk` where this comes in real use is when you have an output that you only need specific data from. like running `who` we get lines with information, but maybe we only need the names. We can run `who | awk '{print $1}'` to get just a list of that first column. 
+A command that you will come across is `awk` which comes in real use when you have an output that you only need specific data from. like running `who` we get lines with information, but maybe we only need the names. We can run `who | awk '{print $1}'` to get just a list of that first column. 
 
 ![](Images/Day15_Linux28.png)
 
-If you are looking to read streams of data from standard input, then generates and executes command lines; meaning it can take output of a command and passes it as argument of another command. `xargs` is a useful tool for this use case. If for example I want a list of all the Linux user accounts on the system I can run. `cut -d: -f1 < /etc/passwd` and get the long list we see below. 
+If you are looking to read streams of data from standard input, then generate and execute command lines; meaning it can take the output of a command and passes it as an argument of another command. `xargs` is a useful tool for this use case. If for example, I want a list of all the Linux user accounts on the system I can run. `cut -d: -f1 < /etc/passwd` and get the long list we see below. 
 
 ![](Images/Day15_Linux29.png)
 
@@ -178,31 +178,13 @@ I didn't mention the `cut` command either, this allows us to remove sections fro
 
 ![](Images/Day15_Linux31.png)
 
-Also to note if you type a command and you are no longer with happy with it and you want to start again just hit control + c and this will cancel that line and start you fresh. 
+Also to note if you type a command and you are no longer happy with it and you want to start again just hit control + c and this will cancel that line and start you fresh. 
 
 ## Resources 
 
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
-- [Linux for hackers (don't worry you don't need be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
+- [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
 See you on [Day16](day16.md)
 
-This is a pretty heavy list already but I can safely say that I have used all of these commands in my day to day, be it from an administering Linux servers or in my Linux Desktop, it is very easy when you are in Windows or macOS to navigate the UI but in Linux Servers they are not there, everything is done through the terminal. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+This is a pretty heavy list already but I can safely say that I have used all of these commands in my day to day, be it from an administering Linux servers or on my Linux Desktop, it is very easy when you are in Windows or macOS to navigate the UI but in Linux Servers, they are not there, everything is done through the terminal. 
