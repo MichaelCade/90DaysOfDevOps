@@ -81,7 +81,7 @@ On Windows, you have C: drive and that is what we consider the root. On Linux we
 
 ![](Images/Day16_Linux11.png)
 
-- `/etc` Likely the most important folder on your Linux system, this is where the majority of your configuration files. 
+- `/etc` Likely the most important folder on your Linux system, this is where the majority of your configuration files are. 
 
 ![](Images/Day16_Linux12.png)
 
@@ -89,7 +89,7 @@ On Windows, you have C: drive and that is what we consider the root. On Linux we
 
 ![](Images/Day16_Linux13.png)
 
-- `/lib` - We mentioned that `/bin` is where our binaries and executables live, `/lib` is where you will find the shared libraries for those. 
+- `/lib` - We mentioned that `/bin` is where our binaries and executables live, and `/lib` is where you will find the shared libraries for those. 
 
 ![](Images/Day16_Linux14.png)
 
