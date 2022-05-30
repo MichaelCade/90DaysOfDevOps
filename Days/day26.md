@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Building our Lab - Day 26'
 published: false
 description: 90DaysOfDevOps - Building our Lab
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048762
