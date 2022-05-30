@@ -13,9 +13,9 @@ Python is the standard language used for automated network operations.
 
 Whilst it is not only for network automation it seems to be everywhere when you are looking for resources and as previously mentioned if it's not Python then it's generally Ansible which is written also in Python. 
 
-I think I have mentioned this already but during the "Learn a programming language" section I chose Golang over Python for reasons around my company are developing in Go so that was a good reason for me to learn but if that was not the case then Python would have taken that time. 
+I think I have mentioned this already but during the "Learn a programming language" section I chose Golang over Python for reasons around my company is developing in Go so that was a good reason for me to learn but if that was not the case then Python would have taken that time. 
 
-- Readability and ease of use - It seems that Python seems to just make sense. There doesn't seem to be the requirements around `{}` in the code to start and end blocks. Couple this with a strong IDE like VS Code you have a pretty easy start when wanting to run some python code. 
+- Readability and ease of use - It seems that Python seems just makes sense. There don't seem to be the requirements around `{}` in the code to start and end blocks. Couple this with a strong IDE like VS Code you have a pretty easy start when wanting to run some python code. 
 
 Pycharm might be another IDE worth mentioning here. 
 
@@ -59,7 +59,7 @@ We are going to do everything on EVE-NG with the community edition.
 
 The community edition comes in ISO and OVF formats for [download](https://www.eve-ng.net/index.php/download/)
 
-We will be using the OVF download but with the ISO there is the option to build out on a bare metal server without the need of a hypervisor. 
+We will be using the OVF download but with the ISO there is the option to build out on a bare metal server without the need for a hypervisor. 
 
 ![](Images/Day25_Networking1.png)
 
@@ -81,11 +81,11 @@ Open VMware Workstation and then select `file` and `open`
 
 ![](Images/Day25_Networking2.png)
 
-When you download the EVE-NG OVF Image it is going to be within a compressed file. Extract the contents out into its folder so it looks like. 
+When you download the EVE-NG OVF Image it is going to be within a compressed file. Extract the contents out into its folder so it looks like this. 
 
 ![](Images/Day25_Networking3.png)
 
-Navigate to the location that you downloaded the EVE-NG OVF image to and begin the import. 
+Navigate to the location where you downloaded the EVE-NG OVF image and begin the import. 
 
 Give it a recognisable name and store the virtual machine somewhere on your system. 
 
@@ -93,7 +93,7 @@ Give it a recognisable name and store the virtual machine somewhere on your syst
 
 When the import is complete increase the number of processors to 4 and the memory allocated to 8 GB. (This should be the case after import with the latest version if not then edit VM settings)
 
-Also, make sure the Virtualise Intel VT-x/EPT or AMD-V/RVI checkbox is enabled. This option instructs VMware workstation to pass the virtualisation flags to the guest OS (nested virtualisation) This was the issue I was having with GNS3 with Virtual Box even though my CPU allows this. 
+Also, make sure the Virtualise Intel VT-x/EPT or AMD-V/RVI checkbox is enabled. This option instructs the VMware workstation to pass the virtualisation flags to the guest OS (nested virtualisation) This was the issue I was having with GNS3 with Virtual Box even though my CPU allows this. 
 
 ![](Images/Day25_Networking5.png)
 
@@ -111,7 +111,7 @@ When you want to go back and use WSL2 then you will need to run this command and
 
 `bcdedit /set hypervisorlaunchtype auto`
 
-Both of these commands should be ran as administrator! 
+Both of these commands should be run as administrator! 
 
 Ok back to the show, You should now have a powered-on machine in VMware Workstation and you should have a prompt looking similar to this. 
 
