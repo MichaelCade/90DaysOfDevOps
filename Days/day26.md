@@ -21,7 +21,7 @@ There is also a client pack that allows us to choose which application is used w
 
 Quick Tip: If you are using Linux as your client then there is this [client pack](https://github.com/SmartFinn/eve-ng-integration).
 
-The install is a straightforward next,next and I would suggest leaving the defaults. 
+The install is straightforward next, next and I would suggest leaving the defaults. 
 
 ### Obtaining network images
 
@@ -53,7 +53,7 @@ Inside the EVE-NG web interface, we are going to create our new network topology
 
 #### Adding our Nodes to EVE-NG
 
-When you first log in to EVE-NG you will see a screen like below, we want to start by creating our first lab. 
+When you first log in to EVE-NG you will see a screen like the below, we want to start by creating our first lab. 
 
 ![](Images/Day26_Networking2.png)
 
