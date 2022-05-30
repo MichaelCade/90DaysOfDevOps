@@ -22,7 +22,7 @@ The output should be similar to mine (with a different username may be) which is
 ```
 /home/michael/projects/go
 ```
-Then within here, we created 3 directories. **src**, **pkg** and **bin** 
+Then here, we created 3 directories. **src**, **pkg** and **bin** 
 
 ![](Images/Day10_Go1.png)
 
@@ -55,7 +55,7 @@ To run our code we first must **compile** it. There are three ways to do this wi
 
 Before we get to the above compile stage we need to take a look at what we get with the Go Installation. 
 
-When we installed Go on Day 8 this installed something known as Go tools which consist of several programs that let us build and process our Go source files. One of the tools is `Go`
+When we installed Go on Day 8 we installed something known as Go tools which consist of several programs that let us build and process our Go source files. One of the tools is `Go`
 
 It is worth noting that you can install additional tools that are not in the standard Go installation. 
 
@@ -67,7 +67,7 @@ You might also remember that we have already used at least two of these tools so
 
 ![](Images/Day10_Go7.png)
 
-The ones we want to learn more about are build, install and run. 
+The ones we want to learn more about are the build, install and run. 
 
 ![](Images/Day10_Go8.png)
 
