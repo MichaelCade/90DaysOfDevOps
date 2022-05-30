@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - The Big Picture: Learning a Programming Language - Day 7'
 published: false
 description: 90DaysOfDevOps - The Big Picture DevOps & Learning a Programming Language
-tags: 'DevOps, 90daysofdevops, learning'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048856
