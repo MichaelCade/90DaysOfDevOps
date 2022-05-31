@@ -72,7 +72,7 @@ Vagrant.configure("2") do |config|
 
    v.cpus    = 4
 
-   v.customize ["modifyvm", :id, "--vram", "128mb"]
+   v.customize ["modifyvm", :id, "--vram", "128"]
 
 end
 
