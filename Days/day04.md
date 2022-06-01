@@ -49,7 +49,7 @@ In Agile the main source of feedback is the end-user while in DevOps the feedbac
 
 ### Target areas
 
-Agile focuses on software development more than on deployment and maintenance. DevOps focuses on software development as well but its values and tools also cover deployment and post-release stages like monitoring, high availability, security and data protection.
+Agile focuses more on software development than deployment and maintenance. DevOps focuses on software development as well but its values and tools also cover deployment and post-release stages like monitoring, high availability, security and data protection.
 
 ### Documentation
 
