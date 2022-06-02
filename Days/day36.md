@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Installing & Configuring Git - Day 36'
 published: false
 description: 90DaysOfDevOps - Installing & Configuring Git
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048738
