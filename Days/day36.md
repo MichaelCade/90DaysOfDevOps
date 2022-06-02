@@ -136,7 +136,7 @@ Some of the major benefits of Git are:
 - Flexible 
 - Safe & Secure
 
-Unlike the Client-Server version control model, each developer downloads the the source repository meaning everything. History of commits, all the branches etc. etc. 
+Unlike the Client-Server version control model, each developer downloads the source repository meaning everything. History of commits, all the branches etc. 
 
 ![](Images/Day36_Git16.png)
 
