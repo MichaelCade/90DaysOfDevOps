@@ -1,7 +1,7 @@
 ---
-title: '#90DaysOfDevOps - The Big Picture: Learning a Programming Language - Day 7'
+title: '#90DaysOfDevOps - 概述：DevOps 与学习一门编程语言 - 第七天'
 published: false
-description: 90DaysOfDevOps - The Big Picture DevOps & Learning a Programming Language
+description: 90DaysOfDevOps - 概述：DevOps 与学习一门编程语言
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
@@ -55,7 +55,7 @@ Go是一个具备非常高性能的语言，它可以快速完成编译，并且
 
 我会说，一旦你学习了你的第一门编程语言，学习其他的语言将变得更简单。你可能不会永远只在一家公司里做一个岗位的工作，你很有可能会接触到管理、架构、编排、调试JavaScript和NodeJS的应用程序。
 
-## Resources
+## 相关资料
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
@@ -65,6 +65,6 @@ Go是一个具备非常高性能的语言，它可以快速完成编译，并且
 - [FreeCodeCamp -  Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s) 
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
 
-Now for the next 6 days of this topic my intention is to work through some of the resources listed above and document my notes for each day. You will notice that they are generally around 3 hours as a full course, I wanted to share my complete list so that if you have time you should move ahead and work through each one if time permits, I will be sticking to my learning hour each day. 
+在未来的6天里，我打算通过上述资料来帮助我组织每天的笔记。你会注意到，它们作为一整个课程通常需要3个小时来了解。我想分享我的完成列表，如果时间允许，你应该去每个链接看看，我也会每天坚持学习。
 
-See you on [Day 8](day08.md). 
+让我们[第八天](day08.md)再见。
