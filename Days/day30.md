@@ -9,11 +9,11 @@ id: 1049039
 ---
 ## Microsoft Azure Security Models
 
-Following on from the Microsoft Azure Overview, we are going to start with Azure Security and see where this can help in our day today. For the most part, I have found the built-in roles have been sufficient but knowing that we can create and work with many different areas of authentication and configurations. I have found Microsoft Azure to be quite advanced with its Active Directory background compared to other public clouds. 
+Following on from the Microsoft Azure Overview, we are going to start with Azure Security and see where this can help in our day to day. For the most part, I have found the built-in roles have been sufficient but knowing that we can create and work with many different areas of authentication and configurations. I have found Microsoft Azure to be quite advanced with its Active Directory background compared to other public clouds. 
 
 ## Microsoft Azure Security Models
 
-This is one area that Microsoft Azure seemingly works differently from other public cloud providers, in Azure there is ALWAYS Azure AD. 
+This is one area in which Microsoft Azure seemingly works differently from other public cloud providers, in Azure there is ALWAYS Azure AD. 
 
 ### Directory Services 
 
@@ -104,7 +104,7 @@ We can also use the check access tab if we want to check an account against this
 
 - Free tier includes continuous assessment and security recommendations.
 
-- Paid plans for protected resources types (e.g. Servers, AppService, SQL, Storage, Containers, KeyVault).
+- Paid plans for protected resource types (e.g. Servers, AppService, SQL, Storage, Containers, KeyVault).
 
 I have switched to another subscription to view the Azure Security Center and you can see here based on very few resources that I have some recommendations in one place. 
 
@@ -112,7 +112,7 @@ I have switched to another subscription to view the Azure Security Center and yo
 
 ### Azure Policy
 
-- Azure Policy is an Azure native service that helps to enforce organizational standards and assess compliance at-scale.
+- Azure Policy is an Azure native service that helps to enforce organizational standards and assess compliance at scale.
 
 - Integrated into Microsoft Defender for Cloud. Azure Policy audits non-compliant resources and applies remediation.
 
@@ -120,7 +120,7 @@ I have switched to another subscription to view the Azure Security Center and yo
 
 - Uses JSON format to store evaluation logic and determine whether a resource is compliant or not, and any actions to take for non-compliance (e.g. Audit, AuditIfNotExists, Deny, Modify, DeployIfNotExists).
 
-- Free for use. The exception being Azure Arc connected resources charged per server/month for Azure Policy Guest Configuration usage.
+- Free for use. The exception is Azure Arc connected resources charged per server/month for Azure Policy Guest Configuration usage.
 
 ### Hands-On
 
@@ -128,15 +128,15 @@ I have gone out and I have purchased www.90DaysOfDevOps.com and I would like to 
 
 ![](Images/Day30_Cloud9.png)
 
-With that now we can create a new user on our new Active Directory Domain. 
+With that now, we can create a new user on our new Active Directory Domain. 
 
 ![](Images/Day30_Cloud10.png)
 
-Now we want to create a group for all of our new 90DaysOfDevOps users in one group. We can create a group as per the below, notice that I am using "Dynamic User" this means Azure AD will query user accounts and add them dynamically vs assigned which is where you manually add the user to your group. 
+Now we want to create a group for all of our new 90DaysOfDevOps users in one group. We can create a group as per the below, notice that I am using "Dynamic User" which means Azure AD will query user accounts and add them dynamically vs assigned which is where you manually add the user to your group. 
 
 ![](Images/Day30_Cloud11.png)
 
-There are lots of options when it comes to creating your query, my plan is to simply find the principal name and make sure that the name contains @90DaysOfDevOps.com. 
+There are lots of options when it comes to creating your query, I plan to simply find the principal name and make sure that the name contains @90DaysOfDevOps.com. 
 
 ![](Images/Day30_Cloud12.png)
 
@@ -148,7 +148,7 @@ I have since added a new user1@90DaysOfDevOps.com and if we go and check the gro
 
 ![](Images/Day30_Cloud14.png)
 
-If we have this requirement x100 then we are not going to want to do this all in the console we are going to want to take advantage of either bulk options to create, invite, delete users or you are going to want to look into PowerShell to achieve this automated approach to scale. 
+If we have this requirement x100 then we are not going to want to do this all in the console we are going to want to take advantage of either bulk options to create, invite, and delete users or you are going to want to look into PowerShell to achieve this automated approach to scale. 
 
 Now we can go to our Resource Group and specify that on the 90DaysOfDevOps resource group we want the owner to be the group we just created. 
 
@@ -156,15 +156,15 @@ Now we can go to our Resource Group and specify that on the 90DaysOfDevOps resou
 
 We can equally go in here and deny assignments access to our resource group as well. 
 
-Now if we login to the Azure Portal with our new user account, you can see that we only have access to our 90DaysOfDevOps resource group and not the others seen in previous pictures because we do not have the access. 
+Now if we log in to the Azure Portal with our new user account, you can see that we only have access to our 90DaysOfDevOps resource group and not the others seen in previous pictures because we do not have the access. 
 
 ![](Images/Day30_Cloud16.png)
 
-The above is great if this is a user that has access to resources inside of your Azure portal but not every user needs to be aware of the portal, but in order to check access we can use the [Apps Portal](https://myapps.microsoft.com/) This is a single sign on portal for us to test. 
+The above is great if this is a user that has access to resources inside of your Azure portal, not every user needs to be aware of the portal, but to check access we can use the [Apps Portal](https://myapps.microsoft.com/) This is a single sign-on portal for us to test. 
 
 ![](Images/Day30_Cloud17.png)
 
-You are able to customise this portal with your own branding and this might be something we come back to later on. 
+You can customise this portal with your branding and this might be something we come back to later on. 
 
 ## Resources 
 

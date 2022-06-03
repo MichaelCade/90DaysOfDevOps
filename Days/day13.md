@@ -9,7 +9,7 @@ id: 1048865
 ---
 ## Tweet your progress with our new App
 
-On the final day of looking into this programming language, we have only just touched the surface here of the language but it is that start that I think we need to get interested and excited and want to dive more into it. 
+On the final day of looking into this programming language, we have only just touched the surface here of the language but it is at that start that I think we need to get interested and excited and want to dive more into it. 
 
 Over the last few days, we have taken a small idea for an application and we have added functionality to it, in this session I want to take advantage of those packages we mentioned and create the functionality for our app to not only give you the update of your progress on screen but also send a tweet with the details of the challenge and your status. 
 
@@ -30,7 +30,7 @@ Give your application a name
 
 ![](Images/Day13_Go3.png)
 
-You will be then given these API tokens, it is important that you save these somewhere secure. (I have since deleted this app) We will need these later with our Go Application. 
+You will be then given these API tokens, you must save these somewhere secure. (I have since deleted this app) We will need these later with our Go Application. 
 
 ![](Images/Day13_Go4.png)
 
@@ -50,7 +50,7 @@ Remember the code we are starting within our application as well [day13_example1
 
 We now need to think about the code to get our output or message to Twitter in the form of a tweet. We are going to be using [go-twitter](https://github.com/dghubble/go-twitter) This is a Go client library for the Twitter API. 
 
-To test this before putting this into our main application, I created a new directory in our `src` folder called go-twitter-bot, issued the `go mod init github.com/michaelcade/go-twitter-bot` on the folder which then created a `go.mod` file and then we can start writing our new main.go and test this out. 
+To test this before putting this into our main application, I created a new directory in our `src` folder called go-twitter-bot, issued the `go mod init github.com/michaelcade/go-Twitter-bot` on the folder which then created a `go.mod` file and then we can start writing our new main.go and test this out. 
 
 We now need those keys, tokens and secrets we gathered from the Twitter developer portal. We are going to set these in our environment variables. This will depend on the OS you are running: 
 

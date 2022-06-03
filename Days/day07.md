@@ -11,7 +11,7 @@ id: 1048856
 
 I think it is fair to say to be successful in the long term as a DevOps engineer you've got to know at least one programming language at a foundational level. I want to take this first session of this section to explore why this is such a critical skill to have, and hopefully, by the end of this week or section, you are going to have a better understanding of the why, how and what to do to progress with your learning journey. 
 
-I think if I was to ask out on social do you need to have programming skills for DevOps related roles, the answer will be most likely a hard yes? Let me know if you think otherwise? Ok but then a bigger question and this is where you won't get such a clear answer is which programming language?  The most common answer I have seen here has been Python or increasingly more often, we're seeing Golang or Go should be the language that you learn. 
+I think if I was to ask out on social do you need to have programming skills for DevOps related roles, the answer will be most likely a hard yes? Let me know if you think otherwise? Ok but then a bigger question and this is where you won't get such a clear answer which programming language?  The most common answer I have seen here has been Python or increasingly more often, we're seeing Golang or Go should be the language that you learn. 
 
 To be successful in DevOps you have to have a good knowledge of programming skills is my takeaway from that at least. But we have to understand why we need it to choose the right path. 
 
@@ -42,7 +42,7 @@ An advantage of using a language like Python that is interpreted in a DevOps rol
 
 ## Go vs Python for DevOps 
 
-Go Programs are statically linked, this means that when you compile a go program everything is included in a single binary executable, no external dependencies will be required that would need to be installed on the remote machine, this makes the deployment of go programs easy, compared to python program that uses external libraries you have to make sure that all those libraries are installed on the remote machine that you wish to run on. 
+Go Programs are statically linked, this means that when you compile a go program everything is included in a single binary executable, and no external dependencies will be required that would need to be installed on the remote machine, this makes the deployment of go programs easy, compared to python program that uses external libraries you have to make sure that all those libraries are installed on the remote machine that you wish to run on. 
 
 Go is a platform-independent language, which means you can produce binary executables for *all the operating systems, Linux, Windows, macOS etc and very easy to do so. With Python, it is not as easy to create these binary executables for particular operating systems. 
 
@@ -52,7 +52,7 @@ Unlike Python which often requires the use of third party libraries to implement
 
 This is by no way throwing Python under the bus I am just giving my reasons for choosing Go but they are not the above Go vs Python it's generally because it makes sense as the company I work for develops software in Go so that is why. 
 
-I will say that once you have or at least I am told as I am not many pages into this chapter right now, is that once you learn your first programming language it becomes easier to take on other languages. You're probably never going to have a single job in any company anywhere where you don't have to deal with manage, architect, orchestrating, debug JavaScript and Node JS applications. 
+I will say that once you have or at least I am told as I am not many pages into this chapter right now, is that once you learn your first programming language it becomes easier to take on other languages. You're probably never going to have a single job in any company anywhere where you don't have to deal with managing, architect, orchestrating, debug JavaScript and Node JS applications. 
 
 ## Resources
 
@@ -64,6 +64,6 @@ I will say that once you have or at least I am told as I am not many pages into 
 - [FreeCodeCamp -  Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s) 
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
 
-Now for the next 6 days of this topic my intention is to work through some of the resources listed above and document my notes for each day. You will notice that they are generally around 3 hours as a full course, I wanted to share my complete list so that if you have time you should move ahead and work through each one if time permits, I will be sticking to my learning hour each day. 
+Now for the next 6 days of this topic, I intend to work through some of the resources listed above and document my notes for each day. You will notice that they are generally around 3 hours as a full course, I wanted to share my complete list so that if you have time you should move ahead and work through each one if time permits, I will be sticking to my learning hour each day. 
 
 See you on [Day 8](day08.md). 

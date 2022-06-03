@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Dev workstation setup - All the pretty things - Day 20'
 published: false
 description: 90DaysOfDevOps - Dev workstation setup - All the pretty things
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048734
@@ -17,7 +17,7 @@ I have put together a YouTube video walking through the rest as some people migh
 
 [![Click to access YouTube Video](Images/Day20_YouTube.png)](https://youtu.be/jeEslAtHfKc)
 
-Out of the box our system will look something like the below: 
+Out of the box, our system will look something like the below: 
 
 ![](Images/Day20_Linux1.png)
 
@@ -28,7 +28,7 @@ We can also see our default bash shell below,
 A lot of this comes down to dotfiles something we will cover in this final Linux session of the series. 
 
 ### dotfiles 
-First up I want to dig into dotfiles, I have said in a previous day that Linux is made up of configuration files. These dotfiles are configuration files for your Linux system and applications. 
+First up I want to dig into dotfiles, I have said on a previous day that Linux is made up of configuration files. These dotfiles are configuration files for your Linux system and applications. 
 
 I will also add that dotfiles are not just used to customise and make your desktop look pretty, there are also dotfile changes and configurations that will help you with productivity. 
 
@@ -59,7 +59,7 @@ I selected `1` to the above question and now we have some more options.
 
 ![](Images/Day20_Linux5.png)
 
-You can see from this menu you we can make some out of the box edits to make ZSH configured to our needs. 
+You can see from this menu that we can make some out of the box edits to make ZSH configured to our needs. 
 
 If you exit the wizard with a `0` and then use the `ls -al | grep .zshrc` you should see we have a new configuration file. 
 
@@ -83,11 +83,11 @@ Let's get Oh My ZSH installed, we have a few options with `curl` `wget` or `fetc
 
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
-When you have run the above command you should see some output like below.
+When you have run the above command you should see some output like the below.
 
 ![](Images/Day20_Linux7.png)
 
- Now we can move on to start putting a theme in for our experience, there are well over 100 bundled with Oh My ZSH but my go to for all of my applications and everything is the dracula theme. 
+ Now we can move on to start putting a theme in for our experience, there are well over 100 bundled with Oh My ZSH but my go-to for all of my applications and everything is the Dracula theme. 
 
  I also want to add that these two plugins are a must when using Oh My ZSH. 
 
@@ -129,23 +129,23 @@ A short list of the programs I install on the machine using `apt`
 
 ### Dracula theme
 
-This site is the only theme I am using at the moment. Looks clear, clean and everything looks great. [Dracula Theme](https://draculatheme.com/) It also has you covered when you have lots of other programs you use on your machine. 
+This site is the only theme I am using at the moment. Looks clear, and clean and everything looks great. [Dracula Theme](https://draculatheme.com/) It also has you covered when you have lots of other programs you use on your machine. 
 
 From the link above we can search for zsh on the site and you will find at least two options. 
 
-Follow the instructions listed to insall either manually or using git. Then you will need to finally edit your `.zshrc` configuration file as per below. 
+Follow the instructions listed to install either manually or using git. Then you will need to finally edit your `.zshrc` configuration file as per below. 
 
 ![](Images/Day20_Linux8.png)
 
 You are next going to want the [Gnome Terminal Dracula theme](https://draculatheme.com/gnome-terminal) with all instructions available here as well. 
 
-It would actually take a long time for me to document each and every step so I created a video walkthrough of the process. (**Click on the image below**)
+It would take a long time for me to document every step so I created a video walkthrough of the process. (**Click on the image below**)
 
 [![](Images/Day20_YouTube.png)](https://youtu.be/jeEslAtHfKc)
 
-If you made it this far, then we have now finished our Linux section of the #90DaysOfDevOps. Once again I am open for feedback and additions to resources here. 
+If you made it this far, then we have now finished our Linux section of the #90DaysOfDevOps. Once again I am open to feedback and additions to resources here. 
 
-I also thought on this it was easier to show you a lot of the steps through video vs writing them down here, what do you think to this? I do have a goal to work back through these days and where possible creating video walkthroughs to add in and better maybe explain and show some of the things we have covered. What do you think? 
+I also thought on this it was easier to show you a lot of the steps through video vs writing them down here, what do you think about this? I do have a goal to work back through these days and where possible create video walkthroughs to add in and better maybe explain and show some of the things we have covered. What do you think? 
 
 ## Resources 
 

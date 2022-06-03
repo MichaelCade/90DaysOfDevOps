@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Text Editors - nano vs vim - Day 17'
 published: false
 description: 90DaysOfDevOps - Text Editors - nano vs vim
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048703
@@ -43,7 +43,7 @@ The first question might be "How do I exit vim?" that is going to be `escape` an
 
 ![](Images/Day17_Linux3.png)
 
-You start in `normal` mode, there are other modes `command, normal, visual, insert` , if we want to add the text we will need to switch from `normal` to `insert` we need to press `i` if you have added some text and would like to save these changes then you would hit escape and then `:wq` 
+You start in `normal` mode, there are other modes `command, normal, visual, insert`, if we want to add the text we will need to switch from `normal` to `insert` we need to press `i` if you have added some text and would like to save these changes then you would hit escape and then `:wq` 
 
 ![](Images/Day17_Linux4.png)
 
@@ -55,7 +55,7 @@ There is some cool fast functionality with vim that allows you to do menial task
 
 ![](Images/Day17_Linux6.png)
 
-Now we want to replace that word with 90DaysOfDevOps, we can do this by hitting `esc` and typing `:%s/Day/90DaysOfDevOps`
+Now we want to replace that word with 90DaysOfDevOps, we can do this by hitting `ESC` and typing `:%s/Day/90DaysOfDevOps`
 
 ![](Images/Day17_Linux7.png)
 
@@ -63,7 +63,7 @@ The outcome when you hit enter is that the word day is then replaced with 90Days
 
 ![](Images/Day17_Linux8.png)
 
-Copy and Paste was a big eye-opener for me. Copy is not copy it is yank. we can copy using `yy` on our keyboard in normal mode. `p` paste on the same line, `P` paste on a new line. 
+Copy and Paste was a big eye-opener for me. Copy is not copied it is yanked. we can copy using `yy` on our keyboard in normal mode. `p` paste on the same line, `P` paste on a new line. 
 
 You can also delete these lines by choosing the number of lines you wish to delete followed by `dd` 
 

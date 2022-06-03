@@ -21,7 +21,7 @@ The first thing to consider here is that as we are building our app and we are w
 
 - Variables are used to store values. 
 - Like a little box with our saved information or values. 
-- We can then use this variable across the program which also benefits that if this challenge or variable changes then we only have to change this in one place. Meaning we could translate this to other challenges we have in the community by just changing that one variable value. 
+- We can then use this variable across the program which also benefits that if this challenge or variable changes then we only have to change this in one place. This means we could translate this to other challenges we have in the community by just changing that one variable value. 
 
 To declare this in our Go Program we define a value by using a **keyword** for variables. This will live within our `func main` block of code that you will see later. You can find more about [Keywords](https://go.dev/ref/spec#Keywords)here. 
 
@@ -73,7 +73,7 @@ If we then go through that `go build` process again and run you will see below t
 
 Finally, and this won't be the end of our program we will come back to this in [Day12](day12.md) to add more functionality. We now want to add another variable for the number of days we have completed the challenge. 
 
-Below I added `dayscomplete` variable with the number of days completed. 
+Below I added the `dayscomplete` variable with the number of days completed. 
 
 ```
 package main
@@ -134,7 +134,7 @@ Go has three basic data types:
 
 I found this resource super detailed on data types [Golang by example](https://golangbyexample.com/all-data-types-in-golang-with-examples/)
 
-I would also suggest [Techworld with Nana](https://www.youtube.com/watch?v=yyUHQIec83I&t=2023s) at this point covers in some detail a lot about the data types in Go. 
+I would also suggest [Techworld with Nana](https://www.youtube.com/watch?v=yyUHQIec83I&t=2023s) at this point covers in detail a lot about the data types in Go. 
 
 If we need to define a type in our variable we can do this like so: 
 
@@ -148,7 +148,7 @@ Because Go implies variables where a value is given we can print out those value
 ```
 fmt.Printf("challenge is %T, daystotal is %T, dayscomplete is %T\n", conference, daystotal, dayscomplete)
 ```
-There are many different types of integer and float types the links above will cover off these in detail. 
+There are many different types of integer and float types the links above will cover these in detail. 
 
 - **int** = whole numbers
 - **unint** = positive whole numbers
@@ -164,6 +164,6 @@ There are many different types of integer and float types the links above will c
 - [FreeCodeCamp -  Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s) 
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
 
-Next up we are going to start adding some user input functionality to our program so that we are asking how many days have been completed. 
+Next up we are going to start adding some user input functionality to our program so that we are asked how many days have been completed. 
 
 See you on [Day 12](day12.md).
