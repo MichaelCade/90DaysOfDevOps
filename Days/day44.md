@@ -19,7 +19,7 @@ Now is a good time to go and create your account on [DockerHub](https://hub.dock
 
 DockerHub is a centralised resource for working with Docker and its components. Most commonly known as a registry to host docker images. But there is a lot of additional services here which can be used in part with automation or integrated into GitHub as well as security scanning.
 
-If you scroll down once logged in you are going to see a list of container images, You might see database images for mySQL, hello-world etc etc. Think of these as great baseline images or you might in fact just need a database image and you are best to use the official one which means you don't need to create your own. 
+If you scroll down once logged in you are going to see a list of container images, You might see database images for mySQL, hello-world etc. Think of these as great baseline images or you might in fact just need a database image and you are best to use the official one which means you don't need to create your own. 
 
 ![](Images/Day44_Containers2.png)
 
