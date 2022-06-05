@@ -25,7 +25,7 @@ We should organise our layers that change most often as high in the stack as pos
 
 Each time docker launches a container from an image (like we ran yesterday) it adds a writeable layer, known as the container layer. This stores all changes to the container throughout its runtime. This layer is the only difference between a live operational container and the source image itself. Any number of like for like containers can share access to the same underlying image while maintaining their own individual state. 
 
-Back to the example we used yesterday with the Ubuntu image. We could run that same command multiple times and on the first container we could go and install pinta and on the second we could install figlet two different applications, different purpose, different size etc etc. Each container that we deployed share the same image but not the same state and then that state is then gone when we remove the container. 
+Back to the example we used yesterday with the Ubuntu image. We could run that same command multiple times and on the first container we could go and install pinta and on the second we could install figlet two different applications, different purpose, different size etc. Each container that we deployed share the same image but not the same state and then that state is then gone when we remove the container. 
 
 ![](Images/Day45_Containers1.png)
 
