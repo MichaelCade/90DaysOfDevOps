@@ -9,11 +9,11 @@ id: 1049037
 ---
 ## The OSI Model - The 7 Layers
 
-The overall purpose of networking as an industry is to allow two hosts to share data before networking if I want to get data from this host to this host I'd have to plug something into this host walk it over to the other host and plug it into the other host.
+The overall purpose of networking as an industry is to allow two hosts to share data. Before networking if I want to get data from this host to this host I'd have to plug something into this host walk it over to the other host and plug it into the other host.
 
 Networking allows us to automate this by allowing the host to share data automatically across the wire for these hosts to do this they must follow a set of rules.
 
-This is no different than any language English has a set of rules that two English speakers must follow Spanish has its own set of rules French has its own set of rules while networking also has its own set of rules
+This is no different than any language. English has a set of rules that two English speakers must follow. Spanish has its own set of rules. French has its own set of rules, while networking also has its own set of rules
 
 The rules for networking are divided into seven different layers and those layers are known as the OSI model. 
 
@@ -55,7 +55,7 @@ MAC Addresses - Layer 2 = Hop to Hop Delivery
 Now there is a network protocol that we will get into but not today called ARP(Address Resolution Protocol) which links our Layer3 and Layer2 addresses. 
 
 ### Transport 
-Service to Service delivery, Layer 4 is there to distinguish data streams. In the same way that Layer 3 and Layer 2 both had their addressing schemes in Layer 4, we have ports. 
+Service to Service delivery, Layer 4 is there to distinguish data streams. In the same way that Layer 3 and Layer 2 both had their addressing schemes, in Layer 4 we have ports. 
 
 ![](Images/Day22_Networking5.png)
 
