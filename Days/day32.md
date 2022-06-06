@@ -72,6 +72,8 @@ When it comes to storage performance we have two different types:
 - **Standard** - Maximum number of IOPS
 - **Premium** - Guaranteed number of IOPS
 
+IOPS => Input/Output operations per sec.
+
 There is also a difference between unmanaged and managed disks to consider when choosing the right storage for the task you have. 
 
 ### Virtual Machine Storage 
