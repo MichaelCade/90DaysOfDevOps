@@ -71,7 +71,7 @@ A subscription can be seen as a boundary between different subscriptions potenti
 
 ### Management Groups
 
-Management groups give us the ability to segregate control across our Azure AD or our tenant environment. Management groups allow us to control policies, RBAC, and budgets.
+Management groups give us the ability to segregate control across our Azure Active Directory (AD) or our tenant environment. Management groups allow us to control policies, Role Based Access Control (RBAC), and budgets.
 
 Subscriptions belong to these management groups so you could have many subscriptions in your Azure AD Tenant, these subscriptions then can also control policies, RBAC, and budgets. 
 
