@@ -55,7 +55,7 @@ Go 程式語言鼓勵您將代碼統整在套件中，以便於重新使用和�
 
 ![](Images/Day9_Go5.png)
 
-the `Println()` that we have here is a way in which to write to a standard output to the terminal where ever the executuable has been executed succesfully. Feel free to change the message in between the (). 
+我們在這裡使用的 Println() 是一種將標準輸出寫入終端的方式，在該終端中，可執行文件已成功執行。請隨意更改()之間的訊息。
 
 ![](Images/Day9_Go6.png)
 
