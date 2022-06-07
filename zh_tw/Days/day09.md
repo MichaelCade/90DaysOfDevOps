@@ -61,10 +61,10 @@ Go 程式語言鼓勵您將代碼統整在套件中，以便於重新使用和�
 
 ### TLDR
 
-- **Line 1** = This file will be in the package called `main` and this needs to be called `main` because includes the entry point of the program. 
-- **Line 3** = For us to use the `Println()` we have to import the fmt package to use this on line 6. 
-- **Line 5** = The actual starting point, its the `main` function. 
-- **Line 6** = This will let us print "Hello #90DaysOfDevOps" on our system. 
+- **第 1 行** = 該文件將位於名為 main的套件中，並且需要將其稱為 main，因為其中包含程式的切入口。
+- **第 3 行** = 為了讓我們使用 `Println()`，我們必須在第 6 行導入 fmt 套件包才能使用它。
+- **第 5 行** = 實際的起點為'main'函數。
+- **第 6 行** = 這將讓我們在系統上呈現“Hello #90DaysOfDevOps”。
 
 ## Resources
 
