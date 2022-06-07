@@ -43,15 +43,15 @@ Go 程式語言鼓勵您將代碼統整在套件中，以便於重新使用和�
 
 ![](Images/Day9_Go3.png)
 
-Whenever we want to compile and execute our code we have to tell the machine where the execution needs to start. We do this by writing a function called main. The machine will look for a function called main to find the entry point of the program. 
+每當我們想要編譯和執行我們的代碼時，我們都必須告訴機器需要從哪裡開始執行。我們通過編寫一個名為 main 的函數來做到這一點。 機器將尋找一個名為 main 的函數作為編碼的切入點。 
 
-A function is a block of code that can do some specific task for and can be used across the program. 
+函數是一個可以執行某些特定任務的分組碼並且可以在整個程序使用。
 
-You can declare a function with any name using `func` but in this case we need to name it `main` as this is where the code starts. 
+可以運用'func'呼叫任何一組函數的名稱。 但在此情況下,我們必須將它稱作為'main'，因為這是編碼開始的地方。
 
 ![](Images/Day9_Go4.png)
 
-Next we are going to look at line 3 of our code, the import, this basically means you want to bring in another package to your main program. fmt is a standard package being used here provided by Go, this package contains the `Println()`function and because we have imported this we can use this in line 6. There are a number of standard packages you can include in your program and leverage or reuse them in your code saving you the hassle of having to write from scratch. [Go Standard Library](https://pkg.go.dev/std)
+接下來，我們將查看代碼的第 3 行，意即導入，基本上意味著您要在主編碼中引入另一個套件。fmt 是 Go 語言程式提供的一個標準套件，此套件包含'Println()'的函數,因為我們已經呼叫了它，所以我們可以在第 6 行使用。你可以在你的編程中列入數個標準套件並在代碼中利用或重新使用，從而省去了從頭開始編寫的麻煩。 [Go Standard Library](https://pkg.go.dev/std)
 
 ![](Images/Day9_Go5.png)
 
