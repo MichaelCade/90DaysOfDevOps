@@ -64,7 +64,7 @@ The following table shows some of the dockerfile statements we will be using or 
 | LABEL      | To add metadata to the image.                                                                                                               |
 
 
-Now we have the detail on how to build our first dockerfile we can create a working directory and create our dockerfile. I have created a working directory within this repository where you can see the files and folders I have to walk through. [Containers](Days/Containers)
+Now we have the detail on how to build our first dockerfile we can create a working directory and create our dockerfile. I have created a working directory within this repository where you can see the files and folders I have to walk through. [Containers](Containers)
 
 In this directory I am going to create a .dockerignore file similar to the .gitignore we used in the last section. This file will list any files that would otherwise be created during the Docker build process, which you want to exclude from the final build.
 
