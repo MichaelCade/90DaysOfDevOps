@@ -51,11 +51,11 @@ Go 程式語言鼓勵您將代碼統整在套件中，以便於重新使用和�
 
 ![](Images/Day9_Go4.png)
 
-接下來，我們將查看代碼的第 3 行，意即導入，基本上意味著您要在主編碼中引入另一個套件。fmt 是 Go 語言程式提供的一個標準套件，此套件包含'Println()'的函數,因為我們已經呼叫了它，所以我們可以在第 6 行使用。你可以在你的編程中列入數個標準套件並在代碼中利用或重新使用，從而省去了從頭開始編寫的麻煩。 [Go Standard Library](https://pkg.go.dev/std)
+接下來，我們將查看代碼的第 3 行，意即導入，基本上意味著您要在主編碼中引入另一個套件。fmt 是 Go 語言程式提供的一個標準套件，此套件包含'Println()'的函數,因為我們已經呼叫了它，所以我們可以在第 6 行使用。你可以在你的編程中列入數個標準套件並在代碼中利用或重新使用，從而省去了從頭開始編寫的麻煩。 [Go 語言程式標準庫](https://pkg.go.dev/std)
 
 ![](Images/Day9_Go5.png)
 
-我們在這裡使用的 Println() 是一種將標準輸出寫入終端的方式，在該終端中，可執行文件已成功執行。請隨意更改()之間的訊息。
+我們在這裡使用的Println()是一種將標準輸出寫入終端的方式，在該終端中，可執行文件已成功執行。請隨意更改()之間的訊息。
 
 ![](Images/Day9_Go6.png)
 
@@ -76,4 +76,4 @@ Go 程式語言鼓勵您將代碼統整在套件中，以便於重新使用和�
 - [FreeCodeCamp -  Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s) 
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
 
-See you on [Day 10](day10.md).
+[第10天](day10.md)見.
