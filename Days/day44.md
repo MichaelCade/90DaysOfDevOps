@@ -23,7 +23,7 @@ If you scroll down once logged in you are going to see a list of container image
 
 ![](Images/Day44_Containers2.png)
 
-We can drill deeper into the view of available images and search across categories, operating systems and architectures. The one thing I highlight below is the Office Image, this should give you peace of mind of the origin of this container image.  
+We can drill deeper into the view of available images and search across categories, operating systems and architectures. The one thing I highlight below is the Official Image, this should give you peace of mind of the origin of this container image.  
 
 ![](Images/Day44_Containers3.png)
 
