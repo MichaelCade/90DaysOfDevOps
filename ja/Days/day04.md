@@ -1,5 +1,5 @@
 ---
-title: '#90DaysOfDevOps - DevOps & アジャイル - 四日目'
+title: '#90DaysOfDevOps - DevOps & アジャイル - 4日目'
 published: false
 description: 90DaysOfDevOps - DevOps & アジャイル
 tags: 'devops, 90daysofdevops, learning'
