@@ -1,5 +1,5 @@
 ---
-title: '#90DaysOfDevOps - DevOpsエンジニアの責務 - 二日目'
+title: '#90DaysOfDevOps - DevOpsエンジニアの責務 - 2日目'
 published: false
 description: 90DaysOfDevOps - DevOpsエンジニアの責務
 tags: 'devops, 90daysofdevops, learning'

@@ -1,85 +1,85 @@
 ---
-title: '#90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor > - Day 5'
+title: '#90DaysOfDevOps - DevOps ライフサイクル - 計画から監視まで - 5日目'
 published: false
-description: 90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >
+description: 90DaysOfDevOps - DevOps ライフサイクル - 計画から監視まで
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048830
 ---
-## Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor > 
+## 計画 > コーディング > ビルド > テスト > リリース > デプロイ > オペレート > 監視
 
-Today we are going to focus on the individual steps from start to finish and the continous cycle of an Application in a DevOps world. 
+今日は、DevOpsの世界におけるアプリケーションのスタートからゴールまでの個々のステップと継続的なサイクルに焦点を当てます。
 
 ![DevOps](Images/Day5_DevOps8.png)
 
-### Plan:
+### 計画:
 
-It all starts with the planning process this is where the development team gets together and figure out what types of features and bug fixes that they're going to roll out in their next sprint. This is an opportunity as a DevOps Engineer for you to get involved with that and learn what kinds of things are going to be coming your way that you need to be involved with and also influence their decisions or their path and kind of help them work with the infrastructure that you've built or steer them towards something that's going to work better for them in case they're not on that path and so one key thing to point out here is the developers or software engineering team is your customer as a DevOps engineer so this is your opportunity to work with your customer before they go down a bad path.
+これは、開発チームが集まって、次のスプリントでどのような種類の機能やバグフィックスを展開するかを考える、計画プロセスから始まるものです。これはDevOpsエンジニアとして、このプロセスに参加し、どのような種類のものが自分のところにやってくるのかを知り、自分が関与する必要があります。また、彼らの決定や進路に影響を与え、あなたが構築したインフラで彼らが作業できるようにしたり、彼らがその進路にいない場合にもっとうまくいくものに舵を切ることができます。ここで一つ重要なことは、開発者またはソフトウェアエンジニアリングチームはDevOpsエンジニアとしてあなたのお客様であり、これは彼らが悪い方向に行く前にお客様と作業する機会です。
 
-### Code:
+### コーディング:
 
-Now once that planning session's done they're going to go start writing the code you may or may not be involved a whole lot with this one of the places you may get involved with it, is whenever they're writing code you can help them better understand the infrastructure so if they know what services are available and how to best talk with those services so they're going to do that and then once they're done they'll merge that code into the repository 
+計画セッションが終わると、彼らはコードを書き始めます。あなたがこの作業に関わることが多いか少ないかは別として、彼らがコードを書いているときに、インフラについてよりよく理解する手助けをすることができます。
 
-### Build:
+### ビルド:
 
-This is where we'll kick off the first of our automation processes because we're going to take their code and we're going to build it depending on what language they're using it may be transpiling it or compiling it or it might be creating a docker image from that code either way we're going to go through that process using our ci cd pipeline 
+ここで、自動化プロセスの第一段階を開始します。彼らのコードを受け取り、彼らが使っている言語に応じて、トランスパイルやコンパイル、あるいはそのコードからDockerイメージを作成するなど、CI/CDパイプラインを使ってそのプロセスを進めていくのです。
 
-## Testing:
+## テスト:
 
-Once we've built it we're going to run some tests on it now the development team usually writes the test you may have some input in what tests get written but we need to run those tests and the testing is a way for us to try and minimise introducing problems out into production, it doesn't guarantee that but we want to get as close to a guarantee as we can that were one not introducing new bugs and two not breaking things that used to work
+開発チームがテストを書くのが普通ですが、どのようなテストを書くかについて、あなたが何らかの意見を述べることもあるでしょう。しかし、私たちはテストを実行する必要があります。テストは、本番環境に問題を持ち込むのを最小限に抑えようとする方法であり、保証するものではありませんが、できる限り保証に近い形で、新しいバグを出さない、以前動いていたものを壊さないようにしたいのです。
 
-## Release:
+## リリース:
 
-Once those tests pass we're going to do the release process and depending again on what type of application you're working on this may be a non-step. You know the code may just live in the GitHub repo or the git repository or wherever it lives but it may be the process of taking your compiled code or the docker image that you've built and putting it into a registry or a repository where it's accessible by your production servers for the deployment process 
+テストに合格したら、リリース処理を行うことになりますが、どのようなアプリケーションに取り組んでいるかによって、これは非段階的なものになるかもしれません。コードは GitHub リポジトリや git リポジトリなど、どこにでも置いておけますが、コンパイルしたコードや docker イメージをレジストリやリポジトリに置いて、本番サーバーからアクセスできるようにし、デプロイ処理を行うことがあります。
 
-## Deploy:
+## デプロイ:
 
-which is the thing that we do next because deployment is like the end game of this whole thing because deployments when we put the code into production and it's not until we do that that our business actually realizes the value from all the time effort and hard work that you and the software engineering team have put into this product up to this point. 
+デプロイはコードを本番稼動させるときの最終ゲームのようなもので、デプロイを行うまでは、あなたとソフトウェアエンジニアリングチームがこの時点までに製品に費やしたすべての時間と努力の価値を、私たちのビジネスは実際に実感することができないからです。
 
-## Operate:
+## オペレート:
 
-Once it's deployed we are going to operate it and operate it may involve something like you start getting calls from your customers that they're all annoyed that the site's running slow or their application is running slow right so you need to figure out why that is and then possibly build auto-scaling you know to handle increase the number of servers available during peak periods and decrease the number of servers during off-peak periods either way that's all operational type metrics, another operational thing that you do is include like a feedback loop from production back to your ops team letting you know about key events that happened in production such as a deployment back one step on the deployment thing this may or may not get automated depending on your environment the goal is to always automate it when possible there are some environments where you possibly need to do a few steps before you're ready to do that but ideally you want to deploy automatically as part of your automation process but if you're doing that it might be a good idea to include in your operational steps some type of notification so that your ops team knows that a deployment has happened 
+デプロイされた後、私たちはそれを運用することになります。運用には、例えば顧客からサイトの動作が遅い、アプリケーションの動作が遅いと いった問い合わせを受けるようになり、その原因を突き止め、ピーク時にはサーバーの数を増やし、オフピーク時にはサーバー の数を減らすといった自動スケーリングを組み込む必要があるかもしれません。もう一つの運用上の工夫として、運用チームから運用チームへのフィードバック・ループを設け、運用中に発生した重要なイベント、例えばデプロイメントを一段階前に戻すといったことを知らせます。これは環境に応じて自動化することもしないこともできますが、可能であれば常に自動化することが目標です。しかし、理想的には、自動化プロセスの一環として自動的にデプロイしたいものです。その場合、運用ステップに何らかの通知を含めて、デプロイが行われたことを運用チームに知らせるのがよいでしょう。
 
-## Monitor:
+## 監視:
 
-All of the above parts lead to the final step because you need to have monitoring, especially around operational issues auto-scaling troubleshooting like you don't know
-there's a problem if you don't have monitoring in place to tell you that there's a problem so some of the things you might build monitoring for are memory utilization CPU utilization disk space, api endpoint,  response time,  how quickly that endpoint is responding and a big part of that as well is logs. Logs give developers the ability to see what is happening without having to access production systems. 
+特に運用上の問題やオートスケーリング・トラブルシューティングなどでは、モニタリングが必要です。
+例えば、メモリ使用量、CPU使用量、ディスク容量、APIエンドポイント、応答時間、エンドポイントの応答速度、そしてログがその大きな要素です。ログがあれば、開発者は本番システムにアクセスすることなく、何が起きているのかを確認することができます。
 
-## Rince & Repeat: 
+## リンス・アンド・リピート:
 
-Once that's in place you go right back to the beginning to the planning stage and go through the whole thing again
+それができたら、また最初に戻って企画を練り直し、全部をやり直します。
 
-## Continuous:
+## 継続的に
 
-Many tools help us achieve the above continuous process, all this code and the ultimate goal of being completely automated, cloud infrastructure or any environment is often described as Continuous Integration/ Continuous Delivery/Continous Deployment or “CI/CD” for short. We will spend a whole week on CI/CD later on in the 90 Days with some examples and walkthroughs to grasp the fundamentals. 
+多くのツールが、上記のような継続的なプロセス、これらすべてのコード、そして完全に自動化された最終的な目標、クラウドインフラやあらゆる環境を実現するために、しばしば継続的インテグレーション/継続的デリバリー/継続的デプロイメント、略して「CI/CD」と表現されます。CI/CDについては、90日の後半で1週間かけて、いくつかの例とウォークスルーで基本を把握する予定です。
 
-### Continuous Delivery:
+### 継続的デリバリー:
 
-Continuous Delivery = Plan > Code > Build > Test 
+継続的デリバリー = 計画 > コーディング > ビルド > テスト
 
-### Continuous Integration:
+### 継続的インテグレーション:
 
-This is effectively the outcome of the Continuous Delivery phases above plus the outcome of the Release phase. This is the case for both failure and success but this is fed back into continuous delivery or moved to Continuous Deployment. 
+これは事実上、上記の継続的デリバリーフェーズの結果に、リリースフェーズの結果を加えたものです。これは失敗の場合も成功の場合も同じですが、これを継続的デリバリーにフィードバックしたり、継続的デプロイメントに移行したりします。
 
-Continuous Integration = Plan > Code > Build > Test > Release 
+継続的インテグレーション＝計画＞コード＞ビルド＞テスト＞リリース
 
-### Continuous Deployment: 
+### 継続的デプロイメント:
 
-If you have a successful release from your continuous integration then move to Continuous Deployment which brings in the following phases 
+継続的インテグレーションからのリリースが成功したら、継続的デプロイメントに移行し、次のフェーズに進みます。
 
-CI Release is Success = Continuous Deployment = Deploy > Operate > Monitor 
+CIリリースが成功した場合 = 継続的デプロイメント = デプロイ > 運用 > 監視
 
-You can see these three Continuous notions above as the simple collection of phases of the DevOps Lifecycle. 
+上記の3つの継続的概念は、DevOpsライフサイクルのフェーズの単純な集合体であることがお分かりいただけると思います。
 
-This last bit was a bit of a recap for me on Day 3 but think this actually makes things clearer for me. 
+この最後の部分は、3日目の復習のようなものでしたが、これで実際に物事が明確になったと思っています。
 
-### Resources:
+### リソース:
 
 - [DevOps for Developers – Software or DevOps Engineer?](https://www.youtube.com/watch?v=a0-uE3rOyeU)
 - [Techworld with Nana -DevOps Roadmap 2022 - How to become a DevOps Engineer? What is DevOps? ](https://www.youtube.com/watch?v=9pZ2xmsSDdo&t=125s)
 - [How to become a DevOps Engineer in 2021 - DevOps Roadmap](https://www.youtube.com/watch?v=5pxbp6FyTfk)
 
-If you made it this far then you will know if this is where you want to be or not. 
+ここまで来れば、ここが自分の居場所かどうかが分かるはずです。
 
-See you on [Day 6](day06.md). 
+では、[6日目](day06.md)でお会いしましょう。

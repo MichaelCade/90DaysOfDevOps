@@ -1,5 +1,5 @@
 ---
-title: '#90DaysOfDevOps - はじめに - 一日目'
+title: '#90DaysOfDevOps - はじめに - 1日目'
 published: true
 description: 90DaysOfDevOps - はじめに
 tags: 'devops, 90daysofdevops, learning'
