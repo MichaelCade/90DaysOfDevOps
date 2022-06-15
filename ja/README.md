@@ -21,8 +21,8 @@ English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/R
 ### DevOpsとは何か、なぜ使うのか
 
 - [✔️] ♾️ 2 > [DevOpsエンジニアの責務](Days/day02.md)
-- [✔️] ♾️ 3 > [DevOps Lifecycle - Application Focused](Days/day03.md)
-- [✔️] ♾️ 4 > [DevOps & Agile](Days/day04.md)
+- [✔️] ♾️ 3 > [DevOps ライフサイクル - アプリケーションフォーカス](Days/day03.md)
+- [✔️] ♾️ 4 > [DevOps & アジャイル](Days/day04.md)
 - [✔️] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)
 - [✔️] ♾️ 6 > [DevOps - The real stories](Days/day06.md)
 
