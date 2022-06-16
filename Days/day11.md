@@ -39,7 +39,7 @@ import "fmt"
 
 func main() {
     var challenge = "#90DaysOfDevOps"
-    fmt.Println("Welcome to", challenge "")
+    fmt.Println("Welcome to", challenge, "")
 }
 ```
 You can find the above code snippet in [day11_example1.go](Go/day11_example1.go)
@@ -61,7 +61,7 @@ func main() {
     var challenge = "#90DaysOfDevOps"
     const daystotal = 90
 
-    fmt.Println("Welcome to", challenge)
+    fmt.Println("Welcome to", challenge, "")
     fmt.Println("This is a", daystotal, "challenge")
 }
 ```
