@@ -89,7 +89,6 @@ Along with the official documentation, I have also found myself with this page o
 |kubectl get namespaces          |List all namespaces in cluster             |  
 |kubectl get pods                |List all pods in default namespace cluster |
 |kubectl get pods -n name        |List all pods in "name" namespace          |
-|kubectl get pods -n name        |List all pods in "name" namespace          |
 
 |Creating Resources              |                                           |
 | ------------------------------ | ----------------------------------------- |
