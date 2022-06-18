@@ -1,55 +1,53 @@
 ---
-title: '#90DaysOfDevOps - DevOps - The real stories - Day 6'
+title: '#90DaysOfDevOps - DevOps -  本当の話 - 6日目'
 published: false
-description: 90DaysOfDevOps - DevOps - The real stories
+description: 90DaysOfDevOps - DevOps - 本当の話
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048855
 ---
-## DevOps - The real stories 
+## DevOps - 本当の話
 
-DevOps to begin with was seen to be out of reach for a lot of us as we didn't have an environment or requirement anything like a Netflix or fortune 500 but think now that is beginning to sway into the normal when adopting a DevOps practice within any type of business. 
+DevOpsは当初、NetflixやFortune 500のような環境や要件がないため、多くの人にとって手の届かないものと思われていましたが、今ではあらゆる種類のビジネスでDevOpsの実践を採用する際に、それが普通になってきているように思います。
 
-You will see from the second link below in references there are a lot of different industries and verticals using DevOps and having a hugely positive effect on their business objectives. 
+文末のリソースの2番目のリンクから、さまざまな業界や業種がDevOpsを使用しており、ビジネス目標に大きなプラスの効果をもたらしていることがおわかりいただけるでしょう。
 
-Obviously the overarching benefit here is DevOps if done correctly should help your Business improve the speed and quality of software development. 
+もちろん、ここでの包括的な利点は、DevOpsが正しく実行されれば、ソフトウェア開発のスピードと品質を向上させるのに役立つということです。
 
-I wanted to take this Day to look at succesful companies that have adopted a DevOps practice and share some resources around this, This will be another great one for the community to also dive in and help here. Have you adopted a DevOps culture in your business? Has it been successful? 
+この日は、DevOpsの実践を採用した成功した企業を見て、そのリソースを共有したいと思います。あなたのビジネスでDevOps文化を採用しましたか？それは成功しましたか？
 
-I mentioned Netflix above and will touch on them again as it is a very good model and advanced to what we generally see today even still but will also mention some other big name brands that are succeeding it seems. 
+Netflixは非常に良いモデルであり、現在でも一般的に見られるものより進んでいるので、もう一度触れますが、成功している他の有名ブランドについても触れます。
 
-## Amazon 
-In 2010 Amazon moved their physical server footprint to Amazon Web Services (AWS) cloud this allowed them to save resources by scaling capacity up and down in very small increments. We also know that this AWS cloud would go on and make a huge amount of revenue itself whilst still running the Amazon retail branch of the company. 
+## Amazon
+2010年、Amazonは物理サーバーをAmazon Web Services（AWS）クラウドに移行し、非常に小さな単位で容量を増減させることでリソースを節約できるようになりました。また、このAWSクラウドは、Amazonの小売部門を運営しながら、莫大な収益を上げるようになったことも知っている。
 
-Amazon adopted in 2011 (According to the resource below) a continued deployment process where their developers could deploy code whenever they want and to whatever servers they needed. This enabled Amazon to achieve deploying new software to production servers on average every 11.6 seconds! 
+Amazonは2011年に、開発者が好きな時に好きなサーバにコードをデプロイできる継続的なデプロイメントプロセスを採用した（下記のリソースによる。)これにより、アマゾンは平均11.6秒ごとに新しいソフトウェアを本番サーバにデプロイすることを実現しました。
 
-## Netflix 
-Who doesn't use Netflix? obviously a huge quality streaming service with by all accounts at least personally a great user experience. 
+## Netflix
+Netflixを利用しない人はいないでしょう。明らかに巨大で高品質なストリーミングサービスであり、少なくとも個人的には素晴らしいユーザーエクスペリエンスを持っています。
 
-Why is that user experience so great? Well the ability to deliver a service with no recollected memory for me at least of glitches requires speed, flexibility, and attention to quality. 
+なぜ、そのような素晴らしいユーザーエクスペリエンスが必要なのでしょうか？少なくとも私にとっては、不具合の記憶がないサービスを提供するためには、スピード、柔軟性、そして品質へのこだわりが必要です。
 
-NetFlix developers can automatically build pieces of code into deployable web images without relying on IT operations. As the images are updated, they are integrated into Netflix’s infrastructure using a custom-built, web-based platform.
+NetFlixの開発者は、ITオペレーションに依存することなく、コードの断片を自動的にデプロイ可能なWebイメージに構築することができます。イメージは更新されると、カスタムビルドされたウェブベースのプラットフォームを使って、Netflixのインフラに統合されます。
 
-Continous Monitoring is in place so that if the deployment of the images fails, the new images are rolled back and traffic rerouted to the previous version. 
+継続的なモニタリングにより、イメージのデプロイに失敗した場合、新しいイメージはロールバックされ、トラフィックは以前のバージョンにリルートされるようになっています。
 
-There is a great talk listed below that goes into more about the DOs and DONTs that Netflix live and die by within their teams. 
+Netflix がチーム内で実践している「やるべきこと」と「やってはいけないこと」については、次のような素晴らしい講演があります。
 
-## Etsy 
-As with many of us and many companies there was a real struggle around slow and painful deployments. In the same vein we might have also experienced working in companies that have lots of siloes and teams that are not really working well together. 
+## Etsy
+私たちの多くが、また多くの企業がそうであるように、遅くて辛いデプロイメントに本当に苦労していました。同じように、私たちも、サイロ化したチームや、連携がうまくいっていない会社で働くことを経験してきたかもしれません。
 
-From what I can make out at least from reading about Amazon and Netflix, Etsy might have adopted the letting developers deploy their own code around the end of 2009 which might have been before the other two mentioned. (interesting!) 
+AmazonとNetflixの記事を読んだ限りでは、Etsyは2009年末頃に開発者が自分自身のコードをデプロイできるようにしたようですが、これは他の2社より早かったかもしれません。(面白い！）。
 
-An interesting take away I read here was that they realised that when developers feel responsibility for deployment they also would take responsibility for application performance, uptime and other goals. 
+興味深いのは、開発者がデプロイメントに責任を感じると、アプリケーションのパフォーマンスやアップタイム、その他の目標にも責任を持つようになる、ということに気づいたということです。
 
+学習文化はDevOpsの重要な部分であり、教訓が得られれば、失敗さえも成功になり得ます。(この引用が実際にどこから来たのかは分かりませんが、なんとなく納得です！）。
 
-
-A learning culture is a key part to DevOps, even failure can be a success if lessons are learned. (not sure where this quote actually came from but it kind of makes sense!)
-
-I have added some other stories where DevOps has changed the game within some of these massively successful companies. 
+この他にも、DevOpsが大成功を収めた企業の中で、ゲームを変えたという話をいくつか追加しています。
 
 
-## Resources 
+## リソース
 
 - [How Netflix Thinks of DevOps](https://www.youtube.com/watch?v=UTKIT6STSVM)
 - [16 Popular DevOps Use Cases & Real Life Applications [2021]](https://www.upgrad.com/blog/devops-use-cases-applications/)
@@ -59,16 +57,16 @@ I have added some other stories where DevOps has changed the game within some of
 - [Interplanetary DevOps at NASA JPL](https://www.usenix.org/conference/lisa16/technical-sessions/presentation/isla)
 - [Target CIO explains how DevOps took root inside the retail giant](https://enterprisersproject.com/article/2017/1/target-cio-explains-how-devops-took-root-inside-retail-giant)
 
-### Recap of our first few days looking at DevOps
+###  DevOpsに注目した最初の数日間を振り返る
 
-- DevOps is a combo of Development and Operations that allows a single team to manage the whole application development lifecycle that consists of **Development**, **Testing**, **Deployment**, **Operations**. 
+- DevOpsは、開発と運用を組み合わせたもので、**開発**、*テスト**、*デプロイメント**、*運用**からなるアプリケーション開発ライフサイクル全体を1つのチームが管理できるようにするものです。
 
-- The main focus and aim of DevOps is to shorten the development lifecycle while delivering features, fixes and functionality frequently in close alignment with business objectives. 
+- DevOpsの主な焦点と目的は、開発ライフサイクルを短縮する一方で、ビジネス目標に密接に連携した特徴、修正、および機能を頻繁に提供することです。
 
-- DevOps is a software development approach through which software can be delivered and developed reliably and quickly. You may also see this referenced as **Continuous Development, Testing, Deployment, Monitoring**
+- DevOpsは、ソフトウェアを確実かつ迅速に提供・開発するためのソフトウェア開発手法である。また、「Continuous Development, Testing, Deployment, Monitoring**（継続的開発、テスト、デプロイメント、モニタリング）」と表記されることもあります。
 
-If you made it this far then you will know if this is where you want to be or not. See you on [Day 7](day07.md). 
+ここまでくれば、自分がやりたいことがここにあるのか、そうでないのかがわかるはずです。では、[7日目](day07.md)でお会いしましょう。
 
-Day 7 will be us diving into a programming language, I am not aiming to be a developer but I want to be able to understand what the developers are doing. 
+7日目はプログラミング言語に飛び込みます。私は開発者になることを目指しているわけではありませんが、開発者が何をしているのかを理解できるようになりたいです。
 
-Can we achieve that in a week? Probably not but if we spend 7 days or 7 hours learning something we are going to know more than when we started.   
+1週間でそれを達成できるでしょうか？しかし、7日間または7時間かけて何かを学べば、始めたときよりも多くのことを知ることができるようになります。
