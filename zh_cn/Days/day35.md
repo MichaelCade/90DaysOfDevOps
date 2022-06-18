@@ -1,136 +1,135 @@
 ---
-title: '#90DaysOfDevOps - The Big Picture: Git - Version Control - Day 35'
+title: '#90DaysOfDevOps - 概述： Git - 版本控制 - 第三十五天'
 published: false
-description: 90DaysOfDevOps - The Big Picture Git - Version Control
+description: 90DaysOfDevOps - 概述： Git - 版本控制
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1049041
 ---
-## The Big Picture: Git - Version Control
+## 概述： Git - 版本控制
 
-Before we get into git, we need to understand what version control is and why? In this opener for Git, we will take a look at what version control is, the basics of git.  
+在我们开始git之前，我们需要了解什么是版本控制，为什么需要它？在Git部分的开头，我们将介绍版本控制以及git的基础。
 
-### What is Version Control? 
+### 什么是版本控制？
 
-Git is not the only version control system so here we want to cover what options and what methodologies are available around version control. 
+Git不是唯一的版本控制系统，所以我们会讨论关于版本控制的工具和现成的方法。
 
-The most obvious and a big benefit of Version Control is the ability to track a project's history. We can look back over this repository using `git log` and see that we have many commits and many comments and what has happened so far in the project. Don't worry we will get into the commands later. Now think if this was an actual software project full of source code and multiple people are committing to our software at different times, different authors and then reviewers all are logged here so that we know what has happened, when, by whom and who reviewed. 
+版本控制最显著、最大的好处是可以记录一个项目的历史。我们可以通过`git log`回看整个仓库，我们会看到有很多的提交(commits)和评论(comments)，还有项目中发生了什么。不要急，我们会在后边谈到相关的命令(commands)。可以思考一下，如果这是一个实际的软件项目，有着大量的源代码，很多人在不同的时间对我们的软件进行提交，不同的作者、审核人都在这里进行记录。所以我们可以知道什么时候、发生了什么、谁发起的、谁审阅的。
 
-![](Images/Day35_Git1.png)
+![](../../Days/Images/Day35_Git1.png)
 
-Version Control before it was cool, would have been something like manually creating a copy of your version before you made changes. It might be that you also comment out old useless code with the just in case mentality. 
+首先，版本控制是很妙的，它就像是在你进行修改之前对现有的版本进行了复制。也类似你为了以防万一，把没用的代码注释掉一样。
 
-![](Images/Day35_Git2.png)
+![](../../Days/Images/Day35_Git2.png)
 
-I have started using version control over not just source code but pretty much anything, talks about projects like this (90DaysOfDevOps) because why would you not want that rollback and log of everything that has gone on. 
+我已经在很多地方使用到了版本控制，不单单是源代码方面，也包括一些分享项目(像这个 90DaysOfDevOps)。所以为什么不回滚和记录所有发生的事呢。
 
-However, a big disclaimer **Version Control is not a Backup!**
+然而，一个重要声明：**版本控制不是备份！**
 
-Another benefit of Version Control is the ability to manage multiple versions of a project, Let's create an example, we have a free app that is available on all operating systems and then we have a paid-for app also available on all operating systems. The majority of the code is shared between both applications. We could copy and paste our code each commit to each app but that is going to be very messy especially as you scale your development to more than just one person, also mistakes will be made. 
+版本控制的另一个好处是可以管理一个项目的多个版本。这里举个例子，我们有一个免费的应用可以在所有系统上运行，还有一个付费的应用也可以在所偶系统上运行。主要的代码在两个应用中共享使用。我们可以复制黏贴我们的代码，每一次对不同应用的提交。但这样会导致混乱，特别是当你与多个人改变开发产品时，同时也可能发生一些错误。
 
-The premium app is where we are going to have additional features, let's call them premium commits, the free edition will just contain the normal commits. 
+下面我们想对一个高级应用程序(premium app)添加新功能，先称之为高级提交(premium commits)，其中的自由编辑(free edition)包含了常规的提交。
 
-The way this is achieved in Version Control is through branching. 
+版本控制通过分支(branching)来实现这点。
 
-![](Images/Day35_Git3.png)
+![](../../Days/Images/Day35_Git3.png)
 
-Branching allows for two code streams for the same app as we stated above. But we will still want new features that land in our source code free version to be in our premium and to achieve this we have something called merging. 
+分支(branching)允许一个应用程序有两个代码流(code streams)，就像我们上面提到的。但我们仍然想让新的功能加入到我们的源代码中。合并(merging)就是用来做这件事的。
 
-![](Images/Day35_Git4.png)
+![](../../Days/Images/Day35_Git4.png)
 
-Now, this same easy but merging can be complicated because you could have a team working on the free edition and you could have another team working on the premium paid for version and what if both change code that affects aspects of the overall code. Maybe a variable gets updated and breaks something. Then you have a conflict that breaks one of the features. Version Control cannot fix the conflicts that are down to you. But version control allows this to be easily managed. 
+这个看起来简单，但合并可以是复杂的，因为你可能在自由编辑(free edition)上与团队一起工作，同时你和另一个团队在付费版本(premium paid for version)上工作。如果同时更改代码，会对所有代码产生影响。可能一个变量被更新导致有些东西出错。然后你会得到一个冲突(conflict)，它会破坏项目中的功能。版本控制不能修复冲突，但版本控制使它们被易于管理。
 
-The primary reason if you have not picked up so far for version control, in general, is the ability to collaborate. The ability to share code amongst developers and when I say code as I said before more and more we are seeing much more use cases for other reasons to use source control, maybe its a joint presentation you are working on with a colleague or a 90DaysOfDevOps challenge where you have the community offering their corrections and updates throughout the project. 
+主要的原因是，如果你还不太了解版本控制，一般的，它有协作的功能。与开发者共享代码的能力，正如我之前提到的，我们为了各种原因去寻找有用的案例、使用源代码。它可能是你与同事制作的演讲，或是一个90DaysOfDevOps的挑战，你拥有一个社区，可以检查内容是否正确，或是跟进整个项目。
 
-Without version control how did teams of software developers even handle this? I find it hard enough when I am working on my projects to keep track of things. I expect they would split out the code into each functional module. Maybe a little part of the puzzle then was bringing the pieces together and then problems and issues before anything would get released. 
+如果没有版本控制，软件开发团队还如何处理这些？当我在一步步制作项目时，我发现这将是困难的。我希望它们能够被拆分进不同的功能模块中。在还没发布时，其中一点点的疑问可能导致各部分的问题一起出现。
 
-With version control, we have a single source of truth. We might all still work on different modules but it enables us to collaborate better. 
+通过使用版本控制，我们只有一个目标。我们可能在不同模块上进行工作，但这能让大家更好地进行合作。
 
-![](Images/Day35_Git5.png)
+![](../../Days/Images/Day35_Git5.png)
 
-Another thing to mention here is that it's not just developers that can benefit from Version Control, it's all members of the team to have visibility but also tools all having awareness or leverage, Project Management tools can be linked here, tracking the work. We might also have a build machine for example Jenkins which we will talk about in another module. A tool that Builds and Packages the system, automating the deployment tests and metrics. 
+还有一个需要提到的是，不单是开发者可以从版本控制中获益，团队中的所有成员都可以查看。但对工具应该有了解和利用，项目管理工具可以是类似的，用于追踪工作进程。我们可能会有一个构建平台(build machine)，例如Jenkins 我们将会在另一个章节谈到。一个创建和打包的系统，自动化部署测试和评估。
 
-### What is Git? 
+### 什么是Git？
 
-Git is a tool that tracks changes to source code or any file, or we could also say Git is an open-source distributed version control system. 
+Git是一个追踪代码或文件改变的工具，或者我们也可以说它是一个开源的分布式版本控制系统。
 
-There are many ways in which git can be used on our systems, most commonly or at least for me I have seen it in at the command line, but we also have graphical user interfaces and tools like Visual Studio Code that have git aware operations we can take advantage of. 
+Git可以有多种方式在我们的系统中使用，对于我来说最常见的是命令行。我们也有图像交互工具，例如Visual Studio Code就有git操作，我们可以使用它。
 
-Now we are going to run through a high-level overview before we even get Git installed on our local machine. 
+在开始安装Git之前，我们要看看宏观的概述。
 
-Let's take the folder we created earlier. 
+我们之前创建了一个文件夹。
 
-![](Images/Day35_Git2.png)
+![](../../Days/Images/Day35_Git2.png)
 
-To use this folder with version control we first need to initiate this directory using the `git init command. For now, just think that this command puts our directory as a repository in a database somewhere on our computer. 
+要将版本控制应用在这个文件夹中，我们第一步需要使用`git init`来初始化。可以想象这个命令将我们的目录变成了一个仓库(repository)，并放入了电脑某处的数据库中。
 
-![](Images/Day35_Git6.png)
+![](../../Days/Images/Day35_Git6.png)
 
-Now we can create some files and folders and our source code can begin or maybe it already has and we have something in here already. We can use the `git add .` command which puts all files and folders in our directory into a snapshot but we have not yet committed anything to that database. We are just saying all files with the `.` are ready to be added.   
+现在我们可以创建一些文件、文件夹和源代码，或者它们已经在这里了。我们使用`git add .`命令来将目录中所有文件和文件夹放入一个快照(snapshot)，到此我们还没有提交(commit)任何东西到数据库中。我们只是将所有的文件使用`.`来进行了添加。
 
-![](Images/Day35_Git7.png)
+![](../../Days/Images/Day35_Git7.png)
 
-Then we want to go ahead and commit our files, we do this with the `git commit -m "My First Commit"` command. We can give a reason for our commit and this is suggested so we know what has happened for each commit. 
+然后我们想进一步并提交文件，使用`git commit -m "My First Commit"`。我们可以描述提交的原因，这是一个好的行为，后续我们才能知道每次提交都发生了什么。
 
-![](Images/Day35_Git8.png)
+![](../../Days/Images/Day35_Git8.png)
 
-We can now see what has happened within the history of the project. Using the `git log` command.
+现在我们可以用`git log`来看看项目的历史记录里发生了什么。
 
-![](Images/Day35_Git9.png)
+![](../../Days/Images/Day35_Git9.png)
 
-We can also check the status of our repository by using `git status` this shows we have nothing to commit and we can add a new file called samplecode.ps1. If we then run the same `git status you will see that we file to be committed. 
+如果我们在这里创建一个新的文件`samplecode.ps1`，那么状态提示将发生改变。我们也可以用`git status`来检查我们仓库的状态。它会提示我们没有提交任何的东西，可以添加一个新的文件samplecode.ps1。如果我们后续输入相同的命令`git status`，你会看到将会被提交的文件。
 
-![](Images/Day35_Git10.png)
+![](../../Days/Images/Day35_Git10.png)
 
-Add our new file using the `git add samplecode.ps1` command and then we can run `git status` again and see our file is ready to be committed. 
+使用`git add samplecode.ps1`来添加新的文件，然后再次输入`git status`。我们看到这个文件已经准备好被提交了。
 
-![](Images/Day35_Git11.png)
+![](../../Days/Images/Day35_Git11.png)
 
-Then issue `git commit -m "My Second Commit"` command.
+下面输入`git commit -m "My Second Commit"`。
 
-![](Images/Day35_Git12.png)
+![](../../Days/Images/Day35_Git12.png)
 
-Another `git status` now shows everything is clean again.
+这次的`git status`再次告诉我们所有东西都是最新的。
 
-![](Images/Day35_Git13.png)
+![](../../Days/Images/Day35_Git13.png)
 
-We can then use the `git log` command which shows the latest changes and first commit. 
+后续我们可以使用`git log`来查看最新的和第一个提交。
 
-![](Images/Day35_Git14.png)
+![](../../Days/Images/Day35_Git14.png)
 
-If we wanted to see the changes between our commits i.e what files have been added or modified we can use the `git diff b8f8 709a`
+如果我们想每次提交中的改变内容，比如哪些文件被添加或修改了，我们可以使用`git diff b8f8 709a`。
 
-![](Images/Day35_Git15.png)
+![](../../Days/Images/Day35_Git15.png)
 
-Which then displays what has changed in our case we added a new file. 
+这样会显示发生了什么改变。在我们的例子中，我们添加了一个新的文件。
 
-![](Images/Day35_Git16.png)
+![](../../Days/Images/Day35_Git16.png)
 
-We can also and we will go deeper into this later on but we can jump around our commits i.e we can go time travelling! By using our commit number we can use the `git checkout 709a` command to jump back in time without losing our new file. 
+我们会在后续进一步学习相关用法，至此我们可以在提交中穿梭了，就像是时间旅行一样！通过利用我们的提交序号(commit number)，`git checkout 709a`可以跳回到之前的版本并保留我们新建的文件。
 
-![](Images/Day35_Git17.png)
+![](../../Days/Images/Day35_Git17.png)
 
-But then equally we will want to move forward as well and we can do this the same way with the commit number or you can see here we are using the `git switch -` command to undo our operation. 
+但同时，我们要继续前进。相同的，我们可以使用提交序号或直接使用`git switch -`来撤销我们的操作。
 
-![](Images/Day35_Git18.png)
+![](../../Days/Images/Day35_Git18.png)
 
+总结：
 The TLDR; 
 
-- Tracking a projects history
-- Managing multiple versions of a project
-- Sharing code amongst developers and a wider scope of teams and tools
-- Coordinating teamwork
-- Oh and there is some time travel! 
+- 追踪一个项目的历史记录
+- 管理一个项目的多个版本
+- 与开发者、更广范围的团队和工具分享源代码
+- 协调团队合作
+- 和时间旅行的可能！
+
+这似乎是跳跃的，但希望你能有所收获，了解版本控制的命令的功能和宏观思路。
+
+后续，我们会安装git并在你本地的机器上设置，进一步了解有关的使用案例和命令。
 
 
-This might have seemed a jump around but hopefully, you can see without really knowing the commands used the powers and the big picture behind Version Control. 
-
-Next up we will be getting git installed and set up on your local machine and diving a little deeper into some other use cases and commands that we can achieve in Git. 
-
-
-
-## Resources 
+## 相关资料
 
 - [What is Version Control?](https://www.youtube.com/watch?v=Yc8sCSeMhi4)
 - [Types of Version Control System](https://www.youtube.com/watch?v=kr62e_n6QuQ)
@@ -139,5 +138,5 @@ Next up we will be getting git installed and set up on your local machine and di
 - [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk&t=8s) 
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 
-See you on [Day 36](day36.md) 
+[第三十六天](day36.md)见！
 
