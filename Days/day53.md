@@ -63,7 +63,7 @@ Another thing to mention is that if you did need to get access to any cluster be
 
 ### Create a new cluster
 
-Over the past two sessions we have created a minikube cluster locally and we have used Vagrant with VirtualBox to create a 3 node Kubernetes cluster, with Rancher we can also create clusters. In the [Rancher Folder](Days/Kubernetes/Rancher) you will find additional vagrant files that will build out the same 3 nodes but without the steps for creating our Kubernetes cluster (we want Rancher to do this for us)
+Over the past two sessions we have created a minikube cluster locally and we have used Vagrant with VirtualBox to create a 3 node Kubernetes cluster, with Rancher we can also create clusters. In the [Rancher Folder](Kubernetes/Rancher) you will find additional vagrant files that will build out the same 3 nodes but without the steps for creating our Kubernetes cluster (we want Rancher to do this for us)
 
 We do however want docker installed and for the OS to be updated so you will still see the `common.sh` script being ran on each of our nodes. This will also install Kubeadm, Kubectl etc. But it will not run the Kubeadm commands to create and join our nodes into a cluster. 
 
