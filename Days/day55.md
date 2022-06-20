@@ -108,7 +108,7 @@ The build out of the application looks like the below:
 
 ![](Images/Day55_Kubernetes1.png)
 
-You can find the YAML configuration file for this application here[pacman-stateful-demo.yaml](Days/Kubernetes/pacman-stateful-demo.yaml)
+You can find the YAML configuration file for this application here [pacman-stateful-demo.yaml](Kubernetes)
 
 ### StorageClass Configuration
 
@@ -199,7 +199,7 @@ If we check our namespaces now you will see that we have a new ingress-nginx nam
 
 ![](Images/Day55_Kubernetes14.png)
 
-Now we must create our ingress YAML configuration to hit our Pacman service I have added this file to the repository [pacman-ingress.yaml](Days/Kubernetes/pacman-ingress.yaml)
+Now we must create our ingress YAML configuration to hit our Pacman service I have added this file to the repository [pacman-ingress.yaml](Kubernetes)
 
 We can then create this in our ingress namespace with `kubectl create -f pacman-ingress.yaml` 
 
