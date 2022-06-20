@@ -1,71 +1,71 @@
 ---
-title: '#90DaysOfDevOps - Installing & Configuring Git - Day 36'
+title: '#90DaysOfDevOps - 安装和配置 Git - 第三十六天'
 published: false
-description: 90DaysOfDevOps - Installing & Configuring Git
+description: 90DaysOfDevOps - 安装和配置 Git
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048738
 ---
-## Installing & Configuring Git
+## 安装和配置 Git
 
-Git is a open source, cross platform tool for version control. If I like me you are using Ubuntu or most Linux environments you might find that you already git installed but we are going to run through the install and configuration. 
+Git是一个开源的、跨平台的版本控制工具。如果你也在使用Ubuntu或其他Linux环境，你会发现你已经安装了git，但我们还是会讲一下它的安装和设置。
 
-Even if you already have git installed on your system it is also a good idea to make sure we are up to date. 
+即使你已经在你的系统上安装了git，最好还是确定我们在用的是最新的。
 
-### Installing Git
+### 安装Git
 
-As already mentioned Git is cross platform, we will be running through Windows and Linux but you can find macOS also listed [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+就像前面提到的，Git是跨平台的。我们可以在Windows和Linux上运行，并且macOS也在[安装教程](https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git)中。
 
-For [Windows](https://git-scm.com/download/win) we can grab our installers from the official site. 
+对于[Windows版本](https://git-scm.com/download/win)，我们可以从官网上下载安装包。
 
-You could also use `winget` on your Windows machine, think of this as your Windows Application Package Manager. 
+你也可以在Windows上使用`winget`，类似Windows上的应用程序包管理器。
 
-Before we install anything lets see what version we have on our Windows Machine. Open a PowerShell window and run `git --version` 
+在开始安装之前，我们可以看看已安装的版本信息。打开PowerShell并运行`git --version`：
 
-![](Images/Day36_Git1.png)
+![](../../Days/Images/Day36_Git1.png)
 
-We can also check our WSL Ubuntu version of Git as well. 
+也可以在查看WSL Ubuntu上的Git版本。
 
-![](Images/Day36_Git2.png)
+![](../../Days/Images/Day36_Git2.png)
 
-At the time of writing the latest Windows release is `2.35.1` so we have some updating to do there which I will run through. I expect the same for Linux. 
+在编辑这个文档的时候，最新的Windows版本是`2.35.1`，因此我会在后续做更新，在Linux上也类似的。
 
-I went ahead and downloaded the latest installer and ran through the wizard and will document that here. The important thing to note is that git will uninstall previous versions before installing the latest. 
+我下载了最新的安装包，跟着运行向导完成安装。值得注意的是，git会在安装最新版之前将旧版本卸载掉。
 
-Meaning that the process shown below is also the same process for the most part as if you were installing from no git. 
+这意味着下面的流程也将适用于没有安装过git的情形。
 
-It is a very simple installation. Once downloaded double click and get started. Read through the GNU license agreement. But remember this is free and open source software. 
+安装的过程很简单。下载完成后双击安装包开始。阅读GNU许可。但记住这是免费的、开源的软件。
 
-![](Images/Day36_Git3.png)
+![](../../Days/Images/Day36_Git3.png)
 
-Now we can choose additional components that we would like to also install but also associate with git. On Windows I always make sure I install Git Bash as this allows us to run bash scripts on Windows. 
+在安装的同时，我们可以选择一些额外的与之相关选项。在Windows上，我通常会安装Git Bash，它可以运行bash脚本。
 
-![](Images/Day36_Git4.png)
+![](../../Days/Images/Day36_Git4.png)
 
-We can then choose which SSH Executable we wish to use. IN leave this as the bundled OpenSSH that you might have seen in the Linux section. 
+后续我们可以在SSH上执行。相关的内容在Linux部分有提到OpenSSH。
 
-![](Images/Day36_Git5.png)
+![](../../Days/Images/Day36_Git5.png)
 
-We then have experimental features that we may wish to enable, for me I don't need them so I don't enable, you can always come back in through the installation and enable these later on. 
+我们按需求勾选实验性的功能，而我并不需要这部分，你也可以随时回到这一步进行添加。
 
-![](Images/Day36_Git6.png)
+![](../../Days/Images/Day36_Git6.png)
 
-Installation complete, we can now choose to open Git Bash and or the latest release notes. 
+安装完成了，我们可以勾选打开Git Bash和查看更新文档。
 
-![](Images/Day36_Git7.png)
+![](../../Days/Images/Day36_Git7.png)
 
-The final check is to take a look in our PowerShell window what version of git we have now. 
+最后一步要在PowerShell中检查已安装的git版本信息。
 
-![](Images/Day36_Git8.png)
+![](../../Days/Images/Day36_Git8.png)
 
-Super simple stuff and now we are on the latest version. On our Linux machine we seemed to be a little behind so we can also walk through that update process. 
+很简单，现在我们已经有了最新版。在Linux机器上，我们相差了一些版本，所以我们可以进行一下更新。
 
-I simply run the `sudo apt-get install git` command. 
+我简单运行`sudo apt-get install git`命令。
 
-![](Images/Day36_Git9.png)
+![](../../Days/Images/Day36_Git9.png)
 
-You could also run the following which will add the git repository for software installations. 
+你也可以使用下面的命令行，它会把软件安装添加到git仓库中。
 
 ```
 sudo add-apt-repository ppa:git-core/ppa -y
@@ -73,74 +73,76 @@ sudo apt-get update
 sudo apt-get install git -y
 git --version
 ``` 
-### Configuring Git
 
-When we first use git we have to define some settings, 
+### 配置Git
+
+当我们第一次使用git时，我们已经定义了一些设置，
 
 - Name
 - Email 
 - Default Editor
 - Line Ending
 
-This can be done at three levels 
+这些可以在三个层次上完成
 
-- System = All users 
-- Global = All repositories of the current user 
-- Local = The current repository
+- System = 全部用户
+- Global = 当前用户的全部仓库
+- Local = 当前仓库
 
-Example: 
+例如：
 `git config --global user.name "Michael Cade"` 
 `git config --global user.email Michael.Cade@90DaysOfDevOPs.com"`
-Depending on your Operating System will determine the default text editor. In my Ubuntu machine without setting the next command is using nano. The below command will change this to visual studio code. 
+
+你的操作系统会有默认的文本编辑器。在我的Ubuntu机器上，默认使用的是nano。下面的命令会把它更改为visual studio code。
 
 `git config --global core.editor "code --wait"`
 
-now if we want to be able to see all git configuration then we can use the following command. 
+现在，如果我们想查看所有的git设置，我们可以使用下面的命令。
 
 `git config --global -e` 
 
-![](Images/Day36_Git10.png)
+![](../../Days/Images/Day36_Git10.png)
 
-On any machine this file will be named `.gitconfig` on my Windows machine you will find this in your user account directory. 
+在所有机器上，这个文件被命名为`.gitconfig`。在我的Windows电脑上，它被放在了用户文件夹中。
 
-![](Images/Day36_Git11.png)
+![](../../Days/Images/Day36_Git11.png)
 
-### Git Theory
+### Git理论
 
-I mentioned in the post yesterday that there were other version control types and we can split these down into two different types. One is Client Server and the other is Distributed. 
+在昨天的笔记中有提到，版本控制有不同的类型，我们可以把它们分为两类。一种是客户端服务器，另一种是分布式。
 
-### Client-Server Version Control 
+### 客户端服务器的版本控制
 
-Before git was around Client-Server was the defacto method for version control. An example of this would be [Apache Subversion](https://subversion.apache.org/) which is an open source version control system founded in 2000. 
+在git之前，版本控制通常使用的客户端服务器。[Apache Subversion](https://subversion.apache.org/)就是一个例子，他是一个2000年建立的开源版本控制系统。
 
-In this model of Client-Server version control, the first step the developer downloads the source code, the actual files from the server. This doesnt remove the conflicts but it does remove the complexity of the conflicts and how to resolve them. 
+在这个客户端服务器的版本控制模型中，第一步是从服务器下载源代码。这不会消除冲突(conflicts)，但它消除了冲突的复杂性，并给出解决方案。
 
-![](Images/Day36_Git12.png)
+![](../../Days/Images/Day36_Git12.png)
 
-Now for example lets say we have two developers working on the same files and one wins the race and commits or uploads their file back to the server first with their new changes. When the second developer goes to update they have a conflict. 
+举个例子，我们有两个开发者在同一个文件上工作，一个更早地向服务器提交了新的代码。当另一个开发者想要提交时，就存在冲突(conflict)。
 
-![](Images/Day36_Git13.png)
+![](../../Days/Images/Day36_Git13.png)
 
-So now the Dev needs to pull down the first devs code change next to theirs check and then commit once those conflicts have been settled. 
+因此，开发的过程需要获得第一次的代码的修改，并在冲突被处理后再进行提交。
 
-![](Images/Day36_Git15.png)
+![](../../Days/Images/Day36_Git15.png)
 
-### Distributed Version Control 
+### 分布式的版本控制
 
-Git is not the only distributed version control system. But it is very much the defacto. 
+Git不是唯一的分布式版本控制系统。但它是较常见的一个。
 
-Some of the major benefits of Git are: 
+Git的主要优势有：
 
-- Fast 
-- Smart 
-- Flexible 
-- Safe & Secure
+- 快速
+- 智能
+- 灵活
+- 安全
 
-Unlike the Client-Server version control model, each developer downloads the the source repository meaning everything. History of commits, all the branches etc. etc. 
+与客户端服务器版本控制不同的，每个开发者下载源仓库的全部内容。提交记录、所有分支...
 
-![](Images/Day36_Git16.png)
+![](../../Days/Images/Day36_Git16.png)
 
-## Resources 
+## 相关资料
 
 - [What is Version Control?](https://www.youtube.com/watch?v=Yc8sCSeMhi4)
 - [Types of Version Control System](https://www.youtube.com/watch?v=kr62e_n6QuQ)
@@ -149,4 +151,4 @@ Unlike the Client-Server version control model, each developer downloads the the
 - [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk&t=8s) 
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 
-See you on [Day 37](day37.md) 
+[第三十七天](day37.md)见
