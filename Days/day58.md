@@ -9,7 +9,7 @@ id: 1048741
 ---
 ## HashiCorp Configuration Language (HCL)
 
-Before we start making stuff with Terraform we have to dive a little into HashiCorp Configuration Language (HCL). So far during our challenge we have looked at a few different scripting and programming languages and here is another one. We touched on the [Go programming language](Days/day07.md) then [bash scripts](Days/day19.md) we even touched on a little python when it came to [network automation](Days/day27.md)
+Before we start making stuff with Terraform we have to dive a little into HashiCorp Configuration Language (HCL). So far during our challenge we have looked at a few different scripting and programming languages and here is another one. We touched on the [Go programming language](day07.md) then [bash scripts](day19.md) we even touched on a little python when it came to [network automation](day27.md)
 
 Now we must cover HashiCorp Configuration Language (HCL) if this is the first time you are seeing the language it might look a little daunting but its quite simple and very powerful.
 
