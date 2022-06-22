@@ -15,7 +15,7 @@ BASH - **B**ourne **A**gain **Sh**ell
 
 We could almost dedicate a whole section of 7 days to shell scripting much like the programming languages, bash gives us the capability of working alongside other automation tools to get things done. 
 
-I still speak to a lot of people where they have set up some complex shell scripts to make something happen and they rely on this script for some of the most important things in the business, I am not saying we need to understand shell/bash scripting for this purpose, this is not the way. But we should learn shell/bash scripting to work alongside our automation tools and for ad-hoc tasks. 
+I still speak to a lot of people who have set up some complex shell scripts to make something happen and they rely on this script for some of the most important things in the business, I am not saying we need to understand shell/bash scripting for this purpose, this is not the way. But we should learn shell/bash scripting to work alongside our automation tools and for ad-hoc tasks. 
 
 An example of this that we have used in this section could be the VAGRANTFILE we used to create our VM, we could wrap this into a simple bash script that deleted and renewed this every Monday morning so that we have a fresh copy of our Linux VM every week, we could also add all the software stack that we need on said Linux machine and so on all through this one bash script. 
 
@@ -42,7 +42,7 @@ However, you may see other paths listed in already created shell scripts which c
 - `#!/bin/bash`
 - `#!/usr/bin/env bash`
 
-In the next line in our script, I like to add a comment and add the purpose of the script or at least some information about me. You can do this by using the `#` This allows us to comment out particular lines in our code and provide descriptions for what the upcoming commands will be doing. I find the more notes the better for the user experience especially if you are sharing this. 
+In the next line in our script, I like to add a comment and add the purpose of the script or at least some information about me. You can do this by using the `#` This allows us to comment on particular lines in our code and provide descriptions of what the upcoming commands will be doing. I find the more notes the better for the user experience especially if you are sharing this. 
 
 I sometimes use figlet, a program we installed earlier in the Linux section to create some asci art to kick things off in our scripts. 
 
@@ -73,7 +73,7 @@ Now we can run our script again using `./90DaysOfDevOps.sh` after running the sc
 Pretty basic stuff but you can start to see hopefully how this could be used to call on other tools as part of ways to make your life easier and automate things. 
 
 ### Variables, Conditionals
-A lot of this section is really a repeat to what we covered when we were learning Golang but I think its worth us diving in here again. 
+A lot of this section is a repeat of what we covered when we were learning Golang but I think it's worth us diving in here again. 
 
 - ### Variables 
 
@@ -152,7 +152,7 @@ We might also use bash scripting to determine information about files and folder
 - `-d file` True if the file is a directory
 - `-e file` True if the file exists
 - `-f file` True if the provided string is a file 
-- `g file` True if the group id is set on a file
+- `-g file` True if the group id is set on a file
 - `-r file` True if the file is readable
 - `-s file` True if the file has a non-zero size
 
@@ -182,14 +182,14 @@ I found this amazing repository on GitHub that has what seems to be an endless a
 
 **Requirements**: 
 - A user can be passed in as a command line argument. 
-- A user is created with the name of command line argument. 
-- A password can be parsed in as a command line argument. 
+- A user is created with the name of the command line argument. 
+- A password can be parsed as a command line argument. 
 - The password is set for the user 
 - A message of successful account creation is displayed. 
 
 Let's start with creating our shell script with `touch create_user.sh`
 
-Before we move on lets also make this executable using `chmod +x create_user.sh`
+Before we move on let's also make this executable using `chmod +x create_user.sh`
 
 then we can use `nano create_user.sh` to start editing our script for the scenario we have been set. 
 
@@ -216,7 +216,7 @@ Next up we can take that second requirement "A user is created with the name of 
 #A user can be passed in as a command line argument
 echo "$1 user account being created."
 
-#A user is created with the name of command line argument
+#A user is created with the name of the command line argument
 sudo useradd -m "$1"
 
 ```
@@ -227,7 +227,7 @@ We can then check this account has been created with the `awk -F: '{ print $1}' 
 
 ![](Images/Day19_Linux11.png)
 
-Our next requirement is "A password can be parsed in as a command line argument." First of all we are not going to ever do this in production it is more for us to work through a list of requirements in the lab to understand. 
+Our next requirement is "A password can be parsed as a command line argument." First of all, we are not going to ever do this in production it is more for us to work through a list of requirements in the lab to understand. 
 
 ```
 #! /usr/bin/bash
@@ -235,10 +235,10 @@ Our next requirement is "A password can be parsed in as a command line argument.
 #A user can be passed in as a command line argument
 echo "$1 user account being created."
 
-#A user is created with the name of command line argument
+#A user is created with the name of the command line argument
 sudo useradd -m "$1"
 
-#A password can be parsed in as a command line argument.
+#A password can be parsed as a command line argument.
 sudo chpasswd <<< "$1":"$2"
 ```
 
@@ -248,9 +248,9 @@ You can see from the below image that we executed our script it created our user
 
 ![](Images/Day19_Linux12.png)
 
-The final requirement is "A message of successful account creation is displayed." We actually already have this in the top line of our code and we can see on the above screen shot that we have `90DaysOfDevOps user account being created` is shown. This was left from our testing with the `$1` parameter. 
+The final requirement is "A message of successful account creation is displayed." We already have this in the top line of our code and we can see on the above screenshot that we have a `90DaysOfDevOps user account being created` shown. This was left from our testing with the `$1` parameter. 
 
-Now this script can be used to quickly onboard and set up new users on to our Linux systems. But maybe instead of a few of the historic people having to work through this and then having to get other people their new usernames or passwords we could add some user input that we have previously covered earlier on to capture our variables. 
+Now, this script can be used to quickly onboard and set up new users on to our Linux systems. But maybe instead of a few of the historic people having to work through this and then having to get other people their new usernames or passwords we could add some user input that we have previously covered earlier on to capture our variables. 
 
 ``` 
 #! /usr/bin/bash
@@ -263,10 +263,10 @@ read  password
 #A user can be passed in as a command line argument
 echo "$username user account being created."
 
-#A user is created with the name of command line argument
+#A user is created with the name of the command line argument
 sudo useradd -m $username
 
-#A password can be parsed in as a command line argument.
+#A password can be parsed as a command line argument.
 sudo chpasswd <<< $username:$password
 ```
 

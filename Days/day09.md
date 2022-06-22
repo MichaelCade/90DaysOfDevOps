@@ -2,10 +2,10 @@
 title: '#90DaysOfDevOps - Let''s explain the Hello World code - Day 9'
 published: false
 description: 90DaysOfDevOps - Let's explain the Hello World code
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
-id: 1048732
+id: 1099682
 ---
 ## Let's explain the Hello World code
 
@@ -16,7 +16,7 @@ On [Day 8](day08.md) we walked through getting Go installed on your workstation 
 In this section, we are going to take a deeper look into the code and understand a few more things about the Go language. 
 
 ### What is Compiling?
-Before we get into the [6 lines of the Hello World code](Go/hello.go) we need to have a bit of an understanding about compiling.
+Before we get into the [6 lines of the Hello World code](Go/hello.go) we need to have a bit of an understanding of compiling.
 
 Programming languages that we commonly use such as Python, Java, Go and C++ are high-level languages. Meaning they are human-readable but when a machine is trying to execute a program it needs to be in a form that a machine can understand. We have to translate our human-readable code to machine code which is called compiling. 
 
@@ -25,9 +25,9 @@ Programming languages that we commonly use such as Python, Java, Go and C++ are 
 From the above you can see what we did on [Day 8](day08.md) here, we created a simple Hello World main.go and we then used the command `go build main.go` to compile our executable. 
 
 ### What are packages?
-A package is a collection of source files in the same directory that are compiled together. We can simplify this further, a package is a bunch of .go files in the same directory. Remember our Hello folder from Day 8? If and when you get into more complex Go programs you might find that you have folder1 folder2 and folder3 containing different .go files that make up your program with multiple packages. 
+A package is a collection of source files in the same directory that are compiled together. We can simplify this further, a package is a bunch of .go files in the same directory. Remember our Hello folder from Day 8? If and when you get into more complex Go programs you might find that you have folder1 folder2 and folder3 containing different.go files that make up your program with multiple packages. 
 
-We use packages so we can reuse other peoples code, we don't have to write everything from scratch. Maybe we are wanting a calculator as part of our program, you could probably find an existing Go Package that contains the mathematical functions that you could import into your code saving you a lot of time and effort in the long run.  
+We use packages so we can reuse other people's code, we don't have to write everything from scratch. Maybe we are wanting a calculator as part of our program, you could probably find an existing Go Package that contains the mathematical functions that you could import into your code saving you a lot of time and effort in the long run.  
 
 Go encourages you to organise your code in packages so that it is easy to reuse and maintain source code. 
 
@@ -44,17 +44,17 @@ A package can be named whatever you wish. We have to call this `main` as this is
 
 Whenever we want to compile and execute our code we have to tell the machine where the execution needs to start. We do this by writing a function called main. The machine will look for a function called main to find the entry point of the program. 
 
-A function is a block of code that can do some specific task for and can be used across the program. 
+A function is a block of code that can do some specific task and can be used across the program. 
 
-You can declare a function with any name using `func` but in this case we need to name it `main` as this is where the code starts. 
+You can declare a function with any name using `func` but in this case, we need to name it `main` as this is where the code starts. 
 
 ![](Images/Day9_Go4.png)
 
-Next we are going to look at line 3 of our code, the import, this basically means you want to bring in another package to your main program. fmt is a standard package being used here provided by Go, this package contains the `Println()`function and because we have imported this we can use this in line 6. There are a number of standard packages you can include in your program and leverage or reuse them in your code saving you the hassle of having to write from scratch. [Go Standard Library](https://pkg.go.dev/std)
+Next, we are going to look at line 3 of our code, the import, this means you want to bring in another package to your main program. fmt is a standard package being used here provided by Go, this package contains the `Println()` function and because we have imported this we can use this in line 6. There are several standard packages you can include in your program and leverage or reuse them in your code saving you the hassle of having to write from scratch. [Go Standard Library](https://pkg.go.dev/std)
 
 ![](Images/Day9_Go5.png)
 
-the `Println()` that we have here is a way in which to write to a standard output to the terminal where ever the executuable has been executed succesfully. Feel free to change the message in between the (). 
+the `Println()` that we have here is a way in which to write standard output to the terminal where ever the executable has been executed successfully. Feel free to change the message in between the (). 
 
 ![](Images/Day9_Go6.png)
 

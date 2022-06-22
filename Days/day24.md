@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Network Automation - Day 24'
 published: false
 description: 90DaysOfDevOps - Network Automation
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048805
@@ -24,9 +24,9 @@ To break this down you would need to identify how the task or process that you'r
 
 "If you don't know where you are going, any road will take you there."
 
-Having a framework or design structure that you're trying to achieve knowing what your end goal is and then working step by step towards achieving that goal measuring the automation success at various stages based on the business outcomes.
+Have a framework or design structure that you're trying to achieve know what your end goal is and then work step by step towards achieving that goal measuring the automation success at various stages based on the business outcomes.
 
-Build concepts modelled around existing applications there's no need to design the concepts around automation in a bubble because they need to be applied to your application, your service, your infrastructure, so begin to build the concepts and model them around your existing infrastructure, you're existing applications. 
+Build concepts modelled around existing applications there's no need to design the concepts around automation in a bubble because they need to be applied to your application, your service, and your infrastructure, so begin to build the concepts and model them around your existing infrastructure, you're existing applications. 
 
 ### Approach to Networking Automation 
 
@@ -39,7 +39,7 @@ We should identify the tasks and perform a discovery on network change requests 
 
 We should then divide tasks and analyse how different network functions work and interact with each other. 
 
-- Infrastructure/Network team receives change tickets at multiple layers to deploy applications. 
+- The infrastructure/Network team receives change tickets at multiple layers to deploy applications. 
 - Based on Network services, divide them into different areas and understand how they interact with each other. 
     - Application Optimisation 
     - ADC (Application Delivery Controller)
@@ -55,7 +55,7 @@ Reusable policies, define and simplify reusable service tasks, processes and inp
 - Simplifying the deployment process will reduce the time to market for both new and existing workloads. 
 - Once you have a standard process, it can be sequenced and aligned to individual requests for a multi-threaded approach and delivery. 
 
-Combine the policies with business-specific activities. How does implementing this policy help the business? Saves time? Saves Money? Provides better business outcome? 
+Combine the policies with business-specific activities. How does implementing this policy help the business? Saves time? Saves Money? Provides a better business outcome? 
 
 - Ensure that service tasks are interoperable. 
 - Associate the incremental service tasks so that they align to create business services. 
@@ -80,7 +80,7 @@ Orchestrate the network service!
 
 The good news here is that for the most part, the tools we use here for Network automation are generally the same that we will use for other areas of automation or what we have already covered so far or what we will cover in future sessions. 
 
-Operating System - As I have throughout this challenge, I am focusing on doing most of my learning with a Linux OS, those reasons were given in the Linux section but almost all of the tooling that we will touch albeit cross-OS platform maybe today they all started as Linux based applications or tools, to begin with. 
+Operating System - As I have throughout this challenge, I am focusing on doing most of my learning with a Linux OS, those reasons were given in the Linux section but almost all of the tooling that we will touch albeit cross-OS platforms maybe today they all started as Linux based applications or tools, to begin with. 
 
 Integrated Development Environment (IDE) - Again not much to say here other than throughout I would suggest Visual Studio Code as your IDE, based on the extensive plugins that are available for so many different languages. 
 
@@ -131,7 +131,7 @@ Analyse APIs - Postman is a great tool for analysing RESTful APIs. Helps to buil
 
 [Network Test Automation](https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/)
 
-Over the next 3 days, I am planning to get more hands-on around some of the things we have covered and put some work in around Python and Network automation. 
+Over the next 3 days, I am planning to get more hands-on with some of the things we have covered and put some work in around Python and Network automation. 
 
 We have nowhere near covered all of the networking topics so far but wanted to make this broad enough to follow along and still keep learning from the resources I am adding below. 
 

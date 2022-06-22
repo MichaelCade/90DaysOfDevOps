@@ -2,14 +2,14 @@
 title: '#90DaysOfDevOps - Installing & Configuring Git - Day 36'
 published: false
 description: 90DaysOfDevOps - Installing & Configuring Git
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048738
 ---
 ## Installing & Configuring Git
 
-Git is a open source, cross platform tool for version control. If I like me you are using Ubuntu or most Linux environments you might find that you already git installed but we are going to run through the install and configuration. 
+Git is a open source, cross platform tool for version control. If you are like me, using Ubuntu or most Linux environments you might find that you already have git installed but we are going to run through the install and configuration. 
 
 Even if you already have git installed on your system it is also a good idea to make sure we are up to date. 
 
@@ -136,7 +136,7 @@ Some of the major benefits of Git are:
 - Flexible 
 - Safe & Secure
 
-Unlike the Client-Server version control model, each developer downloads the the source repository meaning everything. History of commits, all the branches etc. etc. 
+Unlike the Client-Server version control model, each developer downloads the source repository meaning everything. History of commits, all the branches etc. 
 
 ![](Images/Day36_Git16.png)
 

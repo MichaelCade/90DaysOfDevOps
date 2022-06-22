@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - Microsoft Azure Storage Models - Day 32'
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Storage Models
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048775
@@ -71,6 +71,8 @@ If you are accessing your storage from another Azure service, traffic stays with
 When it comes to storage performance we have two different types: 
 - **Standard** - Maximum number of IOPS
 - **Premium** - Guaranteed number of IOPS
+
+IOPS => Input/Output operations per sec.
 
 There is also a difference between unmanaged and managed disks to consider when choosing the right storage for the task you have. 
 

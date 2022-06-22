@@ -25,7 +25,7 @@ We are on day 12 and we would need to change that `dayscomplete` every day and c
 
 Getting user input, we want to get the value of maybe a name and the number of days completed. For us to do this we can use another function from within the `fmt` package. 
 
-Recap on the `fmt` package, different functions for: formatted input and output (I/O)
+Recap on the `fmt` package, different functions for formatted input and output (I/O)
 
 - Print Messages 
 - Collect User Input 
@@ -80,4 +80,3 @@ Below is running this code.
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
 
 See you on [Day 13](day13.md).
-

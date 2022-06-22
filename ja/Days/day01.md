@@ -1,5 +1,5 @@
 ---
-title: '#90DaysOfDevOps - はじめに - 一日目'
+title: '#90DaysOfDevOps - はじめに - 1日目'
 published: true
 description: 90DaysOfDevOps - はじめに
 tags: 'devops, 90daysofdevops, learning'
@@ -48,7 +48,7 @@ DevOpsは、このムーブメントの目標に到達するための一連の�
 
 DevOpsの観点では、**開発、テスト、デプロイメント**のすべてがDevOpsチームに集約されます。
 
-最後に、これを可能な限り効果的かつ効率的にするために、**自動化**を活用しなければならないことを指摘したいと思います。 無料版のDeepL翻訳（www.DeepL.com/Translator）で翻訳しました。
+最後に、これを可能な限り効果的かつ効率的にするために、**自動化**を活用しなければならないことを指摘したいと思います。
 
 ## リソース
 
