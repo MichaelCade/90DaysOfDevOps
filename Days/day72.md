@@ -37,7 +37,7 @@ The first step is to get our minikube cluster up and running, we can simply do t
 
 ![](Images/Day72_CICD1.png)
 
-I have added a folder with all the YAML configuration and values that can be found [here](days/CICD/Jenkins) Now that we have our cluster we can run the following to create our jenkins namespace. `kubectl create -f jenkins-namespace.yml`
+I have added a folder with all the YAML configuration and values that can be found [here](CICD/Jenkins) Now that we have our cluster we can run the following to create our jenkins namespace. `kubectl create -f jenkins-namespace.yml`
 
 ![](Images/Day72_CICD2.png)
 
