@@ -10,23 +10,23 @@ id: 1048741
 
 ## HashiCorp Configuration Language (HCL)
 
-Before we start making stuff with Terraform we have to dive a little into HashiCorp Configuration Language (HCL). So far during our challenge we have looked at a few different scripting and programming languages and here is another one. We touched on the [Go programming language](day07.md) then [bash scripts](day19.md) we even touched on a little python when it came to [network automation](day27.md)
+Before we start making stuff with Terraform we have to dive a little into HashiCorp Configuration Language (HCL). So far during our challenge, we have looked at a few different scripting and programming languages and here is another one. We touched on the [Go programming language](day07.md) then [bash scripts](day19.md) we even touched on a little python when it came to [network automation](day27.md)
 
-Now we must cover HashiCorp Configuration Language (HCL) if this is the first time you are seeing the language it might look a little daunting but its quite simple and very powerful.
+Now we must cover HashiCorp Configuration Language (HCL) if this is the first time you are seeing the language it might look a little daunting but it's quite simple and very powerful.
 
-As we move through this section, we are going to be using examples that we can run locally on our system regardless of what OS you are using, we will be using virtualbox, albeit not the infrastructure platform you would usually be using with Terraform. However running this locally, it is free and will allow us to achieve what we are looking for in this post. We could also extend this posts concepts to docker or Kubernetes as well.
+As we move through this section, we are going to be using examples that we can run locally on our system regardless of what OS you are using, we will be using VirtualBox, albeit not the infrastructure platform you would usually be using with Terraform. However running this locally, is free and will allow us to achieve what we are looking for in this post. We could also extend this post's concept to docker or Kubernetes as well.
 
-In general though, you would or should be using Terraform to deploy your infrastructure in the public cloud (AWS, Google, Microsoft Azure) but then also in your virtualisation environments such as (VMware, Microsoft Hyper-V, Nutanix AHV). In the public cloud Terraform allows for us to do a lot more than just Virtual Machine automated deployment, we can create all the required infrastructure such as PaaS workloads and all of the networking required assets such as VPCs and Security Groups.
+In general, though, you would or should be using Terraform to deploy your infrastructure in the public cloud (AWS, Google, Microsoft Azure) but then also in your virtualisation environments such as (VMware, Microsoft Hyper-V, Nutanix AHV). In the public cloud Terraform allows for us to do a lot more than just Virtual Machine automated deployment, we can create all the required infrastructure such as PaaS workloads and all of the networking required assets such as VPCs and Security Groups.
 
-There are two important aspects to Terraform, we have the code which we are going to get into in this post and then we also have the state. Both of these together could be called the Terraform core. We then have the environment we wish to speak to and deploy into, which is executed using Terraform providers, briefly mentioned in the last session, but we have an AWS provider, we have an Azure providers etc. There are hundreds.
+There are two important aspects to Terraform, we have the code which we are going to get into in this post and then we also have the state. Both of these together could be called the Terraform core. We then have the environment we wish to speak to and deploy into, which is executed using Terraform providers, briefly mentioned in the last session, but we have an AWS provider, we have Azure providers etc. There are hundreds.
 
 ### Basic Terraform Usage
 
-Let's take a look at a Terraform `.tf` file to see how they are made up. The first example we will walk through will in fact be code to deploy resources to AWS, this would then also require the AWS CLI to be installed on your system and configured for your account.
+Let's take a look at a Terraform `.tf` file to see how they are made up. The first example we will walk through will be code to deploy resources to AWS, this would then also require the AWS CLI to be installed on your system and configured for your account.
 
 ### Providers
 
-At the top of our `.tf` file structure, generally called `main.tf` at least until we make things more complex. Here we will define the providers that we have mentioned before. Our source of the aws provider as you can see is `hashicorp/aws` this means the provider is maintained or has been published by hashicorp themselves. By default you will reference providers that are available from the [Terraform Registry](https://registry.terraform.io/), you also have the ability to write your own providers, and use these locally, or self-publish to the Terraform Registry.
+At the top of our `.tf` file structure, generally called `main.tf` at least until we make things more complex. Here we will define the providers that we have mentioned before. Our source of the AWS provider as you can see is `hashicorp/aws` this means the provider is maintained or has been published by hashicorp themselves. By default you will reference providers that are available from the [Terraform Registry](https://registry.terraform.io/), you also can write your providers, and use these locally, or self-publish to the Terraform Registry.
 
 ```
 terraform {
@@ -117,7 +117,6 @@ resource "aws_instance" "90daysofdevops" {
   tags = {
     Name = "Created by Terraform"
 
-
   tags = {
     Name = "ExampleAppServerInstance"
   }
@@ -142,13 +141,13 @@ output "hello_world" {
 }
 ```
 
-You will find this file in the IAC folder under hello-world, but out of the box this is not going to simply work there are some commans we need to run in order to use our terraform code.
+You will find this file in the IAC folder under hello-world, but out of the box, this is not going to simply work there are some commands we need to run to use our terraform code.
 
 In your terminal navigate to your folder where the main.tf has been created, this could be from this repository or you could create a new one using the code above.
 
 When in that folder we are going to run `terraform init`
 
-We need to perform this on any directory where we have or before we run any terraform code. Initialising a configuration directory downloads and installs the providers defined in the configuration, in this case we have no providers but in the example above this would download the aws provider for this configuration.
+We need to perform this on any directory where we have or before we run any terraform code. Initialising a configuration directory downloads and installs the providers defined in the configuration, in this case, we have no providers but in the example above this would download the AWS provider for this configuration.
 
 ![](Images/Day58_IAC1.png)
 
@@ -156,26 +155,26 @@ The next command will be `terraform plan`
 
 The `terraform plan` command creates an execution plan, which lets you preview the changes that Terraform plans to make to your infrastructure.
 
-You can simply see below that with our hello-world example we are going to see an output if this was an AWS ec2 instance we would see all the steps that we will be creating.
+You can simply see below that with our hello-world example we are going to see output if this was an AWS ec2 instance we would see all the steps that we will be creating.
 
 ![](Images/Day58_IAC2.png)
 
-At this point we have initialised our repository and we have our providers downloaded where required, we have run a test walkthrough to make sure this is what we want to see so now we can run and deploy our code.
+At this point, we have initialised our repository and we have our providers downloaded where required, we have run a test walkthrough to make sure this is what we want to see so now we can run and deploy our code.
 
-`terraform apply` allows us to do this there is a built in safety measure to this command and this will again give you a plan view on what is going to happen which warrants a response from you to say yes to continue.
+`terraform apply` allows us to do this there is a built-in safety measure to this command and this will again give you a plan view on what is going to happen which warrants a response from you to say yes to continue.
 
 ![](Images/Day58_IAC3.png)
 
-When we type in yes to the enter a value, and our code is deployed. Obviously not that exciting but you can see we have the output that we defined in our code.
+When we type in yes to enter a value, our code is deployed. Not that exciting but you can see we have the output that we defined in our code.
 
 ![](Images/Day58_IAC4.png)
 
-Now we have not deployed anything, we have not added, changed or destroyed anything but if we did then we would see that indicated also in the above. If however we had deployed something and we wanted to get rid of everything we deployed we can use the `terraform destroy` command. Again this has that safety where you have to type yes although you can use `--auto-approve` on the end of your `apply` and `destroy` commands to bypass that manual intervention. But I would advise only using this shortcut when in learning and testing as everything will dissappear sometimes faster than it was built.
+Now we have not deployed anything, we have not added, changed or destroyed anything but if we did then we would see that indicated also in the above. If however we had deployed something and we wanted to get rid of everything we deployed we can use the `terraform destroy` command. Again this has that safety where you have to type yes although you can use `--auto-approve` on the end of your `apply` and `destroy` commands to bypass that manual intervention. But I would advise only using this shortcut when learning and testing as everything will disappear sometimes faster than it was built.
 
-From this there are really 4 commands we have covered from the Terraform CLI.
+From this, there are 4 commands we have covered from the Terraform CLI.
 
 - `terraform init` = get your project folder ready with providers
-- `terraform plan` = show what is going to be created, changed during the next command based on our code.
+- `terraform plan` = show what is going to be created, and changed during the next command based on our code.
 - `terraform apply` = will go and deploy the resources defined in our code.
 - `terraform destroy` = will destroy the resources we have created in our project
 
@@ -190,16 +189,16 @@ Another thing to note when running `terraform init` take a look at the tree on t
 
 We also need to be aware of the state file that is created also inside our directory and for this hello world example our state file is simple. This is a JSON file which is the representation of the world according to Terraform. The state will happily show off your sensitive data so be careful and as a best practice put your `.tfstate` files in your `.gitignore` folder before uploading to GitHub.
 
-By default the state file as you can see lives inside the same directory as your project code, but it can also be stored remotely as an option. In a production environment this is likely going to be a shared location such as an S3 bucket.
+By default, the state file as you can see lives inside the same directory as your project code, but it can also be stored remotely as an option. In a production environment, this is likely going to be a shared location such as an S3 bucket.
 
-Another option could be Terraform Cloud, this is a paid for managed service. (Free up to 5 users)
+Another option could be Terraform Cloud, this is a paid-for-managed service. (Free up to 5 users)
 
-The pros for storing state in a remote location is that we get:
+The pros for storing state in a remote location are that we get:
 
 - Sensitive data encrypted
 - Collaboration
 - Automation
-- However it could bring increase complexity
+- However, it could bring increase the complexity
 
 ```JSON
 {
