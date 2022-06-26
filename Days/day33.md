@@ -31,7 +31,7 @@ We can liken Azure Virtual Networks to AWS VPCs. However, there are some differe
 - In AWS a default VNet is created that is not the case in Microsoft Azure, you have to create your first virtual network to your requirements. 
 - All Virtual Machines by default in Azure have NAT access to the internet. No NAT Gateways as per AWS. 
 - In Microsoft Azure, there is no concept of Private or Public subnets. 
-- Public IPs is a resource that can be assigned to vNICs or Load Balancers. 
+- Public IPs are a resource that can be assigned to vNICs or Load Balancers. 
 - The Virtual Network and Subnets have their own ACLs enabling subnet level delegation. 
 - Subnets across Availability Zones whereas in AWS you have subnets per Availability Zones. 
 
@@ -40,9 +40,9 @@ We also have Virtual Network Peering. This enables virtual networks across tenan
 ### Access Control 
 
 - Azure utilises Network Security Groups, these are stateful. 
-- Enable rules to be created then assigned to a network security group 
+- Enable rules to be created and then assigned to a network security group 
 - Network security groups applied to subnets or VMs. 
-- When applied to a subnet it is still enforced at the Virtual Machine NIC it is not an "Edge" device. 
+- When applied to a subnet it is still enforced at the Virtual Machine NIC that it is not an "Edge" device. 
 
 ![](Images/Day33_Cloud1.png)
 
@@ -83,11 +83,11 @@ Also with the App Gateway, you can optionally use the Web Application firewall c
 
 ## Azure Management Tools 
 
-We have spent most of our theory time walking through the Azure Portal, I would suggest that when it comes to following a DevOps culture and process a lot of these tasks especially around provisioning will be done via an API or a command-line tool. I wanted to touch on some of those other management tools that we have available to us as we need to know this for when we are automating the provisioning of our Azure environments. 
+We have spent most of our theory time walking through the Azure Portal, I would suggest that when it comes to following a DevOps culture and process a lot of these tasks, especially around provisioning will be done via an API or a command-line tool. I wanted to touch on some of those other management tools that we have available to us as we need to know this for when we are automating the provisioning of our Azure environments. 
 
 ### Azure Portal 
 
-The Microsoft Azure Portal is a web-based console, that provides an alternative to command-line tools. You can manage your subscriptions within the Azure Portal. Build, Manage, Monitor everything from a simple web app to complex cloud deployments. Another thing you will find within the portal are these breadcrumbs, JSON as mentioned before is the underpinning of all Azure Resources, It might be that you start in the Portal to understand the features, services and functionality but then later understand the JSON underneath to incorporate into your automated workflows. 
+The Microsoft Azure Portal is a web-based console, that provides an alternative to command-line tools. You can manage your subscriptions within the Azure Portal. Build, Manage, and Monitor everything from a simple web app to complex cloud deployments. Another thing you will find within the portal are these breadcrumbs, JSON as mentioned before is the underpinning of all Azure Resources, It might be that you start in the Portal to understand the features, services and functionality but then later understand the JSON underneath to incorporate into your automated workflows. 
 
 ![](Images/Day33_Cloud2.png)
 
@@ -101,7 +101,7 @@ Before we get into Azure PowerShell it is worth introducing PowerShell first. Po
 
 Azure PowerShell is a set of cmdlets for managing Azure resources directly from the PowerShell command line. 
 
-We can see from below that you can connect to your subscription using the PowerShell command `Connect-AzAccount` 
+We can see below that you can connect to your subscription using the PowerShell command `Connect-AzAccount` 
 
 ![](Images/Day33_Cloud4.png)
 
@@ -117,7 +117,7 @@ Like many, and as you have all seen my go-to IDE is Visual Studio Code.
 
 Visual Studio Code is a free source-code editor made by Microsoft for Windows, Linux and macOS. 
 
-You will see from below that there are lots of integrations and tools built into Visual Studio Code that you can use to interact with Microsoft Azure and the services within. 
+You will see below that there are lots of integrations and tools built into Visual Studio Code that you can use to interact with Microsoft Azure and the services within. 
 
 ![](Images/Day33_Cloud6.png)
 
@@ -168,7 +168,7 @@ The takeaway here as we already mentioned is about choosing the right tool. Azur
 Azure CLI
 
 - Cross-platform command-line interface, installable on Windows, macOS, Linux
-- Runs in Windows PowerShell, Cmd, or Bash and other Unix shells.
+- Runs in Windows PowerShell, Cmd, Bash and other Unix shells.
 
 Azure PowerShell
 
@@ -177,7 +177,7 @@ Azure PowerShell
 
 If there is a reason you cannot use PowerShell in your environment but you can use .mdor bash then the Azure CLI is going to be your choice. 
 
-Next up we take all the theory we have been through and create some scenarios and get hands-on in Azure. 
+Next up we take all the theories we have been through and create some scenarios and get hands-on in Azure. 
 
 ## Resources 
 
