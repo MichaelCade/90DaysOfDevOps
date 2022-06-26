@@ -9,7 +9,7 @@ id: 1049041
 ---
 ## The Big Picture: Git - Version Control
 
-Before we get into git, we need to understand what version control is and why? In this opener for Git, we will take a look at what version control is, the basics of git.  
+Before we get into git, we need to understand what version control is and why? In this opener for Git, we will take a look at what version control is, and the basics of git.  
 
 ### What is Version Control? 
 
@@ -19,11 +19,11 @@ The most obvious and a big benefit of Version Control is the ability to track a 
 
 ![](Images/Day35_Git1.png)
 
-Version Control before it was cool, would have been something like manually creating a copy of your version before you made changes. It might be that you also comment out old useless code with the just in case mentality. 
+Version Control before it was cool, would have been something like manually creating a copy of your version before you made changes. It might be that you also comment out old useless code with the just-in-case mentality. 
 
 ![](Images/Day35_Git2.png)
 
-I have started using version control over not just source code but pretty much anything, talks about projects like this (90DaysOfDevOps) because why would you not want that rollback and log of everything that has gone on. 
+I have started using version control over not just source code but pretty much anything that talks about projects like this (90DaysOfDevOps) because why would you not want that rollback and log of everything that has gone on. 
 
 However, a big disclaimer **Version Control is not a Backup!**
 
@@ -35,11 +35,11 @@ The way this is achieved in Version Control is through branching.
 
 ![](Images/Day35_Git3.png)
 
-Branching allows for two code streams for the same app as we stated above. But we will still want new features that land in our source code free version to be in our premium and to achieve this we have something called merging. 
+Branching allows for two code streams for the same app as we stated above. But we will still want new features that land in our source code-free version to be in our premium and to achieve this we have something called merging. 
 
 ![](Images/Day35_Git4.png)
 
-Now, this same easy but merging can be complicated because you could have a team working on the free edition and you could have another team working on the premium paid for version and what if both change code that affects aspects of the overall code. Maybe a variable gets updated and breaks something. Then you have a conflict that breaks one of the features. Version Control cannot fix the conflicts that are down to you. But version control allows this to be easily managed. 
+Now, this same easy but merging can be complicated because you could have a team working on the free edition and you could have another team working on the premium paid-for version and what if both change code that affects aspects of the overall code. Maybe a variable gets updated and breaks something. Then you have a conflict that breaks one of the features. Version Control cannot fix the conflicts that are down to you. But version control allows this to be easily managed. 
 
 The primary reason if you have not picked up so far for version control, in general, is the ability to collaborate. The ability to share code amongst developers and when I say code as I said before more and more we are seeing much more use cases for other reasons to use source control, maybe its a joint presentation you are working on with a colleague or a 90DaysOfDevOps challenge where you have the community offering their corrections and updates throughout the project. 
 
@@ -55,7 +55,7 @@ Another thing to mention here is that it's not just developers that can benefit 
 
 Git is a tool that tracks changes to source code or any file, or we could also say Git is an open-source distributed version control system. 
 
-There are many ways in which git can be used on our systems, most commonly or at least for me I have seen it in at the command line, but we also have graphical user interfaces and tools like Visual Studio Code that have git aware operations we can take advantage of. 
+There are many ways in which git can be used on our systems, most commonly or at least for me I have seen it at the command line, but we also have graphical user interfaces and tools like Visual Studio Code that have git-aware operations we can take advantage of. 
 
 Now we are going to run through a high-level overview before we even get Git installed on our local machine. 
 
@@ -79,11 +79,11 @@ We can now see what has happened within the history of the project. Using the `g
 
 ![](Images/Day35_Git9.png)
 
-We can also check the status of our repository by using `git status` this shows we have nothing to commit and we can add a new file called samplecode.ps1. If we then run the same `git status you will see that we file to be committed. 
+We can also check the status of our repository by using `git status` this shows we have nothing to commit and we can add a new file called sample code.ps1. If we then run the same `git status you will see that we file to be committed. 
 
 ![](Images/Day35_Git10.png)
 
-Add our new file using the `git add samplecode.ps1` command and then we can run `git status` again and see our file is ready to be committed. 
+Add our new file using the `git add sample code.ps1` command and then we can run `git status` again and see our file is ready to be committed. 
 
 ![](Images/Day35_Git11.png)
 
@@ -117,17 +117,15 @@ But then equally we will want to move forward as well and we can do this the sam
 
 The TLDR; 
 
-- Tracking a projects history
+- Tracking a project's history
 - Managing multiple versions of a project
 - Sharing code amongst developers and a wider scope of teams and tools
 - Coordinating teamwork
 - Oh and there is some time travel! 
 
-
 This might have seemed a jump around but hopefully, you can see without really knowing the commands used the powers and the big picture behind Version Control. 
 
 Next up we will be getting git installed and set up on your local machine and diving a little deeper into some other use cases and commands that we can achieve in Git. 
-
 
 
 ## Resources 
@@ -140,4 +138,3 @@ Next up we will be getting git installed and set up on your local machine and di
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 
 See you on [Day 36](day36.md) 
-
