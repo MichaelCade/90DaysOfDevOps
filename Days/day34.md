@@ -1,53 +1,55 @@
 ---
-title: '#90DaysOfDevOps - Microsoft Azure Hands-On Scenarios - Day 34'
+title: "#90DaysOfDevOps - Microsoft Azure Hands-On Scenarios - Day 34"
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Hands-On Scenarios
-tags: 'DevOps, 90daysofdevops, learning'
+tags: "DevOps, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048763
 ---
+
 ## Microsoft Azure Hands-On Scenarios
 
-The last 6 days have been focused on Microsoft Azure and the public cloud in general, a lot of this foundation had to contain a lot of theory to understand the building blocks of Azure but also this will nicely translate to the other major cloud providers as well. 
+The last 6 days have been focused on Microsoft Azure and the public cloud in general, a lot of this foundation had to contain a lot of theory to understand the building blocks of Azure but also this will nicely translate to the other major cloud providers as well.
 
-I mentioned at the very beginning about getting a foundational knowledge of the public cloud and choosing one provider to at least begin with, if you are dancing between different clouds then I believe you can get lost quite easily whereas choosing one you get to understand the fundamentals and when you have those it is quite easy to jump into the other clouds and accelerate your learning. 
+I mentioned at the very beginning about getting a foundational knowledge of the public cloud and choosing one provider to at least begin with, if you are dancing between different clouds then I believe you can get lost quite easily whereas choosing one you get to understand the fundamentals and when you have those it is quite easy to jump into the other clouds and accelerate your learning.
 
-In this final session, I am going to be picking and choosing my hands-on scenarios from this page here which is a reference created by Microsoft and is used for preparations for the [AZ-104 Microsoft Azure Administrator](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/) 
+In this final session, I am going to be picking and choosing my hands-on scenarios from this page here which is a reference created by Microsoft and is used for preparations for the [AZ-104 Microsoft Azure Administrator](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/)
 
-There are some here such as Containers and Kubernetes that we have not covered in any detail as of yet so I don't want to jump in there just yet. 
+There are some here such as Containers and Kubernetes that we have not covered in any detail as of yet so I don't want to jump in there just yet.
 
-In previous posts, we have created most of Modules 1,2 and 3. 
+In previous posts, we have created most of Modules 1,2 and 3.
 
-### Virtual Networking 
+### Virtual Networking
+
 Following [Module 04](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_04-Implement_Virtual_Networking.html):
 
-I went through the above and changed a few namings for #90DaysOfDevOps. I also instead of using the Cloud Shell went ahead and logged in with my new user created on previous days with the Azure CLI on my Windows machine. 
+I went through the above and changed a few namings for #90DaysOfDevOps. I also instead of using the Cloud Shell went ahead and logged in with my new user created on previous days with the Azure CLI on my Windows machine.
 
-You can do this using the `az login` which will open a browser and let you authenticate to your account. 
+You can do this using the `az login` which will open a browser and let you authenticate to your account.
 
 I have then created a PowerShell script and some references from the module to use to build out some of the tasks below. You can find the associated files in this folder.
- (Cloud\01VirtualNetworking) 
+(Cloud\01VirtualNetworking)
 
- Please make sure you change the file location in the script to suit your environment. 
+Please make sure you change the file location in the script to suit your environment.
 
-At this first stage, we have no virtual network or virtual machines created in our environment, I only have a cloud shell storage location configured in my resource group. 
+At this first stage, we have no virtual network or virtual machines created in our environment, I only have a cloud shell storage location configured in my resource group.
 
 I first of all run my [PowerShell script](Cloud/01VirtualNetworking/Module4_90DaysOfDevOps.ps1)
 
- ![](Images/Day34_Cloud1.png)
- 
+![](Images/Day34_Cloud1.png)
+
 - Task 1: Create and configure a virtual network
 
- ![](Images/Day34_Cloud2.png)
+![](Images/Day34_Cloud2.png)
 
 - Task 2: Deploy virtual machines into the virtual network
 
- ![](Images/Day34_Cloud3.png)
+![](Images/Day34_Cloud3.png)
 
 - Task 3: Configure private and public IP addresses of Azure VMs
-  
- ![](Images/Day34_Cloud4.png)
+
+![](Images/Day34_Cloud4.png)
 
 - Task 4: Configure network security groups
 
@@ -59,13 +61,14 @@ I first of all run my [PowerShell script](Cloud/01VirtualNetworking/Module4_90Da
 ![](Images/Day34_Cloud7.png)
 ![](Images/Day34_Cloud8.png)
 
-### Network Traffic Management 
+### Network Traffic Management
+
 Following [Module 06](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.html):
 
-Next walkthrough, from the last one we have gone into our resource group and deleted our resources, if you had not set up the user account like me to only have access to that one resource group you could follow the module changing the name to `90Days*` this will delete all resources and resource group. This will be my process for each of the following labs. 
+Next walkthrough, from the last one we have gone into our resource group and deleted our resources, if you had not set up the user account like me to only have access to that one resource group you could follow the module changing the name to `90Days*` this will delete all resources and resource group. This will be my process for each of the following labs.
 
 For this lab, I have also created a PowerShell script and some references from the module to use to build out some of the tasks below. You can find the associated files in this folder.
- (Cloud\02TrafficManagement) 
+(Cloud\02TrafficManagement)
 
 - Task 1: Provision of the lab environment
 
@@ -79,22 +82,22 @@ I first of all run my [PowerShell script](Cloud/02TrafficManagement/Mod06_90Days
 
 - Task 3: Test transitivity of virtual network peering
 
-For this my 90DaysOfDevOps group did not have access to the Network Watcher because of permissions, I expect this is because Network Watchers are one of those resources that are not tied to a resource group which is where our RBAC was covered for this user. I added the East US Network Watcher contributor role to the 90DaysOfDevOps group. 
+For this my 90DaysOfDevOps group did not have access to the Network Watcher because of permissions, I expect this is because Network Watchers are one of those resources that are not tied to a resource group which is where our RBAC was covered for this user. I added the East US Network Watcher contributor role to the 90DaysOfDevOps group.
 
 ![](Images/Day34_Cloud11.png)
 ![](Images/Day34_Cloud12.png)
 ![](Images/Day34_Cloud13.png)
 
-^  This is expected since the two spoke virtual networks do not peer with each other (virtual network peering is not transitive).
+^ This is expected since the two spoke virtual networks do not peer with each other (virtual network peering is not transitive).
 
 - Task 4: Configure routing in the hub and spoke topology
 
-I had another issue here with my account not being able to run the script as my user within the group 90DaysOfDevOps which I am unsure of so I did jump back into my main admin account. The 90DaysOfDevOps group is an owner of everything in the 90DaysOfDevOps Resource Group so would love to understand why I cannot run a command inside the VM? 
+I had another issue here with my account not being able to run the script as my user within the group 90DaysOfDevOps which I am unsure of so I did jump back into my main admin account. The 90DaysOfDevOps group is an owner of everything in the 90DaysOfDevOps Resource Group so would love to understand why I cannot run a command inside the VM?
 
 ![](Images/Day34_Cloud14.png)
 ![](Images/Day34_Cloud15.png)
 
-I then was able to go back into my michael.cade@90DaysOfDevOps.com account and continue this section. Here we are running the same test again but now with the result being reachable. 
+I then was able to go back into my michael.cade@90DaysOfDevOps.com account and continue this section. Here we are running the same test again but now with the result being reachable.
 
 ![](Images/Day34_Cloud16.png)
 
@@ -108,11 +111,12 @@ I then was able to go back into my michael.cade@90DaysOfDevOps.com account and c
 ![](Images/Day34_Cloud19.png)
 ![](Images/Day34_Cloud20.png)
 
-### Azure Storage 
+### Azure Storage
+
 Following [Module 07](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_07-Manage_Azure_Storage.html):
 
 For this lab, I have also created a PowerShell script and some references from the module to use to build out some of the tasks below. You can find the associated files in this folder.
- (Cloud\03Storage) 
+(Cloud\03Storage)
 
 - Task 1: Provision of the lab environment
 
@@ -133,13 +137,13 @@ I first of all run my [PowerShell script](Cloud/03Storage/Mod07_90DaysOfDeveOps.
 ![](Images/Day34_Cloud24.png)
 ![](Images/Day34_Cloud25.png)
 
-I was a little impatient waiting for this to be allowed but it did work eventually. 
+I was a little impatient waiting for this to be allowed but it did work eventually.
 
 ![](Images/Day34_Cloud26.png)
 
 - Task 5: Create and configure an Azure Files shares
 
-On the run command, this would not work with michael.cade@90DaysOfDevOps.com so I used my elevated account. 
+On the run command, this would not work with michael.cade@90DaysOfDevOps.com so I used my elevated account.
 
 ![](Images/Day34_Cloud27.png)
 ![](Images/Day34_Cloud28.png)
@@ -150,6 +154,7 @@ On the run command, this would not work with michael.cade@90DaysOfDevOps.com so 
 ![](Images/Day34_Cloud30.png)
 
 ### Serverless (Implement Web Apps)
+
 Following [Module 09a](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_09a-Implement_Web_Apps.html):
 
 - Task 1: Create an Azure web app
@@ -178,15 +183,15 @@ This script I am using can be found in (Cloud/05Serverless)
 
 ![](Images/Day34_Cloud36.png)
 
-This wraps up the section on Microsoft Azure and the public cloud in general. I will say that I had lots of fun attacking and working through these scenarios. 
+This wraps up the section on Microsoft Azure and the public cloud in general. I will say that I had lots of fun attacking and working through these scenarios.
 
-## Resources 
+## Resources
 
 - [Hybrid Cloud and MultiCloud](https://www.youtube.com/watch?v=qkj5W98Xdvw)
 - [Microsoft Azure Fundamentals](https://www.youtube.com/watch?v=NKEFWyqJ5XA&list=WL&index=130&t=12s)
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-Next, we will be diving into version control systems, specifically around git and then also code repository overviews and we will be choosing GitHub as this is my preferred option. 
+Next, we will be diving into version control systems, specifically around git and then also code repository overviews and we will be choosing GitHub as this is my preferred option.
 
 See you on [Day 35](day35.md)

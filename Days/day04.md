@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - DevOps & Agile - Day 4'
+title: "#90DaysOfDevOps - DevOps & Agile - Day 4"
 published: false
 description: 90DaysOfDevOps - DevOps & Agile
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048700
@@ -71,11 +71,11 @@ DevOps uses tools for team communication, software development, deployment and i
 
 The combination of Agile and DevOps brings the following benefits you will get:
 
--   Flexible management and powerful technology.
--   Agile practices help DevOps teams to communicate their priorities more efficiently.
--   The automation cost that you have to pay for your DevOps practices is justified by your agile requirement of deploying quickly and frequently.
--   It leads to strengthening: the team adopting agile practices will improve collaboration, increase the team's motivation and decrease employee turnover rates.
--   As a result, you get better product quality.
+- Flexible management and powerful technology.
+- Agile practices help DevOps teams to communicate their priorities more efficiently.
+- The automation cost that you have to pay for your DevOps practices is justified by your agile requirement of deploying quickly and frequently.
+- It leads to strengthening: the team adopting agile practices will improve collaboration, increase the team's motivation and decrease employee turnover rates.
+- As a result, you get better product quality.
 
 Agile allows coming back to previous product development stages to fix errors and prevent the accumulation of technical debt. To adopt agile and DevOps
 simultaneously just follow 7 steps:
@@ -92,8 +92,8 @@ What do you think? Do you have different views? I want to hear from Developers, 
 
 ### Resources
 
--   [DevOps for Developers – Day in the Life: DevOps Engineer in 2021](https://www.youtube.com/watch?v=2JymM0YoqGA)
--   [3 Things I wish I knew as a DevOps Engineer](https://www.youtube.com/watch?v=udRNM7YRdY4)
--   [How to become a DevOps Engineer feat. Shawn Powers](https://www.youtube.com/watch?v=kDQMjAQNvY4)
+- [DevOps for Developers – Day in the Life: DevOps Engineer in 2021](https://www.youtube.com/watch?v=2JymM0YoqGA)
+- [3 Things I wish I knew as a DevOps Engineer](https://www.youtube.com/watch?v=udRNM7YRdY4)
+- [How to become a DevOps Engineer feat. Shawn Powers](https://www.youtube.com/watch?v=kDQMjAQNvY4)
 
 If you made it this far then you will know if this is where you want to be or not. See you on [Day 5](day05.md).
