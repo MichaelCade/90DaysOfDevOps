@@ -23,11 +23,11 @@ This is where the details of the git repository are stored as well as the inform
 
 ### Staging Files
 
-We then start working on our empty folder and maybe we add some source code as a first days work. We create our readme.mdfile and we can see that file in the directory, next we check our `git status` and it knows about the new readme.mdfile but we have not committed the file yet. 
+We then start working on our empty folder and maybe we add some source code on the first days of work. We create our readme.mdfile and we can see that file in the directory, next we check our `git status` and it knows about the new readme.mdfile but we have not committed the file yet. 
 
 ![](Images/Day38_Git3.png)
 
-We can stage our readme.mdfile with the `git add README.md` command then we can see changes to be committed which we did not have before and a green new file.
+We can stage our readme.mdfile with the `git add README.md` command then we can see changes to be committed that we did not have before and a green new file.
 
 ![](Images/Day38_Git4.png)
 
@@ -51,7 +51,7 @@ When nano opens you can then add your short and long description and then save t
 
 ### Committing Best Practices
 
-There is a balance here to when to commit, commit often. We do not want to be waiting to be finished the project before committing, each commit should be meaningful and they also should not be coupled with non-relevant tasks with each other. If you have a bug fix and a typo make sure they are two separate commits as a best practice. 
+There is a balance here between when to commit and commit often. We do not want to be waiting to be finished the project before committing, each commit should be meaningful and they also should not be coupled with non-relevant tasks with each other. If you have a bug fix and a typo make sure they are two separate commits as a best practice. 
 
 Make the commit message mean something. 
 
