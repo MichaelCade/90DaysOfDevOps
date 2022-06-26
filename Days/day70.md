@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - The Big Picture: CI/CD Pipelines - Day 70'
+title: "#90DaysOfDevOps - The Big Picture: CI/CD Pipelines - Day 70"
 published: false
 description: 90DaysOfDevOps - The Big Picture CI/CD Pipelines
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048836
@@ -10,13 +10,13 @@ id: 1048836
 
 ## The Big Picture: CI/CD Pipelines
 
-A CI/CD (Continous Integration/Continous Deployment) Pipeline implementation is the backbone of the modern DevOps environment.
+A CI/CD (Continuous Integration/Continuous Deployment) Pipeline implementation is the backbone of the modern DevOps environment.
 
 It bridges the gap between development and operations by automating the build, test and deployment of applications.
 
-We covered a lot of this Continous mantra in the opening section of the challenge. But to reiterate:
+We covered a lot of this continuous mantra in the opening section of the challenge. But to reiterate:
 
-Continous Integration (CI) is a more modern software development practice in which incremental code changes are made more frequently and reliabily. Automated build and test workflow steps triggered by Contininous Integration ensures that code changes being merged into the repository are reliable.
+Continuous Integration (CI) is a more modern software development practice in which incremental code changes are made more frequently and reliably. Automated build and test workflow steps triggered by Continuous Integration ensures that code changes being merged into the repository are reliable.
 
 That code / Application is then delivered quickly and seamlessly as part of the Continuous Deployment process.
 
@@ -24,7 +24,7 @@ That code / Application is then delivered quickly and seamlessly as part of the 
 
 - Ship software quickly and efficiently
 - Facilitates an effective process for getting applications to market as fast as possible
-- A continous flow of bug fixes and new features without waiting months or years for version releases.
+- A continuous flow of bug fixes and new features without waiting months or years for version releases.
 
 The ability for developers to make small impactful changes regular means we get faster fixes and more features quicker.
 

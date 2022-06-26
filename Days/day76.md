@@ -1,12 +1,13 @@
 ---
-title: '#90DaysOfDevOps - ArgoCD Overview - Day 76'
+title: "#90DaysOfDevOps - ArgoCD Overview - Day 76"
 published: false
 description: 90DaysOfDevOps - ArgoCD Overview
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048809
 ---
+
 ## ArgoCD Overview
 
 “Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes”
@@ -17,11 +18,11 @@ From an Operations background but having played a lot around Infrastructure as C
 
 [What is ArgoCD](https://argo-cd.readthedocs.io/en/stable/)
 
-### Deploying ArgoCD 
+### Deploying ArgoCD
 
-We are going to be using our trusty minikube Kubernetes cluster locally again for this deployment. 
+We are going to be using our trusty minikube Kubernetes cluster locally again for this deployment.
 
-```
+```Shell
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
@@ -32,41 +33,41 @@ Make sure all the ArgoCD pods are up and running with `kubectl get pods -n argoc
 
 ![](Images/Day76_CICD2.png)
 
-Also let's check everything that we deployed in the namespace with `kubectl get all -n argocd` 
+Also let's check everything that we deployed in the namespace with `kubectl get all -n argocd`
 
 ![](Images/Day76_CICD3.png)
 
-When the above is looking good, we then should consider accessing this via the port forward. Using the `kubectl port-forward svc/argocd-server -n argocd 8080:443` command. Do this in a new terminal. 
+When the above is looking good, we then should consider accessing this via the port forward. Using the `kubectl port-forward svc/argocd-server -n argocd 8080:443` command. Do this in a new terminal.
 
-Then open a new web browser and head to https://localhost:8080 
+Then open a new web browser and head to `https://localhost:8080`
 
 ![](Images/Day76_CICD4.png)
 
-To log in you will need a username of admin and then to grab your created secret as your password use the `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d && echo` 
+To log in you will need a username of admin and then to grab your created secret as your password use the `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d && echo`
 
 ![](Images/Day76_CICD5.png)
 
-Once you have logged in you will have your blank CD canvas. 
+Once you have logged in you will have your blank CD canvas.
 
 ![](Images/Day76_CICD6.png)
 
-### Deploying our application 
+### Deploying our application
 
-Now we have ArgoCD up and running we can now start using it to deploy our applications from our Git repositories as well as Helm. 
+Now we have ArgoCD up and running we can now start using it to deploy our applications from our Git repositories as well as Helm.
 
-The application I want to deploy is Pac-Man, yes that's right the famous game and something I use in a lot of demos when it comes to data management, this will not be the last time we see Pac-Man. 
+The application I want to deploy is Pac-Man, yes that's right the famous game and something I use in a lot of demos when it comes to data management, this will not be the last time we see Pac-Man.
 
 You can find the repository for [Pac-Man](https://github.com/MichaelCade/pacman-tanzu.git) here.
 
-Instead of going through each step using screen shots I thought it would be easier to create a walkthrough video covering the steps taken for this one particular application deployment. 
+Instead of going through each step using screen shots I thought it would be easier to create a walkthrough video covering the steps taken for this one particular application deployment.
 
 [ArgoCD Demo - 90DaysOfDevOps](https://www.youtube.com/watch?v=w6J413_j0hA)
 
-Note - During the video there is a service that is never satisfied as the app health being healthy this is because the LoadBalancer type set for the pacman service is in a pending state, in Minikube we do not have a loadbalancer configured. If you would like to test this you could change the YAML for the service to ClusterIP and use port forwarding to play the game. 
+Note - During the video there is a service that is never satisfied as the app health being healthy this is because the LoadBalancer type set for the pacman service is in a pending state, in Minikube we do not have a loadbalancer configured. If you would like to test this you could change the YAML for the service to ClusterIP and use port forwarding to play the game.
 
-This wraps up the CICD Pipelines section, I feel there is a lot of focus on this area in the industry at the moment and you will also hear terms around GitOps also related to the methodologies used within CICD in general. 
+This wraps up the CICD Pipelines section, I feel there is a lot of focus on this area in the industry at the moment and you will also hear terms around GitOps also related to the methodologies used within CICD in general.
 
-The next section we move into is around Observability, another concept or area that is not new but it is more and more important as we look at our environments in a different way. 
+The next section we move into is around Observability, another concept or area that is not new but it is more and more important as we look at our environments in a different way.
 
 ## Resources
 
