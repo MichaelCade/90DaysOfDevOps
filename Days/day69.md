@@ -31,7 +31,7 @@ If you are looking for an enterprise solution then you will be looking for the A
 Both AWX and the Automation Controller bring the following features above everything else we have covered in this section thus far.
 
 - User Interface
-- Role Based Access Control
+- Role-Based Access Control
 - Workflows
 - CI/CD integration
 
@@ -43,7 +43,7 @@ We are going to take a look at deploying AWX within our minikube Kubernetes envi
 
 AWX does not need to be deployed to a Kubernetes cluster, the [github](https://github.com/ansible/awx) for AWX from ansible will give you that detail. However starting in version 18.0, the AWX Operator is the preferred way to install AWX.
 
-First of all we need a minikube cluster. We can do this if you followed along during the Kubernetes section by creating a new minikube cluster with the `minikube start --cpus=4 --memory=6g --addons=ingress` command.
+First of all, we need a minikube cluster. We can do this if you followed along during the Kubernetes section by creating a new minikube cluster with the `minikube start --cpus=4 --memory=6g --addons=ingress` command.
 
 ![](Images/Day69_config2.png)
 
@@ -51,7 +51,7 @@ The official [Ansible AWX Operator](https://github.com/ansible/awx-operator) can
 
 I forked the repo above and then ran `git clone https://github.com/MichaelCade/awx-operator.git` my advice is you do the same and do not use my repository as I might change things or it might not be there.
 
-In the cloned repository you will find a awx-demo.yml file we need to change `NodePort` for `ClusterIP` as per below:
+In the cloned repository you will find an awx-demo.yml file we need to change `NodePort` for `ClusterIP` as per below:
 
 ```Yaml
 ---
@@ -71,7 +71,7 @@ In checking we have our new namespace and we have our awx-operator-controller po
 
 ![](Images/Day69_config4.png)
 
-Within the cloned repository you will find a file called awx-demo.yml we now want to deploy this into our Kubernetes cluser and our awx namespace. `kubectl create -f awx-demo.yml -n awx`
+Within the cloned repository you will find a file called awx-demo.yml we now want to deploy this into our Kubernetes cluster and our awx namespace. `kubectl create -f awx-demo.yml -n awx`
 
 ![](Images/Day69_config5.png)
 
@@ -93,19 +93,19 @@ The username by default is admin, to get the password we can run the following c
 
 ![](Images/Day69_config9.png)
 
-Obviously this then gives you a UI to manage your playbook and configuration management tasks in a centralised location, it also allows you as a team to work together vs what we have been doing so far here where we have been running from one ansible control station.
+This then gives you a UI to manage your playbook and configuration management tasks in a centralised location, it also allows you as a team to work together vs what we have been doing so far here where we have been running from one ansible control station.
 
 This is another one of those areas where you could probably go and spend another length of time walking through the capabilities within this tool.
 
 I will call out a great resource from Jeff Geerling, which goes into more detail on using Ansible AWX. [Ansible 101 - Episode 10 - Ansible Tower and AWX](https://www.youtube.com/watch?v=iKmY4jEiy_A&t=752s)
 
-In this video he also goes into great detail on the differences between Automation Controller (Previously Ansible Tower) and Ansible AWX (Free and Open Source).
+In this video, he also goes into great detail on the differences between Automation Controller (Previously Ansible Tower) and Ansible AWX (Free and Open Source).
 
 ### Ansible Vault
 
-`ansible-vault` allows us to encrypt and decrypt Ansible data files. Throughout this section we have skipped over and we have put some of our sensitive information in plain text.
+`ansible-vault` allows us to encrypt and decrypt Ansible data files. Throughout this section, we have skipped over and put some of our sensitive information in plain text.
 
-Built in to the Ansible binary is `ansible-vault` which allows us to mask away this sensitive information.
+Built into the Ansible binary is `ansible-vault` which allows us to mask away this sensitive information.
 
 ![](Images/Day69_config10.png)
 
@@ -121,7 +121,7 @@ Now, we have already used `ansible-galaxy` to create some of our roles and file 
 
 ### Ansible Testing
 
-- [Ansible Molecule](https://molecule.readthedocs.io/en/latest/) - Molecule project is designed to aid in the development and testing of Ansible roles
+- [Ansible Molecule](https://molecule.readthedocs.io/en/latest/) - The molecule project is designed to aid in the development and testing of Ansible roles
 
 - [Ansible Lint](https://ansible-lint.readthedocs.io/en/latest/) - CLI tool for linting playbooks, roles and collections
 

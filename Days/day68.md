@@ -12,11 +12,11 @@ id: 1048780
 
 ### Tags
 
-As we left our playbook in the session yesterday we would need to run every tasks and play within that playbook. Which means we would have to run the webservers and loadbalancer plays and tasks to completion.
+As we left our playbook in the session yesterday we would need to run every task and play within that playbook. This means we would have to run the webservers and loadbalancer plays and tasks to completion.
 
-However tags can enable us to separate these out if we want. This could be an efficient move if we have extra large and long playbooks in our environments.
+However, tags can enable us to separate these if we want. This could be an efficient move if we have extra large and long playbooks in our environments.
 
-In our playbook file, in this case we are using [ansible-scenario5](Configmgmt/ansible-scenario5/playbook5.yml)
+In our playbook file, in this case, we are using [ansible-scenario5](Configmgmt/ansible-scenario5/playbook5.yml)
 
 ```Yaml
 - hosts: webservers
@@ -38,7 +38,7 @@ In our playbook file, in this case we are using [ansible-scenario5](Configmgmt/a
   tags: proxy
 ```
 
-We can then confirm this by using the `ansible-playbook playbook5.yml --list-tags` and the list tags is going to outline the tags we have defined in our playbook.
+We can then confirm this by using the `ansible-playbook playbook5.yml --list-tags` and the list tags are going to outline the tags we have defined in our playbook.
 
 ![](Images/Day68_config1.png)
 
@@ -46,11 +46,11 @@ Now if we wanted to target just the proxy we could do this by running `ansible-p
 
 ![](Images/Day68_config2.png)
 
-tags can be added at the task level as well so we can get really granular on where and what you want to happen. It could be application focused tags, we could go through tasks for example and tag our tasks based on installation, configuration or removal. Another very useful tag you can use is
+tags can be added at the task level as well so we can get granular on where and what you want to happen. It could be application-focused tags, we could go through tasks for example and tag our tasks based on installation, configuration or removal. Another very useful tag you can use is
 
-`tag: always` this will ensure no matter what --tags you are using in your command if something is tagged with the always value then it will always be ran when you run the ansible-playbook command.
+`tag: always` this will ensure no matter what --tags you are using in your command if something is tagged with the always value then it will always be running when you run the ansible-playbook command.
 
-With tags we can also bundle multiple tags together and if we choose to run `ansible-playbook playbook5.yml --tags proxy,web` this will run all of the items with those tags. Obviously in our instance that would mean the same as running the the playbook but if we had multiple other plays then this would make sense.
+With tags, we can also bundle multiple tags together and if we choose to run `ansible-playbook playbook5.yml --tags proxy,web` this will run all of the items with those tags. Obviously, in our instance, that would mean the same as running the playbook but if we had multiple other plays then this would make sense.
 
 You can also define more than one tag.
 
@@ -63,22 +63,22 @@ There are two main types of variables within Ansible.
 
 ### Ansible Facts
 
-Each time we have ran our playbooks, we have had a task that we have not defined called "Gathering facts" we can use these variables or facts to make things happen with our automation tasks.
+Each time we have run our playbooks, we have had a task that we have not defined called "Gathering facts" we can use these variables or facts to make things happen with our automation tasks.
 
 ![](Images/Day68_config3.png)
 
-If we were to run the following `ansible proxy -m setup` command we should see a lot of output in JSON format. There is going to be a lot of information on your terminal though to really use this so we would like to output this to a file using `ansible proxy -m setup >> facts.json` you can see this file in this repository, [ansible-scenario5](Configmgmt/ansible-scenario5/facts.json)
+If we were to run the following `ansible proxy -m setup` command we should see a lot of output in JSON format. There is going to be a lot of information on your terminal though to use this so we would like to output this to a file using `ansible proxy -m setup >> facts.json` you can see this file in this repository, [ansible-scenario5](Configmgmt/ansible-scenario5/facts.json)
 
 ![](Images/Day68_config4.png)
 
-If you open this file you can see all sorts of information for our command. We can get our IP addresses, architecture, bios version. A lot of useful information if we want to leverage this and use this in our playbooks.
+If you open this file you can see all sorts of information for our command. We can get our IP addresses, architecture, and bios version. A lot of useful information if we want to leverage this and use this in our playbooks.
 
-An idea would be to potentially use one of these variables within our nginx template mysite.j2 where we hard coded the IP addresses of our webservers. You can do this by creating a for loop in your mysite.j2 and this is going to cycle through the group [webservers] this enables us to have more than our 2 webservers automatically and dynamically created or added to this load balancer configuration.
+An idea would be to potentially use one of these variables within our nginx template mysite.j2 where we hard-coded the IP addresses of our webservers. You can do this by creating a for loop in your mysite.j2 and this is going to cycle through the group [webservers] this enables us to have more than our 2 webservers automatically and dynamically created or added to this load balancer configuration.
 
 ```
 #Dynamic Config for server {{ ansible_facts['nodename'] }}
     upstream webservers {
-	{% for host in groups['webservers'] %}
+  {% for host in groups['webservers'] %}
         server {{ hostvars[host]['ansible_facts']['nodename'] }}:8000;
     {% endfor %}
     }
@@ -92,11 +92,11 @@ An idea would be to potentially use one of these variables within our nginx temp
     }
 ```
 
-The outcome of the above will look the same as it does right now but if we added more webservers or removed one this would dynamically change the proxy configuration. For this to work you will need to have name resolution configured.
+The outcome of the above will look the same as it does right now but if we added more web servers or removed one this would dynamically change the proxy configuration. For this to work you will need to have name resolution configured.
 
 ### User created
 
-User created variables are what we have created ourselves. If you take a look in our playbook you will see we have `vars:` and then a list of 3 variables we are using there.
+User-created variables are what we have created ourselves. If you take a look in our playbook you will see we have `vars:` and then a list of 3 variables we are using there.
 
 ```Yaml
 - hosts: webservers
@@ -118,7 +118,7 @@ User created variables are what we have created ourselves. If you take a look in
   tags: proxy
 ```
 
-We can however keep our playbook clear of variables by moving them to their own file. We are going to do this but we will move into the [ansible-scenario6](Configmgmt/ansible-scenario6) folder. In the root of that folder we are going to create a group_vars folder. We are then going to create another folder called all (all groups are going to get these variables). In there we will create a file called `common_variables.yml` and we will copy our variables from our playbook into this file. Removing them from the playbook along with vars: as well.
+We can however keep our playbook clear of variables by moving them to their file. We are going to do this but we will move into the [ansible-scenario6](Configmgmt/ansible-scenario6) folder. In the root of that folder, we are going to create a group_vars folder. We are then going to create another folder called all (all groups are going to get these variables). In there we will create a file called `common_variables.yml` and we will copy our variables from our playbook into this file. Removing them from the playbook along with vars: as well.
 
 ```Yaml
 http_port: 8000
@@ -163,7 +163,7 @@ One of those variables was the http_port, we can use this again in our for loop 
     }
 ```
 
-We can also define an ansible fact in our roles/apache2/templates/index.html.j2 file so that we can understand which webserver we are on.
+We can also define an ansible fact in our roles/apache2/templates/index.HTML.j2 file so that we can understand which webserver we are on.
 
 ```J2
 <html>
@@ -173,7 +173,7 @@ We can also define an ansible fact in our roles/apache2/templates/index.html.j2 
 </html>
 ```
 
-The results of running the `ansible-playbook playbook6.yml` command with our variable changes means that when we hit our loadbalancer you can see that we hit either of the webservers we have in our group.
+The results of running the `ansible-playbook playbook6.yml` command with our variable changes mean that when we hit our loadbalancer you can see that we hit either of the webservers we have in our group.
 
 ![](Images/Day68_config5.png)
 
@@ -181,19 +181,19 @@ We could also add a folder called host_vars and create a web01.yml and have a sp
 
 ### Inventory Files
 
-So far we have used the default hosts file in the /etc/ansible folder to determine our hosts. We could however have different files for different environments, for example production and staging. I am not going to create more environments. But we are able to create our own host files.
+So far we have used the default hosts file in the /etc/ansible folder to determine our hosts. We could however have different files for different environments, for example, production and staging. I am not going to create more environments. But we can create our host files.
 
-We can create multiple files for our different inventory of servers and nodes. We would call these using `ansible-playbook -i dev playbook.yml` you can also define variables within your hosts file and then print that out or leverage that variable somewhere else in your playbooks for example in the example and training course I am following along to below they have added the environment variable created in the host file to the loadbalancer web page template to show the environment as part of the web page message.
+We can create multiple files for our different inventory of servers and nodes. We would call these using `ansible-playbook -i dev playbook.yml` you can also define variables within your host's file and then print that out or leverage that variable somewhere else in your playbooks for example in the example and training course I am following along to below they have added the environment variable created in the host file to the loadbalancer web page template to show the environment as part of the web page message.
 
 ### Deploying our Database server
 
-We still have one more machine we have not powered up yet and configured. We can do this using `vagrant up db01` from where our Vagrantfile is located. When this is up and accessible we then need to make sure the SSH key is copied over using `ssh-copy-id db01` so that we can access.
+We still have one more machine we have not powered up yet and configured. We can do this using `vagrant up db01` from where our Vagrantfile is located. When this is up and accessible we then need to make sure the SSH key is copied over using `ssh-copy-id db01` so that we can access it.
 
 We are going to be working from the [ansible-scenario7](Configmgmt/ansible-scenario7) folder
 
-Let's then use `ansible-galaxy init roles/mysql` to create a new folder structure for a new role called "mysql"
+Let's then use `ansible-galaxy init roles/mysql` to create a new folder structure for a new role called "MySQL"
 
-In our playbook we are going to add a new play block for the database configuration. We have our group database defined in our /etc/ansible/hosts file. We then instruct our database group to have the role common and a new role called mysql which we created in the previous step. We are also tagging our database group with database, this means as we discussed earlier we can choose to only run against these tags if we wish.
+In our playbook, we are going to add a new play block for the database configuration. We have our group database defined in our /etc/ansible/hosts file. We then instruct our database group to have the role common and a new role called MySQL which we created in the previous step. We are also tagging our database group with the database, this means as we discussed earlier we can choose to only run against these tags if we wish.
 
 ```Yaml
 - hosts: webservers
@@ -220,7 +220,7 @@ In our playbook we are going to add a new play block for the database configurat
   tags: database
 ```
 
-Within our roles folder structure you will now have the tree automatically created, we need to populate the following:
+Within our roles folder structure, you will now have the tree automatically created, we need to populate the following:
 
 Handlers - main.yml
 
@@ -234,7 +234,7 @@ Handlers - main.yml
 
 Tasks - install_mysql.yml, main.yml & setup_mysql.yml
 
-install_mysql.yml - this task is going to be there to install mysql and ensure that the service is running.
+install_mysql.yml - this task is going to be there to install MySQL and ensure that the service is running.
 
 ```Yaml
 - name: "Install Common packages"
@@ -306,7 +306,7 @@ db_pass: DevOps90
 db_name: 90DaysOfDevOps
 ```
 
-We also have the my.cnf.j2 file in the templates folder, which looks like below:
+We also have my.cnf.j2 file in the templates folder, which looks like below:
 
 ```J2
 [mysql]
@@ -327,9 +327,9 @@ We fixed the above and ran the playbook again and we have a successful change.
 
 We should probably make sure that everything is how we want it to be on our newly configured db01 server. We can do this from our control node using the `ssh db01` command.
 
-To connect to mySQL I used `sudo /usr/bin/mysql -u root -p` and gave the vagrant password for root at the prompt.
+To connect to MySQL I used `sudo /usr/bin/mysql -u root -p` and gave the vagrant password for root at the prompt.
 
-When we have connected let's first make sure we have our user created called devops. `select user, host from mysql.user;`
+When we have connected let's first make sure we have our user created called DevOps. `select user, host from mysql.user;`
 
 ![](Images/Day68_config8.png)
 
@@ -337,9 +337,9 @@ Now we can issue the `SHOW DATABASES;` command to see our new database that has 
 
 ![](Images/Day68_config9.png)
 
-I actually used root to connect but we could also now log in with our devops account in the same way using `sudo /usr/bin/mysql -u devops -p` but the password here is DevOps90.
+I used the root to connect but we could also now log in with our DevOps account, in the same way, using `sudo /usr/bin/MySQL -u devops -p` but the password here is DevOps90.
 
-One thing I have found that in our `setup_mysql.yml` I had to add the line `login_unix_socket: /var/run/mysqld/mysqld.sock` in order to successfully connect to my db01 mysql instance and now everytime I run this it reports a change when creating the user, any suggestions would be greatly appreciated.
+One thing I have found is that in our `setup_mysql.yml` I had to add the line `login_unix_socket: /var/run/mysqld/mysqld.sock` to successfully connect to my db01 MySQL instance and now every time I run this it reports a change when creating the user, any suggestions would be greatly appreciated.
 
 ## Resources
 

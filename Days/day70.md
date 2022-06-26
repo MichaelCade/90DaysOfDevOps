@@ -16,7 +16,7 @@ It bridges the gap between development and operations by automating the build, t
 
 We covered a lot of this continuous mantra in the opening section of the challenge. But to reiterate:
 
-Continuous Integration (CI) is a more modern software development practice in which incremental code changes are made more frequently and reliably. Automated build and test workflow steps triggered by Continuous Integration ensures that code changes being merged into the repository are reliable.
+Continuous Integration (CI) is a more modern software development practice in which incremental code changes are made more frequently and reliably. Automated build and test workflow steps triggered by Continuous Integration ensure that code changes being merged into the repository are reliable.
 
 That code / Application is then delivered quickly and seamlessly as part of the Continuous Deployment process.
 
@@ -30,7 +30,7 @@ The ability for developers to make small impactful changes regular means we get 
 
 ### Ok, so what does this mean?
 
-On [Day 5](day05.md) we covered a lot of the theory behind DevOps and as already mentioned here already that the CI/CD Pipeline is the backbone of the modern DevOps environment.
+On [Day 5](day05.md) we covered a lot of the theory behind DevOps and as already mentioned here that the CI/CD Pipeline is the backbone of the modern DevOps environment.
 
 ![DevOps](Images/Day5_DevOps8.png)
 
@@ -48,7 +48,7 @@ The steps in the cycle are, developers write the **code** then it gets **built**
 
 CI is a development practice that requires developers to integrate code into a shared repository several times a day.
 
-When the code is written and pushed to a repository like github or gitlab that's where the magic begins.
+When the code is written and pushed to a repository like Github or GitLab that's where the magic begins.
 
 ![](Images/Day70_CICD1.png)
 
@@ -58,25 +58,25 @@ The code is verified by an automated build which allows teams or the project own
 
 From there the code is analysed and given a series of automated tests three examples are
 
-- Unit testing this tests the individual units of the source code
-- Validation testing this makes sure that the software satisfies or fits the intended use
-- Format testing this checks for syntax and other formatting errors
+- Unit testing tests the individual units of the source code
+- Validation testing makes sure that the software satisfies or fits the intended use
+- Format testing checks for syntax and other formatting errors
 
 These tests are created as a workflow and then are run every time you push to the master branch so pretty much every major development team has some sort of CI/CD workflow and remember on a development team the new code could be coming in from teams all over the world at different times of the day from developers working on all sorts of different projects it's more efficient to build an automated workflow of tests that make sure that everyone is on the same page before the code is accepted. It would take much longer for a human to do this each time.
 
 ![](Images/Day70_CICD3.png)
 
-Once we have our tests complete and they are successful then we can compile and send to our repository. For example I am using Docker Hub but this could be anywhere that then gets leveraged for the CD aspect of the pipeline.
+Once we have our tests complete and they are successful then we can compile and send them to our repository. For example, I am using Docker Hub but this could be anywhere that then gets leveraged for the CD aspect of the pipeline.
 
 ![](Images/Day70_CICD4.png)
 
-So this process is obviously very much down to the software development process, we are creating our application, adding, fixing bugs etc and then updating our source control and versioning that whilst also testing.
+So this process is very much down to the software development process, we are creating our application, adding, fixing bugs etc and then updating our source control and versioning that whilst also testing.
 
-Moving onto the next phase is the CD element which in fact more and more is what we generally see from any off the shelf software, I would argue that we will see a trend that if we get our software from a vendor such as Oracle or Microsoft we will consume that from a Docker Hub type repository and then we would use our CD pipelines to deploy that into our environments.
+Moving onto the next phase is the CD element which more and more is what we generally see from any off-the-shelf software, I would argue that we will see a trend if we get our software from a vendor such as Oracle or Microsoft we will consume that from a Docker Hub type repository and then we would use our CD pipelines to deploy that into our environments.
 
 ### CD
 
-Now we have our tested version of our code and we are ready to deploy out into the wild and like I say, the Software vendor will run through this stage but I strongly believe this is how we will all deploy the off the shelf software we require in the future.
+Now we have our tested version of our code and we are ready to deploy out into the wild as I say, the Software vendor will run through this stage but I strongly believe this is how we will all deploy the off-the-shelf software we require in the future.
 
 It is now time to release our code into an environment. This is going to include Production but also likely other environments as well such as staging.
 
@@ -84,7 +84,7 @@ It is now time to release our code into an environment. This is going to include
 
 Our next step at least on Day 1 of v1 of the software deployment is we need to make sure we are pulling the correct code base to the correct environment. This could be pulling elements from the software repository (DockerHub) but it is more than likely that we are also pulling additional configuration from maybe another code repository, the configuration for the application for example. In the diagram below we are pulling the latest release of the software from DockerHub and then we are releasing this to our environments whilst possibly picking up configuration from a Git repository. Our CD tool is performing this and pushing everything to our environment.
 
-It is most likely that this is not done at the same time. i.e we would go to a staging environment run against this with our own configuration make sure things are correct and this could be a manual step for testing or it could again be automated (lets go with automated) before then allowing this code to be deployed into production.
+It is most likely that this is not done at the same time. i.e we would go to a staging environment run against this with our configuration to make sure things are correct and this could be a manual step for testing or it could again be automated (let's go with automated) before then allowing this code to be deployed into production.
 
 ![](Images/Day70_CICD6.png)
 
@@ -92,17 +92,17 @@ Then after this when v2 of the application comes out we rinse and repeat the ste
 
 ### Why use CI/CD?
 
-I think we have probably covered the benefits a number of time but it is because it automates things that otherwise would have to be done manually it finds small problems before it sneaks into the main codebase, you can probably imagine that if you push bad code out to your customers then you're going to have a bad time!
+I think we have probably covered the benefits several times but it is because it automates things that otherwise would have to be done manually it finds small problems before it sneaks into the main codebase, you can probably imagine that if you push bad code out to your customers then you're going to have a bad time!
 
 It also helps to prevent something that we call technical debt which is the idea that since the main code repos are constantly being built upon over time then a shortcut fix taken on day one is now an exponentially more expensive fix years later because now that band-aid of a fix would be so deeply intertwined and baked into all the code bases and logic.
 
 ### Tooling
 
-Like with other sections we are going to get hands on with some of the tools that achieve the CI/CD pipeline process.
+Like with other sections we are going to get hands-on with some of the tools that achieve the CI/CD pipeline process.
 
-I think it is also important to note that not all tools have to do both CI and CD, We will take a look at ArgoCD which you guessed it is great at the CD element of deploying our software to a Kubernetes cluster. But something like Jenkins can work across many different platforms.
+I think it is also important to note that not all tools have to do both CI and CD, We will take a look at ArgoCD which you guessed is great at the CD element of deploying our software to a Kubernetes cluster. But something like Jenkins can work across many different platforms.
 
-My plan is to look at the following:
+I plan to look at the following:
 
 - Jenkins
 - ArgoCD

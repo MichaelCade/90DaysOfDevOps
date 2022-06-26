@@ -10,17 +10,17 @@ id: 1048712
 
 ## Ansible Playbooks (Continued)
 
-In our last section we started with creating our small lab using a Vagrantfile to deploy 4 machines and we used our Linux machine we created in that section as our ansible control system.
+In our last section, we started with creating our small lab using a Vagrantfile to deploy 4 machines and we used the Linux machine we created in that section as our ansible control system.
 
-We also ran through a few scenarios of playbooks and at the end we had a playbook that made our web01 and web02 individual webservers.
+We also ran through a few scenarios of playbooks and at the end we had a playbook that made our web01 and web02 individual web servers.
 
 ![](Images/Day66_config1.png)
 
 ### Keeping things tidy
 
-Before we get into further automation and deployment we should cover the ability to keep our playbook lean and tidy and how we can separate our taks and handlers into subfolders.
+Before we get into further automation and deployment we should cover the ability to keep our playbook lean and tidy and how we can separate our tasks and handlers into subfolders.
 
-we are basically going to copy our tasks into their own file within a folder.
+we are going to copy our tasks into their file within a folder.
 
 ```Yaml
 - name: ensure apache is at the latest version
@@ -68,7 +68,7 @@ We have just tidied up our playbook and started to separate areas that could mak
 
 ### Roles and Ansible Galaxy
 
-At the moment we have deployed 4 VMs and we have configured 2 of these VMs as our webservers but we have some more specific functions namely, a database server and a loadbalancer or proxy. In order for us to do this and tidy up our repository we can use roles within Ansible.
+At the moment we have deployed 4 VMs and we have configured 2 of these VMs as our webservers but we have some more specific functions namely, a database server and a loadbalancer or proxy. For us to do this and tidy up our repository, we can use roles within Ansible.
 
 To do this we will use the `ansible-galaxy` command which is there to manage ansible roles in shared repositories.
 
@@ -82,7 +82,7 @@ The above command `ansible-galaxy init roles/apache2` will create the folder str
 
 ![](Images/Day66_config6.png)
 
-Copy and paste is easy to move those files but we also need to make a change to the tasks/main.yml so that we point this to the apache2_install.yml.
+Copy and paste are easy to move those files but we also need to make a change to the tasks/main.yml so that we point this to the apache2_install.yml.
 
 We also need to change our playbook now to refer to our new role. In the playbook1.yml and playbook2.yml we determine our tasks and handlers in different ways as we changed these between the two versions. We need to change our playbook to use this role as per below:
 
@@ -103,7 +103,7 @@ We can now run our playbook again this time with the new playbook name `ansible-
 
 ![](Images/Day66_config8.png)
 
-Ok, the depreciation although our playbook ran we should fix our ways now, in order to do that I have changed the include option in the tasks/main.yml to now be import_tasks as per below.
+Ok, the depreciation although our playbook ran we should fix our ways now, to do that I have changed the include option in the tasks/main.yml to now be import_tasks as per below.
 
 ![](Images/Day66_config9.png)
 
@@ -116,7 +116,7 @@ We are also going to create a few more roles whilst using `ansible-galaxy` we ar
 
 ![](Images/Day66_config10.png)
 
-I am going to leave this one here and in the next session we will start working on those other nodes we have deployed but have not done anything with yet.
+I am going to leave this one here and in the next session, we will start working on those other nodes we have deployed but have not done anything with yet.
 
 ## Resources
 

@@ -20,7 +20,7 @@ This is where ansible playbooks come in. A playbook enables us to take our group
 
 Playbook > Plays > Tasks
 
-For anyone that comes from a sports background you may have come across the term playbook, a playbook then tells the team how you will play made up of various plays and tasks, if we think of the plays as the set pieces within the sport or game, and the tasks are associated to each play, you can have multiple tasks to make up a play and in the playbook you may have multiple different plays.
+For anyone that comes from a sports background you may have come across the term playbook, a playbook then tells the team how you will play made up of various plays and tasks if we think of the plays as the set pieces within the sport or game, and the tasks are associated to each play, you can have multiple tasks to make up a play and in the playbook, you may have multiple different plays.
 
 These playbooks are written in YAML (YAML ain’t markup language) you will find a lot of the sections we have covered so far especially Containers and Kubernetes to feature YAML formatted configuration files.
 
@@ -46,7 +46,7 @@ You can see the first task of "gathering steps" happened, but we didn't trigger 
 
 Our second task was to set a ping, this is not an ICMP ping but a python script to report back `pong` on successful connectivity to remote or localhost. [ansible.builtin.ping](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/ping_module.html)
 
-Then our third or really our second defined task as the first one will run unless you disable was the printing of a message telling us our OS. In this task we are using conditionals, we could run this playbook against all different types of operating systems and this would return the OS name. We are simply messaging this output for ease but we could add a task to say something like:
+Then our third or our second defined task as the first one will run unless you disable was the printing of a message telling us our OS. In this task we are using conditionals, we could run this playbook against all different types of operating systems and this would return the OS name. We are simply messaging this output for ease but we could add a task to say something like:
 
 ```Yaml
 tasks:
@@ -55,7 +55,7 @@ tasks:
     when: ansible_os_family == "Debian"
 ```
 
-### Vagrant to setup our environment
+### Vagrant to set up our environment
 
 We are going to use Vagrant to set up our node environment, I am going to keep this at a reasonable 4 nodes but you can hopefully see that this could easily be 300 or 3000 and this is the power of Ansible and other configuration management tools to be able to configure your servers.
 
@@ -118,7 +118,7 @@ If you are resource contrained then you can also run `vagrant up web01 web02` to
 
 ### Ansible host configuration
 
-Now that we have our environment ready, we can check ansible and for this we will use our Ubuntu desktop (You could use this but you can equally use any Linux based machine on your network accessible to the network below) as our control, let’s also add the new nodes to our group in the ansible hosts file, you can think of this file as an inventory, an alternative to this could be another inventory file that is called on as part of your ansible command with `-i filename` this could be useful vs using the host file as you can have different files for different environments, maybe production, test and staging. Because we are using the default hosts file we do not need to specify as this would be the default used.
+Now that we have our environment ready, we can check ansible and for this, we will use our Ubuntu desktop (You could use this but you can equally use any Linux-based machine on your network access to the network below) as our control, let’s also add the new nodes to our group in the ansible hosts file, you can think of this file as an inventory, an alternative to this could be another inventory file that is called on as part of your ansible command with `-i filename` this could be useful vs using the host file as you can have different files for different environments, maybe production, test and staging. Because we are using the default hosts file we do not need to specify as this would be the default used.
 
 I have added the following to the default hosts file.
 
@@ -142,7 +142,7 @@ db01
 
 Before moving on we want to make sure we can run a command against our nodes, let’s run `ansible nodes -m command -a hostname` this simple command will test that we have connectivity and report back our host names.
 
-Also note that I have added these nodes and IPs to my Ubuntu control node within the /etc/hosts file to ensure connectivity. We might also need to do SSH configuration for each node from the Ubuntu box.
+Also, note that I have added these nodes and IPs to my Ubuntu control node within the /etc/hosts file to ensure connectivity. We might also need to do an SSH configuration for each node from the Ubuntu box.
 
 ```Text
 192.168.169.140 ansible-control
@@ -154,7 +154,7 @@ Also note that I have added these nodes and IPs to my Ubuntu control node within
 
 ![](Images/Day65_config3.png)
 
-At this stage we want to run through setting up SSH keys between your control and your server nodes. This is what we are going to do next, another way here could be to add variables into your hosts file to give username and password. I would advise against this as this is never going to be a best practice.
+At this stage, we want to run through setting up SSH keys between your control and your server nodes. This is what we are going to do next, another way here could be to add variables into your host's file to give username and password. I would advise against this as this is never going to be a best practice.
 
 To set up SSH and share amongst your nodes, follow the steps below, you will be prompted for passwords (`vagrant`) and you will likely need to hit `y` a few times to accept.
 
@@ -172,13 +172,13 @@ I am not running all my VMs and only running the webservers so I issued `ssh-cop
 
 ![](Images/Day65_config7.png)
 
-Before running any playbooks I like to make sure that I have simple connectivity with my groups so I have ran `ansible webservers -m ping` to test connectivity.
+Before running any playbooks I like to make sure that I have simple connectivity with my groups so I have run `ansible webservers -m ping` to test connectivity.
 
 ![](Images/Day65_config4.png)
 
 ### Our First "real" Ansible Playbook
 
-Our first Ansible playbook is going to configure our webservers, we have grouped these in our hosts file under the grouping [webservers].
+Our first Ansible playbook is going to configure our web servers, we have grouped these in our host's file under the grouping [webservers].
 
 Before we run our playbook we can confirm that our web01 and web02 do not have apache installed. The top of the screenshot below is showing you the folder and file layout I have created within my ansible control to run this playbook, we have the `playbook1.yml`, then in the templates folder we have the `index.html.j2` and `ports.conf.j2` files. You can find these files in the folder listed above in the repository.
 
@@ -233,28 +233,28 @@ Breaking down the above playbook:
 - `become: yes` means that our user running the playbook will become root on our remote systems. You will be prompted for the root password.
 - We then have `vars` and this defines some environment variables we want throughout our webservers.
 
-Following this we start our tasks,
+Following this, we start our tasks,
 
 - Task 1 is to ensure that apache is running the latest version
 - Task 2 is writing the ports.conf file from our source found in the templates folder.
 - Task 3 is creating a basic index.html file
 - Task 4 is making sure apache is running
 
-Finally we have a handlers section, [Handlers: Running operations on change](https://docs.ansible.com/ansible/latest/user_guide/playbooks_handlers.html)
+Finally, we have a handlers section, [Handlers: Running operations on change](https://docs.ansible.com/ansible/latest/user_guide/playbooks_handlers.html)
 
 "Sometimes you want a task to run only when a change is made on a machine. For example, you may want to restart a service if a task updates the configuration of that service, but not if the configuration is unchanged. Ansible uses handlers to address this use case. Handlers are tasks that only run when notified. Each handler should have a globally unique name."
 
-At this stage you might be thinking but we have deployed 5 VMs (including our Ubuntu Desktop machine which is acting as our Ansible Control) The other systems will come into play during the rest of the section.
+At this stage, you might be thinking that we have deployed 5 VMs (including our Ubuntu Desktop machine which is acting as our Ansible Control) The other systems will come into play during the rest of the section.
 
 ### Run our Playbook
 
-We are now ready to run our playbook against our nodes. To run our playbook we can use the `ansible-playbook playbook1.yml` We have defined our hosts that our playbook will run against within the playbook and this will walkthrough our tasks that we have defined.
+We are now ready to run our playbook against our nodes. To run our playbook we can use the `ansible-playbook playbook1.yml` We have defined the hosts that our playbook will run against within the playbook and this will walk through the tasks that we have defined.
 
 When the command is complete we get an output showing our plays and tasks, this may take some time you can see from the below image that this took a while to go and install our desired state.
 
 ![](Images/Day65_config9.png)
 
-We can then double check this by jumping into a node and checking we have the installed software on our node.
+We can then double-check this by jumping into a node and checking we have the installed software on our node.
 
 ![](Images/Day65_config10.png)
 
@@ -262,9 +262,9 @@ Just to round this out as we have deployed two standalone webservers with the ab
 
 ![](Images/Day65_config11.png)
 
-We are going to build on this playbook as we move through the rest of this section. I am interested as well in taking our Ubuntu desktop and seeing if we could actually bootstrap our applications and configuration using Ansible so we might also touch this. You saw that we can use local host in our commands we can also run playbooks against our local host for example.
+We are going to build on this playbook as we move through the rest of this section. I am interested as well in taking our Ubuntu desktop and seeing if we could bootstrap our applications and configuration using Ansible so we might also touch this. You saw that we can use the local host in our commands we can also run playbooks against our local host for example.
 
-Another thing to add here is that we are only really working with Ubuntu VMs but Ansible is agnostic to the target systems. The alternatives that we have previously mentioned to manage your systems could be server by server (not scalable when you get over a large amount of servers, plus a pain even with 3 nodes) we can also use shell scripting which again we covered in the Linux section but these nodes are potentially different so yes it can be done but then someone needs to maintain and manage those scripts. Ansible is free and hits the easy button vs having to have a specialised script.
+Another thing to add here is that we are only really working with Ubuntu VMs but Ansible is agnostic to the target systems. The alternatives that we have previously mentioned to manage your systems could be server by server (not scalable when you get over a large number of servers, plus a pain even with 3 nodes) we can also use shell scripting which again we covered in the Linux section but these nodes are potentially different so yes it can be done but then someone needs to maintain and manage those scripts. Ansible is free and hits the easy button vs having to have a specialised script.
 
 ## Resources
 

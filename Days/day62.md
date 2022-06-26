@@ -10,11 +10,11 @@ id: 1049053
 
 ## Testing, Tools & Alternatives
 
-As we close out this section on Infrastructure as Code we must mention about testing our code, the various different tools available and then some of the alternatives to Terraform to achieve this. As I said at the start of the section my focus was on Terraform because it is firstly free and open source, secondly it is cross platform and agnostic to environments. But there are also alternatives out there that should be considered but the overall goal is to make people aware that this is the way to deploy your infrastructure.
+As we close out this section on Infrastructure as Code we must mention testing our code, the various tools available and then some of the alternatives to Terraform to achieve this. As I said at the start of the section my focus was on Terraform because it is firstly free and open source, secondly, it is cross-platform and agnostic to environments. But there are also alternatives out there that should be considered but the overall goal is to make people aware that this is the way to deploy your infrastructure.
 
 ### Code Rot
 
-The first area I want to cover in this session is code rot, unlike application code, infrastructure as code might get used and then not for a very long time. Lets take the example that we are going to be using Terraform to deploy our VM environment in AWS, perfect and it works first time and we have our environment, but this environment doesn't change too often so the code gets left the state possibly or hopefully stored in a central location but the code does not change.
+The first area I want to cover in this session is code rot, unlike application code, infrastructure as code might get used and then not for a very long time. Let's take the example that we are going to be using Terraform to deploy our VM environment in AWS, perfect and it works the first time and we have our environment, but this environment doesn't change too often so the code gets left the state possibly or hopefully stored in a central location but the code does not change.
 
 What if something changes in the infrastructure? But it is done out of band, or other things change in our environment.
 
@@ -27,7 +27,7 @@ What if something changes in the infrastructure? But it is done out of band, or 
 
 Another huge area that follows on from code rot and in general is the ability to test your IaC and make sure all areas are working the way they should.
 
-First up there are some built in testing commands we can take a look at:
+First up there are some built-in testing commands we can take a look at:
 
 | Command              | Description                                                                                |
 | -------------------- | ------------------------------------------------------------------------------------------ |
@@ -41,15 +41,15 @@ We also have some testing tools available external to Terraform:
 - [tflint](https://github.com/terraform-linters/tflint)
 
   - Find possible errors
-  - Warn about deprecated syntax, unused declarations.
-  - Enforce best practices, naming conventions.
+  - Warn about deprecated syntax and unused declarations.
+  - Enforce best practices, and naming conventions.
 
 Scanning tools
 
 - [checkov](https://www.checkov.io/) - scans cloud infrastructure configurations to find misconfigurations before they're deployed.
 - [tfsec](https://aquasecurity.github.io/tfsec/v1.4.2/) - static analysis security scanner for your Terraform code.
 - [terrascan](https://github.com/accurics/terrascan) - static code analyser for Infrastructure as Code.
-- [terraform-compliance](https://terraform-compliance.com/) - a lightweight, security and compliance focused test framework against terraform to enable negative testing capability for your infrastructure-as-code.
+- [terraform-compliance](https://terraform-compliance.com/) - a lightweight, security and compliance-focused test framework against terraform to enable the negative testing capability for your infrastructure-as-code.
 - [snyk](https://docs.snyk.io/products/snyk-infrastructure-as-code/scan-terraform-files/scan-and-fix-security-issues-in-terraform-files) - scans your Terraform code for misconfigurations and security issues
 
 Managed Cloud offering
@@ -78,19 +78,19 @@ We mentioned on Day 57 when we started this section that there were some alterna
 | Azure Resource Manager          | Pulumi         |
 | Google Cloud Deployment Manager |                |
 
-I have used AWS CloudFormation probably the most out of the above list and native to AWS but I have not used the others other than Terraform. As you can imagine the cloud specific versions are very good in that particular cloud but if you have multiple cloud environments then you are going to struggle to migrate those configurations or you are going to have multiple management planes for your IaC efforts.
+I have used AWS CloudFormation probably the most out of the above list and native to AWS but I have not used the others other than Terraform. As you can imagine the cloud-specific versions are very good in that particular cloud but if you have multiple cloud environments then you are going to struggle to migrate those configurations or you are going to have multiple management planes for your IaC efforts.
 
 I think an interesting next step for me is to take some time and learn more about [Pulumi](https://www.pulumi.com/)
 
 From a Pulumi comparison on their site
 
-> "Both Terraform and Pulumi offer a desired state infrastructure as code model where the code represents the desired infrastructure state and the deployment engine compares this desired state with the stack’s current state and determines what resources need to be created, updated or deleted."
+> "Both Terraform and Pulumi offer the desired state infrastructure as code model where the code represents the desired infrastructure state and the deployment engine compares this desired state with the stack’s current state and determines what resources need to be created, updated or deleted."
 
-The biggest difference I can see is that unlike the HashiCorp Configuration Language (HCL) Pulumi allows for general purpose languages like Python, TypeScript, JavaScript, Go and .NET.
+The biggest difference I can see is that unlike the HashiCorp Configuration Language (HCL) Pulumi allows for general-purpose languages like Python, TypeScript, JavaScript, Go and .NET.
 
 A quick overview [Introduction to Pulumi: Modern Infrastructure as Code](https://www.youtube.com/watch?v=QfJTJs24-JM) I like the ease and choices you are prompted with and want to get into this a little more.
 
-This wraps up the Infrastructure as code section and next we move on to that little bit of overlap with configuration management and in particular as we get past the big picture of configuration management we are going to be using Ansible for some of those tasks and demos.
+This wraps up the Infrastructure as code section and next we move on to that little bit of overlap with configuration management in particular as we get past the big picture of configuration management we are going to be using Ansible for some of those tasks and demos.
 
 ## Resources
 

@@ -10,23 +10,23 @@ id: 1048743
 
 ## Kubernetes & Multiple Environments
 
-So far during this section on Infrastructure as code we have looked at deploying virtual machines albeit to virtualbox but the premise is the same really as we define in code what we want our virtual machine to look like and then we deploy. The same for Docker containers and in this session we are going to take a look at how Terraform can be used to interact with resources supported by Kubernetes.
+So far during this section on Infrastructure as code, we have looked at deploying virtual machines albeit to VirtualBox but the premise is the same really as we define in code what we want our virtual machine to look like and then we deploy. The same for Docker containers and in this session, we are going to take a look at how Terraform can be used to interact with resources supported by Kubernetes.
 
 I have been using Terraform to deploy my Kubernetes clusters for demo purposes across the 3 main cloud providers and you can find the repository [tf_k8deploy](https://github.com/MichaelCade/tf_k8deploy)
 
 However you can also use Terraform to interact with objects within the Kubernetes cluster, this could be using the [Kubernetes provider](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs) or it could be using the [Helm provider](https://registry.terraform.io/providers/hashicorp/helm/latest) to manage your chart deployments.
 
-Now we could use `kubectl` as we have showed in previous sections. But there are some benefits to using Terraform in your Kubernetes environment.
+Now we could use `kubectl` as we have shown in previous sections. But there are some benefits to using Terraform in your Kubernetes environment.
 
-- Unified workflow - if you have used terraform to deploy your clusters, you could use the same workflow and tool to deploy within your Kubernetes clusters
+- Unified workflow - if you have used Terraform to deploy your clusters, you could use the same workflow and tool to deploy within your Kubernetes clusters
 
-- Lifecycle management - Terraform is not just a provisioning tool, its going to enable change, updates and deletions.
+- Lifecycle management - Terraform is not just a provisioning tool, it's going to enable change, updates and deletions.
 
 ### Simple Kubernetes Demo
 
-Much like the demo we created in the last session we can now deploy nginx into our Kubernetes cluster, I will be using minikube here again for demo purposes. We create our Kubernetes.tf file and you can find this in the [folder](/Days/IaC/Kubernetes/kubernetes.tf)
+Much like the demo we created in the last session, we can now deploy nginx into our Kubernetes cluster, I will be using minikube here again for demo purposes. We create our Kubernetes.tf file and you can find this in the [folder](/Days/IaC/Kubernetes/Kubernetes.tf)
 
-In that file we are going to define our Kubernetes provider, we are going to point to our kubeconfig file, create a namespace called nginx, then we will create a deployment which contains 2 replicas and finally a service.
+In that file we are going to define our Kubernetes provider, we are going to point to our kubeconfig file, create a namespace called nginx, and then we will create a deployment which contains 2 replicas and finally service.
 
 ```
 terraform {
@@ -110,7 +110,7 @@ We can now take a look at the deployed resources within our cluster.
 
 ![](Images/Day61_IAC4.png)
 
-Now because we are using minikube and you will have seen in the previous section this has its own limitations when we try and play with the docker networking for ingress. But if we simply issue the `kubectl port-forward -n nginx svc/nginx 30201:80` command and open a browser to `http://localhost:30201/` we should see our NGINX page.
+Now because we are using minikube as you will have seen in the previous section this has its limitations when we try and play with the docker networking for ingress. But if we simply issue the `kubectl port-forward -n nginx svc/nginx 30201:80` command and open a browser to `http://localhost:30201/` we should see our NGINX page.
 
 ![](Images/Day61_IAC5.png)
 
@@ -118,13 +118,13 @@ If you want to try out more detailed demos with Terraform and Kubernetes then th
 
 ### Multiple Environments
 
-If we wanted to take any of the demos we have ran through but wanted to now have specific production, staging and development environments looking exactly the same and leveraging this code there are two approaches to achieve this with Terraform
+If we wanted to take any of the demos we have run through but wanted to now have specific production, staging and development environments looking the same and leveraging this code there are two approaches to achieve this with Terraform
 
 - `terraform workspaces` - multiple named sections within a single backend
 
 - file structure - Directory layout provides separation, modules provide reuse.
 
-Each of the above do have their pros and cons though.
+Each of the above does have its pros and cons though.
 
 ### terraform workspaces
 
