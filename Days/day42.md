@@ -11,7 +11,7 @@ id: 1048826
 
 We are now starting the next section and this section is going to be focused on containers in particular we are going to be looking into Docker getting into some of the key areas to understand more about Containers. 
 
-I will also be trying to get some hands-on here to create the container that we can use during this section but also future sections later on in the challenge. 
+I will also be trying to get some hands-on here to create the container that we can use during this section but also in future sections later on in the challenge. 
 
 As always this first post is going to be focused on the big picture of how we got here and what it all means. 
 
@@ -20,7 +20,7 @@ As always this first post is going to be focused on the big picture of how we go
 
 ### Why another way to run applications? 
 
-The first thing we have to take a look at is why do we need another way to run our software or applications? Well it is just that choice is great, we can run our applications in many different forms, we might see applications deployed on physical hardware with an operating system and a single application deployed there, we might see the virtual machine or cloud-based IaaS instances running our application which then integrate into a database again in a VM or as PaaS offering in the public cloud. Or we might see our applications running in containers. 
+The first thing we have to take a look at is why do we need another way to run our software or applications? Well it is just that choice is great, we can run our applications in many different forms, we might see applications deployed on physical hardware with an operating system and a single application deployed there, and we might see the virtual machine or cloud-based IaaS instances running our application which then integrate into a database again in a VM or as PaaS offering in the public cloud. Or we might see our applications running in containers. 
 
 None of the above options is wrong or right, but they each have their reasons to exist and I also strongly believe that none of these is going away. I have seen a lot of content that walks into Containers vs Virtual Machines and there really should not be an argument as that is more like apples vs pears argument where they are both fruit (ways to run our applications) but they are not the same. 
 
@@ -38,7 +38,7 @@ As you can probably tell as I have said before, I am not going to advocate that 
 
 ![](Images/Day42_Containers4.png)
 
-We have had container technology for a long time, so why now over the last say 10 years has this become popular, I would say even more popular in the last 5. We have had containers for decades. It comes down to the challenge containers or should I say images as well, to how we distribute our software, because if we just have container technology, then we still will have many of the same problems we've had with software management. 
+We have had container technology for a long time, so why now over the last say 10 years has this become popular, I would say even more popular in the last 5. We have had containers for decades. It comes down to the challenge of containers or should I say images as well, to how we distribute our software, because if we just have container technology, then we still will have many of the same problems we've had with software management. 
 
 If we think about Docker as a tool, the reason that it took off, is because of the ecosystem of images that are easy to find and use. Simple to get on your systems and get up and running. A major part of this is consistency across the entire space, of all these different challenges that we face with software. It doesn't matter if it's MongoDB or nodeJS, the process to get either of those up and running will be the same. The process to stop either of those is the same. All of these issues will still exist, but the nice thing is, when we bring good container and image technology together, we now have a single set of tools to help us tackle all of these different problems. Some of those issues are listed below: 
 
@@ -109,7 +109,7 @@ isolate it.
 - Containers are easily scalable.
 
 Using containers you can scale independent containers and use a load balancer
-or a service which help split the traffic and you can scale the applications horizontally. Containers offer a lot of flexibility and ease how you manage your applications 
+or a service which helps split the traffic and you can scale the applications horizontally. Containers offer a lot of flexibility and ease in how you manage your applications 
 
 ### What is a container? 
 
