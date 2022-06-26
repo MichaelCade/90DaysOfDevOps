@@ -10,17 +10,17 @@ id: 1048742
 
 ## Rancher Overview - Hands On
 
-In this section we are going to take a look at Rancher, so far everything we have done has been in the cli and using kubectl but we have a few really good UIs and multi cluster management tools to give our operations teams good visibility into our cluster management.
+In this section we are going to take a look at Rancher, so far everything we have done has been in the cli and using kubectl but we have a few good UIs and multi-cluster management tools to give our operations teams good visibility into our cluster management.
 
 Rancher is according to their [site](https://rancher.com/)
 
-> Rancher is a complete software stack for teams adopting containers. It addresses the operational and security challenges of managing multiple Kubernetes clusters across any infrastructure, while providing DevOps teams with integrated tools for running containerized workloads.
+> Rancher is a complete software stack for teams adopting containers. It addresses the operational and security challenges of managing multiple Kubernetes clusters across any infrastructure while providing DevOps teams with integrated tools for running containerized workloads.
 
-Rancher enables us to deploy production grade Kubernetes clusters from pretty much any location and then provides centralised authentication, access control and observability. I mentioned in a previous section that there is almost an overwhelming choice when it comes to Kubernetes and where you should or could run them, looking at Rancher it really doesn't matter where they are.
+Rancher enables us to deploy production-grade Kubernetes clusters from pretty much any location and then provides centralised authentication, access control and observability. I mentioned in a previous section that there is almost an overwhelming choice when it comes to Kubernetes and where you should or could run them, looking at Rancher it doesn't matter where they are.
 
 ### Deploy Rancher
 
-The first thing we need to do is deploy Rancher on our local workstation, there are few ways and locations you can choose to proceed with this step, for me I want to use my local workstation and run rancher as a docker container. By running the command below we will pull down a container image and then have access to the rancher UI.
+The first thing we need to do is deploy Rancher on our local workstation, there are a few ways and locations you can choose to proceed with this step, for me I want to use my local workstation and run rancher as a docker container. By running the command below we will pull down a container image and then have access to the rancher UI.
 
 Other rancher deployment methods are available [Rancher Quick-Start-Guide](https://rancher.com/docs/rancher/v2.6/en/quick-start-guide/deployment/)
 
@@ -40,35 +40,35 @@ Follow the instructions below to get the password required. Because I am using W
 
 ![](Images/Day53_Kubernetes3.png)
 
-We can then take the above password and login, the next page is where we can define a new password.
+We can then take the above password and log in, the next page is where we can define a new password.
 
 ![](Images/Day53_Kubernetes4.png)
 
-Once we have done the above we will then be logged in and we can see our opening screen. As part of the Rancher deployment we will also see a local K3s cluster provisioned.
+Once we have done the above we will then be logged in and we can see our opening screen. As part of the Rancher deployment, we will also see a local K3s cluster provisioned.
 
 ![](Images/Day53_Kubernetes5.png)
 
 ### A quick tour of rancher
 
-The first thing for us to look at is our locally deployed K3S cluster You can see below that we get a good visual on what is happening inside our cluster. This is the default deployment and we have not yet deployed anything to this cluster. You can see it is made up of 1 node and has 5 deployments. Then you can also see that there are some stats on pods, cores and memory.
+The first thing for us to look at is our locally deployed K3S cluster You can see below that we get a good visual of what is happening inside our cluster. This is the default deployment and we have not yet deployed anything to this cluster. You can see it is made up of 1 node and has 5 deployments. Then you can also see that there are some stats on pods, cores and memory.
 
 ![](Images/Day53_Kubernetes6.png)
 
-On the left hand menu we also have an Apps & Marketplace tab, this allows us to choose applications we would like to run on our clusters, as mentioned previously Rancher gives us the capability of running or managing a number of different clusters. With the marketplace we can deploy our applications very easily.
+On the left-hand menu, we also have an Apps & Marketplace tab, this allows us to choose applications we would like to run on our clusters, as mentioned previously Rancher gives us the capability of running or managing several different clusters. With the marketplace, we can deploy our applications very easily.
 
 ![](Images/Day53_Kubernetes7.png)
 
-Another thing to mention is that if you did need to get access to any cluster being managed by Rancher in the top right you have the ability to open a kubectl shell to the selected cluster.
+Another thing to mention is that if you did need to get access to any cluster being managed by Rancher in the top right you can open a kubectl shell to the selected cluster.
 
 ![](Images/Day53_Kubernetes8.png)
 
 ### Create a new cluster
 
-Over the past two sessions we have created a minikube cluster locally and we have used Vagrant with VirtualBox to create a 3 node Kubernetes cluster, with Rancher we can also create clusters. In the [Rancher Folder](Kubernetes/Rancher) you will find additional vagrant files that will build out the same 3 nodes but without the steps for creating our Kubernetes cluster (we want Rancher to do this for us)
+Over the past two sessions, we have created a minikube cluster locally and we have used Vagrant with VirtualBox to create a 3 node Kubernetes cluster, with Rancher we can also create clusters. In the [Rancher Folder](Kubernetes/Rancher) you will find additional vagrant files that will build out the same 3 nodes but without the steps for creating our Kubernetes cluster (we want Rancher to do this for us)
 
-We do however want docker installed and for the OS to be updated so you will still see the `common.sh` script being ran on each of our nodes. This will also install Kubeadm, Kubectl etc. But it will not run the Kubeadm commands to create and join our nodes into a cluster.
+We do however want docker installed and for the OS to be updated so you will still see the `common.sh` script being run on each of our nodes. This will also install Kubeadm, Kubectl etc. But it will not run the Kubeadm commands to create and join our nodes into a cluster.
 
-We can navigate to our vagrant folder location and we can simply run `vagrant up` and this will begin that process of creating our 3 VMs in virtualbox.
+We can navigate to our vagrant folder location and we can simply run `vagrant up` and this will begin the process of creating our 3 VMs in VirtualBox.
 
 ![](Images/Day53_Kubernetes9.png)
 
@@ -80,7 +80,7 @@ We will be choosing "custom" as we are not using one of the integrated platforms
 
 ![](Images/Day53_Kubernetes11.png)
 
-The next page is going to give you the registration code that needs to be ran on each of your nodes with the appropriate services to be enabled. etcd, controlplane and worker. For our master node we want etcd and controlplane so the command can be seen below.
+The next page is going to give you the registration code that needs to be run on each of your nodes with the appropriate services to be enabled. etcd, control-plane and worker. For our master node, we want etcd and control-plane so the command can be seen below.
 
 ![](Images/Day53_Kubernetes12.png)
 
@@ -100,13 +100,13 @@ sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kube
 
 ![](Images/Day53_Kubernetes14.png)
 
-Over the last 3 sessions we have used a few different ways to get up and running with a Kubernetes cluster, over the remaining days we are going to look at the application side of the platform arguably the most important. We will look into services and being able to provision and use our service in Kubernetes.
+Over the last 3 sessions, we have used a few different ways to get up and running with a Kubernetes cluster, over the remaining days we are going to look at the application side of the platform arguably the most important. We will look into services and being able to provision and use our service in Kubernetes.
 
-I have been told since that the requirements around bootstrapping rancher nodes requires those VMs to have 4GB ram or they will crash-loop, I have since updated as our worker nodes had 2GB.
+I have been told since that the requirements around bootstrapping rancher nodes require those VMs to have 4GB ram or they will crash-loop, I have since updated as our worker nodes had 2GB.
 
 ### What we will cover in the series on Kubernetes
 
-We have started covering some of these mentioned below but we are going to get more hands on tomorrow with our second cluster deployment then we can start deploying applications into our clusters.
+We have started covering some of these mentioned below but we are going to get more hands-on tomorrow with our second cluster deployment then we can start deploying applications into our clusters.
 
 - Kubernetes Architecture
 - Kubectl Commands
@@ -114,12 +114,12 @@ We have started covering some of these mentioned below but we are going to get m
 - Kubernetes Ingress
 - Kubernetes Services
 - Helm Package Manager
-- Persistant Storage
+- Persistent Storage
 - Stateful Apps
 
 ## Resources
 
-If you have FREE resources that you have used then please feel free to add them in here via a PR to the repository and I will be happy to include them.
+If you have FREE resources that you have used then please feel free to add them here via a PR to the repository and I will be happy to include them.
 
 - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
 - [TechWorld with Nana - Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]](https://www.youtube.com/watch?v=X48VuDVv0do)
