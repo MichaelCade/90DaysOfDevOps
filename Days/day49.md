@@ -1,33 +1,34 @@
 ---
-title: '#90DaysOfDevOps - The Big Picture: Kubernetes - Day 49'
+title: "#90DaysOfDevOps - The Big Picture: Kubernetes - Day 49"
 published: false
 description: 90DaysOfDevOps - The Big Picture Kubernetes
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1049049
 ---
+
 ## The Big Picture: Kubernetes
 
-In the last section we covered Containers, Containers fall short when it comes to scale and orchestration alone. The best we can do is use docker-compose to bring up multiple containers together. When it comes to Kubernetes which is a Container Orchestrator, this gives us the ability to scale up and down in an automated way or based on a load of your applications and services. 
+In the last section we covered Containers, Containers fall short when it comes to scale and orchestration alone. The best we can do is use docker-compose to bring up multiple containers together. When it comes to Kubernetes which is a Container Orchestrator, this gives us the ability to scale up and down in an automated way or based on a load of your applications and services.
 
-As a platform Kubernetes offers the ability to orchestrate containers according to your requirements and desired state. We are going to cover Kubernetes in this section as it is growing rapidly as the next wave of infrastructure. I would also suggest that from a DevOps perspective Kubernetes is just one platform that you will need to have a basic understanding of, you will also need to understand bare metal, virtualisation and most likely cloud-based services as well. Kubernetes is just another option to run our applications. 
+As a platform Kubernetes offers the ability to orchestrate containers according to your requirements and desired state. We are going to cover Kubernetes in this section as it is growing rapidly as the next wave of infrastructure. I would also suggest that from a DevOps perspective Kubernetes is just one platform that you will need to have a basic understanding of, you will also need to understand bare metal, virtualisation and most likely cloud-based services as well. Kubernetes is just another option to run our applications.
 
 ### What is Container Orchestration?
 
-I have mentioned Kubernetes and I have mentioned Container Orchestration, Kubernetes is the technology whereas container orchestration is the concept or the process behind the technology. Kubernetes is not the only Container Orchestration platform we also have Docker Swarm, HashiCorp Nomad and others. But Kubernetes is going from strength to strength so I want to cover Kubernetes but wanted to say that it is not the only one out there. 
+I have mentioned Kubernetes and I have mentioned Container Orchestration, Kubernetes is the technology whereas container orchestration is the concept or the process behind the technology. Kubernetes is not the only Container Orchestration platform we also have Docker Swarm, HashiCorp Nomad and others. But Kubernetes is going from strength to strength so I want to cover Kubernetes but wanted to say that it is not the only one out there.
 
 ### What is Kubernetes?
 
-The first thing you should read if you are new to Kubernetes is the official documentation, My experience of really deep diving into Kubernetes a little over a year ago was that this is going to be a steep learning curve. Coming from a virtualisation and storage background I was thinking about how daunting this felt. 
+The first thing you should read if you are new to Kubernetes is the official documentation, My experience of really deep diving into Kubernetes a little over a year ago was that this is going to be a steep learning curve. Coming from a virtualisation and storage background I was thinking about how daunting this felt.
 
-But the community, free learning resources and documentation are amazing. [Kubernetes.io](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/) 
+But the community, free learning resources and documentation are amazing. [Kubernetes.io](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
 
-*Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available.*
+_Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available._
 
-Important things to note from the above quote, Kubernetes is Open-Source with a rich history that goes back to Google who donated the project to the Cloud Native Computing Foundation (CNCF) and it has now been progressed by the open-source community as well as large enterprise vendors contributing to making Kubernetes what it is today. 
+Important things to note from the above quote, Kubernetes is Open-Source with a rich history that goes back to Google who donated the project to the Cloud Native Computing Foundation (CNCF) and it has now been progressed by the open-source community as well as large enterprise vendors contributing to making Kubernetes what it is today.
 
-I mentioned above that containers are great and in the previous section, we spoke about how containers and container images have changed and accelerated the adoption of cloud-native systems. But containers alone are not going to give you the production-ready experience you need from your application. Kubernetes gives us the following: 
+I mentioned above that containers are great and in the previous section, we spoke about how containers and container images have changed and accelerated the adoption of cloud-native systems. But containers alone are not going to give you the production-ready experience you need from your application. Kubernetes gives us the following:
 
 - **Service discovery and load balancing** Kubernetes can expose a container using the DNS name or using their IP address. If traffic to a container is high, Kubernetes can load balance and distribute the network traffic so that the deployment is stable.
 
@@ -39,25 +40,24 @@ I mentioned above that containers are great and in the previous section, we spok
 
 - **Self-healing** Kubernetes restarts containers that fail, replaces containers, kills containers that don't respond to your user-defined health check, and doesn't advertise them to clients until they are ready to serve.
 
-- **Secret and configuration management** Kubernetes lets you store and manage sensitive information, such as passwords, OAuth tokens, and SSH keys. You can deploy and update secrets and application configuration without rebuilding your container images, and without exposing secrets in your stack configuration. 
+- **Secret and configuration management** Kubernetes lets you store and manage sensitive information, such as passwords, OAuth tokens, and SSH keys. You can deploy and update secrets and application configuration without rebuilding your container images, and without exposing secrets in your stack configuration.
 
 Kubernetes provides you with a framework to run distributed systems resiliently.
 
 Container Orchestration manages the deployment, placement, and lifecycle of containers.
 
-It also has many other responsibilities: 
+It also has many other responsibilities:
 
 - Cluster management federates hosts into one target.
 
 - Schedule management distributes containers across nodes through the scheduler.
-    
 - Service discovery knows where containers are located and distributes client requests across them.
 
 - Replication ensures that the right number of nodes and containers are available for the requested workload.
 
 - Health management detects and replaces unhealthy containers and nodes.
 
-### Main Kubernetes Components 
+### Main Kubernetes Components
 
 Kubernetes is a container orchestrator to provision, manage, and scale apps. You can use it to manage the lifecycle of containerized apps in a cluster of nodes, which is a collection of worker machines such as VMs or physical machines.
 
@@ -67,20 +67,21 @@ The key paradigm of Kubernetes is its declarative model. You provide the state t
 
 ### Node
 
-**Control Plane**
+#### Control Plane
 
-Every Kubernetes cluster requires a Control Plane node, the control plane's components make global decisions about the cluster (for example, scheduling), as well as detecting and responding to cluster events. 
+Every Kubernetes cluster requires a Control Plane node, the control plane's components make global decisions about the cluster (for example, scheduling), as well as detecting and responding to cluster events.
 
 ![](Images/Day49_Kubernetes1.png)
 
-**Worker Node**
- A worker machine that runs Kubernetes workloads. It can be a physical (bare metal) machine or a virtual machine (VM). Each node can host one or more pods. Kubernetes nodes are managed by a control plane
+#### Worker Node
+
+A worker machine that runs Kubernetes workloads. It can be a physical (bare metal) machine or a virtual machine (VM). Each node can host one or more pods. Kubernetes nodes are managed by a control plane
 
 ![](Images/Day49_Kubernetes2.png)
 
-There are other node types but I won't be covering them here. 
+There are other node types but I won't be covering them here.
 
-**kubelet**
+#### kubelet
 
 An agent that runs on each node in the cluster. It makes sure that containers are running in a Pod.
 
@@ -88,7 +89,7 @@ The kubelet takes a set of PodSpecs that are provided through various mechanisms
 
 ![](Images/Day49_Kubernetes3.png)
 
-**kube-proxy**
+#### kube-proxy
 
 kube-proxy is a network proxy that runs on each node in your cluster, implementing part of the Kubernetes Service concept.
 
@@ -98,7 +99,7 @@ kube-proxy uses the operating system packet filtering layer if there is one and 
 
 ![](Images/Day49_Kubernetes4.png)
 
-**Container runtime**
+#### Container runtime
 
 The container runtime is the software that is responsible for running containers.
 
@@ -110,29 +111,29 @@ Kubernetes supports several container runtimes: Docker, containerd, CRI-O, and a
 
 A cluster is a group of nodes, where a node can be a physical machine or a virtual machine. Each of the nodes will have the container runtime (Docker) and will also be running a kubelet service, which is an agent that takes in the commands from the Master controller (more on that later) and a Proxy, that is used to proxy connections to the Pods from another component (Services, that we will see later).
 
-Our control plane which can be made highly available will contain some unique roles compared to the worker nodes, the most important will be the kube API server, this is where any communication will take place to get information or push information to our Kubernetes cluster. 
+Our control plane which can be made highly available will contain some unique roles compared to the worker nodes, the most important will be the kube API server, this is where any communication will take place to get information or push information to our Kubernetes cluster.
 
-**Kube API-Server**
+#### Kube API-Server
 
 The Kubernetes API server validates and configures data for the API objects which include pods, services, replication controllers, and others. The API Server services REST operations and provide the frontend to the cluster's shared state through which all other components interact.
 
-**Scheduler**
+#### Scheduler
 
 The Kubernetes scheduler is a control plane process which assigns Pods to Nodes. The scheduler determines which Nodes are valid placements for each Pod in the scheduling queue according to constraints and available resources. The scheduler then ranks each valid Node and binds the Pod to a suitable Node.
 
-**Controller Manager**
+#### Controller Manager
 
 The Kubernetes controller manager is a daemon that embeds the core control loops shipped with Kubernetes. In applications of robotics and automation, a control loop is a non-terminating loop that regulates the state of the system. In Kubernetes, a controller is a control loop that watches the shared state of the cluster through the apiserver and makes changes attempting to move the current state towards the desired state.
 
-**etcd**
+#### etcd
 
 Consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
 
 ![](Images/Day49_Kubernetes6.png)
 
-**kubectl**
+#### kubectl
 
-To manage this from a CLI point of view we have kubectl, kubectl interacts with the API server. 
+To manage this from a CLI point of view we have kubectl, kubectl interacts with the API server.
 
 The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs.
 
@@ -154,11 +155,11 @@ A Pod is a group of containers that form a logical application. E.g. If you have
 
 ### Deployments
 
-- You can just decide to run Pods but when they die they die. 
+- You can just decide to run Pods but when they die they die.
 
-- A Deployment will enable your pod to run continuously. 
+- A Deployment will enable your pod to run continuously.
 
-- Deployments allow you to update a running app without downtime. 
+- Deployments allow you to update a running app without downtime.
 
 - Deployments also specify a strategy to restart Pods when they die
 
@@ -166,17 +167,17 @@ A Pod is a group of containers that form a logical application. E.g. If you have
 
 ### ReplicaSets
 
-- The Deployment can also create the ReplicaSet 
+- The Deployment can also create the ReplicaSet
 
 - A ReplicaSet ensures your app has the desired number of Pods
 
-- ReplicaSets will create and scale Pods based on the Deployment 
+- ReplicaSets will create and scale Pods based on the Deployment
 
 - Deployments, ReplicaSets, and Pods are not exclusive but can be
 
 ### StatefulSets
 
-- Does your App require you to keep information about its state? 
+- Does your App require you to keep information about its state?
 
 - A database needs state
 
@@ -188,23 +189,23 @@ A Pod is a group of containers that form a logical application. E.g. If you have
 
 ### DaemonSets
 
-- DaemonSets are for continuous process 
+- DaemonSets are for continuous process
 
-- They run one Pod per Node. 
+- They run one Pod per Node.
 
 - Each new node added to the cluster gets a pod started
 
-- Useful for background tasks such as monitoring and log collection 
+- Useful for background tasks such as monitoring and log collection
 
 - Each pod has a unique, persistent identifier that the controller maintains over any rescheduling.
 
 ![](Images/Day49_Kubernetes11.png)
 
-### Services 
+### Services
 
-- A single endpoint to access Pods 
+- A single endpoint to access Pods
 
-- a unified way to route traffic to a cluster and eventually to a list of Pods. 
+- a unified way to route traffic to a cluster and eventually to a list of Pods.
 
 - By using a Service, Pods can be brought up and down without affecting anything.
 
@@ -212,18 +213,18 @@ This is just a quick overview and notes around the fundamental building blocks o
 
 ![](Images/Day49_Kubernetes12.png)
 
-### What we will cover in the series on Kubernetes 
+### What we will cover in the series on Kubernetes
 
-- Kubernetes Architecture 
-- Kubectl Commands 
-- Kubernetes YAML 
-- Kubernetes Ingress 
+- Kubernetes Architecture
+- Kubectl Commands
+- Kubernetes YAML
+- Kubernetes Ingress
 - Kubernetes Services
-- Helm Package Manager 
-- Persistent Storage 
-- Stateful Apps 
+- Helm Package Manager
+- Persistent Storage
+- Stateful Apps
 
-## Resources 
+## Resources
 
 - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
 - [TechWorld with Nana - Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]](https://www.youtube.com/watch?v=X48VuDVv0do)
