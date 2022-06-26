@@ -9,19 +9,19 @@ id: 1048738
 ---
 ## Installing & Configuring Git
 
-Git is a open source, cross platform tool for version control. If you are like me, using Ubuntu or most Linux environments you might find that you already have git installed but we are going to run through the install and configuration. 
+Git is an open source, cross-platform tool for version control. If you are like me, using Ubuntu or most Linux environments you might find that you already have git installed but we are going to run through the install and configuration. 
 
 Even if you already have git installed on your system it is also a good idea to make sure we are up to date. 
 
 ### Installing Git
 
-As already mentioned Git is cross platform, we will be running through Windows and Linux but you can find macOS also listed [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+As already mentioned Git is cross-platform, we will be running through Windows and Linux but you can find macOS also listed [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 For [Windows](https://git-scm.com/download/win) we can grab our installers from the official site. 
 
 You could also use `winget` on your Windows machine, think of this as your Windows Application Package Manager. 
 
-Before we install anything lets see what version we have on our Windows Machine. Open a PowerShell window and run `git --version` 
+Before we install anything let's see what version we have on our Windows Machine. Open a PowerShell window and run `git --version` 
 
 ![](Images/Day36_Git1.png)
 
@@ -35,11 +35,11 @@ I went ahead and downloaded the latest installer and ran through the wizard and 
 
 Meaning that the process shown below is also the same process for the most part as if you were installing from no git. 
 
-It is a very simple installation. Once downloaded double click and get started. Read through the GNU license agreement. But remember this is free and open source software. 
+It is a very simple installation. Once downloaded double click and get started. Read through the GNU license agreement. But remember this is free and open-source software. 
 
 ![](Images/Day36_Git3.png)
 
-Now we can choose additional components that we would like to also install but also associate with git. On Windows I always make sure I install Git Bash as this allows us to run bash scripts on Windows. 
+Now we can choose additional components that we would like to also install but also associate with git. On Windows, I always make sure I install Git Bash as this allows us to run bash scripts on Windows. 
 
 ![](Images/Day36_Git4.png)
 
@@ -47,7 +47,7 @@ We can then choose which SSH Executable we wish to use. IN leave this as the bun
 
 ![](Images/Day36_Git5.png)
 
-We then have experimental features that we may wish to enable, for me I don't need them so I don't enable, you can always come back in through the installation and enable these later on. 
+We then have experimental features that we may wish to enable, for me I don't need them so I don't enable them, you can always come back in through the installation and enable these later on. 
 
 ![](Images/Day36_Git6.png)
 
@@ -55,11 +55,11 @@ Installation complete, we can now choose to open Git Bash and or the latest rele
 
 ![](Images/Day36_Git7.png)
 
-The final check is to take a look in our PowerShell window what version of git we have now. 
+The final check is to take a look in our PowerShell window at what version of git we have now. 
 
 ![](Images/Day36_Git8.png)
 
-Super simple stuff and now we are on the latest version. On our Linux machine we seemed to be a little behind so we can also walk through that update process. 
+Super simple stuff and now we are on the latest version. On our Linux machine, we seemed to be a little behind so we can also walk through that update process. 
 
 I simply run the `sudo apt-get install git` command. 
 
@@ -95,7 +95,7 @@ Depending on your Operating System will determine the default text editor. In my
 
 `git config --global core.editor "code --wait"`
 
-now if we want to be able to see all git configuration then we can use the following command. 
+now if we want to be able to see all git configurations then we can use the following command. 
 
 `git config --global -e` 
 
@@ -113,15 +113,15 @@ I mentioned in the post yesterday that there were other version control types an
 
 Before git was around Client-Server was the defacto method for version control. An example of this would be [Apache Subversion](https://subversion.apache.org/) which is an open source version control system founded in 2000. 
 
-In this model of Client-Server version control, the first step the developer downloads the source code, the actual files from the server. This doesnt remove the conflicts but it does remove the complexity of the conflicts and how to resolve them. 
+In this model of Client-Server version control, the first step the developer downloads the source code and the actual files from the server. This doesn't remove the conflicts but it does remove the complexity of the conflicts and how to resolve them. 
 
 ![](Images/Day36_Git12.png)
 
-Now for example lets say we have two developers working on the same files and one wins the race and commits or uploads their file back to the server first with their new changes. When the second developer goes to update they have a conflict. 
+Now for example let's say we have two developers working on the same files and one wins the race and commits or uploads their file back to the server first with their new changes. When the second developer goes to update they have a conflict. 
 
 ![](Images/Day36_Git13.png)
 
-So now the Dev needs to pull down the first devs code change next to theirs check and then commit once those conflicts have been settled. 
+So now the Dev needs to pull down the first devs code change next to their check and then commit once those conflicts have been settled. 
 
 ![](Images/Day36_Git15.png)
 
