@@ -21,11 +21,11 @@ We can create our storage group by simply searching for Storage Group in the sea
 
 ![](Images/Day32_Cloud1.png)
 
-We can then run through the steps to create our storage account remembering that this name needs to be unique and it also needs to be all lower case, no spaces but can include numbers. 
+We can then run through the steps to create our storage account remembering that this name needs to be unique and it also needs to be all lower case, with no spaces but can include numbers. 
 
 ![](Images/Day32_Cloud2.png)
 
-We can also choose the level of redundancy we would like against our storage account and anything we store within here. The further down the list the more expensive option but also the spread of your data. 
+We can also choose the level of redundancy we would like against our storage account and anything we store here. The further down the list the more expensive option but also the spread of your data. 
 
 Even the default redundancy option gives us 3 copies of our data. 
 
@@ -80,10 +80,10 @@ There is also a difference between unmanaged and managed disks to consider when 
 
 - Virtual Machine OS disks are typically stored on persistent storage. 
 - Some stateless workloads do not require persistent storage and reduced latency is a larger benefit. 
-- There are VMs that support ephemeral OS managed disks that are created on the node-local storage. 
+- There are VMs that support ephemeral OS-managed disks that are created on the node-local storage. 
   - These can also be used with VM Scale Sets.
 
-Managed Disks are durable block storage that can be used with Azure Virtual Machines. You can have Ultra Disk Storage, Premium SSD, Standard SSD, Standard HDD. They also carry some characteristics. 
+Managed Disks are durable block storage that can be used with Azure Virtual Machines. You can have Ultra Disk Storage, Premium SSD, Standard SSD, or Standard HDD. They also carry some characteristics. 
 
 - Snapshot and Image support 
 - Simple movement between SKUs 
@@ -92,7 +92,7 @@ Managed Disks are durable block storage that can be used with Azure Virtual Mach
 
 ## Archive Storage 
 
-- **Cool Tier** - A cool tier of storage is available to block and append BLOBs. 
+- **Cool Tier** - A cool tier of storage is available to block and append blobs. 
   - Lower Storage cost
   - Higher transaction cost.  
 - **Archive Tier** - Archive storage is available for block BLOBs. 
@@ -131,7 +131,7 @@ Back on [Day 28](day28.md), we covered various service options. One of these was
 
 Azure SQL Database provides a relational database as a service based on Microsoft SQL Server. 
 
-This is SQL running the latest SQL branch with database compatibility level available where specific functionality version is required. 
+This is SQL running the latest SQL branch with database compatibility level available where a specific functionality version is required. 
 
 There are a few options on how this can be configured, we can provide a single database that provides one database in the instance, while an elastic pool enables multiple databases that share a pool of capacity and collectively scale. 
 
@@ -163,7 +163,7 @@ Various consistency models are available based around [CAP theorem](https://en.w
 
 ### Caching 
 
-Without getting into the weeds about caching systems such as Redis I wanted to include that Microsoft Azure have their service called Azure Cache for Redis. 
+Without getting into the weeds about caching systems such as Redis I wanted to include that Microsoft Azure has a service called Azure Cache for Redis. 
 
 Azure Cache for Redis provides an in-memory data store based on the Redis software. 
 
