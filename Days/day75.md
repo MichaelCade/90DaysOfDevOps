@@ -1,8 +1,8 @@
 ---
-title: "#90DaysOfDevOps - GitHub Actions Overview - Day 75"
+title: '#90DaysOfDevOps - GitHub Actions Overview - Day 75'
 published: false
 description: 90DaysOfDevOps - GitHub Actions Overview
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1049070

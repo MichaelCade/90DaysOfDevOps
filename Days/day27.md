@@ -1,8 +1,8 @@
 ---
-title: "#90DaysOfDevOps - Getting Hands-On with Python & Network - Day 27"
+title: '#90DaysOfDevOps - Getting Hands-On with Python & Network - Day 27'
 published: false
 description: 90DaysOfDevOps - Getting Hands-On with Python & Network
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048735

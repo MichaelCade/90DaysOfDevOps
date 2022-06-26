@@ -1,12 +1,12 @@
 ---
-title: "#90DaysOfDevOps - Introduction - Day 1"
+title: '#90DaysOfDevOps - Introduction - Day 1'
 published: true
 description: 90DaysOfDevOps - Introduction
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048731
-date: "2022-04-17T10:12:40Z"
+date: '2022-04-17T10:12:40Z'
 ---
 
 ## Introduction - Day 1

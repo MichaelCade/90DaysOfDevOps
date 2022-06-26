@@ -1,8 +1,8 @@
 ---
-title: "#90DaysOfDevOps - Ansible Playbooks - Day 65"
+title: '#90DaysOfDevOps - Ansible Playbooks - Day 65'
 published: false
 description: 90DaysOfDevOps - Ansible Playbooks
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1049054

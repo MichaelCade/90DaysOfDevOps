@@ -1,8 +1,8 @@
 ---
-title: "#90DaysOfDevOps - DevOps - The real stories - Day 6"
+title: '#90DaysOfDevOps - DevOps - The real stories - Day 6'
 published: false
 description: 90DaysOfDevOps - DevOps - The real stories
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048855

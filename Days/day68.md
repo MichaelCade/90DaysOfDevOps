@@ -1,8 +1,8 @@
 ---
-title: "#90DaysOfDevOps - Tags, Variables, Inventory & Database Server config - Day 68"
+title: '#90DaysOfDevOps - Tags, Variables, Inventory & Database Server config - Day 68'
 published: false
-description: "90DaysOfDevOps - Tags, Variables, Inventory & Database Server config"
-tags: "devops, 90daysofdevops, learning"
+description: '90DaysOfDevOps - Tags, Variables, Inventory & Database Server config'
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048780

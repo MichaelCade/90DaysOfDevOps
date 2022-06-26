@@ -1,8 +1,8 @@
 ---
-title: "#90DaysOfDevOps - Setting up a multinode Kubernetes Cluster - Day 52"
+title: '#90DaysOfDevOps - Setting up a multinode Kubernetes Cluster - Day 52'
 published: false
 description: 90DaysOfDevOps - Setting up a multinode Kubernetes Cluster
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1049050
