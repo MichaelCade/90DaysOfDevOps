@@ -10,7 +10,7 @@ id: 1048781
 
 ## Data Services
 
-Databases are going to be the most common data service that we come across in our environments. I wanted to take this session to explore some of those different types of Databases and some of the use cases they each have. Some we have used and seen throughout the course of the challenge.
+Databases are going to be the most common data service that we come across in our environments. I wanted to take this session to explore some of those different types of Databases and some of the use cases they each have. Some we have used and seen throughout the challenge.
 
 From an application development point of view choosing the right data service or database is going to be a huge decision when it comes to the performance and scalability of your application.
 
@@ -26,7 +26,7 @@ _Redis is an in-memory data structure store, used as a distributed, in-memory ke
 
 ![](Images/Day85_Data1.png)
 
-As you can see from the description of Redis this means that our database is fast but we are limited on space as a trade off. Also no queries or joins which means data modelling options are very limited.
+As you can see from the description of Redis this means that our database is fast but we are limited on space as a trade-off. Also, no queries or joins which means data modelling options are very limited.
 
 Best for:
 
@@ -71,9 +71,9 @@ Best for:
 
 ### Relational
 
-If you are new to databases but you know of them my guess is that you have absolutely come across a relational database.
+If you are new to databases but you know of them I guess that you have come across a relational database.
 
-A relational database is a digital database based on the relational model of data, as proposed by E. F. Codd in 1970. A system used to maintain relational databases is a relational database management system. Many relational database systems have an option of using the SQL for querying and maintaining the database.
+A relational database is a digital database based on the relational model of data, as proposed by E. F. Codd in 1970. A system used to maintain relational databases is a relational database management system. Many relational database systems have the option of using SQL for querying and maintaining the database.
 
 _MySQL is an open-source relational database management system. Its name is a combination of "My", the name of co-founder Michael Widenius's daughter, and "SQL", the abbreviation for Structured Query Language._
 
@@ -103,9 +103,9 @@ Best for:
 
 ### Search Engine
 
-In the last section we actually used a Search Engine database in the way of Elasticsearch.
+In the last section, we used a Search Engine database in the way of Elasticsearch.
 
-A search-engine database is a type of non-relational database that is dedicated to the search of data content. Search-engine databases use indexes to categorise the similar characteristics among data and facilitate search capability.
+A search-engine database is a type of non-relational database that is dedicated to the search for data content. Search-engine databases use indexes to categorise similar characteristics among data and facilitate search capability.
 
 _Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents._
 
@@ -117,13 +117,13 @@ Best for:
 
 ### Multi-model
 
-A multi-model database is a database management system designed to support multiple data models against a single, integrated backend. In contrast, most database management systems are organized around a single data model that determines how data can be organized, stored, and manipulated.Document, graph, relational, and key–value models are examples of data models that may be supported by a multi-model database.
+A multi-model database is a database management system designed to support multiple data models against a single, integrated backend. In contrast, most database management systems are organized around a single data model that determines how data can be organized, stored, and manipulated. Document, graph, relational, and key–value models are examples of data models that may be supported by a multi-model database.
 
 _Fauna is a flexible, developer-friendly, transactional database delivered as a secure and scalable cloud API with native GraphQL._
 
 Best for:
 
-- You are not stuck to having to choose a data model
+- You are not stuck on having to choose a data model
 - ACID Compliant
 - Fast
 - No provisioning overhead

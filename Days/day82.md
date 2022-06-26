@@ -22,11 +22,11 @@ We will be deploying the following into our Kubernetes cluster.
 
 The EFK stack is a collection of 3 software bundled together, including:
 
-- Elasticsearch : NoSQL database is used to store data and provides interface for searching and query log.
+- Elasticsearch: NoSQL database is used to store data and provides an interface for searching and query logs.
 
-- Fluentd : Fluentd is an open source data collector for unified logging layer. Fluentd allows you to unify data collection and consumption for a better use and understanding of data.
+- Fluentd: Fluentd is an open source data collector for a unified logging layer. Fluentd allows you to unify data collection and consumption for better use and understanding of data.
 
-- Kibana : Interface for managing and statistics logs. Responsible for reading information from elasticsearch.
+- Kibana: Interface for managing and statistics logs. Responsible for reading information from elasticsearch.
 
 ### Deploying EFK on Minikube
 
@@ -38,7 +38,7 @@ I have created [efk-stack.yaml](Days/Monitoring/../../Monitoring/EFK%20Stack/efk
 
 ![](Images/Day82_Monitoring3.png)
 
-Depending on your system and if you have ran this already and have images pulled you should now watch the pods into a ready state before we can move on, you can check the progress with the following command. `kubectl get pods -n kube-logging -w` This can take a few minutes.
+Depending on your system and if you have run this already and have images pulled you should now watch the pods into a ready state before we can move on, you can check the progress with the following command. `kubectl get pods -n kube-logging -w` This can take a few minutes.
 
 ![](Images/Day82_Monitoring4.png)
 
@@ -46,13 +46,13 @@ The above command lets us keep an eye on things but I like to clarify that thing
 
 ![](Images/Day82_Monitoring5.png)
 
-Once we have all our pods up and running and at this stage we should see
+Once we have all our pods up and running and at this stage, we should see
 
-- 3 pods associated to ElasticSearch
-- 1 pod associated to Fluentd
-- 1 pod associated to Kibana
+- 3 pods associated with ElasticSearch
+- 1 pod associated with Fluentd
+- 1 pod associated with Kibana
 
-We can also use `kubectl get all -n kube-logging` to show all in our namespace, fluentd as explained previously is deployed as a daemonset, kibana as a deployment and Elasticsearch as a statefulset.
+We can also use `kubectl get all -n kube-logging` to show all in our namespace, fluentd as explained previously is deployed as a daemonset, kibana as deployment and Elasticsearch as a statefulset.
 
 ![](Images/Day82_Monitoring6.png)
 
@@ -68,7 +68,7 @@ Next, we need to hit the "discover" tab on the left menu and add "\*" to our ind
 
 ![](Images/Day82_Monitoring9.png)
 
-On Step 2 of 2, we are going to use the @timestamp option from the dropdown as this will filter our data by time. When you hit create pattern it might take a few seconds to complete.
+In Step 2 of 2, we are going to use the @timestamp option from the dropdown as this will filter our data by time. When you hit create pattern it might take a few seconds to complete.
 
 ![](Images/Day82_Monitoring10.png)
 
@@ -76,9 +76,9 @@ If we now head back to our "discover" tab after a few seconds you should start t
 
 ![](Images/Day82_Monitoring11.png)
 
-Now that we have the EFK stack up and running and we are gathering logs from our Kubernetes cluster via Fluentd we can also take a look at other sources we can choose from, if you navigate to the home screen by hitting the Kibana logo in the top left you will be greeted with the same page we saw when we first logged in.
+Now that we have the EFK stack up and running and we are gathering logs from our Kubernetes cluster via Fluentd we can also take a look at other sources we can choose from if you navigate to the home screen by hitting the Kibana logo on the top left you will be greeted with the same page we saw when we first logged in.
 
-We have the ability to add APM, Log data, metric data and security events from other plugins or sources.
+We can add APM, Log data, metric data and security events from other plugins or sources.
 
 ![](Images/Day82_Monitoring12.png)
 
@@ -86,7 +86,7 @@ If we select "Add log data" then we can see below that we have a lot of choices 
 
 ![](Images/Day82_Monitoring13.png)
 
-Under the metrics data you will find that you can add sources for Prometheus and lots of other services.
+Under the metrics data, you will find that you can add sources for Prometheus and lots of other services.
 
 ### APM (Application Performance Monitoring)
 
