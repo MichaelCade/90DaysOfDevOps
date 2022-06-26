@@ -1,8 +1,8 @@
 ---
-title: "#90DaysOfDevOps - The Big Picture: Configuration Management - Day 63"
+title: '#90DaysOfDevOps - The Big Picture: Configuration Management - Day 63'
 published: false
 description: 90DaysOfDevOps - The Big Picture Configuration Management
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048711

@@ -1,8 +1,8 @@
 ---
-title: "#90DaysOfDevOps - An intro to Terraform - Day 57"
+title: '#90DaysOfDevOps - An intro to Terraform - Day 57'
 published: false
 description: 90DaysOfDevOps - An intro to Terraform
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048710

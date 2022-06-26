@@ -1,8 +1,8 @@
 ---
-title: "#90DaysOfDevOps - The Big Picture: Monitoring - Day 77"
+title: '#90DaysOfDevOps - The Big Picture: Monitoring - Day 77'
 published: false
 description: 90DaysOfDevOps - The Big Picture Monitoring
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048715
