@@ -819,7 +819,19 @@ Day-84
 
 Day-85
 
--[https://www.youtube.com/watch?v=OqCK95AS-YE](https://www.youtube.com/watch?v=OqCK95AS-YE) Redis Crash Course - the What, Why and How to use Redis as your primary database -[https://www.youtube.com/watch?v=GEg7s3i6Jak](https://www.youtube.com/watch?v=GEg7s3i6Jak) Redis: How to setup a cluster - for beginners -[https://www.youtube.com/watch?v=JmCn7k0PlV4](https://www.youtube.com/watch?v=JmCn7k0PlV4) Redis on Kubernetes for beginners -[https://www.youtube.com/watch?v=YjYWsN1vek8](https://www.youtube.com/watch?v=YjYWsN1vek8) Intro to Cassandra - Cassandra Fundamentals -[https://www.youtube.com/watch?v=ofme2o29ngU](https://www.youtube.com/watch?v=ofme2o29ngU) MongoDB Crash Course -[https://www.youtube.com/watch?v=-bt_y4Loofg](https://www.youtube.com/watch?v=-bt_y4Loofg) MongoDB in 100 Seconds -[https://www.youtube.com/watch?v=OqjJjpjDRLc](https://www.youtube.com/watch?v=OqjJjpjDRLc) What is a Relational Database? -[https://www.youtube.com/watch?v=qw--VYLpxG4](https://www.youtube.com/watch?v=qw--VYLpxG4) Learn PostgreSQL Tutorial - Full Course for Beginners -[https://www.youtube.com/watch?v=7S_tz1z_5bA](https://www.youtube.com/watch?v=7S_tz1z_5bA) MySQL Tutorial for Beginners [Full Course] -[https://www.youtube.com/watch?v=REVkXVxvMQE](https://www.youtube.com/watch?v=REVkXVxvMQE) What is a graph database? (in 10 minutes) -[https://www.youtube.com/watch?v=ZP0NmfyfsoM](https://www.youtube.com/watch?v=ZP0NmfyfsoM) What is Elasticsearch? -[https://www.youtube.com/watch?v=2CipVwISumA](https://www.youtube.com/watch?v=2CipVwISumA) FaunaDB Basics - The Database of your Dreams -[https://www.youtube.com/watch?v=ihaB7CqJju0](https://www.youtube.com/watch?v=ihaB7CqJju0) Fauna Crash Course - Covering the Basics
+- [https://www.youtube.com/watch?v=OqCK95AS-YE](https://www.youtube.com/watch?v=OqCK95AS-YE) Redis Crash Course - the What, Why and How to use Redis as your primary database
+- [https://www.youtube.com/watch?v=GEg7s3i6Jak](https://www.youtube.com/watch?v=GEg7s3i6Jak) Redis: How to setup a cluster - for beginners
+- [https://www.youtube.com/watch?v=JmCn7k0PlV4](https://www.youtube.com/watch?v=JmCn7k0PlV4) Redis on Kubernetes for beginners
+- [https://www.youtube.com/watch?v=YjYWsN1vek8](https://www.youtube.com/watch?v=YjYWsN1vek8) Intro to Cassandra - Cassandra Fundamentals
+- [https://www.youtube.com/watch?v=ofme2o29ngU](https://www.youtube.com/watch?v=ofme2o29ngU) MongoDB Crash Course
+- [https://www.youtube.com/watch?v=-bt_y4Loofg](https://www.youtube.com/watch?v=-bt_y4Loofg) MongoDB in 100 Seconds
+- [https://www.youtube.com/watch?v=OqjJjpjDRLc](https://www.youtube.com/watch?v=OqjJjpjDRLc) What is a Relational Database?
+- [https://www.youtube.com/watch?v=qw--VYLpxG4](https://www.youtube.com/watch?v=qw--VYLpxG4) Learn PostgreSQL Tutorial - Full Course for Beginners
+- [https://www.youtube.com/watch?v=7S_tz1z_5bA](https://www.youtube.com/watch?v=7S_tz1z_5bA) MySQL Tutorial for Beginners [Full Course]
+- [https://www.youtube.com/watch?v=REVkXVxvMQE](https://www.youtube.com/watch?v=REVkXVxvMQE) What is a graph database? (in 10 minutes)
+- [https://www.youtube.com/watch?v=ZP0NmfyfsoM](https://www.youtube.com/watch?v=ZP0NmfyfsoM) What is Elasticsearch?
+- [https://www.youtube.com/watch?v=2CipVwISumA](https://www.youtube.com/watch?v=2CipVwISumA) FaunaDB Basics - The Database of your Dreams
+- [https://www.youtube.com/watch?v=ihaB7CqJju0](https://www.youtube.com/watch?v=ihaB7CqJju0) Fauna Crash Course - Covering the Basics
 
 Day-86
 
