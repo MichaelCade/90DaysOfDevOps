@@ -9,7 +9,7 @@ id: 1048827
 ---
 ## Viewing, unstaging, discarding & restoring
 
-Continuing on from where we finished yesterday around some of the commands that we have with git and how to leverage git with your projects. Remember we have not touched GitHub or any other git based services yet this is all to help you keep control of your projects locally at the moment, but they will all become useful when we start to integrate into those tools. 
+Continuing from where we finished yesterday around some of the commands that we have with git and how to leverage git with your projects. Remember we have not touched GitHub or any other git-based services yet this is all to help you keep control of your projects locally at the moment, but they will all become useful when we start to integrate into those tools. 
 
 ### Viewing the Staged and Unstaged Changes 
 
@@ -33,7 +33,7 @@ If we then run `git diff` we compare and see the output below.
 
 ### Visual Diff Tools
 
-For me the above is more confusing so I would much rather use a visual tool, 
+For me, the above is more confusing so I would much rather use a visual tool, 
 
 To name a few visual diff tools: 
 
@@ -60,7 +60,7 @@ Which then opens our VScode editor on the diff page and compares the two, we hav
 
 ![](Images/Day39_Git8.png)
 
-I find this method much easier to track changes and this is something similar to what we will see when we look into git based services such as GitHub. 
+I find this method much easier to track changes and this is something similar to what we will see when we look into git-based services such as GitHub. 
 
 We can also use `git difftool --staged` to compare stage with committed files. 
 
@@ -74,13 +74,13 @@ I am using VScode as my IDE and like most IDEs they have this functionality buil
 
 ### Viewing the History
 
-We previously touched on `git log` which will provide us a comprehensive view on all commits we have made in our repository. 
+We previously touched on `git log` which will provide us with a comprehensive view of all commits we have made in our repository. 
 
 ![](Images/Day39_Git11.png)
 
-Each commit has its own hexadecimal string, unique to the repository. Here you can see which branch we are working on and then also the author, date and commit message. 
+Each commit has its hexadecimal string, unique to the repository. Here you can see which branch we are working on and then also the author, date and commit message. 
 
-We also have `git log --oneline` and this gives us a much smaller version of the hexadecimal string whcih we can use in other `diff` commands. We also only have the one line description or commit message. 
+We also have `git log --oneline` and this gives us a much smaller version of the hexadecimal string which we can use in other `diff` commands. We also only have the one-line description or commit message. 
 
 ![](Images/Day39_Git12.png)
 
@@ -90,19 +90,19 @@ We can reverse this into a start with the first commit by running `git log --one
 
 ### Viewing a Commit
 
-Being able to look at the commit message is great if you have been concious about following best practices and you have added a meaningful commit message, however there is also `git show` command which allows us to inspect and view a commit. 
+Being able to look at the commit message is great if you have been conscious about following best practices and you have added a meaningful commit message, however, there is also `git show` command which allows us to inspect and view a commit. 
 
 We can use `git log --oneline --reverse` to get a list of our commits. and then we can take those and run `git show <commit ID>`
 
 ![](Images/Day39_Git14.png)
 
-The output of that command will look like below with the detail of the commit, author and what actually changed. 
+The output of that command will look like below with the detail of the commit, author and what changed. 
 
 ![](Images/Day39_Git15.png)
 
 We can also use `git show HEAD~1` where 1 is how many steps back from the current version we want to get back to. 
 
-This is great if you want some detail on your files, but if we want to list all the files in a tree for the whole snapshot directory. We can achieve this by using the `git ls-tree HEAD~1` command, again going back one snapshot from the last commit. We can see below we have two blobs, these indicate files where as tree would indicate a directory. You can also see commits and tags in this information. 
+This is great if you want some detail on your files, but if we want to list all the files in a tree for the whole snapshot directory. We can achieve this by using the `git ls-tree HEAD~1` command, again going back one snapshot from the last commit. We can see below we have two blobs, these indicate files whereas the tree would indicate a directory. You can also see commits and tags in this information. 
 
 ![](Images/Day39_Git16.png)
 
@@ -116,7 +116,7 @@ Then the contents of that specific version of the file will be shown.
 
 ### Unstaging Files
 
-There will be a time where you have maybe used `git add .` but actually there are files you do not wish to commit to that snapshot just yet. In this example below I have added newfile.txt to my staging area but I am not ready to commit this file so I am going to use the `git restore --staged newfile.txt` to undo the `git add` step. 
+There will be a time when you have maybe used `git add .` but there are files you do not wish to commit to that snapshot just yet. In this example below I have added newfile.txt to my staging area but I am not ready to commit this file so I am going to use the `git restore --staged newfile.txt` to undo the `git add` step. 
 
 ![](Images/Day39_Git19.png)
 
@@ -124,11 +124,11 @@ We can also do the same to modified files such as main.js and unstage the commit
 
 ![](Images/Day39_Git20.png)
 
-I have actually found this command quite useful during the 90DaysOfDevOps as I sometimes work ahead of the days where I feel I want to make notes for the following day but I don't want to commit and push to the public GitHub repository. 
+I have found this command quite useful during the 90DaysOfDevOps as I sometimes work ahead of the days where I feel I want to make notes for the following day but I don't want to commit and push to the public GitHub repository. 
 
 ### Discarding Local Changes
 
-Some times we might make changes but we are not happy with those changes and we want to throw them away. We are going to use the `git restore` command again and we are going to be able to restore files from our snapshots or previous versions. We can run `git restore .` against our directory and we will restore everything from our snapshot but notice that our untracked file is still present. There is no previous file being tracked called newfile.txt. 
+Sometimes we might make changes but we are not happy with those changes and we want to throw them away. We are going to use the `git restore` command again and we are going to be able to restore files from our snapshots or previous versions. We can run `git restore .` against our directory and we will restore everything from our snapshot but notice that our untracked file is still present. There is no previous file being tracked called newfile.txt. 
 
 ![](Images/Day39_Git21.png)
 
@@ -142,13 +142,13 @@ Or if we know the consequences then we might want to run `git clean -fd` to forc
 
 ### Restoring a File to an Earlier Version 
 
-As we have alluded to throughout a big portion of what Git is able to help with is being able to restore copies of your files from your snapshots (this is not a backup but it is a very fast restore point) My advice is that you also save copies of your code in other locations using a backup solution for this. 
+As we have alluded to throughout a big portion of what Git can help with is being able to restore copies of your files from your snapshots (this is not a backup but it is a very fast restore point) My advice is that you also save copies of your code in other locations using a backup solution for this. 
 
-As an example let's go and delete our most important file in our directory, notice we are using unix based commands to remove this from the directory, not git commands. 
+As an example let's go and delete our most important file in our directory, notice we are using Unix-based commands to remove this from the directory, not git commands. 
 
 ![](Images/Day39_Git24.png)
 
-Now we have no readme.mdin our working directory. We could have used `git rm readme.md` and this would then be reflected in our git database. Let's also delete from here to simiulate it being removed completely. 
+Now we have no readme.mdin our working directory. We could have used `git rm readme.md` and this would then be reflected in our git database. Let's also delete it from here to simulate it being removed completely. 
 
 ![](Images/Day39_Git25.png)
 
@@ -170,9 +170,9 @@ We now have a new untracked file and we can use our commands previously mentione
 
 This seems to be the biggest headache when it comes to Git and when to use rebase vs using merge on your git repositories. 
 
-The first thing to know is that both `git rebase` and `git merge` solve the same problem. Both are to integrate changes from one brance into another branch. However they do this in different ways. 
+The first thing to know is that both `git rebase` and `git merge` solve the same problem. Both are to integrate changes from one branch into another branch. However, they do this in different ways. 
 
-Let's start with a new feature in a new dedicated branch. The Main branch continues on with new commits. 
+Let's start with a new feature in a new dedicated branch. The Main branch continues with new commits. 
 
 ![](Images/Day39_Git28.png)
 
@@ -180,21 +180,21 @@ The easy option here is to use `git merge feature main` which will merge the mai
 
 ![](Images/Day39_Git29.png)
 
-Merging is easy because it is non-destructive. The existing branches are not changed in any way. However this also means that the feature branch will have an irrellevant merge commit every time you need to incorporate upstream changes. If main is very busy or active this will or can pollute the feature branch history. 
+Merging is easy because it is non-destructive. The existing branches are not changed in any way. However, this also means that the feature branch will have an irrelevant merge commit every time you need to incorporate upstream changes. If the main is very busy or active this will or can pollute the feature branch history. 
 
-As an alternate option we can rebase the feature branch onto the main branch using 
+As an alternate option, we can rebase the feature branch onto the main branch using 
 
 ```
 git checkout feature
 git rebase main
 ``` 
-This moves the feature branch (the entire feature branch) effectively incorporating all of the new commits in main. But, instead of using a merge commit, rebasing re-writes the project history by creating brand new commits for each commit in the original branch.
+This moves the feature branch (the entire feature branch) effectively incorporating all of the new commits in the main. But, instead of using a merge commit, rebasing re-writes the project history by creating brand new commits for each commit in the original branch.
 
 ![](Images/Day39_Git30.png)
 
 The biggest benefit of rebasing is a much cleaner project history. It also eliminates unnecessary merge commits. and as you compare the last two images, you can follow arguably a much cleaner linear project history. 
 
-Although it's still not a forgone conclusion, because choosing the cleaner history also comes with tradeoffs, If you do not follow the [The Golden rule of rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing) re-writing project history can be potentially catastrophic for your collaboration workflow. And, less importantly, rebasing loses the context provided by a merge commit—you can’t see when upstream changes were incorporated into the feature.  
+Although it's still not a foregone conclusion, choosing the cleaner history also comes with tradeoffs, If you do not follow the [The Golden rule of rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing) re-writing project history can be potentially catastrophic for your collaboration workflow. And, less importantly, rebasing loses the context provided by a merge commit—you can’t see when upstream changes were incorporated into the feature.  
 
 ## Resources 
 
@@ -206,6 +206,5 @@ Although it's still not a forgone conclusion, because choosing the cleaner histo
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 - [Exploring the Git command line – A getting started guide](https://veducate.co.uk/exploring-the-git-command-line/)
-
 
 See you on [Day40](day40.md) 
