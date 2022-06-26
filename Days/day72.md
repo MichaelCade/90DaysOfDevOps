@@ -1,8 +1,8 @@
 ---
-title: "#90DaysOfDevOps - Getting hands on with Jenkins - Day 72"
+title: '#90DaysOfDevOps - Getting hands on with Jenkins - Day 72'
 published: false
 description: 90DaysOfDevOps - Getting hands on with Jenkins
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048829

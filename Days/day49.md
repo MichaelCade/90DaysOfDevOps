@@ -1,8 +1,8 @@
 ---
-title: "#90DaysOfDevOps - The Big Picture: Kubernetes - Day 49"
+title: '#90DaysOfDevOps - The Big Picture: Kubernetes - Day 49'
 published: false
 description: 90DaysOfDevOps - The Big Picture Kubernetes
-tags: "devops, 90daysofdevops, learning"
+tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1049049
