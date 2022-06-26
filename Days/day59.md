@@ -10,15 +10,15 @@ id: 1049051
 
 ## Create a VM with Terraform & Variables
 
-In this session we are going to be creating a VM or two VMs using terraform inside VirtualBox. This is not the normal, VirtualBox is a workstation virtualisation option and really this would not be a use case for Terraform but I am currently 36,000ft in the air and as much as I have deployed public cloud resources this high in the clouds it is much faster to do this locally on my laptop.
+In this session, we are going to be creating a VM or two VMs using terraform inside VirtualBox. This is not normal, VirtualBox is a workstation virtualisation option and this would not be a use case for Terraform but I am currently 36,000ft in the air and as much as I have deployed public cloud resources this high in the clouds it is much faster to do this locally on my laptop.
 
-Purely demo purpose but the concept is the same we are going to have our desired state configuration code and then we are going to run that against the virtualbox provider. In the past we have used vagrant here and I covered off the differences between vagrant and terraform at the beginning of the section.
+Purely for demo purposes but the concept is the same we are going to have our desired state configuration code and then we are going to run that against the VirtualBox provider. In the past, we have used vagrant here and I covered the differences between vagrant and terraform at the beginning of the section.
 
-### Create virtual machine in VirtualBox
+### Create a virtual machine in VirtualBox
 
-The first thing we are going to do is create a new folder called virtualbox, we can then create a virtualbox.tf file and this is going to be where we define our resources. The code below which can be found in the VirtualBox folder as virtualbox.tf this is going to create 2 VMs in Virtualbox.
+The first thing we are going to do is create a new folder called VirtualBox, we can then create a VirtualBox.tf file and this is going to be where we define our resources. The code below which can be found in the VirtualBox folder as VirtualBox.tf is going to create 2 VMs in Virtualbox.
 
-You can find more about the community virtualbox provider [here](https://registry.terraform.io/providers/terra-farm/virtualbox/latest/docs/resources/vm)
+You can find more about the community VirtualBox provider [here](https://registry.terraform.io/providers/terra-farm/virtualbox/latest/docs/resources/vm)
 
 ```
 terraform {
@@ -55,25 +55,25 @@ output "IPAddr_2" {
 
 ```
 
-Now that we have our code defined we can now perform the `terraform init` on our folder to download the provider for virtualbox.
+Now that we have our code defined we can now perform the `terraform init` on our folder to download the provider for Virtualbox.
 
 ![](Images/Day59_IAC1.png)
 
-Obviously you will also need to have virtualbox installed on your system as well. We can then next run `terraform plan` to see what our code will create for us. Followed by `terraform apply` the below image shows your completed process.
+You will also need to have VirtualBox installed on your system as well. We can then next run `terraform plan` to see what our code will create for us. Followed by `terraform apply` the below image shows your completed process.
 
 ![](Images/Day59_IAC2.png)
 
-In Virtualbox you will now see your 2 virtual machines.
+In Virtualbox, you will now see your 2 virtual machines.
 
 ![](Images/Day59_IAC3.png)
 
 ### Change configuration
 
-Lets add another node to our deployment. We can simply change the count line to show our newly desired number of nodes. When we run our `terraform apply` it will look something like below.
+Let's add another node to our deployment. We can simply change the count line to show our new desired number of nodes. When we run our `terraform apply` it will look something like the below.
 
 ![](Images/Day59_IAC4.png)
 
-Once complete in virtualbox you can see we now have 3 nodes up and running.
+Once complete in VirtualBox you can see we now have 3 nodes up and running.
 
 ![](Images/Day59_IAC5.png)
 
