@@ -2,7 +2,7 @@
 title: '#90DaysOfDevOps - What is Jenkins? - Day 71'
 published: false
 description: 90DaysOfDevOps - What is Jenkins?
-tags: 'devops, 90daysofdevops, learning'
+tags: 'DevOps, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048745
@@ -10,9 +10,9 @@ id: 1048745
 
 ## What is Jenkins?
 
-Jenkins is a continuous integration tool that allows continuous development, test and deployment of newly created code.
+Jenkins is a continuous integration tool that allows continuous development, testing and deployment of newly created code.
 
-There are two ways we can achieve this with either nightly builds or continuous development. The first option is that our developers are developing throughout the day on their tasks and come the end of the set day they push their changes to the source code repository. Then during the night we run our unit tests and build of the software. This could be deemed as the old way to integrate all code.
+There are two ways we can achieve this with either nightly builds or continuous development. The first option is that our developers are developing throughout the day on their tasks and come to the end of the set day they push their changes to the source code repository. Then during the night we run our unit tests and build the software. This could be deemed as the old way to integrate all code.
 
 ![](Images/Day71_CICD1.png)
 
@@ -20,28 +20,28 @@ The other option and the preferred way is that our developers are still committi
 
 ![](Images/Day71_CICD2.png)
 
-The above methods means that with distributed developers across the world we don't have a set time each day where we have to stop committing our code changes. This is where Jenkins comes in to act as that CI server to control those tests and build processes.
+The above methods mean that with distributed developers across the world we don't have a set time each day where we have to stop committing our code changes. This is where Jenkins comes in to act as that CI server to control those tests and build processes.
 
 ![](Images/Day71_CICD3.png)
 
-I know we are talking about Jenkins here but I also want to add a few more to maybe look into later on down the line to get an understanding why I am seeing Jenkins as the overall most popular, why is that and what can the others do over Jenkins.
+I know we are talking about Jenkins here but I also want to add a few more to maybe look into later on down the line to get an understanding of why I am seeing Jenkins as the overall most popular, why is that and what can the others do over Jenkins.
 
 - TravisCI - A hosted, distributed continuous integration service used to build and test software projects hosted on GitHub.
-- Bamboo - Can run multiple builds in parallel for faster compilation, built in functionality to connect with repositories and has build tasks for Ant, Maven.
+- Bamboo - Can run multiple builds in parallel for faster compilation, built-in functionality to connect with repositories and has build tasks for Ant, and Maven.
 - Buildbot - is an open-source framework for automating software build, test and release processes. It is written in Python and supports distributed, parallel execution of jobs across multiple platforms.
-- Apache Gump - Specific to Java projects, designed with the aim to build and test those Java projects every night. ensures that all projects are compatible at both API and functionality level.
+- Apache Gump - Specific to Java projects, designed to build and test those Java projects every night. ensures that all projects are compatible at both API and functionality levels.
 
-Because we are now going to focus on Jenkins - Jenkins is again open source like all of the above tools and is an automation server written in Java. It is used to automate the software development process via continuous integration adn facilitates continuous delivery.
+Because we are now going to focus on Jenkins - Jenkins is again open source like all of the above tools and is an automation server written in Java. It is used to automate the software development process via continuous integration and facilitates continuous delivery.
 
 ### Features of Jenkins
 
 As you can probably expect Jenkins has a lot of features spanning a lot of areas.
 
-**Easy Installation** - Jenkins is a self contained java based program ready to run with packages for Windows, macOS and Linux operating systems.
+**Easy Installation** - Jenkins is a self-contained java based program ready to run with packages for Windows, macOS and Linux operating systems.
 
-**Easy Configuration** - Easy setup and configured via a web interface which includes error checks and built in help.
+**Easy Configuration** - Easy setup and configuration via a web interface which includes error checks and built-in help.
 
-**Plug-ins** - Lots of plugins available in the Update Centre and integrates with many tools in the CI / CD toolchain.
+**Plug-ins** - Lots of plugins are available in the Update Centre and integrate with many tools in the CI / CD toolchain.
 
 **Extensible** - In addition to the Plug-Ins available, Jenkins can be extended by that plugin architecture which provides nearly infinite options for what it can be used for.
 
@@ -69,27 +69,27 @@ Step 1 - Developers commit changes to the source code repository.
 
 Step 2 - Jenkins checks the repository at regular intervals and pulls any new code.
 
-Step 3 - A build server then builds the code into an executable, in this example we are using maven as a well known build server. Another area to cover.
+Step 3 - A build server then builds the code into an executable, in this example, we are using maven as a well-known build server. Another area to cover.
 
 Step 4 - If the build fails then feedback is sent back to the developers.
 
-Step 5 - Jenkins then deploys the build app to the test server, in this example we are using selenium as a well known test server. Another area to cover.
+Step 5 - Jenkins then deploys the build app to the test server, in this example, we are using selenium as a well-known test server. Another area to cover.
 
 Step 6 - If the test fails then feedback is passed to the developers.
 
-Step 7 - If the tests are successful then we can release to production.
+Step 7 - If the tests are successful then we can release them to production.
 
-This cycle is continuous, this is what allows applications to be updated in minutes vs hours, days, months, years!
+This cycle is continuous, this is what allows applications to be updated in minutes vs hours, days, months, and years!
 
 ![](Images/Day71_CICD5.png)
 
-There is a lot more to the architecture of Jenkins if you require it, they have a master-slave capability, which enables a master to distribute the tasks to slave jenkins environment.
+There is a lot more to the architecture of Jenkins if you require it, they have a master-slave capability, which enables a master to distribute the tasks to the slave Jenkins environment.
 
 For reference with Jenkins being open source, there are going to be lots of enterprises that require support, CloudBees is that enterprise version of Jenkins that brings support and possibly other functionality for the paying enterprise customer.
 
 An example of this in a customer is Bosch, you can find the Bosch case study [here](https://assets.ctfassets.net/vtn4rfaw6n2j/case-study-boschpdf/40a0b23c61992ed3ee414ae0a55b6777/case-study-bosch.pdf)
 
-I am going to be looking for a step by step example of an application that we can use to walkthrough using Jenkins and then also use this with some other tools.
+I am going to be looking for a step-by-step example of an application that we can use to walk through using Jenkins and then also use this with some other tools.
 
 ## Resources
 

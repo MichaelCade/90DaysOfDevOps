@@ -10,23 +10,23 @@ id: 1049056
 
 ## Hands-On Monitoring Tools
 
-In the last session, I spoke about the big picture of monitoring and I took a look into Nagios, there was two reasons for doing this. The first was this is a piece of software I have heard a lot of over the years so wanted to know a little more about its capabilities.
+In the last session, I spoke about the big picture of monitoring and I took a look into Nagios, there were two reasons for doing this. The first was this is a piece of software I have heard a lot of over the years so wanted to know a little more about its capabilities.
 
 Today I am going to be going into Prometheus, I have seen more and more of Prometheus in the Cloud-Native landscape but it can also be used to look after those physical resources as well outside of Kubernetes and the like.
 
 ### Prometheus - Monitors nearly everything
 
-First of all Prometheus is Open-Source that can help you monitor containers and microservice based systems as well as physical, virtual and other services. There is a large community behind Prometheus.
+First of all, Prometheus is Open-Source that can help you monitor containers and microservice-based systems as well as physical, virtual and other services. There is a large community behind Prometheus.
 
-Prometheus has a large array of [integrations and exporters](https://prometheus.io/docs/instrumenting/exporters/) The key being to exporting existing metrics as prometheus metrics. On top of this it also supports multiple proagramming languages.
+Prometheus has a large array of [integrations and exporters](https://prometheus.io/docs/instrumenting/exporters/) The key is to export existing metrics as Prometheus metrics. On top of this, it also supports multiple programming languages.
 
-Pull approach - If you are talking to thousands of microservices or systems and services a push method is going to be where you generally see the service pushing to the monitoring system. This brings some challenges around flooding the network, high cpu and also a single point of failure. Where Pull gives us a much better experience where Prometheus will pull from the metrics endpoint on every service.
+Pull approach - If you are talking to thousands of microservices or systems and services a push method is going to be where you generally see the service pushing to the monitoring system. This brings some challenges around flooding the network, high CPU and also a single point of failure. Where Pull gives us a much better experience where Prometheus will pull from the metrics endpoint on every service.
 
 Once again we see YAML for configuration for Prometheus.
 
 ![](Images/Day78_Monitoring7.png)
 
-Later on you are going to see how this looks when deployed into Kubernetes, in particular we have the **PushGateway** which pulls our metrics from our jobs/exporters.
+Later on, you are going to see how this looks when deployed into Kubernetes, in particular, we have the **PushGateway** which pulls our metrics from our jobs/exporters.
 
 We have the **AlertManager** which pushes alerts and this is where we can integrate into external services such as email, slack and other tooling.
 
@@ -43,7 +43,7 @@ Various ways of installing Prometheus, [Download Section](https://prometheus.io/
 But we are going to focus our efforts on deploying to Kubernetes. Which also has some options.
 
 - Create configuration YAML files
-- Using an Operator (manager of all prometheus components)
+- Using an Operator (manager of all Prometheus components)
 - Using helm chart to deploy operator
 
 ### Deploying to Kubernetes
@@ -54,11 +54,11 @@ We will be using our minikube cluster locally again for this quick and simple in
 
 ![](Images/Day78_Monitoring1.png)
 
-As you can see from the above we have also ran a helm repo update, we are now ready to deploy Prometheus into our minikube environment using the `helm install stable prometheus-community/prometheus` command.
+As you can see from the above we have also run a helm repo update, we are now ready to deploy Prometheus into our minikube environment using the `helm install stable prometheus-community/prometheus` command.
 
 ![](Images/Day78_Monitoring2.png)
 
-After a couple of minutes you will see a number of new pods appear, for this demo I have deployed into the default namespace, I would normally push this to its own namespace.
+After a couple of minutes, you will see several new pods appear, for this demo, I have deployed into the default namespace, I would normally push this to its namespace.
 
 ![](Images/Day78_Monitoring3.png)
 
@@ -81,9 +81,9 @@ Because we have deployed to our Kubernetes cluster we will automatically be pick
 
 ![](Images/Day78_Monitoring6.png)
 
-Short on learning PromQL and putting that into practice this is very much like I mentioned previously in that gaining metrics is great, so is monitoring but you have to know what you are monitoring and why and what you are not monitoring and why!
+Short on learning PromQL and putting that into practice this is very much like I mentioned previously in that gaining metrics is great, and so is monitoring but you have to know what you are monitoring and why and what you are not monitoring and why!
 
-I want to come back to Prometheus but for now I think we need to think about Log Management and Data Visualisation to bring us back to Prometheus later on.
+I want to come back to Prometheus but for now, I think we need to think about Log Management and Data Visualisation to bring us back to Prometheus later on.
 
 ## Resources
 

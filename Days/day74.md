@@ -10,16 +10,16 @@ id: 1048744
 
 ## Hello World - Jenkinsfile App Pipeline
 
-In the last section we built a simple Pipeline in Jenkins that would push our docker image from our dockerfile in a public GitHub repository to our private Dockerhub repository.
+In the last section, we built a simple Pipeline in Jenkins that would push our docker image from our dockerfile in a public GitHub repository to our private Dockerhub repository.
 
-In this section we want to take this one step further and we want to achieve the following with our simple application.
+In this section, we want to take this one step further and we want to achieve the following with our simple application.
 
 ### Objective
 
 - Dockerfile (Hello World)
 - Jenkinsfile
 - Jenkins Pipeline to trigger when GitHub Repository is updated
-- Use GitHub Repository as source.
+- Use GitHub Repository as the source.
 - Run - Clone/Get Repository, Build, Test, Deploy Stages
 - Deploy to DockerHub with incremental version numbers
 - Stretch Goal to deploy to our Kubernetes Cluster (This will involve another job and manifest repository using GitHub credentials)
@@ -34,9 +34,9 @@ With the above this is what we were using as our source in our Pipeline, now we 
 
 ![](Images/Day74_CICD2.png)
 
-Now back in our Jenkins dashboard, we are going to create a new pipeline but now instead of pasting our script we are going to use "Pipeline script from SCM" We are then going to use the configuration options below.
+Now back in our Jenkins dashboard, we are going to create a new pipeline but now instead of pasting our script, we are going to use "Pipeline script from SCM" We are then going to use the configuration options below.
 
-For reference we are going to use `https://github.com/MichaelCade/Jenkins-HelloWorld.git` as the repository URL.
+For reference, we are going to use `https://github.com/MichaelCade/Jenkins-HelloWorld.git` as the repository URL.
 
 ![](Images/Day74_CICD3.png)
 
@@ -48,7 +48,7 @@ This is a big consideration because if you are using costly cloud resources to h
 
 ![](Images/Day74_CICD4.png)
 
-One thing I have changed since yesterdays session is I want to now upload my image to a public repository which in this case would be michaelcade1\90DaysOfDevOps, my Jenkinsfile has this change already. And from previous sections I have removed any existing demo container images.
+One thing I have changed since yesterday's session is I want to now upload my image to a public repository which in this case would be michaelcade1\90DaysOfDevOps, my Jenkinsfile has this change already. And from the previous sections, I have removed any existing demo container images.
 
 ![](Images/Day74_CICD5.png)
 
@@ -56,15 +56,15 @@ Going backwards here, we created our Pipeline and then as previously shown we ad
 
 ![](Images/Day74_CICD6.png)
 
-At this stage our Pipeline has never ran and your stage view will look something like this.
+At this stage, our Pipeline has never run and your stage view will look something like this.
 
 ![](Images/Day74_CICD7.png)
 
-Now lets trigger the "Build Now" button. and our stage view will display our stages.
+Now let's trigger the "Build Now" button. and our stage view will display our stages.
 
 ![](Images/Day74_CICD8.png)
 
-If we then head over to our DockerHub repository, we should have 2 new Docker images. We should have a Build ID of 1 and a latest because every build that we create based on the "Upload to DockerHub" is we send a version using the Jenkins Build_ID environment variable and we also issue a latest.
+If we then head over to our DockerHub repository, we should have 2 new Docker images. We should have a Build ID of 1 and a latest because for every build that we create based on the "Upload to DockerHub" we send a version using the Jenkins Build_ID environment variable and we also issue a latest.
 
 ![](Images/Day74_CICD9.png)
 
@@ -72,7 +72,7 @@ Let's go and create an update to our index.html file in our GitHub repository as
 
 ![](Images/Day74_CICD10.png)
 
-If we head back to Jenkins and select "Build Now" again. We will see our #2 build is successful.
+If we head back to Jenkins and select "Build Now" again. We will see if our #2 build is successful.
 
 ![](Images/Day74_CICD11.png)
 
@@ -80,7 +80,7 @@ Then a quick look at DockerHub, we can see that we have our tagged version 2 and
 
 ![](Images/Day74_CICD12.png)
 
-It is worth noting here that I have added into my Kubernetes cluster a secret that enables my access and authentication to push my docker builds into DockerHub. If you are following along you should repeat this process for your account, and also make a change to the Jenkinsfile that is associated to my repository and account.
+It is worth noting here that I have added into my Kubernetes cluster a secret that enables my access and authentication to push my docker builds into DockerHub. If you are following along you should repeat this process for your account, and also make a change to the Jenkinsfile that is associated with my repository and account.
 
 ## Resources
 

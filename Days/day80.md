@@ -16,13 +16,13 @@ ELK Stack is the combination of 3 separate tools:
 
 - [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured.
 
-- [Logstash](https://www.elastic.co/logstash/) is a free and open server-side data processing pipeline that ingests data from a multitude of sources, transforms it, and then sends it to your favorite "stash."
+- [Logstash](https://www.elastic.co/logstash/) is a free and open server-side data processing pipeline that ingests data from a multitude of sources, transforms it, and then sends it to your favourite "stash."
 
 - [Kibana](https://www.elastic.co/kibana/) is a free and open user interface that lets you visualize your Elasticsearch data and navigate the Elastic Stack. Do anything from tracking query load to understanding the way requests flow through your apps.
 
 ELK stack lets us reliably and securely take data from any source, in any format, then search, analyze, and visualize it in real time.
 
-On top of the above mentioned components you might also see Beats which are lightweight agents that are installed on edge hosts to collect different types of data for forwarding into the stack.
+On top of the above-mentioned components, you might also see Beats which are lightweight agents that are installed on edge hosts to collect different types of data for forwarding into the stack.
 
 - Logs: Server logs that need to be analysed are identified
 
@@ -36,11 +36,11 @@ On top of the above mentioned components you might also see Beats which are ligh
 
 [Picture taken from Guru99](https://www.guru99.com/elk-stack-tutorial.html)
 
-A good resource explaining this [The Complete Guide to the ELK Stack](https://logz.io/learn/complete-guide-elk-stack/)
+A good resource explaining this [Is the Complete Guide to the ELK Stack](https://logz.io/learn/complete-guide-elk-stack/)
 
-With the addition of beats the ELK Stack is also now known as Elastic Stack.
+With the addition of beats, the ELK Stack is also now known as Elastic Stack.
 
-For the hands-on scenario there are many places you can deploy the Elastic Stack but we are going to be using docker compose to deploy locally on our system.
+For the hands-on scenario, there are many places you can deploy the Elastic Stack but we are going to be using docker-compose to deploy locally on our system.
 
 [Start the Elastic Stack with Docker Compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-stack-docker.html#get-started-docker-tls)
 
@@ -48,13 +48,13 @@ For the hands-on scenario there are many places you can deploy the Elastic Stack
 
 You will find the original files and walkthrough that I used here [deviantony/docker-elk](https://github.com/deviantony/docker-elk)
 
-Now we can run `docker-compose up -d`, the first time this has been ran will require the pulling of images.
+Now we can run `docker-compose up -d`, the first time this has been running will require the pulling of images.
 
 ![](Images/Day80_Monitoring2.png)
 
-If you follow either this repository or the one that I used you will have either have the password of "changeme" or in my repository the password of "90DaysOfDevOps". The username is "elastic"
+If you follow either this repository or the one that I used you will have either the password of "changeme" or in my repository the password of "90DaysOfDevOps". The username is "elastic"
 
-After a few minutes we can navigate to `http://localhost:5601/` which is our Kibana server / Docker container.
+After a few minutes, we can navigate to `http://localhost:5601/` which is our Kibana server / Docker container.
 
 ![](Images/Day80_Monitoring3.png)
 
@@ -66,9 +66,9 @@ Under the section titled "Get started by adding integrations" there is a "try sa
 
 ![](Images/Day80_Monitoring5.png)
 
-I am going to select "Sample web logs" but this is really to get a look and feel of what data sets you can get into the ELK stack.
+I am going to select "Sample weblogs" but this is really to get a look and feel of what data sets you can get into the ELK stack.
 
-When you have selected "Add Data" it takes a while to populate some of that data and then you have the "View Data" option and a list of the available ways to view that data in the drop down.
+When you have selected "Add Data" it takes a while to populate some of that data and then you have the "View Data" option and a list of the available ways to view that data in the dropdown.
 
 ![](Images/Day80_Monitoring6.png)
 
@@ -80,7 +80,7 @@ As it states on the dashboard view:
 
 ![](Images/Day80_Monitoring7.png)
 
-This is using Kibana to visualise data that has been added into ElasticSearch via Logstash. This is not the only option but I personally wanted to deploy and look at this.
+This is using Kibana to visualise data that has been added into ElasticSearch via Logstash. This is not the only option but I wanted to deploy and look at this.
 
 We are going to cover Grafana at some point and you are going to see some data visualisation similarities between the two, you have also seen Prometheus.
 
