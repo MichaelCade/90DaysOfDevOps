@@ -30,7 +30,7 @@ The ability for developers to make small impactful changes regular means we get 
 
 ### Ok, so what does this mean?
 
-On [Day 5](day5.md) we covered a lot of the theory behind DevOps and as already mentioned here already that the CI/CD Pipeline is the backbone of the modern DevOps environment.
+On [Day 5](day05.md) we covered a lot of the theory behind DevOps and as already mentioned here already that the CI/CD Pipeline is the backbone of the modern DevOps environment.
 
 ![DevOps](Images/Day5_DevOps8.png)
 
