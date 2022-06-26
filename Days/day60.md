@@ -10,7 +10,7 @@ id: 1049052
 
 ## Docker Containers, Provisioners & Modules
 
-On [Day 59](day59.md) we provisioned a virtual machine using Terraform to our local FREE virtualbox environment. In this section we are going to be deploy a Docker container with some configuration to our local Docker environment.
+On [Day 59](day59.md) we provisioned a virtual machine using Terraform to our local FREE VirtualBox environment. In this section, we are going to deploy a Docker container with some configuration to our local Docker environment.
 
 ### Docker Demo
 
@@ -57,9 +57,9 @@ If we then open a browser we can navigate to `http://localhost:8000/` and you wi
 
 You can find out more information on the [Docker Provider](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/container)
 
-The above is a very simple demo of what can be done with Terraform plus Docker and how we can now manage this under the Terraform state. We covered docker compose in the containers section and there is a little crossover in a way between this, infrastructure as code as well as then Kubernetes.
+The above is a very simple demo of what can be done with Terraform plus Docker and how we can now manage this under the Terraform state. We covered docker-compose in the containers section and there is a little crossover in a way between this, infrastructure as code as well as then Kubernetes.
 
-For the purpose of showing this and how Terraform can handle a little more complexity, we are going to take the docker compose file for wordpress and mysql that we created with docker compose and we will put this to Terraform. You can find the [docker-wordpress.tf](/Days/IaC/Docker-Wordpress/docker-wordpress.tf)
+To show this and how Terraform can handle a little more complexity, we are going to take the docker-compose file for WordPress and MySQL that we created with docker-compose and we will put this to Terraform. You can find the [docker-wordpress.tf](/Days/IaC/Docker-WordPress/docker-WordPress.tf)
 
 ```
 terraform {
@@ -121,7 +121,7 @@ resource "docker_container" "wordpress" {
 }
 ```
 
-We again put this is in a new folder and then run our `terraform init` command to pull down our provisioners required.
+We again put this in a new folder and then run our `terraform init` command to pull down our provisioners required.
 
 ![](Images/Day60_IAC4.png)
 
@@ -129,11 +129,11 @@ We then run our `terraform apply` command and then take a look at our docker ps 
 
 ![](Images/Day60_IAC5.png)
 
-We can then also navigate to our WordPress front end. Much like when we went through this process with docker-compose in the containers section we can now run through the setup and our wordpress posts would be living in our MySQL database.
+We can then also navigate to our WordPress front end. Much like when we went through this process with docker-compose in the containers section we can now run through the setup and our WordPress posts would be living in our MySQL database.
 
 ![](Images/Day60_IAC6.png)
 
-Obviously now we have covered containers and Kubernetes in some detail, we probably know that this is ok for testing but if you were really going to be running a website you would not do this with containers alone and you would look at using Kubernetes to achieve this, Next up we are going to take a look using Terraform with Kubernetes.
+Now we have covered containers and Kubernetes in some detail, we probably know that this is ok for testing but if you were going to be running a website you would not do this with containers alone and you would look at using Kubernetes to achieve this, Next up we are going to take a look using Terraform with Kubernetes.
 
 ### Provisioners
 
@@ -152,7 +152,7 @@ resource "docker_container" "db" {
 
 ```
 
-The remote-exec provisioner invokes a script on a remote resource after it is created. This could be used for something OS specific or it could be used to wrap in a configuration management tool. Although notice that we have some of these covered in their own provisioners.
+The remote-exec provisioner invokes a script on a remote resource after it is created. This could be used for something OS-specific or it could be used to wrap in a configuration management tool. Although notice that we have some of these covered in their provisioners.
 
 [More details on provisioners](https://www.terraform.io/language/resources/provisioners/syntax)
 
@@ -168,11 +168,11 @@ The remote-exec provisioner invokes a script on a remote resource after it is cr
 
 Modules are containers for multiple resources that are used together. A module consists of a collection of .tf files in the same directory.
 
-Modules are a good way to separate your infrastructure resources as well as being able to pull in third party modules that have already been created so you do not have to re invent the wheel.
+Modules are a good way to separate your infrastructure resources as well as be able to pull in third-party modules that have already been created so you do not have to reinvent the wheel.
 
-For example if we wanted to use the same project to build out some VMs, VPCs, Security Groups and then also a Kubernetes cluster we would likely want to split our resources out into modules to better define our resources and where they are grouped.
+For example, if we wanted to use the same project to build out some VMs, VPCs, Security Groups and then also a Kubernetes cluster we would likely want to split our resources out into modules to better define our resources and where they are grouped.
 
-Another benefit to modules is that you can take these modules and use them on other projects or share publicly to help the community.
+Another benefit to modules is that you can take these modules and use them on other projects or share them publicly to help the community.
 
 We are breaking down our infrastructure into components, components are known here as modules.
 
