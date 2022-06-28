@@ -90,7 +90,7 @@ Use the stateful application that we used in the Kubernetes section.
 
 ![](Images/Day55_Kubernetes1.png)
 
-You can find the YAML configuration file for this application here[pacman-stateful-demo.yaml](Days/Kubernetes/pacman-stateful-demo.yaml)
+You can find the YAML configuration file for this application here-> [pacman-stateful-demo.yaml](Kubernetes/pacman-stateful-demo.yaml)
 
 ![](Images/Day87_Data8.png)
 
