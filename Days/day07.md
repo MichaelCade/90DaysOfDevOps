@@ -24,7 +24,7 @@ But then you might not have clear cut reasoning like that to choose you might be
 
 Remember I am not looking to become a software developer here I just want to understand a little more about the programming language so that I can read and understand what those tools are doing and then that leads to possibly how we can help improve things.
 
-I would also it is also important to know how you interact with those DevOps tools which could be Kasten K10 or it could be Terraform and HCL. These are what we will call config files and this is how you interact with those DevOps tools to make things happen, commonly these are going to be YAML. (We may use the last day of this section to dive a little into YAML)
+It is also important to know how you interact with those DevOps tools which could be Kasten K10 or it could be Terraform and HCL. These are what we will call config files and this is how you interact with those DevOps tools to make things happen, commonly these are going to be YAML. (We may use the last day of this section to dive a little into YAML)
 
 ## Did I just talk myself out of learning a programming language?
 
