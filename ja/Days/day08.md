@@ -1,67 +1,67 @@
 ---
-title: '#90DaysOfDevOps - Setting up your DevOps environment for Go & Hello World - Day 8'
+title: '#90DaysOfDevOps - GoとHello WorldのためのDevOps環境のセットアップ - 8日目'
 published: false
-description: 90DaysOfDevOps - Setting up your DevOps environment for Go & Hello World
+description: 90DaysOfDevOps - GoとHello WorldのためのDevOps環境のセットアップ
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048857
 ---
-## Setting up your DevOps environment for Go & Hello World
+## GoとHello WorldのためのDevOps環境のセットアップ
 
-Before we get into some of the fundamentals of Go we should get Go installed on our workstation and do what every "learning programming 101" module teaches us which is to create the Hello World app. As this one is going to be walking through the steps to get Go installed on your workstation we are going to attempt to document the process in pictures so people can easily follow along. 
+Goの基本に入る前に、ワークステーションにGoをインストールし、「プログラミングを学ぶ101」モジュールで教えられるように、Hello Worldアプリを作成しましょう。今回は、ワークステーションにGoをインストールする手順を説明するため、その手順を写真で記録し、簡単に追えるようにします。
 
-First of all, let's head on over to [go.dev/dl](https://go.dev/dl/) and you will be greeted with some available options for downloads. 
+まず最初に、[go.dev/dl](https://go.dev/dl/) に移動して、ダウンロードのためのいくつかの利用可能なオプションを表示します。
 
 ![](Images/Day8_Go1.png)
 
-If we made it this far you probably know which workstation operating system you are running so select the appropriate download and then we can get installing. I am using Windows for this walkthrough, basically, from this next screen, we can leave all the defaults in place for now. ***(I will note that at the time of writing this was the latest version so screenshots might be out of date)*** 
+ここまでくれば、どのワークステーションオペレーティングシステムを使用しているかはご存知でしょうから、適切なダウンロードを選択し、インストールを開始しましょう。このチュートリアルではWindowsを使用します。基本的に、次の画面からはデフォルトのままでよいでしょう。***(執筆時点では最新版のため、スクリーンショットが古い可能性があります) *** 
 
 ![](Images/Day8_Go2.png)
 
-Also note if you do have an older version of Go installed you will have to remove this before installing, Windows has this built into the installer and will remove and install as one. 
+また、古いバージョンのGoがインストールされている場合は、インストールする前に削除する必要があります。
 
-Once finished you should now open a command prompt/terminal and we want to check that we have Go installed. If you do not get the output that we see below then Go is not installed and you will need to retrace your steps. 
+完了したら、コマンドプロンプト/ターミナルを開き、Goがインストールされていることを確認します。以下のような出力が得られない場合は、Goがインストールされていないため、手順をやり直す必要があります。
 
 `go version`
 
 ![](Images/Day8_Go3.png)
 
-Next up we want to check our environment for Go. This is always good to check to make sure your working directories are configured correctly, as you can see below we need to make sure you have the following directory on your system. 
+次に、Goの環境をチェックしたいと思います。これは、作業ディレクトリが正しく設定されているかどうかを確認するために常に行うべきことです。以下に示すように、あなたのシステム上に以下のディレクトリがあることを確認する必要があります。
 
 ![](Images/Day8_Go4.png)
 
-Did you check? Are you following along? You will probably get something like the below if you try and navigate there. 
+確認しましたか？ついてきていますか？おそらく、そこにナビゲートしようとすると、以下のようなものが表示されると思います。
 
 ![](Images/Day8_Go5.png)
 
-Ok, let's create that directory for ease I am going to use the mkdir command in my powershell terminal. We also need to create 3 folders within the Go folder as you will see also below. 
+では、簡単にディレクトリを作成しましょう。powershellのターミナルでmkdirコマンドを使用します。また、Goフォルダの中に3つのフォルダを作成する必要があるので、以下も参照ください。
 
 ![](Images/Day8_Go6.png)
 
-Now we have Go installed and we have our Go working directory ready for action. We now need an  integrated development environment (IDE) Now there are many out there available that you can use but the most common and the one I use is Visual Studio Code or Code. You can learn more about IDEs [here](https://www.youtube.com/watch?v=vUn5akOlFXQ). 
+これでGoがインストールされ、Goの作業ディレクトリが準備されました。統合開発環境(IDE)はたくさんありますが、最も一般的で私が使っているのはVisual Studio CodeまたはCodeです。IDEについては[ここ](https://www.youtube.com/watch?v=vUn5akOlFXQ)で詳しく説明されています。
 
-If you have not downloaded and installed VSCode already on your workstation then you can do so by heading [here](https://code.visualstudio.com/download). As you can see below you have your different OS options. 
+VSCodeのダウンロードとインストールがまだの場合は、[こちら](https://code.visualstudio.com/download)から行うことができます。以下のように、さまざまなOSのオプションがあります。
 
 ![](Images/Day8_Go7.png)
 
-Much the same as with the Go installation we are going to download and install and keep the defaults. Once complete you can open VSCode and you can select Open File and navigate to our Go directory that we created above. 
+Goのインストールと同じように、ダウンロードしてインストールし、デフォルトを維持します。完了したら、VSCodeを開き、Open Fileを選択して、上記で作成したGoのディレクトリに移動します。
 
 ![](Images/Day8_Go8.png)
 
-You may get a popup about trust, read it if you want and then hit Yes, trust the authors. (I am not responsible later on though if you start opening things you don't trust!)
+信頼についてのポップアップが表示されるかもしれませんが、それを読んでから「はい、作者を信頼します」を押してください。(信頼できないものを開き始めても、私は責任を負いません!)
 
-Now you should see the three folders we also created earlier as well and what we want to do now is right click the src folder and create a new folder called `Hello`
+これで、先ほど作成した3つのフォルダが表示されるはずです。今やりたいことは、srcフォルダを右クリックして、`Hello`という名前の新しいフォルダを作成することです。
 
 ![](Images/Day8_Go9.png)
 
-Pretty easy stuff I would say up till this point? Now we are going to create our first Go Program with no understanding about anything we put in this next phase. 
+ここまで来ると、かなり簡単だと思いませんか？さて、次のフェーズでは何も理解しないまま、最初のGoプログラムを作成することになります。
 
-Next create a file called `main.go` in your `Hello` folder. As soon as you hit enter on the main.go you will be asked if you want to install the Go extension and also packages you can also check that empty pkg file that we made a few steps back and notice that we should have some new packages in there now? 
+次に、`Hello` フォルダに `main.go` というファイルを作成します。main.goでエンターキーを押すとすぐにGoエクステンションとパッケージをインストールするかどうか聞かれます。
 
 ![](Images/Day8_Go10.png)
 
-Now let's get this Hello World app going, copy for the following code into your new main.go file and save that. 
+次のコードを新しいmain.goファイルにコピーして、保存してください。
 
 ```
 package main
@@ -72,28 +72,28 @@ func main() {
     fmt.Println("Hello #90DaysOfDevOps")
 }
 ```
-Now I appreciate that the above might make no sense at all, but we will cover more about functions, packages and more in later days. For now let's run our app. Back in the terminal and in our Hello folder we can now check that all is working. Using the command below we can check to see if our generic learning program is working. 
+さて、上記は全く意味がないかもしれませんが、関数やパッケージなどについては、後日詳しく説明します。とりあえず、このアプリを実行してみましょう。ターミナルとHelloフォルダーに戻って、すべてが機能していることを確認できます。以下のコマンドを使用して、一般的な学習プログラムが動作しているかどうかを確認できます。
 
 ```
 go run main.go
 ```
 ![](Images/Day8_Go11.png)
 
-It doesn't end there though, what if we now want to take our program and run it on other Windows machines? We can do that by building our binary using the following command 
+しかし、これで終わりではなく、このプログラムを他のWindowsマシンで実行したいとしたらどうでしょう？そのためには、次のコマンドでバイナリをビルドします。
 
 ```
 go build main.go
 ``` 
 ![](Images/Day8_Go12.png)
 
-If we run that, we would see the same output:
+それを実行すると、同じ出力が表示されます。
 
 ```bash
 $ ./main.exe
 Hello #90DaysOfDevOps
 ```
 
-## Resources
+## リソース
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
@@ -104,6 +104,6 @@ Hello #90DaysOfDevOps
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
 
 
-See you on [Day 9](day09.md).
+[9日目](day09.md)でお会いしましょう。
 
 ![](Images/Day8_Go13.png)
