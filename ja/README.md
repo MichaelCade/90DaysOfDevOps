@@ -26,9 +26,9 @@ English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/R
 - [✔️] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)
 - [✔️] ♾️ 6 > [DevOps - The real stories](Days/day06.md)
 
-### Learning a Programming Language
+### プログラミング言語の学習
 
-- [✔️] ⌨️ 7 > [The Big Picture: DevOps & Learning a Programming Language](Days/day07.md)
+- [✔️] ⌨️ 7 > [全体像: DevOpsとプログラミング言語の学習](Days/day07.md)
 - [✔️] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day08.md)
 - [✔️] ⌨️ 9 > [Let's explain the Hello World code](Days/day09.md)
 - [✔️] ⌨️ 10 > [The Go Workspace & Compiling & running code](Days/day10.md)
