@@ -14,7 +14,7 @@ The goal is to take 90 days, 1 hour each a day, to tackle over 13 areas of "DevO
 
 This will **not cover all things** "DevOps" but it will cover the areas that I feel will benefit my learning and understanding overall.
 
-The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1)
+The quickest way to get in touch is going to be via Email / WhatsApp, I will add these details later.
 
 ## Progress
 
