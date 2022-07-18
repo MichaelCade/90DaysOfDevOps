@@ -24,7 +24,7 @@ Version Control before it was cool, would have been something like manually crea
 
 ![](Images/Day35_Git2.png)
 
-I have started using version control over not just source code but pretty much anything that talks about projects like this (90DaysOfDevOps) because why would you not want that rollback and log of everything that has gone on.
+I have started using version control over not just source code but pretty much anything, talks about projects like this (90DaysOfDevOps). Why not accept the features that rollback and log of everything that has gone on. 
 
 However, a big disclaimer **Version Control is not a Backup!**
 
@@ -64,7 +64,7 @@ Let's take the folder we created earlier.
 
 ![](Images/Day35_Git2.png)
 
-To use this folder with version control we first need to initiate this directory using the `git init command. For now, just think that this command puts our directory as a repository in a database somewhere on our computer.
+To use this folder with version control we first need to initiate this directory using the `git init` command. For now, just think that this command puts our directory as a repository in a database somewhere on our computer. 
 
 ![](Images/Day35_Git6.png)
 
@@ -80,7 +80,7 @@ We can now see what has happened within the history of the project. Using the `g
 
 ![](Images/Day35_Git9.png)
 
-We can also check the status of our repository by using `git status` this shows we have nothing to commit and we can add a new file called sample code.ps1. If we then run the same `git status you will see that we file to be committed.
+If we create an additional file called `samplecode.ps1`, the status would become different. We can also check the status of our repository by using `git status` this shows we have nothing to commit and we can add a new file called samplecode.ps1. If we then run the same `git status` you will see that we file to be committed. 
 
 ![](Images/Day35_Git10.png)
 
@@ -108,7 +108,7 @@ Which then displays what has changed in our case we added a new file.
 
 ![](Images/Day35_Git16.png)
 
-We can also and we will go deeper into this later on but we can jump around our commits i.e we can go time travelling! By using our commit number we can use the `git checkout 709a` command to jump back in time without losing our new file.
+We will go deeper into this later on but we can jump around our commits i.e we can go time travelling! By using our commit number we can use the `git checkout 709a` command to jump back in time without losing our new file. 
 
 ![](Images/Day35_Git17.png)
 

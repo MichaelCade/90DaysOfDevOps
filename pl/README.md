@@ -1,35 +1,37 @@
 # 90DaysOfDevOps
 
 <p align="center">
- <img src="../logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
+ <img src="logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
-English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md) | [日本語版](ja/README.md)
+Wersja Polska | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md)
 
-このリポジトリは、"DevOps "の基礎知識を得るための私の旅を記録するために使用されます。2022年1月1日から3月31日(90日間)にかけて旅をするというアイデアです。
+To repozytorium jest wykorzystywane do dokumentowania mojej podróży w celu zdobycia lepszej wiedzy o DevOps. Rozpoczynam tę podróż 1 stycznia 2022 r., ale założeniem jest, że zajmie nam ona 90 dni, czyli od 1 stycznia do 31 marca. 
+Powodem dokumentowania tych dni jest to, że inni beda mogli coś z nich wynieść, a także, miejmy nadzieję, aby wzbogacić zasoby. 
 
-この90日間を記録する理由は、他の人がそこから何かを得ることができ、またリソースを充実させることです。
+Celem jest zajęcie się przez 90 dni, po 1 godzinie dziennie, ponad 13 obszarami "DevOps", aby zdobyć podstawową wiedzę. 
 
-目標は1日1時間ずつ、"DevOps"の13以上の分野に取り組み、基礎的な知識を身につけることです。
+Nie obejmie to **wszystkich rzeczy** związanych z DevOps, ale obejmie obszary, które w moim odczuciu będą korzystne dla mojej nauki i ogólnego zrozumienia. 
 
-これは、「DevOps」のすべてをカバーするものではありませんが、私の学習と理解に役立つと思われる分野を全体的にカバーする予定です。
+Najszybszym sposobem na skontaktowanie się z mną będzie Twitter, mój identyfikator to 
+[@MichaelCade1](https://twitter.com/MichaelCade1)
 
-## 進捗
+## Progress 
 
-- [✔️] ♾️ 1 > [はじめに](Days/day01.md)
+- [✔️] ♾️ 1 > [Wstęp](day01.md)
 
-### DevOpsとは何か、なぜ使うのか
+### What is and why do we use DevOps
 
-- [✔️] ♾️ 2 > [DevOpsエンジニアの責務](Days/day02.md)
-- [✔️] ♾️ 3 > [DevOps ライフサイクル - アプリケーションフォーカス](Days/day03.md)
-- [✔️] ♾️ 4 > [DevOps & アジャイル](Days/day04.md)
-- [✔️] ♾️ 5 > [計画 > コーディング > ビルド > テスト > リリース > デプロイ > オペレート > 監視](Days/day05.md)
-- [✔️] ♾️ 6 > [DevOps - 本当の話](Days/day06.md)
+- [✔️] ♾️ 2 > [Responsibilities of a DevOps Engineer](Days/day02.md)
+- [✔️] ♾️ 3 > [DevOps Lifecycle - Application Focused](Days/day03.md)
+- [✔️] ♾️ 4 > [DevOps & Agile](Days/day04.md)
+- [✔️] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)
+- [✔️] ♾️ 6 > [DevOps - The real stories](Days/day06.md)
 
 ### Learning a Programming Language
 
 - [✔️] ⌨️ 7 > [The Big Picture: DevOps & Learning a Programming Language](Days/day07.md)
-- [✔️] ⌨️ 8 > [GoとHello WorldのためのDevOps環境のセットアップ](Days/day08.md)
+- [✔️] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day08.md)
 - [✔️] ⌨️ 9 > [Let's explain the Hello World code](Days/day09.md)
 - [✔️] ⌨️ 10 > [The Go Workspace & Compiling & running code](Days/day10.md)
 - [✔️] ⌨️ 11 > [Variables, Constants & Data Types](Days/day11.md)
@@ -154,6 +156,11 @@ This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=MichaelCade/90DaysOfDevOps&type=Timeline)](https://star-history.com/#MichaelCade/90DaysOfDevOps&Timeline)
+
 
 [cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
