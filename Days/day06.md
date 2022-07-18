@@ -10,43 +10,43 @@ id: 1048855
 
 ## DevOps - The real stories
 
-DevOps to begin with was seen to be out of reach for a lot of us as we didn't have an environment or requirement anything like a Netflix or fortune 500 but think now that is beginning to sway into the normal when adopting a DevOps practice within any type of business.
+DevOps to begin with was seen to be out of reach for a lot of us as we didn't have companies like Netflix or a fortune 500 company practising it but I think that now it's beginning to sway into the normal as businesses start adopting a DevOps practice.
 
-You will see from the second link below in references there are a lot of different industries and verticals using DevOps and having a hugely positive effect on their business objectives.
+You will see from the below references that there are a lot of different industries and verticals using DevOps and hence having a huge positive effect on their business objectives.
 
-The overarching benefit here is DevOps if done correctly should help your Business improve the speed and quality of software development.
+The overarching benefit here is that DevOps if done correctly should help improve your business's speed and quality of software development.
 
-I wanted to take this Day to look at successful companies that have adopted a DevOps practice and share some resources around this, This will be another great one for the community to also dive in and help here. Have you adopted a DevOps culture in your business? Has it been successful?
+I wanted to take this day to look at successful companies that have adopted a DevOps practice and share some resources around this. This will be a great oppurtunity for the community to dive in and help here. Have you adopted a DevOps culture in your business? Has it been successful?
 
-I mentioned Netflix above and will touch on them again as it is a very good model and advanced to what we generally see today even still but will also mention some other big name brands that are succeeding it seems.
+I mentioned Netflix above and will touch on them again as it is a very good model and quite advanced compared to what we generally see today but I'll also mention some other big brands that are succeeding at this.
 
 ## Amazon
 
-In 2010 Amazon moved their physical server footprint to Amazon Web Services (AWS) cloud this allowed them to save resources by scaling capacity up and down in very small increments. We also know that this AWS cloud would go on and make a huge amount of revenue itself whilst still running the Amazon retail branch of the company.
+In 2010 Amazon moved their physical server footprint to the AWS(Amazon Web Services) cloud. This allowed them to save resources by scaling capacity up and down in very small increments. We also know that AWS went on to generate high revenue itself whilst running Amazon's retail branch.
 
-Amazon adopted in 2011 (According to the resource below) a continued deployment process where their developers could deploy code whenever they want and to whatever servers they needed. This enabled Amazon to achieve deploying new software to production servers on average every 11.6 seconds!
+Amazon adopted in 2011 (according to the link below) a continued deployment process where their developers could deploy code whenever they wanted and to whichever servers they needed to. This enabled Amazon to achieve deploying new software to production servers at an average of 11.6 seconds!
 
 ## Netflix
 
-Who doesn't use Netflix? a huge quality streaming service with by all accounts at least personally a great user experience.
+Who doesn't use Netflix? It's a high quality streaming service and personally speaking, has a great user experience.
 
-Why is that user experience so great? Well, the ability to deliver a service with no recollected memory for me at least of glitches requires speed, flexibility, and attention to quality.
+Why is that user experience so great? Well, the ability to deliver a service with no personal recollection of glitches requires speed, flexibility, and attention to quality.
 
-NetFlix developers can automatically build pieces of code into deployable web images without relying on IT operations. As the images are updated, they are integrated into Netflix’s infrastructure using a custom-built, web-based platform.
+Netflix developers can automatically build pieces of code into deployable web images without relying on IT operations. As the images are updated, they are integrated into Netflix’s infrastructure using a custom-built, web-based platform.
 
-Continuous Monitoring is in place so that if the deployment of the images fails, the new images are rolled back and traffic rerouted to the previous version.
+Continuous Monitoring is in place so that if the deployment of the images fails, the new images are rolled back and traffic is rerouted back to the previous version.
 
 There is a great talk listed below that goes into more about the DOs and DONTs that Netflix lives and dies by within their teams.
 
 ## Etsy
 
-As with many of us and many companies, there was a real struggle around slow and painful deployments. In the same vein, we might have also experienced working in companies that have lots of siloes and teams that are not working well together.
+As with many of us and with many companies, there was a real struggle around slow and painful deployments. In the same vein, we might have also experienced working in companies that have lots of silos and teams that are not working well together.
 
-From what I can make out at least from reading about Amazon and Netflix, Etsy might have adopted the letting developers deploy their code around the end of 2009 which might have been before the other two were mentioned. (interesting!)
+From what I can make out by reading about Amazon and Netflix is that Etsy might have adopted letting developers deploy their code around the end of 2009 which might have been even before the other two. (Interesting!)
 
 An interesting takeaway I read here was that they realised that when developers feel responsible for deployment they also would take responsibility for application performance, uptime and other goals.
 
-A learning culture is a key part of DevOps, even failure can be a success if lessons are learned. (not sure where this quote came from but it kind of makes sense!)
+A learning culture is a key part of DevOps. Even failure can be a success if lessons are learned. (not sure where this quote came from but it kind of makes sense!)
 
 I have added some other stories where DevOps has changed the game within some of these massively successful companies.
 
@@ -62,7 +62,7 @@ I have added some other stories where DevOps has changed the game within some of
 
 ### Recap of our first few days looking at DevOps
 
-- DevOps is a combo of Development and Operations that allows a single team to manage the whole application development lifecycle that consists of **Development**, **Testing**, **Deployment**, **Operations**.
+- DevOps is a combination of Development and Operations that allows a single team to manage the whole application development lifecycle which consists of **Development**, **Testing**, **Deployment**, **Operations**.
 
 - The main focus and aim of DevOps are to shorten the development lifecycle while delivering features, fixes and functionality frequently in close alignment with business objectives.
 
@@ -70,6 +70,6 @@ I have added some other stories where DevOps has changed the game within some of
 
 If you made it this far then you will know if this is where you want to be or not. See you on [Day 7](day07.md).
 
-Day 7 will be us diving into a programming language, I am not aiming to be a developer but I want to be able to understand what the developers are doing.
+Day 7 will be us diving into a programming language. I am not aiming to be a developer but I want to be able to understand what the developers are doing.
 
 Can we achieve that in a week? Probably not but if we spend 7 days or 7 hours learning something we are going to know more than when we started.
