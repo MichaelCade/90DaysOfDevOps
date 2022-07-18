@@ -1,87 +1,95 @@
 ---
-title: '#90DaysOfDevOps - The Go Workspace - Day 10'
+title: '#90DaysOfDevOps - Go 工作空间及编译运行 - 第十天'
 published: false
-description: 90DaysOfDevOps - The Go Workspace
+description: 90DaysOfDevOps - Go 工作空间及编译运行
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048701
 ---
-### The Go Workspace 
-On [Day 8](day08.md) we briefly covered the Go workspace to get Go up and running to get to the demo of `Hello #90DaysOfDevOps` But we should explain a little more about the Go workspace. 
 
-Remember we chose the defaults and we then went through and created our Go folder in the GOPATH that was already defined but in reality, this GOPATH can be changed to be wherever you want it to be. 
+### Go工作区
 
-If you run 
+在[第8天](day08.md)，我们简单介绍了Go工作区并启动和运行了`Hello #90DaysOfDevOps`的演示。但我们应该更多地谈一下Go工作区(workspace)。
+
+还记得我们选用了默认值，然后在已定义好的GOPATH中创建了我们的Go文件夹。实际上，GOPATH可以被更改为任意位置。
+
+如果你运行
 
 ```
 echo $GOPATH
 ``` 
-The output should be similar to mine (with a different username may be) which is: 
+
+输出应该和我的类似(可能用户名会不同)：
 
 ```
 /home/michael/projects/go
 ```
-Then within here, we created 3 directories. **src**, **pkg** and **bin** 
 
-![](Images/Day10_Go1.png)
+然后我们在这个路径下创建了三个文件夹，**src**、**pkg**和**bin**。
 
-**src** is where all of your Go programs and projects are stored. This handles namespacing package management for all your Go repositories. This is where you will see on our workstation we have our Hello folder for the Hello #90DaysOfDevOps project.
+![](../../Days/Images/Day10_Go1.png)
 
-![](Images/Day10_Go2.png)
+**src**是存放所有Go程序和项目的地方。这可以处理帮助你解决所有Go存储库的管理。下图是我工作站上的内容，我们有存放Hello #90DaysOfDevOps这个项目的Hello文件夹
 
-**pkg** is where your archived files of packages that are or were installed in programs. This helps to speed up the compiling process based on if the packages being used have been modified. 
+![](../../Days/Images/Day10_Go2.png)
 
-![](Images/Day10_Go3.png)
+**pkg**是你存放安装或已安装程序包的地方。这有助于根据正使用的包是否被修改来加快编译速度。
 
-**bin** is where all of your compiled binaries are stored. 
+![](../../Days/Images/Day10_Go3.png)
 
-![](Images/Day10_Go4.png)
+**bin**是存放所有已编译二进制文件的地方。
 
-Our Hello #90DaysOfDevOps is not a complex program so here is an example of a more complex Go Program taken from another great resource worth looking at [GoChronicles](https://gochronicles.com/)
+![](../../Days/Images/Day10_Go4.png)
 
-![](Images/Day10_Go5.png)
+我们的Hello #90DaysOfDevOps不是一个复杂的程序。下面是一个较复杂的Go程序演示，取自另一个值得看的资源[GoChronicles](https://gochronicles.com/)
 
-This page also goes into some great detail about why and how the layout is like this it also goes a little deeper on other folders we have not mentioned [GoChronicles](https://gochronicles.com/project-structure/)
+![](../../Days/Images/Day10_Go5.png)
 
-### Compiling & running code 
-On [Day 9](day09.md) we also covered a brief introduction to compiling code, but we can go a little deeper here. 
+在[GoChronicles](https://gochronicles.com/project-structure/)中还详细介绍了布局的原因和方式，并在我们未提及的其他文件夹方面做出了更深入的介绍。
 
-To run our code we first must **compile** it. There are three ways to do this within Go. 
+### 编译 & 运行代码
+
+在[第9天](day09.md)，我们简单介绍了代码编译，这里我们可以更深入了解一下。
+
+想要运行我们的代码，第一步必须是**编译**它。在Go中有三种方式：
 
 - go build
 - go install
 - go run 
 
-Before we get to the above compile stage we need to take a look at what we get with the Go Installation. 
+在我们讲解以上的编译方式之前，我们需要了解Go安装了什么。
 
-When we installed Go on Day 8 this installed something known as Go tools which consist of several programs that let us build and process our Go source files. One of the tools is `Go`
+我们在第8天安装Go时，它安装了被称为Go工具的东西。其中包括了一些程序，让我们构建和处理我们的Go源文件。其中一个工具是`Go`。
 
-It is worth noting that you can install additional tools that are not in the standard Go installation. 
+值得注意的是，你可以安装标准Go安装以外的工具。
 
-If you open your command prompt and type `go` you should see something like the image below and then you will see "Additional Help Topics" below that for now we don't need to worry about those. 
+如果你打开打开命令提示符，然后输入`go`，你会看到一些类似下图的内容。然后那你可以看到下边的“其他帮助主题”，但现在我们不需要去担心这些。
 
-![](Images/Day10_Go6.png)
+![](../../Days/Images/Day10_Go6.png)
 
-You might also remember that we have already used at least two of these tools so far on Day 8. 
+你可能还记得我们已经在第8天中使用了至少其中两个工具。
 
-![](Images/Day10_Go7.png)
+![](../../Days/Images/Day10_Go7.png)
 
-The ones we want to learn more about are build, install and run. 
+其中，我们将了解更多构建、安装和运行的内容(build, install and run)。
 
-![](Images/Day10_Go8.png)
+![](../../Days/Images/Day10_Go8.png)
 
-- `go run` - This command compiles and runs the main package comprised of the .go files specified on the command line. The command is compiled to a temporary folder.
-- `go build`  - To compile packages and dependencies, compile the package in the current directory. If the `main` package, will place the executable in the current directory if not then it will place the executable in the `pkg` folder. `go build` also enables you to build an executable file for any Go Supported OS platform. 
-- `go install`  - The same as go build but will place the executable in the `bin` folder
+- `go run` - 编译和运行命令行中指定的.go文件组成的main包。这个命令会被编译到一个临时文件夹里。
+- `go build` - 为了编译包和依赖，在当前文件夹中编译这个包。如果是`main`包，则会把可执行文件放在当前目录中；如果不是，则会把可执行文件放在`pkg`文件夹中。`go build`也能为任何Go支持的操作系统平台构建可执行文件。
+- `go install` - 与`go build`相同，但它会把可执行文件存放在`bin`文件夹中。
 
-We have run through go build and go run but feel free to run through them again here if you wish, `go install` as stated above puts the executable in our bin folder. 
 
-![](Images/Day10_Go9.png)
+我们已经运行了`go build`和`go run`，如果你想的话，可以在这里多次循行它们。就如前面说到的，`go install`将可执行文件放在我们的bin文件夹中。
 
-Hopefully, if you are following along you are watching one of the playlists or videos below, I am taking bits of all of these and translating these into my notes so that I can understand the foundational knowledge of the Golang language. The resources below are likely going to give you a much better understanding of a lot of the areas you need overall but I am trying to document the 7 days or 7 hours worth of the journey with interesting things that I have found. 
 
-## Resources
+![](../../Days/Images/Day10_Go9.png)
+
+如果你正在观看下面的视频，我会收集这些内容并记录在我的笔记中，方便我理解Golang的基础知识。下面的资源能帮助你更好地理解你可能需要的领域，而我想基于我搜集到的资料在记录这7天或7个小时的学习分享。
+
+
+## 相关资料
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
@@ -91,4 +99,4 @@ Hopefully, if you are following along you are watching one of the playlists or v
 - [FreeCodeCamp -  Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s) 
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
 
-See you on [Day 11](day11.md).
+[第十一天](day11.md)见。

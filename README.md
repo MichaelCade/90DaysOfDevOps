@@ -4,17 +4,19 @@
  <img src="logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
-English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)
+English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md) | [Wersja Polska](pl/README.md)
 
-This repository is used to document my journey on getting a better foundational knowledge of "DevOps". I will be starting this journey on the 1st January 2022 but the idea is that we take 90 days which just so happens to be January 1st to March 31st. 
+This repository is used to document my journey on getting a better foundational knowledge of "DevOps". I will be starting this journey on the 1st January 2022 but the idea is that we take 90 days which just so happens to be January 1st to March 31st.
 
-The reason for documenting these days is so that others can take something from it and also hopefully enhance the resources. 
+The reason for documenting these days is so that others can take something from it and also hopefully enhance the resources.
 
-The goal is to take 90 days, 1 hour each a day, to tackle over 13 areas of "DevOps" to a foundational knowledge. 
+The goal is to take 90 days, 1 hour each a day, to tackle over 13 areas of "DevOps" to a foundational knowledge.
 
-This will **not cover all things** "DevOps" but it will cover the areas that I feel will benefit my learning and understanding overall. 
+This will **not cover all things** "DevOps" but it will cover the areas that I feel will benefit my learning and understanding overall.
 
-## Progress 
+The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1)
+
+## Progress
 
 - [✔️] ♾️ 1 > [Introduction](Days/day01.md)
 
@@ -76,7 +78,7 @@ This will **not cover all things** "DevOps" but it will cover the areas that I f
 - [✔️] 📚 40 > [Social Network for code](Days/day40.md)
 - [✔️] 📚 41 > [The Open Source Workflow](Days/day41.md)
 
-### Containers 
+### Containers
 
 - [✔️] 🏗️ 42 > [The Big Picture: Containers](Days/day42.md)
 - [✔️] 🏗️ 43 > [What is Docker & Getting installed](Days/day43.md)
@@ -89,7 +91,7 @@ This will **not cover all things** "DevOps" but it will cover the areas that I f
 ### Kubernetes
 
 - [✔️] ☸ 49 > [The Big Picture: Kubernetes](Days/day49.md)
-- [✔️] ☸ 50 > [Choosing your Kubernetes platform ](Days/day50.md)
+- [✔️] ☸ 50 > [Choosing your Kubernetes platform](Days/day50.md)
 - [✔️] ☸ 51 > [Deploying your first Kubernetes Cluster](Days/day51.md)
 - [✔️] ☸ 52 > [Setting up a multinode Kubernetes Cluster](Days/day52.md)
 - [✔️] ☸ 53 > [Rancher Overview - Hands On](Days/day53.md)
@@ -99,7 +101,7 @@ This will **not cover all things** "DevOps" but it will cover the areas that I f
 ### Learn Infrastructure as Code
 
 - [✔️] 🤖 56 > [The Big Picture: IaC](Days/day56.md)
-- [✔️] 🤖 57 > [An intro to Terraform ](Days/day57.md)
+- [✔️] 🤖 57 > [An intro to Terraform](Days/day57.md)
 - [✔️] 🤖 58 > [HashiCorp Configuration Language (HCL)](Days/day58.md)
 - [✔️] 🤖 59 > [Create a VM with Terraform & Variables](Days/day59.md)
 - [✔️] 🤖 60 > [Docker Containers, Provisioners & Modules](Days/day60.md)
@@ -116,7 +118,7 @@ This will **not cover all things** "DevOps" but it will cover the areas that I f
 - [✔️] 📜 68 > [Tags, Variables, Inventory & Database Server config](Days/day68.md)
 - [✔️] 📜 69 > [All other things Ansible - Automation Controller, AWX, Vault](Days/day69.md)
 
-### Create CI/CD Pipelines 
+### Create CI/CD Pipelines
 
 - [✔️] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
 - [✔️] 🔄 71 > [What is Jenkins?](Days/day71.md)
@@ -154,6 +156,10 @@ This work is licensed under a
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=MichaelCade/90DaysOfDevOps&type=Timeline)](https://star-history.com/#MichaelCade/90DaysOfDevOps&Timeline)
 
 [cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png

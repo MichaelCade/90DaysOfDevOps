@@ -17,7 +17,7 @@ metadata:
 spec:
   selector:
     app: elasticsearch
-  #Renderes The service Headless
+  #Renders The service Headless
   clusterIP: None
   ports:
     - port: 9200
