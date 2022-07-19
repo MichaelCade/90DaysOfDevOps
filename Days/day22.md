@@ -8,6 +8,11 @@ canonical_url: null
 id: 1049037
 ---
 
+The content below comes mostly from Practical Networking's [Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). If you prefer this content in video form, check out these two videos:
+
+* [The OSI Model: A Practical Perspective - Layers 1 / 2 / 3](https://www.youtube.com/watch?v=LkolbURrtTs&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=3)
+* [The OSI Model: A Practical Perspective - Layers 4 / 5+](https://www.youtube.com/watch?v=0aGqGKrRE0g&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=4)
+
 ## The OSI Model - The 7 Layers
 
 The overall purpose of networking as an industry is to allow two hosts to share data. Before networking if I want to get data from this host to this host I'd have to plug something into this host walk it over to the other host and plug it into the other host.
@@ -98,7 +103,7 @@ The Application sending the data is being sent somewhere so the receiving is som
 
 ## Resources
 
+* [Networking Fundamentals](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
 - [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
-- [Practical Networking](http://www.practicalnetworking.net/)
 
 See you on [Day23](day23.md)
