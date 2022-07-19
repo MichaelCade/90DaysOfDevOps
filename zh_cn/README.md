@@ -63,8 +63,8 @@
 - [🔍] ☁️ 30 > [Microsoft Azure 安全模型](Days/day30.md)
 - [🔍] ☁️ 31 > [Microsoft Azure 计算模型](Days/day31.md)
 - [🔍] ☁️ 32 > [Microsoft Azure 存储和数据库模型](Days/day32.md)
-- [🔍] ☁️ 33 > [Microsoft Azure Networking Models + Azure Management](Days/day33.md)
-- [🔍] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](Days/day34.md)
+- [🔍] ☁️ 33 > [Microsoft Azure 网络模型 + Azure 管理](Days/day33.md)
+- [🔍] ☁️ 34 > [Microsoft Azure 实操场景](Days/day34.md)
 
 ### 高效地使用 Git
 
@@ -89,61 +89,61 @@
 ### Kubernetes
 
 - [🔍] ☸ 49 > [概览： Kubernetes](Days/day49.md)
-- [🔍] ☸ 50 > [Choosing your Kubernetes platform ](Days/day50.md)
-- [🔍] ☸ 51 > [Deploying your first Kubernetes Cluster](Days/day51.md)
-- [🔍] ☸ 52 > [Setting up a multinode Kubernetes Cluster](Days/day52.md)
-- [🔍] ☸ 53 > [Rancher Overview - Hands On](Days/day53.md)
-- [🔍] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
-- [🔍] ☸ 55 > [State and Ingress in Kubernetes](Days/day55.md)
+- [🔍] ☸ 50 > [选择你的 Kubernetes 平台](Days/day50.md)
+- [🔍] ☸ 51 > [部署你的第一个 Kubernetes 集群](Days/day51.md)
+- [🔍] ☸ 52 > [搭建一个多节点 Kubernetes 集群](Days/day52.md)
+- [🔍] ☸ 53 > [Rancher 概览 - 实操](Days/day53.md)
+- [🔍] ☸ 54 > [Kubernetes 应用部署](Days/day54.md)
+- [🔍] ☸ 55 > [Kubernetes 的 State 和 Ingress](Days/day55.md)
 
 ### 学习代码作为基础设施（ Infrastructure as Code ）
 
-- [🔍] 🤖 56 > [The Big Picture: IaC](Days/day56.md)
-- [🔍] 🤖 57 > [An intro to Terraform ](Days/day57.md)
-- [🔍] 🤖 58 > [HashiCorp Configuration Language (HCL)](Days/day58.md)
-- [🔍] 🤖 59 > [Create a VM with Terraform & Variables](Days/day59.md)
+- [🔍] 🤖 56 > [概览： IaC](Days/day56.md)
+- [🔍] 🤖 57 > [Terraform 简介](Days/day57.md)
+- [🔍] 🤖 58 > [HashiCorp 配置语言 (HCL)](Days/day58.md)
+- [🔍] 🤖 59 > [使用 Terraform 和 Variables](Days/day59.md)
 - [🔍] 🤖 60 > [Docker Containers, Provisioners & Modules](Days/day60.md)
 - [🔍] 🤖 61 > [Kubernetes & Multiple Environments](Days/day61.md)
 - [🔍] 🤖 62 > [Testing, Tools & Alternatives](Days/day62.md)
 
 ### 自动化配置管理
 
-- [🔍] 📜 63 > [The Big Picture: Configuration Management](Days/day63.md)
-- [🔍] 📜 64 > [Ansible: Getting Started](Days/day64.md)
+- [🔍] 📜 63 > [概览: 配置管理](Days/day63.md)
+- [🔍] 📜 64 > [Ansible: 入门](Days/day64.md)
 - [🔍] 📜 65 > [Ansible Playbooks](Days/day65.md)
 - [🔍] 📜 66 > [Ansible Playbooks Continued...](Days/day66.md)
-- [🔍] 📜 67 > [Using Roles & Deploying a Loadbalancer](Days/day67.md)
+- [🔍] 📜 67 > [使用角色及部署负载均衡](Days/day67.md)
 - [🔍] 📜 68 > [Tags, Variables, Inventory & Database Server config](Days/day68.md)
 - [🔍] 📜 69 > [All other things Ansible - Automation Controller, AWX, Vault](Days/day69.md)
 
 ### 创建 CI/CD 流程 
 
-- [🔍] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
-- [🔍] 🔄 71 > [What is Jenkins?](Days/day71.md)
-- [🔍] 🔄 72 > [Getting hands on with Jenkins](Days/day72.md)
-- [🔍] 🔄 73 > [Building a Jenkins pipeline](Days/day73.md)
+- [🔍] 🔄 70 > [概览：CI/CD 管道](Days/day70.md)
+- [🔍] 🔄 71 > [什么是 Jenkins？](Days/day71.md)
+- [🔍] 🔄 72 > [Jenkins 实操](Days/day72.md)
+- [🔍] 🔄 73 > [建立一个 Jenkins 管道](Days/day73.md)
 - [🔍] 🔄 74 > [Hello World - Jenkinsfile App Pipeline](Days/day74.md)
-- [🔍] 🔄 75 > [GitHub Actions Overview](Days/day75.md)
-- [🔍] 🔄 76 > [ArgoCD Overview](Days/day76.md)
+- [🔍] 🔄 75 > [GitHub Actions 概览](Days/day75.md)
+- [🔍] 🔄 76 > [ArgoCD 概览](Days/day76.md)
 
 ### 监控，日志管理及数据可视化
 
-- [🔍] 📈 77 > [The Big Picture: Monitoring](Days/day77.md)
-- [🔍] 📈 78 > [Hands-On Monitoring Tools](Days/day78.md)
-- [🔍] 📈 79 > [The Big Picture: Log Management](Days/day79.md)
+- [🔍] 📈 77 > [概览：监控](Days/day77.md)
+- [🔍] 📈 78 > [监控工具实操](Days/day78.md)
+- [🔍] 📈 79 > [概览：日志管理](Days/day79.md)
 - [🔍] 📈 80 > [ELK Stack](Days/day80.md)
 - [🔍] 📈 81 > [Fluentd & FluentBit](Days/day81.md)
 - [🔍] 📈 82 > [EFK Stack](Days/day82.md)
-- [🔍] 📈 83 > [Data Visualisation - Grafana](Days/day83.md)
+- [🔍] 📈 83 > [数据可视化 - Grafana](Days/day83.md)
 
 ### 存储和保护你的数据
 
-- [🔍] 🗃️ 84 > [The Big Picture: Data Management](Days/day84.md)
-- [🔍] 🗃️ 85 > [Data Services](Days/day85.md)
-- [🔍] 🗃️ 86 > [Backup all the platforms](Days/day86.md)
-- [🔍] 🗃️ 87 > [Hands-On Backup & Recovery](Days/day87.md)
-- [🔍] 🗃️ 88 > [Application Focused Backups](Days/day88.md)
-- [🔍] 🗃️ 89 > [Disaster Recovery](Days/day89.md)
-- [🔍] 🗃️ 90 > [Data & Application Mobility](Days/day90.md)
+- [🔍] 🗃️ 84 > [概览: 数据管理](Days/day84.md)
+- [🔍] 🗃️ 85 > [数据服务](Days/day85.md)
+- [🔍] 🗃️ 86 > [备份所有平台](Days/day86.md)
+- [🔍] 🗃️ 87 > [备份和恢复实操](Days/day87.md)
+- [🔍] 🗃️ 88 > [以应用为中心的备份](Days/day88.md)
+- [🔍] 🗃️ 89 > [灾难恢复](Days/day89.md)
+- [🔍] 🗃️ 90 > [数据和应用可移动性](Days/day90.md)
 
 🚧
