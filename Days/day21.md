@@ -10,7 +10,7 @@ id: 1048761
 
 ## The Big Picture: DevOps and Networking
 
-As with all sections, I am using open and free training materials and a lot of the content can be attributed to others. In the case of the networking section a large majority of the content shown is from the amazing courses on http://www.practicalnetworking.net/ it is mentioned in the resources as well as a link but it's appropriate to highlight this as from a community point of view, I have leveraged this course to help myself understand more about particular areas of technologies. This repository is a repository for my note taking and enabling the community to hopefully benefit from this and the listed resources. 
+As with all sections, I am using open and free training materials and a lot of the content can be attributed to others. In the case of the networking section a large majority of the content shown is from [Practical Networking](https://www.practicalnetworking.net/)'s free [Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi).  It is mentioned in the resources as well as a link but it's appropriate to highlight this as from a community point of view, I have leveraged this course to help myself understand more about particular areas of technologies. This repository is a repository for my note taking and enabling the community to hopefully benefit from this and the listed resources. 
 
 Welcome to Day 21! We are going to be getting into Networking over the next 7 days, Networking and DevOps are the overarching themes but we will need to get into some of the networking fundamentals as well.
 
@@ -36,6 +36,12 @@ A really good viewpoint and outline of this thinking can be found here. [Network
 Let's forget the DevOps side of things to begin with here and we now need to look very briefly into some of the Networking fundamentals.
 
 ### Network Devices
+
+If you prefer this content in video form, check out these videos from Practical Networking:
+
+* [Network Devices - Hosts, IP Addresses, Networks - Networking Fundamentals - Lesson 1a](https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=1)
+* [Network Devices - Hub, Bridge, Switch, Router - Networking Fundamentals - Lesson 1b
+](https://www.youtube.com/watch?v=H7-NR3Q3BeI&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=2)
 
 **Host** are any devices which send or receive traffic.
 
@@ -104,6 +110,7 @@ Over the next few days, we are going to get to know a little more about this lis
 
 ## Resources
 
-[Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
+* [Networking Fundamentals](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
+* [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 
 See you on [Day22](day22.md)
