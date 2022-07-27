@@ -24,15 +24,15 @@ id: 1048707
 
 第二步会是查看git上的官方内容和文档。这里([git-scm.com/docs](http://git-scm.com/docs))你不仅可以找到所有命令的可靠资料，还可以找到很多不同的资源。
 
-![](../../Dayas/Images/Day37_Git1.png)
+![](../../Days/Images/Day37_Git1.png)
 
 在离线环境下，我们也可以通过终端(terminal)来查看相同的文档。如果我们想使用`git add`命令，我们可以运行`git add --help`，这里会看到下面的说明内容。
 
-![](../../Dayas/Images/Day37_Git2.png)
+![](../../Days/Images/Day37_Git2.png)
 
 我们也可以在shell中用`git add -h`来查看简短的选项描述。
 
-![](../../Dayas/Images/Day37_Git3.png)
+![](../../Days/Images/Day37_Git3.png)
 
 ### Git的错误认知
 
