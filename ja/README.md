@@ -23,13 +23,13 @@ English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/R
 - [✔️] ♾️ 2 > [DevOpsエンジニアの責務](Days/day02.md)
 - [✔️] ♾️ 3 > [DevOps ライフサイクル - アプリケーションフォーカス](Days/day03.md)
 - [✔️] ♾️ 4 > [DevOps & アジャイル](Days/day04.md)
-- [✔️] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)
-- [✔️] ♾️ 6 > [DevOps - The real stories](Days/day06.md)
+- [✔️] ♾️ 5 > [計画 > コーディング > ビルド > テスト > リリース > デプロイ > オペレート > 監視](Days/day05.md)
+- [✔️] ♾️ 6 > [DevOps - 本当の話](Days/day06.md)
 
 ### プログラミング言語の学習
 
 - [✔️] ⌨️ 7 > [全体像: DevOpsとプログラミング言語の学習](Days/day07.md)
-- [✔️] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day08.md)
+- [✔️] ⌨️ 8 > [GoとHello WorldのためのDevOps環境のセットアップ](Days/day08.md)
 - [✔️] ⌨️ 9 > [Let's explain the Hello World code](Days/day09.md)
 - [✔️] ⌨️ 10 > [The Go Workspace & Compiling & running code](Days/day10.md)
 - [✔️] ⌨️ 11 > [Variables, Constants & Data Types](Days/day11.md)
