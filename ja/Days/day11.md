@@ -1,36 +1,38 @@
 ---
-title: '#90DaysOfDevOps - Variables & Constants in Go - Day 11'
+title: '#90DaysOfDevOps - 変数、定数、データ型 - 11日目'
 published: false
-description: 90DaysOfDevOps - Variables & Constants in Go
+description: 90DaysOfDevOps - 変数、定数、データ型
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048862
 ---
 
-Before we get into the topics for today I want to give a massive shout out to [Techworld with Nana](https://www.youtube.com/watch?v=yyUHQIec83I) and this fantastic concise journey through the fundamentals of Go. 
+今日のトピックに入る前に、[Techworld with Nana](https://www.youtube.com/watch?v=yyUHQIec83I) とGoの基礎についての素晴らしい簡潔な旅に大きな賛辞を送りたいと思います。
 
-On [Day8](day08.md) we set our environment up, on [Day9](day09.md) we walked through the Hello #90DaysOfDevOps code and on [Day10](day10.md)) we looked at our Go workspace and went a little deeper into compiling and running the code.
+[Day8](day08.md)では環境を設定し、[Day9](day09.md)ではHello #90DaysOfDevOpsコードを歩き、[Day10](day10.md)ではGoワークスペースをみて、コードのコンパイルと実行について少し深く掘り下げて説明しました。
 
-Today we are going to take a look into Variables, Constants and Data Types whilst writing a new program. 
+今日は、新しいプログラムを書きながら、変数、定数、データ型について見ていきます。
 
-## Variables & Constants in Go
-Let's start by planning our application, I think it would be a good idea to work on a program that tells us how many days we have remained in our #90DaysOfDevOps challenge. 
+## 変数、定数、データ型
 
-The first thing to consider here is that as we are building our app and we are welcoming our attendees and we are giving the user feedback on the number of days they have completed we might use the term #90DaysOfDevOps many times throughout the program. This is a great use case to make #90DaysOfDevOps a variable within our program. 
+まず、アプリケーションの企画から始めましょう。#90DaysOfDevOpsチャレンジの残り日数を教えてくれるプログラムに取り組むのは良い考えだと思います。
 
-- Variables are used to store values. 
-- Like a little box with our saved information or values. 
-- We can then use this variable across the program which also benefits that if this challenge or variable changes then we only have to change this in one place. Meaning we could translate this to other challenges we have in the community by just changing that one variable value. 
+ここで最初に考えるべきことは、私たちがアプリを作り、参加者を迎え入れ、完了した日数についてユーザーにフィードバックしているときに、プログラムを通して何度も#90DaysOfDevOpsという言葉を使うかもしれない、ということです。これは、#90DaysOfDevOpsをプログラム内の変数にするのに最適なユースケースです。
 
-To declare this in our Go Program we define a value by using a **keyword** for variables. This will live within our `func main` block of code that you will see later. You can find more about [Keywords](https://go.dev/ref/spec#Keywords)here. 
+- 変数は、値を保存するために使用されます。
+- 保存した情報や値を入れた小さな箱のようなものです。
+- この変数は、プログラム全体で使用することができ、この課題や変数が変更された場合、1か所だけ変更すればよいという利点もあります。つまり、この変数の値を1つ変えるだけで、コミュニティ内の他の課題にも転用できるのです。
 
-Remember to make sure that your variable names are descriptive. If you declare a variable you must use it or you will get an error, this is to avoid possible dead code, code that is never used. This is the same for packages not used. 
+Goプログラムでこれを宣言するには、変数のための**キーワード**を使用して値を定義します。これは後ほど紹介する `func main` というコードのブロックの中で使われます。[キーワード](https://go.dev/ref/spec#Keywords)については、こちらで詳しく説明しています。
+
+変数名は説明的であることを忘れないようにしましょう。これはデッドコード(使われないコード)の可能性を避けるためです。これはデッドコード、つまり使われないコードを避けるためです。
 
 ```
 var challenge = "#90DaysOfDevOps"
 ```
-With the above set and used as we will see in the next code snippet you can see from the output below that we have used a variable. 
+
+上記のように設定し、次のコードスニペットで見るように使用すると、以下の出力から、変数を使用したことがわかります。
 
 ```
 package main
@@ -42,15 +44,15 @@ func main() {
     fmt.Println("Welcome to", challenge "")
 }
 ```
-You can find the above code snippet in [day11_example1.go](Go/day11_example1.go)
 
-You will then see from the below that we built our code with the above example and we got the output shown below. 
+上記のコードスニペットは [day11_example1.go](Go/day11_example1.go) で見ることができます。
+上記の例でコードをビルドすると、以下のような出力が得られることがわかります。
 
 ![](Images/Day11_Go1.png)
 
-We also know that our challenge is 90 days at least for this challenge, but next, maybe it's 100 so we want to define a variable to help us here as well. However, for our program, we want to define this as a constant. Constants are like variables, except that their value cannot be changed within code (we can still create a new app later on down the line with this code and change this constant but this 90 will not change whilst we are running our application)
+また、今回のチャレンジは少なくとも90日ですが、次は100日かもしれませんので、ここでも変数を定義しておきたいと思います。しかし、このプログラムでは、これを定数として定義したいと思います。定数は変数のようなものですが、その値はコードの中では変更できません（このコードで後で新しいアプリケーションを作り、この定数を変更することはできますが、アプリケーションを実行している間はこの90は変更されません）。
 
-Adding the `const` to our code and adding another line of code to print this. 
+コードに `const` を追加し、これを表示するコードをもう一行追加してください。
 
 ```
 package main
@@ -65,15 +67,15 @@ func main() {
     fmt.Println("This is a", daystotal, "challenge")
 }
 ```
-You can find the above code snippet in [day11_example2.go](Go/day11_example2.go)
+上記のコードは [day11_example2.go] (Go/day11_example2.go) で見ることができます。
 
-If we then go through that `go build` process again and run you will see below the outcome.
+この `go build` プロセスをもう一度実行してみると、以下のような結果になります。
 
 ![](Images/Day11_Go2.png)
 
-Finally, and this won't be the end of our program we will come back to this in [Day12](day12.md) to add more functionality. We now want to add another variable for the number of days we have completed the challenge. 
+最後に、これでプログラムが終わるわけではありませんが、[Day12](day12.md)でさらに機能を追加するために、またこの話に戻ります。ここで、チャレンジを完了した日数を表す別の変数を追加したいと思います。
 
-Below I added `dayscomplete` variable with the number of days completed. 
+以下では、完了した日数を表す `dayscomplete` 変数を追加しています。
 
 ```
 package main
@@ -90,17 +92,17 @@ func main() {
     fmt.Println("Great work")
 }
 ```
-You can find the above code snippet in [day11_example3.go](Go/day11_example3.go)
+上記のコードは [day11_example3.go] (Go/day11_example3.go) で見ることができます。
 
-Let's run through that `go build` process again or you could just use `go run`
+もう一度 `go build` プロセスを実行してみましょう。あるいは `go run` でもかまいません。
 
 ![](Images/Day11_Go3.png)
 
-Here are some other examples that I have used to make the code easier to read and edit. We have up till now been using `Println` but we can simplify this by using `Printf` by using `%v` which means we define our variables in order at the end of the line of code. we also use `\n` for a line break. 
+以下は、コードを読みやすく、編集しやすくするために私が使った他の例です。今までは `Println` を使っていましたが、 `%v` を使って `Printf` を使うことで、よりシンプルにすることができます。
 
-I am using `%v` as this uses a default value but there are other options that can be found here in the [fmt package documentation](https://pkg.go.dev/fmt) you can find the code example [day11_example4.go](Go/day11_example4.go)
+ここでは、`%v`をデフォルト値として使用していますが、他にもオプションがあり、[fmt package documentation](https://pkg.go.dev/fmt) に記載されています。また、コード例として [day11_example4.go](Go/day11_example4.go) を参照してください。
 
-Variables may also be defined in a simpler format in your code. Instead of defining that it is a `var` and the `type` you can code this as follows to get the same functionality but a nice cleaner and simpler look for your code. This will only work for variables though and not constants.  
+変数もまた、より単純な形式で定義することができます。変数であることと、その型を定義する代わりに、次のようなコードを書くと、同じ機能を持ちながら、よりきれいでシンプルなコードになります。ただし、これは変数に対してのみ有効であり、定数に対しては有効ではありません。
 
 ```
 func main() {
@@ -108,53 +110,54 @@ func main() {
     const daystotal = 90
 ```
 
-## Data Types 
-In the above examples, we have not defined the type of variables, this is because we can give it a value here and Go is smart enough to know what that type is or at least can infer what it is based on the value you have stored. However, if we want a user to input this will require a specific type. 
+## データ型
 
-We have used Strings and Integers in our code so far. Integers for the number of days and strings are for the name of the challenge. 
+上記の例では、変数の型を定義していません。これは、変数に値を与えることができ、Goは十分に賢いので、その型が何であるかを知っているか、少なくとも保存した値に基づいてそれが何であるかを推論することができるからです。しかし、ユーザーが入力する場合は、特定の型が必要です。
 
-It is also important to note that each data type can do different things and behaves differently. For example, integers can multiply where strings do not. 
+これまでのコードでは、文字列と整数を使用してきました。日数にはInteger、課題の名前にはStringを使用しました。
 
-There are four categories 
+また、それぞれのデータ型は異なることができ、異なる挙動をすることに注意することが重要です。例えば、整数は掛け算ができるのに、文字列はできない。
 
-- **Basic type**: Numbers, strings, and booleans come under this category.
-- **Aggregate type**: Array and structs come under this category.
-- **Reference type**: Pointers, slices, maps, functions, and channels come under this category.
-- **Interface type**
+4つのカテゴリーがあります。
 
-The data type is an important concept in programming. Data type specifies the size and type of variable values.
+- **基本型**。数値、文字列、ブーリアンなどがこれに該当する。
+- **集合型**。配列や構造体がこれに該当する。
+- **参照型**。ポインタ、スライス、マップ、関数、チャネルがこれに該当する。
+- インターフェース型
 
-Go is statically typed, meaning that once a variable type is defined, it can only store data of that type.
+データ型は、プログラミングにおいて重要な概念である。データ型は、変数値のサイズと型を指定します。
 
-Go has three basic data types:
+Goは静的型付けされており、一度変数の型が定義されると、その型のデータしか保存できないことを意味します。
 
-- **bool**: represents a boolean value and is either true or false
-- **Numeric**: represents integer types, floating-point values, and complex types
-- **string**: represents a string value
+Goには3つの基本的なデータ型があります。
 
-I found this resource super detailed on data types [Golang by example](https://golangbyexample.com/all-data-types-in-golang-with-examples/)
+- ブール**：ブール値を表し、trueまたはfalseのどちらかである。
+- Numeric**: 整数型、浮動小数点数型、複素数型を表す。
+- 文字列**：文字列の値を表します。
 
-I would also suggest [Techworld with Nana](https://www.youtube.com/watch?v=yyUHQIec83I&t=2023s) at this point covers in some detail a lot about the data types in Go. 
+データ型については、[Golang by example](https://golangbyexample.com/all-data-types-in-golang-with-examples/)という資料が超詳しいです。
 
-If we need to define a type in our variable we can do this like so: 
+また、[Techworld with Nana](https://www.youtube.com/watch?v=yyUHQIec83I&t=2023s) は、Goのデータ型について詳しく説明しています。
+
+もし、変数に型を定義する必要があれば、次のようにします。
 
 ```
 var TwitterHandle string 
 var DaysCompleted uint
 ```
 
-Because Go implies variables where a value is given we can print out those values with the following: 
+Goは値が与えられると変数を意味するので、次のようにすればそれらの値をプリントアウトすることができます。
 
 ```
 fmt.Printf("challenge is %T, daystotal is %T, dayscomplete is %T\n", conference, daystotal, dayscomplete)
 ```
-There are many different types of integer and float types the links above will cover off these in detail. 
+整数型と浮動小数点型には多くの種類がありますが、上記のリンクで詳しく説明します。
 
-- **int** = whole numbers
-- **unint** = positive whole numbers
-- **floating point types** = numbers that contain a decimal component
+- **int** = 整数
+- **unint** = 正の整数
+- **浮動小数点型** = 小数の要素を含む数
 
-## Resources
+## リソース
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
@@ -164,6 +167,6 @@ There are many different types of integer and float types the links above will c
 - [FreeCodeCamp -  Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s) 
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
 
-Next up we are going to start adding some user input functionality to our program so that we are asking how many days have been completed. 
+次は、このプログラムにユーザー入力機能を追加して、何日目が終了したかを尋ねるようにします。
 
-See you on [Day 12](day12.md).
+それでは、[12日目](day12.md)でお会いしましょう。

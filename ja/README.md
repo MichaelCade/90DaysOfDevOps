@@ -32,7 +32,7 @@ English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/R
 - [✔️] ⌨️ 8 > [GoとHello WorldのためのDevOps環境のセットアップ](Days/day08.md)
 - [✔️] ⌨️ 9 > [Let's explain the Hello World code](Days/day09.md)
 - [✔️] ⌨️ 10 > [The Go Workspace & Compiling & running code](Days/day10.md)
-- [✔️] ⌨️ 11 > [Variables, Constants & Data Types](Days/day11.md)
+- [✔️] ⌨️ 11 > [変数、定数、データ型](Days/day11.md)
 - [✔️] ⌨️ 12 > [Getting user input with Pointers and a finished program](Days/day12.md)
 - [✔️] ⌨️ 13 > [Tweet your progress with our new App](Days/day13.md)
 
