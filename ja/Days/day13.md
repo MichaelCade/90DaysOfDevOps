@@ -1,58 +1,59 @@
 ---
-title: '#90DaysOfDevOps - Tweet your progress with our new App - Day 13'
+title: '#90DaysOfDevOps - 新しいアプリで進捗をツイート - 13日目'
 published: false
-description: 90DaysOfDevOps - Tweet your progress with our new App
+description: 90DaysOfDevOps - 新しいアプリで進捗をツイート
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048865
 ---
-## Tweet your progress with our new App
+## 新しいアプリで進捗をツイート
 
-On the final day of looking into this programming language, we have only just touched the surface here of the language but it is that start that I think we need to get interested and excited and want to dive more into it. 
+このプログラミング言語について調べる最終日、私たちはまだこの言語の表面に触れただけですが、このようなスタートだからこそ、私たちは興味を持ち、興奮し、もっと潜り込みたいと思うのだと思います。
 
-Over the last few days, we have taken a small idea for an application and we have added functionality to it, in this session I want to take advantage of those packages we mentioned and create the functionality for our app to not only give you the update of your progress on screen but also send a tweet with the details of the challenge and your status. 
+このセッションでは、私たちが紹介したパッケージを利用して、画面上で進捗状況を確認できるだけでなく、チャレンジの詳細や状況をツイートする機能を作りたいと思います。
 
-## Adding the ability to tweet your progress 
-The first thing we need to do is set up our developer API access with Twitter for this to work. 
+## 進捗をツイートする機能を追加する
 
-Head to the [Twitter Developer Platform](https://developer.twitter.com) and sign in with your Twitter handle and details. Once in you should see something like the below without the app that I already have created. 
+まず最初に、Twitterで開発者用のAPIアクセスを設定する必要があります。
+
+Twitter Developer Platform](https://developer.twitter.com)にアクセスし、自分のTwitterハンドル名と詳細情報を入力してサインインします。ログインすると、以下のような画面が表示されますが、すでに作成したアプリは表示されません。
 
 ![](Images/Day13_Go1.png)
 
-From here you may also want to request elevated access, this might take some time but it was very fast for me. 
+ここから、昇格アクセスを要求することもできます。これは少し時間がかかるかもしれませんが、私の場合はとても早かったです。
 
-Next, we should select Projects & Apps and create our App. Limits are depending on the account access you have, with essential you only have one app and one project and with elevated you can have 3 apps. 
+次に、プロジェクトとアプリを選択し、アプリを作成する必要があります。アカウントアクセスによって制限があり、essentialでは1つのアプリと1つのプロジェクトしか持てず、elevatedでは3つのアプリを持つことができます。
 
 ![](Images/Day13_Go2.png)
 
-Give your application a name 
+アプリケーションに名前を付ける。
 
 ![](Images/Day13_Go3.png)
 
-You will be then given these API tokens, it is important that you save these somewhere secure. (I have since deleted this app) We will need these later with our Go Application. 
+このAPIトークンを安全な場所に保存しておくことが重要です。(私はこのアプリを削除しました) これらは後でGoアプリケーションで必要になります。
 
 ![](Images/Day13_Go4.png)
 
-Now we have our app created,(I did have to change my app name as the one in the screenshot above was already taken, these names need to be unique) 
+これでアプリの作成は完了です。（上のスクリーンショットの名前はすでに使われていたので、アプリ名を変更する必要がありました。） 
 
 ![](Images/Day13_Go5.png)
 
-The keys that we gathered before are known as our consumer keys and we will also need our access token and secrets. We can gather this information using the "Keys & Tokens" tab. 
+先ほど集めた鍵はコンシューマーキーと呼ばれ、アクセストークンとシークレットも必要です。これらの情報は、"Keys & Tokens "タブで収集することができます。
 
 ![](Images/Day13_Go6.png)
 
-Ok, we are done in the Twitter developer portal for now. Make sure you keep your keys safe because we will need them later. 
+さて、Twitter開発者ポータルでの作業は一旦終了です。キーは後で必要になるので、必ず保管しておいてください。
 
-## Go Twitter Bot 
+## Go ツイッターボット
 
-Remember the code we are starting within our application as well [day13_example1](Go/day13_example1.go) but first, we need to check we have the correct code to make something tweet 
+アプリケーション内で開始するコードも覚えておいてください [day13_example1](Go/day13_example1.go) しかし、まず、何かをツイートするための正しいコードがあることを確認する必要があります。
 
-We now need to think about the code to get our output or message to Twitter in the form of a tweet. We are going to be using [go-twitter](https://github.com/dghubble/go-twitter) This is a Go client library for the Twitter API. 
+Twitter にツイートするためのコードを考えましょう。ここでは [go-twitter](https://github.com/dghubble/go-twitter) を使用します。これはTwitter API用のGoクライアントライブラリです。
 
-To test this before putting this into our main application, I created a new directory in our `src` folder called go-twitter-bot, issued the `go mod init github.com/michaelcade/go-twitter-bot` on the folder which then created a `go.mod` file and then we can start writing our new main.go and test this out. 
+メインアプリケーションに組み込む前にテストするために、`src` フォルダに go-twitter-bot という新しいディレクトリを作成し、そのフォルダに対して `go mod init github.com/michaelcade/go-twitter-bot` を実行すると `go.mod` ファイルが作成され、新しい main.go を書いてこれをテストできるようになりました。
 
-We now need those keys, tokens and secrets we gathered from the Twitter developer portal. We are going to set these in our environment variables. This will depend on the OS you are running: 
+次に、Twitter開発者ポータルから集めたキー、トークン、シークレットが必要です。これらを環境変数に設定するつもりです。これは実行しているOSに依存します。
 
 Windows
 ```
@@ -69,11 +70,12 @@ export CONSUMER_SECRET
 export ACCESS_TOKEN
 export ACCESS_TOKEN_SECRET
 ```
-At this stage, you can take a look at [day13_example2](Go/day13_example2.go) at the code but you will see here that we are using a struct to define our keys, secrets and tokens. 
 
-We then have a `func` to parse those credentials and make that connection to the Twitter API 
+この段階のコードは [day13_example2](Go/day13_example2.go) を見ていただくとして、ここでは構造体を使用してキー、秘密情報、トークンを定義していることがお分かりいただけると思います。
 
-Then based on the success we will then send a tweet. 
+次に、これらの認証情報をパースして Twitter API に接続するための `func` を用意しています。
+
+そして成功したら、ツイートを送信します。
 
 ```
 package main
@@ -152,13 +154,13 @@ func main() {
 }
 
 ```
-The above will either give you an error based on what is happening or it will succeed and you will have a tweet sent with the message outlined in the code. 
+上記は、起こっていることに基づいてエラーを出すか、成功し、コードに記載されているメッセージを含むツイートが送信されます。
 
-## Pairing the two together - Go-Twitter-Bot + Our App 
+## 2つを組み合わせる - Go-Twitter-Bot＋当社アプリ
 
-Now we need to merge these two in our `main.go` I am sure someone out there is screaming that there is a better way of doing this and please comment on this as you can have more than one `.go` file in a project it might make sense but this works. 
+この2つを `main.go` の中でマージする必要があります。きっと誰かがもっと良い方法があると叫んでいると思います。
 
-You can see the merged codebase [day13_example3](Go/day13_example3.go) but I will also show it below. 
+マージされたコードベースは [day13_example3](Go/day13_example3.go) で見ることができますが、以下でも紹介しておきます。
 
 ```
 package main
@@ -261,26 +263,26 @@ func main() {
 
 }
 ```
-The outcome of this should be a tweet but if you did not supply your environment variables then you should get an error like the one below. 
+この結果、ツイートが表示されるはずですが、環境変数が指定されていない場合は、以下のようなエラーが表示されるはずです。
 
 ![](Images/Day13_Go7.png)
 
-Once you have fixed that or if you choose not to authenticate with Twitter then you can use the code we finished with yesterday. The terminal output on success will look similar to this: 
+この問題を解決したら、あるいはTwitterで認証しないのであれば、昨日終了したコードを使用できます。成功したときの端末の出力は、以下のような感じになります。 
 
 ![](Images/Day13_Go8.png)
 
-The resulting tweet should look something like this: 
+出来上がったツイートはこのような感じになるはずです。
 
 ![](Images/Day13_Go9.png)
 
 ## How to compile for multiple OSs
 
-I next want to cover the question, "How do you compile for multiple Operating Systems?" The great thing about Go is that it can easily compile for many different Operating Systems. You can get a full list by running the following command: 
+次に、"複数のオペレーティングシステム用にどのようにコンパイルするのか？"という質問を取り上げたいと思います。Goの素晴らしいところは、多くの異なるオペレーティングシステム用に簡単にコンパイルできることです。以下のコマンドを実行すれば、全リストが得られます。
 
 ```
 go tool dist list
 ```
-Using our `go build` commands so far is great and it will use the `GOOS` and `GOARCH` environment variables to determine the host machine and what the build should be built for. But we can also create other binaries by using the code below as an example. 
+これまでの `go build` コマンドの使用は素晴らしく、環境変数 `GOOS` と `GOARCH` を使ってホストマシンとビルドの対象を決定してくれます。しかし、以下のコードを例として、他のバイナリを作成することもできます。
 
 ```
 GOARCH=amd64 GOOS=darwin go build -o ${BINARY_NAME}_0.1_darwin main.go
@@ -290,11 +292,11 @@ GOARCH=arm64 GOOS=linux go build -o ${BINARY_NAME}_0.1_linux_arm64 main.go
 GOARCH=arm64 GOOS=darwin go build -o ${BINARY_NAME}_0.1_darwin_arm64 main.go
 ```
 
-This will then give you binaries in your directory for all of the above platforms. You can then take this and create a makefile to build these binaries whenever you add new features and functionality to your code. I have included the [makefile](Go/makefile)
+これで、上記のすべてのプラットフォーム用のバイナリがディレクトリに作成されます。これを元に makefile を作成し、コードに新しい機能を追加するたびにこのバイナリをビルドするようにすればよいのです。私は、[makefile](Go/makefile)を含めています。
 
-This is what I have used to create the releases you can now see on the [repository](https://github.com/MichaelCade/90DaysOfDevOps/releases)
+これは、あなたが現在 [リポジトリ](https://github.com/MichaelCade/90DaysOfDevOps/releases)で見ることができるリリースを作成するために使用したものです。
 
-## Resources
+## リソース
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
@@ -308,8 +310,8 @@ This is what I have used to create the releases you can now see on the [reposito
 - [go.dev/tour/list](https://go.dev/tour/list)
 - [go.dev/learn](https://go.dev/learn/)
 
-This wraps up the Programming language for 7 days! So much more that can be covered and I hope you have been able to continue through the content above and be able to understand some of the other aspects of the Go programming language. 
+これで7日間のプログラミング言語の学習は終了です。上記の内容を続けて、プログラミング言語Goの他の側面を理解することができれば幸いです。
 
-Next, we take our focus into Linux and some of the fundamentals that we should all know there. 
+次は、Linuxとそこで知っておくべき基本的なことに焦点を当てます。
 
-See you on [Day 14](day14.md).
+それでは、[Day14](day14.md)でお会いしましょう。
