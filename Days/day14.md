@@ -84,7 +84,7 @@ I have also placed a copy of this specific vagrant file in the [Linux Folder](Li
 
 ## Provisioning our Linux Desktop
 
-We are now ready to get our first machine up and running, in our workstation's terminal. In my case I am using PowerShell on my Windows machine. Navigate to your projects folder and where you will find your VAGRANTFILE. Once there you can type the command `vagrant up` and if everything's allright you will see something like this.
+We are now ready to get our first machine up and running, in our workstation's terminal. In my case I am using PowerShell on my Windows machine. Navigate to your projects folder and where you will find your VAGRANTFILE. Once there you can type the command `vagrant up` and if everything's alright you will see something like this.
 
 ![](Images/Day14_Linux2.png)
 
