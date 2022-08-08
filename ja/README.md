@@ -34,7 +34,7 @@ English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/R
 - [✔️] ⌨️ 10 > [The Go Workspace & Compiling & running code](Days/day10.md)
 - [✔️] ⌨️ 11 > [Variables, Constants & Data Types](Days/day11.md)
 - [✔️] ⌨️ 12 > [Getting user input with Pointers and a finished program](Days/day12.md)
-- [✔️] ⌨️ 13 > [Tweet your progress with our new App](Days/day13.md)
+- [✔️] ⌨️ 13 > [新しいアプリで進捗をツイート](Days/day13.md)
 
 ### Knowing Linux Basics
 
