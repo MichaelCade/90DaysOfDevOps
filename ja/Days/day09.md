@@ -1,71 +1,74 @@
 ---
-title: '#90DaysOfDevOps - Let''s explain the Hello World code - Day 9'
+title: '#90DaysOfDevOps - Hello Worldのコードを説明しましょう - 9日目'
 published: false
-description: 90DaysOfDevOps - Let's explain the Hello World code
+description: 90DaysOfDevOps - Hello Worldのコードを説明しましょう
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048732
 ---
-## Let's explain the Hello World code
+## Hello Worldのコードを説明しましょう
 
-### How Go works 
+### Go の仕組み
 
-On [Day 8](day08.md) we walked through getting Go installed on your workstation and we then created our first Go application. 
- 
-In this section, we are going to take a deeper look into the code and understand a few more things about the Go language. 
+[Day 8](day08.md) では、ワークステーションに Go をインストールする方法を説明し、その後最初の Go アプリケーションを作成しました。
 
-### What is Compiling?
-Before we get into the [6 lines of the Hello World code](Go/hello.go) we need to have a bit of an understanding about compiling.
+このセクションでは、コードをより深く見て、Go 言語についてもう少し理解します。
 
-Programming languages that we commonly use such as Python, Java, Go and C++ are high-level languages. Meaning they are human-readable but when a machine is trying to execute a program it needs to be in a form that a machine can understand. We have to translate our human-readable code to machine code which is called compiling. 
+
+### コンパイルとは？
+Hello Worldの6行のコード](Go/hello.go)に入る前に、コンパイルについて少し理解しておく必要があります。
+
+Python、Java、Go、C++など、私たちが普段使っているプログラミング言語は、高水準言語です。つまり、人間が読むことはできても、機械がプログラムを実行するときには、機械が理解できる形である必要があるのです。そのため、人間が読めるコードを機械語に変換する必要があります。これをコンパイルといいます。
 
 ![](Images/Day9_Go1.png)
 
-From the above you can see what we did on [Day 8](day08.md) here, we created a simple Hello World main.go and we then used the command `go build main.go` to compile our executable. 
+上記から、私たちが [Day 8](day08.md) で何をしたかがわかります。ここでは、単純な Hello World main.go を作成し、 `go build main.go` コマンドを使って実行ファイルをコンパイルしています。
 
-### What are packages?
-A package is a collection of source files in the same directory that are compiled together. We can simplify this further, a package is a bunch of .go files in the same directory. Remember our Hello folder from Day 8? If and when you get into more complex Go programs you might find that you have folder1 folder2 and folder3 containing different .go files that make up your program with multiple packages. 
+### パッケージとは何ですか？
+パッケージとは、同じディレクトリにあるソースファイルの集まりで、一緒にコンパイルされたものです。さらに単純化すると、パッケージは同じディレクトリにあるたくさんの .go ファイルです。8日目のHelloフォルダーを覚えていますか？より複雑な Go プログラムに参加する場合、folder1 folder2 folder3 に異なる .go ファイルがあり、複数のパッケージでプログラムを構成していることに気づくかもしれません。
 
-We use packages so we can reuse other peoples code, we don't have to write everything from scratch. Maybe we are wanting a calculator as part of our program, you could probably find an existing Go Package that contains the mathematical functions that you could import into your code saving you a lot of time and effort in the long run.  
+パッケージを使うのは、他の人のコードを再利用するためで、すべてを一から書く必要はありません。例えば、プログラムの一部として電卓を使いたい場合、数学関数を含む既存の Go パッケージを見つけることができ、それをコードにインポートすれば、長い目で見れば多くの時間と労力を節約することができます。
 
-Go encourages you to organise your code in packages so that it is easy to reuse and maintain source code. 
+Go では、ソース コードの再利用と保守を容易にするために、コードをパッケージで整理することを推奨しています。
 
-### Hello #90DaysOfDevOps Line by Line 
-Now let's take a look at our Hello #90DaysOfDevOps main.go file and walk through the lines. 
+### Hello #90DaysOfDevOps 行を追う
+それでは、Hello #90DaysOfDevOps の main.go ファイルを見て、行を追って見ていきましょう。
 
 ![](Images/Day9_Go2.png)
 
-In the first line, you have `package main` which means that this file belongs to a package called main. All .go files need to belong to a package, they should also have `package something` in the opening line. 
+最初の行に `package main` とありますが、これはこのファイルが main というパッケージに属していることを意味します。すべての .go ファイルはパッケージに属する必要があり、冒頭の行に `package something` と書かれている必要があります。
 
-A package can be named whatever you wish. We have to call this `main` as this is the starting point of the program that is going to be in this package, this is a rule. (I need to understand more about this rule?)    
+パッケージは好きな名前をつけることができます。このパッケージの中に入るプログラムのスタート地点なので、 `main` と呼ばなければなりません。これは規則です。(このルールについてもっと理解する必要がある？)
 
 ![](Images/Day9_Go3.png)
 
-Whenever we want to compile and execute our code we have to tell the machine where the execution needs to start. We do this by writing a function called main. The machine will look for a function called main to find the entry point of the program. 
+コードをコンパイルして実行するときはいつでも、実行を開始する場所をマシンに伝えなければなりません。これはmainと呼ばれる関数を書くことによって行います。マシンはプログラムのエントリポイントを見つけるためにmainと呼ばれる関数を探します。
 
-A function is a block of code that can do some specific task for and can be used across the program. 
+関数とは、ある特定のタスクを実行するコードのブロックのことで、プログラム全体で使用することができます。
 
-You can declare a function with any name using `func` but in this case we need to name it `main` as this is where the code starts. 
+関数は `func` を使って任意の名前で宣言することができますが、今回はコードが始まる場所なので `main` という名前をつける必要があります。
 
 ![](Images/Day9_Go4.png)
 
-Next we are going to look at line 3 of our code, the import, this basically means you want to bring in another package to your main program. fmt is a standard package being used here provided by Go, this package contains the `Println()`function and because we have imported this we can use this in line 6. There are a number of standard packages you can include in your program and leverage or reuse them in your code saving you the hassle of having to write from scratch. [Go Standard Library](https://pkg.go.dev/std)
+次にコードの3行目を見てみましょう。これは基本的に、メインプログラムに別のパッケージを取り込むことを意味します。
+fmtはGoが提供する標準パッケージで、このパッケージには `Println()` 関数が含まれており、これをインポートしたことで6行目でこれを使うことができるようになりました。 標準的なパッケージが多数用意されており、それらをプログラムに組み込んで活用したり、再利用することで、ゼロから書く手間を省くことができます。[Go標準ライブラリ](https://pkg.go.dev/std)
+
 
 ![](Images/Day9_Go5.png)
 
-the `Println()` that we have here is a way in which to write to a standard output to the terminal where ever the executuable has been executed succesfully. Feel free to change the message in between the (). 
+ここにある `Println()` は、実行ファイルが正常に実行されたときに、その端末の標準出力に書き出す方法です。()の間のメッセージは自由に変更してください。
 
 ![](Images/Day9_Go6.png)
 
 ### TLDR
 
-- **Line 1** = This file will be in the package called `main` and this needs to be called `main` because includes the entry point of the program. 
-- **Line 3** = For us to use the `Println()` we have to import the fmt package to use this on line 6. 
-- **Line 5** = The actual starting point, its the `main` function. 
-- **Line 6** = This will let us print "Hello #90DaysOfDevOps" on our system. 
+- 1行目** = このファイルは `main` というパッケージの中にあり、プログラムのエントリポイントを含むので `main` という名前にする必要があります。
+- 3行目** = `Println()` を使用するために、6行目で fmt パッケージをインポートする必要があります。
+- 5行目** = 実際のスタート地点、`main`関数です。
+- 6行目** = "Hello #90DaysOfDevOps" と表示させることができます。
 
-## Resources
+## リソース
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
@@ -75,4 +78,4 @@ the `Println()` that we have here is a way in which to write to a standard outpu
 - [FreeCodeCamp -  Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s) 
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
 
-See you on [Day 10](day10.md).
+[10日目](day10.md)にお会いしましょう。
