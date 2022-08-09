@@ -26,15 +26,15 @@ English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/R
 - [✔️] ♾️ 5 > [計画 > コーディング > ビルド > テスト > リリース > デプロイ > オペレート > 監視](Days/day05.md)
 - [✔️] ♾️ 6 > [DevOps - 本当の話](Days/day06.md)
 
-### Learning a Programming Language
+### プログラミング言語の学習
 
-- [✔️] ⌨️ 7 > [The Big Picture: DevOps & Learning a Programming Language](Days/day07.md)
+- [✔️] ⌨️ 7 > [全体像: DevOpsとプログラミング言語の学習](Days/day07.md)
 - [✔️] ⌨️ 8 > [GoとHello WorldのためのDevOps環境のセットアップ](Days/day08.md)
-- [✔️] ⌨️ 9 > [Let's explain the Hello World code](Days/day09.md)
+- [✔️] ⌨️ 9 > [Hello Worldのコードを説明しましょう](Days/day09.md)
 - [✔️] ⌨️ 10 > [Goワークスペースとコードのコンパイルと実行](Days/day10.md)
-- [✔️] ⌨️ 11 > [Variables, Constants & Data Types](Days/day11.md)
+- [✔️] ⌨️ 11 > [変数、定数、データ型](Days/day11.md)
 - [✔️] ⌨️ 12 > [Getting user input with Pointers and a finished program](Days/day12.md)
-- [✔️] ⌨️ 13 > [Tweet your progress with our new App](Days/day13.md)
+- [✔️] ⌨️ 13 > [新しいアプリで進捗をツイート](Days/day13.md)
 
 ### Knowing Linux Basics
 
