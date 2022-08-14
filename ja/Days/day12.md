@@ -1,75 +1,77 @@
 ---
-title: '#90DaysOfDevOps - Getting user input with Pointers and a finished program - Day 12'
+title: '#90DaysOfDevOps - ポインタを使ったユーザー入力の取得と完成したプログラム - 12日目'
 published: false
-description: 90DaysOfDevOps - Getting user input with Pointers and a finished program
+description: 90DaysOfDevOps - ポインタを使ったユーザー入力の取得と完成したプログラム
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048864
 ---
-## Getting user input with Pointers and a finished program
+## ポインタを使ったユーザー入力の取得と完成したプログラム
 
-Yesterday ([Day 11](day11.md)), we created our first Go program that was self-contained and the parts we wanted to get user input for were created as variables within our code and given values, we now want to ask the user for their input to give the variable the value for the end message. 
+昨日([Day 11](day11.md)) 、私たちは自己完結した最初のGoプログラムを作成しました。ユーザーの入力を得たい部分はコード内で変数として作成し、値を与えました。今度は、変数に終了メッセージの値を与えるために、ユーザーに入力を求めたいと思います。
 
-## Getting user input
+## ユーザー入力の取得
 
-Before we do that let's take a look at our application again and walk through the variables we want as a test before getting that user input. 
+その前に、もう一度アプリケーションを見て、ユーザーの入力を得る前にテストとして必要な変数を調べてみましょう。
 
-Yesterday we finished up with our code looking like this [day11_example4.go](Go/day11_example4.go) we have manually in code defined our `challenge, daystotal, dayscomplete` variables and constants. 
+昨日、私たちは次のようなコードを書き上げました [day11_example4.go](Go/day11_example4.go) 私たちは手動で `challenge, daystotal, dayscomplete` 変数と定数をコードで定義しています。
 
-Let's now add a new variable called `TwitterName` you can find this new code at [day12_example1.go](Go/day12_example1.go) and if we run this code this is our output. 
+次に、`TwitterName` という新しい変数を追加しましょう。この新しいコードは [day12_example1.go](Go/day12_example1.go) にあります。このコードを実行すると、次のような結果が得られます。
 
 ![](Images/Day12_Go1.png)
 
-We are on day 12 and we would need to change that `dayscomplete` every day and compile our code each day if this was hardcoded which doesn't sound so great. 
+現在12日目ですが、毎日 `dayscomplete` を変更して、毎日コードをコンパイルする必要があります。
 
-Getting user input, we want to get the value of maybe a name and the number of days completed. For us to do this we can use another function from within the `fmt` package. 
+ユーザーの入力を得て、名前と完了した日数の値を取得したいと思います。これを行うには、`fmt`パッケージの別の関数を使用します。
 
-Recap on the `fmt` package, different functions for: formatted input and output (I/O)
+fmt` パッケージについて復習すると、以下のような様々な関数があります。
 
-- Print Messages 
-- Collect User Input 
-- Write into a file 
+- メッセージの印刷
+- ユーザーの入力を収集する
+- ファイルへの書き込み
 
-This is instead of assigning the value of a variable we want to ask the user for their input.  
+これは、変数の値を代入する代わりに、ユーザーに入力を求めるものです。
 
 ```
 fmt.Scan(&TwitterName)
 ```
-Notice that we also use `&` before the variable. This is known as a pointer which we will cover in the next section. 
 
-In our code [day12_example2.go](Go/day12_example2.go) you can see that we are asking the user to input two variables, `TwitterName` and `DaysCompleted`
+変数の前に `&` を使っていることに注意してください。これはポインタと呼ばれるもので、次のセクションで説明します。
 
-Let's now run our program and you see we have input for both of the above. 
+コード [day12_example2.go](Go/day12_example2.go) では、ユーザーに二つの変数、 `TwitterName` と `DaysCompleted` の入力を求めていることがわかります。
+
+プログラムを実行してみると、上記の2つの変数が入力されていることがわかります。
 
 ![](Images/Day12_Go2.png)
 
-Ok, that's great we got some user input and we printed a message but what about getting our program to tell us how many days we have left in our challenge.
+さて、ユーザーからの入力を得てメッセージを表示したのはいいのですが、挑戦があと何日残っているかをプログラムに表示させるのはどうでしょう。
 
-For us to do that we have created a variable called `remainingDays` and we have hard valued this in our code as `90` we then need to change the value of this value to print out the remaining days when we get our user input of `DaysCompleted` we can do this with this simple variable change. 
+そのために `remainingDays` という変数を作成し、コード内で `90` というハードバリューを設定しました。この値を変更して、ユーザから `DaysCompleted` という入力を得たときに残りの日数を表示する必要があります。このためには、この単純な変数の変更を行います。
 
 ```
 remainingDays = remainingDays - DaysCompleted
 ```
-You can see how our finished program looks here [day12_example2.go](Go/day12_example3.go). 
 
-If we now run this program you can see that simple calculation is made based on the user input and the value of the `remainingDays`
+完成したプログラムはこちら [day12_example2.go](Go/day12_example3.go) で見ることができます。
+
+このプログラムを実行すると、ユーザー入力と `remainingDays` の値に基づいて簡単な計算が行われていることがわかります。
 
 ![](Images/Day12_Go3.png)
 
-## What is a pointer? (Special Variables)
+## ポインターとは（特殊変数）
 
-A pointer is a (special) variable that points to the memory address of another variable. 
+ポインタとは、他の変数のメモリアドレスを指し示す（特殊な）変数のことです。
 
-A great explanation of this can be found here at [geeksforgeeks](https://www.geeksforgeeks.org/pointers-in-golang/)
+これについては、[geeksforgeeks](https://www.geeksforgeeks.org/pointers-in-golang/)にすばらしい説明があります。
 
-Let's simplify our code now and show with and without the `&` in front of one of our print commands, this gives us the memory address of the pointer. I have added this code example here. [day12_example4.go](Go/day12_example4.go) 
+ここではコードを単純化して、printコマンドの前に`&`をつけるかつけないかで、ポインタのメモリアドレスを表示してみましょう。このコード例をここに追加しました。[day12_example4.go](Go/day12_example4.go)です。
 
-Below is running this code. 
+以下は、このコードを実行しているところです。
 
 ![](Images/Day12_Go4.png)
 
-## Resources
+## リソース
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
@@ -79,5 +81,5 @@ Below is running this code.
 - [FreeCodeCamp -  Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s) 
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N) 
 
-See you on [Day 13](day13.md).
+13日目](day13.md)でお会いしましょう。
 
