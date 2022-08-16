@@ -37,6 +37,8 @@ For one off jobs like installing applications or services, you might need that `
 
 I find myself using `clear` all the time, the `clear` command does exactly what it says it is going to clear the screen of all previous commands, putting your prompt to the top and giving you a nice clean workspace. Windows I think is `cls` in the .mdprompt.
 
+ Note : Instead of writing `clear` everytime,you can use a simple key combination for it which is Ctrl + L.
+
 ![](Images/Day15_Linux6.png)
 
 Let's now look at some commands where we can actually create things within our system and then visualise them in our terminal, first of all, we have `mkdir` which will allow us to create a folder in our system. With the following command, we can create a folder in our home directory called Day15 `mkdir Day15`
