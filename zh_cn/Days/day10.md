@@ -81,7 +81,7 @@ echo $GOPATH
 - `go install` - 与`go build`相同，但它会把可执行文件存放在`bin`文件夹中。
 
 
-我们已经运行了`go build`和`go run`，如果你想的话，可以在这里多次循行它们。就如前面说到的，`go install`将可执行文件放在我们的bin文件夹中。
+我们已经运行了`go build`和`go run`，如果你想的话，可以在这里多次运行它们。就如前面说到的，`go install`将可执行文件放在我们的bin文件夹中。
 
 
 ![](../../Days/Images/Day10_Go9.png)
