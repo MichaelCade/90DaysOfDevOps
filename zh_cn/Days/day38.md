@@ -1,126 +1,127 @@
 ---
-title: '#90DaysOfDevOps - Staging & Changing - Day 38'
+title: '#90DaysOfDevOps - 暂存与变更 - 第三十八天'
 published: false
-description: 90DaysOfDevOps - Staging & Changing
+description: 90DaysOfDevOps - 暂存与变更
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1049042
 ---
-## Staging & Changing
 
-We have already covered some of the basics but putting things into a walkthrough makes it better for me to learn and understand how and why we are doing it this way. Before we get into any git-based services such as GitHub, git has its powers that we can take advantage of on our local workstation. 
+## 暂存与变更
 
-We are going to take the project folder we created at the start of the git session and we are going to walk through some of the simple steps we can do with git. We created a folder on our local machine and we initialised it with the `git init` command 
+我们已经了解了一些基础的内容，接下来的实操可以帮助我们更好地学习和理解。在我们开始使用基于git的服务(比如GitHub)之前，git可以在本地的工作站中使用相关的功能。
 
-![](Images/Day38_Git1.png)
+我们会先创建项目文件夹，然后用git来做些简单的操作。我们已经在本地电脑上新建了一个文件夹，使用`git init`来初始化它。
 
-We can also see now that we have initialised the folder we have a hidden folder in our directory. 
+![](../../Days/Images/Day38_Git1.png)
 
-![](Images/Day38_Git2.png)
+现在我们会看到在已初始化的文件夹中有一个隐藏文件夹。
 
-This is where the details of the git repository are stored as well as the information regarding our branches and commits. 
+![](../../Days/Images/Day38_Git2.png)
 
-### Staging Files
+git仓库的内容将会被保存在里面，例如分支和提交的信息。
 
-We then start working on our empty folder and maybe we add some source code as a first days work. We create our readme.mdfile and we can see that file in the directory, next we check our `git status` and it knows about the new readme.mdfile but we have not committed the file yet. 
+### 暂存文件
 
-![](Images/Day38_Git3.png)
+然后我们会在这个空白文件夹中做点什么，可能是添加第一天工作的源代码。创建我们的`readme.md`文件，然后我们可以看到它出现在这个目录中。接着检查`git status`，它知道`readme.md`是新的文件，并且我们还未对其进行提交。
 
-We can stage our readme.mdfile with the `git add README.md` command then we can see changes to be committed which we did not have before and a green new file.
+![](../../Days/Images/Day38_Git3.png)
 
-![](Images/Day38_Git4.png)
+我们可以对`readme.md`进行暂存，使用`git add README.md`，然后可以看到出现了提交后的不同提示(之前是没有绿色字体部分的)。
 
-Next up we want to commit this, our first commit or our first snapshot of our project. We can do this by using the `git commit -m "Meaningful message"` command so that we can easily see what has changed for each commit. Also, notice the yellow cross changes now to a green tick. This is something I have within my terminal with the theme I use, something we covered in the Linux section. 
+![](../../Days/Images/Day38_Git4.png)
 
-![](Images/Day38_Git5.png)
+下一步，我们将要进行第一次提交或是快照。我们会用到`git commit -m "Meaningful message"`，这样就可以清晰地看到每次提交中做了什么更改。同时，关注之前黄色的交叉符号变成了现在了绿色勾。这是一些在Linux中的操作，以及在我的终端中出现的东西。
 
-### Committing Changes
+![](../../Days/Images/Day38_Git5.png)
 
-We are going to most likely want to add more files or even change the files we have in our directory. We have already done our first commit above. But now we are going to add more details and more files. 
+### 提交更改
 
-We could repeat our process from before, create or edit our file > `git add .` to add all files to the staging area then `git commit -m "meaningful message"` and this would work just fine. But to be able to offer a meaningful message on commit of what has changed you might not want to write something out like `git commit -m "Well, I changed some code because it did not work and when I fixed that I also added something new to the readme.mdto ensure everyone knew about the user experience and then I made a tea."` I mean this would work as well although probably make it descriptive but the preferred way here is to add this with a text editor. 
+我们很可能会想在目录中加入更多的文件或是进行更改。在上边，我们已经完成了第一次的提交。但还可以加入更多的细节内容和文件。
 
-If we run `git commit` after running `git add` it will open our default text editor which in my case here is nano. Here are the steps I took to add some changes to the file, ran `git status` to show what is and what is not staged. Then I used `git add` to add the file to the staging area, then ran `git commit` which opened nano.
+我们可以是重复上述的步骤，新建或编辑文件。使用`git add .`来暂存所有的文件，然后`git commit -m "meaningful message"`来完成相关流程。但你一定不希望所谓有用的信息(meaningful message)是长篇大论的，例如`git commit -m "Well, I changed some code because it did not work and when I fixed that I also added something new to the readme.mdto ensure everyone knew about the user experience and then I made a tea."`。这样做确实可行，但更好的方式是在文本编辑器中进行添加。
 
-![](Images/Day38_Git6.png)
+如果我们在运行了`git add`之后，运行`git commit`，它会打开默认的文本编辑器(这里默认的是nano)。我对文件进行了一些修改，运行`git status`来显示已暂存和未暂存的内容。然后用`git add`添加这个文件到暂存的区域，运行`git commit`就会打开nano。
 
-When nano opens you can then add your short and long description and then save the file. 
+![](../../Days/Images/Day38_Git6.png)
 
-![](Images/Day38_Git7.png)
+打开nano后，你可以输入或长或短的描述，最后保存。
 
-### Committing Best Practices
+![](../../Days/Images/Day38_Git7.png)
 
-There is a balance here to when to commit, commit often. We do not want to be waiting to be finished the project before committing, each commit should be meaningful and they also should not be coupled with non-relevant tasks with each other. If you have a bug fix and a typo make sure they are two separate commits as a best practice. 
+### 提交的最佳实践
 
-Make the commit message mean something. 
+这里需要注意什么时候要提交和提交的频率。我们不应等到整个项目都完成了才去提交，并且每次的提交应该是有意义的，相互之间是有所关联的。如果你修复了一个bug，同时编辑了语法错误，更好的做法是确保他们分别处于两个提交。
 
-In terms of wording, the team or yourself should be sticking to the same wording for each commit. 
+让提交信息有意义。
 
-### Skipping the Staging Area
+在措辞方面，你和你的团队应在每次提交中保持相同的用词方式。
 
-Do we always have to stage our changes before committing them? 
+### 跳过暂存
 
-The answer is yes but don't see this as a shortcut, you have to be sure 100% that you are not needing that snapshot to roll back to, it is a risky thing to do. 
+在提交之前，你可以不对更改进行暂存吗？
 
-![](Images/Day38_Git8.png)
+是的，但不要把这个操作视作捷径。你应有百分百的把握不需要快照或回滚，这是一个有风险的做法。
 
-### Removing Files
+![](../../Days/Images/Day38_Git8.png)
 
-What about removing files from our project, maybe we have another file in our directory that we have committed but now the project no longer needs or using it, as a best practice we should remove it. 
+### 移除文件
 
-Just because we remove the file from the directory, git is still aware of this file and we also need to remove it from the repository. You can see the workflow for this below. 
+如果我们在目录中有另一个已提交的文件，但现在这个项目不再用到它了，那么我们应该移除掉它。
 
-![](Images/Day38_Git9.png)
+但只是在文件夹中移除文件，git还是会存储着它，我们还需要在仓库中进行移除。你可以参考下图的操作步骤：
 
-That could be a bit of a pain to either remember or have to deal with if you have a large project which has many moving files and folders. We can do this with one command with `git rm oldcode.ps1` 
+![](../../Days/Images/Day38_Git9.png)
 
-![](Images/Day38_Git10.png)
+在一个大型项目中处理文件和文件夹是个痛点。我们可以使用`git rm oldcode.ps1`来达到效果。
 
-### Renaming or Moving Files
+![](../../Days/Images/Day38_Git10.png)
 
-Within our operating system, we can rename and move our files. We will no doubt need to do this from time to time with our projects. Similar to removing though there is a two-step process, we change our files on our OS and then we have to modify and make sure that the staging area or that the files are added correctly. Steps as follows: 
+### 重命名和移动文件
 
-![](Images/Day38_Git11.png)
+在操作系统中，我们可以重命名和移动文件。类似的，移除是一个两步的过程，我们在操作系统上修改了文件，然后需要确保在暂存中也进行了修改并被正确地添加了。步骤如下：
 
-However, like removing files from the operating system and then the git repository we can perform this rename using a git command too. 
+![](../../Days/Images/Day38_Git11.png)
 
-![](Images/Day38_Git12.png)
+像从操作系统和git仓库中移除文件的过程，同样可以用git命令来实现。
 
-### Ignoring Files
+![](../../Days/Images/Day38_Git12.png)
 
-We may have the requirement to ignore files or folders within our project that we might be using locally or that will be just wasted space if we were to share with the overall project, a good example of this could be logs. I also think using this for secrets that you do not want to be shared out in public or across teams. 
+### 忽略文件
 
-We can ignore files by adding folders or files to the `.gitignore` file in our project directory. 
+我们可能想要忽略掉一些项目中的文件或文件夹，像是logs，我们只想在本地使用，将它们上传会浪费很多的空间。或是考虑到文件的私密性，你不行将它放在公开的地方。
 
-![](Images/Day38_Git13.png)
+我们可以将文件或文件夹添加进`.gitignore`中，从而忽略掉它们。
 
-You can then open the `.gitignore` file and see that we have the logs/ directory present. But we could also add additional files and folders here to ignore. 
+![](../../Days/Images/Day38_Git13.png)
 
-![](Images/Day38_Git14.png)
+然后你可以打开`.gitignore`，里边有我们添加的`logs/`文件夹。我们也可以在这里加入其他的文件或文件夹。
 
-We can then see `git status` and then see what has happened. 
+![](../../Days/Images/Day38_Git14.png)
 
-![](Images/Day38_Git15.png)
+然后查看`git status`，会发生什么。
 
-There are also ways in which you might need to go back and ignore files and folders, maybe you did want to share the logs folder but then later realised that you didn't want to. You will have to use `git rm --cached ` to remove files and folders from the staging area if you have a previously tracked folder that you now want to ignore. 
+![](../../Days/Images/Day38_Git15.png)
 
-### Short Status
+这也会存在回滚文件的情况，可能你想分享logs文件夹，但后来意识到这不是你想要的。如果你在之前已经将这样的文件夹进行暂存，可以使用`git rm --cached `从暂存空间中移除文件和文件夹。
 
-We have been using `git status` a lot to understand what we have in our staging area and what we do not, it's a very comprehensive command with lots of detail. Most of the time you will just want to know what has been modified or what is new? We can use `git status -s` for a short status of this detail. I would usually set an alias on my system to just use `git status -s` vs the more detailed command. 
+### 状态简述
 
-![](Images/Day38_Git16.png)
+我们已经对`git status`的使用有了一定的了解，知道什么应该在暂存中，哪些不应放入其中。这是一个帮助我们更好理解细节的命令。大多数时候，你只想知道什么被修改了，什么被添加了？我们可以使用`git status -s`来获取简短的描述。我通常会在系统上设置一个别名来使用`git status -s`，与详细的描述进行区分。
 
-In the post tomorrow we will continue to look through these short examples of these common git commands. 
+![](../../Days/Images/Day38_Git16.png)
 
-## Resources 
+在下一天，我们将继续通过一些例子来学习常用的git命令。
+
+## 相关资料
 
 - [What is Version Control?](https://www.youtube.com/watch?v=Yc8sCSeMhi4)
 - [Types of Version Control System](https://www.youtube.com/watch?v=kr62e_n6QuQ)
-- [Git Tutorial for Beginners](https://www.youtube.com/watch?v=8JJ101D3knE&t=52s) 
-- [Git for Professionals Tutorial](https://www.youtube.com/watch?v=Uszj_k0DGsg) 
-- [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk&t=8s) 
+- [Git Tutorial for Beginners](https://www.youtube.com/watch?v=8JJ101D3knE&t=52s)
+- [Git for Professionals Tutorial](https://www.youtube.com/watch?v=Uszj_k0DGsg)
+- [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk&t=8s)
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 
-See you on [Day 39](day39.md) 
+[第三十九天](day39.md)见
