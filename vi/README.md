@@ -1,36 +1,34 @@
 # 90DaysOfDevOps
 
 <p align="center">
- <img src="logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
+ <img src="https://github.com/MichaelCade/90DaysOfDevOps/blob/main/logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
-English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md) | [Wersja Polska](pl/README.md) | [Tiếng Việt](vi/README.md)
+Repository này ghi lại hành trình của tôi trong việc trong việc học các kiến thức nền tảng về "DevOps". Tôi sẽ bắt đầu hành trình này vào ngày 1 tháng 1 năm 2022 và sẽ dành ra 90 ngày, từ ngày 1 tháng 1 đến ngày 31 tháng 3.
 
-This repository is used to document my journey on getting a better foundational knowledge of "DevOps". I will be starting this journey on the 1st January 2022 but the idea is that we take 90 days which just so happens to be January 1st to March 31st.
+Tôi ghi lại hành trình này nhằm giúp đỡ những bạn có chung mục tiêu và cũng hi vọng rằng tài liệu này có thể làm giàu cho các tài nguyên về DevOps.
 
-The reason for documenting these days is so that others can take something from it and also hopefully enhance the resources.
+Mục tiêu là dành ra 1 giờ một ngày trong 90 ngày để tìm hiểu về 13 lĩnh vực liên quan tới "DevOps" phục vụ cho việc xây dựng kiến thức nền tảng.
 
-The goal is to take 90 days, 1 hour each a day, to tackle over 13 areas of "DevOps" to a foundational knowledge.
-
-This will **not cover all things** "DevOps" but it will cover the areas that I feel will benefit my learning and understanding overall.
+Danh sách này sẽ **không bao gồm tất cả mọi thứ** về DevOps nhưng nó sẽ bao gồm các lĩnh vực mà tôi cảm thấy sẽ có ích cho quá trình học tập và hiểu biết chung của tôi.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N33YRCS)
 
-The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1)
+Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@MichaelCade1](https://twitter.com/MichaelCade1)
 
 ## Progress
 
-- [✔️] ♾️ 1 > [Introduction](Days/day01.md)
+- [✔️] ♾️ 1 > [Giới thiệu](Days/day01.md)
 
-### What is and why do we use DevOps
+### DevOps là gì và tại sao chúng ta sử dụng nó
 
-- [✔️] ♾️ 2 > [Responsibilities of a DevOps Engineer](Days/day02.md)
-- [✔️] ♾️ 3 > [DevOps Lifecycle - Application Focused](Days/day03.md)
+- [✔️] ♾️ 2 > [Nhiệm vụ của một kỹ sư DevOps](Days/day02.md)
+- [✔️] ♾️ 3 > [Vòng đời DevOps - Tập trung vào ứng dụng](Days/day03.md)
 - [✔️] ♾️ 4 > [DevOps & Agile](Days/day04.md)
 - [✔️] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)
-- [✔️] ♾️ 6 > [DevOps - The real stories](Days/day06.md)
+- [✔️] ♾️ 6 > [DevOps - Những câu chuyện thực tế](Days/day06.md)
 
-### Learning a Programming Language
+### Học một ngôn ngữ lập trình
 
 - [✔️] ⌨️ 7 > [The Big Picture: DevOps & Learning a Programming Language](Days/day07.md)
 - [✔️] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day08.md)
