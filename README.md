@@ -6,17 +6,21 @@
 
 English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md) | [Wersja Polska](pl/README.md) | [Tiếng Việt](vi/README.md)
 
-This repository is used to document my journey on getting a better foundational knowledge of "DevOps". I will be starting this journey on the 1st January 2022 but the idea is that we take 90 days which just so happens to be January 1st to March 31st.
+This repository is used to document my journey on getting a better foundational knowledge of "DevOps". 
 
-The reason for documenting these days is so that others can take something from it and also hopefully enhance the resources.
+The project started on the 1st January 2022 to  March 31st 2022, which happens to be exactly 90 Days.
+
+As we are now into 2023 you can see we have continued the effort and the learning in public for a new 90 Days where this one has a focus around security and namely DevSecOps. 
+
+The reason for documenting this is so that others can take something from it and also hopefully enhance the resources.
 
 The goal is to take 90 days, 1 hour each a day, to tackle over 13 areas of "DevOps" to a foundational knowledge.
 
-This will **not cover all things** "DevOps" but it will cover the areas that I feel will benefit my learning and understanding overall.
+This will **not cover all things** "DevOps" but it will cover the areas that I feel will benefit my learning and understanding overall. The project began as a public way to share my notes and learning exercises and since then has had some great exposure to the community. 
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N33YRCS)
 
-The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1)
+The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1) But equally as you are here, open an issue or find the discussions and I will get back to you ASAP!
 
 <p align="center">
  <a href="2022.md">
