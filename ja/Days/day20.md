@@ -1,95 +1,97 @@
 ---
-title: '#90DaysOfDevOps - Dev workstation setup - All the pretty things - Day 20'
+title: '#90DaysOfDevOps - 開発用ワークステーションのセットアップ - きれいなものばかり - 20日目'
 published: false
-description: 90DaysOfDevOps - Dev workstation setup - All the pretty things
+description: 90DaysOfDevOps - 開発用ワークステーションのセットアップ - きれいなものばかり
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048734
 ---
-## Dev workstation setup - All the pretty things
+## 開発用ワークステーションのセットアップ - きれいなものばかり
 
-Not to be confused with us setting Linux servers up this way but I wanted to also show off the choice and flexibility that we have within the Linux desktop. 
+Linuxサーバをこのように設定するのと混同しないように、私はLinuxデスクトップが持つ選択肢と柔軟性を見せたいと思ったんだ。
 
-I have been using a Linux Desktop for almost a year now and I have it configured just the way I want from a look and feel perspective. Using our Ubuntu VM on Virtual Box we can run through some of the customisations I have made to my daily driver. 
+私は、Linuxデスクトップを1年近く使っていますが、見た目も使い勝手も思い通りに設定できています。Virtual Box上のUbuntu VMを使って、私が日常的に使っているPCに施したカスタマイズのいくつかを紹介します。
 
-I have put together a YouTube video walking through the rest as some people might be able to better follow along: 
+YouTubeのビデオに残りの部分をまとめましたので、もっとよく理解できるかもしれません。
 
 [![Click to access YouTube Video](Images/Day20_YouTube.png)](https://youtu.be/jeEslAtHfKc)
 
-Out of the box our system will look something like the below: 
+このシステムには、以下のようなものがあります。
 
 ![](Images/Day20_Linux1.png)
 
-We can also see our default bash shell below, 
+また、以下にデフォルトのbashシェルが表示されます。
 
 ![](Images/Day20_Linux2.png)
 
-A lot of this comes down to dotfiles something we will cover in this final Linux session of the series. 
+このシリーズの最後のLinuxセッションで取り上げるdotfilesに起因するものが多いのです。
 
-### dotfiles 
-First up I want to dig into dotfiles, I have said in a previous day that Linux is made up of configuration files. These dotfiles are configuration files for your Linux system and applications. 
+### dotfiles
 
-I will also add that dotfiles are not just used to customise and make your desktop look pretty, there are also dotfile changes and configurations that will help you with productivity. 
+まず最初に、ドットファイルについて掘り下げたいと思います。Linuxは設定ファイルでできていると前日に述べました。このドットファイルはLinuxのシステムやアプリケーションの設定ファイルです。
 
-As I mentioned many software programs store their configurations in these dotfiles. These dotfiles assist in managing functionality. 
+また、ドットファイルは単にデスクトップのカスタマイズや見栄えを良くするためだけに使われるのではなく、生産性を高めるために役立つドットファイルの変更や設定もあることを付け加えます。
 
-Each dotfile starts with a `.` You can probably guess where the naming came from? 
+先に述べたように、多くのソフトウェアプログラムは、その設定をこのドットファイルに保存しています。これらのドットファイルは機能管理を支援するものです。
 
-So far we have been using bash as our shell which means you will have a .bashrc and .bash_profile in our home folder. You can see below a few dotfiles we have on our system. 
+各ドットファイルは `.` で始まります。この命名の由来はおわかりになるでしょうか。
+
+今までのところ、シェルとしてbashを使っているので、ホームフォルダに.bashrcと.bash_profileがあるはずです。以下に、私たちのシステム上にあるいくつかのドットファイルを示します。
 
 ![](Images/Day20_Linux3.png)
 
-We are going to be changing our shell, so we will later be seeing a new `.zshrc` configuration dotfile. 
+これからシェルを変更するので、後で新しい `.zshrc` 設定ドットファイルを見ることになります。
 
-But now you know if we refer to dotfiles you know they are configuration files. We can use them to add aliases to our command prompt as well as paths to different locations. Some people publish their dotfiles so they are publicly available. You will find mine here on my GitHub [MichaelCade/dotfiles](https://github.com/MichaelCade/dotfiles) here you will find my custom `.zshrc` file, my terminal of choice is terminator which also has some configuration files in the folder and then also some background options. 
+しかし、これでドットファイルを参照する場合、それが設定ファイルであることがわかるでしょう。ドットファイルを使って、コマンドプロンプトにエイリアスを追加したり、別の場所へのパスを追加したりすることができます。ドットファイルを公開している人もいます。私のものは私のGitHub [MichaelCade/dotfiles](https://github.com/MichaelCade/dotfiles) にあります。ここには私のカスタム `.zshrc` ファイルがあり、私が選んだターミナルは terminator で、そのフォルダにはいくつかの設定ファイルと、背景オプションも入っています。
 
 ### ZSH 
-As I mentioned throughout our interactions so far we have been using a bash shell the default shell with Ubuntu. ZSH is very similar but it does have some benefits over bash.  
 
-Zsh has features like interactive Tab completion, automated file searching, regex integration, advanced shorthand for defining command scope, and a rich theme engine.
+これまで述べてきたように、私たちはUbuntuのデフォルトシェルであるbashシェルを使ってきました。ZSH は非常によく似ていますが、bash よりも優れている点がいくつかあります。 
 
-We can use our `apt` package manager to get zsh installed on our system. Let's go ahead and run `sudo apt install zsh` from our bash terminal. I am going to do this from within the VM console vs being connected over SSH. 
+Zsh は対話的なタブ補完、自動ファイル検索、正規表現の統合、コマンドスコープを定義するための高度な省略記法、豊富なテーマエンジンなどの機能を備えています。
 
-When the installation command is complete you can run `zsh` inside your terminal, this will then start a shell configuration script. 
+私たちのシステムに zsh をインストールするには、`apt` パッケージマネージャを使 用します。bashターミナルから `sudo apt install zsh` を実行してみましょう。SSH で接続している場合ではなく、VM コンソールから実行するつもりです。
+
+インストールが完了したら、ターミナルで `zsh` を実行すると、シェルの設定スクリプトが起動します。
 
 ![](Images/Day20_Linux4.png)
 
-I selected `1` to the above question and now we have some more options. 
+上の質問で`1`を選択したところ、さらにいくつかの選択肢ができました。
 
 ![](Images/Day20_Linux5.png)
 
-You can see from this menu you we can make some out of the box edits to make ZSH configured to our needs. 
+このメニューから、ZSH を私たちのニーズに合わせて設定するために、いくつかの編集を行うことができることがわかるでしょう。
 
-If you exit the wizard with a `0` and then use the `ls -al | grep .zshrc` you should see we have a new configuration file. 
+`0` でウィザードを終了し、`ls -al | grep .zshrc` を実行すると、新しい設定ファイルができているのがわかると思います。
 
-Now we want to make zsh our default shell every time we open our terminal, we can do this by running the following command to change our shell `chsh -s $(which zsh)` we then need to log out and back in again for the changes to take place. 
+ここで、ターミナルを開くたびに zsh をデフォルトのシェルにしたいと思います。これを行うには、次のコマンドを実行してシェルを変更します `chsh -s $(which zsh)` その後、ログアウトして変更を反映させるために再びログインする必要があります。
 
-When you log back and open a terminal it should look something like this. We can also confirm our shell has now been changed over by running `which $SHELL`
+ログアウトしてターミナルを開くと、このような状態になっているはずです。また、`which $SHELL` を実行することで、シェルが変更されたことを確認することができます。
 
 ![](Images/Day20_Linux6.png)
 
-I generally perform this step on each Ubuntu desktop I spin up and find in general without going any further that the zsh shell is a little faster than bash. 
+私は通常、スピンアップする各Ubuntuデスクトップ上でこのステップを実行し、それ以上のことをしなくても、一般的にzshシェルはbashよりも少し速いことがわかります。
 
 ### OhMyZSH 
 
-Next up we want to make things look a little better and also add some functionality to help us move around within the terminal. 
+次はもう少し見栄えを良くして、ターミナル内の移動を助ける機能を追加したいと思います。
 
-OhMyZSH is a free and open source framework for managing your zsh configuration. There are lots of plugins, themes and other things that just make interacting with the zsh shell a lot nicer. 
+OhMyZSH は zsh の設定を管理するためのフリーでオープンソースのフレームワークです。たくさんのプラグインやテーマ、その他のものがあり、zsh シェルとのやりとりをより快適にしてくれます。
 
-You can find out more about [ohmyzsh](https://ohmyz.sh/)
+ohmyzsh](https://ohmyz.sh/)についてもっと知ることができます。
 
-Let's get Oh My ZSH installed, we have a few options with `curl` `wget` or `fetch` we have the first two available on our system but I will lead with `curl`
+Oh My ZSHをインストールしましょう。`curl` `wget` や `fetch` などのオプションがありますが、私たちのシステムでは最初の2つが利用可能です。
 
 `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 
-When you have run the above command you should see some output like below.
+上記のコマンドを実行すると、以下のような出力が表示されるはずです。
 
 ![](Images/Day20_Linux7.png)
 
- Now we can move on to start putting a theme in for our experience, there are well over 100 bundled with Oh My ZSH but my go to for all of my applications and everything is the dracula theme. 
+ Oh My ZSHには100以上のテーマが同梱されていますが、私が一番よく使うのはドラキュラのテーマです。
 
- I also want to add that these two plugins are a must when using Oh My ZSH. 
+ また、Oh My ZSHを使用する際には、この2つのプラグインは必須であることを付け加えておきます。
 
  `git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions`
 
@@ -97,11 +99,11 @@ When you have run the above command you should see some output like below.
 
  `nano ~/.zshrc`
 
- edit the plugins to now include `plugins=(git zsh-autosuggestions zsh-syntax-highlighting)`
+ プラグインを編集して、`plugins=(git zsh-autosuggestions zsh-syntax-highlighting)` を含めるようにします。
 
-## Gnome Extensions
+## Gnome 拡張
 
-I also use Gnome extensions, and in particular the list below 
+また、Gnomeの拡張機能を使用しており、特に以下のリストを参考にしています。
 
 [Gnome extensions](https://extensions.gnome.org)
 
@@ -111,9 +113,9 @@ I also use Gnome extensions, and in particular the list below
     - Desktop Icons 
     - User Themes 
 
-## Software Installation
+## ソフトウェアのインストール
 
-A short list of the programs I install on the machine using `apt` 
+私が `apt` を使ってマシンにインストールしているプログラムの短いリストです。
 
     - VSCode 
     - azure-cli 
@@ -127,27 +129,27 @@ A short list of the programs I install on the machine using `apt`
     - terraform 
     - vagrant
 
-### Dracula theme
+### Dracula テーマ
 
-This site is the only theme I am using at the moment. Looks clear, clean and everything looks great. [Dracula Theme](https://draculatheme.com/) It also has you covered when you have lots of other programs you use on your machine. 
+このサイトは、私が今使っている唯一のテーマです。見た目もスッキリしていて、全てが素晴らしく見えます。[ドラクエのテーマ](https://draculatheme.com/) また、あなたのマシンで使用する他のプログラムをたくさん持っている場合にも、このサイトでカバーされています。
 
-From the link above we can search for zsh on the site and you will find at least two options. 
+上記のリンクから、サイト上でzshを検索すると、少なくとも2つのオプションが見つかります。
 
-Follow the instructions listed to insall either manually or using git. Then you will need to finally edit your `.zshrc` configuration file as per below. 
+記載されている手順に従って、手動または git を使ってインストールします。そして、最後に `.zshrc` 設定ファイルを以下のように編集する必要があります。
 
 ![](Images/Day20_Linux8.png)
 
-You are next going to want the [Gnome Terminal Dracula theme](https://draculatheme.com/gnome-terminal) with all instructions available here as well. 
+次に、[Gnome Terminal Dracula theme](https://draculatheme.com/gnome-terminal)が必要です。すべての手順はここで入手できます。
 
-It would actually take a long time for me to document each and every step so I created a video walkthrough of the process. (**Click on the image below**)
+一つ一つの手順を記録するのは時間がかかるので、ビデオで手順を説明します。(**下の画像をクリックしてください**)
 
-[![](Images/Day20_YouTube.png)](https://youtu.be/jeEslAtHfKc)
+[!](Images/Day20_YouTube.png)](https://youtu.be/jeEslAtHfKc)
 
-If you made it this far, then we have now finished our Linux section of the #90DaysOfDevOps. Once again I am open for feedback and additions to resources here. 
+ここまで来れば、#90DaysOfDevOpsのLinuxセクションは終了です。今回もまた、フィードバックやリソースの追加をお待ちしています。
 
-I also thought on this it was easier to show you a lot of the steps through video vs writing them down here, what do you think to this? I do have a goal to work back through these days and where possible creating video walkthroughs to add in and better maybe explain and show some of the things we have covered. What do you think? 
+また、今回、多くのステップをビデオで紹介する方が、ここに書き出すよりも簡単だと思ったのですが、いかがでしょうか？私は、これらの日々を振り返って、可能であればビデオ・ウォークスルーを作成して、私たちがカバーした事柄のいくつかをより良く説明し、示すという目標を持っています。いかがでしょうか？
 
-## Resources 
+## リソース
 
 - [Bash in 100 seconds](https://www.youtube.com/watch?v=I4EWvMFj37g)
 - [Bash script with practical examples - Full Course](https://www.youtube.com/watch?v=TPRSJbtfK4M)
@@ -158,6 +160,6 @@ I also thought on this it was easier to show you a lot of the steps through vide
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
-Tomorrow we start our 7 days of diving into Networking, we will be looking to give ourselves the foundational knowledge and understanding of Networking around DevOps. 
+明日から7日間、ネットワークに潜り込み、DevOpsを中心としたネットワークの基礎知識と理解を深めたいと思います。
 
-See you on [Day21](day21.md)
+それでは [Day21] (day21.md) でお会いしましょう。
