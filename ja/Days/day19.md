@@ -1,56 +1,56 @@
 ---
-title: '#90DaysOfDevOps - Automate tasks with bash scripts - Day 19'
+title: '#90DaysOfDevOps - bashスクリプトによるタスクの自動化 - 19日目'
 published: false
-description: 90DaysOfDevOps - Automate tasks with bash scripts
+description: 90DaysOfDevOps - bashスクリプトによるタスクの自動化
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048774
 ---
-## Automate tasks with bash scripts
+## bashスクリプトによるタスクの自動化
 
-The shell that we are going to use today is the bash but we will cover another shell tomorrow when we dive into ZSH. 
+今日使うシェルはbashですが、明日ZSHに潜るときに別のシェルを取り上げる予定です。
 
 BASH - **B**ourne **A**gain **Sh**ell
 
-We could almost dedicate a whole section of 7 days to shell scripting much like the programming languages, bash gives us the capability of working alongside other automation tools to get things done. 
+プログラミング言語と同じように、7日間のうち一節をシェルスクリプトに捧げることができるほど、bashは物事を成し遂げるために他の自動化ツールと一緒に作業する能力を与えてくれます。
 
-I still speak to a lot of people where they have set up some complex shell scripts to make something happen and they rely on this script for some of the most important things in the business, I am not saying we need to understand shell/bash scripting for this purpose, this is not the way. But we should learn shell/bash scripting to work alongside our automation tools and for ad-hoc tasks. 
+私は今でも多くの人と話していますが、彼らは何かを実現するために複雑なシェルスクリプトをセットアップし、ビジネスで最も重要なことのいくつかをこのスクリプトに頼っています。しかし、自動化ツールと一緒に作業したり、アドホックなタスクのためにシェル/bashスクリプトを学ぶべきでしょう。
 
-An example of this that we have used in this section could be the VAGRANTFILE we used to create our VM, we could wrap this into a simple bash script that deleted and renewed this every Monday morning so that we have a fresh copy of our Linux VM every week, we could also add all the software stack that we need on said Linux machine and so on all through this one bash script. 
+このセクションで使用した例としては、VMを作成するために使用したVAGRANTFILEがあります。これをシンプルなbashスクリプトにラップして、毎週月曜日の朝にこれを削除して更新し、毎週新しいLinux VMのコピーを持つようにすることができ、このLinuxマシンに必要なすべてのソフトウェアスタックを追加するなど、すべてをこの1つのbashスクリプトで行うことができます。
 
-I think another thing I am at least hearing is that hands-on scripting questions are becoming more and more apparent in all lines of interviews. 
+もうひとつ、あらゆる面接において、スクリプトの実践的な質問がますます多くなってきているようです。
 
-### Getting started 
+### はじめに
 
-As with a lot of things we are covering in this whole 90 days, the only real way to learn is through doing. Hands-on experience is going to help soak all of this into your muscle memory. 
+この90日間で扱う多くの事柄と同様に、学ぶための唯一の本当の方法は、実際にやってみることです。実際に体験することで、すべてのことを筋肉に記憶させることができるのです。
 
-First of all, we are going to need a text editor. On [Day 17](Day17.md) we covered probably the two most common text editors and a little on how to use them. 
+まず最初に、テキストエディタが必要です。[17日目](Day17.md)では、おそらく最も一般的な2つのテキストエディタとその使い方を少し説明しました。
 
-Let's get straight into it and create our first shell script. 
+さっそく、最初のシェルスクリプトを作ってみましょう。
 
 `touch 90DaysOfDevOps.sh`
 
-Followed by `nano 90DaysOfDevOps.sh` this will open our new blank shell script in nano. Again you can choose your text editor of choice here. 
+続いて、`nano 90DaysOfDevOps.sh` とすると、nano で新しい空のシェルスクリプトが開かれます。ここでもあなたの好きなテキストエディタを選択することができます。
 
-The first line of all bash scripts will need to look something like this `#!/usr/bin/bash` this is the path to your bash binary. 
+すべてのbashスクリプトの最初の行は、次のようなものである必要があります。
 
-You should however check this in the terminal by running `which bash` if you are not using Ubuntu then you might also try `whereis bash` from the terminal. 
+もしUbuntuを使っていないなら、ターミナルで `which bash` を実行して、このパスを確認する必要があります。
 
-However, you may see other paths listed in already created shell scripts which could include: 
+しかし、すでに作成されているシェルスクリプトでは、他のパスが表示されることがあります。
 
 - `#!/bin/bash`
 - `#!/usr/bin/env bash`
 
-In the next line in our script, I like to add a comment and add the purpose of the script or at least some information about me. You can do this by using the `#` This allows us to comment out particular lines in our code and provide descriptions for what the upcoming commands will be doing. I find the more notes the better for the user experience especially if you are sharing this. 
+スクリプトの次の行では、コメントを追加して、スクリプトの目的か、少なくとも私に関する情報を追加したいです。これは `#` を使うことで可能です。これにより、コードの特定の行をコメントアウトして、これから実行するコマンドの説明を提供することができます。特にこれを共有する場合は、メモが多いほどユーザーエクスペリエンスに優れていると思います。
 
-I sometimes use figlet, a program we installed earlier in the Linux section to create some asci art to kick things off in our scripts. 
+Linuxのセクションで紹介したfigletを使って、スクリプトを書き出すときにasciアートを作成することもあります。
 
 ![](Images/Day19_Linux1.png)
 
-All of the commands we have been through earlier in this Linux section ([Day15](Day15.md)) could be used here as a simple command to test our script. 
+このLinuxセクション（[Day15](Day15.md)）で以前に経験したすべてのコマンドは、ここで私たちのスクリプトをテストするための簡単なコマンドとして使用することができました。
 
-Let's add a simple block of code to our script. 
+スクリプトに簡単なコードブロックを追加してみましょう。
 
 ``` 
 mkdir 90DaysOfDevOps
@@ -58,51 +58,54 @@ cd 90DaysOfDevOps
 touch Day19
 ls 
 ```
-You can then save this and exit your text editor, if we run our script with `./90DaysOfDevOps.sh` you should get a permission denied message. You can check the permissions of this file using the `ls -al` command and you can see highlighted we do not have executable rights on this file. 
+
+もし私たちが `./90DaysOfDevOps.sh` でスクリプトを実行すると、パーミッションが拒否されたというメッセージが表示されるはずです。このファイルのパーミッションを `ls -al` コマンドで確認すると、このファイルには実行権限がないことがわかります。
 
 ![](Images/Day19_Linux2.png)
 
-We can change this using `chmod +x 90DaysOfDevOps.sh` and then you will see the `x` meaning we can now execute our script. 
+`chmod +x 90DaysOfDevOps.sh` を使って変更することができます。
+`x` が表示されているのは、スクリプトを実行できるようになったことを意味します。
 
 ![](Images/Day19_Linux3.png)
 
-Now we can run our script again using `./90DaysOfDevOps.sh` after running the script has now created a new directory, changed into that directory and then created a new file. 
+スクリプトの実行後、`./90DaysOfDevOps.sh`を使用してスクリプトを再度実行すると、新しいディレクトリが作成され、そのディレクトリに移動して新しいファイルが作成されます。
 
 ![](Images/Day19_Linux4.png)
 
-Pretty basic stuff but you can start to see hopefully how this could be used to call on other tools as part of ways to make your life easier and automate things. 
+かなり基本的なことですが、これを利用して他のツールを呼び出すことで、生活を楽にしたり、物事を自動化したりする方法の一端が見えてくるはずです。
 
-### Variables, Conditionals
-A lot of this section is really a repeat to what we covered when we were learning Golang but I think its worth us diving in here again. 
+### 変数, 条件分岐
 
-- ### Variables 
+このセクションの多くは、Golangを学習したときに説明したことの繰り返しですが、もう一度ここに潜り込む価値はあると思います。
 
-Variables enable us to define once a particular repeated term that is used throughout a potentially complex script. 
+- ### 変数
 
-To add a variable you simply add it like this to a clean line in your script. 
+変数によって、複雑なスクリプトの中で繰り返し使用される特定の用語を一度に定義することができます。
+
+変数を追加するには、スクリプトのきれいな行に次のように追加するだけです。
 
 `challenge="90DaysOfDevOps"`
 
-This way when and where we use `$challenge` in our code, if we change the variable it will be reflected throughout.
+こうすることで、いつどこで `$challenge` を使っても、変数を変更すればそれが全体に反映されるようになります。
 
 ![](Images/Day19_Linux5.png)
 
-If we now run our `sh` script you will see the printout that was added to our script. 
+ここで、`sh`スクリプトを実行すると、スクリプトに追加されたプリントアウトが表示されます。
 
 ![](Images/Day19_Linux5.png)
 
-We can also ask for user input that can set our variables using the following: 
+また、次のようにすると、変数の設定に関するユーザー入力を求めることができます。
 
 ``` 
 echo "Enter your name"
 read name
 ```
 
-This would then define the input as the variable `$name` We could then use this later on. 
+これは、入力を `$name` という変数として定義するものです。
 
-- ### Conditionals 
+- ### 条件分岐 
 
-Maybe we want to find out who we have on our challenge and how many days they have completed, we can define this using `if` `if-else` `else-if` conditionals, this is what we have defined below in our script. 
+例えば、チャレンジの参加者とその参加者が何日目かを知りたい場合、`if` `if-else` `else-if` 条件式を使用して定義することができます。
 
 ```
 #!/bin/bash
@@ -138,23 +141,24 @@ else
   echo "You have entered the wrong amount of days"
 fi
 ```
-You can also see from the above that we are running some comparisons or checking values against each other to move on to the next stage. We have different options here worth noting. 
 
-- `eq` - if the two values are equal will return TRUE
-- `ne` - if the two values are not equal will return TRUE
-- `gt` - if the first value is greater than the second value will return TRUE
-- `ge` - if the first value is greater than or equal to the second value will return TRUE
-- `lt` - if the first value is less than the second value will return TRUE
-- `le` - if the first value is less than or equal to the second value will return TRUE
+また、上の例から、次のステージに進むために、いくつかの比較や値同士のチェックを行っていることがわかります。ここで注目すべきは、さまざまなオプションがあることです。 
 
-We might also use bash scripting to determine information about files and folders, this is known as file conditions. 
+- `eq` - 2つの値が等しい場合に TRUE を返します。
+- `ne` - 2つの値が等しくない場合は、TRUE を返します。
+- `gt` - 1つ目の値が2つ目の値より大きい場合、TRUE を返します。
+- `ge` - 1つ目の値が2つ目の値より大きいか等しい場合は、TRUE を返します。
+- `lt` - 1番目の値が2番目の値よりも小さい場合は、TRUE を返します。
+- `le` - 1つ目の値が2つ目の値より小さいか等しい場合、TRUE を返します。
 
-- `-d file` True if the file is a directory
-- `-e file` True if the file exists
-- `-f file` True if the provided string is a file 
-- `g file` True if the group id is set on a file
-- `-r file` True if the file is readable
-- `-s file` True if the file has a non-zero size
+また、bashスクリプトを使ってファイルやフォルダの情報を判断することもあります。これはファイルコンディションと呼ばれています。
+
+- `-d file` ファイルがディレクトリであれば真。
+- `-e file` ファイルが存在するかどうか。
+- `-f file` 与えられた文字列がファイルである場合に真。
+- `-g file` ファイルにグループ ID が設定されている場合に true となる。
+- `-r file` ファイルが読み取り可能かどうか？
+- `-s file` ファイルサイズが0でない場合に true となる。
 
 ```
 FILE="90DaysOfDevOps.txt"
@@ -168,32 +172,32 @@ fi
 
 ![](Images/Day19_Linux7.png)
 
-Providing we have that file still in our directory we should get the first echo command back. But if we remove that file then we should get the second echo command. 
+そのファイルがまだディレクトリにある場合は、最初のechoコマンドが返ってくるはずです。しかし、そのファイルを削除すると、2番目のechoコマンドが返ってくるはずです。
 
 ![](Images/Day19_Linux8.png)
 
-You can hopefully see how this can be used to save you time when searching through a system for specific items. 
+これで、システムから特定のアイテムを検索する時間を節約できることがおわかりいただけたと思います。
 
-I found this amazing repository on GitHub that has what seems to be an endless amount of scripts [DevOps Bash Tools](https://github.com/HariSekhon/DevOps-Bash-tools/blob/master/README.md)
+GitHubで見つけたこの素晴らしいリポジトリには、数え切れないほどのスクリプトがあります[DevOps Bash Tools](https://github.com/HariSekhon/DevOps-Bash-tools/blob/master/README.md)
 
-### Example 
+### 例
 
-**Scenario**: We have our company called "90DaysOfDevOps" and we have been running a while and now it is time to expand the team from 1 person to lots more over the coming weeks, I am the only one so far that knows the onboarding process so we want to reduce that bottleneck by automating some of these tasks. 
+**シナリオ**。私たちは "90DaysOfDevOps "と呼ばれる会社を持っており、しばらく運営されてきました。
 
-**Requirements**: 
-- A user can be passed in as a command line argument. 
-- A user is created with the name of command line argument. 
-- A password can be parsed in as a command line argument. 
-- The password is set for the user 
-- A message of successful account creation is displayed. 
+**必要条件**:
+- ユーザはコマンドライン引数で渡すことができます。
+- コマンドライン引数で指定した名前でユーザが作成される。
+- パスワードはコマンドライン引数として解析することができます。
+- パスワードがユーザーに設定される。
+- アカウントの作成に成功した旨のメッセージが表示されます。
 
-Let's start with creating our shell script with `touch create_user.sh`
+まず、`touch create_user.sh`でシェルスクリプトを作成することから始めましょう。
 
-Before we move on lets also make this executable using `chmod +x create_user.sh`
+次に進む前に、`chmod +x create_user.sh` を使ってこのスクリプトを実行可能な状態にします。
 
-then we can use `nano create_user.sh` to start editing our script for the scenario we have been set. 
+次に、`nano create_user.sh` を使って、設定したシナリオに沿ったスクリプトの編集を開始します。
 
-We can take a look at the first requirement "A user can be passed in as a command line argument" we can use the following 
+最初の要件である「コマンドライン引数としてユーザーを渡すことができる」については、次のように記述します。
 
 ```
 #! /usr/bin/bash
@@ -204,11 +208,11 @@ echo "$1"
 
 ![](Images/Day19_Linux9.png)
 
-Go ahead and run this using `./create_user.sh Michael` replace Michael with your name when you run the script. 
+`./create_user.sh Michael` を使って実行します。スクリプトを実行するときは、Michael を自分の名前に置き換えてください。
 
 ![](Images/Day19_Linux10.png)
 
-Next up we can take that second requirement "A user is created with the name of command line argument" this can be done with the `useradd` command. The `-m` option is to create the user home directory as /home/username
+次に、2つ目の要件である「コマンドライン引数の名前でユーザーを作成する」ですが、これは `useradd` コマンドで実行できます。m`オプションは、ユーザーのホームディレクトリを/home/usernameとして作成するためのものです。
 
 ```
 #! /usr/bin/bash
@@ -221,13 +225,13 @@ sudo useradd -m "$1"
 
 ```
 
-Warning: If you do not provide a user account name then it will error as we have not filled the variable `$1`
+警告:ユーザーアカウント名を指定しない場合は、変数 `$1` が埋まっていないためエラーになります。
 
-We can then check this account has been created with the `awk -F: '{ print $1}' /etc/passwd` command. 
+このアカウントが作成されたことを確認するには、`awk -F: '{ print $1}' /etc/passwd`コマンドを実行します。
 
 ![](Images/Day19_Linux11.png)
 
-Our next requirement is "A password can be parsed in as a command line argument." First of all we are not going to ever do this in production it is more for us to work through a list of requirements in the lab to understand. 
+次の要件は「コマンドライン引数としてパスワードを解析できること」です。まず第一に、私たちはこれを実稼働させるつもりはありません。これは、研究室で要件のリストを理解するために作業するためです。
 
 ```
 #! /usr/bin/bash
@@ -242,15 +246,15 @@ sudo useradd -m "$1"
 sudo chpasswd <<< "$1":"$2"
 ```
 
-If we then run this script with the two parameters `./create_user.sh 90DaysOfDevOps password`
+このスクリプトを2つのパラメータ `./create_user.sh 90DaysOfDevOps password` を指定して実行すると、次のようになります。
 
-You can see from the below image that we executed our script it created our user and password and then we manually jumped into that user and confirmed with the `whoami` command. 
+下の画像から、スクリプトを実行してユーザーとパスワードを作成し、そのユーザーに手動でジャンプして `whoami` コマンドで確認したことがわかります。
 
 ![](Images/Day19_Linux12.png)
 
-The final requirement is "A message of successful account creation is displayed." We actually already have this in the top line of our code and we can see on the above screen shot that we have `90DaysOfDevOps user account being created` is shown. This was left from our testing with the `$1` parameter. 
+最後の要件は、"アカウント作成成功のメッセージが表示されること "です。実はこれ、コードのトップラインにすでにあり、上のスクリーンショットでは`90DaysOfDevOpsユーザーアカウントが作成されました`と表示されていることがわかります。これは、`$1`パラメータを使用したテストから残されたものです。
 
-Now this script can be used to quickly onboard and set up new users on to our Linux systems. But maybe instead of a few of the historic people having to work through this and then having to get other people their new usernames or passwords we could add some user input that we have previously covered earlier on to capture our variables. 
+このスクリプトは、Linuxシステムに新しいユーザーを素早く取り込み、セットアップするために使用することができます。しかし、数人の歴史的な人がこの作業を行い、他の人に新しいユーザー名やパスワードを取得する代わりに、先に説明したユーザー入力を追加して、変数を取得することができるかもしれません。
 
 ``` 
 #! /usr/bin/bash
@@ -270,29 +274,29 @@ sudo useradd -m $username
 sudo chpasswd <<< $username:$password
 ```
 
-With the steps being more interactive, 
+ステップがよりインタラクティブになったことで 
 
 ![](Images/Day19_Linux14.png)
 
-Just to finish this off maybe we do want to output a successful output to say that our new user account has finished being created.
+最後に、新しいユーザー・アカウントが作成されたことを示す成功出力を出力することもできます。
 
-![](Images/Day19_Linux15.png)
+![](Images/Day19_Linux15.png)。
 
-One thing I did notice was that we are displaying the password on our input we can hide this by using the `-s` flag in the line of code `read -s password`
+一つ気になったのは、入力にパスワードが表示されていることです。これを隠すには、`read -s password`の行で`s`フラグを使用します。
 
 ![](Images/Day19_Linux16.png)
 
-If you do want to delete the user you have created for lab purposes then you can do that with `sudo userdel test_user`
+もし、実験用に作成したユーザーを削除したい場合は、`sudo userdel test_user` を使って削除することができます。
 
-[Example Script](Linux/create-user.sh)
+[スクリプト例](Linux/create-user.sh)
 
-Once again I am not saying this is going to be something that you do create in your day to day but it was something I thought of that would highlight the flexibility of what you could use shell scripting for. 
+もう一度言いますが、これは日常的に作成するようなものではありませんが、シェルスクリプトの柔軟性を強調するために思いついたものです。
 
-Think about any repeatable tasks that you do every day or week or month and how could you better automate that, first option is likely going to be using a bash script before moving into more complex territory. 
+毎日、毎週、毎月行っている繰り返しの作業を考えてみてください。
 
-I have created a very simple bash file that helps me spin up a Kubernetes cluster using minikube on my local machine along with data services and Kasten K10 to help demonstrate the requirements and needs around data management. [Project Pace](https://github.com/MichaelCade/project_pace/blob/main/singlecluster_demo.sh) But I did not feel this appropriate to raise here as we have not covered Kubernetes yet. 
+私は、非常にシンプルなbashファイルを作成しました。このファイルは、私のローカルマシンでminikubeを使用してKubernetesクラスタをスピンアップし、データサービスとKasten K10を使用して、データ管理に関する要件と必要性を示すのに役立ちます。[Project Pace](https://github.com/MichaelCade/project_pace/blob/main/singlecluster_demo.sh) しかし、私たちはまだKubernetesをカバーしていないので、ここで提起するのは適切ではないと思いました。
 
-## Resources 
+## リソース
 
 - [Bash in 100 seconds](https://www.youtube.com/watch?v=I4EWvMFj37g)
 - [Bash script with practical examples - Full Course](https://www.youtube.com/watch?v=TPRSJbtfK4M)
@@ -303,4 +307,4 @@ I have created a very simple bash file that helps me spin up a Kubernetes cluste
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
-See you on [Day20](day20.md)
+ではまた[Day20](day20.md)でお会いしましょう。
