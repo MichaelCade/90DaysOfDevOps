@@ -22,7 +22,7 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 
 ### DevOps là gì và tại sao chúng ta sử dụng nó
 
-- [✔️] ♾️ 2 > [Nhiệm vụ của một kỹ sư DevOps](Days/day02.md)
+- [✔️] ♾️ 2 > [Trách nhiệm của kỹ sư DevOps](Days/day02.md)
 - [✔️] ♾️ 3 > [Vòng đời DevOps - Tập trung vào ứng dụng](Days/day03.md)
 - [✔️] ♾️ 4 > [DevOps & Agile](Days/day04.md)
 - [✔️] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)

@@ -1,5 +1,5 @@
 ---
-title: '#90DaysOfDevOps - Giới thiệu - Day 1'
+title: '#90DaysOfDevOps - Giới thiệu - Ngày 1'
 published: true
 description: 90DaysOfDevOps - Giới thiệu
 tags: 'devops, 90daysofdevops, learning'
