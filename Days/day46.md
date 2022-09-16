@@ -52,7 +52,7 @@ Straight from the tutorial linked above you can see the contents of the file loo
 version: "3.9"
 
 services:
-  DB:
+  db:
     image: mysql:5.7
     volumes:
       - db_data:/var/lib/mysql
