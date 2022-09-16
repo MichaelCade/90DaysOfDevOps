@@ -134,7 +134,7 @@ We can just confirm in Docker Desktop that our volumes are still there though.
 
 ![](Images/Day46_Containers11.png)
 
-If we then want to bring things back up then we can issue the `docker up -d` command from within the same directory and we have our application back up and running.
+If we then want to bring things back up then we can issue the `docker-compose up -d` command from within the same directory and we have our application back up and running.
 
 ![](Images/Day46_Containers12.png)
 
