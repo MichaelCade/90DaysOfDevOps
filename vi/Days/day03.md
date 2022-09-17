@@ -30,7 +30,7 @@ Dù có 1 hay nhiều thành viên tham gia vào dự án, phương pháp tốt 
 
 Ở quá trình này, chúng ta đã có các yêu cầu và đang phát triển ứng dụng. Vấn đề tiếp theo là chúng ta cần đảm bảo rằng mã ứng dụng cần được kiểm thử ở các môi trường khác nhau mà chúng ta có hoặc cụ thể hơn là với ngôn ngữ lập trình chúng ta đã chọn.
 
-Quá trình này cho phép nhóm quản lý chất lượng (QA) kiểm tra lỗi, chúng ta thường sử dụng các containers để mô phỏng môi trường thử nghiệm để có thể giảm thiểu chi phí cho các máy chủ vật lý hoặc cơ sở hạ tầng trên cloud.
+Quá trình này cho phép nhóm quản lý chất lượng (QA) kiểm tra lỗi, chúng ta thường sử dụng các containers để mô phỏng môi trường kiểm thử để có thể giảm thiểu chi phí cho các máy chủ vật lý hoặc cơ sở hạ tầng trên cloud.
 
 Quá trình này có khả năng cao là sẽ được tự động hoá như một phần của quá trình Tích hợp liên tục được nhắc tới sau đây.
 
