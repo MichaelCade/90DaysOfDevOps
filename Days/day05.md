@@ -24,7 +24,7 @@ Now once that planning session's done they're going to go start writing the code
 
 ### Build
 
-This is where we'll kick off the first of our automation processes because we're going to take their code and we're going to build it depending on what language they're using it may be transpiring it or compiling it or it might be creating a docker image from that code either way we're going to go through that process using our ci cd pipeline
+This is where we'll kick off the first of our automation processes because we're going to take their code and we're going to build it depending on what language they're using it may be transpiling it or compiling it or it might be creating a docker image from that code either way we're going to go through that process using our ci cd pipeline
 
 ## Testing
 
