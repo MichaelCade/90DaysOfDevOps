@@ -1,169 +1,173 @@
 ---
-title: '#90DaysOfDevOps - SSH & Web Server - Day 18'
+title: '#90DaysOfDevOps - SSH＆Webサーバー - 18日目'
 published: false
-description: 90DaysOfDevOps - SSH & Web Server
+description: 90DaysOfDevOps - SSH＆Webサーバー
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048733
 ---
-## SSH & Web Server
 
-As we have mentioned throughout you are going to most likely be managing lots of remote Linux servers, because of this, you will need to make sure that your connectivity to these remote servers is secure. In this section, we want to cover some of the basics of SSH that everyone should know that will help you with that secure tunnel to your remote systems. 
+## SSH＆Webサーバー
 
-- Setting up a connection with SSH 
-- Transferring files 
-- Create your private key
+これまで述べてきたように、多くのリモート Linux サーバーを管理することになるので、リモートサーバーへの接続が安全であることを確認する必要があります。このセクションでは、リモートシステムとの安全な接続に役立つ、誰もが知っておくべき SSH の基本をいくつか取り上げます。
 
-### SSH introduction 
+- SSH による接続のセットアップ
+- ファイルの転送
+- 秘密鍵の作成
 
-- Secure shell 
-- Networking Protocol 
-- Allows secure communications 
-- Can secure any network service 
-- Typically used for remote command-line access 
+### SSH の紹介
 
-In our environment, if you have been following along we have been using SSH already but this was all configured and automated through our vagrant configuration so we only had to run `vagrant ssh` and we gained access to our remote virtual machine. 
+- セキュアシェル
+- ネットワークプロトコル
+- 安全な通信を可能にする
+- あらゆるネットワークサービスを保護することができる
+- 一般的にリモートコマンドラインアクセスに使用される
 
-If our remote machine was not on the same system as our workstation and was in a remote location, maybe a cloud-based system or running in a data centre that we could only access over the internet we would need a secure way of being able to access the system to manage it.
+私たちの環境では、すでに SSH を使っていますが、これはすべて vagrant の設定によって自動化されているので、`vagrant ssh` を実行するだけで、リモート仮想マシンにアクセスできるようになります。
 
-SSH provides a secure tunnel between client and server so that nothing can be intercepted by bad actors. 
+もしリモートマシンがワークステーションと同じシステム上になく、遠隔地にある場合、例えばクラウドベースのシステムであったり、インターネット経由でしかアクセスできないデータセンターで動いている場合、システムを管理するために安全にアクセスする方法が必要です。
+
+SSHはクライアントとサーバーの間に安全なトンネルを提供し、悪意ある者に傍受されることがないようにします。
 
 ![](Images/Day18_Linux1.png)
 
-The server has a server-side SSH service always running and listening on a specific TCP port (22). 
+サーバーにはサーバーサイドのSSHサービスが常に稼働しており、特定のTCPポート(22)でリッスンしています。
 
-If we use our client to connect with the correct credentials or SSH key then we gain access to that server. 
+クライアントを使って正しい認証情報またはSSHキーで接続すれば、そのサーバーにアクセスすることができます。
 
-### Adding a bridged network adapter to our system
+### ブリッジネットワークアダプターをシステムに追加する
 
-In order for us to use this with our current virtual box VM, we need to add a bridged network adapter to our machine. 
+現在の仮想マシンでこの機能を使用するには、ブリッジドネットワークアダプターをマシンに追加する必要があります。
 
-Power down your virtual machine, right-click on your machine within Virtual Box and select settings. In the new window then select networking. 
+仮想マシンをパワーダウンし、Virtual Box内でマシンを右クリックし、[設定]を選択します。新しいウィンドウが表示されたら、[ネットワーク]を選択します。
 
 ![](Images/Day18_Linux2.png)
 
-Now power your machine back on and you will now have an IP address on your local machine. You can confirm this with the `ip addr` command. 
+マシンの電源を入れ直すと、ローカルマシンにIPアドレスが設定されているはずです。ip addr`コマンドで確認することができます。
 
-### Confirming SSH server is running
+### SSHサーバーが起動していることを確認する
 
-We know SSH is already configured on our machine as we have been using it with vagrant but we can confirm by running 
+SSHはvagrantで使っているのですでに設定されているはずですが、次のコマンドで確認できます。
 
-`sudo systemctl status ssh`
+sudo systemctl status ssh` を実行して確認します。
 
 ![](Images/Day18_Linux3.png)
 
-If your system does not have the SSH server then you can install it by issuing this command `sudo apt install openssh-server` 
+SSH サーバーがない場合は、`sudo apt install openssh-server` というコマンドでインストールすることができます。
 
-You then want to make sure that our SSH is allowed if the firewall is running. We can do this with `sudo ufw allow ssh` this is not required on our configuration as we automated this with our vagrant provisioning. 
+次に、ファイアウォールが動作している場合に、SSHが許可されることを確認します。これは `sudo ufw allow ssh` で行えますが、Vagrant のプロビジョニングで自動化されているので、この設定には必要ありません。
 
-### Remote Access - SSH Password 
+### リモートアクセス - SSHパスワード 
 
-Now that we have our SSH Server listening out on port 22 for any incoming connection requests and we have added the bridged networking we could use putty or an SSH client on our local machine to connect into our system using SSH. 
+SSHサーバーがポート22をリッスンし、ブリッジネットワークが追加されたので、ローカルマシンでputtyまたはSSHクライアントを使用してSSHを使用してシステムに接続することができるようになりました。
 
 ![](Images/Day18_Linux4.png)
 
-Then hit open, if this is the first time you have connected to this system via this IP address you will get this warning. We know that this is our system so you can choose yes. 
+もし、このIPアドレスでこのシステムに接続するのが初めてなら、この警告が表示されます。私たちのシステムであることがわかりますので、「はい」を選択してください。
 
 ![](Images/Day18_Linux5.png)
 
-We are then prompted for our username (vagrant) and password (default password - vagrant) Below you will see we are now using our SSH client (Putty) to connect to our machine using username and password. 
+ユーザー名(vagrant)とパスワード(デフォルトパスワード - vagrant)の入力を要求されます。
 
 ![](Images/Day18_Linux6.png)
 
-At this stage, we are connected to our VM from our remote client and we can issue our commands on our system. 
+この段階で、リモートクライアントからVMに接続され、システム上でコマンドを発行することができます。
 
-### Remote Access - SSH Key
+### リモートアクセス - SSHキー
 
-The above is an easy way to gain access to your systems however it still relies on username and password, if some malicious actor was to gain access to this information plus the public address or IP of your system then it could be easily compromised. This is where SSH keys are preferred. 
+上記の方法は、システムにアクセスする簡単な方法ですが、ユーザー名とパスワードに依存しているため、悪意のある俳優がこの情報とシステムのパブリックアドレスまたはIPにアクセスした場合、簡単に危険にさらされる可能性があります。そこで、SSH鍵の使用が推奨されます。
 
-SSH Keys means that we provide a key pair so that both the client and server know that this is a trusted device. 
+SSHキーとは、クライアントとサーバーの両方が信頼できるデバイスであることを認識できるように、キーペアを提供することを意味します。
 
-Creating a key is easy. On our local machine (Windows) We can issue the following command in fact if you have an ssh-client installed on any system I believe this same command will work? 
+鍵の作成は簡単です。私たちのローカルマシン(Windows)では、次のコマンドを発行できます。実際、どのシステムにもsshクライアントがインストールされていれば、これと同じコマンドが使えると思います。
 
-`ssh-keygen -t ed25519`
+ssh-keygen -t ed25519` とします。
 
-I am not going to get into what `ed25519` is and means here but you can have a search if you want to learn more about [cryptography](https://en.wikipedia.org/wiki/EdDSA#Ed25519) 
+ed25519`が何なのか、どういう意味なのかはここでは触れませんが、[暗号](https://en.wikipedia.org/wiki/EdDSA#Ed25519)についてもっと知りたければ検索してみてください。
 
 ![](Images/Day18_Linux7.png)
 
-At this point we have our created SSH key stored in `C:\Users\micha/.ssh/`
+この時点で、作成したSSH鍵は `C:\Usersersmicha/.ssh/` に保存されています。
 
-But in order to link this with our Linux VM we need to copy the key. We can do this by using the `ssh-copy-id vagrant@192.168.169.135`
+しかし、これをLinux VMとリンクさせるためには、鍵をコピーする必要があります。これは `ssh-copy-id vagrant@192.168.169.135` を使って行うことができます。
 
-I used Powershell to create my keys on my Windows client but there is no `ssh-copy-id` available here. There are ways in which you can do this on Windows and a small search online will find you an alternative, but I will just use git bash on my Windows machine to make the copy. 
+Windowsクライアントで鍵を作成するのにPowershellを使いましたが、こちらでは`ssh-copy-id`が使えません。Windowsでこれを行う方法はありますし、ネットでちょっと検索すれば代替案が見つかると思いますが、ここではWindowsマシンでgit bashを使ってコピーを作成することにします。
 
 ![](Images/Day18_Linux8.png)
 
-We can now go back to Powershell to test that our connection now works with our SSH Keys and no password is required. 
+Powershellに戻り、SSHキーで接続し、パスワードが不要であることをテストします。
 
 `ssh vagrant@192.168.169.135`
 
 ![](Images/Day18_Linux9.png)
 
-We could secure this further if needed by using a passphrase. We could also go one step further saying that no passwords at all meaning only key pairs over SSH would be allowed. You can make this happen in the following configuration file. 
+必要であれば、パスフレーズを使用することで、さらにセキュリティを高めることができます。さらに一歩進んで、パスワードは一切不要、つまりSSH経由のキーペアのみが許可されるようにすることも可能です。これは次の設定ファイルで実現できます。
 
-`sudo nano /etc/ssh/sshd_config` 
+`sudo nano /etc/ssh/sshd_config` とします。
 
-there is a line in here with `PasswordAuthentication yes` this will be `#` commented out, you should uncomment and change the yes to no. You will then need to reload the SSH service with `sudo systemctl reload sshd` 
+この中に `PasswordAuthentication yes` という行がありますが、これは `#` でコメントアウトされているので、コメントを解除して yes を no に変更する必要があります。それから SSH サービスを `sudo systemctl reload sshd` で再読み込みする必要があります。
 
-## Setting up a Web Server 
+## ウェブサーバのセットアップ
 
-Not specifically related to what we have just done with SSH above but I wanted to include this as this is again another task that you might find a little daunting but it really should not be. 
+上の SSH の話とは特に関係ないのですが、これもまた少し大変な作業だと思うかもしれませんが、そうではありません。
 
-We have our Linux playground VM and at this stage, we want to add an apache webserver to our VM so that we can host a simple website from it that serves out to my home network. Note that this web page will not be accessible from the internet, this can be done but it will not be covered here.  
+Linux プレイグラウンド VM ができましたので、この段階で、apache ウェブサーバを VM に追加して、ホームネットワークに公開する簡単なウェブサイトをホストできるようにしたいと思います。この Web ページはインターネットからアクセスできないことに注意してください。
 
-You might also see this referred to as a LAMP stack. 
+また、LAMPスタックと呼ばれることもあります。
 
-- **L**inux Operating System 
-- **A**pache Web Server 
-- **m**ySQL database 
+- **L**inuxオペレーティングシステム
+- **A**pache ウェブサーバー
+- **M**ySQLデータベース
 - **P**HP
 
-### Apache2 
-Apache2 is an open-source HTTP server. We can install apache2 with the following command.
+### Apache2
 
-`sudo apt-get install apache2`
+Apache2は、オープンソースのHTTPサーバーです。以下のコマンドでapache2をインストールすることができます。
 
-To confirm that apache2 is installed correctly we can run `sudo service apache2 restart`
+`sudo apt-get install apache2` です。
 
-Then using the bridged network address from the SSH walkthrough open a browser and go to that address. Mine was `http://192.168.169.135/`
+apache2が正しくインストールされたことを確認するために、`sudo service apache2 restart`を実行します。
+
+次に、SSHチュートリアルのブリッジされたネットワークアドレスを使って、ブラウザを開き、そのアドレスにアクセスします。私のは `http://192.168.169.135/` でした。
 
 ![](Images/Day18_Linux10.png)
 
-### mySQL
-MySQL is a database in which we will be storing our data for our simple website. To get MySQL installed we should use the following command `sudo apt-get install mysql-server`
+### MySQL
+
+MySQLは、私たちの簡単なウェブサイトのデータを格納するためのデータベースです。MySQLをインストールするには、次のコマンドを使用します： `sudo apt-get install mysql-server`.
 
 ### PHP
-PHP is a server-side scripting language, we will use this to interact with a MySQL database. The final installation is to get PHP and dependencies installed using `sudo apt-get install php libapache2-mod-php php-mysql` 
 
-The first configuration change we want to make it out of the box apache is using index.html and we want it to use index.php instead. 
+PHPはサーバーサイドのスクリプト言語で、MySQLデータベースとのやりとりに使用します。最終的には、`sudo apt-get install php libapache2-mod-php php-mysql` を使って PHP と依存関係をインストールすることになります。
 
-We are going to use `sudo nano /etc/apache2/mods-enabled/dir.conf` and we are going to move index.php to the first item in the list. 
+最初の設定変更は、apacheがindex.htmlを使っているので、index.phpを使うようにすることです。
+
+sudo nano /etc/apache2/mods-enabled/dir.conf` を使って、index.phpをリストの最初のアイテムに移動します。
 
 ![](Images/Day18_Linux11.png)
 
-Restart the apache2 service `sudo systemctl restart apache2`
+apache2 サービスを再起動する `sudo systemctl restart apache2`
 
-Now let's confirm that our system is configured correctly for PHP. Create the following file using this command, this will open a blank file in nano. 
+ここで、PHPが正しく設定されていることを確認しましょう。次のコマンドを使用して、次のファイルを作成します。これは、nano で空のファイルを開きます。
 
-`sudo nano /var/www/html/90Days.php`
+`sudo nano /var/www/html/90Days.php` を作成します。
 
-then copy the following and use control + x to exit and save your file. 
+をコピーし、control + x で終了し、ファイルを保存します。
 
-``` 
+```
 <?php
 phpinfo();
 ?>
 ```
 
-Now navigate to your Linux VM IP again with the additional 90Days.php on the end of the URL. `http://192.168.169.135/90Days.php` you should see something similar to the below if PHP is configured correctly. 
+90Days.php を URL の末尾に追加して、Linux VM の IP アドレスに再度アクセスします。http://192.168.169.135/90Days.php` PHPが正しく設定されていれば、以下のような表示になるはずです。
 
 ![](Images/Day18_Linux12.png)
 
-### WordPress Installation
+### WordPress のインストール
 
-I then walked through this tutorial to get WordPress up on our LAMP stack, some commands are shown below if not shown correctly in the walkthrough [How to install wordpress on Ubuntu with LAMP](https://blog.ssdnodes.com/blog/how-to-install-wordpress-on-ubuntu-18-04-with-lamp-tutorial/)
+このチュートリアルを参考に、LAMP環境下でWordPressをインストールしました。「How to install wordpress on Ubuntu with LAMP」(https://blog.ssdnodes.com/blog/how-to-install-wordpress-on-ubuntu-18-04-with-lamp-tutorial/) に記載されていないコマンドを以下に示します。
 
 
 `sudo mysql -u root -p`
@@ -190,13 +194,13 @@ I then walked through this tutorial to get WordPress up on our LAMP stack, some 
 
 `sudo rm latest.tar.gz`
 
-At this point you are Step 4 in the linked article, you will need to follow the steps to make sure all correct permissions are in place for the WordPress directory. 
+この時点では、リンク先の記事のステップ4です。ステップに従って、WordPressディレクトリに正しいパーミッションがすべて設定されていることを確認する必要があります。
 
-Because this is internal only you do not need to "generate security keys" in this step. Move to Step 5 which is changing the Apache configuration to WordPress. 
+これは内部的なものなので、このステップでは「セキュリティ・キーの生成」は必要ありません。ステップ5に進み、Apacheの設定をWordPressに変更します。
 
-Then providing everything is configured correctly you will be able to access via your internal network address and run through the WordPress installation. 
+あとは、内部ネットワークアドレスでアクセスし、WordPressのインストールを実行します。
 
-## Resources 
+## リソース
 
 - [Client SSH GUI - Remmina](https://remmina.org/)
 - [The Beginner's guide to SSH](https://www.youtube.com/watch?v=2QXkrLVsRmk)
@@ -205,4 +209,4 @@ Then providing everything is configured correctly you will be able to access via
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
-See you on [Day19](day19.md)
+[Day19](day19.md)でお会いしましょう。
