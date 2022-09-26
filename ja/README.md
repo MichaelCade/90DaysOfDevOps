@@ -38,13 +38,13 @@ English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/R
 
 ### Knowing Linux Basics
 
-- [✔️] 🐧 14 > [The Big Picture: DevOps and Linux](Days/day14.md)
-- [✔️] 🐧 15 > [Linux Commands for DevOps (Actually everyone)](Days/day15.md)
-- [✔️] 🐧 16 > [Managing your Linux System, Filesystem & Storage](Days/day16.md)
-- [✔️] 🐧 17 > [Text Editors - nano vs vim](Days/day17.md)
-- [✔️] 🐧 18 > [SSH & Web Server(LAMP)](Days/day18.md)
-- [✔️] 🐧 19 > [Automate tasks with bash scripts](Days/day19.md)
-- [✔️] 🐧 20 > [Dev workstation setup - All the pretty things](Days/day20.md)
+- [✔️] 🐧 14 > [全体像の把握 DevOpsとLinux](Days/day14.md)
+- [✔️] 🐧 15 > [DevOpsのためのLinuxコマンド](Days/day15.md)
+- [✔️] 🐧 16 > [Linuxシステム、ファイルシステム、ストレージの管理](Days/day16.md)
+- [✔️] 🐧 17 > [テキストエディター - nano vs vim](Days/day17.md)
+- [✔️] 🐧 18 > [SSH＆Webサーバー](Days/day18.md)
+- [✔️] 🐧 19 > [bashスクリプトによるタスクの自動化](Days/day19.md)
+- [✔️] 🐧 20 > [開発用ワークステーションのセットアップ - きれいなものばかり](Days/day20.md)
 
 ### Understand Networking
 
