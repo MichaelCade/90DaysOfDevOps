@@ -1,0 +1,237 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmSize": {
+            "type": "string",
+            "defaultValue": "Standard_D2s_v3",
+            "metadata": {
+                "description": "VM size"
+            }
+        },
+        "vmName": {
+            "type": "string",
+            "defaultValue": "90day-vm",
+            "metadata": {
+                "description": "VM name Prefix"
+            }
+        },
+        "vmCount": {
+            "type": "int",
+            "defaultValue": 4,
+            "metadata": {
+                "description": "Number of VMs"
+            }
+        },
+        "adminUsername": {
+            "type": "string",
+            "metadata": {
+                "description": "Admin username"
+            }
+        },
+        "adminPassword": {
+            "type": "securestring",
+            "metadata": {
+                "description": "Admin password"
+            }
+        }
+    },
+    "variables": {
+        "vmExtensionName": "customScriptExtension",
+        "nic": "90day-vm-nic",
+        "virtualNetworkNames": "[createArray('90day-vm-vnet01','90day-vm-vnet01','90day-vm-vnet2','90day-vm-vnet3')]",
+        "virtualNetworkNamestbc": "[createArray('90day-vm-vnet01','90day-vm-vnet2','90day-vm-vnet3')]",
+        "VNetPrefixes":"[createArray('10.60','10.62','10.63')]",
+        "nsgNames": "[createArray('90day-vm-nsg01','90day-vm-nsg01','90day-vm-nsg2','90day-vm-nsg3')]",
+        "nsgNamestbc": "[createArray('90day-vm-nsg01','90day-vm-nsg2','90day-vm-nsg3')]",
+        "subnetName": "subnet",
+        "subnetRefs": "[createArray(0,1,0,0)]",
+        "computeApiVersion": "2018-06-01",
+        "networkApiVersion": "2018-08-01"
+    },
+    "resources": [
+        {
+            "name": "[concat(parameters('vmName'),copyIndex())]",
+            "copy": {
+                "name": "VMcopy",
+                "count": "[parameters('vmCount')]"
+            },
+            "type": "Microsoft.Compute/virtualMachines",
+            "apiVersion": "[variables('computeApiVersion')]",
+            "location": "[resourceGroup().location]",
+            "comments": "Creating VMs",
+            "dependsOn": [
+                "[concat(variables('nic'),copyIndex())]"
+            ],
+            "properties": {
+                "osProfile": {
+                    "computerName": "[concat(parameters('vmName'),copyIndex())]",
+                    "adminUsername": "[parameters('adminUsername')]",
+                    "adminPassword": "[parameters('adminPassword')]",
+                    "windowsConfiguration": {
+                        "provisionVmAgent": "true"
+                    }
+                },
+                "hardwareProfile": {
+                    "vmSize": "[parameters('vmSize')]"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "MicrosoftWindowsServer",
+                        "offer": "WindowsServer",
+                        "sku": "2019-Datacenter",
+                        "version": "latest"
+                    },
+                    "osDisk": {
+                        "createOption": "fromImage"
+                    },
+                    "dataDisks": []
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "properties": {
+                                "primary": true
+                            },
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', concat(variables('nic'),copyIndex()))]"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "name": "[concat(concat(parameters('vmName'),copyIndex()), '/', variables('vmExtensionName'))]",
+            "copy": {
+                "name": "Extopy",
+                "count": "[parameters('vmCount')]"
+            },
+            "apiVersion": "[variables('computeApiVersion')]",
+            "location": "[resourceGroup().location]",
+            "dependsOn": [
+                "[concat('Microsoft.Compute/virtualMachines/', concat(parameters('vmName'),copyIndex()))]"
+            ],
+            "properties": {
+                "publisher": "Microsoft.Compute",
+                "type": "CustomScriptExtension",
+                "typeHandlerVersion": "1.7",
+                "autoUpgradeMinorVersion": true,
+                "settings": {
+                    "commandToExecute": "powershell.exe Install-WindowsFeature -name Web-Server -IncludeManagementTools && powershell.exe remove-item 'C:\\inetpub\\wwwroot\\iisstart.htm' && powershell.exe Add-Content -Path 'C:\\inetpub\\wwwroot\\iisstart.htm' -Value $('Hello World from ' + $env:computername)"
+              }
+            }
+        },
+        {
+            "type": "Microsoft.Network/virtualNetworks",
+            "name": "[variables('virtualNetworkNamestbc')[copyIndex()]]",
+            "copy": {
+                "name": "VnetCopy",
+                "count": "[length(variables('virtualNetworkNamestbc'))]"
+            },
+            "apiVersion": "[variables('networkApiVersion')]",
+            "location": "[resourceGroup().location]",
+            "comments": "Virtual Network",
+            "properties": {
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "[concat(variables('VNetPrefixes')[copyIndex()],'.0.0/22')]"
+                    ]
+                },
+                "subnets": [
+                    {
+                        "name": "[concat(variables('subnetName'),'0')]",
+                        "properties": {
+                            "addressPrefix": "[concat(variables('VNetPrefixes')[copyIndex()],'.0.0/24')]"
+                        }
+                    }
+                ]
+                  
+            }
+        },
+        {   "type": "Microsoft.Network/virtualNetworks/subnets",
+            "apiVersion": "[variables('networkApiVersion')]",
+            "location": "[resourceGroup().location]",
+            "comments": "Virtual Network Subnet for VNet01",
+            "name": "90day-vm-vnet01/subnet1",
+            "properties": {
+                "addressPrefix": "10.60.1.0/24"
+            },
+            "dependsOn": [
+                "Microsoft.Network/virtualNetworks/90day-vm-vnet01"
+            ]
+        },
+        {
+            "name": "[concat(variables('nic'),copyIndex())]",
+            "copy":{
+                "name": "nicCopy",
+                "count": "[parameters('vmCount')]"
+            },
+            "type": "Microsoft.Network/networkInterfaces",
+            "apiVersion": "[variables('networkApiVersion')]",
+            "location": "[resourceGroup().location]",
+            "comments": "Primary NIC",
+            "dependsOn": [
+                "[variables('nsgNames')[copyindex()]]",
+                "[concat('Microsoft.Network/virtualNetworks/', variables('virtualNetworkNames')[copyIndex()])]"
+            ],
+            "properties": {
+                "ipConfigurations": [
+                    {
+                        "name": "ipconfig1",
+                        "properties": {
+                            "subnet": {
+                                "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkNames')[copyIndex()], concat(variables('subnetName'),variables('subnetRefs')[copyindex()]))]"
+                            },
+                            "privateIPAllocationMethod": "Dynamic"
+                        }
+                    }
+                ],
+                "networkSecurityGroup": {
+                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('nsgNames')[copyIndex()])]"
+                }
+            }
+        },
+        {
+            "name": "[variables('nsgNamestbc')[copyIndex()]]",
+            "copy": {
+                "name": "nsgCopy",
+                "count": 3
+            },
+            "type": "Microsoft.Network/networkSecurityGroups",
+            "apiVersion": "[variables('networkApiVersion')]",
+            "location": "[resourceGroup().location]",
+            "comments": "Network Security Group (NSG) for Primary NIC",
+            "properties": {
+                "securityRules": [
+                    {
+                        "name": "default-allow-rdp",
+                        "properties": {
+                            "priority": 1000,
+                            "sourceAddressPrefix": "*",
+                            "protocol": "Tcp",
+                            "destinationPortRange": "3389",
+                            "access": "Allow",
+                            "direction": "Inbound",
+                            "sourcePortRange": "*",
+                            "destinationAddressPrefix": "*"
+                        }
+                    },
+                    {
+                        "name": "default-allow-http",
+                        "properties": {
+                            "priority": 1100,
+                            "sourceAddressPrefix": "*",
+                            "protocol": "Tcp",
+                            "destinationPortRange": "80",
+                            "access": "Allow",
+                            "direction": "Inbound",
+                            "sourcePortRange": "*",
+                            "destinationAddressPrefix": "*"
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "outputs": {}
+}
