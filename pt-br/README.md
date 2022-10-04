@@ -5,25 +5,25 @@
  <img src="../logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
-English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md) | [Wersja Polska](pl/README.md) | [Tiếng Việt](vi/README.md)
+Versão em Portugês | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md) | [Wersja Polska](pl/README.md) | [Tiếng Việt](vi/README.md)
 
-This repository is used to document my journey on getting a better foundational knowledge of "DevOps". I will be starting this journey on the 1st January 2022 but the idea is that we take 90 days which just so happens to be January 1st to March 31st.
+Este repositório é usado para documentar minha jornada para obter um melhor conhecimento básico de "DevOps". Estarei começando esta jornada no dia 1º de janeiro de 2022, mas a ideia é que levemos 90 dias, o que acontece de 1º de janeiro a 31 de março.
 
-The reason for documenting these days is so that others can take something from it and also hopefully enhance the resources.
+A razão para documentar esses dias é para que outros possam tirar algum proveito disso e também melhorar os recursos.
 
-The goal is to take 90 days, 1 hour each a day, to tackle over 13 areas of "DevOps" to a foundational knowledge.
+O objetivo é levar 90 dias, 1 hora por dia, para abordar mais de 13 áreas de "DevOps" para um conhecimento básico.
 
-This will **not cover all things** "DevOps" but it will cover the areas that I feel will benefit my learning and understanding overall.
+Isso **não abrangerá todas as coisas** sobre "DevOps", mas abrangerá as áreas que considero que beneficiarão meu aprendizado e compreensão em geral.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N33YRCS)
 
-The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1)
+A maneira mais rápida de entrar em contato será via Twitter, meu contato é [@MichaelCade1](https://twitter.com/MichaelCade1)
 
-## Progress
+## Progresso
 
-- [✔️] ♾️ 1 > [Introduction](Days/day01.md)
+- [✔️] ♾️ 1 > [Introdução](Days/day01.md)
 
-### What is and why do we use DevOps
+### O que é e por que usamos DevOps
 
 - [✔️] ♾️ 2 > [Responsibilities of a DevOps Engineer](Days/day02.md)
 - [✔️] ♾️ 3 > [DevOps Lifecycle - Application Focused](Days/day03.md)
@@ -31,7 +31,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)
 - [✔️] ♾️ 6 > [DevOps - The real stories](Days/day06.md)
 
-### Learning a Programming Language
+### Aprendendo uma linguagem de programação
 
 - [✔️] ⌨️ 7 > [The Big Picture: DevOps & Learning a Programming Language](Days/day07.md)
 - [✔️] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day08.md)
@@ -41,7 +41,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] ⌨️ 12 > [Getting user input with Pointers and a finished program](Days/day12.md)
 - [✔️] ⌨️ 13 > [Tweet your progress with our new App](Days/day13.md)
 
-### Knowing Linux Basics
+### Conhecendo o básico do Linux
 
 - [✔️] 🐧 14 > [The Big Picture: DevOps and Linux](Days/day14.md)
 - [✔️] 🐧 15 > [Linux Commands for DevOps (Actually everyone)](Days/day15.md)
@@ -51,7 +51,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] 🐧 19 > [Automate tasks with bash scripts](Days/day19.md)
 - [✔️] 🐧 20 > [Dev workstation setup - All the pretty things](Days/day20.md)
 
-### Understand Networking
+### Compreendendo redes
 
 - [✔️] 🌐 21 > [The Big Picture: DevOps and Networking](Days/day21.md)
 - [✔️] 🌐 22 > [The OSI Model - The 7 Layers](Days/day22.md)
@@ -61,7 +61,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] 🌐 26 > [Building our Lab](Days/day26.md)
 - [✔️] 🌐 27 > [Getting Hands-On with Python & Network](Days/day27.md)
 
-### Stick to one Cloud Provider
+### Atenha-se a um provedor de nuvem
 
 - [✔️] ☁️ 28 > [The Big Picture: DevOps & The Cloud](Days/day28.md)
 - [✔️] ☁️ 29 > [Microsoft Azure Fundamentals](Days/day29.md)
@@ -71,7 +71,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] ☁️ 33 > [Microsoft Azure Networking Models + Azure Management](Days/day33.md)
 - [✔️] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](Days/day34.md)
 
-### Use Git Effectively
+### Use o Git de forma eficaz
 
 - [✔️] 📚 35 > [The Big Picture: Git - Version Control](Days/day35.md)
 - [✔️] 📚 36 > [Installing & Configuring Git](Days/day36.md)
@@ -101,7 +101,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
 - [✔️] ☸ 55 > [State and Ingress in Kubernetes](Days/day55.md)
 
-### Learn Infrastructure as Code
+### Aprenda infraestrutura como código
 
 - [✔️] 🤖 56 > [The Big Picture: IaC](Days/day56.md)
 - [✔️] 🤖 57 > [An intro to Terraform](Days/day57.md)
@@ -111,7 +111,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] 🤖 61 > [Kubernetes & Multiple Environments](Days/day61.md)
 - [✔️] 🤖 62 > [Testing, Tools & Alternatives](Days/day62.md)
 
-### Automate Configuration Management
+### Automatize o gerenciamento de configuração
 
 - [✔️] 📜 63 > [The Big Picture: Configuration Management](Days/day63.md)
 - [✔️] 📜 64 > [Ansible: Getting Started](Days/day64.md)
@@ -121,7 +121,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] 📜 68 > [Tags, Variables, Inventory & Database Server config](Days/day68.md)
 - [✔️] 📜 69 > [All other things Ansible - Automation Controller, AWX, Vault](Days/day69.md)
 
-### Create CI/CD Pipelines
+### Crie pipelines de CI/CD
 
 - [✔️] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
 - [✔️] 🔄 71 > [What is Jenkins?](Days/day71.md)
@@ -131,7 +131,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] 🔄 75 > [GitHub Actions Overview](Days/day75.md)
 - [✔️] 🔄 76 > [ArgoCD Overview](Days/day76.md)
 
-### Monitoring, Log Management, and Data Visualisation
+### Monitoramento, gerenciamento de log e visualização de dados
 
 - [✔️] 📈 77 > [The Big Picture: Monitoring](Days/day77.md)
 - [✔️] 📈 78 > [Hands-On Monitoring Tools](Days/day78.md)
@@ -141,7 +141,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] 📈 82 > [EFK Stack](Days/day82.md)
 - [✔️] 📈 83 > [Data Visualisation - Grafana](Days/day83.md)
 
-### Store & Protect Your Data
+### Armazene e proteja seus dados
 
 - [✔️] 🗃️ 84 > [The Big Picture: Data Management](Days/day84.md)
 - [✔️] 🗃️ 85 > [Data Services](Days/day85.md)
@@ -151,16 +151,16 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] 🗃️ 89 > [Disaster Recovery](Days/day89.md)
 - [✔️] 🗃️ 90 > [Data & Application Mobility](Days/day90.md)
 
-## License
+## Licença
 
-Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
+Amparado sob: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-This work is licensed under a
+Esta obra está licenciada sob
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
 
-## Star History
+## Histórico de estrelas
 
 [![Star History Chart](https://api.star-history.com/svg?repos=MichaelCade/90DaysOfDevOps&type=Timeline)](https://star-history.com/#MichaelCade/90DaysOfDevOps&Timeline)
 
