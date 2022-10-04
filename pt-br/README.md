@@ -25,11 +25,11 @@ A maneira mais rápida de entrar em contato será via Twitter, meu contato é [@
 
 ### O que é e por que usamos DevOps
 
-- [✔️] ♾️ 2 > [Responsibilities of a DevOps Engineer](Days/day02.md)
-- [✔️] ♾️ 3 > [DevOps Lifecycle - Application Focused](Days/day03.md)
+- [✔️] ♾️ 2 > [Responsabilidades de um engenheiro de DevOps](Days/day02.md)
+- [✔️] ♾️ 3 > [Ciclo de vida do DevOps - Foco no aplicativo](Days/day03.md)
 - [✔️] ♾️ 4 > [DevOps & Agile](Days/day04.md)
-- [✔️] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)
-- [✔️] ♾️ 6 > [DevOps - The real stories](Days/day06.md)
+- [✔️] ♾️ 5 > [Planejamento > Código > Build > Teste > Release > Deploy > Operação > Monitoramento >](Days/day05.md)
+- [✔️] ♾️ 6 > [DevOps - As histórias reais](Days/day06.md)
 
 ### Aprendendo uma linguagem de programação
 
