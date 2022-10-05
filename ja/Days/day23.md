@@ -1,119 +1,120 @@
 ---
-title: '#90DaysOfDevOps - Network Protocols - Day 23'
+title: '#90DaysOfDevOps - ネットワークプロトコル - 23日目'
 published: false
-description: 90DaysOfDevOps - Network Protocols
+description: 90DaysOfDevOps - ネットワークプロトコル
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048704
 ---
-## Network Protocols 
+## ネットワークプロトコル
 
-A set of rules and messages that form a standard. An Internet Standard. 
+標準を形成する一連の規則とメッセージ。
+インターネット標準の一つ。
 
-- ARP - Address Resolution Protocol 
+- ARP - アドレス解決プロトコル
 
-If you want to get really into the weeds on ARP you can read the Internet Standard here. [RFC 826](https://datatracker.ietf.org/doc/html/rfc826) 
+ARPについてもっと詳しく知りたい方は、こちらのインターネット標準をご覧ください。[RFC 826](https://datatracker.ietf.org/doc/html/rfc826)
 
-Connects IP addresses to fixed physical machine addresses, also known as MAC addresses across a layer 2 network. 
+レイヤ2ネットワークにおいて、IPアドレスをMACアドレスと呼ばれる固定物理マシンアドレスに接続する。
 
 ![](Images/Day23_Networking1.png)
 
-- FTP - File Transfer Protocol 
+- FTP - ファイル転送プロトコル
 
-Allows for the transfer of files from source to destination. Generally this process is authenticated but there is the ability if configured to use anonymous access. You will more frequently now see FTPS which provides SSL/TLS connectivity to FTP servers from the client for better security. This protocol would be found in the Application layer of the OSI Model. 
+送信元から送信先へのファイル転送を可能にする。一般に、このプロセスは認証されますが、匿名アクセスを使用するように設定されている場合は、その機能があります。現在では、より高いセキュリティのために、クライアントからFTPサーバーにSSL/TLS接続を提供するFTPSを目にすることが多くなっています。このプロトコルは、OSIモデルのアプリケーション層に位置づけられます。
 
 ![](Images/Day23_Networking2.png)
 
-- SMTP - Simple Mail Transfer Protocol 
+- SMTP - シンプルなメール転送プロトコル
 
-Used for email transmission, mail servers use SMTP to send and recieve mail messages. You will still find even with Microsoft 365 that the SMTP protocol is used for the same purpose. 
+電子メールの送信に使用され、メールサーバーはメールメッセージの送受信にSMTPを使用します。Microsoft 365 でも、SMTP プロトコルが同じ目的で使用されていることがわかります。
 
 ![](Images/Day23_Networking3.png)
 
-- HTTP - Hyper Text Transfer Protocol 
+- HTTP - ハイパーテキスト転送プロトコル
 
-HTTP is the foundation of the internet and browsing content. Giving us the ability to easily access our favourite websites. HTTP is still heavily used but HTTPS is more so used or should be used on most of your favourite sites. 
+HTTPは、インターネットとコンテンツ閲覧の基礎となるものです。お気に入りのWebサイトに簡単にアクセスできる機能を提供します。HTTPは今でもよく使われていますが、HTTPSはより多く使われており、お気に入りのサイトのほとんどで使われているはずです。
 
 ![](Images/Day23_Networking4.png)
 
-- SSL - Secure Sockets Layer | TLS - Transport Layer Security 
+- SSL - セキュア・ソケット・レイヤー｜TLS - トランスポート・レイヤー・セキュリティ
 
-TLS has taken over from SSL, TLS is a [Cryptographic Protocol]() that provides security communications over a network. It can and will be found in mail, im and other applications but most commonly it is used to secure HTTPS.  
+TLSはSSLから引き継がれたもので、ネットワーク上でセキュリティ通信を提供する[暗号プロトコル]()です。TLSは、メール、im、その他のアプリケーションで使用されますが、最も一般的なのはHTTPSを保護するために使用されることです。
 
 ![](Images/Day23_Networking5.png)
 
-- HTTPS - HTTP secured with SSL/TLS 
+- HTTPS - SSL/TLSで保護されたHTTP
 
-An extension of HTTP, used for secure communications over a network, HTTPS is encrypted with TLS as mentioned above. The focus here was to bring authenticaion, privacy and integrity whilst data is exchanged between hosts. 
+ネットワーク上で安全な通信を行うために使用されるHTTPの拡張機能で、HTTPSは前述のようにTLSで暗号化されています。ホスト間でデータをやり取りする際に、信頼性、プライバシー、完全性を確保することに主眼が置かれています。
 
 ![](Images/Day23_Networking6.png)
 
-- DNS - Domain Name System 
+- DNS - ドメインネームシステム
 
-The DNS is used to map human-freindly domain names for example we all know [google.com](https://google.com) but if you were to open a browser and put in [8.8.8.8](https://8.8.8.8) you would get Google as we pretty much know it. However good luck trying to remember all of the IP addresses for all of your websites where some of them we even use google to find information. 
+DNSは、人間が自由に使えるドメイン名をマッピングするために使用されます。例えば、私たちは皆[google.com](https://google.com)を知っていますが、もしブラウザを開いて[8.8.8]（https://8.8.8.8）を入力すれば、私たちがよく知るGoogleが得られるでしょう。しかし、我々は情報を見つけるためにGoogleを使用しても、それらのいくつかは、すべてのWebサイトのIPアドレスを覚えている幸運。
 
-This is where DNS comes in, it ensures that hosts, services and other resources are reachable. 
+DNSは、ホスト、サービス、およびその他のリソースが到達可能であることを保証するために、ここで登場します。
 
-On all hosts, if they require internet connectivity then they must have DNS to be able to resolve those domain names. DNS is an area you could spend Days and Years on learning. I would also say from experience that DNS is mostly the common cause of all errors when it comes to Networking. Not sure if a Network engineer would agree there though. 
+すべてのホストで、それらがインターネット接続を必要とする場合、彼らはこれらのドメイン名を解決することができるようにDNSを持っている必要があります。DNSは、何日も何年もかけて学ぶべき分野です。また、経験上、DNSはネットワークに関わるすべてのエラーの共通原因です。ネットワーク・エンジニアがそう思うかどうかは分かりませんが。
 
 ![](Images/Day23_Networking7.png)
 
-- DHCP - Dynamic Host Configuration Protocol 
+- DHCP - ダイナミックホストコンフィギュレーションプロトコル
 
-We have discussed a lot about protocols that are required to make our hosts work, be it accessing the internet or transferring files between each other. 
+これまで、インターネットへのアクセスやファイル転送など、ホストを動作させるために必要なプロトコルについて、たくさん説明してきました。
 
-There are 4 things that we need on every host for it to be able to achieve both of those tasks. 
+これらのタスクを達成するために、すべてのホストに必要なものが4つあります。
 
-- IP Address 
-- Subnet Mask 
-- Default Gateway 
-- DNS 
+- IPアドレス
+- サブネットマスク
+- デフォルトゲートウェイ
+- DNS
 
-We have covered IP address being a unique address for your host on the network it resides, we can think of this as our house number. 
+IPアドレスは、ホストが存在するネットワーク上の一意のアドレスであり、私たちの家の番号のように考えることができます。
 
-Subnet mask we will cover shortly, but you can think of this as post code or zip code. 
+サブネットマスクについては、後ほど説明しますが、郵便番号のようなものだと考えてください。
 
-Default gateway is the IP of our router generally on our network providing us with that Layer 3 connectivity. You could think of this as the single road that allows us out of our street.  
+デフォルトゲートウェイは、レイヤー3接続を提供するネットワーク上のルーターのIPです。これは、道路から外に出るための一本道と考えることができます。
 
-Then we have DNS as we just covered to help us convert complicated public IP addresses to more suitable and rememberable domain names. Maybe we can think of this as the giant sorting office to make sure we get the right post. 
+DNSは、複雑なパブリックIPアドレスを、より適切で覚えやすいドメイン名に変換するためのものです。これは、正しい郵便物を受け取るための巨大な仕分け局と考えることができるかもしれません。
 
-As I said each host requires these 4 things, if you have 1000 or 10,000 hosts then that is going to take you a very long time to determine each one of these individually. This is where DHCP comes in and allows you to determine a scope for your network and then this protocol will distribute to all available hosts in your network. 
+各ホストにはこの4つが必要ですが、もし1000台や1万台のホストがある場合、それぞれを個別に決定するには非常に長い時間がかかります。そこでDHCPが登場し、ネットワークのスコープを決定し、このプロトコルがネットワーク内の利用可能なすべてのホストに配布されるようになります。
 
-Another example, you head into a coffee shop, grab a coffee and sit down with your laptop or your phone lets call that your host. You connect your host to the coffee shop wifi and you gain access to the internet, messages and mail start pinging through and you can navigate web pages and social media. When you connected to the coffee shop wifi your machine would have picked up a DHCP address either from a dedicated DHCP server or most likely from the router also handling DHCP. 
+別の例として、あなたはコーヒーショップに向かい、コーヒーを飲んで、ラップトップや携帯電話を持って座り、それをあなたのホストと呼ぶことができます。コーヒーショップの無線LANにホストを接続すると、インターネットにアクセスできるようになり、メッセージやメールがPing送信され、Webページやソーシャルメディアを操作できるようになります。コーヒーショップの無線LANに接続すると、あなたのマシンは、専用のDHCPサーバから、または最も可能性の高いルータからもDHCPを処理するDHCPアドレスを拾っただろう。
 
 ![](Images/Day23_Networking8.png)
 
-### Subnetting 
+### サブネット
 
-A subnet is a logical subdivision of an IP network.
+サブネットは、IP ネットワークを論理的に細分化したものです。
 
-Subnets break large networks into smaller, more manageable networks that run more efficiently. 
+サブネットは、大規模なネットワークを、より効率的に動作する、より小さな、管理しやすいネットワークに分割します。
 
-Each subnet is a logical subdivision of the bigger network. Connected devices with enough subnet share common IP address identifier, enabling them to communicate with each other. 
+各サブネットは、より大きなネットワークの論理的な小区画です。十分なサブネットに接続されたデバイスは、共通のIPアドレス識別子を共有し、互いに通信できるようになります。
 
-Routers manage communication between subnets. 
+ルーターは、サブネット間の通信を管理します。
 
-The size of a subnet depends on the connectivity requirements and the network technology used. 
+サブネットのサイズは、接続要件と使用するネットワーク技術に依存します。
 
-An organisation is responsible for determining its number and size of the subnets within the limits of address space
-available, and the details remain local to that organisation. Subnets can also be segmented into even smaller subnets for things like Point to Point links, or for sub networks supporting a few devices. 
+サブネットのサイズは、接続要件と使用するネットワーク技術に依存します。
+サブネットのサイズと数は、接続要件と使用するネットワーク技術によって異なります。サブネットは、Point to Pointリンクや、少数のデバイスをサポートするサブネットワークなどのために、さらに小さなサブネットにセグメント化することも可能です。
 
-Among other advantages, segmenting large
-networks into subnets enables IP address
-reallocation and relieves network congestion, streamlining, network communication and efficiency. 
+特に、大規模なネットワークをサブネットに分割することで
+サブネットに分割することで、IPアドレスの再割り当てが可能になり
+を再割り当てし、ネットワークの混雑を緩和し、ネットワークの通信を合理化し、効率化することができます。
 
-Subnets can also improve network security.
-If a section of a network is compromised, it can be quarantined, making it difficult for bad actors to move around the larger network. 
+また、サブネットはネットワークの安全性を向上させることができます。
+ネットワークの一部が侵害された場合、その部分を隔離することができ、悪質な業者が大規模なネットワークを動き回ることを困難にすることができます。
 
 ![](Images/Day23_Networking9.png)
 
 
-## Resources 
+## リソース
 
 - [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 - [Practical Networking](http://www.practicalnetworking.net/)
 
-See you on [Day 24](day24.md)
+[24日目](day24.md)でお会いしましょう。
 
 
