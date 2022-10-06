@@ -51,9 +51,7 @@ Tương tự như với việc cài đặt Go, chúng ta sẽ tải xuống và 
 
 ![](Images/Day8_Go8.png)
 
-Bạn có thể nhận được một cửa sổ như dưới đây, hãy đọc nó nếu bạn muốn và sau đó nhấn Có và tin tưởng các tác giả (Tôi không chịu trách nhiệm sau này nếu bạn bắt đầu mở những thứ bạn không tin tưởng!)
-
-![](Images/Day08_Go14.png)
+Bạn có thể nhận được một cửa sổ hỏi về việc tin tưởng tác giả của thư mục, hãy đọc nó nếu bạn muốn, nhấn Có và tin tưởng các tác giả (Tôi không chịu trách nhiệm sau này nếu bạn bắt đầu mở những thứ bạn không tin tưởng!)
 
 Bây giờ bạn sẽ thấy ba thư mục chúng ta cũng đã tạo trước đó và những gì chúng ta muốn làm bây giờ là nhấp chuột phải vào thư mục src và tạo một thư mục mới có tên là `Hello`
 

@@ -59,15 +59,15 @@ Cần phải **biên dịch** mã trước khi chạy mã. Có 3 cách để là
 
 Trước khi đến giai đoạn biên dịch ở trên, chúng ta cần xem xét những gì nhận được sau khi cài đặt Go.
 
-Khicài đặt Go vào ngày 8, chúng ta đã cài đặt một thứ được gọi là công cụ Go bao gồm một số chương trình cho phép xây dựng và xử lý các tệp mã nguồn Go của mình. Một trong số những công cụ đó là `Go`
+Khi cài đặt Go vào ngày 8, chúng ta đã cài đặt một thứ được gọi là công cụ Go bao gồm một số chương trình cho phép xây dựng và xử lý các tệp mã nguồn Go của mình. Một trong số những công cụ đó là `go`
 
 Điều đáng chú ý là bạn có thể cài đặt thêm các công cụ không có trong bản cài đặt Go tiêu chuẩn.
 
-Nếu bạn mở dấu nhắc lệnh của mình và nhập `go`, bạn sẽ thấy giống như hình ảnh dưới đây và sau đó bạn sẽ thấy "Additional Help Topics" bên dưới và không cần phải lo lắng về những chúng.
+Nếu bạn mở dấu nhắc lệnh của mình và nhập `go`, bạn sẽ thấy như hình ảnh dưới đây và sau đó bạn sẽ thấy "một số những câu lệnh khác" phía bên dưới, tuy nhiên không chưa cần phải quan tâm tới chúng.
 
 ![](Images/Day10_Go6.png)
 
-Bạn cũng có thể nhớ rằng chúng ta đã sử dụng ít nhất hai trong số các công cụ này vào ngày 8.
+Bạn cũng có thể nhớ rằng chúng ta đã sử dụng ít nhất hai công cụ vào ngày 8.
 
 ![](Images/Day10_Go7.png)
 
