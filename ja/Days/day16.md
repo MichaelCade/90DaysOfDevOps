@@ -1,165 +1,166 @@
 ---
-title: '#90DaysOfDevOps - Managing your Linux System, Filesystem & Storage - Day 16'
+title: '#90DaysOfDevOps - Linuxシステム、ファイルシステム、ストレージの管理 - 16日目'
 published: false
-description: '90DaysOfDevOps - Managing your Linux System, Filesystem & Storage'
+description: '90DaysOfDevOps - Linuxシステム、ファイルシステム、ストレージの管理'
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048702
 ---
-## Managing your Linux System, Filesystem & Storage
 
-So far we have had a brief overview of Linux and DevOps and then we got our lab environment set up using vagant [(Day 14)](day14.md), we then touched on a small portion of commands that will be in your daily toolkit when in the terminal and getting things done [(Day 15)](day15.md). 
+## Linuxシステム、ファイルシステム、ストレージの管理
 
-Here we are going to look into three key areas of looking after your Linux systems with updates, installing software, understanding what system folders are used for and we will also take a look at storage. 
+これまで、Linux と DevOps の簡単な概要を説明し、vagrant を使ってラボ環境をセットアップしました [Day 14](day14.md) 。そして、ターミナルで物事を成し遂げるときに毎日使うツールキットのコマンドのごく一部に触れました [Day 15](day15.md) 。
 
-## Managing Ubuntu & Software
+ここでは、Linux システムのアップデート、ソフトウェアのインストール、システムフォルダの用途の理解、そしてストレージの3つの重要な領域について見ていきたいと思います。
 
-The first thing we are going to look at is how we update our operating system. Most of you will be familiar with this process in a Windows OS and macOS, this looks slightly different on a Linux desktop and server.  
+## Ubuntuとソフトウェアの管理
 
-We are going to be looking at the apt package manager, this is what we are going to use on our Ubuntu VM for updates and software installation. 
+まず最初に、オペレーティング・システムのアップデート方法について説明します。Windows OS や macOS では、このプロセスはよく知られていますが、Linux デスクトップやサーバでは少し違ってきます。
 
-Generally, at least on dev workstations, I run this command to make sure that I have the latest available updates from the central repositories, before any software installation.  
+ここでは、aptパッケージマネージャについて見ていきます。これは、Ubuntu VMでアップデートとソフトウェアのインストールに使用するものです。
+
+一般的に、少なくとも開発用ワークステーションでは、ソフトウェアをインストールする前に、中央リポジトリから最新の利用可能なアップデートがあることを確認するために、このコマンドを実行することにしています。
 
 `sudo apt-get update`
 
 ![](Images/Day16_Linux1.png)
 
-Now we have an updated Ubuntu VM with the latest OS updates installed. We now want to get some software installed here. 
+これで、最新のOSアップデートがインストールされたUbuntuのVMができました。ここで、いくつかのソフトウェアをインストールしたいと思います。
 
-Let's choose `figlet` which is a program that generates text banners.
+ここでは、テキストバナーを生成するプログラムである `figlet` を選択しましょう。
 
-If we type `figlet` in our terminal you are going to see that we do not have it installed on our system. 
+ターミナルで`figlet`と入力すると、システムにインストールされていないことがわかります。
 
 ![](Images/Day16_Linux2.png)
 
-You will see from the above though that it does give us some `apt` install options that we could try. This is because in the default repositories there is a program called figlet.  Let's try `sudo apt install figlet`
+しかし、上記のように `apt` のインストールオプションが表示されるので、それを試してみることができます。これは、デフォルトのレポジトリに figlet というプログラムがあるからです。 それでは、`sudo apt install figlet`を試してみましょう。
 
 ![](Images/Day16_Linux3.png)
 
-We can now use our `figlet` app as you can see below. 
+これで、以下のように `figlet` アプリを使用することができます。
 
 ![](Images/Day16_Linux4.png)
 
-If we want to remove that or any of our software installations we can also do that via the `apt` package manager. 
+もし、インストールしたソフトウェアを削除したい場合は、`apt`パッケージマネージャを使用して削除することもできます。
 
 `sudo apt remove figlet`
 
 ![](Images/Day16_Linux5.png)
 
-There are third party repositories that we can also add to our system, the ones we have access to out of the box are the Ubuntu default repositories. 
+サードパーティのリポジトリもありますが、Ubuntuのデフォルトのリポジトリにアクセスすることができます。
 
-If for example, we wanted to install vagrant on our Ubuntu VM we would not be able to right now and you can see this below on the first command issued. We then add the key to trust the HashiCorp repository, then add the repository to our system.  
+例えば、UbuntuのVMにvagrantをインストールしたい場合、今はできません。次に、HashiCorpのリポジトリを信頼するためのキーを追加し、リポジトリをシステムに追加します。
 
 ![](Images/Day16_Linux6.png)
 
-Once we have the HashiCorp repository added we can go ahead and run `sudo apt install vagrant` and get vagrant installed on our system. 
+HashiCorpのリポジトリを追加したら、`sudo apt install vagrant`を実行して、システムにvagrantをインストールします。
 
 ![](Images/Day16_Linux7.png)
 
-There are so many options when it comes to software installation, different options for package managers, built into Ubuntu we could also use snaps for our software installations. 
+ソフトウェアのインストールには多くの選択肢があり、Ubuntuに組み込まれているパッケージマネージャやスナップを使ってインストールすることもできます。
 
-Hopefully, this gives you a feel about how to manage your OS and software installations on Linux. 
+LinuxでOSやソフトウェアのインストールを管理する方法について感じていただければ幸いです。
 
-## File System Explained 
+## ファイルシステムの説明
 
-Linux is made up of configuration files, if you want to change anything then you change these configuration files. 
+Linuxは設定ファイルで構成されており、何かを変更したい場合は、この設定ファイルを変更することになります。
 
-On Windows, you have C: drive and that is what we consider the root. On Linux we have `/` this is where we are going to find the important folders on our Linux system. 
+Windowsでは、C:ドライブがあり、これがルートとみなされます。Linuxでは、`/`があり、ここにLinuxシステム上の重要なフォルダがあります。
 
 ![](Images/Day16_Linux8.png)
 
-- `/bin` - Short for binary, the bin folder is where our binaries that your system needs, executables and tools will mostly be found here.  
+- `/bin` - バイナリーの略で、システムが必要とするバイナリー、実行ファイル、ツールはほとんどここにあります。
 
 ![](Images/Day16_Linux9.png)
 
-- `/boot` - All the files your system needs to boot up. How to boot up, and what drive to boot from. 
+- `/boot` - システムが起動するために必要なすべてのファイル。起動の仕方、起動するドライブ。
 
 ![](Images/Day16_Linux10.png)
 
-- `/dev` - You can find device information here, this is where you will find pointers to your disk drives `sda` will be your main OS disk. 
+- `/dev` - デバイスの情報はここにあります。ここにはディスクドライブのポインタがあり、`sda`はOSのメインディスクになります。
 
 ![](Images/Day16_Linux11.png)
 
-- `/etc` Likely the most important folder on your Linux system, this is where the majority of your configuration files. 
+- `/etc` - Linuxシステムで最も重要なフォルダであり、設定ファイルの大部分がここにあります。
 
 ![](Images/Day16_Linux12.png)
 
-- `/home` - this is where you will find your user folders and files. We have our vagrant user folder. This is where you will find your `Documents` and `Desktop` folders that we worked in for the commands section. 
+- `/home` - この中にユーザーフォルダとファイルがあります。私たちのvagrantユーザーフォルダがあります。ここには、コマンドのセクションで作業した `Documents` と `Desktop` フォルダがあります。
 
 ![](Images/Day16_Linux13.png)
 
-- `/lib` - We mentioned that `/bin` is where our binaries and executables live, `/lib` is where you will find the shared libraries for those. 
+- `/lib` - バイナリや実行ファイルがあるのが `/bin` で、それらの共有ライブラリがあるのが `/lib` であると述べました。
 
 ![](Images/Day16_Linux14.png)
 
-- `/media` - This is where we will find removable devices. 
+- `/media` - ここで、リムーバブルデバイスを見つけることができます。
 
 ![](Images/Day16_Linux15.png)
 
-- `/mnt` - This is a temporary mount point. We will cover more here in the next storage section. 
+- `/mnt` - これは一時的なマウントポイントです。ここについては、次のストレージのセクションで詳しく説明します。
 
 ![](Images/Day16_Linux16.png)
 
-- `/opt` - Optional software packages. You will notice here that we have some vagrant and virtual box software stored here. 
+- `/opt` - オプションのソフトウェアパッケージです。ここに、vagrantやvirtual boxのソフトウェアが格納されていることに気づきます。
 
 ![](Images/Day16_Linux17.png)
 
-- `/proc` - Kernel & process information, similar to `/dev`
+- `/proc` - カーネルとプロセスの情報、`/dev`に似ている。
 
 ![](Images/Day16_Linux18.png)
 
-- `/root` - To gain access you will need to sudo into this folder. The home folder for root. 
+- `/root` - アクセスするには、このフォルダにsudoする必要があります。rootのホームフォルダです。
 
 ![](Images/Day16_Linux19.png)
 
-- `/run` -Placeholder for application states.
+- `/run` - アプリケーションの状態を表すプレースホルダーです。
 
 ![](Images/Day16_Linux20.png)
 
-- `/sbin` - Sudo bin, similar to the bin folder but these tools are intended for elevated superuser privileges on the system.
+- `/sbin` - Sudo binは、binフォルダと似ていますが、これらのツールは、システム上で昇格したスーパーユーザー特権を対象としています。
 
 ![](Images/Day16_Linux21.png)
 
-- `/tmp` - temporary files. 
+- `/tmp` - 一時ファイル
 
 ![](Images/Day16_Linux22.png)
 
-- `/usr` - If we as a standard user have installed software packages it would generally be installed in the `/usr/bin` location. 
+- `/usr` - 私たち標準的なユーザーがソフトウェアパッケージをインストールした場合、一般的には `/usr/bin` の場所にインストールされます。
 
 ![](Images/Day16_Linux23.png)
 
-- `/var` - Our applications get installed in a `bin` folder. We need somewhere to store all of the log files this is `/var`   
+- `/var` - 私たちのアプリケーションは `bin` フォルダにインストールされます。すべてのログファイルを保存する場所が必要で、これは `/var` です。
 
 ![](Images/Day16_Linux24.png)
 
-## Storage 
+## ストレージ
 
-When we come to a Linux system or any system we might want to know the available disks and how much free space we have on those disks. The next few commands will help us identify and use and manage storage. 
+Linux システムやその他のシステムで、利用可能なディスクとそのディスクにある空き容量を知りた い場合があります。次のいくつかのコマンドは、ストレージを識別し、使用し、管理するのに役立ちます。
 
-- `lsblk` List Block devices. `sda` is our physical disk and then `sda1, sda2, sda3` are our partitions on that disk. 
+- `lsblk` - ブロックデバイスをリストアップします。`sda` は物理ディスク、そして `sda1、sda2、sda3` はそのディスク上のパーティションです。
 
 ![](Images/Day16_Linux25.png)
 
-- `df` gives us a little more detail about those partitions, total, used and available. You can parse other flags here I generally use `df -h` to give us a human output of the data. 
+- `df` - パーティション、合計、使用、使用可能について、もう少し詳しく教えてくれます。他のフラグを指定することもできますが、一般的には `df -h` を使ってデータを人間的に出力しています。
 
 ![](Images/Day16_Linux26.png)
 
-If you were adding a new disk to your system and this is the same in Windows you would need to format the disk in disk management, in the Linux terminal you can do this by using the `sudo mkfs -t ext4 /dev/sdb` with sdb relating to our newly added disk. 
+Linuxのターミナルでは、`sudo mkfs -t ext4 /dev/sdb` を使って、sdbを新しく追加したディスクに関連付けながらフォーマットすることができます。
 
-We would then need to mount our newly formatted disk so that it was useable. We would do this in our `/mnt` folder previously mentioned and we would create a directory there with `sudo mkdir NewDisk` we would then use `sudo mount /dev/sdb newdisk` to mount the disk to that location. 
+次に、新しくフォーマットしたディスクを使用できるようにマウントする必要があります。これを前述の `/mnt` フォルダに行い、そこに `sudo mkdir NewDisk` でディレクトリを作成し、 `sudo mount /dev/sdb newdisk` でその場所にディスクをマウントします。
 
-It is also possible that you will need to unmount storage from your system safely vs just pulling it from the configuration. We can do this with `sudo umount /dev/sdb` 
+また、システムからストレージを安全にアンマウントする必要がある場合もあります。これを行うには、`sudo umount /dev/sdb` とします。
 
-If you did not want to unmount that disk and you were going to be using this disk for a database or some other persistent use case then you want it to be there when you reboot your system. For this to happen we need to add this disk to our `/etc/fstab` configuration file for it to persist, if you don't it won't be useable when the machine reboots and you would manually have to go through the above process. The data will still be there on the disk but it won't automount unless you add the configuration to this file. 
+ディスクをアンマウントせず、このディスクをデータベースやその他の永続的な用途に使用する場合、システムを再起動したときにディスクが存在するようにしたいものです。そのためには、このディスクを `/etc/fstab` 設定ファイルに追加して持続させる必要があります。そうしないと、マシンを再起動したときに使用できなくなり、手動で上記のプロセスを実行しなければならなくなります。データはディスク上に残りますが、このファイルに設定を追加しない限り、オートマウン トは行われません。
 
-Once you have edited the `fstab` configuration file you can check your workings with `sudo mount -a` if no errors then your changes will now be persistent across restarts. 
+`fstab` 設定ファイルを編集したら、`sudo mount -a` で動作を確認できます。もしエラーがなければ、変更した内容は再起動しても持続します。
 
-We will cover how you would edit a file using a text editor in a future session. 
+テキストエディタを使ってファイルを編集する方法については、次回のセッションで説明します。
 
-## Resources 
+## リソース
 
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
-See you on [Day17](day17.md)
+[Day17](day17.md)でお会いしましょう。
