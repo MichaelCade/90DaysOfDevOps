@@ -1,168 +1,168 @@
 ---
-title: '#90DaysOfDevOps - Python for Network Automation - Day 25'
+title: '#90DaysOfDevOps - Pythonによるネットワーク自動化 - 25日目'
 published: false
-description: 90DaysOfDevOps - Python for Network Automation
+description: 90DaysOfDevOps - Pythonによるネットワーク自動化
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1049038
 ---
-## Python for Network Automation 
+## Pythonによるネットワーク自動化
 
-Python is the standard language used for automated network operations. 
+Pythonはネットワーク運用の自動化に使われる標準的な言語です。
 
-Whilst it is not only for network automation it seems to be everywhere when you are looking for resources and as previously mentioned if it's not Python then it's generally Ansible which is written also in Python. 
+Pythonはネットワークの自動化だけではありませんが、リソースを探しているときはどこにでもあるように見えますし、前述のようにPythonでない場合は、一般的に同じくPythonで書かれたAnsibleです。
 
-I think I have mentioned this already but during the "Learn a programming language" section I chose Golang over Python for reasons around my company are developing in Go so that was a good reason for me to learn but if that was not the case then Python would have taken that time. 
+これはすでに述べたと思いますが、「プログラミング言語を学ぶ」のセクションで、私はPythonではなくGolangを選びました。私の会社がGoで開発しているので、学ぶのに良い理由でしたが、そうでなければ、Pythonにその時間を取られていたことでしょう。
 
-- Readability and ease of use - It seems that Python seems to just make sense. There doesn't seem to be the requirements around `{}` in the code to start and end blocks. Couple this with a strong IDE like VS Code you have a pretty easy start when wanting to run some python code. 
+- 読みやすさと使いやすさ - Pythonは理にかなっているように思えます。ブロックの開始と終了のために、コードに `{}` のような要件はないようです。VS Codeのような強力なIDEと組み合わせると、Pythonのコードを実行したいときにかなり簡単に始めることができます。
 
-Pycharm might be another IDE worth mentioning here. 
+Pycharmは、ここで言及する価値のある別のIDEかもしれません。
 
-- Libraries - The extensibility of Python is the real gold mine here, I mentioned before that this is not just for Network Automation but in fact, there are libraries plenty for all sorts of devices and configurations. You can see the vast amount here [PyPi](https://pypi.python.org/pypi)
+- ライブラリ - Pythonの拡張性は、ここでの本当の金鉱です。私は、これがネットワークオートメーションのためだけではないことを前に述べましたが、実際には、あらゆる種類のデバイスと構成のための多くのライブラリが存在します。PyPi](https://pypi.python.org/pypi)でその膨大な量を見ることができます。
 
-When you want to download the library to your workstation, then you use a tool called `pip` to connect to PyPI and download it locally. Network vendors such as Cisco, Juniper, and Arista developed libraries to facilitate access to their devices.
+ライブラリをワークステーションにダウンロードしたい場合は、`pip`というツールを使ってPyPIに接続し、ローカルにダウンロードします。Cisco、Juniper、Aristaのようなネットワークベンダーは、彼らのデバイスへのアクセスを容易にするためにライブラリを開発しました。
 
-- Powerful & Efficient - Remember during the Go days I went through the "Hello World" scenario and we went through I think 6 lines of code? In Python it is
+- パワフルで効率的 - Goの時代に "Hello World "のシナリオで、確か6行のコードを書いたのを覚えていますか？Pythonでは、次のようになります。
 
 ``` 
 print('hello world')
 ```
 
-Put all of the above points together and it should be easy to see why Python is generally mentioned as the de-facto tool when working on automating. 
+上記の点をまとめると、なぜPythonが自動化に取り組む際のデファクト・ツールとして一般的に言及されるのか、容易に理解できるはずです。
 
-I think it's important to note that it's possible that several years back there were scripts that might have interacted with your network devices to maybe automate the backup of configuration or to gather logs and other insights into your devices. The automation we are talking about here is a little different and that's because the overall networking landscape has also changed to suit this way of thinking better and enabled more automation. 
+数年前までは、ネットワークデバイスと対話し、設定のバックアップを自動化したり、デバイスに関するログやその他の洞察を収集したりするスクリプトがあったかもしれない、ということは重要だと思います。私達がここで話している自動化は少し違います。それは全体的なネットワーク環境もこの考え方に合うように変化し、より多くの自動化が可能になったからです。
 
-- Software-Defined Network - SDN Controllers take the responsibility of delivering the control plane configuration to all devices on the network, meaning just a single point of contact for any network changes, no longer having to telnet or SSH into every device and also relying on humans to do this which has a repeatable chance of failure or misconfiguration. 
+- Software-Defined Network - SDN コントローラはネットワーク上の全てのデバイスにコントロールプレーンのコンフィグレーションを提供するという責任を負います。
 
-- High-Level Orchestration - Go up a level from those SDN controllers and this allows for orchestration of service levels then there is the integration of this orchestration layer into your platforms of choice, VMware, Kubernetes, Public Clouds etc. 
+- ハイレベルなオーケストレーション - SDN コントローラから一段上がって、サービスレベルのオーケストレーションが可能になり、このオーケストレーションレイヤーを VMware、Kubernetes、パブリッククラウド等、あなたの選んだプラットフォームに統合することができるようになります。
 
-- Policy-based management - What do you want to have? What is the desired state? You describe this and the system has all the details on how to figure it out to become the desired state. 
+- ポリシーベースの管理 - どのような状態にしたいのか？どのような状態が望ましいのか？これを記述すると、システムはそれをどのように把握し、望ましい状態にするのか、すべての詳細を持っています。
 
-## Setting up the lab environment
+## ラボ環境のセットアップ
 
-Not everyone has access to physical routers, switches and other networking devices. 
+誰もが物理的なルータやスイッチ、その他のネットワーク機器にアクセスできるわけではありません。
 
-I wanted to make it possible for us to look at some of the tooling pre-mentioned but also get hands-on and learn how to automate the configuration of our networks. 
+私は、前述のツールのいくつかを見るだけでなく、実際に手を動かして、ネットワークの設定を自動化する方法を学ぶことができるようにしたいと思いました。
 
-When it comes to options there are a few that we can choose from.  
+オプションとして、以下のようなものがあります。 
 
 - [GNS3 VM](https://www.gns3.com/software/download-vm)
 - [Eve-ng](https://www.eve-ng.net/)
-- [Unimus](https://unimus.net/) Not a lab environment but an interesting concept. 
+- [Unimus](https://unimus.net/) ラボ環境ではありませんが、興味深いコンセプトです。
 
-We will build our lab out using [Eve-ng](https://www.eve-ng.net/) as mentioned before you can use a physical device but to be honest a virtual environment means that we can have a sandbox environment to test many different scenarios. Plus being able to play with different devices and topologies might be of interest. 
+[Eve-ng](https://www.eve-ng.net/)を使ってラボを構築します。前述のように物理デバイスを使うこともできますが、正直なところ、仮想環境は、さまざまなシナリオをテストするサンドボックス環境を提供することを意味します。さらに、さまざまなデバイスやトポロジーで遊ぶことができるのも魅力的です。
 
-We are going to do everything on EVE-NG with the community edition. 
+EVE-NGでは、コミュニティ版ですべてを行う予定です。
 
-### Getting started 
+### はじめに
 
-The community edition comes in ISO and OVF formats for [download](https://www.eve-ng.net/index.php/download/)
+コミュニティ版にはISOとOVFのフォーマットがあり、[ダウンロード](https://www.eve-ng.net/index.php/download/)することができます。
 
-We will be using the OVF download but with the ISO there is the option to build out on a bare metal server without the need of a hypervisor. 
+今回はOVFを使用しますが、ISOではハイパーバイザーを使用せずにベアメタルサーバーでビルドアウトすることも可能です。
 
-![](Images/Day25_Networking1.png)
+このチュートリアルは、以下のような内容になっています。
 
-For our walkthrough, we will be using VMware Workstation as I have a license via my vExpert but you can equally use VMware Player or any of the other options mentioned in the [documentation](https://www.eve-ng.net/index.php/documentation/installation/system-requirement/)Unfortunately we cannot use our previously used Virtual box! 
+このウォークスルーでは、私はvExpertのライセンスを持っているので、VMware Workstationを使用しますが、VMware Playerや[ドキュメント](https://www.eve-ng.net/index.php/documentation/installation/system-requirement/)に記載されている他のオプションも同様に使用できます。残念ながら、以前使用したVirtual boxは使用できません!
 
-This is also where I had an issue with GNS3 with Virtual Box even though supported. 
+GNS3がサポートされていても、Virtual Boxで問題があったのはここでも同じです。
 
 [Download VMware Workstation Player - FREE](https://www.vmware.com/uk/products/workstation-player.html) 
 
 [VMware Workstation PRO](https://www.vmware.com/uk/products/workstation-pro.html) Also noted that there is an evaluation period for free! 
 
-### Installation on VMware Workstation PRO 
+### VMware Workstation PROへのインストール 
 
-Now we have our hypervisor software downloaded and installed, and we have the EVE-NG OVF downloaded. If you are using VMware Player please let me know if this process is the same. 
+ハイパーバイザーソフトウェアのダウンロードとインストール、そしてEVE-NG OVFのダウンロードが完了しました。VMware Playerをお使いの方は、この手順が同じかどうか教えてください。
 
-We are now ready to get things configured. 
+これで、設定を行う準備が整いました。
 
-Open VMware Workstation and then select `file` and `open` 
+VMware Workstationを起動し、`ファイル`と`開く`を選択します。
 
 ![](Images/Day25_Networking2.png)
 
-When you download the EVE-NG OVF Image it is going to be within a compressed file. Extract the contents out into its folder so it looks like. 
+EVE-NG OVF Imageをダウンロードすると、圧縮されたファイルに入っているはずです。そのフォルダに中身を取り出すと、以下のようになります。
 
 ![](Images/Day25_Networking3.png)
 
-Navigate to the location that you downloaded the EVE-NG OVF image to and begin the import. 
+EVE-NG OVF イメージをダウンロードした場所に移動し、インポートを開始します。
 
-Give it a recognisable name and store the virtual machine somewhere on your system. 
+わかりやすい名前を付けて、仮想マシンをシステムのどこかに保存してください。
 
 ![](Images/Day25_Networking4.png)
 
-When the import is complete increase the number of processors to 4 and the memory allocated to 8 GB. (This should be the case after import with the latest version if not then edit VM settings)
+インポートが完了したら、プロセッサの数を 4 に、割り当てられたメモリを 8GB に増やします。(最新バージョンでインポートした場合は、このようになるはずです。）
 
-Also, make sure the Virtualise Intel VT-x/EPT or AMD-V/RVI checkbox is enabled. This option instructs VMware workstation to pass the virtualisation flags to the guest OS (nested virtualisation) This was the issue I was having with GNS3 with Virtual Box even though my CPU allows this. 
+また、Virtualise Intel VT-x/EPT or AMD-V/RVIチェックボックスが有効であることを確認してください。このオプションは、VMware Workstationに仮想化フラグをゲストOSに渡すように指示します（ネストされた仮想化）これは、私のCPUがこれを可能にするにもかかわらず、Virtual BoxでGNS3が抱えていた問題でした。
 
 ![](Images/Day25_Networking5.png)
 
-### Power on & Access 
+### パワーオン＆アクセス
 
-Sidenote & Rabbit hole: Remember I mentioned that this would not work with VirtualBox! Well yeah had the same issue with VMware Workstation and EVE-NG but it was not the fault of the virtualisation platform! 
+補足＆うさぎの穴。VirtualBoxでは動作しないと書いたのを覚えていますか？VMware WorkstationとEVE-NGで同じ問題が発生しましたが、仮想化プラットフォームのせいではありませんでした!
 
-I have WSL2 running on my Windows Machine and this seems to remove the capability of being able to run anything nested inside of your environment. I am confused as to why the Ubuntu VM does run as it seems to take out the Intel VT-d virtualisation aspect of the CPU when using WSL2. 
+私はWindowsマシンでWSL2を走らせていますが、これはあなたの環境の中でネストされたものを走らせる能力を取り除くようです。WSL2 を使用すると、CPU の Intel VT-d 仮想化機能が削除されるようなので、Ubuntu VM が実行されるのはなぜか、混乱しています。
 
-To resolve this we can run the following command on our Windows machine and reboot the system, note that whilst this is off then you will not be able to use WSL2. 
+これを解決するには、Windowsマシンで次のコマンドを実行し、システムを再起動します。
 
 `bcdedit /set hypervisorlaunchtype off`
 
-When you want to go back and use WSL2 then you will need to run this command and reboot. 
+WSL2に戻りたい場合は、このコマンドを実行し、再起動する必要があります。
 
 `bcdedit /set hypervisorlaunchtype auto`
 
-Both of these commands should be ran as administrator! 
+これらのコマンドは両方とも管理者として実行する必要があります。
 
-Ok back to the show, You should now have a powered-on machine in VMware Workstation and you should have a prompt looking similar to this. 
+これでVMware Workstationに電源が入り、次のようなプロンプトが表示されるはずです。
 
 ![](Images/Day25_Networking6.png)
 
-On the prompt above you can use: 
+上のプロンプトで、あなたは使うことができます。
 
 username = root
 password = eve
 
-You will then be asked to provide the root password again, this will be used to SSH into the host later on.  
+このパスワードは後でホストに SSH 接続するために使用されます。
 
-We then can change the hostname. 
+これで、ホスト名を変更することができます。
 
 ![](Images/Day25_Networking7.png)
 
-Next, we define a DNS Domain Name, I have used the one below but I am not sure if this will need to be changed later on. 
+次に、DNS Domain Nameを定義します。私は以下のものを使用しましたが、これは後で変更する必要があるかどうかはわかりません。
 
 ![](Images/Day25_Networking8.png)
 
-We then configure networking, I am selecting static so that the IP address given will be persistent after reboots. 
+次にネットワークの設定を行いますが、私は与えられたIPアドレスが再起動後も持続するように静的を選択しています。
 
 ![](Images/Day25_Networking9.png)
 
-The final step, provide a static IP address from a network that is reachable from your workstation. 
+最後のステップでは、ワークステーションから到達可能なネットワークから固定IPアドレスを提供します。
 
 ![](Images/Day25_Networking10.png)
 
-There are some additional steps here where you will have to provide a subnet mask for your network, default gateway and DNS. 
+ここで、ネットワークのサブネットマスク、デフォルトゲートウェイ、DNSを指定する手順が追加されます。
 
-Once finished it will reboot, when it is back up you can take your static IP address and put this into your browser. 
+終了すると再起動します。再起動後、固定IPアドレスを取得し、これをブラウザに入力することができます。
 
 ![](Images/Day25_Networking11.png)
 
-The default username for the GUI is `admin` and the password is `eve` while the default username for SSH is `root` and the password is `eve` but this would have been changed if you changed during the setup. 
+GUIのデフォルトのユーザー名は `admin` でパスワードは `eve` です。SSHのデフォルトのユーザー名は `root` でパスワードは `eve` ですが、セットアップ中に変更した場合は、このユーザー名も変更されているはずです。
 
 ![](Images/Day25_Networking12.png)
 
-I chose HTML5 for the console vs native as this will open a new tab in your browser when you are navigating through different consoles. 
+コンソールにHTML5を選択したのは、異なるコンソールをナビゲートするときに、ブラウザで新しいタブを開くためです。
 
-Next up we are going to: 
+次は、次のことを行います。
 
-- Install the EVE-NG client pack 
-- Load some network images into EVE-NG
-- Build a Network Topology 
-- Adding Nodes 
-- Connecting Nodes 
-- Start building Python Scripts 
-- Look at telnetlib, Netmiko, Paramiko and Pexpect
+- EVE-NGクライアントパックをインストールします
+- EVE-NGにいくつかのネットワークイメージをロードします
+- ネットワークトポロジーの構築
+- ノードの追加
+- ノードの接続
+- Pythonスクリプトのビルドを開始
+- telnetlib、Netmiko、Paramiko、Pexpectを見ます
 
-## Resources 
+## リソース
 
 - [Free Course: Introduction to EVE-NG](https://www.youtube.com/watch?v=g6B0f_E0NMg)
 - [EVE-NG - Creating your first lab](https://www.youtube.com/watch?v=9dPWARirtK8)
@@ -171,4 +171,4 @@ Next up we are going to:
 - [Practical Networking](http://www.practicalnetworking.net/)
 - [Python Network Automation](https://www.youtube.com/watch?v=xKPzLplPECU&list=WL&index=126)
 
-See you on [Day 26](day26.md)
+[26日目](day26.md)でお会いしましょう。
