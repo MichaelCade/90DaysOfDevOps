@@ -27,7 +27,7 @@ As a DevOps engineer you won't be programming the application but having a good 
 
 At a very high level, you are going to need to know how the application is configured to talk to all of its required services or data services and then also sprinkle a requirement of how this can or should be tested.
 
-The application will need to be deployed somewhere, lets's keep it generally simple here and make this a server, doesn't matter where but a server. This is then expected to be accessed by the customer or end user depending on the application that has been created.
+The application will need to be deployed somewhere, let's keep it generally simple here and make this a server, doesn't matter where but a server. This is then expected to be accessed by the customer or end user depending on the application that has been created.
 
 This server needs to run somewhere, on-premises, in a public cloud, serverless (Ok I have gone too far, we won't be covering serverless but its an option and more and more enterprises are heading this way) Someone needs to create and configure these servers and get them ready for the application to run. Now, this element might land to you as a DevOps engineer to deploy and configure these servers.
 
