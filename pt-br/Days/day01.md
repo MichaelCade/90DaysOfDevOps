@@ -1,4 +1,3 @@
-
 ---
 title: '#90DaysOfDevOps - Introdução - Dia 1'
 published: true
