@@ -6,7 +6,7 @@ tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048699
-date: '2022-04-17T21:15:34Z'
+date: '2022-10-13T11:17:00Z'
 ---
 
 ## Responsabilidades de um engenheiro de DevOps
