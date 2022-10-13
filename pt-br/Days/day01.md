@@ -6,7 +6,7 @@ tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048731
-date: '2022-04-17T10:12:40Z'
+date: '2022-13-13T10:12:40Z'
 ---
 
 ## Introdução - Dia 1
