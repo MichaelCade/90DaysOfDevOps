@@ -40,7 +40,7 @@ Branching allows for two code streams for the same app as we stated above. But w
 
 ![](Images/Day35_Git4.png)
 
-Now, this same easy but merging can be complicated because you could have a team working on the free edition and you could have another team working on the premium paid-for version and what if both change code that affects aspects of the overall code. Maybe a variable gets updated and breaks something. Then you have a conflict that breaks one of the features. Version Control cannot fix the conflicts that are down to you. But version control allows this to be easily managed.
+Now, this seems easy but merging can be complicated because you could have a team working on the free edition and you could have another team working on the premium paid-for version and what if both change code that affects aspects of the overall code. Maybe a variable gets updated and breaks something. Then you have a conflict that breaks one of the features. Version Control cannot fix the conflicts that are down to you. But version control allows this to be easily managed.
 
 The primary reason if you have not picked up so far for version control, in general, is the ability to collaborate. The ability to share code amongst developers and when I say code as I said before more and more we are seeing much more use cases for other reasons to use source control, maybe its a joint presentation you are working on with a colleague or a 90DaysOfDevOps challenge where you have the community offering their corrections and updates throughout the project.
 
