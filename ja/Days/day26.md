@@ -1,47 +1,47 @@
 ---
-title: '#90DaysOfDevOps - ラボの構築 - 26日目'
+title: '#90DaysOfDevOps - Building our Lab - Day 26'
 published: false
-description: 90DaysOfDevOps - ラボの構築
+description: 90DaysOfDevOps - Building our Lab
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048762
 ---
-## ラボの構築
+## Building our Lab
 
-EVE-NGを使用してエミュレートしたネットワークのセットアップを継続し、いくつかのデバイスをデプロイして、これらのデバイスの設定を自動化する方法について考え始めたいと考えています。[Day 25](day25.md) では、VMware Workstation を使用してマシンに EVE-NG をインストールする方法について説明しました。
+We are going to continue our setup of our emulated network using EVE-NG and then hopefully get some devices deployed and start thinking about how we can automate the configuration of these devices. On [Day 25](day25.md) we covered the installation of EVE-NG onto our machine using VMware Workstation. 
 
-### EVE-NG クライアントのインストール
+### Installing EVE-NG Client
 
-デバイスにSSHするときにどのアプリケーションを使うかを選択できるクライアントパックもあります。また、リンク間のパケットキャプチャのためにWiresharkをセットアップします。お使いのOS（Windows、macOS、Linux）に対応したクライアントパックを入手することができます。
+There is also a client pack that allows us to choose which application is used when we SSH to the devices. It will also set up Wireshark for packet captures between links. You can grab the client pack for your OS (Windows, macOS, Linux). 
 
 [EVE-NG Client Download](https://www.eve-ng.net/index.php/download/)
 
 ![](Images/Day26_Networking1.png)
 
-クイックヒント: クライアントとしてLinuxを使用している場合、この[クライアントパック](https://github.com/SmartFinn/eve-ng-integration)があります。
+Quick Tip: If you are using Linux as your client then there is this [client pack](https://github.com/SmartFinn/eve-ng-integration).
 
-インストールは簡単で、デフォルトのままにしておくことをお勧めします。
+The install is a straightforward next,next and I would suggest leaving the defaults. 
 
-### ネットワークイメージの取得
+### Obtaining network images
 
-このステップは挑戦でした、私はいくつかのリソースへのリンクとルータとスイッチの画像をダウンロードしながら、それらをアップロードする方法と場所を教えてくれる最後にリンクするいくつかのビデオに従いました。
+This step has been a challenge, I have followed some videos that I will link at the end that links to some resources and downloads for our router and switch images whilst telling us how and where to upload them. 
 
-これは、私は教育目的のためにすべてを使用していることに注意することが重要です。私は、ネットワークベンダから公式の画像をダウンロードすることをお勧めします。
+It is important to note that I using everything for education purposes. I would suggest downloading official images from network vendors. 
 
 [Blog & Links to YouTube videos](https://loopedback.com/2019/11/15/setting-up-eve-ng-for-ccna-ccnp-ccie-level-studies-includes-multiple-vendor-node-support-an-absolutely-amazing-study-tool-to-check-out-asap/) 
 
 [How To Add Cisco VIRL vIOS image to Eve-ng](https://networkhunt.com/how-to-add-cisco-virl-vios-image-to-eve-ng/)
 
-全体的にこのステップは少し複雑で、もっと簡単にできるかもしれませんが、上記のブログとビデオはEVE-NGボックスにイメージを追加するプロセスを説明しています。
+Overall the steps here are a little complicated and could be much easier but the above blogs and videos walk through the process of adding the images to your EVE-NG box. 
 
-私はFileZillaを使用して、SFTP経由でqcow2をVMに転送しました。
+I used FileZilla to transfer the qcow2 to the VM over SFTP. 
 
-このラボでは、Cisco vIOS L2（スイッチ）とCisco vIOS（ルーター）が必要です。
+For our lab, we need Cisco vIOS L2 (switches) and Cisco vIOS (router) 
 
-### ラボの作成
+### Create a Lab
 
-EVE-NGのWebインターフェイス内で、新しいネットワークトポロジーを作成します。4台のスイッチと、外部ネットワークへのゲートウェイとして機能する1台のルータを用意する予定です。
+Inside the EVE-NG web interface, we are going to create our new network topology. We will have four switches and one router that will act as our gateway to outside networks. 
 
 | Node        | IP Address  |
 | ----------- | ----------- |
@@ -51,50 +51,50 @@ EVE-NGのWebインターフェイス内で、新しいネットワークトポ�
 | Switch3     | 10.10.88.113|
 | Switch4     | 10.10.88.114|
 
-#### EVE-NGにノードを追加する
+#### Adding our Nodes to EVE-NG
 
-EVE-NGに初めてログインすると、以下のような画面が表示されますので、まずは最初のラボを作成してみたいと思います。
+When you first log in to EVE-NG you will see a screen like below, we want to start by creating our first lab. 
 
 ![](Images/Day26_Networking2.png)
 
-研究室の名前を入力します。その他の項目は任意です。
+Give your lab a name and the other fields are optional. 
 
 ![](Images/Day26_Networking3.png)
 
-すると、ネットワークの作成を開始するための空白のキャンバスが表示されます。キャンバス上で右クリックし、ノードの追加を選択します。
+You will be then greeted with a blank canvas to start creating your network. Right-click on your canvas and choose add node. 
 
-ここで、ノードのオプションの長いリストが表示されます。上記で説明した通りなら、下図の青い2つのノードがあり、他のノードはグレーで選択できないようになっています。
+From here you will have a long list of node options, If you have followed along above you will have the two in blue shown below and the others are going to be grey and unselectable. 
 
 ![](Images/Day26_Networking4.png)
 
-ラボに以下を追加したい:
+We want to add the following to our lab: 
 
-- 1 x Cisco vIOS Router
+- 1 x Cisco vIOS Router 
 - 4 x Cisco vIOS Switch
 
-簡単なウィザードを実行し、ラボに追加すると次のようになります。
+Run through the simple wizard to add them to your lab and it should look something like this. 
 
 ![](Images/Day26_Networking5.png)
 
-#### ノードの接続
+#### Connecting our nodes 
 
-次に、ルータとスイッチの間の接続を追加する必要があります。デバイスの上にカーソルを置くと、以下のような接続アイコンが表示されるので、それを接続したいデバイスに接続すれば、簡単に接続することができます。
+We now need to add our connectivity between our routers and switches. We can do this quite easily by hovering over the device and seeing the connection icon as per below and then connecting that to the device we wish to connect to. 
 
 ![](Images/Day26_Networking6.png)
 
-環境の接続が完了したら、右クリックメニューにあるボックスや円を使用して、物理的な境界や位置を定義する方法を追加することもできます。また、テキストを追加することも可能で、ラボのネーミングやIPアドレスを定義するのに便利です。
+When you have finished connecting your environment you may also want to add some way to define physical boundaries or locations using boxes or circles which can also be found in the right-click menu. You can also add text which is useful when we want to define our naming or IP addresses in our labs. 
 
-私は、以下のようなラボを作りました。
+I went ahead and made my lab look like the below. 
 
 ![](Images/Day26_Networking7.png)
 
-また、上のラボはすべて電源が切れていることに気づきます。すべてを選択して右クリックし、選択した状態で起動することで、ラボを開始することができます。
+You will also notice that the lab above is all powered off, we can start our lab by selecting everything and right-clicking and selecting start selected. 
 
 ![](Images/Day26_Networking8.png)
 
-このラボを立ち上げると、各デバイスにコンソールできるようになります。この段階では、何も設定されておらず、かなり間抜けな状態であることに気づくでしょう。各端末の設定をコピーするか、自分で作成することで、各ノードに設定を追加することができます。
+Once we have our lab up and running you will be able to console into each device and you will notice at this stage they are pretty dumb with no configuration. We can add some configuration to each node by copying or creating your own in each terminal. 
 
-私は参考のため、リポジトリの Networking フォルダに設定を残しておきます。
+I will leave my configuration in the Networking folder of the repository for reference. 
 
 | Node        | Configuration         |
 | ----------- | -----------           |
@@ -104,7 +104,7 @@ EVE-NGに初めてログインすると、以下のような画面が表示さ�
 | Switch3     | [SW3](Networking/SW3) |
 | Switch4     | [SW4](Networking/SW4) |
 
-## リソース
+## Resources 
 
 - [Free Course: Introduction to EVE-NG](https://www.youtube.com/watch?v=g6B0f_E0NMg)
 - [EVE-NG - Creating your first lab](https://www.youtube.com/watch?v=9dPWARirtK8)
@@ -113,8 +113,8 @@ EVE-NGに初めてログインすると、以下のような画面が表示さ�
 - [Practical Networking](http://www.practicalnetworking.net/)
 - [Python Network Automation](https://www.youtube.com/watch?v=xKPzLplPECU&list=WL&index=126)
 
-私はネットワークエンジニアではないので、ここで使用している例のほとんどは、無料ではありませんが、Network Automationを理解するのに役立つシナリオのいくつかをこの本から引用しています。
+Most of the examples I am using here as I am not a Network Engineer have come from this extensive book which is not free but I am using some of the scenarios to help understand Network Automation. 
 
 - [Hands-On Enterprise Automation with Python (Book)](https://www.packtpub.com/product/hands-on-enterprise-automation-with-python/9781788998512)
 
-[27日目](day27.md)でお会いしましょう。
+See you on [Day 27](day27.md)
