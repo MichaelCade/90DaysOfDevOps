@@ -22,7 +22,7 @@ Trước khi tìm hiểu về [6 dòng mã của Hello World](Go/hello.go), chú
 
 Các ngôn ngữ lập trình mà chúng ta thường sử dụng như Python, Java, Go và C++ là các ngôn ngữ bậc cao. Có nghĩa là mã mà con người có thể đọc được, nhưng khi máy tính thực thi một chương trình, chúng cần phải được dịch ra mã máy. Quá trình đó được gọi là biên dịch.
 
-![](Images/Day9_Go1.png)
+![](../../Days/Images/Day9_Go1.png)
 
 Bạn có thể thấy những gì chúng ta đã làm vào [Ngày 8](day08.md) ở trên. Chúng ta đã tạo một tệp main.go đơn giản và sử dụng lệnh `go build main.go` để biên dịch ra một tệp thực thi.
 
@@ -38,13 +38,13 @@ Go khuyến khích bạn tổ chức mã của mình thành các gói để dễ
 
 Bây giờ hãy xem qua tệp main.go của chúng ta.
 
-![](Images/Day9_Go2.png)
+![](../../Days/Images/Day9_Go2.png)
 
 Trong dòng đầu tiên, bạn có `package main` có nghĩa là tệp này thuộc về một gói có tên là main. Tất cả các tệp .go cần phải thuộc về một gói, chúng cũng phải có `package gìđó` trong dòng mở đầu.
 
 Một gói có thể được đặt tên tuỳ ý. Chúng ta bắt buộc phải gọi đây là `main` vì nó là điểm bắt đầu của chương trình sẽ có trong gói này, đây là một quy tắc. (Tôi cần hiểu thêm về quy tắc này?)
 
-![](Images/Day9_Go3.png)
+![](../../Days/Images/Day9_Go3.png)
 
 Bất cứ khi nào chúng ta muốn biên dịch và thực thi mã của mình, chúng ta phải cho máy biết nơi thực thi được bắt đầu. Chúng ta thực hiện điều này bằng cách viết một hàm có tên là main. Máy sẽ tìm kiếm một hàm có tên là main để bắt đầu chương trình.
 
@@ -52,15 +52,15 @@ Hàm là một khối mã có thể thực hiện một số tác vụ cụ th�
 
 Bạn có thể khai báo một hàm với bất kỳ tên nào bằng cách sử dụng `func` nhưng trong trường hợp này, chúng ta cần đặt tên nó là` main` vì đây là nơi mã bắt đầu.
 
-![](Images/Day9_Go4.png)
+![](../../Days/Images/Day9_Go4.png)
 
 Tiếp theo, chúng ta sẽ xem xét dòng 3, nơi chúng ta import, có nghĩa là bạn muốn đưa một gói khác vào chương trình chính của mình. fmt là một gói tiêu chuẩn do Go cung cấp, gói này chứa hàm `Println()` và vì chúng ta đã import hàm này nên có thể sử dụng tại dòng 6. Có một số gói tiêu chuẩn chúng ta có thể đưa vào chương trình và tái sử dụng chúng trong mã, giúp tránh được những rắc rối khi phải viết lại từ đầu. [Thư viện chuẩn của Go](https://pkg.go.dev/std)
 
-![](Images/Day9_Go5.png)
+![](../../Days/Images/Day9_Go5.png)
 
 Hàm `Println()` mà chúng ta có ở đây là một cách để ghi đầu ra tiêu chuẩn (standard output) tại thiết bị đầu cuối - nơi mà tệp thực thi đã được thực thi thành công. Bạn có thể tự do thay đổi đoạn mã ở giữa ().
 
-![](Images/Day9_Go6.png)
+![](../../Days/Images/Day9_Go6.png)
 
 ### TLDR
 

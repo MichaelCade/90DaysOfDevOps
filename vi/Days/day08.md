@@ -14,12 +14,12 @@ Trước khi tìm hiểu một số nguyên tắc cơ bản của Go, chúng ta 
 
 Trước hết, hãy truy cập vào [go.dev/dl](https://go.dev/dl/) và chúng ta sẽ có một số tùy chọn có sẵn để tải xuống.
 
-![](Images/Day8_Go1.png)
+![](../../Days/Images/Day8_Go1.png)
 
 
 Nếu bạn đã đi đến ngày hôm này, tôi nghĩ rằng bạn có thể biết hệ điều hành đang chạy trên máy của bạn là hệ điều hành nào.Hãy chọn bản tải xuống thích hợp và sau đó chúng ta có thể bắt đầu cài đặt. **_(Tôi sẽ sử dụng phiên bản mới nhất tại thời điểm viết bài, nhưng khi bạn đọc bài này, các phiên bản mới hơn có thể đã được phát hành)_**
 
-![](Images/Day8_Go2.png)
+![](../../Days/Images/Day8_Go2.png)
 
 Lưu ý rằng nếu bạn đã cài đặt một phiên bản cũ của Go, bạn sẽ phải gỡ bỏ phiên bản đó trước khi cài đặt, việc này được tính hợp trong trình cài đặt của Windows.
 
@@ -27,41 +27,41 @@ Sau khi hoàn tất, chúng ta sử dụng một dấu nhắc lệnh(command pro
 
 `go version`
 
-![](Images/Day8_Go3.png)
+![](../../Days/Images/Day8_Go3.png)
 
 Tiếp theo, chúng ta sẽ kiểm tra môi trường cho Go để đảm bảo các việc các thư mục làm việc được cấu hình chính xác. Như bạn có thể thấy bên dưới, chúng ta cần đảm bảo rằng những thư mục sau có trên hệ thống của mình.
 
-![](Images/Day8_Go4.png)
+![](../../Days/Images/Day8_Go4.png)
 
 Bạn đã kiểm tra chưa? Bạn có đang theo kịp không? Bạn có thể sẽ nhận được một lỗi giống như dưới đây khi bạn thử và cố gắng điều hướng đến đó.
 
-![](Images/Day8_Go5.png)
+![](../../Days/Images/Day8_Go5.png)
 
 Được rồi, hãy tạo thư mục đó bằng cách sử dụng lệnh mkdir trong PowerShell terminal. Chúng ta cũng cần tạo 3 thư mục trong thư mục Go như bạn sẽ thấy bên dưới.
 
-![](Images/Day8_Go6.png)
+![](../../Days/Images/Day8_Go6.png)
 
 Sau khi chúng ta cài đặt Go và có các thư mục sẵn sàng cho Go hoạt động, chúng ta cần một môi trường phát triển tích hợp (IDE). Có rất nhiều lựa chọn mà bạn có thể sử dụng nhưng phổ biến nhất và IDE mà tôi sử dụng là Visual Studio Code hoặc Code. Bạn có thể tìm hiểu thêm về các IDEs tại [đây](https://www.youtube.com/watch?v=vUn5akOlFXQ).
 
 Nếu bạn chưa tải xuống và cài đặt VSCode trên máy trạm của mình thì bạn có thể thực hiện việc này bằng cách vào [đây](https://code.visualstudio.com/download). Như bạn có thể thấy bên dưới, bạn có các lựa chọn cho các hệ điều hành khác nhau.
 
-![](Images/Day8_Go7.png)
+![](../../Days/Images/Day8_Go7.png)
 
 Tương tự như với việc cài đặt Go, chúng ta sẽ tải xuống và cài đặt và giữ nguyên các giá trị mặc định. Sau khi hoàn tất, bạn có thể mở VSCode, chọn Open File và điều hướng đến thư mục Go mà chúng ta đã tạo ở trên.
 
-![](Images/Day8_Go8.png)
+![](../../Days/Images/Day8_Go8.png)
 
 Bạn có thể nhận được một cửa sổ hỏi về việc tin tưởng tác giả của thư mục, hãy đọc nó nếu bạn muốn, nhấn Có và tin tưởng các tác giả (Tôi không chịu trách nhiệm sau này nếu bạn bắt đầu mở những thứ bạn không tin tưởng!)
 
 Bây giờ bạn sẽ thấy ba thư mục chúng ta cũng đã tạo trước đó và những gì chúng ta muốn làm bây giờ là nhấp chuột phải vào thư mục src và tạo một thư mục mới có tên là `Hello`
 
-![](Images/Day8_Go9.png)
+![](../../Days/Images/Day8_Go9.png)
 
 Cho tới lúc này, mọi thứ khác dễ dàng đúng không? Bây giờ chúng ta sẽ tạo chương trình Go đầu tiên của mình mà không hiểu bất cứ thứ gì trong giai đoạn tiếp theo.
 
 Tiếp theo, tạo một tệp có tên là `main.go` trong thư mục `Hello`. Ngay sau khi bạn nhấn Enter tại file main.go, bạn sẽ được hỏi xem bạn có muốn cài đặt tiện ích mở rộng (extension) cho Go không cũng như các các packages mới. Bạn cũng có thể kiểm tra xem liệu tệp pkg mà chúng ta đã tạo có một số packages mới trong đó hay không?
 
-![](Images/Day8_Go10.png)
+![](../../Days/Images/Day8_Go10.png)
 
 Bây giờ, hãy bắt đầu ứng dụng Hello World, sao chép mã sau vào tệp main.go mới của bạn và lưu lại.
 
@@ -81,7 +81,7 @@ Bây giờ có thể chúng ta đang không hiểu tất cả những điều �
 go run main.go
 ```
 
-![](Images/Day8_Go11.png)
+![](../../Days/Images/Day8_Go11.png)
 
 Tuy nhiên, không chỉ dừng lại tại đây, nếu chúng ta muốn chạy chương trình của mình trên các máy Windows khác thì sao? Chúng ta có thể xây dựng một tệp thực thi nhị phân bằng câu lệnh dưới đây
 
@@ -89,7 +89,7 @@ Tuy nhiên, không chỉ dừng lại tại đây, nếu chúng ta muốn chạy
 go build main.go
 ```
 
-![](Images/Day8_Go12.png)
+![](../../Days/Images/Day8_Go12.png)
 
 Nếu chúng ta chạy tệp đó tại một máy khác, kết quả vẫn sẽ giống như vậy:
 
@@ -110,4 +110,4 @@ Hello #90DaysOfDevOps
 
 Hẹn gặp lại vào [ngày 9](day09.md).
 
-![](Images/Day8_Go13.png)
+![](../../Days/Images/Day8_Go13.png)

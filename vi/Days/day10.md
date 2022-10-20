@@ -27,27 +27,27 @@ echo $GOPATH
 ```
 Sau đó, ở đây, chúng ta đã tạo 3 thư mục.  **src**, **pkg** and **bin**
 
-![](Images/Day10_Go1.png)
+![](../../Days/Images/Day10_Go1.png)
 
 **src** là nơi lưu trữ tất cả các chương trình và dự án Go. Điều này xử lý việc quản lý không gian tên của các gói (packages) cho tất cả các kho lưu trữ (repositories) Go. Ở đây bạn có thể thấy rằng máy trạm của tôi có thư mục Hello cho dự án Hello #90DaysOfDevOps.
 
-![](Images/Day10_Go2.png)
+![](../../Days/Images/Day10_Go2.png)
 
 **pkg** là một tệp lưu trữ của các gói đã hoặc đang được cài đặt trong chương trình. Điều này giúp tăng tốc quá trình biên dịch dựa trên việc các gói được sử dụng có thay đổi hay không.
 
-![](Images/Day10_Go3.png)
+![](../../Days/Images/Day10_Go3.png)
 
 **bin** là nơi lưu trữ tất cả các tệp nhị phân đã được biên dịch.
 
-![](Images/Day10_Go4.png)
+![](../../Days/Images/Day10_Go4.png)
 
 Hello #90DaysOfDevOps không phải là một chương trình phức tạp, đây là một ví dụ về chương trình Go phức tạp hơn được lấy từ một tài nguyên tuyệt vời khác [GoChronicles](https://gochronicles.com/)
 
-![](Images/Day10_Go5.png)
+![](../../Days/Images/Day10_Go5.png)
 
 Bạn cũng có thể đi sâu vào một số chi tiết về lý do và cách tổ chức một dự án Go. Nó cũng đi sâu hơn một chút về các thư mục khác mà chúng ta chưa đề cập đến [GoChronicles](https://gochronicles.com/project-structure/)
 
-### Compiling & running code
+### Biên dịch & Chạy mã
 
 Chúng ta cũng đã giới thiệu sơ qua về việc biên dịch mã ở [ngày 9](day09.md), nhưng hãy đi sâu hơn một chút.
 
@@ -65,15 +65,15 @@ Khi cài đặt Go vào ngày 8, chúng ta đã cài đặt một thứ được
 
 Nếu bạn mở dấu nhắc lệnh của mình và nhập `go`, bạn sẽ thấy như hình ảnh dưới đây và sau đó bạn sẽ thấy "một số những câu lệnh khác" phía bên dưới, tuy nhiên không chưa cần phải quan tâm tới chúng.
 
-![](Images/Day10_Go6.png)
+![](../../Days/Images/Day10_Go6.png)
 
 Bạn cũng có thể nhớ rằng chúng ta đã sử dụng ít nhất hai công cụ vào ngày 8.
 
-![](Images/Day10_Go7.png)
+![](../../Days/Images/Day10_Go7.png)
 
 Những thứ chúng ta muốn tìm hiểu thêm là build, install and run.
 
-![](Images/Day10_Go8.png)
+![](../../Days/Images/Day10_Go8.png)
 
 - `go run` - Lệnh này biên dịch và chạy gói chính bao gồm các tệp .go được chỉ định trên dòng lệnh. Các file biên dịch được lưu trữ trong một thư mục tạm thời.
 - `go build` - Để biên dịch các gói và phần phụ thuộc trong thư mục hiện tại. Nếu là gói `main`, sẽ đặt tệp thực thi trong thư mục hiện tại, nếu không, tệp thực thi sẽ được đặt trong thư mục `pkg`. `go build` cũng cho phép bạn tạo một tệp thực thi cho bất kỳ nền tảng, hệ điều hành được hỗ trợ bởi của Go.
@@ -83,7 +83,7 @@ Chúng tôi đã chạy qua go build và go run nhưng vui lòng chạy lại ch
 
 Chúng ta đã sử dụng go build và go run nhưng hãy thử lại nếu bạn muốn, `go install` như đã trình bày ở trên, sẽ đặt tệp thực thi trong thư mục `bin`.
 
-![](Images/Day10_Go9.png)
+![](../../Days/Images/Day10_Go9.png)
 
 Hy vọng rằng bạn vừa theo dõi nội dung các ngày qua cùng lúc với xem một trong những video bên dưới. Tôi ghi lại và tóm tắt những thứ này thành ghi chú của bản thân để có thể hiểu được kiến ​​thức nền tảng về Golang. Các tài nguyên dưới đây có thể giúp bạn hiểu rõ hơn về nhiều kiến thức tổng thể khác mà bạn cần khi học Golang, nhưng tôi sẽ chia sẻ một số điều thú vị mà tôi tìm thấy trong hành trình 7 ngày hay 7 giờ của mình.
 
