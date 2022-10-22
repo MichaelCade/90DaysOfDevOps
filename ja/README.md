@@ -48,13 +48,13 @@ English Version | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/R
 
 ### Understand Networking
 
-- [✔️] 🌐 21 > [The Big Picture: DevOps and Networking](Days/day21.md)
-- [✔️] 🌐 22 > [The OSI Model - The 7 Layers](Days/day22.md)
-- [✔️] 🌐 23 > [Network Protocols](Days/day23.md)
-- [✔️] 🌐 24 > [Network Automation](Days/day24.md)
-- [✔️] 🌐 25 > [Python for Network Automation](Days/day25.md)
-- [✔️] 🌐 26 > [Building our Lab](Days/day26.md)
-- [✔️] 🌐 27 > [Getting Hands-On with Python & Network](Days/day27.md)
+- [✔️] 🌐 21 > [全体像: DevOpsとネットワーキング](Days/day21.md)
+- [✔️] 🌐 22 > [OSIモデル - 7つのレイヤー](Days/day22.md)
+- [✔️] 🌐 23 > [ネットワークプロトコル](Days/day23.md)
+- [✔️] 🌐 24 > [ネットワーク・オートメーションn](Days/day24.md)
+- [✔️] 🌐 25 > [Pythonによるネットワーク自動化](Days/day25.md)
+- [✔️] 🌐 26 > [ラボの構築](Days/day26.md)
+- [✔️] 🌐 27 > [ythonとネットワークのハンズオン](Days/day27.md)
 
 ### Stick to one Cloud Provider
 
