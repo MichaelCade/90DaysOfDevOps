@@ -6,7 +6,7 @@
 
 Repository này ghi lại hành trình của tôi trong việc trong việc học các kiến thức nền tảng về "DevOps". Tôi sẽ bắt đầu hành trình này vào ngày 1 tháng 1 năm 2022 và sẽ dành ra 90 ngày, từ ngày 1 tháng 1 đến ngày 31 tháng 3.
 
-Tôi ghi lại hành trình này nhằm giúp đỡ những bạn có chung mục tiêu và cũng hi vọng rằng tài liệu này có thể làm giàu cho các tài nguyên về DevOps.
+Tôi ghi lại hành trình này nhằm giúp đỡ những bạn có chung mục tiêu và cũng hi vọng rằng tài liệu này có thể làm phong phú nguồn tài nguyên về DevOps.
 
 Mục tiêu là dành ra 1 giờ một ngày trong 90 ngày để tìm hiểu về 13 lĩnh vực liên quan tới "DevOps" phục vụ cho việc xây dựng kiến thức nền tảng.
 
