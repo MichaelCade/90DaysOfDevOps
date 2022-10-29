@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Kubernetes & Multiple Environments - Day 61'
-published: false
-description: 90DaysOfDevOps - Kubernetes & Multiple Environments
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048743
----
-
 ## Kubernetes & Multiple Environments
 
 So far during this section on Infrastructure as code, we have looked at deploying virtual machines albeit to VirtualBox but the premise is the same really as we define in code what we want our virtual machine to look like and then we deploy. The same for Docker containers and in this session, we are going to take a look at how Terraform can be used to interact with resources supported by Kubernetes.

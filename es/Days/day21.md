@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - The Big Picture: DevOps and Networking - Day 21'
-published: false
-description: 90DaysOfDevOps - The Big Picture DevOps and Networking
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048761
----
-
 ## The Big Picture: DevOps and Networking
 
 As with all sections, I am using open and free training materials and a lot of the content can be attributed to others. In the case of the networking section a large majority of the content shown is from [Practical Networking](https://www.practicalnetworking.net/)'s free [Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi).  It is mentioned in the resources as well as a link but it's appropriate to highlight this as from a community point of view, I have leveraged this course to help myself understand more about particular areas of technologies. This repository is a repository for my note taking and enabling the community to hopefully benefit from this and the listed resources. 

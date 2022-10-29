@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - What is Jenkins? - Day 71'
-published: false
-description: 90DaysOfDevOps - What is Jenkins?
-tags: 'DevOps, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048745
----
-
 ## What is Jenkins?
 
 Jenkins is a continuous integration tool that allows continuous development, testing and deployment of newly created code.

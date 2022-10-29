@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Installing & Configuring Git - Day 36'
-published: false
-description: 90DaysOfDevOps - Installing & Configuring Git
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048738
----
-
 ## Installing & Configuring Git
 
 Git is an open source, cross-platform tool for version control. If you are like me, using Ubuntu or most Linux environments you might find that you already have git installed but we are going to run through the install and configuration.

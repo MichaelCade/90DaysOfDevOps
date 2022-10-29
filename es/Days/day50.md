@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Choosing your Kubernetes platform - Day 50'
-published: false
-description: 90DaysOfDevOps - Choosing your Kubernetes platform
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049046
----
-
 ## Choosing your Kubernetes platform
 
 I wanted to use this session to break down some of the platforms or maybe distributions is a better term to use here, one thing that has been a challenge in the Kubernetes world is removing complexity.

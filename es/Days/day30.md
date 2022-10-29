@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Microsoft Azure Security Models - Day 30'
-published: false
-description: 90DaysOfDevOps - Microsoft Azure Security Models
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049039
----
-
 ## Microsoft Azure Security Models
 
 Following on from the Microsoft Azure Overview, we are going to start with Azure Security and see where this can help in our day to day. For the most part, I have found the built-in roles have been sufficient but knowing that we can create and work with many different areas of authentication and configurations. I have found Microsoft Azure to be quite advanced with its Active Directory background compared to other public clouds.

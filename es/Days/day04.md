@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - DevOps & Agile - Day 4'
-published: false
-description: 90DaysOfDevOps - DevOps & Agile
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048700
----
-
 ## DevOps & Agile
 
 Do you know the difference between DevOps and Agile? They were formed as standalone concepts. But now the two terms are getting fused.

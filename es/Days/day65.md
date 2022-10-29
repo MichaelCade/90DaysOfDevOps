@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Ansible Playbooks - Day 65'
-published: false
-description: 90DaysOfDevOps - Ansible Playbooks
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049054
----
-
 ### Ansible Playbooks
 
 In this section we will take a look at the main reason that I can see at least for Ansible, I mean it is great to take a single command and hit many different servers to perform simple commands such as rebooting a long list of servers and saving the hassle of having to connect to each one individually.

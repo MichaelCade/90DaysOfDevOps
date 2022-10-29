@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - All other things Ansible - Automation Controller (Tower), AWX, Vault - Day 69'
-published: false
-description: '90DaysOfDevOps - All other things Ansible - Automation Controller (Tower), AWX, Vault'
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048714
----
-
 ## All other things Ansible - Automation Controller (Tower), AWX, Vault
 
 Rounding out the section on Configuration Management I wanted to have a look into the other areas that you might come across when dealing with Ansible.

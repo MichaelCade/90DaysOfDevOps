@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Hands-On Monitoring Tools - Day 78'
-published: false
-description: 90DaysOfDevOps - Hands-On Monitoring Tools
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049056
----
-
 ## Hands-On Monitoring Tools
 
 In the last session, I spoke about the big picture of monitoring and I took a look into Nagios, there were two reasons for doing this. The first was this is a piece of software I have heard a lot of over the years so wanted to know a little more about its capabilities.

@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Testing, Tools & Alternatives - Day 62'
-published: false
-description: '90DaysOfDevOps - Testing, Tools & Alternatives'
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049053
----
-
 ## Testing, Tools & Alternatives
 
 As we close out this section on Infrastructure as Code we must mention testing our code, the various tools available and then some of the alternatives to Terraform to achieve this. As I said at the start of the section my focus was on Terraform because it is firstly free and open source, secondly, it is cross-platform and agnostic to environments. But there are also alternatives out there that should be considered but the overall goal is to make people aware that this is the way to deploy your infrastructure.

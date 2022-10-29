@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Data Services - Day 85'
-published: false
-description: 90DaysOfDevOps - Data Services
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048781
----
-
 ## Data Services
 
 Databases are going to be the most common data service that we come across in our environments. I wanted to take this session to explore some of those different types of Databases and some of the use cases they each have. Some we have used and seen throughout the challenge.

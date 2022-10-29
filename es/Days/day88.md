@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Application Focused Backup - Day 88'
-published: false
-description: 90DaysOfDevOps - Application Focused Backups
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048749
----
-
 ## Application-Focused Backups
 
 We have already spent some time talking about data services or data-intensive applications such as databases on [Day 85](day85.md). For these data services, we have to consider how we manage consistency, especially when it comes to application consistency.

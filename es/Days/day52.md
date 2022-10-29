@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Setting up a multinode Kubernetes Cluster - Day 52'
-published: false
-description: 90DaysOfDevOps - Setting up a multinode Kubernetes Cluster
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049050
----
-
 ## Setting up a multinode Kubernetes Cluster
 
 I wanted this title to be "Setting up a multinode Kubernetes cluster with Vagrant" but thought it might be a little too long!

@@ -1,12 +1,3 @@
----
-title: '#90DaysOfDevOps - The anatomy of a Docker Image - Day 45'
-published: false
-description: 90DaysOfDevOps - The anatomy of a Docker Image
-tags: 'DevOps, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048777
----
 ## The anatomy of a Docker Image
 
 In the last session, we covered some basics of how we can use Docker Desktop combined with DockerHub to deploy and run some verified images. A recap on what an image is, you won't forget things if I keep mentioning them. 

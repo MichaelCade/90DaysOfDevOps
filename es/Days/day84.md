@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - The Big Picture: Data Management - Day 84'
-published: false
-description: 90DaysOfDevOps - The Big Picture Data Management
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048747
----
-
 ## The Big Picture: Data Management
 
 ![](Images/Day84_Data1.png)

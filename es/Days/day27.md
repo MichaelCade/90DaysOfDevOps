@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Getting Hands-On with Python & Network - Day 27'
-published: false
-description: 90DaysOfDevOps - Getting Hands-On with Python & Network
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048735
----
-
 ## Getting Hands-On with Python & Network
 
 In this final section of Networking fundamentals, we are going to cover some automation tasks and tools with our lab environment created on [Day 26](day26.md)

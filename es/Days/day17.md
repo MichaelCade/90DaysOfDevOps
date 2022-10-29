@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Text Editors - nano vs vim - Day 17'
-published: false
-description: 90DaysOfDevOps - Text Editors - nano vs vim
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048703
----
-
 ## Text Editors - nano vs vim
 
 The majority of your Linux systems are going to be servers and these are not going to have a GUI. I also mentioned in the last session that Linux is mostly made up of configuration files, to make changes you are going to need to be able to edit those configuration files to change anything on the system.

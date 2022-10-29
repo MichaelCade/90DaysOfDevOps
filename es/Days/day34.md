@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Microsoft Azure Hands-On Scenarios - Day 34'
-published: false
-description: 90DaysOfDevOps - Microsoft Azure Hands-On Scenarios
-tags: 'DevOps, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048763
----
-
 ## Microsoft Azure Hands-On Scenarios
 
 The last 6 days have been focused on Microsoft Azure and the public cloud in general, a lot of this foundation had to contain a lot of theory to understand the building blocks of Azure but also this will nicely translate to the other major cloud providers as well.

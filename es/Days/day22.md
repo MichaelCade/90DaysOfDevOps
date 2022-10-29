@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - The OSI Model - The 7 Layers - Day 22'
-published: false
-description: 90DaysOfDevOps - The OSI Model - The 7 Layers
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049037
----
-
 The content below comes mostly from Practical Networking's [Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). If you prefer this content in video form, check out these two videos:
 
 * [The OSI Model: A Practical Perspective - Layers 1 / 2 / 3](https://www.youtube.com/watch?v=LkolbURrtTs&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=3)

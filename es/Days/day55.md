@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - State and Ingress in Kubernetes - Day 55'
-published: false
-description: 90DaysOfDevOps - State and Ingress in Kubernetes
-tags: 'DevOps, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048779
----
-
 ## State and Ingress in Kubernetes
 
 In this closing section of Kubernetes, we are going to take a look at State and ingress.

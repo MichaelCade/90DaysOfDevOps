@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Tweet your progress with our new App - Day 13'
-published: false
-description: 90DaysOfDevOps - Tweet your progress with our new App
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048865
----
-
 ## Tweet your progress with our new App
 
 On the final day of looking into this programming language, we have only just touched the surface here of the language but it is at that start that I think we need to get interested and excited and want to dive more into it.

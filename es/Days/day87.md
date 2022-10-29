@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Hands-On Backup & Recovery - Day 87'
-published: false
-description: 90DaysOfDevOps - Hands-On Backup & Recovery
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048717
----
-
 ## Hands-On Backup & Recovery
 
 In the last session, we touched on [Kopia](https://kopia.io/) an Open-Source backup tool that we used to get some important data off to a local NAS and off to some cloud-based object storage.

@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Data & Application Mobility - Day 90'
-published: false
-description: 90DaysOfDevOps - Data & Application Mobility
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048748
----
-
 ## Data & Application Mobility
 
 Day 90 of the #90DaysOfDevOps Challenge! In this final session, I am going to cover the mobility of our data and applications. I am specifically going to focus on Kubernetes but the requirement across platforms and between platforms is something that is an ever-growing requirement and is seen in the field.

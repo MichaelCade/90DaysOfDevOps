@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Ansible Playbooks Continued... - Day 66'
-published: false
-description: 90DaysOfDevOps - Ansible Playbooks Continued...
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048712
----
-
 ## Ansible Playbooks (Continued)
 
 In our last section, we started with creating our small lab using a Vagrantfile to deploy 4 machines and we used the Linux machine we created in that section as our ansible control system.

@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Building our Lab - Day 26'
-published: false
-description: 90DaysOfDevOps - Building our Lab
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048762
----
-
 ## Building our Lab
 
 We are going to continue our setup of our emulated network using EVE-NG and then hopefully get some devices deployed and start thinking about how we can automate the configuration of these devices. On [Day 25](day25.md) we covered the installation of EVE-NG onto our machine using VMware Workstation.

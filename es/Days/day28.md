@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - The Big Picture: DevOps & The Cloud - Day 28'
-published: false
-description: 90DaysOfDevOps - The Big Picture DevOps & The Cloud
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048737
----
-
 ## The Big Picture: DevOps & The Cloud
 
 When it comes to cloud computing and what is offered, it goes very nicely with the DevOps ethos and processes. We can think of Cloud Computing as bringing the technology and services whilst DevOps as we have mentioned many times before is about the process and process improvement.

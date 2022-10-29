@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - The Big Picture: Configuration Management - Day 63'
-published: false
-description: 90DaysOfDevOps - The Big Picture Configuration Management
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048711
----
-
 ## The Big Picture: Configuration Management
 
 Coming straight off the back of the section covering Infrastructure as Code, there is likely going to be some crossover as we talk about Configuration Management or Application Configuration Management.

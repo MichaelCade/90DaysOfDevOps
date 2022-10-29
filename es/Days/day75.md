@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - GitHub Actions Overview - Day 75'
-published: false
-description: 90DaysOfDevOps - GitHub Actions Overview
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049070
----
-
 ## GitHub Actions Overview
 
 In this section, I wanted to move on and take a look at maybe a different approach to what we just spent time on. GitHub Actions is what we will focus on in this session.

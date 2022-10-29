@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Deploying your first Kubernetes Cluster - Day 51'
-published: false
-description: 90DaysOfDevOps - Deploying your first Kubernetes Cluster
-tags: 'DevOps, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048778
----
-
 ## Deploying your first Kubernetes Cluster
 
 In this post we are going to get a Kubernetes cluster up and running on our local machine using minikube, this will give us a baseline Kubernetes cluster for the rest of the Kubernetes section, although we will look at deploying a Kubernetes cluster also in VirtualBox later on. The reason for choosing this method vs spinning a managed Kubernetes cluster up in the public cloud is that this is going to cost money even with the free tier, I shared some blogs though if you would like to spin up that environment in the previous section [Day 50](day50.md).

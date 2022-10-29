@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - EFK Stack - Day 82'
-published: false
-description: 90DaysOfDevOps - EFK Stack
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049059
----
-
 ### EFK Stack
 
 In the previous section, we spoke about ELK Stack, which uses Logstash as the log collector in the stack, in the EFK Stack we are swapping that out for FluentD or FluentBit.

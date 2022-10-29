@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Gitting to know Git - Day 37'
-published: false
-description: 90DaysOfDevOps - Gitting to know Git
-tags: 'DevOps, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048707
----
-
 ## Gitting to know Git
 
 Apologies for the terrible puns in the title and throughout. I am surely not the first person to turn Git into a dad joke!

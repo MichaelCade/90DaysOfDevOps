@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Getting hands-on with Jenkins - Day 72'
-published: false
-description: 90DaysOfDevOps - Getting hands-on with Jenkins
-tags: 'DevOps, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048829
----
-
 ## Getting hands-on with Jenkins
 
 The plan today is to get some hands-on with Jenkins and make something happen as part of our CI pipeline, looking at some example code bases that we can use.

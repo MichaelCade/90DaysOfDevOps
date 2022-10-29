@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - The Big Picture: Log Management - Day 79'
-published: false
-description: 90DaysOfDevOps - The Big Picture Log Management
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049057
----
-
 ## The Big Picture: Log Management
 
 A continuation of the infrastructure monitoring challenges and solutions, log management is another puzzle piece to the overall observability jigsaw.

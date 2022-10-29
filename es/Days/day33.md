@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Microsoft Azure Networking Models + Azure Management - Day 33'
-published: false
-description: 90DaysOfDevOps - Microsoft Azure Networking Models + Azure Management
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048706
----
-
 ## Microsoft Azure Networking Models + Azure Management
 
 As if today marks the anniversary of Microsoft Azure and its 12th Birthday! (1st February 2022) Anyway, we are going to cover the networking models within Microsoft Azure and some of the management options for Azure. So far we have only used the Azure portal but we have mentioned other areas that can be used to drive and create our resources within the platform.

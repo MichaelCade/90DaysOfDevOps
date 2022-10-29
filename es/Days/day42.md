@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - The Big Picture: Containers - Day 42'
-published: false
-description: 90DaysOfDevOps - The Big Picture Containers
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048826
----
-
 ## The Big Picture: Containers
 
 We are now starting the next section and this section is going to be focused on containers in particular we are going to be looking into Docker getting into some of the key areas to understand more about Containers.

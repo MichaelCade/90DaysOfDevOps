@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - DevOps - The real stories - Day 6'
-published: false
-description: 90DaysOfDevOps - DevOps - The real stories
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048855
----
-
 ## DevOps - The real stories
 
 DevOps to begin with was seen to be out of reach for a lot of us as we didn't have companies like Netflix or a fortune 500 company practising it but I think that now it's beginning to sway into the normal as businesses start adopting a DevOps practice.

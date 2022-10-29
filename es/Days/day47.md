@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Docker Networking & Security - Day 47'
-published: false
-description: 90DaysOfDevOps - Docker Networking & Security
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049078
----
-
 ## Docker Networking & Security
 
 During this container session so far we have made things happen but we have not looked at how things have worked behind the scenes either from a networking point of view also we have not touched on security, that is the plan for this session.

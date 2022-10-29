@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - The Big Picture: Monitoring - Day 77'
-published: false
-description: 90DaysOfDevOps - The Big Picture Monitoring
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1048715
----
-
 ## The Big Picture: Monitoring
 
 In this section we are going to talk about monitoring, what is it and why do we need it?

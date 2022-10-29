@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Microsoft Azure Compute Models - Day 31'
-published: false
-description: 90DaysOfDevOps - Microsoft Azure Compute Models
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049040
----
-
 ## Microsoft Azure Compute Models
 
 Following on from covering the basics around security models within Microsoft Azure yesterday today we are going to look into the various compute services available to us in Azure.

@@ -1,13 +1,3 @@
----
-title: '#90DaysOfDevOps - Create a VM with Terraform & Variables - Day 59'
-published: false
-description: 90DaysOfDevOps - Create a VM with Terraform & Variables
-tags: 'devops, 90daysofdevops, learning'
-cover_image: null
-canonical_url: null
-id: 1049051
----
-
 ## Create a VM with Terraform & Variables
 
 In this session, we are going to be creating a VM or two VMs using terraform inside VirtualBox. This is not normal, VirtualBox is a workstation virtualisation option and this would not be a use case for Terraform but I am currently 36,000ft in the air and as much as I have deployed public cloud resources this high in the clouds it is much faster to do this locally on my laptop.
