@@ -6,31 +6,35 @@
 
 Versión en Castellano | [English Version](../README.md) | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md) | [Wersja Polska](pl/README.md) | [Tiếng Việt](vi/README.md)
 
-Este repositorio se utiliza para documentar un viaje para conseguir un mejor conocimiento fundacional de "DevOps". La idea es hacer un viaje en 90 días, por ejemplo, si comienza el 1 de enero de 2023, finalizaríamos el recorrido el 31 de marzo. 🚀
+Este repositorio es un viaje para conseguir conocer los conceptos básicos de la filosofía "DevOps". La idea es hacer un viaje de 90 días, por ejemplo, si comienzas un 1 de enero podrías terminar el recorrido el 31 de marzo. 🚀
 
 [Phileas Fogg](https://es.wikipedia.org/wiki/Phileas_Fogg) tardó menos en dar la vuelta al mundo.
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Mapa_Vuelta_al_Mundo_en_80_d%C3%ADas_de_Verne.jpg/780px-Mapa_Vuelta_al_Mundo_en_80_d%C3%ADas_de_Verne.jpg)
 
-La razón de documentarlo es para que otros puedan aprovecharlo y espero que mejorar sus conocimientos y recursos.
+La razón de documentar cada práctica es para que otros puedan aprovecharla mejorando sus conocimientos y recursos.
 
 El objetivo es realizar 1 hora cada para abordar más de 13 áreas de "DevOps".
 
-Esto **no cubrirá todo sobre de "DevOps"**, sino que cubrirá las áreas que el autor pensó que beneficiarían su aprendizaje y comprensión en general.
+Esto **no cubrirá todo sobre de "DevOps"**, es una especialización muy amplia, más bien cubrirá las áreas que el autor, [Michael Cade](https://github.com/MichaelCade), pensó que beneficiarían su aprendizaje y comprensión en general.
 
-Puedes agradecer al autor:
+Si lo pruebas y te gusta puedes agradecerselo al autor con un cafelito por estas 90 aventuras
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N33YRCS)
 
-La forma más rápida para ponerse en contacto con el autor es a través de Twitter: [@MichaelCade1](https://twitter.com/MichaelCade1)
+La forma más rápida para ponerse en contacto con el autor es a través de su Twitter: [@MichaelCade1](https://twitter.com/MichaelCade1)
 
-Y también puedes agradecer a [Manu](https://github.com/manuelver), el traductor. Por paypal:
+Y también puedes aportar, darle a fav o abrir incidencias en el [repo original](https://github.com/MichaelCade/90DaysOfDevOps).
 
-[![paypal](https://vergaracarmona.es/wp-content/uploads/2022/05/qrcode-1-300x300.png)](https://www.paypal.com/paypalme/ponteweb)
-
-O con bitcoins en `1QESjZDPxWtZ9sj3v5tvgfFn3ks13AxWVZ`:
+Por otra parte, también puedes agradecer a [Manu](https://github.com/manuelver), la traducción al castellano con bitcoins: 
+```bitcoin
+1QESjZDPxWtZ9sj3v5tvgfFn3ks13AxWVZ
+```
 
 ![bitcoin](https://vergaracarmona.es/wp-content/uploads/2022/05/qrcode.png) 
 
+Le encantan las mariscadas.
+
+Empecemos con lo que vas a poder ver en estos 90 días.
 
 ## Progreso
 
