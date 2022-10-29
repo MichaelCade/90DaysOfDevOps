@@ -4,6 +4,8 @@
  <img src="https://github.com/MichaelCade/90DaysOfDevOps/blob/main/logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
+English Version | [Versión en Castellano](es/README.md) | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md) | [Wersja Polska](pl/README.md) | [Tiếng Việt](vi/README.md)
+
 Repository này ghi lại hành trình của tôi trong việc trong việc học các kiến thức nền tảng về "DevOps". Tôi sẽ bắt đầu hành trình này vào ngày 1 tháng 1 năm 2022 và sẽ dành ra 90 ngày, từ ngày 1 tháng 1 đến ngày 31 tháng 3.
 
 Tôi ghi lại hành trình này nhằm giúp đỡ những bạn có chung mục tiêu và cũng hi vọng rằng tài liệu này có thể làm giàu cho các tài nguyên về DevOps.

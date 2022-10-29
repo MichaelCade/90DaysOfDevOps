@@ -4,6 +4,7 @@
   <img src="https://github.com/MichaelCade/90DaysOfDevOps/blob/main/logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
+English Version | [Versión en Castellano](es/README.md) | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md) | [Wersja Polska](pl/README.md) | [Tiếng Việt](vi/README.md)
 
 这个仓库是用来记录我在深入理解 DevOps 基础知识的过程的。我会在2022年1月1日开始我的旅程，我打算一共花90天，恰好这个时间就是1月1日到3月31日。
 
