@@ -1,160 +1,174 @@
 # 90DaysOfDevOps
 
 <p align="center">
- <img src="logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
+ <img src="../logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
 Versión en Castellano | [English Version](../README.md) | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md) | [Wersja Polska](pl/README.md) | [Tiếng Việt](vi/README.md)
 
-This repository is used to document my journey on getting a better foundational knowledge of "DevOps". I will be starting this journey on the 1st January 2022 but the idea is that we take 90 days which just so happens to be January 1st to March 31st.
+Este repositorio se utiliza para documentar un viaje para conseguir un mejor conocimiento fundacional de "DevOps". La idea es hacer un viaje en 90 días, por ejemplo, si comienza el 1 de enero de 2023, finalizaríamos el recorrido el 31 de marzo. 🚀
 
-The reason for documenting these days is so that others can take something from it and also hopefully enhance the resources.
+[Phileas Fogg](https://es.wikipedia.org/wiki/Phileas_Fogg) tardó menos en dar la vuelta al mundo.
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Mapa_Vuelta_al_Mundo_en_80_d%C3%ADas_de_Verne.jpg/780px-Mapa_Vuelta_al_Mundo_en_80_d%C3%ADas_de_Verne.jpg)
 
-The goal is to take 90 days, 1 hour each a day, to tackle over 13 areas of "DevOps" to a foundational knowledge.
+La razón de documentarlo es para que otros puedan aprovecharlo y espero que mejorar sus conocimientos y recursos.
 
-This will **not cover all things** "DevOps" but it will cover the areas that I feel will benefit my learning and understanding overall.
+El objetivo es realizar 1 hora cada para abordar más de 13 áreas de "DevOps".
+
+Esto **no cubrirá todo sobre de "DevOps"**, sino que cubrirá las áreas que el autor pensó que beneficiarían su aprendizaje y comprensión en general.
+
+Puedes agradecer al autor:
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N33YRCS)
 
-The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1)
+La forma más rápida para ponerse en contacto con el autor es a través de Twitter: [@MichaelCade1](https://twitter.com/MichaelCade1)
 
-## Progress
+Y también puedes agradecer a [Manu](https://github.com/manuelver), el traductor. Por paypal:
 
-- [✔️] ♾️ 1 > [Introduction](Days/day01.md)
+[![paypal](https://vergaracarmona.es/wp-content/uploads/2022/05/qrcode-1-300x300.png)](https://www.paypal.com/paypalme/ponteweb)
 
-### What is and why do we use DevOps
+O con bitcoins en `1QESjZDPxWtZ9sj3v5tvgfFn3ks13AxWVZ`:
 
-- [✔️] ♾️ 2 > [Responsibilities of a DevOps Engineer](Days/day02.md)
-- [✔️] ♾️ 3 > [DevOps Lifecycle - Application Focused](Days/day03.md)
+![bitcoin](https://vergaracarmona.es/wp-content/uploads/2022/05/qrcode.png) 
+
+
+## Progreso
+
+- [✔️] ♾️ 1 > [Introducción](Days/day01.md)
+
+### ¿Qué es y por qué usamos DevOps?
+
+- [✔️] ♾️ 2 > [Responsabilidades de un ingeniero DevOps](Days/day02.md)
+- [✔️] ♾️ 3 > [Ciclo de vida de DevOps - Centrado en la aplicación](Days/day03.md)
 - [✔️] ♾️ 4 > [DevOps & Agile](Days/day04.md)
-- [✔️] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)
-- [✔️] ♾️ 6 > [DevOps - The real stories](Days/day06.md)
+- [✔️] ♾️ 5 > [Planificar > Codificar > Construir > Probar > Liberar > Desplegar > Operar > Supervisar >](Days/day05.md)
+- [✔️] ♾️ 6 > [DevOps - Las historias reales](Days/day06.md)
 
-### Learning a Programming Language
+### Aprender un lenguaje de programación
 
-- [✔️] ⌨️ 7 > [The Big Picture: DevOps & Learning a Programming Language](Days/day07.md)
-- [✔️] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day08.md)
-- [✔️] ⌨️ 9 > [Let's explain the Hello World code](Days/day09.md)
+- [✔️] ⌨️ 7 > [El panorama: DevOps y el aprendizaje de un lenguaje de programación](Days/day07.md)
+- [✔️] ⌨️ 8 > [Configurar tu entorno DevOps para Go y Hello World](Days/day08.md)
+- [✔️] ⌨️ 9 > [Vamos a explicar el código de Hello World](Days/day09.md)
 - [✔️] ⌨️ 10 > [The Go Workspace & Compiling & running code](Days/day10.md)
 - [✔️] ⌨️ 11 > [Variables, Constants & Data Types](Days/day11.md)
-- [✔️] ⌨️ 12 > [Getting user input with Pointers and a finished program](Days/day12.md)
-- [✔️] ⌨️ 13 > [Tweet your progress with our new App](Days/day13.md)
+- [✔️] ⌨️ 12 > [Obtención del input user con Punteros y un programa terminado](Days/day12.md)
+- [✔️] ⌨️ 13 > [Tuitear tus progresos con nuestra nueva App](Days/day13.md)
 
-### Knowing Linux Basics
+### Conociendo lo básico de Linux
 
-- [✔️] 🐧 14 > [The Big Picture: DevOps and Linux](Days/day14.md)
-- [✔️] 🐧 15 > [Linux Commands for DevOps (Actually everyone)](Days/day15.md)
-- [✔️] 🐧 16 > [Managing your Linux System, Filesystem & Storage](Days/day16.md)
-- [✔️] 🐧 17 > [Text Editors - nano vs vim](Days/day17.md)
+- [✔️] 🐧 14 > [El panorama: DevOps & Linux](Days/day14.md)
+- [✔️] 🐧 15 > [Comandos Linux para DevOps (En realidad todos)](Days/day15.md)
+- [✔️] 🐧 16 > [Gestión de tu sistema Linux, sistema de archivos y almacenamiento](Days/day16.md)
+- [✔️] 🐧 17 > [Editores de texto - nano vs vim](Days/day17.md)
 - [✔️] 🐧 18 > [SSH & Web Server(LAMP)](Days/day18.md)
-- [✔️] 🐧 19 > [Automate tasks with bash scripts](Days/day19.md)
-- [✔️] 🐧 20 > [Dev workstation setup - All the pretty things](Days/day20.md)
+- [✔️] 🐧 19 > [Automatizar tareas con scripts bash](Days/day19.md)
+- [✔️] 🐧 20 > [Configuración de la estación de trabajo de desarrollo - Todas las cosas bonitas](Days/day20.md)
 
-### Understand Networking
+### Entender Networking
 
-- [✔️] 🌐 21 > [The Big Picture: DevOps and Networking](Days/day21.md)
-- [✔️] 🌐 22 > [The OSI Model - The 7 Layers](Days/day22.md)
-- [✔️] 🌐 23 > [Network Protocols](Days/day23.md)
-- [✔️] 🌐 24 > [Network Automation](Days/day24.md)
-- [✔️] 🌐 25 > [Python for Network Automation](Days/day25.md)
-- [✔️] 🌐 26 > [Building our Lab](Days/day26.md)
-- [✔️] 🌐 27 > [Getting Hands-On with Python & Network](Days/day27.md)
+- [✔️] 🌐 21 > [El panorama: DevOps & Networking](Days/day21.md)
+- [✔️] 🌐 22 > [El modelo OSI - Las 7 capas](Days/day22.md)
+- [✔️] 🌐 23 > [Protocolos de red](Days/day23.md)
+- [✔️] 🌐 24 > [Automatización de la red](Days/day24.md)
+- [✔️] 🌐 25 > [Python para la automatización de la red](Days/day25.md)
+- [✔️] 🌐 26 > [Construir nuestro Lab](Days/day26.md)
+- [✔️] 🌐 27 > [Ponerse a trabajar con Python y la red](Days/day27.md)
 
-### Stick to one Cloud Provider
+### Quédate con solo un Cloud Provider
 
-- [✔️] ☁️ 28 > [The Big Picture: DevOps & The Cloud](Days/day28.md)
-- [✔️] ☁️ 29 > [Microsoft Azure Fundamentals](Days/day29.md)
-- [✔️] ☁️ 30 > [Microsoft Azure Security Models](Days/day30.md)
-- [✔️] ☁️ 31 > [Microsoft Azure Compute Models](Days/day31.md)
-- [✔️] ☁️ 32 > [Microsoft Azure Storage & Database Models](Days/day32.md)
-- [✔️] ☁️ 33 > [Microsoft Azure Networking Models + Azure Management](Days/day33.md)
-- [✔️] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](Days/day34.md)
+- [✔️] ☁️ 28 > [El panorama: DevOps & The Cloud](Days/day28.md)
+- [✔️] ☁️ 29 > [Fundamentos de Microsoft Azure](Days/day29.md)
+- [✔️] ☁️ 30 > [Modelos de seguridad de Microsoft Azure](Days/day30.md)
+- [✔️] ☁️ 31 > [Modelos de computación de Microsoft Azure](Days/day31.md)
+- [✔️] ☁️ 32 > [Modelos de almacenamiento y base de datos de Microsoft Azure](Days/day32.md)
+- [✔️] ☁️ 33 > [Modelos de red de Microsoft Azure + Gestión de Azure](Days/day33.md)
+- [✔️] ☁️ 34 > [Escenarios prácticos de Microsoft Azure](Days/day34.md)
 
-### Use Git Effectively
+### Usa Git de forma efectiva
 
-- [✔️] 📚 35 > [The Big Picture: Git - Version Control](Days/day35.md)
-- [✔️] 📚 36 > [Installing & Configuring Git](Days/day36.md)
-- [✔️] 📚 37 > [Gitting to know Git](Days/day37.md)
-- [✔️] 📚 38 > [Staging & Changing](Days/day38.md)
-- [✔️] 📚 39 > [Viewing, unstaging, discarding & restoring](Days/day39.md)
-- [✔️] 📚 40 > [Social Network for code](Days/day40.md)
-- [✔️] 📚 41 > [The Open Source Workflow](Days/day41.md)
+- [✔️] 📚 35 > [El panorama: Git - Control de versiones](Days/day35.md)
+- [✔️] 📚 36 > [Instalación y configuración de Git](Days/day36.md)
+- [✔️] 📚 37 > [Conociendo Git](Days/day37.md)
+- [✔️] 📚 38 > [Puesta en marcha y cambios](Days/day38.md)
+- [✔️] 📚 39 > [Visualización, desescalado, descarte y restauración](Days/day39.md)
+- [✔️] 📚 40 > [Red social para el código](Days/day40.md)
+- [✔️] 📚 41 > [El flujo de trabajo del Open Source](Days/day41.md)
 
-### Containers
+### Contenedores
 
-- [✔️] 🏗️ 42 > [The Big Picture: Containers](Days/day42.md)
-- [✔️] 🏗️ 43 > [What is Docker & Getting installed](Days/day43.md)
-- [✔️] 🏗️ 44 > [Docker Images & Hands-On with Docker Desktop](Days/day44.md)
-- [✔️] 🏗️ 45 > [The anatomy of a Docker Image](Days/day45.md)
+- [✔️] 🏗️ 42 > [El panorama: Contenedores](Days/day42.md)
+- [✔️] 🏗️ 43 > [¿Qué es Docker y cómo se instala?](Days/day43.md)
+- [✔️] 🏗️ 44 > [Docker Images y manos a la obra con Docker Desktop](Days/day44.md)
+- [✔️] 🏗️ 45 > [La anatomía de Docker Image](Days/day45.md)
 - [✔️] 🏗️ 46 > [Docker Compose](Days/day46.md)
-- [✔️] 🏗️ 47 > [Docker Networking & Security](Days/day47.md)
-- [✔️] 🏗️ 48 > [Alternatives to Docker](Days/day48.md)
+- [✔️] 🏗️ 47 > [Redes y seguridad de Docker](Days/day47.md)
+- [✔️] 🏗️ 48 > [Alternativas a Docker](Days/day48.md)
 
 ### Kubernetes
 
-- [✔️] ☸ 49 > [The Big Picture: Kubernetes](Days/day49.md)
-- [✔️] ☸ 50 > [Choosing your Kubernetes platform](Days/day50.md)
-- [✔️] ☸ 51 > [Deploying your first Kubernetes Cluster](Days/day51.md)
-- [✔️] ☸ 52 > [Setting up a multinode Kubernetes Cluster](Days/day52.md)
-- [✔️] ☸ 53 > [Rancher Overview - Hands On](Days/day53.md)
-- [✔️] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
-- [✔️] ☸ 55 > [State and Ingress in Kubernetes](Days/day55.md)
+- [✔️] ☸ 49 > [El panorama: Kubernetes](Days/day49.md)
+- [✔️] ☸ 50 > [Elección de la plataforma Kubernetes](Days/day50.md)
+- [✔️] ☸ 51 > [Despliegue del primer clúster Kubernetes](Days/day51.md)
+- [✔️] ☸ 52 > [Configuración de un clúster multinodo Kubernetes](Days/day52.md)
+- [✔️] ☸ 53 > [Visión general de Rancher - manos a la obra](Days/day53.md)
+- [✔️] ☸ 54 > [Despliegue de aplicaciones en Kubernetes](Days/day54.md)
+- [✔️] ☸ 55 > [Estado y Ingress en Kubernetes](Days/day55.md)
 
-### Learn Infrastructure as Code
+### Aprender la infraestructura como código (IaC)
 
-- [✔️] 🤖 56 > [The Big Picture: IaC](Days/day56.md)
-- [✔️] 🤖 57 > [An intro to Terraform](Days/day57.md)
+- [✔️] 🤖 56 > [El panorama: IaC](Days/day56.md)
+- [✔️] 🤖 57 > [Una introducción a Terraform](Days/day57.md)
 - [✔️] 🤖 58 > [HashiCorp Configuration Language (HCL)](Days/day58.md)
-- [✔️] 🤖 59 > [Create a VM with Terraform & Variables](Days/day59.md)
-- [✔️] 🤖 60 > [Docker Containers, Provisioners & Modules](Days/day60.md)
-- [✔️] 🤖 61 > [Kubernetes & Multiple Environments](Days/day61.md)
-- [✔️] 🤖 62 > [Testing, Tools & Alternatives](Days/day62.md)
+- [✔️] 🤖 59 > [Crear una MV con Terraform y variables](Days/day59.md)
+- [✔️] 🤖 60 > [Contenedores Docker, aprovisionadores y módulos](Days/day60.md)
+- [✔️] 🤖 61 > [Kubernetes y entornos múltiples](Days/day61.md)
+- [✔️] 🤖 62 > [Pruebas, herramientas y alternativas](Days/day62.md)
 
-### Automate Configuration Management
+### Automatizar la gestión de la configuración
 
-- [✔️] 📜 63 > [The Big Picture: Configuration Management](Days/day63.md)
-- [✔️] 📜 64 > [Ansible: Getting Started](Days/day64.md)
+- [✔️] 📜 63 > [El panorama: la gestión de la configuración](Days/day63.md)
+- [✔️] 📜 64 > [Ansible: Primeros pasos](Days/day64.md)
 - [✔️] 📜 65 > [Ansible Playbooks](Days/day65.md)
-- [✔️] 📜 66 > [Ansible Playbooks Continued...](Days/day66.md)
-- [✔️] 📜 67 > [Using Roles & Deploying a Loadbalancer](Days/day67.md)
-- [✔️] 📜 68 > [Tags, Variables, Inventory & Database Server config](Days/day68.md)
-- [✔️] 📜 69 > [All other things Ansible - Automation Controller, AWX, Vault](Days/day69.md)
+- [✔️] 📜 66 > [Continuación de Ansible Playbooks...](Days/day66.md)
+- [✔️] 📜 67 > [Usar roles y desplegar un Loadbalancer](Days/day67.md)
+- [✔️] 📜 68 > [Tags, variables, inventario y Database Server config](Days/day68.md)
+- [✔️] 📜 69 > [Todo los demás sobre Ansible - Automation Controller, AWX, Vault](Days/day69.md)
 
-### Create CI/CD Pipelines
+### Crear CI/CD Pipelines
 
-- [✔️] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
-- [✔️] 🔄 71 > [What is Jenkins?](Days/day71.md)
-- [✔️] 🔄 72 > [Getting hands on with Jenkins](Days/day72.md)
-- [✔️] 🔄 73 > [Building a Jenkins pipeline](Days/day73.md)
+- [✔️] 🔄 70 > [El panorama: CI/CD Pipelines](Days/day70.md)
+- [✔️] 🔄 71 > [Que es Jenkins?](Days/day71.md)
+- [✔️] 🔄 72 > [Manos a la obra con Jenkins](Days/day72.md)
+- [✔️] 🔄 73 > [Construir un Jenkins pipeline](Days/day73.md)
 - [✔️] 🔄 74 > [Hello World - Jenkinsfile App Pipeline](Days/day74.md)
-- [✔️] 🔄 75 > [GitHub Actions Overview](Days/day75.md)
-- [✔️] 🔄 76 > [ArgoCD Overview](Days/day76.md)
+- [✔️] 🔄 75 > [Visión general de GitHub Actions](Days/day75.md)
+- [✔️] 🔄 76 > [Visión general ArgoCD](Days/day76.md)
 
-### Monitoring, Log Management, and Data Visualisation
+### Monitorización, gestión de logs y visualización de datos.
 
-- [✔️] 📈 77 > [The Big Picture: Monitoring](Days/day77.md)
-- [✔️] 📈 78 > [Hands-On Monitoring Tools](Days/day78.md)
-- [✔️] 📈 79 > [The Big Picture: Log Management](Days/day79.md)
-- [✔️] 📈 80 > [ELK Stack](Days/day80.md)
+- [✔️] 📈 77 > [El panorama: monitorización](Days/day77.md)
+- [✔️] 📈 78 > [Herramientas prácticas de monitorización](Days/day78.md)
+- [✔️] 📈 79 > [El panorama: Gestión de Logs](Days/day79.md)
+- [✔️] 📈 80 > [Pila ELK](Days/day80.md)
 - [✔️] 📈 81 > [Fluentd & FluentBit](Days/day81.md)
-- [✔️] 📈 82 > [EFK Stack](Days/day82.md)
-- [✔️] 📈 83 > [Data Visualisation - Grafana](Days/day83.md)
+- [✔️] 📈 82 > [Pila EFK](Days/day82.md)
+- [✔️] 📈 83 > [Visualización de datos - Grafana](Days/day83.md)
 
-### Store & Protect Your Data
+### Almacenar y proteger tus datos
 
-- [✔️] 🗃️ 84 > [The Big Picture: Data Management](Days/day84.md)
-- [✔️] 🗃️ 85 > [Data Services](Days/day85.md)
-- [✔️] 🗃️ 86 > [Backup all the platforms](Days/day86.md)
-- [✔️] 🗃️ 87 > [Hands-On Backup & Recovery](Days/day87.md)
-- [✔️] 🗃️ 88 > [Application Focused Backups](Days/day88.md)
-- [✔️] 🗃️ 89 > [Disaster Recovery](Days/day89.md)
-- [✔️] 🗃️ 90 > [Data & Application Mobility](Days/day90.md)
+- [✔️] 🗃️ 84 > [El panorama: Gestión de datos](Days/day84.md)
+- [✔️] 🗃️ 85 > [Servicios de datos](Days/day85.md)
+- [✔️] 🗃️ 86 > [Copia de seguridad de todas las plataformas](Days/day86.md)
+- [✔️] 🗃️ 87 > [Prácticas de copias de seguridad y recuperación de datos](Days/day87.md)
+- [✔️] 🗃️ 88 > [Copias de seguridad centradas en aplicación](Days/day88.md)
+- [✔️] 🗃️ 89 > [Recuperación de desastres](Days/day89.md)
+- [✔️] 🗃️ 90 > [Movilidad de datos y aplicaciones](Days/day90.md)
 
-## License
+## Licencia
 
 Shield: [![CC BY-NC-SA 4.0][cc-by-nc-sa-shield]][cc-by-nc-sa]
 
-This work is licensed under a
+Esta obra tiene una licencia de
 [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].
 
 [![CC BY-NC-SA 4.0][cc-by-nc-sa-image]][cc-by-nc-sa]
@@ -163,6 +177,6 @@ This work is licensed under a
 
 [![Star History Chart](https://api.star-history.com/svg?repos=MichaelCade/90DaysOfDevOps&type=Timeline)](https://star-history.com/#MichaelCade/90DaysOfDevOps&Timeline)
 
-[cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
+[cc-by-nc-sa]: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
