@@ -48,7 +48,7 @@ Aquí es donde vamos a terminar este día de aprendizaje, hay que coger fuerzas 
 
 ## Recursos
 
-Siempre se dejarán recursos adicionales a los archivos readme, ya que estamos aquí para aprender.
+Siempre se dejarán recursos adicionales en los archivos readme, ya que estamos aquí para aprender.
 
 Lo mejor para el seguimiento completo de estos documentos es que veas los siguientes vídeos y leas los artículos para hacerte una idea general de lo que hemos visto hoy y puedas profundizar un poco más.
 

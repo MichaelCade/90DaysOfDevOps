@@ -1,72 +1,70 @@
-## DevOps Lifecycle - Application Focused
+## Ciclo de vida DevOps - Centrado en la aplicación
 
-As we continue through these next few weeks we are 100% going to come across these titles (Continuous Development, Testing, Deployment, Monitor) over and over again, If you are heading towards the DevOps Engineer role then repeatability will be something you will get used to but constantly enhancing each time is another thing that keeps things interesting.
+A medida que continuemos vamos a encontrarnos al 100% con el Desarrollo Continuo, testing, Despliegue, Monitorización, entre otros conceptos, una y otra vez. Si te diriges hacia el rol de Ingeniero DevOps entonces la repetibilidad será algo a lo que te acostumbrarás. Mejorar constantemente es lo que mantiene todo esto interesante.
 
-In this hour we are going to take a look at the high-level view of the application from start to finish and then back around again like a constant loop.
+En esta hora vamos a echar un vistazo a la vista de alto nivel de la aplicación desde el principio hasta el final, y luego de nuevo como un bucle constante.
 
-### Development
+### Desarrollo
 
-Let's take a brand new example of an Application, to start with we have nothing created, maybe as a developer, you have to discuss with your client or end user the requirements and come up with some sort of plan or requirements for your Application. We then need to create from the requirements our brand new application.
+Tomemos un ejemplo de una aplicación. Para empezar no tenemos nada creado, tal vez como desarrollador tengamos que discutir con el cliente o el usuario final los requisitos y llegar a algún tipo de plan o requisitos para la aplicación. A continuación, tenemos que crear a partir de estos requisitos nuestra nueva aplicación.
 
-In regards to tooling at this stage, there is no real requirement here other than choosing your IDE and the programming language you wish to use to write your application.
+En lo que respecta a las herramientas en esta etapa, no hay ningún requisito real, aparte de elegir la IDE y el lenguaje de programación con el que se desea construir la aplicación.
 
-As a DevOps engineer, remember you are probably not the one creating this plan or coding the application for the end user, this will be a skilled developer.
+Como ingeniero DevOps seguramente no crees este plan ni codificará la aplicación para el usuario final, esto lo hará un desarrollador experto. Pero no estará de más que seas capaz de leer parte del código para poder tomar las mejores decisiones de infraestructura de cara a la aplicación.
 
-But it also would not hurt for you to be able to read some of the code so that you can make the best infrastructure decisions moving forward for your application.
+Anteriormente se mencionó que la aplicación puede ser escrita en cualquier lenguaje. Es importante que se mantenga un sistema de control de versiones, esto es algo que se cubrirá en detalle más adelante y en particular, nos sumergiremos en **Git**.
 
-We previously mentioned that this application can be written in any language. Importantly this should be maintained using a version control system, this is something we will cover also in detail later on and in particular, we will dive into **Git**.
-
-It is also likely that it will not be one developer working on this project although this could be the case even so best practices would require a code repository to store and collaborate on the code, this could be private or public and could be hosted or privately deployed generally speaking you would hear the likes of **GitHub or GitLab** being used as a code repository. Again we will cover these as part of our section on **Git** later on.
+También es probable que no sea un solo desarrollador el que trabaje en este proyecto, aunque este podría ser el caso, aún así las mejores prácticas requerirían un repositorio de código para almacenar y colaborar en el código, esto podría ser privado o público y podría ser alojado o desplegado de forma privada o no. En general se suelen utilizar **GitHub o GitLab** como un repositorio de código para este menester. De todo ello hablaremos en la sección sobre **Git** más adelante.
 
 ### Testing
 
-At this stage, we have our requirements and we have our application being developed. But we need to make sure we are testing our code in all the different environments that we have available to us or specifically maybe to the programming language chosen.
+En esta fase, tenemos nuestros requisitos y tenemos nuestra aplicación en desarrollo. Pero tenemos que asegurarnos de que estamos probando nuestro código en los diferentes entornos que tenemos a nuestra disposición o específicamente para el lenguaje de programación elegido.
 
-This phase enables QA to test for bugs, more frequently we see containers being used for simulating the test environment which overall can improve on cost overheads of physical or cloud infrastructure.
+En esta fase es el departamento de control de calidad quien prueba si existen posibles errores. Cada vez más vemos que se utilizan contenedores para simular el entorno de pruebas, lo que en general puede suponer un gran ahorro en los gastos generales de la infraestructura física o de la nube.
 
-This phase is also likely going to be automated as part of the next area which is Continuous Integration.
+Esta fase también es probable que se automatice como parte de la siguiente área, que es la integración continua.
 
-The ability to automate this testing vs 10s,100s or even 1000s of QA engineers having to do this manually speaks for itself, these engineers can focus on something else within the stack to ensure you are moving faster and developing more functionality vs testing bugs and software which tends to be the hold up on most traditional software releases that use a waterfall methodology.
+La capacidad de automatizar estas pruebas frente a los 10, 100 o incluso 1000 ingenieros de control de calidad que tienen que hacer esto manualmente habla por sí mismo, estos ingenieros pueden centrarse en otras cosas, por ejemplo, asegurando que la pila avanza rápidamente o para el desarrollo de más funcionalidad frente a las pruebas de errores y software. Este tiende ser el retraso en la mayoría de los lanzamientos de software tradicionales que utilizan una metodología en cascada.
 
-### Integration
+### Integración
 
-Quite importantly Integration is at the middle of the DevOps lifecycle. It is the practice in which developers require to commit changes to the source code more frequently. This could be on a daily or weekly basis.
+La integración se encuentra en el centro del ciclo de vida DevOps. Es la práctica en la que los desarrolladores requieren confirmar los cambios en el código fuente con mayor frecuencia. Puede ser diaria o semanalmente.
 
-With every commit, your application can go through the automated testing phases and this allows for early detection of issues or bugs before the next phase.
+Con cada confirmación, su aplicación puede pasar por las fases de pruebas automatizadas y esto permite la detección temprana de problemas o errores antes de la siguiente fase.
 
-Now you might at this stage be saying "but we don't create applications, we buy it off the shelf from a software vendor" Don't worry many companies do this and will continue to do this and it will be the software vendor that is concentrating on the above 3 phases but you might want to still adopt the final phase as this will enable for faster and more efficient deployments of your off the shelf deployments.
+No te preocupes, muchas empresas hacen esto y continuarán haciéndolo, y será el proveedor de software el que se concentre en las 3 fases anteriores, pero es posible que desee adoptar la fase final, ya que esto permitirá una ejecución más rápida y eficiente de los despliegues.
 
-I would also suggest just having this above knowledge is very important as you might buy off the shelf software today, but what about tomorrow or down the line... next job maybe?
+Tener este conocimiento es muy importante, ya que puede comprar el software de la plataforma hoy, pero ¿qué pasará mañana o en el próximo trabajo?
 
-### Deployment
+### Despliegue
 
-Ok so we have our application built and tested against the requirements of our end user and we now need to go ahead and deploy this application into production for our end users to consume.
+Bien, tenemos nuestra aplicación construida y probada, con los requisitos de nuestro usuario final. Ahora tenemos que seguir adelante y desplegar en producción para que nuestros usuarios finales la puedan utilizar.
 
-This is the stage where the code is deployed to the production servers, now this is where things get extremely interesting and it is where the rest of our 86 days dives deeper into these areas. Because different applications require different possibly hardware or configurations. This is where **Application Configuration Management** and **Infrastructure as Code** could play a key part in your DevOps lifecycle. It might be that your application is **Containerised** but also available to run on a virtual machine. This then also leads us onto platforms like **Kubernetes** which would be orchestrating those containers and making sure you have the desired state available to your end users.
+Esta es la etapa en la que el código se despliega en los servidores de producción. Ahora es cuando las cosas se ponen muy interesantes y es donde tendremos que sumergirnos el resto de nuestros 86 días. Diferentes aplicaciones requieren diferentes hardware y/o configuraciones. Aquí es donde la **Gestión de la Configuración de la Aplicación** y la **Infraestructura como Código** podrían jugar un papel clave en el ciclo de vida DevOps. Puede ser que la aplicación esté **contenerizada** pero también disponible para ejecutarse en una máquina virtual. Esto también nos lleva a plataformas como **Kubernetes**, que orquestaría nuestros contenedores y aseguraría el estado deseado.
 
-Of these bold topics, we will go into more detail over the next few weeks to get a better foundational knowledge of what they are and when to use them.
+De estos atrevidos temas, entraremos en más detalle en las próximas semanas para tener un mejor conocimiento fundacional de lo que son y cuándo usarlos.
 
-### Monitoring
+### Monitoreo
 
-Things are moving fast here and we have our Application that we are continuously updating with new features and functionality and we have our testing making sure no gremlins are being found. We have the application running in our environment that can be continually keeping the required configuration and performance.
+Las cosas se mueven rápidamente aquí y tenemos nuestra aplicación que estamos actualizando continuamente con nuevas características y funcionalidades. Tenemos el testing asegurándose de que no se hay gremlins por ahí. Tenemos la aplicación funcionando en nuestro entorno de producción y puede estar continuamente mantenida la configuración y el rendimiento requeridos.
 
-But now we need to be sure that our end users are getting the experience they require. Here we need to make sure that our Application Performance is continuously being monitored, this phase is going to allow your developers to make better decisions about enhancements to the application in future releases to better serve the end users.
+Pero ahora necesitamos estar seguros de que nuestros usuarios finales están obteniendo la experiencia que requieren. Aquí tenemos que asegurarnos de que el rendimiento de nuestra aplicación está siendo continuamente monitorizado. Esta fase va a permitir a los desarrolladores tomar las mejores decisiones sobre las mejoras en las futuras versiones de la aplicación.
 
-This section is also where we are going to capture that feedback wheel about the features that have been implemented and how the end users would like to make these better for them.
+Esta sección es también donde vamos a capturar el feedback sobre las características que se han implementado y cómo los usuarios finales les gustaría mejorar la aplicación para ellos mismos.
 
-Reliability is a key factor here as well, at the end of the day we want our Application to be available all the time it is required. This then leads to other **observability, security and data management** areas that should be continuously monitored and feedback can always be used to better enhance, update and release the application continuously.
+La fiabilidad es un factor clave aquí, al fin y al cabo queremos que nuestra aplicación esté disponible todo el tiempo que se necesite, tener alta disponibilidad. Esto nos lleva a otras áreas de **observabilidad, seguridad y gestión de datos** que deben ser monitorizados continuamente. El feedback siempre puede ser utilizado para mejorar, actualizar y liberar la aplicación continuamente.
 
-Some input from the community here specifically [@\_ediri](https://twitter.com/_ediri) mentioned also part of this continuous process we should also have the FinOps teams involved. Apps & Data are running and stored somewhere you should be monitoring this continuously to make sure if things change from a resources point of view your costs are not causing some major financial pain on your Cloud Bills.
+En este proceso continuo también debemos tener involucrados los equipos de [FinOps](https://www.ibm.com/es-es/topics/finops). Las aplicaciones y los datos se ejecutan y se almacenan en algún lugar que debe tener seguimiento financiero para asegurarse de que si las cosas cambian desde un punto de vista de recursos económicos, que no sean causa de algún dolor financiero importante en las facturas del cloud.
 
-I think it is also a good time to bring up the "DevOps Engineer" mentioned above, albeit there are many DevOps Engineer positions in the wild that people hold, this is not the ideal way of positioning the process of DevOps. What I mean is from speaking to others in the community the title of DevOps Engineer should not be the goal for anyone because really any position should be adopting DevOps processes and the culture explained here. DevOps should be used in many different positions such as Cloud-Native engineer/architect, virtualisation admin, cloud architect/engineer, and infrastructure admin. This is to name a few but the reason for using DevOps Engineer above was really to highlight the scope of the process used by any of the above positions and more.
+Al hablar con otros en la comunidad, el título de "Ingeniero DevOps" no debería ser la meta para nadie porque realmente cualquier posición debería adoptar los procesos DevOps y la cultura explicada aquí. DevOps debería ser usado en muchas posiciones diferentes como ingeniero/arquitecto Cloud-Native, administrador de virtualización, arquitecto/ingeniero cloud, y administrador de infraestructura. Esto es por nombrar algunos, pero la razón de usar Ingeniero DevOps arriba fue realmente para resaltar el alcance del proceso utilizado por cualquiera de las posiciones anteriores.
 
-## Resources
+## Recursos
 
-I am always open to adding additional resources to these readme files as it is here as a learning tool.
+Siempre se dejarán recursos adicionales en los archivos readme, ya que estamos aquí para aprender.
 
-My advice is to watch all of the below and hopefully you also picked something up from the text and explanations above.
+Lo mejor para el seguimiento completo de estos documentos es que veas los siguientes vídeos y leas los artículos para hacerte una idea general de lo que hemos visto hoy y puedas profundizar un poco más.
 
-- [Continuous Development](https://www.youtube.com/watch?v=UnjwVYAN7Ns) I will also add that this is focused on manufacturing but the lean culture can be closely followed with DevOps.
+- [Continuous Development](https://www.youtube.com/watch?v=UnjwVYAN7Ns) 
 - [Continuous Testing - IBM YouTube](https://www.youtube.com/watch?v=RYQbmjLgubM)
 - [Continuous Integration - IBM YouTube](https://www.youtube.com/watch?v=1er2cjUq1UI)
 - [Continuous Monitoring](https://www.youtube.com/watch?v=Zu53QQuYqJ0)
@@ -74,4 +72,4 @@ My advice is to watch all of the below and hopefully you also picked something u
 - [FinOps Foundation - What is FinOps](https://www.finops.org/introduction/what-is-finops/)
 - [**NOT FREE** The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290/)
 
-If you made it this far then you will know if this is where you want to be or not. See you on [Day 4](day04.md).
+Si has llegado hasta aquí entonces sabrás si es aquí donde quieres estar o no. Nos vemos en el [Día 4](day04.md).
