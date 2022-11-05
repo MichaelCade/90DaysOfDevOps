@@ -1,83 +1,84 @@
 ---
-title: '#90DaysOfDevOps - The Big Picture: DevOps and Networking - Day 21'
+title: '#90DaysOfDevOps - 全体像: DevOpsとネットワーキング - 21日目'
 published: false
-description: 90DaysOfDevOps - The Big Picture DevOps and Networking
+description: 90DaysOfDevOps - DevOpsとネットワーキング
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048761
 ---
-## The Big Picture: DevOps and Networking
+## 全体像: DevOpsとネットワーキング
 
-Welcome to Day 21! We are going to be getting into Networking over the next 7 days, Networking and DevOps is the overarching theme but we will need to get into some of the networking fundamentals as well. 
+21日目へようこそ! ネットワークとDevOpsは包括的なテーマですが、ネットワークの基本的な部分にも触れる必要があります。
 
-Ultimately as we have said previously DevOps is about a culture and process change within your organisations this as we have discussed can be Virtual Machines, Containers, Kubernetes but it can also be the network, If we are using those DevOps principles for our infrastructure that has to include the network more to the point from a DevOps point of view you also need to know about the network as in the different topologies and networking tools and stacks that we have available. 
+最終的には、これまで述べてきたように、DevOpsは組織内の文化やプロセスを変えることなのです。
+私たちは、仮想マシン、コンテナ、Kubernetesについて議論してきました。もし私たちがインフラストラクチャにDevOpsの原則を用いるのであれば、DevOpsの観点からすると、ネットワークも含まれなければなりません。ネットワークについても、さまざまなトポロジーやネットワーク・ツール、スタックについて知っておく必要があります。
 
-I would argue that we should have our networking devices configured using infrastructure as code and have everything automated like we would our virtual machines, but in order to do that we have to have a good understanding of what we are automating. 
+私は、インフラストラクチャー・アズ・コードを使ってネットワーク機器を設定し、仮想マシンのようにすべてを自動化すべきだと主張します。しかし、そのためには、何を自動化するのかをよく理解しなければなりません。
 
-### What is NetDevOps | Network DevOps?
+### NetDevOpsとは
 
-You may also hear the terms Network DevOps or NetDevOps. Maybe you are already a Network engineer and have a great grasp on the network components within the infrastructure you understand the elements used around networking such as DHCP, DNS, NAT etc etc. You will also have a good understanding around the hardware or software defined networking options, switches, routers etc etc. 
+また、Network DevOpsやNetDevOpsという言葉も耳にすることがあるかもしれません。あなたはすでにネットワーク・エンジニアで、インフラ内のネットワーク・コンポーネントをよく理解しており、DHCP、DNS、NATなど、ネットワーキングで使用される要素を理解しているかもしれません。また、ハードウェアやソフトウェア定義のネットワークオプション、スイッチ、ルーターなどについてもよく理解していることでしょう。
 
-But if you are not a network engineer then we probably need to get a foundational knowledge across the board on some of those areas so that we can understand the end goal of Network DevOps. 
+しかし、もしあなたがネットワークエンジニアでないなら、ネットワークDevOpsの最終目標を理解するために、これらの分野の基礎知識を得る必要があるかもしれません。
 
-But in regards to those terms we can think of NetDevOps or Network DevOps as applying the DevOps Principles and Practices to the network, applying version control and automation tools to the network creation, testing, monitoring, and deployments. 
+しかし、これらの用語に関して、NetDevOpsまたはネットワークDevOpsは、DevOpsの原則と実践をネットワークに適用し、バージョン管理と自動化ツールをネットワークの作成、テスト、監視、デプロイメントに適用することだと考えることができます。
 
-If we think of Network DevOps of having to require automation, we mentioned before about DevOps breaking down the siloes between teams. If the networking teams do not change to a similar model and process then they become the bottleneck or even the failure overall. 
+自動化を必要とするネットワークDevOpsを考える場合、DevOpsはチーム間のサイロを破壊すると前述した。もしネットワーク・チームが同じようなモデルとプロセスに変わらなければ、彼らがボトルネックになったり、全体的に失敗したりすることになります。
 
-Using the automation principles around provisioning, configuration, testing, version control and deployment is a great start. Automation is overall going to enable speed of deployment, stability of the networking infrastructure and consistent improvement as well as the process being shared across multiple environments once they have been tested. Such as a fully tested Network Policy that has been fully tested on one environment can be used quickly in another location because of the nature of this being in code vs a manually authored process which it might have been before. 
-A really good view point and outline of this thinking can be found here. [Network DevOps](https://www.thousandeyes.com/learning/techtorials/network-devops)
+プロビジョニング、コンフィグレーション、テスト、バージョン管理、デプロイメントに関する自動化の原則を使用することは、素晴らしいスタートとなります。自動化は全体として、展開のスピード、ネットワークインフラの安定性、一貫した改善を可能にし、一度テストされたプロセスは複数の環境間で共有されるようになる。例えば、ある環境で完全にテストされたネットワークポリシーは、以前は手動でオーサリングされたプロセスであったのに対し、コード化されているため、別の場所でもすぐに使用することができる。
+この考え方の良い視点とアウトラインは、ここで見ることができます。[Network DevOps](https://www.thousandeyes.com/learning/techtorials/network-devops)
 
-## Networking The Basics 
+## ネットワーク基本
 
-Let's forget the DevOps side of things to begin with here and we now need to look very briefly into some of the Networking fundamentals. 
+ここでは、まずDevOpsの側面を忘れて、ネットワークの基本的な部分をごく簡単に見ていく必要があります。
 
-### Network Devices 
+### ネットワークデバイス
 
-**Host** are any devices which sends or recieve traffic. 
+**ホスト**は、トラフィックを送信または受信するすべてのデバイスです。
 
 ![](Images/Day21_Networking1.png)
 
-**IP Address** the identity of each host. 
+**IPアドレス** 各ホストのID。
 
 ![](Images/Day21_Networking2.png)
 
-**Network** is what transports traffic between hosts. If we did not have networks there would be a lot of manual movement of data! 
+**ネットワーク**は、ホスト間のトラフィックを転送するものです。もしネットワークがなければ、手作業によるデータの移動がたくさんあったことでしょう。
 
-A logical group of hosts which require similar connectivity. 
+ネットワークとは、同じような接続性を必要とするホストの論理的なグループです。
 
 ![](Images/Day21_Networking3.png)
 
-**Switches** facilitate communication ***within*** a network. A switch forwards data packets between hosts. A switch sends packets directly to hosts. 
+**スイッチ**は、ネットワーク内の通信を容易にします。スイッチは、ホスト間でデータパケットを転送します。スイッチは、パケットをホストに直接送信します。
 
-- Network: A Grouping of hosts which require similar connectivity. 
-- Hosts on a Network share the same IP address space. 
+- ネットワークは、同じような接続性を必要とするホストのグループ化。
+- ネットワーク上のホストは、同じIPアドレス空間を共有する。
 
 ![](Images/Day21_Networking4.png)
 
-**Router** facilitate communication between networks. If we said before that a switch looks after communication within a network a router allows us to join these networks together or at least give them access to each other if permitted. 
+**ルータ**はネットワーク間の通信を容易にします。スイッチがネットワーク内の通信を管理すると言った場合、ルータはこれらのネットワークを結合したり、許可されていれば少なくとも相互にアクセスできるようにします。
 
-A router can provide a traffic contol point (security, filtering, redirting) More and more switches also provide some of these functions now. 
+ルーターは、トラフィック制御ポイント（セキュリティ、フィルタリング、リダイレクト）を提供することができます。
 
-Routers learn which networks they are attached to. This is known as routes, a routing table is all the networks a router knows about. 
+ルーターは、自分がどのネットワークに接続しているかを学習します。これはルートとして知られており、ルーティングテーブルは、ルータが知っているすべてのネットワークです。
 
-A router has an IP address in the networks they are attached to. This IP is also going to be each hosts way out of their local network also known as a gateway. 
+ルータは、それらが接続されているネットワークにIPアドレスを持っています。このIPはまた、ゲートウェイとして知られている彼らのローカルネットワークから各ホストの方法であることを行っている。
 
-Routers also create the hierarchy in networks I mentioned earlier. 
+ルータはまた、私が先に述べたネットワーク内の階層を作成します。
 
 ![](Images/Day21_Networking5.png)
 
-## Switches vs Routers 
+## スイッチとルーター
 
-**Routing** is the process of moving data between networks. 
-    
-- A router is a device whose primary purpose is Routing.
+**ルーティング**とは、ネットワーク間でデータを移動させる処理のことです。
 
-**Switching** is the process of moving data within networks. 
+- ルーターは、ルーティングを主目的とする装置である。
 
-- A Switch is a device who's primary purpose is switching. 
+**スイッチング**は、ネットワーク内でデータを移動させるプロセスです。
 
-This is very much a foundational overview of devices as we know there are many different Network Devices such as: 
+- スイッチとは、スイッチングを主目的とするデバイスのことです。
+
+ネットワーク機器には、次のようなさまざまなものがあるため、ここでは機器の基礎的な概要を説明します。
 
 - Access Points 
 - Firewalls 
@@ -88,9 +89,9 @@ This is very much a foundational overview of devices as we know there are many d
 - Virtual Switches 
 - Virtual Routers 
 
-Although all of these devices are going to perform Routing and/or Switching. 
+これらのデバイスはすべてルーティングとスイッチングを実行するものですが、このリストについてもう少し詳しく説明します。
 
-Over the next few days we are going to get to know a little more about this list. 
+これから数日間で、このリストについてもう少し詳しく知ることになります。
 
 - OSI Model 
 - Network Protocols 
@@ -99,8 +100,8 @@ Over the next few days we are going to get to know a little more about this list
 - DHCP
 - Subnets 
 
-## Resources 
+## リソース
 
 [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 
-See you on [Day22](day22.md)
+また[Day22](day22.md)でお会いしましょう。

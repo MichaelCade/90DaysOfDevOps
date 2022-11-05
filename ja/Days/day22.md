@@ -1,98 +1,104 @@
 ---
-title: '#90DaysOfDevOps - The OSI Model - The 7 Layers - Day 22'
+title: '#90DaysOfDevOps - OSIモデル - 7つのレイヤー - 22日目'
 published: false
-description: 90DaysOfDevOps - The OSI Model - The 7 Layers
+description: 90DaysOfDevOps - OSIモデル - 7つのレイヤー
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1049037
 ---
-## The OSI Model - The 7 Layers
+## OSIモデル - 7つのレイヤー
 
-The overall purpose of networking as an industry is to allow two hosts to share data before networking if I want to get data from this host to this host I'd have to plug something into this host walk it over to the other host plug it into the other host.
+産業としてのネットワークの全体的な目的は、ネットワーク化する前に2つのホストがデータを共有できるようにすることです。
+このホストからこのホストにデータを送るには、このホストに何かを差し込んで、もう一方のホストまで歩いて行って、もう一方のホストに差し込まなければなりません。
 
-Networking allows us to automate this by allowing the host to share data automatically across the wire for these hosts to do this they must follow a set of rules.
+ネットワーク化によって、ホストがワイヤーを介して自動的にデータを共有できるようになり、これを自動化することができるようになりました。
 
-This is no different than any language English has a set of rules that two English speakers must follow Spanish has its own set of rules French has its own set of rules while networking also has its own set of rules
+これは、英語には英語を話す者同士が守らなければならないルールがあり、スペイン語にはスペイン語のルールがあり、フランス語にはフランス語のルールがあるのと同じで、ネットワークにもルールがあります。
 
-The rules for networking are divided into seven different layers and those layers are known as the OSI model. 
+ネットワークのルールは7つの層に分かれており、それらの層はOSIモデルとして知られています。
 
-### Introduction to the OSI Model 
+### OSIモデルの紹介
 
-The OSI Model (Open Systems Interconnection Model) is a framework used to describe the functions of a networking system. The OSI model characterises computing functions into a universal set of rules and requirements in order to support interoperability between different products and software. In the OSI reference model, the communications between a computing system are split into seven different abstraction layers: **Physical, Data Link, Network, Transport, Session, Presentation, and Application**.
+OSIモデル（Open Systems Interconnection Model）は、ネットワークシステムの機能を記述するために使用されるフレームワークである。OSIモデルは、異なる製品やソフトウェア間の相互運用性をサポートするために、コンピューティング機能を普遍的な規則と要件のセットに特徴付けます。OSI参照モデルでは、コンピュータシステム間の通信は、7つの異なる抽象化層に分割されています。**物理層、データリンク層、ネットワーク層、トランスポート層、セッション層、プレゼンテーション層、アプリケーション層です。
 
 ![](Images/Day22_Networking1.png)
 
-### Physical
-Layer 1 in the OSI model and this is known as physical, the premise of being able to get data from one host to another through a means be it physical cable or we could also consider Wi-Fi in this layer as well. We might also see some more legacy hardware seen here around hubs and repeaters in order to transport the data from one host to another. 
+### 物理層
+
+OSIモデルの第1層は物理層と呼ばれ、あるホストから別のホストへ、物理ケーブルやWi-Fiなどの手段でデータを転送することを前提にしています。また、あるホストから別のホストへデータを転送するために、ハブやリピータなどのレガシーハードウェアも見られるかもしれません。
 
 ![](Images/Day22_Networking2.png)
 
-### Data Link 
-Layer 2, the data link enables node to node transfer where data is packaged into frames. There is also a level of error correcting that might have occurred at the physical layer. This is also where we introduce or first see MAC addresses. 
+### データリンク層
 
-This is where we see the first mention of switches that we covered in our first day of networking on [Day 21](day21.md)
+レイヤ2、データリンクは、データがフレームにパッケージされているノード間の転送を可能にします。また、物理層で発生したであろうエラー訂正のレベルも存在する。また、MACアドレスを導入したり、初めて目にするのもこの層です。
+
+21 日目](day21.md) のネットワーキングの初日で取り上げたスイッチについても、ここで初めて言及されています。
 
 ![](Images/Day22_Networking3.png)
 
-### Network 
-You have likely heard the term layer 3 switches or layer 2 switches. In our OSI model Layer 3, the Network has a goal of end to end delivery, this is where we see our IP addresses also mentioned in the first day overview. 
+### ネットワーク層
 
-Routers and hosts exist at layer 3, remember the router is the ability to route between multiple networks. Anything with an IP could be considered Layer 3. 
+レイヤー3スイッチやレイヤー2スイッチという言葉を聞いたことがあると思います。OSIモデルのレイヤ3では、ネットワークはエンドツーエンドの配信を目標としており、初日の概要でも触れたIPアドレスはここにあたります。
+
+ルータとホストはレイヤ3に存在し、ルータは複数のネットワーク間をルーティングする機能であることを忘れないでください。IPを持つものはすべてレイヤー3と考えることができます。
 
 ![](Images/Day22_Networking4.png)
 
-So why do we need addressing schemes on both Layer 2 and 3? (MAC Addresses vs IP Addresses) 
+では、なぜレイヤ2と3の両方でアドレス方式が必要なのでしょうか？ (MACアドレスとIPアドレスの比較) 
 
-If we think about getting data from one host to another, each host has an IP address but there are several switches and routers in between. Each of the devices has that layer 2 MAC address. 
+あるホストから別のホストにデータを送ることを考えると、各ホストはIPアドレスを持っていますが、その間にはいくつかのスイッチやルーターがあります。それぞれの機器には、そのレイヤー2のMACアドレスがあります。
 
-The layer 2 MAC address will go from host to switch/router only, it is focused on hops where as the layer 3 IP addresses will stay with that packet of data until it reaches its end host. (End to End)
+レイヤー2 MACアドレスは、ホストからスイッチ/ルーターに移動するだけで、レイヤー3 IPアドレスがそのデータのパケットがエンドホストに到達するまで残るのに対し、ホップに焦点が当てられています。(エンド・ツー・エンド)
 
-IP Addresses - Layer 3 = End to End Delivery 
+IPアドレス - レイヤ3 = エンド・トゥ・エンド配送
 
-MAC Addresses - Layer 2 = Hop to Hop Delivery 
+MACアドレス - レイヤ2 = ホップ・トゥ・ホップ配送
 
-Now there is a network protocol that we will get into but not today called ARP(Address Resolution Protocol) which links our Layer3 and Layer2 addresses. 
+さて、レイヤ3とレイヤ2のアドレスを結びつけるARP（Address Resolution Protocol）というネットワークプロトコルがありますが、今日は触れません。
 
-### Transport 
-Service to Service delivery, Layer 4 is there to distinguish data streams. In the same way that Layer 3 and Layer 2 both had their addressing schemes in Layer 4 we have ports. 
+### トランスポート層
+
+サービスからサービスへ、レイヤ4はデータストリームを区別するために存在する。レイヤー3とレイヤー2がアドレス方式を持つのと同じように、レイヤー4にはポートがあります。
 
 ![](Images/Day22_Networking5.png)
 
-### Session, Presentation, Application 
-Distinction between Layers 5,6,7 is or had become somewhat vague. 
+### セッション層、プレゼンテーション層、アプリケーション層
 
-It is worth looking at the [TCP IP Model](https://www.geeksforgeeks.org/tcp-ip-model/) to get a more recent understanding. 
+レイヤー5,6,7の区別は、やや曖昧になっている、あるいはなっていた。
 
-Let's now try and explain what's actually happening when hosts are communicating to each other using this networking stack. This host has an application that's going to generate data that is meant to be sent to another host.
+[TCP IPモデル](https://www.geeksforgeeks.org/tcp-ip-model/)を見ると、より最新の理解が得られるでしょう。
 
-The source host is going to go through is what's known as the encapsulation process. That data will be first sent to layer 4.
+では、このネットワークスタックを使ってホスト同士が通信しているときに、実際に何が起こっているかを説明しましょう。このホストには、別のホストに送信するデータを生成するアプリケーションがあります。
 
-Layer 4 is going to add a header to that data which can facilitate the goal of layer 4 which is service to service delivery. This is going to be a port using either TCP or UDP. It is also going to include the source port and destination port. 
+送信元のホストは、カプセル化プロセスと呼ばれるものを通過することになります。そのデータはまずレイヤー4に送られます。
 
-This may also be known as a segment (Data and Port)
+レイヤ4はそのデータにヘッダを追加し、レイヤ4の目標であるサービス間デリバリーを容易にします。これは、TCPまたはUDPを使用したポートになります。また、送信元ポートと送信先ポートも含まれます。
 
-This segment is going to be passed down the osi stack to layer 3, the network layer, the network layer is going to add another header to this data.
-This header is going to facilitate the goal of layer 3 which is end to end delivery meaning in this header you will have a source ip address and a destination ip, the header plus data may also be referred to as a packet. 
+これは、セグメント（データとポート）とも呼ばれます。
 
-Layer 3 will then take that packet and hand it off to layer 2, layer 2 will once again add another header to that data to accomplish layer 2's goal of hop to hop delivery meaning this header will include a source and destination mac address. 
-This is known as a frame when you have the layer 2 header and data.
+このセグメントは、osiスタックからレイヤー3、ネットワーク層に渡されます。ネットワーク層はこのデータに別のヘッダを追加します。
+このヘッダはレイヤ3の目的であるエンド・ツー・エンド・デリバリを容易にします。つまり、このヘッダにはソースIPアドレスとデスティネーションIPがあり、ヘッダとデータはパケットと呼ばれることがあります。
 
-That frame then gets converted into ones and zeros and sent over the Layer 1 Physical cable or wifi. 
+レイヤ3はそのパケットをレイヤ2に渡します。レイヤ2は再びそのデータに別のヘッダを追加し、レイヤ2の目標であるホップ・トゥ・ホップ配送を達成します。
+このレイヤー2のヘッダーとデータを合わせて1つのフレームと呼びます。
+
+このフレームは、1と0に変換され、レイヤ1物理ケーブルまたは無線LANで送信されます。
 
 ![](Images/Day22_Networking6.png)
 
-I did mention above the naming for each layer of header plus data but decided to draw this out as well. 
+ヘッダー＋データの各レイヤーのネーミングについては前述しましたが、これも描き出すことにしました。
 
 ![](Images/Day22_Networking7.png)
 
-Obviously the Application sending the data is being sent somewhere so the receiving in some what in reverse to get that back up the stack and into the receiving host. 
+明らかに、データを送信しているアプリケーションは、どこかに送信されているので、受信側では逆にスタックを上がって受信側のホストにデータを戻します。
 
 ![](Images/Day22_Networking8.png)
 
-## Resources 
+## リソース
 
 - [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 - [Practical Networking](http://www.practicalnetworking.net/)
 
-See you on [Day23](day23.md)
+[23日目](day23.md)でお会いしましょう。

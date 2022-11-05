@@ -32,13 +32,13 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 
 ### Học một ngôn ngữ lập trình
 
-- [✔️] ⌨️ 7 > [The Big Picture: DevOps & Learning a Programming Language](Days/day07.md)
-- [✔️] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](Days/day08.md)
-- [✔️] ⌨️ 9 > [Let's explain the Hello World code](Days/day09.md)
-- [✔️] ⌨️ 10 > [The Go Workspace & Compiling & running code](Days/day10.md)
-- [✔️] ⌨️ 11 > [Variables, Constants & Data Types](Days/day11.md)
-- [✔️] ⌨️ 12 > [Getting user input with Pointers and a finished program](Days/day12.md)
-- [✔️] ⌨️ 13 > [Tweet your progress with our new App](Days/day13.md)
+- [✔️] ⌨️ 7 > [Bức tranh toàn cảnh: DevOps & Học một ngôn ngữ lập trình](Days/day07.md)
+- [✔️] ⌨️ 8 > [Thiết lập môi trường DevOps cho Go & Hello World](Days/day08.md)
+- [✔️] ⌨️ 9 > [Giải thích mã Hello World](Days/day09.md)
+- [✔️] ⌨️ 10 > [Không gian làm việc của Go](Days/day10.md)
+- [✔️] ⌨️ 11 > [Biến, hằng số & kiểu dữ liệu](Days/day11.md)
+- [✔️] ⌨️ 12 > [Nhận thông tin đầu vào sử dụng con trỏ và chương trình hoàn thiện](Days/day12.md)
+- [✔️] ⌨️ 13 > [Tweet tiến trình của bạn với ứng dụng mới của chúng ta](Days/day13.md)
 
 ### Knowing Linux Basics
 

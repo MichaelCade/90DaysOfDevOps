@@ -10,7 +10,7 @@ id: 1048862
 
 Before we get into the topics for today I want to give a massive shout out to [Techworld with Nana](https://www.youtube.com/watch?v=yyUHQIec83I) and this fantastic concise journey through the fundamentals of Go.
 
-On [Day8](day08.md) we set our environment up, on [Day9](day09.md) we walked through the Hello #90DaysOfDevOps code and on [Day10](day10.md)) we looked at our Go workspace and went a little deeper into compiling and running the code.
+On [Day8](day08.md) we set our environment up, on [Day9](day09.md) we walked through the Hello #90DaysOfDevOps code and on [Day10](day10.md) we looked at our Go workspace and went a little deeper into compiling and running the code.
 
 Today we are going to take a look into Variables, Constants and Data Types whilst writing a new program.
 

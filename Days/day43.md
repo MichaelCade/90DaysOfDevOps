@@ -61,6 +61,22 @@ The [docker documenation](https://docs.docker.com/engine/install/) is amazing an
 Take note before you go ahead and install at the system requirements, [Install Docker Desktop on Windows](https://docs.docker.com/desktop/windows/install/) if you are using macOS including the M1-based CPU architecture you can also take a look at [Install Docker Desktop on macOS](https://docs.docker.com/desktop/mac/install/)
 
 I will run through the Docker Desktop installation for Windows on another Windows Machine and log the process down below.
+### Windows
+
+- Select windows as the operating system of your device.
+
+   <img src = Images/Day43_operatingSystem.png>
+
+- Navigate to the folder where you want to save the installer and save.
+
+- Run the installer and wait for a few seconds and grant access for WSL.
+    <img src = Images/Day43_EnableWSL.png>
+
+- Click ok and the installation will begin.
+    <img src = Images/Day43_install.png>
+
+- Docker Desktop has been successfully installed on your device. You can now run the command "docker" on the terminal to check if the installation was successfull.
+    <img src = Images/Day43_check.png>
 
 ## Resources
 

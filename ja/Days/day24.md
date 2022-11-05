@@ -1,145 +1,146 @@
 ---
-title: '#90DaysOfDevOps - Network Automation - Day 24'
+title: '#90DaysOfDevOps - ネットワーク・オートメーション - 24日目'
 published: false
-description: 90DaysOfDevOps - Network Automation
+description: 90DaysOfDevOps - ネットワーク・オートメーション
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048805
 ---
-## Network Automation 
+## ネットワーク・オートメーション
 
-### Basics of network automation
+### ネットワーク・オートメーションの基本
 
-Primary drivers for Network Automation 
-- Achieve Agility 
-- Reduce Cost 
-- Eliminate Errors 
-- Ensure Compliance 
-- Centralised Management 
+ネットワーク・オートメーションの主なドライバー:
 
-The automation adoption process is specific to each business. There's no one size fits all when it comes to deploying automation, the ability to identify and embrace the approach that works best for your organisation is critical in advancing towards maintaining or creating a more agile environment, the focus should always be on business value and end-user experience. (We said something similar right at the start in regards to the whole of DevOps and the culture change and the automated process that this brings)
+- アジリティの実現
+- コスト削減
+- エラーの排除
+- コンプライアンスの確保
+- 集中管理
 
-To break this down you would need to identify how the task or process that you're trying to automate is going to achieve and improve the end-user experience or business value whilst following a step-by-step systematic approach.
+自動化の導入プロセスは、各ビジネスに特有のものです。よりアジャイルな環境を維持・創造するためには、組織に最適なアプローチを特定し、採用することが重要です。(私たちは、DevOpsの全体像、文化の変化、そしてこれがもたらす自動化されたプロセスに関して、冒頭で同じようなことを述べました)
 
-"If you don't know where you are going, any road will take you there."
+これを分解すると、自動化しようとしているタスクやプロセスが、ステップバイステップの体系的なアプローチに従いながら、どのようにエンドユーザー・エクスペリエンスやビジネス価値を達成・向上させようとしているのかを特定する必要があるのです。
 
-Having a framework or design structure that you're trying to achieve knowing what your end goal is and then working step by step towards achieving that goal measuring the automation success at various stages based on the business outcomes.
+「もし、あなたがどこに行くのか分からなければ、どんな道でもそこに連れて行ってくれるでしょう。
 
-Build concepts modelled around existing applications there's no need to design the concepts around automation in a bubble because they need to be applied to your application, your service, your infrastructure, so begin to build the concepts and model them around your existing infrastructure, you're existing applications. 
+最終的な目標を知り、その目標達成に向けて一歩一歩作業を進めるためのフレームワークや設計構造を持ち、ビジネスの成果に基づいて様々な段階での自動化の成功を測定します。
 
-### Approach to Networking Automation 
+既存のアプリケーションをモデル化したコンセプトを構築する自動化に関するコンセプトをバブルの中で設計する必要はない。なぜなら、それはアプリケーション、サービス、インフラストラクチャに適用する必要があるからです。
 
-We should identify the tasks and perform a discovery on network change requests so that you have the most common issues and problems to automate a solution to. 
+### ネットワーク自動化の考え方
 
-- Make a list of all the change requests and workflows that are currently being addressed manually. 
-- Determine the most common, time-consuming and error-prone activities. 
-- Prioritise the requests by taking a business-driven approach. 
-- This is the framework for building an automation process, what must be automated and what must not. 
+タスクを特定し、ネットワークの変更要求に関するディスカバリーを行い、最も一般的な問題やソリューションを自動化するための問題を把握する必要があります。
 
-We should then divide tasks and analyse how different network functions work and interact with each other. 
+- 現在、手動で対応しているすべての変更要求とワークフローのリストを作成します。
+- 最も一般的で、時間がかかり、エラーを起こしやすい作業を決定します。
+- ビジネス主導のアプローチで、リクエストに優先順位をつけます。
+- これは、自動化プロセスを構築するためのフレームワークであり、何が自動化されなければならず、何が自動化されてはならないか、ということです。
 
-- Infrastructure/Network team receives change tickets at multiple layers to deploy applications. 
-- Based on Network services, divide them into different areas and understand how they interact with each other. 
-    - Application Optimisation 
-    - ADC (Application Delivery Controller)
-    - Firewall 
-    - DDI (DNS, DHCP, IPAM etc)
-    - Routing 
-    - Others
-- Identify various dependencies to address business and cultural differences and bring in cross-team collaboration. 
+そして、タスクを分割し、異なるネットワーク機能がどのように機能し、互いに影響し合っているかを分析する必要があります。
 
-Reusable policies, define and simplify reusable service tasks, processes and input/outputs. 
+- インフラ/ネットワークチームは、アプリケーションを展開するために複数のレイヤーで変更チケットを受け取ります。
+- ネットワークサービスに基づいて、それらを異なる領域に分割し、それらがどのように相互作用するかを理解します。
+    - アプリケーションの最適化
+    - ADC (アプリケーションデリバリーコントローラー)
+    - ファイアウォール
+    - DDI (DNS、DHCP、IPAMなど)
+    - ルーティング
+    - その他
+- ビジネスや文化の違いに対応し、チーム間のコラボレーションを実現するために、さまざまな依存関係を特定します。
 
-- Define offerings for various services, processes and input/outputs. 
-- Simplifying the deployment process will reduce the time to market for both new and existing workloads. 
-- Once you have a standard process, it can be sequenced and aligned to individual requests for a multi-threaded approach and delivery. 
+再利用可能なポリシー、再利用可能なサービスタスク、プロセス、インプット/アウトプットを定義し、簡素化する。
 
-Combine the policies with business-specific activities. How does implementing this policy help the business? Saves time? Saves Money? Provides better business outcome? 
+- 様々なサービス、プロセス、インプット/アウトプットのオファリングを定義する。
+- 導入プロセスを簡素化することで、新規および既存のワークロードの市場投入までの時間を短縮する。
+- 標準的なプロセスがあれば、マルチスレッドなアプローチとデリバリーのために、個々のリクエストに順次対応させることができる。
 
-- Ensure that service tasks are interoperable. 
-- Associate the incremental service tasks so that they align to create business services. 
-- Allow for the flexibility to associate and re-associate service tasks on demand. 
-- Deploy Self-Service capabilities and pave the way for improved operational efficiency. 
-- Allow for the multiple technology skillsets to continue to contribute with oversight and compliance. 
+ポリシーとビジネス特有のアクティビティを組み合わせる。このポリシーを実行することで、ビジネスにどのような効果があるのでしょうか？時間の節約？お金の節約になりますか？より良いビジネス成果をもたらすか？
 
-**Iterate** on the policies and process, adding and improving while maintaining availability and service. 
+- サービスタスクが相互運用可能であることを確認する。
+- ビジネスサービスを作成するために、インクリメンタルサービスタスクを関連付けます。
+- 必要に応じて、サービスタスクの関連付けや再関連付けを柔軟に行えるようにします。
+- セルフサービス機能を導入し、運用効率を向上させます。
+- 複数のテクノロジー・スキルセットが、監視とコンプライアンスに貢献し続けることができるようにします。
 
-- Start small by automating existing tasks. 
-- Get familiar with the automation process, so that you can identify other areas that can benefit from automation. 
-- iterate your automation initiatives, adding agility incrementally while maintaining the required availability. 
-- Taking an incremental approach paves the way for success! 
+可用性とサービスを維持しながら、ポリシーとプロセスを追加・改善し、**反復**します。
 
-Orchestrate the network service!
+- 既存のタスクを自動化することから小さく始めます
+- 自動化プロセスに慣れることで、自動化の恩恵を受けられる他の分野を特定できるようにします。
+- 自動化の取り組みを繰り返し、必要な可用性を維持しながら、少しずつ敏捷性を高めていきます。
+- 段階的なアプローチをとることで、成功への道が開かれます。
 
-- Automation of the deployment process is required to deliver applications rapidly. 
-- Creating an agile service environment requires different elements to be managed across technology skillsets. 
-- Prepare for an end to end orchestration that provides for control over automation and the order of deployments. 
+ネットワークサービスのオーケストレーション
 
-## Network Automation Tools 
+- アプリケーションを迅速に提供するためには、デプロイメントプロセスの自動化が必要です。
+- アジャイルなサービス環境を構築するには、技術的なスキルセットを超えてさまざまな要素を管理する必要があります。
+- 自動化とデプロイの順番をコントロールするために、エンド・ツー・エンドのオーケストレーションの準備をしましょう。
 
-The good news here is that for the most part, the tools we use here for Network automation are generally the same that we will use for other areas of automation or what we have already covered so far or what we will cover in future sessions. 
+## ネットワーク・オートメーション・ツール 
 
-Operating System - As I have throughout this challenge, I am focusing on doing most of my learning with a Linux OS, those reasons were given in the Linux section but almost all of the tooling that we will touch albeit cross-OS platform maybe today they all started as Linux based applications or tools, to begin with. 
+良いニュースとしては、ネットワークの自動化に使用するツールは、他の自動化の分野や、これまでに取り上げたもの、今後のセッションで取り上げるものと概ね同じであるということです。
 
-Integrated Development Environment (IDE) - Again not much to say here other than throughout I would suggest Visual Studio Code as your IDE, based on the extensive plugins that are available for so many different languages. 
+オペレーティング・システム - このチャレンジを通して、私はLinux OSで学習のほとんどを行うことに集中しています。その理由はLinuxのセクションで述べましたが、クロスOSプラットフォームとはいえ、今日触れるツールのほとんどすべては、そもそもLinuxベースのアプリケーションまたはツールから始まっています。
 
-Configuration Management - We have not got to the Configuration management section yet, but it is very clear that Ansible is a favourite in this area for managing and automating configurations. Ansible is written in Python but you do not need to know Python. 
-    
-- Agentless 
-- Only requires SSH
-- Large Support Community 
-- Lots of Network Modules
-- Push only model 
-- Configured with YAML 
-- Open Source!  
+統合開発環境（IDE） - ここでも、IDEとしてVisual Studio Codeをお勧めする以外、あまり言うことはありません。
 
-[Link to Ansible Network Modules](https://docs.ansible.com/ansible/2.9/modules/list_of_network_modules.html)
+構成管理 - 構成管理のセクションはまだですが、構成の管理と自動化のためにAnsibleがこの分野で人気があることは明らかです。AnsibleはPythonで書かれていますが、Pythonの知識は必要ありません。
 
-We will also touch on **Ansible Tower** in the configuration management section, see this as the GUI front end for Ansible. 
+- エージェントレス
+- SSHのみ必要
+- 大規模なサポートコミュニティ
+- 豊富なネットワークモジュール
+- プッシュ型
+- YAMLで設定
+- オープンソース
 
-CI/CD - Again we will cover more about the concepts and tooling around this but it's important to at least mention here as this spans not only networking but all provisioning of service and platform. 
+[Ansibleネットワークモジュールへのリンク](https://docs.ansible.com/ansible/2.9/modules/list_of_network_modules.html)
 
-In particular, Jenkins provides or seems to be a popular tool for Network Automation.
+また、構成管理セクションで**Ansible Tower**について触れますが、これはAnsibleのGUIフロントエンドとして見てください。
 
-- Monitors git repository for changes and then initiates them. 
+CI/CD - CI/CDのコンセプトとツールについてはまた後ほど詳しく説明しますが、ネットワークだけでなく、サービスやプラットフォームのプロビジョニング全般に渡るものなので、少なくともここで触れておくことは重要です。
 
-Version Control - Again something we will dive deeper into later on. 
+特に、Jenkins はネットワークの自動化のためのツールを提供しており、また、人気のあるツールのようです。
 
-- Git provides version control of your code on your local device - Cross-Platform
-- GitHub, GitLab, BitBucket etc are online websites where you define your repositories and upload your code. 
+- gitリポジトリを監視して、変更を開始します。
 
-Language | Scripting - Something we have not covered here is Python as a language, I decided to dive into Go instead as the programming language based on my circumstances, I would say that it was a close call between Golang and Python and Python it seems to be the winner for Network Automation. 
+バージョン管理 - これも後ほど詳しく説明します。
 
-- Nornir is something to mention here, an automation framework written in Python. This seems to take the role of Ansible but specifically around Network Automation. [Nornir documentation](https://nornir.readthedocs.io/en/latest/) 
+- Gitは、あなたのローカルデバイス上でコードのバージョン管理を提供します - クロスプラットフォーム
+- GitHub, GitLab, BitBucket などは、リポジトリを定義し、コードをアップロードするオンラインウェブサイトです。
 
-Analyse APIs - Postman is a great tool for analysing RESTful APIs. Helps to build, test and modify APIs.
+GolangとPythonは接戦で、Pythonがネットワークオートメーションの勝者であるように思います。
 
-- POST >>> To create resources objects.
-- GET  >>> To retrieve a resources.
-- PUT  >>> To create or replace the resources.
-- PATCH >>> To create or update the resources object.
-- Delete >>> To delete a resources
+- ここで特筆すべきはNornirで、Pythonで書かれた自動化フレームワークです。これはAnsibleの役割を担っているようですが、特にネットワークオートメーションに特化しているようです。[Nornirのドキュメント](https://nornir.readthedocs.io/en/latest/) 
 
-[Postman tool Download](https://www.postman.com/downloads/)
+APIの分析 - Postmanは、RESTfulなAPIを分析するための素晴らしいツールです。APIを構築、テスト、修正するのに役立ちます。
 
-### Other tools to mention
+- POST >> リソースオブジェクトを作成する。
+- GET >> リソースを取得する。
+- PUT >> リソースを作成または置き換えます。
+- PATCH >> リソースオブジェクトを作成または更新します。
+- Delete >> リソースを削除します。
+
+[Postmanダウンロード](https://www.postman.com/downloads/)
+
+### その他特記すべきツール
 
 [Cisco NSO (Network Services Orchestrator)](https://www.cisco.com/c/en/us/products/cloud-systems-management/network-services-orchestrator/index.html)
 
 [NetYCE - Simplify Network Automation](https://netyce.com/)
 
-[Network Test Automation](https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/)
+[ネットワークテスト自動化](https://pubhub.devnetcloud.com/media/genie-feature-browser/docs/#/)
 
-Over the next 3 days, I am planning to get more hands-on around some of the things we have covered and put some work in around Python and Network automation. 
+この3日間で、これまでカバーしてきたことをさらに実践し、Pythonとネットワークの自動化に関する作業を行う予定です。
 
-We have nowhere near covered all of the networking topics so far but wanted to make this broad enough to follow along and still keep learning from the resources I am adding below. 
+私たちはこれまでネットワークのトピックをすべてカバーすることはできませんでしたが、フォローしながらも、以下に追加するリソースから学び続けることができるように、これを十分に広くしたいと思いました。
 
-## Resources 
+## リソース
 
 - [3 Necessary Skills for Network Automation](https://www.youtube.com/watch?v=KhiJ7Fu9kKA&list=WL&index=122&t=89s)
 - [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 - [Practical Networking](http://www.practicalnetworking.net/)
 - [Python Network Automation](https://www.youtube.com/watch?v=xKPzLplPECU&list=WL&index=126)
 
-See you on [Day 25](day25.md)
+[25日目](day25.md)でお会いしましょう。

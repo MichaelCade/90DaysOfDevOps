@@ -1,26 +1,24 @@
 # 90DaysOfDevOps
 
 <p align="center">
- <img src="logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
+ <img src="https://github.com/MichaelCade/90DaysOfDevOps/blob/main/logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
-English Version | [Versión en Castellano](es/README.md) | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md) | [Wersja Polska](pl/README.md) | [Tiếng Việt](vi/README.md) | [한국어](ko/README.md)
+이 리포지토리는 "DevOps"의 기본적인 지식을 학습해 나가기 위한 나의 여정을 문서화 하기 위해 사용합니다. 2022년 1월 1일에 여정을 시작할 예정이며 90일이 소요됩니다. 딱 마침 1월 1일부터 3월 31일까지 입니다.
 
-This repository is used to document my journey on getting a better foundational knowledge of "DevOps". I will be starting this journey on the 1st January 2022 but the idea is that we take 90 days which just so happens to be January 1st to March 31st.
+최근 들어 문서를 만드는 이유는 다른 사람들이 나의 문서를 통해 무엇인가를 얻을 수 있고, 또한 자료들이 많이 강화될 수 있다고 믿기 때문입니다.
 
-The reason for documenting these days is so that others can take something from it and also hopefully enhance the resources.
+목표는 하루 한 시간씩 90일 동안 "DevOps"의 13가지 영역에 대한 기본적인 지식을 학습하는 것입니다.
 
-The goal is to take 90 days, 1 hour each a day, to tackle over 13 areas of "DevOps" to a foundational knowledge.
-
-This will **not cover all things** "DevOps" but it will cover the areas that I feel will benefit my learning and understanding overall.
+"DevOps"에 대한 **모든 것들을 다루지는 않습니다** 하지만, 전반적인 이해화 학습을 돕는 영역에 대해서 다루게 됩니다.
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N33YRCS)
 
-The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1)
+트위터를 통해서 저와 가장 빠르게 연락을 닿을 수 있습니다. [@MichaelCade1](https://twitter.com/MichaelCade1)
 
-## Progress
+## 과정
 
-- [✔️] ♾️ 1 > [Introduction](Days/day01.md)
+- [✔️] ♾️ 1 > [개요](Days/day01.md)
 
 ### What is and why do we use DevOps
 

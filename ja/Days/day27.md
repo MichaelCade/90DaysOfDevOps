@@ -1,31 +1,31 @@
 ---
-title: '#90DaysOfDevOps - Getting Hands-On with Python & Network - Day 27'
+title: '#90DaysOfDevOps - Pythonとネットワークのハンズオン - 27日目'
 published: false
-description: 90DaysOfDevOps - Getting Hands-On with Python & Network
+description: 90DaysOfDevOps - Pythonとネットワークのハンズオン
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048735
 ---
-## Getting Hands-On with Python & Network
+## Pythonとネットワークのハンズオン
 
-In this final section of Networking fundamentals, we are going to cover some automation tasks and tools with our lab environment created on [Day 26](day26.md) 
+ネットワークの基礎の最後のセクションでは、[Day 26](day26.md) で作成したラボ環境を使って、いくつかの自動化タスクとツールをカバーするつもりです。
 
-We will be using an SSH tunnel to connect to our devices from our client vs telnet. The SSH tunnel created between client and device is encrypted. We also covered SSH in the Linux section on [Day 18](day18.md)
+クライアントからデバイスに接続するために、SSHトンネルを使用する予定です。クライアントとデバイスの間に作成された SSH トンネルは暗号化されています。SSHについては、[Day18](day18.md)のLinuxセクションでも取り上げました。
 
-## Access our virtual emulated environment
+## 仮想エミュレート環境にアクセスする
 
-For us to interact with our switches we either need a workstation inside the EVE-NG network and you can deploy a Linux box there with Python installed to perform your automation ([Resource for setting up Linux inside EVE-NG](https://www.youtube.com/watch?v=3Qstk3zngrY)) or you can do something like me and define a cloud for access from your workstation. 
+EVE-NGネットワーク内にワークステーションが必要で、そこにPythonをインストールしたLinuxボックスを配置して自動化を行うか([Resource for setting up Linux inside EVE-NG](https://www.youtube.com/watch?v=3Qstk3zngrY)) 、私のようにワークステーションからアクセスするクラウドを定義することができます。
 
 ![](Images/Day27_Networking3.png)
 
-To do this, we have right-clicked on our canvas and we have selected network and then selected "Management(Cloud0)" this will bridge out to our home network. 
+これを行うには、キャンバスを右クリックして、ネットワークを選択し、「Management(Cloud0)」を選択して、ホームネットワークに橋渡しします。
 
 ![](Images/Day27_Networking4.png)
 
-However, we do not have anything inside this network so we need to add connections from the new network to each of our devices. (My networking knowledge needs more attention and I feel that you could just do this next step to the top router and then have connectivity to the rest of the network through this one cable?)
+しかし、このネットワーク内には何もないので、新しいネットワークから各機器への接続を追加する必要があります。(私のネットワークの知識はもっと注意が必要で、この次のステップを一番上のルーターに行い、この1本のケーブルを通して残りのネットワークに接続することができるような気がします?)
 
-I have then logged on to each of our devices and I have run through the following commands for the interfaces applicable for where the cloud comes in. 
+その後、各機器にログインし、クラウドが入る部分に該当するインターフェースに対して、以下のコマンドを実行しました。
 
 ```
 enable
@@ -38,7 +38,7 @@ exit
 sh ip int br
 ```
 
-The final step gives us the DHCP address from our home network. My device network list is as follows: 
+最後のステップでは、ホームネットワークからDHCPアドレスを取得します。私のデバイスのネットワークリストは以下の通りです。
 
 | Node        | IP Address  | Home Network IP  |
 | ----------- | ----------- | -----------      |
@@ -48,81 +48,81 @@ The final step gives us the DHCP address from our home network. My device networ
 | Switch3     | 10.10.88.113| 192.168.169.125  |
 | Switch4     | 10.10.88.114| 192.168.169.197  |
 
-### SSH to a network device 
+### ネットワーク機器に SSH 接続する
 
-With the above in place, we can now connect to our devices on our home network using our workstation. I am using Putty but also have access to other terminals such as git bash that give me the ability to SSH to our devices. 
+以上で、ワークステーションを使用してホームネットワーク上のデバイスに接続できるようになりました。私は Putty を使っていますが、git bash のような他のターミナルも使えるので、デバイスに SSH 接続することができます。
 
-Below you can see we have an SSH connection to our router device. (R1)
+以下は、ルーターに SSH 接続しているところです。(R1)
 
 ![](Images/Day27_Networking5.png)
 
-### Using Python to gather information from our devices 
+### Python を使ってデバイスから情報を収集する
 
-The first example of how we can leverage Python is to gather information from all of our devices and in particular, I want to be able to connect to each one and run a simple command to provide me with interface configuration and settings. I have stored this script here [netmiko_con_multi.py](Networking/netmiko_con_multi.py)
+Python をどのように活用するかの最初の例は、すべてのデバイスから情報を収集することです。特に、それぞれのデバイスに接続して、インターフェースの構成と設定を提供する簡単なコマンドを実行できるようにしたいのです。このスクリプトは [netmiko_con_multi.py] (Networking/netmiko_con_multi.py) に保存されています。
 
-Now when I run this I can see each port configuration over all of my devices. 
+このスクリプトを実行すると、全てのデバイスの各ポートのコンフィギュレーションを見ることができます。
 
 ![](Images/Day27_Networking6.png)
 
-This could be handy if you have a lot of different devices, create this one script so that you can centrally control and understand quickly all of the configurations in one place. 
+このスクリプトを作成すれば、すべての設定を一元的に管理し、すばやく理解することができますので、さまざまなデバイスをたくさんお持ちの場合に便利です。
 
-### Using Python to configure our devices 
+### Python を使ってデバイスを設定する
 
-The above is useful but what about using Python to configure our devices, in our scenario we have a trunked port between `SW1` and `SW2` again imagine if this was to be done across many of the same switches we want to automate that and not have to manually connect to each switch to make the configuration change. 
+このシナリオでは、`SW1`と`SW2`の間にトランクされたポートがありますが、これが多くの同じスイッチ間で行われるとしたら、設定を変更するために各スイッチに手動で接続する必要がなく、自動化したいと思います。
 
-We can use [netmiko_sendchange.py](Networking/netmiko_sendchange.py) to achieve this. This will connect over SSH and perform that change on our `SW1` which will also change to `SW2`. 
+これを実現するために [netmiko_sendchange.py] (Networking/netmiko_sendchange.py) を使用することができます。これは SSH で接続し、`SW1` の変更を実行し、`SW2` にも変更を加えます。
 
 ![](Images/Day27_Networking7.png)
 
-Now for those that look at the code, you will see the message appears and tells us `sending configuration to device` but there is no confirmation that this has happened to we could add additional code to our script to perform that check and validation on our switch or we could modify our script before to show us this. [netmiko_con_multi_vlan.py](Networking/netmiko_con_multi_vlan.py)
+今、コードを見ると、メッセージが表示され、`sending configuration to device` と表示されますが、これが起こったという確認はありません。このスクリプトに追加のコードを追加して、スイッチのチェックと検証を行うか、あるいは、このスクリプトを前に修正して、これを表示させます。[netmiko_con_multi_vlan.py](Networking/netmiko_con_multi_vlan.py)
 
 ![](Images/Day27_Networking8.png)
 
-### backing up your device configurations 
+### デバイス設定のバックアップ
 
-Another use case would be to capture our network configurations and make sure we have those backed up, but again we don't want to be connecting to every device we have on our network so we can also automate this using [backup.py](Networking/backup.py). You will also need to populate the [backup.txt](Networking/backup.txt) with the IP addresses you want to backup. 
+もう一つの使用例として、ネットワーク設定を取得し、バックアップしていることを確認します。backup.txt](Networking/backup.txt) にバックアップしたいIPアドレスを入力する必要があります。
 
-Run your script and you should see something like the below. 
+スクリプトを実行すると、以下のように表示されるはずです。
 
 ![](Images/Day27_Networking9.png)
 
-That could be me just writing a simple print script in python so I should show you the backup files as well. 
+それは私がpythonで簡単なprintスクリプトを書いているだけかもしれないので、バックアップファイルも見せるべきですね。
 
 ![](Images/Day27_Networking10.png)
 
-### Paramiko 
+### Paramiko
 
-A widely used Python module for SSH. You can find out more at the official GitHub link [here](https://github.com/paramiko/paramiko)
+広く使われているSSH用のPythonモジュールです。GitHubの公式リンク[こちら](https://github.com/paramiko/paramiko)で詳細を見ることができます。
 
-We can install this module using the `pip install paramiko` command. 
+このモジュールは `pip install paramiko` コマンドでインストールすることができます。
 
 ![](Images/Day27_Networking1.png)
 
-We can verify the installation by entering the Python shell and importing the paramiko module. 
+Pythonのシェルに入り、paramikoモジュールをインポートすることで、インストールを確認することができます。
 
 ![](Images/Day27_Networking2.png)
 
-### Netmiko 
+### Netmiko
 
-The netmiko module targets network devices specifically whereas paramiko is a broader tool for handling SSH connections overall. 
+netmiko モジュールはネットワークデバイスに特化しており、paramiko は SSH 接続全般を扱うより広範なツールです。
 
-Netmiko which we have used above alongside paramiko can be installed using `pip install netmiko` 
+上記で paramiko と共に使用した Netmiko は `pip install netmiko` でインストールすることができます。
 
-Netmiko supports many network vendors and devices, you can find a list of supported devices on the [GitHub Page](https://github.com/ktbyers/netmiko#supports) 
+Netmikoは多くのネットワークベンダやデバイスをサポートしています。サポートされているデバイスの一覧は[GitHub Page](https://github.com/ktbyers/netmiko#supports)で見ることができます。
 
-### Other modules 
+### その他のモジュール
 
-It is also worth mentioning a few other modules that we have not had the chance to look at but they give a lot more functionality when it comes to network automation. 
+まだ見ていないモジュールもありますが、ネットワークの自動化に関して、より多くの機能を提供します。
 
-`netaddr` is used for working with and manipulating IP addresses, again the installation is simple with `pip install netaddr` 
+netaddr` は IP アドレスを操作するために使用され、インストールは `pip install netaddr` で簡単にできます。
 
-you might find yourself wanting to store a lot of your switch configuration in an excel spreadsheet, the `xlrd` will allow your scripts to read the excel workbook and convert rows and columns into a matrix. `pip install xlrd` to get the module installed. 
+xlrd` を使うと、スクリプトがエクセルのワークブックを読み込んで、行と列をマトリックスに変換することができます。モジュールをインストールするには `pip install xlrd` を実行してください。
 
-Some more use cases where network automation can be used that I have not had the chance to look into can be found [here](https://github.com/ktbyers/pynet/tree/master/presentations/dfwcug/examples)
+ネットワークオートメーションの使用例として、まだ調べていないものがありますが、[ここ](https://github.com/ktbyers/pynet/tree/master/presentations/dfwcug/examples)で見ることができます。
 
-I think this wraps up our Networking section of the #90DaysOfDevOps, Networking is one area that I have not touched for a while really and there is so much more to cover but I am hoping between my notes and the resources shared throughout it is helpful for some. 
+ネットワークは、私がしばらく触れていない分野の一つで、まだまだカバーすべきことがたくさんありますが、私のメモと共有されたリソースが誰かの役に立つことを願っています。
 
-## Resources 
+## リソース
 
 - [Free Course: Introduction to EVE-NG](https://www.youtube.com/watch?v=g6B0f_E0NMg)
 - [EVE-NG - Creating your first lab](https://www.youtube.com/watch?v=9dPWARirtK8)
@@ -131,8 +131,8 @@ I think this wraps up our Networking section of the #90DaysOfDevOps, Networking 
 - [Practical Networking](http://www.practicalnetworking.net/)
 - [Python Network Automation](https://www.youtube.com/watch?v=xKPzLplPECU&list=WL&index=126)
 
-Most of the examples I am using here as I am not a Network Engineer have come from this extensive book which is not free but I am using some of the scenarios to help understand Network Automation. 
+私はネットワークエンジニアではないので、ここで使用している例のほとんどは、無料ではありませんが、ネットワークオートメーションの理解に役立つシナリオのいくつかを使用しているこの広範な書籍から来ました。
 
 - [Hands-On Enterprise Automation with Python (Book)](https://www.packtpub.com/product/hands-on-enterprise-automation-with-python/9781788998512)
 
-See you on [Day 28](day28.md) where will start looking into cloud computing and get a good grasp and foundational knowledge of the topic and what is available. 
+[28日目](day28.md)では、クラウドコンピューティングについて調べ始め、この話題と何が利用可能かについて、よく理解し基礎知識を得るために、お会いしましょう。
