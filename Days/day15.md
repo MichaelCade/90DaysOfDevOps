@@ -99,7 +99,7 @@ If you are like me and you use that `clear` command a lot then you might miss so
 
 When you run `history` and you would like to pick a specific command you can use `!3` to choose the 3rd command in the list.
 
-You are also able to use `history | grep "Command` to search for something specific.
+You are also able to use `history | grep "Command"` to search for something specific.
 
 On servers to trace back when was a command executed, it can be useful to append the date and time to each command in the history file.
 
