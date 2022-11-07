@@ -52,7 +52,7 @@ When nano opens you can then add your short and long description and then save t
 
 ### Committing Best Practices
 
-There is a balance here between when to commit and commit often. We do not want to be waiting to be finished the project before committing, each commit should be meaningful and they also should not be coupled with non-relevant tasks with each other. If you have a bug fix and a typo make sure they are two separate commits as a best practice.
+There is a balance here between when to commit and commit often. We don't want to wait to the end of the project before committing, each commit should be meaningful and they also should not be coupled with non-relevant tasks with each other. If you have a bug fix and a typo make sure they are two separate commits as a best practice.
 
 Make the commit message mean something.
 
