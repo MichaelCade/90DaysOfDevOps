@@ -18,7 +18,6 @@ This will **not cover all things** "DevOps" but it will cover the areas that I f
 
 [![](https://dcbadge.vercel.app/api/server/Bf4rUGxJ)](https://discord.gg/Bf4rUGxJ)
 
-
 The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1)
 
 ## Progress
