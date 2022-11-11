@@ -4,7 +4,7 @@
  <img src="../logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
-[English Version](/README.md) | [中文版本](/zh_cn/README.md) |  繁體中文版本
+English Version | [Versión en Castellano](es/README.md) | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md) | [Wersja Polska](pl/README.md) | [Tiếng Việt](vi/README.md) |  繁體中文版本
 
 這個倉儲是我學習 DevOps 基礎知識時所寫的文件。我將會從 2022年01月01 日開始，<br>
 一直到 2022年03月31日為止，總共花費 90天的時間完成我的旅行。 

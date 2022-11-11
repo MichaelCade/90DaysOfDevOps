@@ -4,7 +4,7 @@
  <img src="logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
-Wersja Polska | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md)
+Wersja Polska | [English version](../README.md) | [Versión en Castellano](es/README.md) | [中文版本](zh_cn/README.md) | [繁體中文版本](zh_tw/README.md)| [日本語版](ja/README.md)
 
 To repozytorium jest wykorzystywane do dokumentowania mojej podróży w celu zdobycia lepszej wiedzy o DevOps. Rozpoczynam tę podróż 1 stycznia 2022 r., ale założeniem jest, że zajmie nam ona 90 dni, czyli od 1 stycznia do 31 marca. 
 Powodem dokumentowania tych dni jest to, że inni beda mogli coś z nich wynieść, a także, miejmy nadzieję, aby wzbogacić zasoby. 
