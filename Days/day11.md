@@ -24,7 +24,7 @@ The first thing to consider here is that as we are building our app and we are w
 - Like a little box with our saved information or values.
 - We can then use this variable across the program which also benefits that if this challenge or variable changes then we only have to change this in one place. This means we could translate this to other challenges we have in the community by just changing that one variable value.
 
-To declare this in our Go Program we define a value by using a **keyword** for variables. This will live within our `func main` block of code that you will see later. You can find more about [Keywords](https://go.dev/ref/spec#Keywords)here.
+To declare this in our Go Program we define a value by using a **keyword** for variables. This will live within our `func main` block of code that you will see later. You can find more about [Keywords](https://go.dev/ref/spec#Keywords) here.
 
 Remember to make sure that your variable names are descriptive. If you declare a variable you must use it or you will get an error, this is to avoid possible dead code, code that is never used. This is the same for packages not used.
 
