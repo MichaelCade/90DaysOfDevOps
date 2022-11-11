@@ -62,6 +62,8 @@ You then want to make sure that our SSH is allowed if the firewall is running. W
 
 Now that we have our SSH Server listening out on port 22 for any incoming connection requests and we have added the bridged networking we could use putty or an SSH client on our local machine to connect to our system using SSH.
 
+ [# PuTTy installation Guide](https://www.cuit.columbia.edu/putty).
+
 ![](Images/Day18_Linux4.png)
 
 Then hit open, if this is the first time you have connected to this system via this IP address you will get this warning. We know that this is our system so you can choose yes.
