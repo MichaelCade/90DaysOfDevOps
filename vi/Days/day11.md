@@ -177,7 +177,7 @@ Có nhiều kiểu số nguyên và kiểu float khác nhau, các liên kết �
 - **unint** = số nguyên dương
 - **các loại dấu phẩy động** = các số có chứa thành phần thập phân
 
-## Resources
+## Tài liệu tham khảo
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
