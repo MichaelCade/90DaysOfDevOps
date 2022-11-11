@@ -64,7 +64,7 @@ We will be using the OVF download but with the ISO there is the option to build 
 
 ![](Images/Day25_Networking1.png)
 
-For our walkthrough, we will be using VMware Workstation as I have a license via my vExpert but you can equally use VMware Player or any of the other options mentioned in the [documentation](https://www.eve-ng.net/index.php/documentation/installation/system-requirement/)Unfortunately we cannot use our previously used Virtual box!
+For our walkthrough, we will be using VMware Workstation as I have a license via my vExpert but you can equally use VMware Player or any of the other options mentioned in the [documentation](https://www.eve-ng.net/index.php/documentation/installation/system-requirement/). Unfortunately we cannot use our previously used Virtual box!
 
 This is also where I had an issue with GNS3 with Virtual Box even though supported.
 
