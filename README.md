@@ -16,6 +16,8 @@ This will **not cover all things** "DevOps" but it will cover the areas that I f
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N33YRCS)
 
+[![](https://dcbadge.vercel.app/api/server/Bf4rUGxJ)](https://discord.gg/Bf4rUGxJ)
+
 The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1)
 
 ## Progress
