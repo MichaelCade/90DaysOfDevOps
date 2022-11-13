@@ -1,52 +1,59 @@
-## The Big Picture: DevOps & Learning a Programming Language
+## El panorama general: DevOps y el aprendizaje de un lenguaje de programación
 
-I think it is fair to say to be successful in the long term as a DevOps engineer you've got to know at least one programming language at a foundational level. I want to take this first session of this section to explore why this is such a critical skill to have, and hopefully, by the end of this week or section, you are going to have a better understanding of the why, how and what to do to progress with your learning journey.
+Es justo decir que para tener éxito a largo plazo como ingeniero DevOps tienes que saber al menos un lenguaje de programación a nivel básico. En esta primera sesión de la nueva sección "Aprender un lenguaje de programación", se explorará por qué es una habilidad tan imprescindible tener conocimientos de los lenguajes de programación. Al final de esta semana o sección, adquiriremos una mejor comprensión del por qué, cómo y qué hacer para avanzar en este viaje del aprendizaje.
 
-I think if I was to ask out on social do you need to have programming skills for DevOps related roles, the answer will be most likely a hard yes? Let me know if you think otherwise? Ok but then a bigger question and this is where you won't get such a clear answer which programming language? The most common answer I have seen here has been Python or increasingly more often, we're seeing Golang or Go should be the language that you learn.
+Si preguntáramos en las redes sociales si es necesario tener conocimientos de programación para los puestos relacionados con DevOps, la respuesta sería un SÍ rotundo. Pero entonces surge una pregunta más relevante, y he aquí donde no podremos obtener una respuesta precisa: **¿qué lenguaje de programación?** La respuesta más común suele ser Python, el pico de aprendizaje quizá sea menor. También, cada vez más a menudo, estamos viendo que Golang o Go está cogiendo relevancia entre los lenguajes de iniciación.
 
-To be successful in DevOps you have to have a good knowledge of programming skills is my takeaway from that at least. But we have to understand why we need it to choose the right path.
+Para tener éxito en DevOps se debe tener un buen conocimiento de las habilidades de programación. Ahora, tenemos que entender por qué lo necesitamos para poder escoger el camino correcto.
 
-## Understand why you need to learn a programming language.
+## Entender por qué necesitas aprender un lenguaje de programación.
 
-The reason that Python and Go are recommended so often for DevOps engineers is that a lot of the DevOps tooling is written in either Python or Go, which makes sense if you are going to be building DevOps tools. Now this is important as this will determine really what you should learn and that would likely be the most beneficial. If you are going to be building DevOps tools or you are joining a team that does then it would make sense to learn that same language, if you are going to be heavily involved in Kubernetes or Containers then it's more than likely that you would want to choose Go as your programming language. For me, the company I work for (Kasten by Veeam) is in the Cloud-Native ecosystem focused on data management for Kubernetes and everything is written in Go.
+La razón por la que Python y Go se recomiendan tan a menudo para los ingenieros DevOps es que en muchas ocasiones las herramientas DevOps están escritas con estos lenguajes, lo cual tiene sentido si vas a construir herramientas DevOps o extender alguna de ellas. Ahora bien, esto es importante, ya que esto determinará realmente lo que se debe aprender y cuál será el más beneficioso. 
+- Si vas a construir herramientas DevOps o te unes a un equipo que lo hace tendrá sentido aprender ese mismo lenguaje.
+- Si vas a estar muy involucrado en Kubernetes o Contenedores entonces es más que probable que quieras elegir Go como tu lenguaje de programación. 
+ 
+En el caso del autor, Michael Cade, la empresa para la que trabaja (Kasten by Veeam) está en el ecosistema Cloud-Native centrado en la gestión de datos para Kubernetes y todo está escrito en Go.
 
-But then you might not have clear cut reasoning like that to choose you might be a student or transitioning careers with no real decision made for you. I think in this situation then you should choose the one that seems to resonate and fit with the applications you are looking to work with.
+Puede que estos no sean unos razonamientos claros como para elegir, puede que estés aún estudiando o en transición por alguna carrera profesional sin una decisión real tomada. En esta situación deberás asegurarte de escoger el lenguaje de programación que encaje mejor con las aplicaciones que estás buscando para trabajar. Al fin y al cabo, si entiendes bien los conceptos de los lenguajes de programación, una vez aprendido bien cualquiera de ellos podrás aprender más rápido el resto.
 
-Remember I am not looking to become a software developer here I just want to understand a little more about the programming language so that I can read and understand what those tools are doing and then that leads to possibly how we can help improve things.
+Recuerda que en el camino de la filosofía DevOps no estas buscando convertirte en un desarrollador de software, lo que necesitas es entender un poco más sobre el lenguaje de programación para que puedas leer y entender lo que esas herramientas están haciendo. Esto nos ayudará a mejorar las cosas para proyectos concretos con necesidades especiales.
 
-It is also important to know how you interact with those DevOps tools which could be Kasten K10 or it could be Terraform and HCL. These are what we will call config files and this is how you interact with those DevOps tools to make things happen, commonly these are going to be YAML. (We may use the last day of this section to dive a little into YAML)
+También es importante saber cómo se interactúa con las herramientas DevOps que podrían ser [Kasten K10](https://www.kasten.io/) o podría ser [Terraform](https://www.terraform.io/) y [HCL](https://github.com/hashicorp/hcl). Esto es lo que llamaremos archivos de configuración y es cómo se interactúa con esas herramientas DevOps para hacer que las cosas sucedan. Comúnmente los ficheros serán YAML. (Más adelante veremos más detalles de los ficheros YAML)
 
-## Did I just talk myself out of learning a programming language?
+## ¿Acabo de convencerme de que no debo aprender un lenguaje de programación?
 
-Most of the time or depending on the role, you will be helping engineering teams implement DevOps into their workflow, a lot of testing around the application and making sure that the workflow that is built aligns to those DevOps principles we mentioned over the first few days. But in reality, this is going to be a lot of the time troubleshooting an application performance issue or something along those lines. This comes back to my original point and reasoning, the programming language I need to know is the one that the code is written in? If their application is written in NodeJS it won’t help much if you have a Go or Python badge.
+La mayor parte del tiempo, o dependiendo del rol, estarás ayudando a los equipos de ingeniería a implementar DevOps en su flujo de trabajo, muchas pruebas alrededor de la aplicación y asegurándote de que el flujo de trabajo que se construye se alinea con esos principios de DevOps que mencionamos en los primeros días. En realidad, esto va a ser una gran parte de la solución de problemas de rendimiento de la aplicación o algo por el estilo. Esto vuelve al razonamiento original, el lenguaje de programación que necesitas saber es el código que está escrito en los proyectos o trabajos en los que estés o que te interesan. Si la aplicación está escrita en NodeJS no ayudará mucho si tienes veinte certificaciones de Go o Python.
 
-## Why Go
+## ¿Por qué Go?
 
-Why Golang is the next programming language for DevOps, Go has become a very popular programming language in recent years. According to the StackOverflow Survey for 2021 Go came in fourth for the most wanted Programming, scripting and markup languages with Python being top but hear me out. [StackOverflow 2021 Developer Survey – Most Wanted Link](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages)
+Porque Golang es el próximo lenguaje de programación para DevOps, Go se ha convertido en un lenguaje de programación muy popular en los últimos años. Según la encuesta de StackOverflow del 2021, Go quedó en cuarto lugar entre los lenguajes de programación, scripting y markup más buscados, con Python a la cabeza:
 
-As I have also mentioned some of the most known DevOps tools and platforms are written in Go such as Kubernetes, Docker, Grafana and Prometheus.
+- [StackOverflow 2021 Developer Survey – Most Wanted Link](https://insights.stackoverflow.com/survey/2021#section-most-loved-dreaded-and-wanted-programming-scripting-and-markup-languages)
 
-What are some of the characteristics of Go that make it great for DevOps?
 
-## Build and Deployment of Go Programs
+Como también se ha mencionado, algunas de las herramientas y plataformas DevOps más conocidas están escritas en Go como Kubernetes, Docker, Grafana y Prometheus.
 
-An advantage of using a language like Python that is interpreted in a DevOps role is that you don’t need to compile a python program before running it. Especially for smaller automation tasks, you don’t want to be slowed down by a build process that requires compilation even though, Go is a compiled programming language, **Go compiles directly into machine code**. Go is known also for fast compilation times.
+¿Cuáles son algunas de las características de Go que lo hacen preferible para DevOps?
 
-## Go vs Python for DevOps
+## Construcción y despliegue de programas en Go
 
-Go Programs are statically linked, this means that when you compile a go program everything is included in a single binary executable, and no external dependencies will be required that would need to be installed on the remote machine, this makes the deployment of go programs easy, compared to python program that uses external libraries you have to make sure that all those libraries are installed on the remote machine that you wish to run on.
+Una ventaja de usar un lenguaje interpretado como Python en un rol de DevOps es que no necesitas compilar python antes de ejecutar el programa. Especialmente para las tareas de automatización más pequeñas, no te ralentiza el proceso de construcción que requiere la compilación. A pesar de que Go es un lenguaje de programación compilado, **Go compila directamente en código máquina**. Go es conocido también por sus rápidos tiempos de compilación.
 
-Go is a platform-independent language, which means you can produce binary executables for \*all the operating systems, Linux, Windows, macOS etc and very easy to do so. With Python, it is not as easy to create these binary executables for particular operating systems.
+## Go vs Python para DevOps
 
-Go is a very performant language, it has fast compilation and fast run time with lower resource usage like CPU and memory especially compared to python, numerous optimisations have been implemented in the Go language that makes it so performant. (Resources below)
+Los programas Go están enlazados estáticamente. Esto significa que cuando se compila un programa Go todo está incluido en un solo ejecutable binario, y no se requieren dependencias externas que tendrían que ser instaladas en la máquina remota. Esto facilita el despliegue de los programas Go, en comparación con el programa Python que utiliza bibliotecas externas y tienes que asegurarte tener todas esas bibliotecas instaladas en la máquina remota en la que se desea ejecutar.
 
-Unlike Python which often requires the use of third party libraries to implement a particular python program, go includes a standard library that has the majority of functionality that you would need for DevOps built directly into it. This includes functionality file processing, HTTP web services, JSON processing, native support for concurrency and parallelism as well as built-in testing.
+Go es un lenguaje independiente de la plataforma, lo que significa que puede producir ejecutables binarios para todos los sistemas operativos (Linux, Windows, macOS, etc), además de ser muy fácil de hacer. Con Python, no es tan fácil crear estos ejecutables binarios para determinados sistemas operativos.
 
-This is by no way throwing Python under the bus I am just giving my reasons for choosing Go but they are not the above Go vs Python it's generally because it makes sense as the company I work for develops software in Go so that is why.
+Go es un lenguaje muy eficiente, tiene una compilación rápida y un tiempo de ejecución rápido con un menor uso de recursos como la CPU y la memoria, especialmente en comparación con Python. Se han implementado numerosas optimizaciones en el lenguaje Go que lo hace muy eficiente. (Más abajo, en recursos puedes ver más detalles)
 
-I will say that once you have or at least I am told as I am not many pages into this chapter right now, is that once you learn your first programming language it becomes easier to take on other languages. You're probably never going to have a single job in any company anywhere where you don't have to deal with managing, architect, orchestrating, debug JavaScript and Node JS applications.
+A diferencia de Python, que a menudo requiere el uso de bibliotecas de terceros para implementar un programa de Python en particular, Go incluye una biblioteca estándar que tiene la mayoría de las funcionalidades que se necesitan para DevOps construidas directamente en ella. Esto incluye la funcionalidad de procesamiento de archivos, servicios web HTTP, procesamiento JSON, soporte nativo para la concurrencia y el paralelismo, así como pruebas incorporadas. 👀
 
-## Resources
+Con esto no se quiere decir de ninguna manera que debemos arrojar Python bajo un autobús, sólo se están dando razones subjetivas que hacen elegir Go al autor. No es el anterior "Go vs Python" lo que le hace escoger Go como lenguaje favorito, es porque tiene sentido para el trabajo en la empresa en la que trabaja y donde se desarrolla software en Go.
+
+Como se ha comentado, una vez que se aprende el primer lenguaje de programación se hace más fácil de entender y aprender otros lenguajes. Probablemente nunca vas a tener un solo trabajo, en cualquier empresa o en cualquier proyecto, donde evites lidiar con la gestión, la arquitectura, la orquestación y la depuración de aplicaciones JavaScript y Node JS.
+
+## Recursos
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
@@ -56,6 +63,6 @@ I will say that once you have or at least I am told as I am not many pages into 
 - [FreeCodeCamp - Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s)
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N)
 
-Now for the next 6 days of this topic, I intend to work through some of the resources listed above and document my notes for each day. You will notice that they are generally around 3 hours as a full course, I wanted to share my complete list so that if you have time you should move ahead and work through each one if time permits, I will be sticking to my learning hour each day.
+En los próximos 6 días de esta sección la intención es trabajar a través de algunos de los recursos mencionados anteriormente y documentar con notas cada día. Generalmente son alrededor de 3 horas para un curso completo, pues se ha compartido la lista completa que ha considerado el autor para avanzar y trabajar a través de cada uno si el tiempo lo permite.
 
-See you on [Day 8](day08.md).
+Nos vemos en el [Día 8](day08.md).
