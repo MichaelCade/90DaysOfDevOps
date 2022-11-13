@@ -42,13 +42,13 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 
 ### Knowing Linux Basics
 
-- [✔️] 🐧 14 > [The Big Picture: DevOps and Linux](Days/day14.md)
-- [✔️] 🐧 15 > [Linux Commands for DevOps (Actually everyone)](Days/day15.md)
-- [✔️] 🐧 16 > [Managing your Linux System, Filesystem & Storage](Days/day16.md)
+- [✔️] 🐧 14 > [Bức tranh lớn: DevOps và Linux](Days/day14.md)
+- [✔️] 🐧 15 > [Các lệnh Linux cho DevOps (Thực tế là tất cả mọi người)](Days/day15.md)
+- [✔️] 🐧 16 > [Quản lý Hệ thống Linux, Hệ thống Tệp & Bộ nhớ](Days/day16.md)
 - [✔️] 🐧 17 > [Text Editors - nano vs vim](Days/day17.md)
 - [✔️] 🐧 18 > [SSH & Web Server(LAMP)](Days/day18.md)
-- [✔️] 🐧 19 > [Automate tasks with bash scripts](Days/day19.md)
-- [✔️] 🐧 20 > [Dev workstation setup - All the pretty things](Days/day20.md)
+- [✔️] 🐧 19 > [Tự động hóa các tác vụ với các tập lệnh bash](Days/day19.md)
+- [✔️] 🐧 20 > [Thiết lập máy trạm phát triển - những điều tuyệt vời](Days/day20.md)
 
 ### Understand Networking
 
