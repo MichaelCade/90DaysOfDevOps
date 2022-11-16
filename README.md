@@ -24,11 +24,11 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 
 ✔️
 
-- [✔️] ♾️ 1 > [Introduction](Days/day01.md)
+- [] ♾️ 1 > [Introduction](Days/day01.md)
 
 ### What is and why do we use DevOps
 
-- [✔️] ♾️ 2 > [Responsibilities of a DevOps Engineer](Days/day02.md)
+- [] ♾️ 2 > [Responsibilities of a DevOps Engineer](Days/day02.md)
 - [] ♾️ 3 > [DevOps Lifecycle - Application Focused](Days/day03.md)
 - [] ♾️ 4 > [DevOps & Agile](Days/day04.md)
 - [] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)
