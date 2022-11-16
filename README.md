@@ -24,7 +24,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 
 ✔️
 
-- [] ♾️ 1 > [Introduction](Days/day01.md)
+- [✔️] ♾️ 1 > [Introduction](Days/day01.md)
 
 ### What is and why do we use DevOps
 
