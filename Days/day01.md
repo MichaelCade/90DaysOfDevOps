@@ -1,12 +1,12 @@
 ---
-title: '#90DaysOfDevOps - Introduction - Day 1'
+title: "#90DaysOfDevOps - Introduction - Day 1"
 published: true
 description: 90DaysOfDevOps - Introduction
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048731
-date: '2022-04-17T10:12:40Z'
+date: "2022-04-17T10:12:40Z"
 ---
 
 ## Introduction - Day 1
@@ -62,3 +62,5 @@ My advice is to watch all of the below and hopefully you have also picked someth
 - [DevOps roadmap 2022 | Success Roadmap 2022](https://www.youtube.com/watch?v=7l_n97Mt0ko)
 
 If you made it this far, then you will know if this is where you want to be or not. See you on [Day 2](day02.md).
+
+# Cmpleted exercises and watched DevOps in 5 Minutes, What is DevOps? Easy Way amd DevOps roadmap 2022 | Success Roadmap 2022
