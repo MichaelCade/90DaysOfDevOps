@@ -1,12 +1,12 @@
 ---
-title: '#90DaysOfDevOps - Responsibilities of a DevOps Engineer - Day 2'
+title: "#90DaysOfDevOps - Responsibilities of a DevOps Engineer - Day 2"
 published: false
 description: 90DaysOfDevOps - Responsibilities of a DevOps Engineer
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048699
-date: '2022-04-17T21:15:34Z'
+date: "2022-04-17T21:15:34Z"
 ---
 
 ## Responsibilities of a DevOps Engineer
@@ -68,3 +68,5 @@ My advice is to watch all of the below and hopefully you also picked something u
 - [What is DevOps? - Microsoft](https://docs.microsoft.com/en-us/devops/what-is-devops)
 
 If you made it this far then you will know if this is where you want to be or not. See you on [Day 3](day03.md).
+
+# Completed Day 2 exercises. What is DevOps? content by TechWorld with Nana, Github, IBM, AWS, Microsoft
