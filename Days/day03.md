@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Application Focused - Day 3'
+title: "#90DaysOfDevOps - Application Focused - Day 3"
 published: false
 description: 90DaysOfDevOps - Application Focused
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048825
@@ -85,3 +85,5 @@ My advice is to watch all of the below and hopefully you also picked something u
 - [**NOT FREE** The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290/)
 
 If you made it this far then you will know if this is where you want to be or not. See you on [Day 4](day04.md).
+
+# Completed Day 3 - CIntinuous Development, Testing, Integration, Monitoring, The Remote Flow, FinOps Explained and Book recommendation
