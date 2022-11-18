@@ -49,7 +49,7 @@ You can find out more information on the [Docker Provider](https://registry.terr
 
 The above is a very simple demo of what can be done with Terraform plus Docker and how we can now manage this under the Terraform state. We covered docker-compose in the containers section and there is a little crossover in a way between this, infrastructure as code as well as then Kubernetes.
 
-To show this and how Terraform can handle a little more complexity, we are going to take the docker-compose file for WordPress and MySQL that we created with docker-compose and we will put this to Terraform. You can find the [docker-wordpress.tf](/Days/IaC/Docker-WordPress/docker-WordPress.tf)
+To show this and how Terraform can handle a little more complexity, we are going to take the docker-compose file for WordPress and MySQL that we created with docker-compose and we will put this to Terraform. You can find the [docker-wordpress.tf](2022/Days/IaC/Docker-WordPress/docker-WordPress.tf)
 
 ```
 terraform {

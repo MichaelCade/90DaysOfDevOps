@@ -59,7 +59,7 @@ tasks:
 
 We are going to use Vagrant to set up our node environment, I am going to keep this at a reasonable 4 nodes but you can hopefully see that this could easily be 300 or 3000 and this is the power of Ansible and other configuration management tools to be able to configure your servers.
 
-You can find this file located here ([Vagrantfile](/Days/Configmgmt/Vagrantfile))
+You can find this file located here ([Vagrantfile](2022/Days/Configmgmt/Vagrantfile))
 
 ```Vagrant
 Vagrant.configure("2") do |config|

@@ -24,7 +24,7 @@ Now we could use `kubectl` as we have shown in previous sections. But there are 
 
 ### Simple Kubernetes Demo
 
-Much like the demo we created in the last session, we can now deploy nginx into our Kubernetes cluster, I will be using minikube here again for demo purposes. We create our Kubernetes.tf file and you can find this in the [folder](/Days/IaC/Kubernetes/Kubernetes.tf)
+Much like the demo we created in the last session, we can now deploy nginx into our Kubernetes cluster, I will be using minikube here again for demo purposes. We create our Kubernetes.tf file and you can find this in the [folder](2022/Days/IaC/Kubernetes/Kubernetes.tf)
 
 In that file we are going to define our Kubernetes provider, we are going to point to our kubeconfig file, create a namespace called nginx, and then we will create a deployment which contains 2 replicas and finally service.
 
