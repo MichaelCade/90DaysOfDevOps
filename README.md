@@ -12,7 +12,7 @@ This will **not cover all things** "DevOps" but it will cover the areas that I f
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N33YRCS)
 
-[![](https://dcbadge.vercel.app/api/server/Bf4rUGxJ)](https://discord.gg/Bf4rUGxJ)
+[![](https://dcbadge.vercel.app/api/server/vqwPrNQsyK)](https://discord.gg/vqwPrNQsyK)
 
 The two images below will take you to the 2022 and 2023 edition of the learning journey. 
 
