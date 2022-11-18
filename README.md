@@ -16,9 +16,21 @@ This will **not cover all things** "DevOps" but it will cover the areas that I f
 
 The two images below will take you to the 2022 and 2023 edition of the learning journey. 
 
+<p align="center">
+ <a href="2022.md">
+ <img src="2022.jpg?raw=true" alt="2022" width="50%" height="50%" />
+</p>
+</a>
 
+<p align="center">
+ <a href="2023.md">
+ <img src="2023.jpg?raw=true" alt="2022" width="50%" height="50%" />
+</p>
+</a>
 
 The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1)
+
+
 
 ## License
 
