@@ -55,7 +55,7 @@ Empecemos con lo que vas a poder ver en estos 90 días.
 - [✔️] ⌨️ 9 > [Vamos a explicar el código de Hello World](Days/day09.md)
 - [✔️] ⌨️ 10 > [The Go Workspace & Compiling & running code](Days/day10.md)
 - [✔️] ⌨️ 11 > [Variables, Constants & Data Types](Days/day11.md)
-- [✔️] ⌨️ 12 > [Obtención del input user con Punteros y un programa terminado](Days/day12.md)
+- [✔️] ⌨️ 12 > [Obtención del input del usuario con Punteros y un programa terminado](Days/day12.md)
 - [✔️] ⌨️ 13 > [Tuitear tus progresos con nuestra nueva App](Days/day13.md)
 
 ### Conociendo lo básico de Linux
