@@ -38,7 +38,7 @@ Lo ideal es que cualquier despliegue previsible este dentro del proceso de autom
 
 ## Monitorización
 
-Todas las partes anteriores conducen a este paso final: la monitorización. Especialmente en torno a la resolución de problemas del autoescalado que hemos comentado. ¿Cómo si no sabrías
+Todas las partes anteriores conducen a este paso final: la monitorización. Especialmente en torno a la resolución de problemas del auto-escalado que hemos comentado. ¿Cómo si no sabrías
 que hay un problema si no tienes una monitorización que te lo diga?
 
 Así que algunas de las cosas que se pueden controlar a través de la monitorización son:

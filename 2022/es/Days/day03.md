@@ -44,7 +44,7 @@ Esta es la etapa en la que el código se despliega en los servidores de producci
 
 De estos atrevidos temas, entraremos en más detalle en las próximas semanas para tener un mejor conocimiento fundacional de lo que son y cuándo usarlos.
 
-### Monitoreo
+### Monitorizar
 
 Las cosas se mueven rápidamente aquí y tenemos nuestra aplicación que estamos actualizando continuamente con nuevas características y funcionalidades. Tenemos el testing asegurándose de que no se hay gremlins por ahí. Tenemos la aplicación funcionando en nuestro entorno de producción y puede estar continuamente mantenida la configuración y el rendimiento requeridos.
 
