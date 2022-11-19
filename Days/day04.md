@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - DevOps & Agile - Day 4'
+title: "#90DaysOfDevOps - DevOps & Agile - Day 4"
 published: false
 description: 90DaysOfDevOps - DevOps & Agile
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048700
@@ -97,3 +97,5 @@ What do you think? Do you have different views? I want to hear from Developers, 
 - [How to become a DevOps Engineer feat. Shawn Powers](https://www.youtube.com/watch?v=kDQMjAQNvY4)
 
 If you made it this far then you will know if this is where you want to be or not. See you on [Day 5](day05.md).
+
+# Completed exercises, Day in the Life - DevOps, 3 Things as a DevOps Engineer and How to DevOps by Shawn Peters.
