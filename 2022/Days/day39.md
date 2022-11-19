@@ -121,7 +121,7 @@ There will be a time when you have maybe used `git add .` but there are files yo
 
 ![](Images/Day39_Git19.png)
 
-We can also do the same to modified files such as main.js and unstage the commit, see above we have a greem M for modified and then below we are unstaging those changes.
+We can also do the same to modified files such as main.js and unstage the commit, see above we have a green M for modified and then below we are unstaging those changes.
 
 ![](Images/Day39_Git20.png)
 
@@ -149,7 +149,7 @@ As an example let's go and delete our most important file in our directory, noti
 
 ![](Images/Day39_Git24.png)
 
-Now we have no readme.mdin our working directory. We could have used `git rm readme.md` and this would then be reflected in our git database. Let's also delete it from here to simulate it being removed completely.
+Now we have no readme.md in our working directory. We could have used `git rm readme.md` and this would then be reflected in our git database. Let's also delete it from here to simulate it being removed completely.
 
 ![](Images/Day39_Git25.png)
 
