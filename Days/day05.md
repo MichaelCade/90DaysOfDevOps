@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor > - Day 5'
+title: "#90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor > - Day 5"
 published: false
 description: 90DaysOfDevOps - Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048830
@@ -84,3 +84,5 @@ This last bit was a bit of a recap for me on Day 3 but think this makes things c
 If you made it this far then you will know if this is where you want to be or not.
 
 See you on [Day 6](day06.md).
+
+# Completed exercises Software or DevOps Engineer, What IS DevOps? and DevOps Roadmap 2021.
