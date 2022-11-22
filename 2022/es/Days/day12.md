@@ -1,68 +1,72 @@
-## Getting user input with Pointers and a finished program
+## Obtención del input del usuario con Punteros y un programa terminado
 
-Yesterday ([Day 11](day11.md)), we created our first Go program that was self-contained and the parts we wanted to get user input for were created as variables within our code and given values, we now want to ask the user for their input to give the variable the value for the end message.
+Ayer, en el ([Día 11](day11.md)), creamos nuestro primer programa Go self-contained, creando el código para obtener el input del usuario como variables dentro de nuestro código y se les dio valores. Ahora pediremos al usuario su input para dar el valor a la variable del mensaje final.
 
-## Getting user input
+¡Qué emocionante!
 
-Before we do that let's take a look at our application again and walk through the variables we want as a test before getting that user input.
+## Obteniendo el input del usuario
 
-Yesterday we finished up with our code looking like this [day11_example4.go](Go/day11_example4.go) we have manually in code defined our `challenge, daystotal, dayscomplete` variables and constants.
+Antes de hacer esto vamos a echar un vistazo a nuestra aplicación para recorrer las variables que queremos como prueba antes de obtener la entrada del usuario.
 
-Let's now add a new variable called `TwitterName` you can find this new code at [day12_example1.go](Go/day12_example1.go) and if we run this code this is our output.
+Ayer terminamos con nuestro código con el aspecto de este fichero: [day11_example4.go](Go/day11_example4.go).
+
+Hemos definido manualmente nuestras variables y constantes `challenge, daystotal, dayscomplete`.
+
+Ahora vamos a añadir una nueva variable llamada `TwitterName`. Puedes ver como queda en el código en el fichero [day12_example1.go](Go/day12_example1.go) y si ejecutamos este código esta es nuestra salida.
 
 ![](Images/Day12_Go1.png)
 
-We are on day 12 and we would need to change that `dayscomplete` every day and compile our code each day if this was hardcoded which doesn't sound so great.
+Estamos en el día 12 y tendríamos que cambiar ese `dayscomplete` cada día y compilar nuestro código cada día si esto fuera hardcodeado, lo cual no suena muy atractivo.
 
-Getting user input, we want to get the value of maybe a name and the number of days completed. For us to do this we can use another function from within the `fmt` package.
+Con lo cual, queremos que el usuario escriba los valores de su nombre en Twitter y del número de días completados para obtenerlos en nuestro programa. Para ello podemos utilizar otra función input del paquete `fmt`.
 
-Recap on the `fmt` package, different functions for formatted input and output (I/O)
+Recapitulando sobre el paquete `fmt`, diferentes funciones para la entrada y salida formateada (I/O)
 
-- Print Messages
-- Collect User Input
-- Write into a file
+- Imprimir mensajes
+- Recoger el input del usuario
+- Escribir en un archivo
 
-This is instead of assigning the value of a variable we want to ask the user for their input.
+En lugar de asignar en el programa el valor de una variable, queremos pedírsela al usuario en un input.
 
-```
+```go
 fmt.Scan(&TwitterName)
 ```
 
-Notice that we also use `&` before the variable. This is known as a pointer which we will cover in the next section.
+Fíjate que también usamos `&` antes de la variable. Esto se conoce como puntero y lo veremos en la siguiente sección.
 
-In our code [day12_example2.go](Go/day12_example2.go) you can see that we are asking the user to input two variables, `TwitterName` and `DaysCompleted`
+En el código del fichero [day12_example2.go](Go/day12_example2.go) puedes ver que estamos pidiendo al usuario que introduzca la información mencionada en las variables `TwitterName` y `DaysCompleted`.
 
-Let's now run our program and you see we have input for both of the above.
+Ahora vamos a ejecutar nuestro programa y verás que tenemos la entrada de ambas variables.
 
 ![](Images/Day12_Go2.png)
 
-Ok, that's great we got some user input and we printed a message but what about getting our program to tell us how many days we have left in our challenge.
+Vale, está muy bien, hemos conseguido un input del usuario y hemos imprimido un mensaje con los valores obtenidos. pero ¿qué pasa si conseguimos que nuestro programa nos diga cuántos días nos quedan en nuestro reto?
 
-For us to do that we have created a variable called `remainingDays` and we have hard valued this in our code as `90` we then need to change the value of this value to print out the remaining days when we get our user input of `DaysCompleted` we can do this with this simple variable change.
+Para ello, vamos a crear una variable llamada `remainingDays` y le daremos el valor integer "90". A continuación, tenemos que cambiar este valor para imprimir los días restantes cuando recibamos la entrada del usuario de "días completados", es decir, hacer una resta.
 
-```
+```go
 remainingDays = remainingDays - DaysCompleted
 ```
 
-You can see how our finished program looks here [day12_example2.go](Go/day12_example3.go).
+Puedes ver el aspecto de nuestro programa terminado en el fichero [day12_example2.go](Go/day12_example3.go).
 
-If we now run this program you can see that simple calculation is made based on the user input and the value of the `remainingDays`
+Si ahora ejecutamos este programa puedes ver que se hace un simple cálculo basado en la entrada del usuario y el valor de la variable `remainingDays`.
 
 ![](Images/Day12_Go3.png)
 
-## What is a pointer? (Special Variables)
+## ¿Qué es un puntero? (Variables especiales)
 
-A pointer is a (special) variable that points to the memory address of another variable.
+Un puntero es una variable (especial) que apunta a la dirección de memoria de otra variable.
 
-A great explanation of this can be found here at [geeksforgeeks](https://www.geeksforgeeks.org/pointers-in-golang/)
+Puedes ver una explicación más detallada en [geeksforgeeks](https://www.geeksforgeeks.org/pointers-in-golang/).
 
-Let's simplify our code now and show with and without the `&` in front of one of our print commands, this gives us the memory address of the pointer. I have added this code example here. [day12_example4.go](Go/day12_example4.go)
+Ahora, simplifiquemos nuestro código y mostremos con y sin el `&` delante de uno de nuestros comandos de impresión, esto nos da la dirección de memoria del puntero. El ejemplo del código lo puedes encontrar en el fichero [day12_example4.go](Go/day12_example4.go).
 
-Below is running this code.
+A continuación ejecuta este código y observa.
 
 ![](Images/Day12_Go4.png)
 
-## Resources
+## Recursos
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
@@ -72,4 +76,4 @@ Below is running this code.
 - [FreeCodeCamp - Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s)
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N)
 
-See you on [Day 13](day13.md).
+Nos vemos en el [Día 13](day13.md).

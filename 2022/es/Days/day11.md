@@ -18,13 +18,13 @@ Para declarar esto en nuestro programa Go definimos un valor utilizando una **ke
 
 Recuerda asegurarte de que los nombres de tus variables sean descriptivos. Si declaras una variable debes usarla o recibirás un error, esto es para evitar posible dead code, código que nunca se usa. Lo mismo ocurre con los paquetes que no se utilizan.
 
-```
+```go
 var challenge = "#90DaysOfDevOps"
 ```
 
 Con lo anterior establecido vamos a utilizarlo en el siguiente fragmento de código. Se puede ver en la salida de abajo que hemos utilizado la variable.
 
-```
+```go
 package main
 
 import "fmt"
@@ -45,7 +45,7 @@ Sabemos que este reto en concreto es de 90 días, pero el próximo, quizás sea 
 
 Añadiendo `const` a nuestro código y añadiendo otra línea de código para imprimir esto.
 
-```
+```go
 package main
 
 import "fmt"
@@ -69,7 +69,7 @@ Por último añadiremos otra variable para el número de días que hemos complet
 
 A continuación verás añadida la variable `dayscomplete` con el número de días completados.
 
-```
+```go
 package main
 
 import "fmt"
@@ -99,7 +99,7 @@ Se pone interesante la cosa, puedes ver el código de ejemplo [day11_example4.go
 
 Las variables también pueden ser definidas en un formato más simple aun. En vez de definir `var` y el "tipo" puedes codificarla de la siguiente manera para obtener la misma funcionalidad pero con un aspecto más limpio y sencillo. Esto sólo funcionará para las variables y no para las constantes.
 
-```
+```go
 func main() {
     challenge := "#90DaysOfDevOps"
     const daystotal = 90
@@ -134,14 +134,14 @@ Este recurso está súper detallado sobre los tipos de datos: [Golang by example
 
 Si necesitamos definir un tipo en nuestra variable podemos hacerlo así:
 
-```
+```go
 var TwitterHandle string
 var DaysCompleted uint
 ```
 
 Como Go implica variables donde se da un valor podemos imprimir esos valores con lo siguiente:
 
-```
+```go
 fmt.Printf("challenge is %T, daystotal is %T, dayscomplete is %T\n", conference, daystotal, dayscomplete)
 ```
 

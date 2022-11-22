@@ -1,76 +1,76 @@
-## Tweet your progress with our new App
+## Tuitea tu progreso con nuestra nueva App
 
-On the final day of looking into this programming language, we have only just touched the surface here of the language but it is at that start that I think we need to get interested and excited and want to dive more into it.
+Hoy es el último día viendo este lenguaje de programación. Apenas hemos tocado la superficie de Go pero es un inicio. Ahora debemos interesarnos, entusiasmarnos y sumergirnos más en él por nuestra cuenta.
 
-Over the last few days, we have taken a small idea for an application and we have added functionality to it, in this session I want to take advantage of those packages we mentioned and create the functionality for our app to not only give you the update of your progress on screen but also send a tweet with the details of the challenge and your status.
+Pero vamos a aprovechar el último día para agregar una funcionalidad a nuestra app. Aprovecharemos los paquetes creados y haremos que nuestra app, no solo te de la actualización de tu progreso en pantalla, sino que también envíe un tweet con los detalles del reto y tu estado. 😊
 
-## Adding the ability to tweet your progress
+##  Añadir la capacidad de tuitear
 
-The first thing we need to do is set up our developer API access with Twitter for this to work.
+Para que esto funcione, lo primero que tenemos que hacer es configurar nuestro acceso a la API para desarrolladores de Twitter.
 
-Head to the [Twitter Developer Platform](https://developer.twitter.com) and sign in with your Twitter handle and details. Once in you should see something like the below without the app that I already have created.
+Dirígete a la [Plataforma de Desarrolladores de Twitter](https://developer.twitter.com) e inicia sesión con tu nombre y datos de Twitter. Una vez dentro deberías ver algo como lo que se muestra a continuación sin la aplicación que ya he creado.
 
 ![](Images/Day13_Go1.png)
 
-From here you may also want to request elevated access, this might take some time but it was very fast for me.
+Desde aquí también se puede solicitar acceso más elevado, esto puede llevar algo de tiempo.
 
-Next, we should select Projects & Apps and create our App. Limits are depending on the account access you have, with essential you only have one app and one project and with elevated you can have 3 apps.
+A continuación debemos seleccionar Projects & Apps y crear nuestra App. Los límites dependen del acceso de la cuenta que tengas, con essential solo tienes una app y un proyecto y con elevated puedes tener 3 apps.
 
 ![](Images/Day13_Go2.png)
 
-Give your application a name
+Dale un nombre a tu aplicación
 
 ![](Images/Day13_Go3.png)
 
-You will be then given these API tokens, you must save these somewhere secure. (I have since deleted this app) We will need these later with our Go Application.
+A continuación, se le dará estos tokens de la API. Debes guardarlos en algún lugar seguro, los necesitaremos más tarde con nuestra aplicación Go.(No te molestes en intentar usar los que se ven en la captura, esta aplicación ya se ha borrado).
 
 ![](Images/Day13_Go4.png)
 
-Now we have our app created,(I did have to change my app name as the one in the screenshot above was already taken, these names need to be unique)
+Ahora tenemos nuestra aplicación creada, (se cambio el nombre de la aplicación (A cade90) ya que el de la captura anterior (test90) ya estaba tomado, estos nombres deben ser únicos).
 
 ![](Images/Day13_Go5.png)
 
-The keys that we gathered before are known as our consumer keys and we will also need our access token and secrets. We can gather this information using the "Keys & Tokens" tab.
+Las claves que guardamos antes se conocen como nuestras consumer keys y también necesitaremos nuestro token de acceso y secrets. Podemos reunir esta información usando la pestaña "Keys & Tokens".
 
 ![](Images/Day13_Go6.png)
 
-Ok, we are done in the Twitter developer portal for now. Make sure you keep your keys safe because we will need them later.
+Bien, por ahora hemos terminado en el portal de desarrolladores de Twitter. Asegúrate de mantener tus claves a salvo porque las necesitaremos más adelante.
 
 ## Go Twitter Bot
 
-Remember the code we are starting within our application as well [day13_example1](Go/day13_example1.go) but first, we need to check we have the correct code to make something tweet
+Recuerda que el código que vamos a iniciar dentro de nuestra aplicación es el del fichero [day13_example1](Go/day13_example1.go) pero antes, tenemos que comprobar que tenemos el código correcto para hacer el tweet.
 
-We now need to think about the code to get our output or message to Twitter in the form of a tweet. We are going to be using [go-twitter](https://github.com/dghubble/go-twitter) This is a Go client library for the Twitter API.
+Ahora tenemos que pensar en el código para hacer llegar nuestra salida o mensaje a Twitter en forma de tweet. Vamos a utilizar la librería [go-twitter](https://github.com/dghubble/go-twitter) (Librería cliente de Go para la API de Twitter).
 
-To test this before putting this into our main application, I created a new directory in our `src` folder called go-twitter-bot, issued the `go mod init github.com/michaelcade/go-Twitter-bot` on the folder which then created a `go.mod` file and then we can start writing our new main.go and test this out.
+Para probar antes de ponerlo en nuestra aplicación principal, crea un nuevo directorio en la carpeta `src` llamado go-twitter-bot, emite el `go mod init github.com/michaelcade/go-Twitter-bot` en la carpeta que luego creará un archivo `go.mod`. Ahora podemos empezar a escribir el nuevo main.go y probarlo.
 
-We now need those keys, tokens and secrets we gathered from the Twitter developer portal. We are going to set these in our environment variables. This will depend on the OS you are running:
+Necesitamos las claves, los tokens y los secrets que recogimos del portal de desarrolladores de Twitter. Vamos a establecerlos en nuestras variables de entorno. Esto dependerá del sistema operativo que estés ejecutando:
 
-Windows
+**Windows**
 
-```
+```cmd
 set CONSUMER_KEY
 set CONSUMER_SECRET
 set ACCESS_TOKEN
 set ACCESS_TOKEN_SECRET
 ```
 
-Linux / macOS
+**Linux / macOS**
 
-```
+```shell
 export CONSUMER_KEY
 export CONSUMER_SECRET
 export ACCESS_TOKEN
 export ACCESS_TOKEN_SECRET
 ```
 
-At this stage, you can take a look at [day13_example2](Go/day13_example2.go) at the code but you will see here that we are using a struct to define our keys, secrets and tokens.
+En este punto, echa un vistazo al código del fichero [day13_example2](Go/day13_example2.go), verás que aquí se está usando una estructura para definir las claves, secretos y tokens.
 
-We then have a `func` to parse those credentials and make that connection to the Twitter API
+Luego tenemos un `func` para analizar esas credenciales y hacer la conexión con la API de Twitter
 
-Then based on the success we will then send a tweet.
+Ahora sí, vamos a enviar un tweet. 🐦
 
-```
+```go
 package main
 
 import (
@@ -148,15 +148,15 @@ func main() {
 
 ```
 
-The above will either give you an error based on what is happening or it will succeed and you will have a tweet sent with the message outlined in the code.
+Lo anterior puede que imprima en pantall un error basado explicando lo que sucedido, espero que no. O tendrá éxito, sin mensaje alguno, tendrás un tweet enviado con el mensaje señalado en el código.
 
-## Pairing the two together - Go-Twitter-Bot + Our App
+## Emparejando los dos juntos. Go-Twitter-Bot + Nuestra App
 
-Now we need to merge these two in our `main.go` I am sure someone out there is screaming that there is a better way of doing this and please comment on this as you can have more than one `.go` file in a project it might make sense but this works.
+Ahora tenemos que fusionarlo en el fichero `main.go`. Estoy seguro de que alguien por ahí está gritando que hay una mejor manera de hacer esto. Tan solo comentar que podría haber más de un archivo `.go` en un proyecto, podría tener sentido. Pero esto también funciona.
 
-You can see the merged codebase [day13_example3](Go/day13_example3.go) but I will also show it below.
+Puedes ver el código base fusionado en el fichero [day13_example3](Go/day13_example3.go) pero también se muestra a continuación.
 
-```
+```go
 package main
 
 import (
@@ -258,29 +258,31 @@ func main() {
 }
 ```
 
-The outcome of this should be a tweet but if you did not supply your environment variables then you should get an error like the one below.
+El resultado de esto debería ser un tweet, pero si no suministraste las variables de entorno tendrás el siguiente error.
 
 ![](Images/Day13_Go7.png)
 
-Once you have fixed that or if you choose not to authenticate with Twitter then you can use the code we finished with yesterday. The terminal output on success will look similar to this:
+Una vez que hayas arreglado esto la salida del terminal en caso de éxito será similar a esta:
 
 ![](Images/Day13_Go8.png)
 
-The resulting tweet should look something like this:
+El tweet resultante debería tener un aspecto similar al siguiente
 
 ![](Images/Day13_Go9.png)
 
-## How to compile for multiple OSs
+## ¿Cómo compilar para múltiples sistemas operativos?
 
-I next want to cover the question, "How do you compile for multiple Operating Systems?" The great thing about Go is that it can easily compile for many different Operating Systems. You can get a full list by running the following command:
+Lo comentamos cuando describimos el lenguaje go en días anteriores: "¿Cómo compilar para múltiples Sistemas Operativos?" 
+
+Lo bueno de Go es que puede compilar fácilmente para muchos sistemas operativos diferentes. Puedes obtener una lista completa ejecutando el siguiente comando:
 
 ```
 go tool dist list
 ```
 
-Using our `go build` commands so far is great and it will use the `GOOS` and `GOARCH` environment variables to determine the host machine and what the build should be built for. But we can also create other binaries by using the code below as an example.
+El uso de nuestros comandos `go build` hasta ahora es genial y utilizará las variables de entorno `GOOS` y `GOARCH` para determinar la máquina anfitriona y construirá el ejecutable en base a esto. Pero también podemos crear otros binarios para otros SO usando el código de abajo como ejemplo.
 
-```
+```go
 GOARCH=amd64 GOOS=darwin go build -o ${BINARY_NAME}_0.1_darwin main.go
 GOARCH=amd64 GOOS=linux go build -o ${BINARY_NAME}_0.1_linux main.go
 GOARCH=amd64 GOOS=windows go build -o ${BINARY_NAME}_0.1_windows main.go
@@ -288,11 +290,13 @@ GOARCH=arm64 GOOS=linux go build -o ${BINARY_NAME}_0.1_linux_arm64 main.go
 GOARCH=arm64 GOOS=darwin go build -o ${BINARY_NAME}_0.1_darwin_arm64 main.go
 ```
 
-This will then give you binaries in your directory for all of the above platforms. You can then take this and create a makefile to build these binaries whenever you add new features and functionality to your code. I have included the [makefile](Go/makefile)
+Esto dará los binarios solicitados en el directorio para todas las plataformas configuradas.
 
-This is what I have used to create the releases you can now see on the [repository](https://github.com/MichaelCade/90DaysOfDevOps/releases)
+A continuación, puede coger este código y crear un makefile para construir los binarios cada vez que agregues nuevas características y funcionalidades al código. Echa un ojo al fichero [makefile](Go/makefile).
 
-## Resources
+Esto es lo que se ha utilizado para crear las versiones que puedes ver en el [repositorio](https://github.com/MichaelCade/90DaysOfDevOps/releases)
+
+## Recursos
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
@@ -306,8 +310,8 @@ This is what I have used to create the releases you can now see on the [reposito
 - [go.dev/tour/list](https://go.dev/tour/list)
 - [go.dev/learn](https://go.dev/learn/)
 
-This wraps up the Programming language for 7 days! So much more that can be covered and I hope you have been able to continue through the content above and be able to understand some of the other aspects of the Go programming language.
+Con esto terminamos el lenguaje de programación, han pasado rápido los 7 días, no ha habido presión alguna y hemos aprendido conceptos para nuestro futuro profesional. Hay mucho más por aprender, muchísimo más, espero que continues dándole duro a los lenguajes de programación, sea go, python o el que elijas, ya que todo lo que aprendas lo podrás usar en un futuro si sigues tecleando. 
 
-Next, we take our focus into Linux and some of the fundamentals that we should all know there.
+A continuación, nos centramos en Linux y en algunos de los fundamentos que todos deberíamos conocer allí. 🐧
 
-See you on [Day 14](day14.md).
+Nos vemos en el [Día 14](day14.md).

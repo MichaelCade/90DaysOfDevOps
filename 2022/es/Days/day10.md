@@ -6,13 +6,13 @@ En el [Día 8](day08.md) hablamos brevemente del espacio de trabajo Go para pone
 
 Si ejecutas
 
-```
+```shell
 echo $GOPATH
 ```
 
 La salida debería ser similar a la mía (con tu nombre de usuario):
 
-```
+```shell
 /home/michael/projects/go
 ```
 > **En Linux tenemos que configurarlo.** 
