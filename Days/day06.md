@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - DevOps - The real stories - Day 6'
+title: "#90DaysOfDevOps - DevOps - The real stories - Day 6"
 published: false
 description: 90DaysOfDevOps - DevOps - The real stories
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048855
@@ -73,3 +73,5 @@ If you made it this far then you will know if this is where you want to be or no
 Day 7 will be us diving into a programming language. I am not aiming to be a developer but I want to be able to understand what the developers are doing.
 
 Can we achieve that in a week? Probably not but if we spend 7 days or 7 hours learning something we are going to know more than when we started.
+
+# Completed exercises DevOps in Netflix, Amazon, Etsy Hertz, NASA and Target.
