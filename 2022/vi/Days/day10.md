@@ -79,7 +79,7 @@ Những thứ chúng ta muốn tìm hiểu thêm là build, install and run.
 - `go build` - Để biên dịch các gói và phần phụ thuộc trong thư mục hiện tại. Nếu là gói `main`, sẽ đặt tệp thực thi trong thư mục hiện tại, nếu không, tệp thực thi sẽ được đặt trong thư mục `pkg`. `go build` cũng cho phép bạn tạo một tệp thực thi cho bất kỳ nền tảng, hệ điều hành được hỗ trợ bởi của Go.
 - `go install` - Tương tự như go build nhưng sẽ đặt tệp thi hành vào thư mục `bin`
 
-Chúng tôi đã chạy qua go build và go run nhưng vui lòng chạy lại chúng ở đây nếu bạn muốn, `go install` như đã nêu ở trên đặt tệp thực thi vào thư mục bin của chúng tôi.
+Chúng ta đã chạy qua go build và go run nhưng vui lòng chạy lại chúng ở đây nếu bạn muốn, `go install` như đã nêu ở trên đặt tệp thực thi vào thư mục bin của chúng ta.
 
 Chúng ta đã sử dụng go build và go run nhưng hãy thử lại nếu bạn muốn, `go install` như đã trình bày ở trên, sẽ đặt tệp thực thi trong thư mục `bin`.
 

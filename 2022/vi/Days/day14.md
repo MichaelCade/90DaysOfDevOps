@@ -24,7 +24,7 @@ Tôi đã sử dụng Linux hàng ngày trong vài năm nhưng máy tính để 
 
 Tôi không khuyến nghị bạn làm giống như tôi vì có nhiều tùy chọn dễ dàng hơn nhưng tôi sẽ nói rằng việc thực hiện điều đó buộc bạn phải học nhanh hơn cách làm cho mọi thứ hoạt động trên Linux.
 
-Trong phần lớn thời gian 7 ngày này, tôi sẽ triển khai máy ảo (Virtual Machine) sử dụng Virtual Box trên máy Windows của mình. Tôi cũng sẽ triển khai một bản phân phối Linux (Linux distro), trong khi phần lớn các máy chủ Linux mà bạn sẽ quản lý có thể sẽ là các máy chủ không có GUI và mọi thứ đều dựa trên shell. Tuy nhiên, như tôi đã nói ở phần đầu, rất nhiều các công cụ mà chúng tôi đã đề cập trong suốt 90 ngày bắt đầu chạy trên Linux. Do đó, tôi cũng khuyến khích bạn tham gia vào việc sử dụng Linux với máy tính của bạn để có cùng một trải nghiệm học tập với tôi.
+Trong phần lớn thời gian 7 ngày này, tôi sẽ triển khai máy ảo (Virtual Machine) sử dụng Virtual Box trên máy Windows của mình. Tôi cũng sẽ triển khai một bản phân phối Linux (Linux distro), trong khi phần lớn các máy chủ Linux mà bạn sẽ quản lý có thể sẽ là các máy chủ không có GUI và mọi thứ đều dựa trên shell. Tuy nhiên, như tôi đã nói ở phần đầu, rất nhiều các công cụ mà chúng ta đã đề cập trong suốt 90 ngày bắt đầu chạy trên Linux. Do đó, tôi cũng khuyến khích bạn tham gia vào việc sử dụng Linux với máy tính của bạn để có cùng một trải nghiệm học tập với tôi.
 
 Đối với phần còn lại của bài này, chúng ta sẽ tập trung vào việc thiết lập và chạy một máy ảo Ubuntu Desktop trong Virtual Box. Đầu tiên, hãy tải xuống [Virtual Box](https://www.virtualbox.org/) và download [Ubuntu ISO](https://ubuntu.com/download) bản mới nhất và tiếp tục hoàn thiện môi trường của của chúng ta. Nó không được coi là DevOps đúng không?
 
@@ -32,11 +32,11 @@ Một lý do tốt khác để sử dụng hầu hết các bản phân phối L
 
 ## Giới thiệu HashiCorp Vagrant
 
-Vagrant là một tiện ích CLI quản lý vòng đời của các máy ảo của bạn. Chúng tôi có thể sử dụng vagrant để khởi động và tắt các máy ảo trên nhiều nền tảng khác nhau bao gồm vSphere, Hyper-v, Virtual Box và cả Docker. Sẽ có nhiều các nhà cung cấp khác nhưng chúng ta sẽ tiếp tục với Virtual Box.
+Vagrant là một tiện ích CLI quản lý vòng đời của các máy ảo của bạn. Chúng ta có thể sử dụng vagrant để khởi động và tắt các máy ảo trên nhiều nền tảng khác nhau bao gồm vSphere, Hyper-v, Virtual Box và cả Docker. Sẽ có nhiều các nhà cung cấp khác nhưng chúng ta sẽ tiếp tục với Virtual Box.
 
 Điều đầu tiên chúng ta cần làm là cài đặt Vagrant trên máy của bạn, khi truy cập trang tải xuống, bạn sẽ thấy tất cả các hệ điều hành được liệt kê để bạn lựa chọn tại [trang download của HashiCorp Vagrant](https://www.vagrantup.com/downloads). Tôi đang sử dụng Windows nên đã download tệp nhị phân cho hệ thống của mình và cài đặt tệp này lên hệ thống của mình.
 
-Tiếp theo, chúng tôi cũng cần cài đặt [Virtual Box](https://www.virtualbox.org/wiki/Downloads). Một lần nữa, phần mềm này cũng có thể được cài đặt trên nhiều hệ điều hành khác nhau và một lý do chính đáng để chọn 2 công nghệ này là vì chúng ta có thể sử dụng trên hầu hết tất cả các hệ điều hành.
+Tiếp theo, chúng ta cũng cần cài đặt [Virtual Box](https://www.virtualbox.org/wiki/Downloads). Một lần nữa, phần mềm này cũng có thể được cài đặt trên nhiều hệ điều hành khác nhau và một lý do chính đáng để chọn 2 công nghệ này là vì chúng ta có thể sử dụng trên hầu hết tất cả các hệ điều hành.
 
 Cả hai đều khá dễ đề cài đặt và đều có những cộng đồng tuyệt vời xung quanh chúng, vì vậy hãy liên hệ nếu bạn gặp vấn đề.
 
@@ -48,7 +48,7 @@ Khi nói đến việc lưu các tệp này và sắp xếp các VAGRANTFILE c�
 
 ![](../../Days/Images/Day14_Linux1.png)
 
-Hãy cùng nhìn lại VAGRANTFILE đó và xem những gì chúng tôi đang xây dựng.
+Hãy cùng nhìn lại VAGRANTFILE đó và xem những gì chúng ta đang xây dựng.
 
 ```ruby:Vagrantfile
 Vagrant.configure("2") do |config|
@@ -61,9 +61,9 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-Đây là một VAGRANTFILE đơn giản. Chúng tôi muốn nói rằng chúng tôi muốn có một box cụ thể, một box có thể là hình ảnh công khai hoặc bản dựng riêng của hệ thống mà bạn đang tìm kiếm. Bạn có thể tìm thấy một danh sách dài các box công khai có sẵn tại đây trong [danh mục công khai của hộp Vagrant](https://app.vagrantup.com/boxes/search)
+Đây là một VAGRANTFILE đơn giản. Chúng ta muốn nói rằng chúng ta muốn có một box cụ thể, một box có thể là hình ảnh công khai hoặc bản dựng riêng của hệ thống mà bạn đang tìm kiếm. Bạn có thể tìm thấy một danh sách dài các box công khai có sẵn tại đây trong [danh mục công khai của hộp Vagrant](https://app.vagrantup.com/boxes/search)
 
-Dòng tiếp theo, chúng tôi nói rằng chúng tôi muốn sử dụng một nhà cung cấp cụ thể và trong trường hợp này là `VirtualBox`. Chúng tôi cũng muốn bộ nhớ của máy là `8GB` và số lượng CPU là `4`. Theo kinh nghiệm của tôi, bạn có thể sẽ phải thêm dòng sau nếu bạn gặp sự cố hiển thị. Nó sẽ đặt bộ nhớ video thành những gì bạn muốn, tôi sẽ tăng bộ nhớ này lên đến `128MB` nhưng nó hoàn toàn phụ thuộc vào cấu hình hệ thống của bạn.
+Dòng tiếp theo, chúng ta nói rằng chúng ta muốn sử dụng một nhà cung cấp cụ thể và trong trường hợp này là `VirtualBox`. Chúng ta cũng muốn bộ nhớ của máy là `8GB` và số lượng CPU là `4`. Theo kinh nghiệm của tôi, bạn có thể sẽ phải thêm dòng sau nếu bạn gặp sự cố hiển thị. Nó sẽ đặt bộ nhớ video thành những gì bạn muốn, tôi sẽ tăng bộ nhớ này lên đến `128MB` nhưng nó hoàn toàn phụ thuộc vào cấu hình hệ thống của bạn.
 
 ```ruby
 v.customize ["modifyvm", :id, "--vram", ""]
@@ -91,8 +91,8 @@ Sau khi hoàn tất quá trình `vagrant up`, chúng ta có thể sử dụng `v
 
 Nếu bạn đã đi được đến đây và đang tự hỏi "TÊN NGƯỜI DÙNG & MẬT KHẨU LÀ GÌ?"
 
--Username = vagrant
--Password = vagrant
+- Username = vagrant
+- Password = vagrant
 
 Ngày mai chúng ta sẽ tìm hiểu về một số lệnh và tác dụng của chúng, Terminal sẽ là nơi để biến mọi thứ thành hiện thực.
 

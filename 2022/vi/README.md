@@ -40,17 +40,17 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 - [✔️] ⌨️ 12 > [Nhận thông tin đầu vào sử dụng con trỏ và chương trình hoàn thiện](Days/day12.md)
 - [✔️] ⌨️ 13 > [Tweet tiến trình của bạn với ứng dụng mới của chúng ta](Days/day13.md)
 
-### Knowing Linux Basics
+### Kiến thức cơ bản về Linux
 
 - [✔️] 🐧 14 > [Bức tranh lớn: DevOps và Linux](Days/day14.md)
 - [✔️] 🐧 15 > [Các lệnh Linux cho DevOps (Thực tế là tất cả mọi người)](Days/day15.md)
-- [✔️] 🐧 16 > [Quản lý Hệ thống Linux, Hệ thống Tệp & Bộ nhớ](Days/day16.md)
+- [✔️] 🐧 16 > [Quản lý Hệ thống Linux, Hệ thống Tệp & Lưu trữ](Days/day16.md)
 - [✔️] 🐧 17 > [Text Editors - nano vs vim](Days/day17.md)
 - [✔️] 🐧 18 > [SSH & Web Server(LAMP)](Days/day18.md)
 - [✔️] 🐧 19 > [Tự động hóa các tác vụ với các tập lệnh bash](Days/day19.md)
 - [✔️] 🐧 20 > [Thiết lập máy trạm phát triển - những điều tuyệt vời](Days/day20.md)
 
-### Understand Networking
+### Kiến thức về mạng (Network)
 
 - [✔️] 🌐 21 > [The Big Picture: DevOps and Networking](Days/day21.md)
 - [✔️] 🌐 22 > [The OSI Model - The 7 Layers](Days/day22.md)
@@ -60,7 +60,7 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 - [✔️] 🌐 26 > [Building our Lab](Days/day26.md)
 - [✔️] 🌐 27 > [Getting Hands-On with Python & Network](Days/day27.md)
 
-### Stick to one Cloud Provider
+### Tìm hiểu về một Cloud Provider
 
 - [✔️] ☁️ 28 > [The Big Picture: DevOps & The Cloud](Days/day28.md)
 - [✔️] ☁️ 29 > [Microsoft Azure Fundamentals](Days/day29.md)
@@ -70,7 +70,7 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 - [✔️] ☁️ 33 > [Microsoft Azure Networking Models + Azure Management](Days/day33.md)
 - [✔️] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](Days/day34.md)
 
-### Use Git Effectively
+### Cách sử dụng Git hiệu quả
 
 - [✔️] 📚 35 > [The Big Picture: Git - Version Control](Days/day35.md)
 - [✔️] 📚 36 > [Installing & Configuring Git](Days/day36.md)
@@ -100,7 +100,7 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 - [✔️] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
 - [✔️] ☸ 55 > [State and Ingress in Kubernetes](Days/day55.md)
 
-### Learn Infrastructure as Code
+### Học cơ sở hạ tầng dưới dạng mã (Infrastructure as Code)
 
 - [✔️] 🤖 56 > [The Big Picture: IaC](Days/day56.md)
 - [✔️] 🤖 57 > [An intro to Terraform](Days/day57.md)
@@ -110,7 +110,7 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 - [✔️] 🤖 61 > [Kubernetes & Multiple Environments](Days/day61.md)
 - [✔️] 🤖 62 > [Testing, Tools & Alternatives](Days/day62.md)
 
-### Automate Configuration Management
+### Tự động hóa quản lý cấu hình
 
 - [✔️] 📜 63 > [The Big Picture: Configuration Management](Days/day63.md)
 - [✔️] 📜 64 > [Ansible: Getting Started](Days/day64.md)
@@ -120,7 +120,7 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 - [✔️] 📜 68 > [Tags, Variables, Inventory & Database Server config](Days/day68.md)
 - [✔️] 📜 69 > [All other things Ansible - Automation Controller, AWX, Vault](Days/day69.md)
 
-### Create CI/CD Pipelines
+### Tạo CI/CD Pipelines
 
 - [✔️] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
 - [✔️] 🔄 71 > [What is Jenkins?](Days/day71.md)
@@ -130,7 +130,7 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 - [✔️] 🔄 75 > [GitHub Actions Overview](Days/day75.md)
 - [✔️] 🔄 76 > [ArgoCD Overview](Days/day76.md)
 
-### Monitoring, Log Management, and Data Visualisation
+### Giám sát, quản lý logs và trực quan hóa dữ liệu
 
 - [✔️] 📈 77 > [The Big Picture: Monitoring](Days/day77.md)
 - [✔️] 📈 78 > [Hands-On Monitoring Tools](Days/day78.md)
@@ -140,7 +140,7 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 - [✔️] 📈 82 > [EFK Stack](Days/day82.md)
 - [✔️] 📈 83 > [Data Visualisation - Grafana](Days/day83.md)
 
-### Store & Protect Your Data
+### Lưu trữ & Bảo vệ Dữ liệu
 
 - [✔️] 🗃️ 84 > [The Big Picture: Data Management](Days/day84.md)
 - [✔️] 🗃️ 85 > [Data Services](Days/day85.md)
