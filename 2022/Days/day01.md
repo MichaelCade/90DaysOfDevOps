@@ -60,5 +60,7 @@ My advice is to watch all of the below and hopefully you have also picked someth
 - [DevOps in 5 Minutes](https://www.youtube.com/watch?v=Xrgk023l4lI)
 - [What is DevOps? Easy Way](https://www.youtube.com/watch?v=_Gpe1Zn-1fE&t=43s)
 - [DevOps roadmap 2022 | Success Roadmap 2022](https://www.youtube.com/watch?v=7l_n97Mt0ko)
+- [From Zero to DevOps Engineer - DevOps Roadmap for YOUR specific background
+](https://www.youtube.com/watch?v=G_nVMUtaqCk)
 
 If you made it this far, then you will know if this is where you want to be or not. See you on [Day 2](day02.md).
