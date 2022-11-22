@@ -1,65 +1,65 @@
-## Let's explain the Hello World code
+## Vamos a explicar el código de Hello World
 
-### How Go works
+### ¿Cómo funciona Go?
 
-On [Day 8](day08.md) we walked through getting Go installed on your workstation and we then created our first Go application.
+En el [Día 8](day08.md) realizamos la instalación de Go en el equipo y luego creamos nuestra primera aplicación Go.
 
-In this section, we are going to take a deeper look into the code and understand a few more things about the Go language.
+En esta sección, vamos a echar un vistazo más profundo al código y entender algunas cosillas más sobre el lenguaje Go.
 
-### What is Compiling?
+### ¿Qué es la compilación?
 
-Before we get into the [6 lines of the Hello World code](Go/hello.go) we need to have a bit of an understanding of compiling.
+Antes de ver las [5 líneas del código de Hello](Go/hello.go) necesitamos entender un poco la compilación.
 
-Programming languages that we commonly use such as Python, Java, Go and C++ are high-level languages. Meaning they are human-readable but when a machine is trying to execute a program it needs to be in a form that a machine can understand. We have to translate our human-readable code to machine code which is called compiling.
+Los lenguajes de programación que utilizamos habitualmente, como Python, Java, Go y C++, son lenguajes de alto nivel. Esto significa que son legibles para el ser humano. Cuando una máquina intenta ejecutar un programa, éste debe tener una forma que la máquina pueda entender. Con lo cuál, tenemos que traducir nuestro código legible para el ser humano a código legible para la máquina (Código máquina). Esta acción es a lo que se le llama **compilar**.
 
 ![](Images/Day9_Go1.png)
 
-From the above you can see what we did on [Day 8](day08.md) here, we created a simple Hello World main.go and we then used the command `go build main.go` to compile our executable.
+Si no sabes de lo que estamos hablando mejor vuelve a ver lo que hicimos en el [Día 8](day08.md), creamos un simple Hello World en el fichero `main.go` y luego compilamos nuestro ejecutable con el comando `go build main.go`.
 
-### What are packages?
+### ¿Qué son los paquetes?
 
-A package is a collection of source files in the same directory that are compiled together. We can simplify this further, a package is a bunch of .go files in the same directory. Remember our Hello folder from Day 8? If and when you get into more complex Go programs you might find that you have folder1 folder2 and folder3 containing different.go files that make up your program with multiple packages.
+Un paquete es una colección de archivos fuente en el mismo directorio que se compilan juntos. En el caso que nos ocupa con nuestro paquete, un grupo de archivos .go en el mismo directorio. ¿Recuerdas nuestra carpeta Hello del [día 8](day08.md)? Cuando realizas programas Go más complejos puedes encontrar que tienes la carpeta1, la carpeta2 y la carpeta3 que contienen diferentes ficheros .go que componen tu programa con múltiples paquetes.
 
-We use packages so we can reuse other people's code, we don't have to write everything from scratch. Maybe we are wanting a calculator as part of our program, you could probably find an existing Go Package that contains the mathematical functions that you could import into your code saving you a lot of time and effort in the long run.
+Utilizamos paquetes para poder reutilizar el código de otras personas, no tenemos que escribir todo desde cero. Tal vez queremos una calculadora como parte de nuestro programa, probablemente podrías encontrar un paquete Go existente que contenga las funciones matemáticas que podrías importar a tu código ahorrando mucho tiempo. La belleza de compartir el código y el Open Source.
 
-Go encourages you to organise your code in packages so that it is easy to reuse and maintain source code.
+Go te anima a organizar tu código en paquetes para que sea fácil reutilizar y mantener el código fuente.
 
-### Hello #90DaysOfDevOps Line by Line
+### Hello #90DaysOfDevOps línea a línea
 
-Now let's take a look at our Hello #90DaysOfDevOps main.go file and walk through the lines.
+Ahora echemos un vistazo a nuestro archivo main.go de Hello #90DaysOfDevOps recorriendo cada línea.
 
 ![](Images/Day9_Go2.png)
 
-In the first line, you have `package main` which means that this file belongs to a package called main. All .go files need to belong to a package, they should also have `package something` in the opening line.
+En la primera línea tienes `package main`. Significa que este fichero pertenece a un paquete llamado main. Todos los ficheros .go deben pertenecer a un paquete, también deben tener `package <lo-que-sea>` en la línea inicial.
 
-A package can be named whatever you wish. We have to call this `main` as this is the starting point of the program that is going to be in this package, this is a rule. (I need to understand more about this rule?)
+Un paquete puede llamarse como quieras. En este caso tenemos que llamarlo `main` ya que es el punto de partida del programa que va a estar en este paquete, esto es una regla. 
 
 ![](Images/Day9_Go3.png)
 
-Whenever we want to compile and execute our code we have to tell the machine where the execution needs to start. We do this by writing a function called main. The machine will look for a function called main to find the entry point of the program.
+Siempre que queramos compilar y ejecutar nuestro código tenemos que decirle a la máquina dónde tiene que empezar la ejecución. Lo hacemos escribiendo una función llamada main. La máquina buscará una función llamada main para encontrar el punto de entrada del programa.
 
-A function is a block of code that can do some specific task and can be used across the program.
+Una función es un bloque de código que puede hacer alguna tarea específica y puede ser utilizada en todo el programa.
 
-You can declare a function with any name using `func` but in this case, we need to name it `main` as this is where the code starts.
+Puedes declarar una función con cualquier nombre usando `func` pero en este caso, necesitamos nombrarla `main` porque, como hemos comentado, es donde comienza el código.
 
 ![](Images/Day9_Go4.png)
 
-Next, we are going to look at line 3 of our code, the import, this means you want to bring in another package to your main program. fmt is a standard package being used here provided by Go, this package contains the `Println()` function and because we have imported this we can use this in line 6. There are several standard packages you can include in your program and leverage or reuse them in your code saving you the hassle of having to write from scratch. [Go Standard Library](https://pkg.go.dev/std)
+A continuación, vamos a ver la línea 3 de nuestro código, la importación, esto significa que quieres traer otro paquete a tu programa principal. fmt es un paquete estándar que se está proporcionado por Go, este paquete contiene la función `Println()` y porque importamos esto podemos usarla en la línea 6. Hay varios paquetes estándar que puedes incluir en tu programa y aprovecharlos o reutilizarlos en tu código ahorrando la molestia de tener que escribir desde cero. [Go Standard Library](https://pkg.go.dev/std)
 
 ![](Images/Day9_Go5.png)
 
-the `Println()` that we have here is a way in which to write standard output to the terminal where ever the executable has been executed successfully. Feel free to change the message in between the ().
+El `Println()` que tenemos aquí es una forma de escribir la salida estándar en la terminal donde se ha ejecutado el ejecutable con éxito. Siéntete libre de cambiar el mensaje entre los paréntesis.
 
 ![](Images/Day9_Go6.png)
 
 ### TLDR
 
-- **Line 1** = This file will be in the package called `main` and this needs to be called `main` because includes the entry point of the program.
-- **Line 3** = For us to use the `Println()` we have to import the fmt package to use this on line 6.
-- **Line 5** = The actual starting point, its the `main` function.
-- **Line 6** = This will let us print "Hello #90DaysOfDevOps" on our system.
+- **Línea 1** = Este archivo estará en el paquete llamado `main` y es necesario que se llame `main` porque incluye el punto de entrada del programa.
+- **Línea 3** = Para que podamos utilizar el `Println()` tenemos que importar el paquete fmt para utilizarlo en la línea 6.
+- **Línea 5** = El punto de entrada real, es la función `main`.
+- **Línea 6** = Esto nos permitirá imprimir "Hello #90DaysOfDevOps" en nuestro terminal.
 
-## Resources
+## Recursos
 
 - [StackOverflow 2021 Developer Survey](https://insights.stackoverflow.com/survey/2021)
 - [Why we are choosing Golang to learn](https://www.youtube.com/watch?v=7pLqIIAqZD4&t=9s)
@@ -69,4 +69,4 @@ the `Println()` that we have here is a way in which to write standard output to 
 - [FreeCodeCamp - Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s)
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N)
 
-See you on [Day 10](day10.md).
+Nos vemos en el [Día 10](day10.md).
