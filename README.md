@@ -32,7 +32,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] ♾️ 3 > [DevOps Lifecycle - Application Focused](Days/day03.md)
 - [✔️] ♾️ 4 > [DevOps & Agile](Days/day04.md)
 - [✔️] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](Days/day05.md)
-- [] ♾️ 6 > [DevOps - The real stories](Days/day06.md)
+- [✔️] ♾️ 6 > [DevOps - The real stories](Days/day06.md)
 
 ### Learning a Programming Language
 
