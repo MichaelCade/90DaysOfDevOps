@@ -52,11 +52,11 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 
 ### Kiến thức về mạng (Network)
 
-- [✔️] 🌐 21 > [The Big Picture: DevOps and Networking](Days/day21.md)
-- [✔️] 🌐 22 > [The OSI Model - The 7 Layers](Days/day22.md)
-- [✔️] 🌐 23 > [Network Protocols](Days/day23.md)
-- [✔️] 🌐 24 > [Network Automation](Days/day24.md)
-- [✔️] 🌐 25 > [Python for Network Automation](Days/day25.md)
+- [✔️] 🌐 21 > [Bức tranh toàn cảnh: DevOps và Mạng máy tính](Days/day21.md)
+- [✔️] 🌐 22 > [Mô hình OSI - 7 lớp mạng](Days/day22.md)
+- [✔️] 🌐 23 > [Giao thức mạng](Days/day23.md)
+- [✔️] 🌐 24 > [Tự động hoá mạng máy tính](Days/day24.md)
+- [✔️] 🌐 25 > [Python cho tự động hoá mạng máy tính](Days/day25.md)
 - [✔️] 🌐 26 > [Building our Lab](Days/day26.md)
 - [✔️] 🌐 27 > [Getting Hands-On with Python & Network](Days/day27.md)
 
