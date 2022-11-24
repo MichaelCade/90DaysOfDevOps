@@ -44,24 +44,24 @@ Nếu bạn thích học qua hình thức xem video, hãy xem các video sau đ�
 
 ** Máy chủ (Host) ** là bất kỳ thiết bị nào gửi hoặc nhận dữ liệu.
 
-! [] (Hình ảnh / Day21_Networking1.png)
+![](../../Days/Images/Day21_Networking1.png)
 
 ** Địa chỉ IP (IP Address) ** là danh tính của từng máy chủ.
 
-! [] (Hình ảnh / Day21_Networking2.png)
+![](../../Days/Images/Day21_Networking2.png)
 
 ** Mạng ** là hệ thống vận chuyển dữ liệu giữa các máy chủ. Nếu chúng ta không có mạng, chúng ta cần chuyển dữ liệu một cách thủ công!
 
 Một nhóm máy chủ hợp về mặt loogic cần các kết nối tương tự nhau.
 
-! [] (Hình ảnh / Day21_Networking3.png)
+![](../../Days/Images/Day21_Networking3.png)
 
 ** (Bộ chuyển mạch) Switches ** nhằm hỗ trợ giao tiếp ** _ trong _ ** mạng. Một Switch sẽ chuyển tiếp các gói dữ liệu giữa các máy chủ.
 
 - Mạng: Một nhóm các máy chủ được kết nối với nhau.
 - Các máy chủ trên một mạng chia sẻ cùng một không gian địa chỉ IP.
 
-! [] (Hình ảnh / Day21_Networking4.png)
+![](../../Days/Images/Day21_Networking4.png)
 
 ** Bộ định tuyến (Router) ** nhằm giúp giao tiếp giữa các mạng. Như chúng ta đã nói trước đó, một switch hỗ trợ giao tiếp giữa các thiết bị trong cùng một mạng, trong khi đó một bộ định tuyến cho phép chúng ta kết nối các mạng lại với nhau.
 
@@ -73,7 +73,7 @@ Bộ định tuyến có địa chỉ IP trong mạng (gọi là gateway) mà ch
 
 Các bộ định tuyến sẽ tạo ra hệ thống có cấp bạc trong các mạng mà tôi đã đề cập trước đó.
 
-! [] (Hình ảnh / Day21_Networking5.png)
+![](../../Days/Images/Day21_Networking5.png)
 
 ## So sánh Bộ chuyển mạch với Bộ định tuyến
 
@@ -109,7 +109,7 @@ Trong vài ngày tới, chúng ta sẽ tìm hiểu thêm về:
 
 ## Tài nguyên
 
-* [Các nguyên tắc cơ bản về mạng] (https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
-* [Toàn bộ khóa học Mạng máy tính] (https://www.youtube.com/watch?v=IPvYjXCsTg8)
+* [Các nguyên tắc cơ bản về mạng](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
+* [Toàn bộ khóa học Mạng máy tính](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 
-Hẹn gặp lại các bạn vào [Day22] (day22.md)
+Hẹn gặp lại các bạn vào [Day22](day22.md)
