@@ -8,7 +8,7 @@ El beneficio general aquí es que DevOps, si se hace correctamente, debería ayu
 
 Este día está dedicado a ver empresas de éxito que han adoptado una práctica DevOps y compartir algunos recursos en torno a esto. Esta será una gran oportunidad para que la comunidad se sumerja y ayude aquí. ¿Has adoptado una cultura DevOps en tu empresa? ¿Ha tenido éxito?
 
-Se mencionó Netflix anteriormente y ahora se comentará un poco más, ya que es un modelo muy bueno y bastante avanzado en comparación con lo que generalmente vemos en las grandes empresas, pero también cabe destacar otros grandes emporios que están teniendo éxito, y en gran medida por la metalidad DevOps en sus filas.
+Se mencionó Netflix anteriormente y ahora se comentará un poco más, ya que es un modelo muy bueno y bastante avanzado en comparación con lo que generalmente vemos en las grandes empresas, pero también cabe destacar otros grandes emporios que están teniendo éxito, y en gran medida por la mentalidad DevOps en sus filas.
 
 ## Amazon
 

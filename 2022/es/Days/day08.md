@@ -110,7 +110,7 @@ Es de entender que el anterior código puede no tener ningún sentido, pero vere
 
 De vuelta en la terminal y en nuestra carpeta `Hello` podemos comprobar que todo está funcionando. Usando el siguiente comando podemos comprobar si nuestro programa de aprendizaje genérico está funcionando.
 
-```go
+```shell
 go run main.go
 ```
 Nos dirá Hola.
@@ -119,7 +119,7 @@ Nos dirá Hola.
 
 Pero esto no termina aquí, ¿qué pasa si ahora queremos tomar nuestro programa y ejecutarlo en otras máquinas Windows? Podemos hacerlo construyendo nuestro binario con el siguiente comando
 
-```go
+```shell
 go build main.go
 ```
 
@@ -127,7 +127,7 @@ go build main.go
 
 Si ejecutamos esto, veríamos la misma salida:
 
-```bash
+```shell
 #input
 ./main.exe
 
