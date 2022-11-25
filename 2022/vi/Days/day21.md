@@ -10,7 +10,7 @@ id: 1048761
 
 ## Bức tranh toàn cảnh: DevOps và Mạng máy tính
 
-Tương tự như trong các phần khác, tôi sẽ sử dụng các tài liệu hướng dẫn miễn phí và nguồn mở cùng với các nội dung từ những người khác. Trong phần này, phần lớn nội dung được lấy từ trang [Mạng thực tiễn (Practical Networking)] (https://www.practicalnetworking.net/) và sê-ri [Các nguyên tắc cơ bản của Mạng máy tính (Networking Fundamentals series)] (https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). Dù đã được đề cập trong mục "Tài nguyên tham khảo" nhưng cũng cần thiết để nhấn mạnh tài liệu trên bởi vì từ quan điểm của cộng đồng, tôi đã tận dụng khóa học này để giúp bản thân hiểu thêm về các lĩnh vực cụ thể của công nghệ. Kho lưu trữ này được dùng để chứa các ghi chú của tôi với hy vọng mọi người có thể tìm thấy được ích lợi từ nó cũng như từ các tài nguyên được liệt kê.
+Tương tự như trong các phần khác, tôi sẽ sử dụng các tài liệu hướng dẫn miễn phí và nguồn mở cùng với các nội dung từ những người khác. Trong phần này, phần lớn nội dung được lấy từ trang [Practical Networking](https://www.practicalnetworking.net/) và sê-ri [Các nguyên tắc cơ bản của Mạng máy tính-Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). Dù đã được đề cập trong mục "Tài nguyên tham khảo" nhưng cũng cần thiết để nhấn mạnh tài liệu trên bởi vì từ quan điểm của cộng đồng, tôi đã tận dụng khóa học này để giúp bản thân hiểu thêm về các lĩnh vực cụ thể của công nghệ. Kho lưu trữ này được dùng để chứa các ghi chú của tôi với hy vọng mọi người có thể tìm thấy được ích lợi từ nó cũng như từ các tài nguyên được liệt kê.
 
 Chào mừng bạn đến với Ngày học thứ 21! Chúng ta sẽ tìm hiểu về mạng máy tính trong 7 ngày tới, DevOps và Mạng máy tính là những chủ đề bao trùm của phần này nhưng chúng ta cũng sẽ cần phải đi tìm hiểu một số kiến thức nền tảng của mạng máy tính.
 
@@ -29,7 +29,7 @@ Chúng ta có thể hiểu rằng NetDevOps hoặc Network DevOps là việc áp
 Chúng ta đã đề cập trước đây rằng DevOps phá vỡ sự độc lập giữa các nhóm làm việc và nếu chúng ta quan niệm Network DevOps là việc phải tự động hóa hế thống mạng, nếu nhóm quản lý mạng không thay đổi sang mô hình và quy trình tương tự thì họ sẽ trở thành điểm tắt nghẽn hoặc thậm chí có thể là điểm gây thất bại cho dự án.
 
 Sử dụng các nguyên tắc tự động hóa trong việc cung cấp, cấu hình, thử nghiệm, kiểm soát phiên bản, và triển khai là một khởi đầu tuyệt vời. Tự động hóa về tổng thể sẽ cho phép tăng tốc độ triển khai, sự ổn định của cơ sở hạ tầng mạng và liên tục cải tiến cũng như quy trình sẽ được chia sẻ trên nhiều môi trường sau khi chúng đã được kiểm tra. Ví dụ như một Network Policy đã được kiểm tra đầy đủ trên môi trường thử nghiệm có thể được nhanh chóng áp dụng ở một vị trí khác. Vì bản chất của việc này là chạy lại đoạn mã thay vì cấu hình thủ công như trước đây.
-Bạn có thể tìm hiểu thêm về lợi ích của khái niệm này ở đây. [Network DevOps] (https://www.thousandeyes.com/learning/techtorials/network-devops)
+Bạn có thể tìm hiểu thêm về lợi ích của khái niệm này ở đây. [Network DevOps](https://www.thousandeyes.com/learning/techtorials/network-devops)
 
 ## Kiến thức cơ bản về mạng
 
@@ -39,31 +39,31 @@ Hãy tạm quên khía cạnh về DevOps ở đây và chúng ta cần tìm hi�
 
 Nếu bạn thích học qua hình thức xem video, hãy xem các video sau đây:
 
-* [Network Devices - Hosts, IP Addresses, Networks - Networking Fundamentals - Lesson 1a (Thiết bị mạng - Máy chủ, Địa chỉ IP, Mạng - Cơ bản về Mạng - Bài 1a)] (https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=1)
-* [Network Devices - Hub, Bridge, Switch, Router - Networking Fundamentals - Lesson 1b (Thiết bị mạng - Hub, Cầu nối, Bộ chuyển mạch, Bộ định tuyến - Các nguyên tắc cơ bản về mạng - Bài 1b)] (https://www.youtube.com/watch?v=H7-NR3Q3BeI&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=2)
+* [Network Devices - Hosts, IP Addresses, Networks - Networking Fundamentals - Lesson 1a](https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=1)
+* [Network Devices - Hub, Bridge, Switch, Router - Networking Fundamentals - Lesson 1b](https://www.youtube.com/watch?v=H7-NR3Q3BeI&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=2)
 
-** Máy chủ (Host) ** là bất kỳ thiết bị nào gửi hoặc nhận dữ liệu.
+**Máy chủ (Host)** là bất kỳ thiết bị nào gửi hoặc nhận dữ liệu.
 
-! [] (Hình ảnh / Day21_Networking1.png)
+![](../../Days/Images/Day21_Networking1.png)
 
-** Địa chỉ IP (IP Address) ** là danh tính của từng máy chủ.
+**Địa chỉ IP (IP Address)** là danh tính của từng máy chủ.
 
-! [] (Hình ảnh / Day21_Networking2.png)
+![](../../Days/Images/Day21_Networking2.png)
 
-** Mạng ** là hệ thống vận chuyển dữ liệu giữa các máy chủ. Nếu chúng ta không có mạng, chúng ta cần chuyển dữ liệu một cách thủ công!
+**Mạng** là hệ thống vận chuyển dữ liệu giữa các máy chủ. Nếu chúng ta không có mạng, chúng ta cần chuyển dữ liệu một cách thủ công!
 
 Một nhóm máy chủ hợp về mặt loogic cần các kết nối tương tự nhau.
 
-! [] (Hình ảnh / Day21_Networking3.png)
+![](../../Days/Images/Day21_Networking3.png)
 
-** (Bộ chuyển mạch) Switches ** nhằm hỗ trợ giao tiếp ** _ trong _ ** mạng. Một Switch sẽ chuyển tiếp các gói dữ liệu giữa các máy chủ.
+**(Bộ chuyển mạch) Switch** nhằm hỗ trợ giao tiếp **_bên trong_** một mạng. Một Switch sẽ chuyển tiếp các gói dữ liệu giữa các máy chủ.
 
 - Mạng: Một nhóm các máy chủ được kết nối với nhau.
 - Các máy chủ trên một mạng chia sẻ cùng một không gian địa chỉ IP.
 
-! [] (Hình ảnh / Day21_Networking4.png)
+![](../../Days/Images/Day21_Networking4.png)
 
-** Bộ định tuyến (Router) ** nhằm giúp giao tiếp giữa các mạng. Như chúng ta đã nói trước đó, một switch hỗ trợ giao tiếp giữa các thiết bị trong cùng một mạng, trong khi đó một bộ định tuyến cho phép chúng ta kết nối các mạng lại với nhau.
+**Bộ định tuyến (Router)** nhằm giúp giao tiếp giữa các mạng. Như chúng ta đã nói trước đó, một switch hỗ trợ giao tiếp giữa các thiết bị trong cùng một mạng, trong khi đó một bộ định tuyến cho phép chúng ta kết nối các mạng lại với nhau.
 
 Một bộ định tuyến có thể cung cấp các tính năng kiểm soát lưu lượng (bảo mật, lọc, chuyển hướng). Ngày nay càng nhiều thiết bị chuyển mạch (switch) cũng cung cấp các chức năng này.
 
@@ -73,17 +73,17 @@ Bộ định tuyến có địa chỉ IP trong mạng (gọi là gateway) mà ch
 
 Các bộ định tuyến sẽ tạo ra hệ thống có cấp bạc trong các mạng mà tôi đã đề cập trước đó.
 
-! [] (Hình ảnh / Day21_Networking5.png)
+![](../../Days/Images/Day21_Networking5.png)
 
 ## So sánh Bộ chuyển mạch với Bộ định tuyến
 
-** Định tuyến ** là quá trình di chuyển dữ liệu giữa các mạng.
+**Định tuyến** là quá trình xác định đường đi dữ liệu giữa các mạng.
 
-- Bộ định tuyến là một thiết bị có mục đích chính là xác định đường đi.
+- Một Router là một thiết bị có mục đích chính là xác định đường đi.
 
-** Chuyển mạch ** là quá trình di chuyển dữ liệu trong một mạng.
+**Chuyển mạch** là quá trình di chuyển dữ liệu trong một mạng.
 
-- Switch là một thiết bị có mục đích chính là chuyển mạch.
+- Một switch là một thiết bị có mục đích chính là chuyển mạch.
 
 Đây chỉ là phần tổng quan cơ bản của hai thiết bị quan trọng nhất vì chúng ta biết rằng có nhiều thiết bị mạng khác nhau như:
 
@@ -109,7 +109,7 @@ Trong vài ngày tới, chúng ta sẽ tìm hiểu thêm về:
 
 ## Tài nguyên
 
-* [Các nguyên tắc cơ bản về mạng] (https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
-* [Toàn bộ khóa học Mạng máy tính] (https://www.youtube.com/watch?v=IPvYjXCsTg8)
+* [Các nguyên tắc cơ bản về mạng](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
+* [Toàn bộ khóa học Mạng máy tính](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 
-Hẹn gặp lại các bạn vào [Day22] (day22.md)
+Hẹn gặp lại các bạn vào [Day22](day22.md)
