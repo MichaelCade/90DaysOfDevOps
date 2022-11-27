@@ -101,6 +101,7 @@ Mañana veremos algunos comandos y lo que hacen. La terminal va a ser el lugar p
 
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
+- [Webminal](https://www.webminal.org/) 
 
 Habrá muchos recursos que encontrarás a medida que vayamos avanzando y, al igual que los recursos de Go, generalmente mantendré los que tengan contenido GRATUITO.
 
