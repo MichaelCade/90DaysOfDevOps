@@ -1,47 +1,51 @@
-## The Big Picture: DevOps and Linux
+## El panorama: DevOps & Linux
 
-Linux and DevOps share very similar cultures and perspectives; both are focused on customization and scalability. Both of these aspects of Linux are of particular importance for DevOps.
+Linux y DevOps comparten culturas y perspectivas muy similares; ambos se centran en la personalización y la escalabilidad. Estos dos aspectos de Linux son de especial importancia para DevOps.
 
-A lot of technologies start on Linux, especially if they are related to software development or managing infrastructure.
+Muchas tecnologías parten de Linux, especialmente si están relacionadas con el desarrollo de software o la gestión de infraestructuras.
 
-As well lots of open source projects, especially DevOps tools, were designed to run on Linux from the start.
+Además, muchos proyectos de código abierto, especialmente las herramientas DevOps, se diseñaron para funcionar en Linux desde el principio.
 
-From a DevOps perspective or any operations role perspective, you are going to come across Linux I would say mostly. There is a place for WinOps but the majority of the time you are going to be administering and deploying Linux servers.
+Desde el punto de vista de DevOps o de cualquier función de operaciones, te encontrarás con Linux. Hay un lugar para WinOps pero la mayor parte del tiempo vas a estar administrando y desplegando servidores Linux. 🐧
 
-I have been using Linux daily for several years but my go to desktop machine has always been either macOS or Windows. However, when I moved into the Cloud Native role I am in now I took the plunge to make sure that my laptop was fully Linux based and my daily driver, whilst I still needed Windows for work-based applications and a lot of my audio and video gear does not run on Linux I was forcing myself to run a Linux desktop full time to get a better grasp of a lot of the things we are going to touch on over the next 7 days.
+Michael Cade ha estado usando Linux diariamente durante varios años, aun siendo su equipo Desktop de macOS o Windows. Sin embargo, cuando empezó el rol de Cloud Native en el que está actualmente, se aseguró de que su portátil estuviera completamente basado en Linux y fuera el Sistema Operativo utilizado a diario, mientras que todavía necesitaba Windows por aplicaciones para el trabajo que no son multiplataforma y por incompatibilidad de equipos de audio y vídeo que no se ejecutan en Linux por secuestro corporativo de Windows o Mac. Quería ejecutar un Linux Desktop a tiempo completo para obtener una mejor comprensión de muchas de las cosas que vamos a ver en los próximos 7 días.
 
-## Getting Started
+Por otra parte, el traductor, lleva más de 10 años con Sistemas Operativos Linux, solo utilizando Windows o MacOS en momentos puntuales por imperativos de entornos sociales o laborales. Tan solo echo de menos Windows si me apetece jugar a un juego de vanguardia o quiero probar software, en el primer caso tengo un disco duro preparado por si fuera necesario; y en el segundo caso, para simplemente probar, tengo una virtualización de Windows 10. Windows 11, hasta la fecha es un verdadero desastre. Y tengo que decir que Microsoft se puso mucho las pilas con la versión 10 y, aunque no cumple mis necesidades operativas y de privacidad, tengo que admitir que es bastante robusto comparado a sus anteriores fiascos. 
 
-I am not suggesting you do the same as me by any stretch as there are easier options which are less destructive but I will say that taking that full-time step forces you to learn faster how to make things work on Linux.
+## Empecemos
 
-For the majority of these 7 days, I am going to deploy a Virtual Machine in Virtual Box on my Windows machine. I am also going to deploy a desktop version of a Linux distribution, whereas a lot of the Linux servers you will be administering will likely be servers that come with no GUI and everything is shell-based. However, as I said at the start a lot of the tools that we covered throughout this whole 90 days started on Linux I would also strongly encourage you to dive into running that Linux Desktop for that learning experience as well.
+No se pretende conseguir que el lector siga los mismos pasos descritos anteriormente, ni mucho menos, pero sí que puede ser interesante conocer las opiniones anteriores. Hay opciones más sencillas, por supuesto, los Sistemas Operativos de Microsoft o Apple son un "llave en mano", pero hay que destacar que dar el paso de utilizar a tiempo completo alguna distribución Linux te obliga a aprender más rápido cómo hacer que las cosas funcionen, familiarizandote con la shell y, al fin y al cabo, te permite conocer como funcionan los Sistemas Operativos, la red y su relación con el hardware.
 
-For the rest of this post, we are going to concentrate on getting a Ubuntu Desktop virtual machine up and running in our Virtual Box environment. Now we could just download [Virtual Box](https://www.virtualbox.org/) and grab the latest [Ubuntu ISO](https://ubuntu.com/download) from the sites linked and go ahead and build out our desktop environment but that wouldn't be very DevOps of us, would it?
+Durante la mayor parte de estos 7 días, desplegaremos una máquina virtual en Virtual Box con una versiones Desktop de una distribución de Linux. Muchos de los servidores Linux que administrarás probablemente serán servidores que vienen sin interfaz gráfica de usuario ([GUI](https://es.wikipedia.org/wiki/Interfaz_gr%C3%A1fica_de_usuario)) y todo está basado en el shell ([CLI](https://es.wikipedia.org/wiki/Interfaz_de_l%C3%ADnea_de_comandos)). Sin embargo, como dije al principio, muchas de las herramientas que cubrimos a lo largo de estos 90 días empezaron en Linux, es aconsejable que te sumerjas en la ejecución de distribuciones Linux, sobre todo en CLI, para tener también esa experiencia de aprendizaje que te servirá u mucho, incluso para entender mejor otros Sistemas Operativos como Windows o MacOS.
 
-Another good reason to use most Linux distributions is that they are free and open-source. We are also choosing Ubuntu as it is probably the most widely used distribution deployed not thinking about mobile devices and enterprise RedHat Enterprise servers. I might be wrong there but with CentOS and the history there I bet Ubuntu is high on the list and it's super simple.
+Para el resto de este post, vamos a centrarnos en conseguir una máquina virtual de Ubuntu Desktop en nuestro entorno de Virtual Box. Antes de seguir descarga de las páginas oficiales [Virtual Box](https://www.virtualbox.org/) y la última versión de [Ubuntu ISO](https://ubuntu.com/download). 
 
-## Introducing HashiCorp Vagrant
+Otra buena razón para utilizar distribuciones Linux es que son gratuitas y de [código abierto](https://es.wikipedia.org/wiki/C%C3%B3digo_abierto), e incluso algunas de [software libre](https://es.wikipedia.org/wiki/Software_libre). Elegimos Ubuntu, ya que actualmente es la distribución más utilizada, sin pensar en los smartphones y los servidores empresariales RedHat Enterprise. Esto es una visión subjetiva, puede ser errónea, pero con lo sucedido en los últimos tiempos con CentOS puede que Ubuntu se haya puesto en lo alto de la lista.
 
-Vagrant is a CLI utility that manages the lifecycle of your virtual machines. We can use vagrant to spin up and down virtual machines across many different platforms including vSphere, Hyper-v, Virtual Box and also Docker. It does have other providers but we will stick with Virtual Box here so we are good to go.
+## Presentación de HashiCorp Vagrant
 
-The first thing we need to do is get Vagrant installed on our machine, when you go to the downloads page you will see all the operating systems listed for your choice. [HashiCorp Vagrant](https://www.vagrantup.com/downloads) I am using Windows so I grabbed the binary for my system and went ahead and installed this on my system.
+Vagrant es una utilidad CLI que gestiona el ciclo de vida de tus máquinas virtuales. Podemos utilizar vagrant para hacer girar y bajar las máquinas virtuales a través de muchas plataformas diferentes, incluyendo vSphere, Hyper-v, Virtual Box y también Docker. Tiene otros proveedores, pero nos quedaremos con Virtual Box, así que estamos listos para continuar.
 
-Next up we also need to get [Virtual Box](https://www.virtualbox.org/wiki/Downloads) installed. Again, this can also be installed on many different operating systems and a good reason to choose this and vagrant is that if you are running Windows, macOS, or Linux then we have you covered here.
+Lo primero que tenemos que hacer es instalar Vagrant en nuestra máquina, cuando vayas a la página de descargas verás todos los sistemas operativos listados para tu elección. [HashiCorp Vagrant](https://www.vagrantup.com/downloads).
 
-Both installations are pretty straightforward and both have great communitites around them so feel free to reach out if you have issues and I can try and assist too.
+Lo siguiente que tenemos que hacer es instalar [Virtual Box](https://www.virtualbox.org/wiki/Downloads) Se puede instalar en muchos sistemas operativos diferentes y una buena razón para elegir esto y vagrant es que podrás utilizarlo tanto en Windows, macOS, o Linux.
 
-## Our first VAGRANTFILE
+Ambas instalaciones son bastante sencillas y ambas tienen una gran comunidad alrededor de ellas, así que siéntete libre de contactar con ellos si tienes problemas. Sus páginas de Documentación:
+- [Virtual Box](https://www.virtualbox.org/wiki/Documentation)
+- [Ubuntu](https://help.ubuntu.com/)
+- [Vagrant](https://developer.hashicorp.com/vagrant/docs)
 
-The VAGRANTFILE describes the type of machine we want to deploy. It also defines the configuration and provisioning for this machine.
+## Nuestro primer VAGRANTFILE
 
-When it comes to saving these and organizing your VAGRANTFILEs I tend to put them in their folders in my workspace. You can see below how this looks on my system. Hopefully following this you will play around with Vagrant and see the ease of spinning up different systems, it is also great for that rabbit hole known as distro hopping for Linux Desktops.
+El VAGRANTFILE describe el tipo de máquina que queremos desplegar. También define la configuración y el aprovisionamiento para esta máquina.
+
+Para guardar máquinas virtuales, los VAGRANTFILEs se ordenan en carpetas en distintos espacios de trabajo. Puedes ver a continuación cómo se ve esto en un Windows. Espero que después de esto juegues con Vagrant y veas la facilidad de hacer girar diferentes sistemas, también es genial para ese agujero de conejo conocido como salto de distro para Linux Desktop.
 
 ![](Images/Day14_Linux1.png)
 
-Let's take a look at that VAGRANTFILE and see what we are building.
+Echemos un vistazo a ese VAGRANTFILE y veamos lo que estamos construyendo.
 
 ```
-
 Vagrant.configure("2") do |config|
 
   config.vm.box = "chenhan/ubuntu-desktop-20.04"
@@ -57,54 +61,48 @@ Vagrant.configure("2") do |config|
 end
 
 end
-
 ```
 
-This is a very simple VAGRANTFILE overall. We are saying that we want a specific "box", a box being possibly either a public image or private build of the system you are looking for. You can find a long list of "boxes" publicly available here in the [public catalogue of Vagrant boxes](https://app.vagrantup.com/boxes/search)
+Este es un VAGRANTFILE muy simple. Estamos diciendo que queremos una "box" específica, siendo una imagen pública o una construcción privada del sistema que estás buscando. Puedes encontrar una larga lista de "boxes" disponibles públicamente aquí en el [catálogo público de boxes Vagrant](https://app.vagrantup.com/boxes/search)
 
-Next line we're saying that we want to use a specific provider and in this case it's `VirtualBox`. We also define our machine's memory to `8GB` and the number of CPUs to `4`. My experience tells me that you may want to also add the following line if you experience display issues. This will set the video memory to what you want, I would ramp this right up to `128MB` but it depends on your system.
+En la siguiente línea decimos que queremos usar un proveedor específico y en este caso es `VirtualBox`. También definimos la memoria de nuestra máquina a `8GB` y el número de CPUs a `4`. Mi experiencia me dice que es posible que quieras añadir también la siguiente línea si experimentas problemas de visualización. Esto establecerá la memoria de vídeo a lo que usted quiere, yo aumentaría esto hasta `128MB` pero depende de su sistema.
 
 ```
-
 v.customize ["modifyvm", :id, "--vram", ""]
-
 ```
 
-I have also placed a copy of this specific vagrant file in the [Linux Folder](Linux/VAGRANTFILE)
+También hay que colocar una copia de este archivo específico de vagrant en la [Carpeta Linux](Linux/VAGRANTFILE)
 
-## Provisioning our Linux Desktop
+## Aprovisionando nuestro Linux Desktop
 
-We are now ready to get our first machine up and running, in our workstation's terminal. In my case I am using PowerShell on my Windows machine. Navigate to your projects folder and where you will find your VAGRANTFILE. Once there you can type the command `vagrant up` and if everything's alright you will see something like this.
+Ya estamos listos para poner en marcha nuestra primera máquina, en el terminal de nuestra estación de trabajo. Más abajo puedes ver un ejemplo en PowerShell de Windows. Navega hasta tu carpeta de proyectos y allí encontrarás tu VAGRANTFILE. Una vez allí puedes escribir el comando `vagrant up` y si todo está bien verás algo así.
 
 ![](Images/Day14_Linux2.png)
 
-Another thing to add here is that the network will be set to `NAT` on your virtual machine. At this stage we don't need to know about NAT and I plan to have a whole session talking about it in the Networking session. Know that it is the easy button when it comes to getting a machine on your home network, it is also the default networking mode on Virtual Box. You can find out more in the [Virtual Box documentation](https://www.virtualbox.org/manual/ch06.html#network_nat)
+Otra cosa que hay que añadir aquí es que la red estará configurada como `NAT` en la máquina virtual. En esta etapa no necesitamos saber sobre NAT ya que tendremos una sesión completa hablando sobre ello en la sesión de Redes. Sepa que es el botón fácil cuando se trata de conseguir una máquina en su red doméstica, también es el modo de red por defecto en Virtual Box. Puedes encontrar más información en la [documentación de Virtual Box](https://www.virtualbox.org/manual/ch06.html#network_nat).
 
-Once `vagrant up` is complete we can now use `vagrant ssh` to jump straight into the terminal of our new VM.
+Una vez que `vagrant up` se ha completado podemos usar `vagrant ssh` para saltar directamente a la terminal de nuestra nueva VM.
 
 ![](Images/Day14_Linux3.png)
 
-This is where we will do most of our exploring over the next few days but I also want to dive into some customizations for your developer workstation that I have done and it makes your life much simpler when running this as your daily driver, and of course, are you really in DevOps unless you have a cool nonstandard terminal?
+Aquí es donde vamos a hacer la mayor parte de nuestra exploración en los próximos días, pero también nos sumergiremos en algunas personalizaciones para su estación de trabajo de desarrollador y que harán su vida mucho más simple cuando ejecuta esto a diario, y por supuesto, ¿estás realmente en DevOps solamente cuando tengas el buen terminal fresco?
 
-But just to confirm in Virtual Box you should see the login prompt when you select your VM.
+Para confirmar en Virtual Box, deberías ver el prompt de login cuando seleccionas tu VM.
 
 ![](Images/Day14_Linux4.png)
 
-Oh and if you made it this far and you have been asking "WHAT IS THE USERNAME & PASSWORD?"
-
+Ah y si has llegado hasta aquí y te has preguntado **¿QUÉ NOMBRE DE USUARIO Y CONTRASEÑA?** 🤔
 - Username = vagrant
-
 - Password = vagrant
 
-Tomorrow we are going to get into some of the commands and what they do, The terminal is going to be the place to make everything happen.
+Mañana veremos algunos comandos y lo que hacen. La terminal va a ser el lugar para hacer que todo suceda y acabará siendo tu amiga.
 
-## Resources
+## Recursos
 
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
+- [Webminal](https://www.webminal.org/) 
 
-There are going to be lots of resources I find as we go through and much like the Go resources I am generally going to be keeping them to FREE content so we can all partake and learn here.
+Habrá muchos recursos que encontrarás a medida que vayamos avanzando y, al igual que los recursos de Go, generalmente mantendré los que tengan contenido GRATUITO.
 
-As I mentioned next up we will take a look at the commands we might be using on a daily whilst in our Linux environments.
-
-See you on [Day15](day15.md)
+Nos vemos en el [día 15](day15.md)
