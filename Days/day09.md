@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Let''s explain the Hello World code - Day 9'
+title: "#90DaysOfDevOps - Let's explain the Hello World code - Day 9"
 published: false
 description: 90DaysOfDevOps - Let's explain the Hello World code
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1099682
@@ -80,3 +80,5 @@ the `Println()` that we have here is a way in which to write standard output to 
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N)
 
 See you on [Day 10](day10.md).
+
+# Completed Day 9 exercise - explanation of the Hello World code.
