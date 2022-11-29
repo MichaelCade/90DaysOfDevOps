@@ -46,7 +46,7 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 - [✔️] 🐧 15 > [Các lệnh Linux cho DevOps (Thực tế là tất cả mọi người)](Days/day15.md)
 - [✔️] 🐧 16 > [Quản lý Hệ thống Linux, Hệ thống Tệp & Lưu trữ](Days/day16.md)
 - [✔️] 🐧 17 > [Text Editors - nano vs vim](Days/day17.md)
-- [✔️] 🐧 18 > [SSH & Web Server(LAMP)](Days/day18.md)
+- [✔️] 🐧 18 > [SSH & Máy chủ Web (LAMP)](Days/day18.md)
 - [✔️] 🐧 19 > [Tự động hóa các tác vụ với các tập lệnh bash](Days/day19.md)
 - [✔️] 🐧 20 > [Thiết lập máy trạm phát triển - những điều tuyệt vời](Days/day20.md)
 
