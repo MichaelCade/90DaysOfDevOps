@@ -10,14 +10,13 @@ id: 1048761
 
 ## Bức tranh toàn cảnh: DevOps và Mạng máy tính
 
-Tương tự như trong các phần khác, tôi sẽ sử dụng các tài liệu hướng dẫn miễn phí và nguồn mở cùng với các nội dung từ những người khác. Trong phần này, phần lớn nội dung được lấy từ trang [Practical Networking](https://www.practicalnetworking.net/) và sê-ri [Các nguyên tắc cơ bản của Mạng máy tính-Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). Dù đã được đề cập trong mục "Tài nguyên tham khảo" nhưng cũng cần thiết để nhấn mạnh tài liệu trên bởi vì từ quan điểm của cộng đồng, tôi đã tận dụng khóa học này để giúp bản thân hiểu thêm về các lĩnh vực cụ thể của công nghệ. Kho lưu trữ này được dùng để chứa các ghi chú của tôi với hy vọng mọi người có thể tìm thấy được ích lợi từ nó cũng như từ các tài nguyên được liệt kê.
+Tương tự như những tuần trước, tôi sẽ sử dụng các tài liệu hướng dẫn miễn phí và nguồn mở. Trong phần này, phần lớn nội dung được lấy từ trang [Practical Networking](https://www.practicalnetworking.net/) và sê-ri [Các nguyên tắc cơ bản của Mạng máy tính - Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). Dù đã được đề cập trong mục "Tài nguyên tham khảo" nhưng cũng cần thiết để nhấn mạnh tài liệu trên bởi vì từ quan điểm của cộng đồng, tôi đã tận dụng các khóa học này để giúp bản thân hiểu thêm về các lĩnh vực cụ thể. Kho lưu trữ này được dùng để chứa các ghi chú của tôi với hy vọng mọi người có thể thấy nó hữu ích cũng như các nguồn tài nguyên được liệt kê.
 
-Chào mừng bạn đến với Ngày học thứ 21! Chúng ta sẽ tìm hiểu về mạng máy tính trong 7 ngày tới, DevOps và Mạng máy tính là những chủ đề bao trùm của phần này nhưng chúng ta cũng sẽ cần phải đi tìm hiểu một số kiến thức nền tảng của mạng máy tính.
+Chào mừng bạn đến với Ngày học thứ 21! Chúng ta sẽ tìm hiểu về mạng máy tính trong 7 ngày tới, DevOps và Mạng máy tính là những chủ đề chính của phần này nhưng chúng ta cũng sẽ cần phải tìm hiểu một số kiến thức nền tảng của mạng máy tính.
 
-Như tôi đã nói trước đây DevOps là sự thay đổi về văn hóa và quy trình trong quá trình phát triển phần mềm. Những thay đổi này có thể là về Virtual Machines, Containers, hoặc Kubernetes như đã thảo luận trước đây, hoặc cũng có thể là ở hệ thống mạng. Nếu chúng ta áp dụng các nguyên tắc của DevOps vào cơ sở hạ tầng vốn đã bao gồm hệ thống mạng, ở khía cạnh của một DevOps, bạn sẽ cần tìm hiểu về mạng máy tính bao gồm cấu trúc, lớp, và công cụ mạng.
+Như tôi đã nói trước đây, DevOps là sự thay đổi về văn hóa và quy trình trong quá trình phát triển phần mềm. Những thay đổi này có thể là về Virtual Machines, Containers, hoặc Kubernetes, hoặc cũng có thể là ở hệ thống mạng. Nếu chúng ta áp dụng các nguyên tắc của DevOps vào cơ sở hạ tầng vốn đã bao gồm hệ thống mạng, ở khía cạnh của một DevOps, bạn sẽ cần tìm hiểu về mạng máy tính bao gồm cấu trúc, lớp, và công cụ mạng.
 
-Chúng ta có thể lý luận rằng các thiết bị trong mạng đã được cấu hình dựa trên code (infrastructure as code) và mọi thứ đều đã được tự động hóa. Tuy nhiên, để đạt được điều này, ít nhất chúng ta phải hiểu rõ về những thứ mà mình muốn nó làm việc tự động.
-
+Tôi cho rằng chúng ta nên cấu hình các thiết bị trong mạng đã bằng code (infrastructure as code) và mọi thứ nên được tự động hóa như những máy ảo của chúng ta. Tuy nhiên, để đạt được điều này, ít nhất chúng ta phải hiểu rõ về những thứ mà mình muốn nó làm việc tự động.
 ### NetDevOps là gì | DevOps cho hệ thống mạng?
 
 Bạn cũng có thể nghe thấy thuật ngữ Network DevOps hoặc NetDevOps. Có thể bạn đã là một kỹ sư mạng và có kiến thức vững chắc về các thành phần trong hệ thống mạng bên trong cơ sở hạ tầng của bạn. Bạn hiểu được các thành phần như DHCP, DNS, NAT, v.v. Bạn cũng sẽ hiểu rõ về phần cứng và công nghệ "điều khiển mạng qua phần mềm" (software-defined networking).
@@ -46,13 +45,13 @@ Nếu bạn thích học qua hình thức xem video, hãy xem các video sau đ�
 
 ![](../../Days/Images/Day21_Networking1.png)
 
-**Địa chỉ IP (IP Address)** là danh tính của từng máy chủ.
+**Địa chỉ IP (IP Address)** là định danh của từng máy chủ.
 
 ![](../../Days/Images/Day21_Networking2.png)
 
 **Mạng** là hệ thống vận chuyển dữ liệu giữa các máy chủ. Nếu chúng ta không có mạng, chúng ta cần chuyển dữ liệu một cách thủ công!
 
-Một nhóm máy chủ hợp về mặt loogic cần các kết nối tương tự nhau.
+Một nhóm máy chủ logic yêu cầu kết nối tương tự nhau.
 
 ![](../../Days/Images/Day21_Networking3.png)
 
@@ -71,7 +70,7 @@ Bộ định tuyến cần học thông tin về các mạng mà nó kết nối
 
 Bộ định tuyến có địa chỉ IP trong mạng (gọi là gateway) mà chúng được gắn vào. Địa chỉ IP này cũng sẽ là địa chỉ đích đến của mỗi máy chủ khi muốn truy cập ra khỏi mạng cục bộ của nó.
 
-Các bộ định tuyến sẽ tạo ra hệ thống có cấp bạc trong các mạng mà tôi đã đề cập trước đó.
+Các bộ định tuyến sẽ tạo ra hệ thống phân cấp trong các mạng mà tôi đã đề cập trước đó.
 
 ![](../../Days/Images/Day21_Networking5.png)
 
