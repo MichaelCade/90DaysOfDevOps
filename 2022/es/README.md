@@ -61,7 +61,7 @@ Empecemos con lo que vas a poder ver en estos 90 días.
 ### Conociendo lo básico de Linux
 
 - [✔️] 🐧 14 > [El panorama: DevOps & Linux](Days/day14.md)
-- [✔️] 🐧 15 > [Comandos Linux para DevOps (En realidad todos)](Days/day15.md)
+- [✔️] 🐧 15 > [Comandos de Linux para DevOps (en realidad son todos)](Days/day15.md)
 - [✔️] 🐧 16 > [Gestión de tu sistema Linux, sistema de archivos y almacenamiento](Days/day16.md)
 - [✔️] 🐧 17 > [Editores de texto - nano vs vim](Days/day17.md)
 - [✔️] 🐧 18 > [SSH & Web Server(LAMP)](Days/day18.md)
