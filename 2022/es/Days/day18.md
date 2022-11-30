@@ -1,110 +1,145 @@
 ## SSH & Web Server
 
-As we have mentioned throughout you are going to most likely be managing lots of remote Linux servers, because of this, you will need to make sure that your connectivity to these remote servers is secure. In this section, we want to cover some of the basics of SSH that everyone should know that will help you with that secure tunnel to your remote systems.
+Como hemos mencionado a lo largo de este artículo, lo más probable es que estés administrando muchos servidores Linux remotos. Debido a esto necesitarás asegurarte de que tu conectividad a estos servidores remotos sea la más segura posible. En esta sección, veremos algunos de los fundamentos de SSH que todo el mundo debería conocer y que te ayudarán con un túnel seguro a los sistemas remotos.
 
-- Setting up a connection with SSH
-- Transferring files
-- Create your private key
+- Estableciendo una conexión con SSH.
+- Transferencia de archivos.
+- Crear su clave privada.
 
-### SSH introduction
+### introducción a SSH
 
-- Secure shell
-- Networking Protocol
-- Allows secure communications
-- Can secure any network service
-- Typically used for remote command-line access
+- Shell seguro.
+- Protocolo de red.
+- Permite comunicaciones seguras.
+- Puede asegurar cualquier servicio de red.
+- Normalmente se utiliza para el acceso remoto a la línea de comandos.
 
-In our environment, if you have been following along we have been using SSH already but this was all configured and automated through our vagrant configuration so we only had to run `vagrant ssh` and we gained access to our remote virtual machine.
+Si has estado siguiendo los días anteriore recordarás que ya hemos utilizado SSH. Lo que pasa que fue configurado y automatizado a través de vagrant, por lo que sólo tuvimos que ejecutar `vagrant ssh` y obtuvimos acceso a la máquina virtual remota.
 
-If our remote machine was not on the same system as our workstation and was in a remote location, maybe a cloud-based system or running in a data centre that we could only access over the internet we would need a secure way of being able to access the system to manage it.
+Si nuestra máquina remota no estuviera en nuestro propio sistema y estuviera en una ubicación remota, por ejemplo, basado en la nube o ejecutado en un centro de datos al que sólo pudiéramos acceder a través de Internet, necesitaríamos una forma segura de poder acceder al sistema para gestionarlo.
 
-SSH provides a secure tunnel between client and server so that nothing can be intercepted by bad actors.
+Así que nos ayudaremos del protocolo SSH que proporcionará un túnel seguro entre el cliente y el servidor para que nada pueda ser interceptado por malos actores.
 
 ![](Images/Day18_Linux1.png)
 
-The server has a server-side SSH service always running and listening on a specific TCP port (22).
+El servidor tiene un servicio SSH del lado del servidor siempre en ejecución y escuchando en un puerto TCP específico (22).
 
-If we use our client to connect with the correct credentials or SSH key then we gain access to that server.
+Si usamos nuestro cliente para conectarnos con las credenciales correctas o la clave SSH, entonces obtendremos acceso a ese servidor.
 
-### Adding a bridged network adapter to our system
+### Añadiendo un adaptador de red puenteado a nuestro sistema
 
-For us to use this with our current virtual box VM, we need to add a bridged network adapter to our machine.
+Para poder simular esto con nuestra MV de VirtualBox, necesitamos añadir un adaptador de red puenteado a nuestra máquina.
 
-Power down your virtual machine, right-click on your machine within Virtual Box and select settings. In the new window then select networking.
+Asegurate de que la máquina virtual este apagada, haz clic con el botón derecho en sobre la máquina dentro de VirtualBox y selecciona configuración. En la nueva ventana, selecciona red.
 
 ![](Images/Day18_Linux2.png)
 
-Now power your machine back on and you will now have an IP address on your local machine. You can confirm this with the `IP addr` command.
+Ahora vuelva a encender su máquina y tendrá una dirección IP en su máquina local. Puedes confirmarlo con el comando `IP addr`.
 
-### Confirming SSH server is running
+### Confirmando que el servidor SSH está funcionando
 
-We know SSH is already configured on our machine as we have been using it with vagrant but we can confirm by running
+Sabemos que SSH ya está configurado en nuestra máquina ya que lo hemos estado usando con vagrant pero podemos confirmarlo ejecutando
 
-`sudo systemctl status ssh`
+```shell
+sudo systemctl status ssh
+```
 
 ![](Images/Day18_Linux3.png)
 
-If your system does not have the SSH server then you can install it by issuing this command `sudo apt install OpenSSH-server`
+Si tu sistema no tiene el servidor SSH puedes instalarlo con este comando 
 
-You then want to make sure that our SSH is allowed if the firewall is running. We can do this with `sudo ufw allow ssh` this is not required on our configuration as we automated this with our vagrant provisioning.
+```shell
+sudo apt install OpenSSH-server
+```
 
-### Remote Access - SSH Password
+A continuación, debe asegurarse de que nuestro SSH está permitido por el firewall, si este se está ejecutando. Por ejemplo, en el caso de que el firewall sea ufw, tendríamos que habilitar el protocolo con el siguiente comando. 
 
-Now that we have our SSH Server listening out on port 22 for any incoming connection requests and we have added the bridged networking we could use putty or an SSH client on our local machine to connect to our system using SSH.
+```shell
+sudo ufw allow ssh
+``` 
+En nuestra MV no es necesario ya que automatizamos esto con nuestro aprovisionamiento vagrant.
+
+### Acceso Remoto - Contraseña SSH
+
+Ahora que tenemos nuestro servidor SSH escuchando en el puerto 22 para cualquier solicitud de conexión entrante y hemos añadido la red puente, en Windows, podemos usar putty o cualquier otro cliente SSH en la máquina anfitriona para conectarnos a nuestro sistema usando SSH.
 
 ![](Images/Day18_Linux4.png)
 
-Then hit open, if this is the first time you have connected to this system via this IP address you will get this warning. We know that this is our system so you can choose yes.
+A continuación pulsamos abrir, si es la primera vez que nos conectamos a este sistema a través de esta dirección IP nos aparecerá este aviso. Sabemos que este es nuestro sistema, así que puedes elegir que sí.
 
 ![](Images/Day18_Linux5.png)
 
-We are then prompted for our username (vagrant) and password (default password - vagrant) Below you will see we are now using our SSH client (Putty) to connect to our machine using username and password.
+Ahora se nos pide nuestro nombre de usuario (vagrant) y contraseña (contraseña por defecto - vagrant). Después verás como nuestro cliente SSH (Putty) se conecta a nuestra MV.
 
 ![](Images/Day18_Linux6.png)
 
-At this stage, we are connected to our VM from our remote client and we can issue our commands on our system.
+¡All rigth! Estamos conectados a nuestra VM desde nuestro cliente remoto y podemos emitir nuestros comandos en nuestro sistema.
 
-### Remote Access - SSH Key
+Ahora, desde otro Linux podemos usar directamente la shell con el comando ssh. La sintaxis es la siguiente:
 
-The above is an easy way to gain access to your systems however it still relies on username and password, if some malicious actor was to gain access to this information plus the public address or IP of your system then it could be easily compromised. This is where SSH keys are preferred.
+```shell
+ssh <nombre-usuario>@<IP-equipo-remoto>
+```
 
-SSH Keys means that we provide a key pair so that both the client and server know that this is a trusted device.
+En el caso de que la ip de nuestra MV fuese la 192.168.169.135 tendríamos que usar el siguiente comando:
 
-Creating a key is easy. On our local machine (Windows) We can issue the following command in fact if you have an ssh-client installed on any system I believe this same command will work?
+```shell
+ssh vagrant@192.168.169.135
+```
 
-`ssh-keygen -t ed25519`
+Nos pedirá la contraseña y luego nos pedirá que aceptemos el certificado automático de ssh.
 
-I am not going to get into what `ed25519` is and means here but you can have a search if you want to learn more about [cryptography](https://en.wikipedia.org/wiki/EdDSA#Ed25519)
+### Acceso remoto - Clave SSH
+
+El modo que hemos visto es una forma fácil y rápida de obtener acceso a sus sistemas, sin embargo, todavía se basa en el nombre de usuario y la contraseña. Con lo cual, si algún actor malicioso pudiese tener acceso a esta información y a la dirección pública o IP de su sistema, nuestra seguridad estaría comprometida. Para reducir este vector de vulnerabilidad podemos utilizar las claves SSH.
+
+Las claves SSH proporciona un par de claves, tanto para el cliente como para el servidor, así pueden saber con seguridad de que se trata de un dispositivo de confianza.
+
+Crear una clave es fácil. En nuestra máquina local (Tanto en Windows o Linux) podemos emitir los certificados con el siguiente comando. 
+
+```shell
+ssh-keygen -t ed25519
+```
+
+No entraremos en lo que es `ed25519` pero puedes hacer una búsqueda si quieres aprender más sobre [criptografía](https://es.wikipedia.org/wiki/EdDSA#Ed25519). ¡Es apasionante!
 
 ![](Images/Day18_Linux7.png)
 
-At this point, we have our created SSH key stored in `C:\Users\micha/.ssh/`
+En este punto, tenemos nuestra clave SSH creada almacenada en `C:\sers\micha/.ssh/` en Windows o en `$HOME/.ssh` en el caso de Linux.
 
-But to link this with our Linux VM we need to copy the key. We can do this by using the `ssh-copy-id vagrant@192.168.169.135`
+Pero para enlazar esto con nuestra MV Linux necesitamos copiar la clave. Podemos hacerlo utilizando el `ssh-copy-id vagrant@192.168.169.135` en la shell.
 
-I used Powershell to create my keys on my Windows client but there is no `ssh-copy-id` available here. There are ways in which you can do this on Windows and a small search online will find you an alternative, but I will just use git bash on my Windows machine to make the copy.
+En Windows puedes utilizar Powershell para crear las claves en Windows pero no hay `ssh-copy-id` disponible aquí. Hay maneras de hacer esto en Windows y una pequeña búsqueda en línea le encontrará una alternativa, pero voy usaremos [git bash](https://gitforwindows.org/) en Windows para hacer la copia.
 
 ![](Images/Day18_Linux8.png)
 
-We can now go back to Powershell to test that our connection now works with our SSH Keys and no password is required.
+Ahora podemos volver a Powershell para probar que nuestra conexión funciona con nuestras Claves SSH y no se requiere ninguna contraseña, utilizando el comando que mencionamos antes para usar desde la shell de un Linux cliente.
 
-`ssh vagrant@192.168.169.135`
+```shell
+ssh vagrant@192.168.169.135
+```
 
 ![](Images/Day18_Linux9.png)
 
-We could secure this further if needed by using a passphrase. We could also go one step further saying that no passwords at all meaning only key pairs over SSH would be allowed. You can make this happen in the following configuration file.
+Podríamos asegurar esto aún más si fuera necesario usando una frase de contraseña. También podríamos ir un paso más allá diciendo que no hay contraseñas en absoluto, lo que significa que sólo se permitirían pares de claves a través de SSH. Puedes hacer esto en el siguiente archivo de configuración de la máquina remota, de nuestra MV.
 
-`sudo nano /etc/ssh/sshd_config`
+```shell
+sudo nano /etc/ssh/sshd_config
+```
 
-there is a line in here with `PasswordAuthentication yes` this will be `#` commented out, you should uncomment and change the yes to no. You will then need to reload the SSH service with `sudo systemctl reload sshd`
+Encontrarás una línea con `PasswordAuthentication yes` esto tendrá un `#` por delante, estará comentado. Tan solo descomenta y cambia el sí a no. Entonces tendrá que recargar el servicio SSH con el siguiente comando:
 
-## Setting up a Web Server
+```shell
+sudo systemctl reload sshd
+```
 
-Not specifically related to what we have just done with SSH above but I wanted to include this as this is again another task that you might find a little daunting but it really should not be.
+Y ya hemos mejorado la seguridad. Se podría mejorar más, hasta [niveles conspiranoicos](https://vidatecno.net/como-personalizar-la-configuracion-de-ssh-para-obtener-la-maxima-seguridad/), pero con esto tenemos suficiente para empezar.
 
-We have our Linux playground VM and at this stage, we want to add an apache webserver to our VM so that we can host a simple website from it that serves my home network. Note that this web page will not be accessible from the internet, this can be done but it will not be covered here.
+## Configuración de un servidor web
 
-You might also see this referred to as a LAMP stack.
+Ya que tenemos nuestra MV Linux para nuestro patio de recreo, vamos a aprovecharla un poco más. Vamos a añadirle un servidor web apache para que podamos alojar una página web simple que se podrá ver en la red local. Tenga en cuenta que esta página web no será accesible desde Internet, esto no se recomienda pero se puede hacer, pero no lo veremos aquí. Una [pista](https://www.noip.com/). 
+
+También puedes ver esto como LAMP stack.
 
 - **L**inux Operating System
 - **A**pache Web Server
@@ -113,83 +148,123 @@ You might also see this referred to as a LAMP stack.
 
 ### Apache2
 
-Apache2 is an open-source HTTP server. We can install apache2 with the following command.
+Apache2 es un servidor HTTP de código abierto. Podemos instalar apache2 con el siguiente comando.
 
-`sudo apt-get install apache2`
+```shell
+sudo apt-get install apache2
+```
 
-To confirm that apache2 is installed correctly we can run `sudo service apache2 restart`
+Para confirmar que apache2 está instalado correctamente podemos ejecutar
 
-Then using the bridged network address from the SSH walkthrough open a browser and go to that address. Mine was `http://192.168.169.135/`
+```shell
+sudo service apache2 restart
+```
+
+A continuación, utilizaremos la dirección de red de nuestra máquina remota que vimos en el apartado de SSH. Abre un navegador y comprueba la dirección. La del ejemplo que teníamos era `http://192.168.169.135/`.
 
 ![](Images/Day18_Linux10.png)
 
 ### mySQL
 
-MySQL is a database in which we will be storing our data for our simple website. To get MySQL installed we should use the following command `sudo apt-get install mysql-server`
+MySQL es una base de datos en la que vamos a almacenar nuestros datos para nuestro sencillo sitio web. Para instalar MySQL debemos utilizar el siguiente comando.
+
+```shell
+sudo apt-get install mysql-server
+```
 
 ### PHP
 
-PHP is a server-side scripting language, we will use this to interact with a MySQL database. The final installation is to get PHP and dependencies installed using `sudo apt-get install php libapache2-mod-php php-mysql`
+PHP es un lenguaje de programación del lado del servidor. Lo utilizaremos para interactuar con la base de datos MySQL. La instalación final es conseguir instalar PHP y sus dependencias usando.
 
-The first configuration change we want to make out of the box apache is using index.html and we want it to use index.php instead.
+```shell
+sudo apt-get install php libapache2-mod-php php-mysql
+```
 
-We are going to use `sudo nano /etc/apache2/mods-enabled/dir.conf` and we are going to move index.php to the first item in the list.
+El primer cambio de configuración que queremos hacer es que apache deje de usar `index.html` para usar en cambio `index.php`.
+
+Vamos a usar el comando.
+
+```shell
+sudo nano /etc/apache2/mods-enabled/dir.conf
+``` 
+Y en el listado moveremos `index.php` al primer elemento de la lista.
 
 ![](Images/Day18_Linux11.png)
 
-Restart the apache2 service `sudo systemctl restart apache2`
+Reiniciamos el servicio apache2 
 
-Now let's confirm that our system is configured correctly for PHP. Create the following file using this command, this will open a blank file in nano.
-
-`sudo nano /var/www/html/90Days.php`
-
-then copy the following and use control + x to exit and save your file.
-
+```shell
+sudo systemctl restart apache2
 ```
+
+Ahora vamos a confirmar que nuestro sistema está configurado correctamente para PHP. Cree el siguiente archivo usando este comando, esto abrirá un archivo en blanco en nano.
+
+```shell
+sudo nano /var/www/html/90Days.php
+```
+
+Luego copie lo siguiente dentro del documento y, como ya aprendimos, usando control + x salimos y guardamos el archivo.
+
+```php
 <?php
 phpinfo();
 ?>
 ```
 
-Now navigate to your Linux VM IP again with the additional 90Days.php on the end of the URL. `http://192.168.169.135/90Days.php` you should see something similar to the below if PHP is configured correctly.
+Ahora navega a la IP de tu MV Linux de nuevo con el adicional 90Days.php al final de la URL: `http://192.168.169.135/90Days.php`. Deberías ver algo similar a lo siguiente si PHP está configurado correctamente.
 
 ![](Images/Day18_Linux12.png)
 
-### WordPress Installation
+### Instalación de WordPress
 
-I then walked through this tutorial to get WordPress up on our LAMP stack, some commands are shown below if not shown correctly in the walkthrough [How to install WordPress on Ubuntu with LAMP](https://blog.ssdnodes.com/blog/how-to-install-wordpress-on-ubuntu-18-04-with-lamp-tutorial/)
+A continuación, he seguido este tutorial para instalar WordPress en nuestra LAMP stack. 
 
-`sudo mysql -u root -p`
+```shell
+sudo mysql -u root -p
+```
 
-`CREATE DATABASE wordpressdb;`
+```mysql
+CREATE DATABASE wordpressdb;
 
-`CREATE USER 'admin-user'@'localhost' IDENTIFIED BY 'password';`
+CREATE USER 'admin-user'@'localhost' IDENTIFIED BY 'password';
 
-`GRANT ALL PRIVILEGES ON wordpressdb.* TO 'admin-user'@'localhost';`
+GRANT ALL PRIVILEGES ON wordpressdb.* TO 'admin-user'@'localhost';
 
-`FLUSH PRIVILEGES;`
+FLUSH PRIVILEGES;
 
-`EXIT;`
+EXIT;
+```
 
-`sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip`
+```shell
+sudo apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-intl php-zip
+```
+```shell
+sudo systemctl restart apache2
+```
 
-`sudo systemctl restart apache2`
+```shell
+cd /var/www
+```
 
-`cd /var/www`
+```shell
+sudo curl -O https://wordpress.org/latest.tar.gz
+```
 
-`sudo curl -O https://wordpress.org/latest.tar.gz`
+```shell
+sudo tar -xvf latest.tar.gz
+```
 
-`sudo tar -xvf latest.tar.gz`
+```shell
+sudo rm latest.tar.gz
+```
 
-`sudo rm latest.tar.gz`
+En este punto se encuentra en el paso 4 del artículo ["How to install WordPress on Ubuntu with LAMP"](https://blog.ssdnodes.com/blog/how-to-install-wordpress-on-ubuntu-18-04-with-lamp-tutorial/), tendrá que seguir los pasos para asegurarse de que todos los permisos correctos están en su lugar para el directorio de WordPress.
 
-At this point you are in Step 4 in the linked article, you will need to follow the steps to make sure all correct permissions are in place for the WordPress directory.
+Debido a que esto es interno, no es necesario "generar claves de seguridad" en este paso. Vaya al paso 5 que es cambiar la configuración de Apache a WordPress.
 
-Because this is internal only you do not need to "generate security keys" in this step. Move to Step 5 which is changing the Apache configuration to WordPress.
+Entonces, si todo está configurado correctamente, podrá acceder a través de su dirección de red interna y ejecutar la instalación de WordPress.
 
-Then providing everything is configured correctly you will be able to access via your internal network address and run through the WordPress installation.
-
-## Resources
+## Recursos
 
 - [Client SSH GUI - Remmina](https://remmina.org/)
 - [The Beginner's guide to SSH](https://www.youtube.com/watch?v=2QXkrLVsRmk)
@@ -197,5 +272,6 @@ Then providing everything is configured correctly you will be able to access via
 - [Vim tutorial](https://www.youtube.com/watch?v=IiwGbcd8S7I)
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
+- [Webminal](https://www.webminal.org/) 
 
-See you on [Day19](day19.md)
+Nos vemos en el [Día 19](day19.md).
