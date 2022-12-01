@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - The Go Workspace - Day 10'
+title: "#90DaysOfDevOps - The Go Workspace - Day 10"
 published: false
 description: 90DaysOfDevOps - The Go Workspace
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048701
@@ -97,3 +97,5 @@ Hopefully, if you are following along you are watching one of the playlists or v
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N)
 
 See you on [Day 11](day11.md).
+
+# Completed Day 10 exercises
