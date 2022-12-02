@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Variables & Constants in Go - Day 11'
+title: "#90DaysOfDevOps - Variables & Constants in Go - Day 11"
 published: false
 description: 90DaysOfDevOps - Variables & Constants in Go
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048862
@@ -174,3 +174,5 @@ There are many different types of integer and float types the links above will c
 Next up we are going to start adding some user input functionality to our program so that we are asked how many days have been completed.
 
 See you on [Day 12](day12.md).
+
+# Completed exercise - added variables to go app
