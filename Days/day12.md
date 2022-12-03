@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Getting user input with Pointers and a finished program - Day 12'
+title: "#90DaysOfDevOps - Getting user input with Pointers and a finished program - Day 12"
 published: false
 description: 90DaysOfDevOps - Getting user input with Pointers and a finished program
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048864
@@ -83,3 +83,5 @@ Below is running this code.
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N)
 
 See you on [Day 13](day13.md).
+
+# Completed daily exercise - go-app
