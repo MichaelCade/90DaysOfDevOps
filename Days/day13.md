@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Tweet your progress with our new App - Day 13'
+title: "#90DaysOfDevOps - Tweet your progress with our new App - Day 13"
 published: false
 description: 90DaysOfDevOps - Tweet your progress with our new App
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048865
@@ -321,3 +321,5 @@ This wraps up the Programming language for 7 days! So much more that can be cove
 Next, we take our focus into Linux and some of the fundamentals that we should all know there.
 
 See you on [Day 14](day14.md).
+
+# Completed Day 13 - reviewed of how to add twitter bot to the app
