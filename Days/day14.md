@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - The Big Picture: DevOps and Linux - Day 14'
+title: "#90DaysOfDevOps - The Big Picture: DevOps and Linux - Day 14"
 published: false
 description: 90DaysOfDevOps - The Big Picture DevOps and Linux
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1049033
@@ -118,3 +118,5 @@ There are going to be lots of resources I find as we go through and much like th
 As I mentioned next up we will take a look at the commands we might be using on a daily whilst in our Linux environments.
 
 See you on [Day15](day15.md)
+
+# Completed exercises - Installed Vagrant, watched Linux tutorials
