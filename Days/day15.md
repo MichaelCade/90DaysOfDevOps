@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Linux Commands for DevOps (Actually everyone) - Day 15'
+title: "#90DaysOfDevOps - Linux Commands for DevOps (Actually everyone) - Day 15"
 published: false
 description: 90DaysOfDevOps - Linux Commands for DevOps (Actually everyone)
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048834
@@ -193,3 +193,5 @@ Also to note if you type a command and you are no longer happy with it and you w
 See you on [Day16](day16.md)
 
 This is a pretty heavy list already but I can safely say that I have used all of these commands in my day to day, be it from an administering Linux servers or on my Linux Desktop, it is very easy when you are in Windows or macOS to navigate the UI but in Linux Servers, they are not there, everything is done through the terminal.
+
+# Completed Day 15 exercises - restarted Ubuntu VM, explored various Linux commands
