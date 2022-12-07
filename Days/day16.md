@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Managing your Linux System, Filesystem & Storage - Day 16'
+title: "#90DaysOfDevOps - Managing your Linux System, Filesystem & Storage - Day 16"
 published: false
-description: '90DaysOfDevOps - Managing your Linux System, Filesystem & Storage'
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - Managing your Linux System, Filesystem & Storage"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048702
@@ -164,3 +164,5 @@ We will cover how you would edit a file using a text editor in a future session.
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
 See you on [Day17](day17.md)
+
+# Completed daily exercise - installing a program, linux file system & storage
