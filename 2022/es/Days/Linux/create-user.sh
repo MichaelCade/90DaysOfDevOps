@@ -1,27 +1,29 @@
 #! /usr/bin/bash
 if [ -z "${1}" ]
 then 
-   echo "What is your intended username?"
+   echo "¿Qué nombre de usuario quieres?\n"
    read  username
-   echo "What is your password"
-   read  password
+   echo "¿Cuál es el password?"
+   echo "(Cuando teclees no se verá nada por aquí)\n"
+   read -s password
 
-   #A user can be passed in as a command line argument
-   echo "$username user account being created."
+   # Un usuario puede ser pasado como un argumento en la línea de comandos
+   echo "\nSe está creando la cuenta de usuario $username\n"
 
-   #A user is created with the name of command line argument
+   # Se crea un usuario con el nombre del argumento.
    sudo useradd -m $username
 
-   #A password can be parsed in as a command line argument.
+   # Se puede pasar una contraseña como argumento en la línea de comandos.
+   # Se establece la contraseña para el usuario.
    sudo chpasswd <<< $username:$password
 
    sleep 2 
-   echo "If you want to delete the user then pass 'del' and username in command line argument. e.g: ./create-user.sh del username"
+   echo "Si quieres borrar el usuario entonces pasa 'del' y nombre de usuario en el argumento de la línea de comandos. e.g: ./create-user.sh del username"
 
 else
    sudo userdel -rf "${2}"
    sleep 2	
-   echo "${2} user account successfully deleted."
+   echo "La cuenta de usuario ${2} se ha eliminado con éxito."
    exit 0
 fi
 
