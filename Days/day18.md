@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - SSH & Web Server - Day 18'
+title: "#90DaysOfDevOps - SSH & Web Server - Day 18"
 published: false
 description: 90DaysOfDevOps - SSH & Web Server
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048733
@@ -62,7 +62,7 @@ You then want to make sure that our SSH is allowed if the firewall is running. W
 
 Now that we have our SSH Server listening out on port 22 for any incoming connection requests and we have added the bridged networking we could use putty or an SSH client on our local machine to connect to our system using SSH.
 
- [# PuTTy installation Guide](https://www.cuit.columbia.edu/putty).
+[# PuTTy installation Guide](https://www.cuit.columbia.edu/putty).
 
 ![](Images/Day18_Linux4.png)
 
@@ -211,3 +211,5 @@ Then providing everything is configured correctly you will be able to access via
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
 See you on [Day19](day19.md)
+
+# Completed Day 18 - Setup Apache Web Server, watched SSH tutorial
