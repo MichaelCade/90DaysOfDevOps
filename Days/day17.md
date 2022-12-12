@@ -84,3 +84,5 @@ Another pointer to navigate around in vim we can use `H,J,K,L` as well as our ar
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
 See you on [Day18](day18.md)
+
+# Completed Day 17 exercises - watched youtube videos, installed vim on vscode and practiced vim tutorials
