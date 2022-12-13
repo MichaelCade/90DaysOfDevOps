@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Automate tasks with bash scripts - Day 19'
+title: "#90DaysOfDevOps - Automate tasks with bash scripts - Day 19"
 published: false
 description: 90DaysOfDevOps - Automate tasks with bash scripts
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048774
@@ -309,3 +309,5 @@ I have created a very simple bash file that helps me spin up a Kubernetes cluste
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
 See you on [Day20](day20.md)
+
+# Completed Daily exercise - Bash in 100 seconds, Amigoscode BASH course
