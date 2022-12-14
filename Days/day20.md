@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Dev workstation setup - All the pretty things - Day 20'
+title: "#90DaysOfDevOps - Dev workstation setup - All the pretty things - Day 20"
 published: false
 description: 90DaysOfDevOps - Dev workstation setup - All the pretty things
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048734
@@ -164,3 +164,5 @@ I also thought on this it was easier to show you a lot of the steps through vide
 Tomorrow we start our 7 days of diving into Networking, we will be looking to give ourselves the foundational knowledge and understanding of Networking around DevOps.
 
 See you on [Day21](day21.md)
+
+# ompleted Day exercises - Installed ZSH and dracula on VM
