@@ -56,7 +56,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 
 ### Understand Networking
 
-- [] 🌐 21 > [The Big Picture: DevOps and Networking](Days/day21.md)
+- [✔️] 🌐 21 > [The Big Picture: DevOps and Networking](Days/day21.md)
 - [] 🌐 22 > [The OSI Model - The 7 Layers](Days/day22.md)
 - [] 🌐 23 > [Network Protocols](Days/day23.md)
 - [] 🌐 24 > [Network Automation](Days/day24.md)
