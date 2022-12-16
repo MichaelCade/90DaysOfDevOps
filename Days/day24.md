@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Network Automation - Day 24'
+title: "#90DaysOfDevOps - Network Automation - Day 24"
 published: false
 description: 90DaysOfDevOps - Network Automation
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048805
@@ -145,3 +145,5 @@ We have nowhere near covered all of the networking topics so far but wanted to m
 - [Python Network Automation](https://www.youtube.com/watch?v=xKPzLplPECU&list=WL&index=126)
 
 See you on [Day 25](day25.md)
+
+# Completed daily exercises - Network Automation with Python and Ansible
