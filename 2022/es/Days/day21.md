@@ -1,106 +1,115 @@
-## The Big Picture: DevOps and Networking
+## El panorama: DevOps & Networking
 
-As with all sections, I am using open and free training materials and a lot of the content can be attributed to others. In the case of the networking section a large majority of the content shown is from [Practical Networking](https://www.practicalnetworking.net/)'s free [Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi).  It is mentioned in the resources as well as a link but it's appropriate to highlight this as from a community point of view, I have leveraged this course to help myself understand more about particular areas of technologies. This repository is a repository for my note taking and enabling the community to hopefully benefit from this and the listed resources. 
+Como en todas las secciones, se están utilizando materiales de formación abiertos y gratuitos. Gran parte del contenido se puede atribuir a otros. En el caso de la sección de redes una gran mayoría del contenido mostrado es gratuito de [Practical Networking](https://www.practicalnetworking.net/) y [Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). Se menciona en los recursos, así como un enlace, pero es apropiado destacar esto desde el punto de vista de la comunidad. Se ha aprovechado este curso para ayudarme a entender más acerca de las áreas particulares de las tecnologías. Este repositorio sirve para que yo tome notas y para que la comunidad pueda beneficiarse de esto y de los recursos enumerados.  
 
-Welcome to Day 21! We are going to be getting into Networking over the next 7 days, Networking and DevOps are the overarching themes but we will need to get into some of the networking fundamentals as well.
+¡Bienvenidos al Día 21! Vamos a ver la creación de redes en los próximos 7 días. En DevOps es necesario adquirir algunos conocimientos básicos sobre la creación de redes para poder defendernos en cualquier puesto de ingeniero de plataforma.
 
-Ultimately as we have said previously DevOps is about a culture and process change within your organisation this as we have discussed can be Virtual Machines, Containers, or Kubernetes but it can also be the network, If we are using those DevOps principles for our infrastructure that has to include the network more to the point from a DevOps point of view you also need to know about the network as in the different topologies and networking tools and stacks that we have available.
+En última instancia, como hemos dicho anteriormente, DevOps se trata de un cambio de cultura y proceso dentro de las organizaciones, hemos visto que pudiera ser con máquinas virtuales, con contenedores o con Kubernetes. Pues también puede ser con la red. Si estamos utilizando los principios DevOps para nuestra infraestructura tiene que incluir la red con un punto de vista DevOps, valga la redundancia. También necesitas saber acerca de la red como las diferentes topologías, herramientas de red y los posibles stacks que tenemos disponibles.
 
-I would argue that we should have our networking devices configured using infrastructure as code and have everything automated like we would our virtual machines, but to do that we have to have a good understanding of what we are automating.
+Lo recomendable es tener nuestros dispositivos de red configurados utilizando la infraestructura como código ([IaC](https://es.wikipedia.org/wiki/Infraestructura_como_c%C3%B3digo)), ya hemos comentado alguna vez que significa esto. También debemos tener todo automatizado como lo haríamos con nuestras máquinas virtuales, pero para hacer esto deberíamos adquirir una buena comprensión de lo que estamos automatizando.
 
-### What is NetDevOps | Network DevOps?
+Al lío.
 
-You may also hear the terms Network DevOps or NetDevOps. Maybe you are already a Network engineer and have a great grasp on the network components within the infrastructure you understand the elements used around networking such as DHCP, DNS, NAT etc. You will also have a good understanding of the hardware or software-defined networking options, switches, routers etc.
+### ¿Qué es NetDevOps | Network DevOps?
 
-But if you are not a network engineer then we probably need to get foundational knowledge across the board in some of those areas so that we can understand the end goal of Network DevOps.
+Dentro de la cultura cloud escucharás términos como Network DevOps o NetDevOps. Tal vez ya seas ingeniero de redes y tengas un gran dominio de los componentes de red dentro de la infraestructura, entonces comprenderás los elementos utilizados en torno a las redes, como DHCP, DNS, NAT, etc, además de la importancia que tienen todos estos elementos. Por lo tanto, también tendrás un buen conocimiento de las opciones de redes definidas por hardware o software, switches, routers, etc.
 
-But in regards to those terms, we can think of NetDevOps or Network DevOps as applying the DevOps Principles and Practices to the network, applying version control and automation tools to the network creation, testing, monitoring, and deployments.
+En el caso de que no seas un ingeniero de redes, probablemente necesites una ayudita para alcanzar unos conocimientos básicos de esta área y así poder entender el objetivo final de Network DevOps.
 
-If we think of Network DevOps as having to require automation, we mentioned before about DevOps breaking down the silos between teams. If the networking teams do not change to a similar model and process then they become the bottleneck or even the failure overall.
+En lo que respecta a los términos NetDevOps o Network DevOps, podemos pensarlos como la aplicación de los principios y prácticas de DevOps a la red, aplicando herramientas de control de versiones y automatización a la creación, testing, monitorización y despliegue de la red.
 
-Using the automation principles around provisioning, configuration, testing, version control and deployment is a great start. Automation is overall going to enable speed of deployment, stability of the networking infrastructure and consistent improvement as well as the process being shared across multiple environments once they have been tested. Such as a fully tested Network Policy that has been fully tested on one environment can be used quickly in another location because of the nature of this being in code vs a manually authored process which it might have been before.
-A really good viewpoint and outline of this thinking can be found here. [Network DevOps](https://www.thousandeyes.com/learning/techtorials/network-devops)
+Si pensamos en DevOps de Red como algo que tiene que requerir automatización, tenemos que volver atrás a cuando mencionamos DevOps como rompedor de silos entre equipos. Si los equipos de redes no cambian a un modelo y proceso similares, entonces se convierten en el cuello de botella o incluso en el fracaso general.
 
-## Networking The Basics
+Utilizar los principios de automatización en torno al aprovisionamiento, la configuración, el testing, el control de versiones y el despliegue es un gran comienzo. En general, la automatización va a permitir mejorar la agilidad y velocidad en los despliegues, consiguiendo estabilidad de la infraestructura de red y la mejora consecuente, así como el proceso que se comparte a través de múltiples entornos una vez que han sido probados. Por ejemplo, una política de red totalmente probada en un entorno puede utilizarse rápidamente en otra ubicación, ya que se trata de un código y no de un proceso manual.
+Un buen punto de vista y resumen de este pensamiento se puede encontrar aquí: [Network DevOps](https://www.thousandeyes.com/learning/techtorials/network-devops).
 
-Let's forget the DevOps side of things to begin with here and we now need to look very briefly into some of the Networking fundamentals.
+## Lo básico de Networking
 
-### Network Devices
+Vamos a olvidarnos del punto de vista DevOps durante un rato y miraremos muy brevemente algunos fundamentos de red.
 
-If you prefer this content in video form, check out these videos from Practical Networking:
+*Si prefieres este contenido en forma de vídeo, echa un vistazo a estos vídeos de Practical Networking:*
 
-* [Network Devices - Hosts, IP Addresses, Networks - Networking Fundamentals - Lesson 1a](https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=1)
-* [Network Devices - Hub, Bridge, Switch, Router - Networking Fundamentals - Lesson 1b
-](https://www.youtube.com/watch?v=H7-NR3Q3BeI&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=2)
+* [*Network Devices - Hosts, IP Addresses, Networks - Networking Fundamentals - Lesson 1a*](https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=1)
+* [*Network Devices - Hub, Bridge, Switch, Router - Networking Fundamentals - Lesson 1b*](https://www.youtube.com/watch?v=H7-NR3Q3BeI&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=2)
 
-**Host** are any devices which send or receive traffic.
+### Dispositivos de red
+
+**Host** - Son todos los dispositivos que envían o reciben tráfico.
 
 ![](Images/Day21_Networking1.png)
 
-**IP Address** the identity of each host.
+**Dirección IP** - La identidad de cada host.
 
 ![](Images/Day21_Networking2.png)
 
-**Network** is what transports traffic between hosts. If we did not have networks there would be a lot of manual movement of data!
+**Network** - Es lo que transporta el tráfico entre los hosts. Si no tuviéramos redes, ¡habría mucho movimiento manual de datos!
 
-A logical group of hosts which require similar connectivity.
+Un grupo lógico de hosts que requieren una conectividad similar.
 
 ![](Images/Day21_Networking3.png)
 
-**Switches** facilitate communication **_within_** a network. A switch forwards data packets between hosts. A switch sends packets directly to hosts.
+**Switches** - Facilitan la comunicación dentro de una red. Reenvía paquetes de datos entre hosts y envía paquetes directamente a los hosts.
 
-- Network: A Grouping of hosts which require similar connectivity.
-- Hosts on a Network share the same IP address space.
+- Network: Agrupación de hosts que requieren una conectividad similar.
+- Los hosts de una red comparten el mismo espacio de direcciones IP.
+
+> *Los más avanzados pueden actuar como un router, salvando las distancias. Podrían enrutar entre dispositivos con las mismas características pero no tendrían todos los protocolos de enrutamiento que puede ofrecer un router.*
 
 ![](Images/Day21_Networking4.png)
+1
+**Router** - Facilita la comunicación entre redes. Hemos dicho que un switch se ocupa de la comunicación dentro de una red, pues bien, el router nos permite unir estas redes o al menos dar acceso entre ellas si está permitido.
 
-**Router** facilitates communication between networks. As we said before that a switch looks after communication within a network a router allows us to join these networks together or at least give them access to each other if permitted.
+> *No estamos hablando del router que conocemos en nuestras casas. Estamos hablando solo del aparato que se ocupar en enrutar. Lo que conocemos actualmente como routers, los que nos proveen las [ISP](https://es.wikipedia.org/wiki/Proveedor_de_servicios_de_internet), a mi parecer defectuosos, realmente se componen de 4 elementos: Router, switch, punto de acceso y modem. Se debe tener en cuenta esta diferencia de dispositivos para entender mejor los conceptos que tratamos.*
 
-A router can provide a traffic control point (security, filtering, redirecting) More and more switches also provide some of these functions now.
+Un router puede proporcionar un punto de control del tráfico (seguridad, filtrado, redireccionamiento) Cada vez son más los conmutadores que también proporcionan algunas de estas funciones.
 
-Routers learn which networks they are attached to. These are known as routes, a routing table is all the networks a router knows about.
+Los routers aprenden a qué redes están conectados. Una routing table contiene el conjunto de redes que conoce un router.
 
-A router has an IP address in the networks they are attached to. This IP is also going to be each host's way out of their local network also known as a gateway.
+Un router tiene una dirección IP en las redes a las que está conectado. Esta IP también va a ser la salida de cada host de su red local, también conocida como puerta de enlace (gateway).
 
-Routers also create the hierarchy in networks I mentioned earlier.
+Los routers también crean la jerarquía en las redes que he mencionado antes.
+
+> *Los más avanzados pueden actuar con funcionalidades idénticas de un switch*
 
 ![](Images/Day21_Networking5.png)
 
 ## Switches vs Routers
 
-**Routing** is the process of moving data between networks.
+**Routing**  es el proceso de mover datos entre redes.
 
-- A router is a device whose primary purpose is Routing.
+- Un router es un dispositivo cuyo propósito principal es el enrutamiento.
 
-**Switching** is the process of moving data within networks.
+**Switching** es el proceso de mover datos dentro de una red.
 
-- A Switch is a device whose primary purpose is switching.
+- Un switch es un dispositivo cuya función principal es la conmutación.
 
-This is very much a foundational overview of devices as we know there are many different Network Devices such as:
+Hemos dado un vistazo general de algunos dispositivos pero debemos saber que existen muchos más con otras funcionalidades en la red, como:
 
-- Access Points
-- Firewalls
-- Load Balancers
-- Layer 3 Switches
-- IDS / IPS
-- Proxies
-- Virtual Switches
-- Virtual Routers
+- Puntos de acceso.
+- Firewalls (físicos, de hardware).
+- Load Balancers (físicos, de hardware).
+- Switches de capa 3.
+- IDS / IPS.
+- Proxies.
+- Switches virtuales (lógicos, de software).
+- Routers virtuales (lógicos, de software).
 
-Although all of these devices are going to perform Routing and/or Switching.
+Aunque todos los dispositivos anteriores van a realizar de una u otra forma el Routing y/o el Switching.
 
-Over the next few days, we are going to get to know a little more about this list.
+En los próximos días vamos a conocer un poco más:
 
-- OSI Model
-- Network Protocols
+- Modelo OSI.
+- Protocolos de red.
 - DNS (Domain Name System)
 - NAT
 - DHCP
 - Subnets
 
-## Resources
+Son conceptos muy importantes ya que serán la base para conocer las redes. Si no conoces los términos lo mejor es que sigas con los siguientes días de red. Si los conoces, puedes repasarlos o ir directamente al siguiente tema: [Cloud Provider](day28.md)
+
+## Rercursos
 
 * [Networking Fundamentals](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
 * [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 
-See you on [Day22](day22.md)
+Nos vemos en el [Día 22](day22.md).
