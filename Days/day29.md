@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Microsoft Azure Fundamentals - Day 29'
+title: "#90DaysOfDevOps - Microsoft Azure Fundamentals - Day 29"
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Fundamentals
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048705
@@ -139,3 +139,5 @@ Hit create, then in our list of resource groups, we now have our "90DaysOfDevOps
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
 See you on [Day 30](day30.md)
+
+# Complered daily exercises - Azure free account, example exercise

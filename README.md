@@ -67,7 +67,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 ### Stick to one Cloud Provider
 
 - [✔️] ☁️ 28 > [The Big Picture: DevOps & The Cloud](Days/day28.md)
-- [] ☁️ 29 > [Microsoft Azure Fundamentals](Days/day29.md)
+- [✔️] ☁️ 29 > [Microsoft Azure Fundamentals](Days/day29.md)
 - [] ☁️ 30 > [Microsoft Azure Security Models](Days/day30.md)
 - [] ☁️ 31 > [Microsoft Azure Compute Models](Days/day31.md)
 - [] ☁️ 32 > [Microsoft Azure Storage & Database Models](Days/day32.md)

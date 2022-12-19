@@ -104,4 +104,4 @@ I am also going to build out a scenario as I have done in the other sections whe
 
 See you on [Day 29](day29.md)
 
-# Completed daily exercises - Watched videos for basics AWS, Azure and Googe Cloud.
+# Completed daily exercises - Watched videos for basics AWS, Azure and Google Cloud.
