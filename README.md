@@ -62,7 +62,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] 🌐 24 > [Network Automation](Days/day24.md)
 - [✔️] 🌐 25 > [Python for Network Automation](Days/day25.md)
 - [✔️] 🌐 26 > [Building our Lab](Days/day26.md)
-- [] 🌐 27 > [Getting Hands-On with Python & Network](Days/day27.md)
+- [✔️] 🌐 27 > [Getting Hands-On with Python & Network](Days/day27.md)
 
 ### Stick to one Cloud Provider
 
