@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Microsoft Azure Networking Models + Azure Management - Day 33'
+title: "#90DaysOfDevOps - Microsoft Azure Networking Models + Azure Management - Day 33"
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Networking Models + Azure Management
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048706
@@ -188,3 +188,5 @@ Next up we take all the theories we have been through and create some scenarios 
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
 See you on [Day 34](day34.md)
+
+# Completed daily exercises - Azure Networking
