@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Building our Lab - Day 26'
+title: "#90DaysOfDevOps - Building our Lab - Day 26"
 published: false
 description: 90DaysOfDevOps - Building our Lab
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048762
@@ -119,3 +119,5 @@ Most of the examples I am using here as I am not a Network Engineer have come fr
 - [Hands-On Enterprise Automation with Python (Book)](https://www.packtpub.com/product/hands-on-enterprise-automation-with-python/9781788998512)
 
 See you on [Day 27](day27.md)
+
+# Completed daily exercise - Built a Lab on EVENG using routers and switches.
