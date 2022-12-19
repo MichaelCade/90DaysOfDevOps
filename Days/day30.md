@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Microsoft Azure Security Models - Day 30'
+title: "#90DaysOfDevOps - Microsoft Azure Security Models - Day 30"
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Security Models
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1049039
@@ -173,3 +173,5 @@ You can customise this portal with your branding and this might be something we 
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
 See you on [Day 31](day31.md)
+
+# Completed daily exercises - Azure Security Concepts
