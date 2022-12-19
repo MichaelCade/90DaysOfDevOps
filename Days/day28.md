@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - The Big Picture: DevOps & The Cloud - Day 28'
+title: "#90DaysOfDevOps - The Big Picture: DevOps & The Cloud - Day 28"
 published: false
 description: 90DaysOfDevOps - The Big Picture DevOps & The Cloud
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048737
@@ -103,3 +103,5 @@ I am also going to build out a scenario as I have done in the other sections whe
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
 See you on [Day 29](day29.md)
+
+# Completed daily exercises - Watched videos for basics AWS, Azure and Googe Cloud.
