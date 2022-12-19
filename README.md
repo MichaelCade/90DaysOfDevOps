@@ -72,7 +72,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] ☁️ 31 > [Microsoft Azure Compute Models](Days/day31.md)
 - [✔️] ☁️ 32 > [Microsoft Azure Storage & Database Models](Days/day32.md)
 - [✔️] ☁️ 33 > [Microsoft Azure Networking Models + Azure Management](Days/day33.md)
-- [] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](Days/day34.md)
+- [✔️] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](Days/day34.md)
 
 ### Use Git Effectively
 
