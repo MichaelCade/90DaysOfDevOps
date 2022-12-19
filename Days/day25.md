@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Python for Network Automation - Day 25'
+title: "#90DaysOfDevOps - Python for Network Automation - Day 25"
 published: false
 description: 90DaysOfDevOps - Python for Network Automation
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1049038
@@ -173,3 +173,5 @@ Next up we are going to:
 - [Python Network Automation](https://www.youtube.com/watch?v=xKPzLplPECU&list=WL&index=126)
 
 See you on [Day 26](day26.md)
+
+# Completed daily exercises - downloaded and installed EVE-NG and VMWare Workstation
