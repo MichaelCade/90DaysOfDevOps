@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Microsoft Azure Compute Models - Day 31'
+title: "#90DaysOfDevOps - Microsoft Azure Compute Models - Day 31"
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Compute Models
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1049040
@@ -112,3 +112,5 @@ We can also look at Azure Batch which can run large-scale jobs on both Windows a
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
 See you on [Day 32](day32.md)
+
+# Completed daily exercises - Azure Compute Models
