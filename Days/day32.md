@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Microsoft Azure Storage Models - Day 32'
+title: "#90DaysOfDevOps - Microsoft Azure Storage Models - Day 32"
 published: false
 description: 90DaysOfDevOps - Microsoft Azure Storage Models
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048775
@@ -189,3 +189,5 @@ We have one more bit of theory remaining around networking before we can get som
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
 See you on [Day 33](day33.md)
+
+# Completed daily exercises - Azure Storage Models
