@@ -139,4 +139,4 @@ Next up we will be getting git installed and set up on your local machine and di
 
 See you on [Day 36](day36.md)
 
-# Completed daily exercises - Hands-On-Scenarios
+# Completed daily exercises - Git examples

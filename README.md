@@ -76,7 +76,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 
 ### Use Git Effectively
 
-- [] 📚 35 > [The Big Picture: Git - Version Control](Days/day35.md)
+- [✔️] 📚 35 > [The Big Picture: Git - Version Control](Days/day35.md)
 - [] 📚 36 > [Installing & Configuring Git](Days/day36.md)
 - [] 📚 37 > [Gitting to know Git](Days/day37.md)
 - [] 📚 38 > [Staging & Changing](Days/day38.md)
