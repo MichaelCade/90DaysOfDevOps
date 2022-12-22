@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Social Network for code - Day 40'
+title: "#90DaysOfDevOps - Social Network for code - Day 40"
 published: false
 description: 90DaysOfDevOps - Social Network for code
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1049044
@@ -208,3 +208,5 @@ You will also come across hosted options. Most commonly here I have seen GitLab 
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 
 See you on [Day 41](day41.md)
+
+# Completed daily exercises - GitHub, GitLab, Bitbucket
