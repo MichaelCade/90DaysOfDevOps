@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Viewing, unstaging, discarding & restoring - Day 39'
+title: "#90DaysOfDevOps - Viewing, unstaging, discarding & restoring - Day 39"
 published: false
-description: '90DaysOfDevOps - Viewing, unstaging, discarding & restoring'
-tags: 'devops, 90daysofdevops, learning'
+description: "90DaysOfDevOps - Viewing, unstaging, discarding & restoring"
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048827
@@ -210,3 +210,5 @@ Although it's still not a foregone conclusion, choosing the cleaner history also
 - [Exploring the Git command line – A getting started guide](https://veducate.co.uk/exploring-the-git-command-line/)
 
 See you on [Day40](day40.md)
+
+# Completed daily exercises - Visual Diff tools, restoring files, rebase vs merge
