@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Staging & Changing - Day 38'
+title: "#90DaysOfDevOps - Staging & Changing - Day 38"
 published: false
 description: 90DaysOfDevOps - Staging & Changing
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1049042
@@ -125,3 +125,5 @@ In the post tomorrow we will continue to look through these short examples of th
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 
 See you on [Day 39](day39.md)
+
+# Completed daily exercises - Git staging and changing, commit best practices
