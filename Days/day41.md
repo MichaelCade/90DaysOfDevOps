@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - The Open Source Workflow - Day 41'
+title: "#90DaysOfDevOps - The Open Source Workflow - Day 41"
 published: false
 description: 90DaysOfDevOps - The Open Source Workflow
-tags: 'DevOps, 90daysofdevops, learning'
+tags: "DevOps, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048806
@@ -125,3 +125,5 @@ This then wraps up our look into Git and GitHub, next we are diving into contain
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 
 See you on [Day 42](day42.md)
+
+# Completed daily exercises - fork kanister github project

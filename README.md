@@ -82,7 +82,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] 📚 38 > [Staging & Changing](Days/day38.md)
 - [✔️] 📚 39 > [Viewing, unstaging, discarding & restoring](Days/day39.md)
 - [✔️] 📚 40 > [Social Network for code](Days/day40.md)
-- [] 📚 41 > [The Open Source Workflow](Days/day41.md)
+- [✔️] 📚 41 > [The Open Source Workflow](Days/day41.md)
 
 ### Containers
 
