@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Installing & Configuring Git - Day 36'
+title: "#90DaysOfDevOps - Installing & Configuring Git - Day 36"
 published: false
 description: 90DaysOfDevOps - Installing & Configuring Git
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048738
@@ -152,3 +152,5 @@ Unlike the Client-Server version control model, each developer downloads the sou
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 
 See you on [Day 37](day37.md)
+
+# Completed Daily exercises - Installing Git
