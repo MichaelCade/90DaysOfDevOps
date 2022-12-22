@@ -1,6 +1,6 @@
 # Container Image Scanning
 
-A container image consists of an image manifest, a filesystem and an image configuration. (1)
+A container image consists of an image manifest, a filesystem and an image configuration. [1](https://opencontainers.org/about/overview/)
 
 For example, the filesystem of a container image for a Java application will have a Linux filesystem, the JVM, and the JAR/WAR file that represents our application.
 
@@ -257,15 +257,23 @@ If an image scanner tells you that you have 0 vulnerabilities in your image, tha
 
 Also, mitigating vulnerabilities can be as simple as bumping a version of a dependency (or downgrading one), but sometimes it can be more tricky because that version bump might require a change in your code.
 
+## CVEs
+
+In the vulnerability table provided by our scanner we see something that starts with `CVE-`:
+
+```text
+bash  4.4.18-2ubuntu1.2  deb  CVE-2022-3715  Medium
+```
+
+[**CVE**](https://cve.mitre.org/) stands for **C**ommon **V**ulnerability and **E**xposures.
+
+It is a system that allows us to track vulnerabilities and be able to easily search for them.
+
+Each time a new vulnerability is found, it is assigned a CVE by the [CNA](https://www.cve.org/ProgramOrganization/CNAs) (CVE Numbering Authority) and associated with all components that contain that vulnerability.
+
+Once this is done, this information is propagated to the vulnerabilities databases and can be leveraged by image scanners to warn about CVEs/vulnerabilities that are present in our container.
+
+## Summary
+
 Now we know why image scanning is important and how it can help us be more secure.
 In [Day 15](day15.md) we are going to  dive deeper into the way the image scanners work under the hood, looking into things like SBOMs and vulnerability databases.
-
-## Resources
-
-[1](https://opencontainers.org/about/overview/)
-TODO: more
-## DAST
-
-## Fuzzing
-
-## IAST
