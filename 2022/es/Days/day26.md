@@ -1,38 +1,38 @@
-## Building our Lab
+## Construyendo nuestro Laboratorio
 
-We are going to continue our setup of our emulated network using EVE-NG and then hopefully get some devices deployed and start thinking about how we can automate the configuration of these devices. On [Day 25](day25.md) we covered the installation of EVE-NG onto our machine using VMware Workstation.
+Vamos a continuar con la configuración de nuestra red emulada utilizando EVE-NG y luego esperamos tener algunos dispositivos desplegados y empezar a pensar en cómo podemos automatizar la configuración de estos dispositivos. En el [Día 25](day25.md) vimos la instalación de EVE-NG en nuestra máquina utilizando VMware Workstation.
 
-### Installing EVE-NG Client
+### Instalación del cliente de EVE-NG
 
-There is also a client pack that allows us to choose which application is used when we SSH to the devices. It will also set up Wireshark for packet captures between links. You can grab the client pack for your OS (Windows, macOS, Linux).
+También hay un paquete de cliente que nos permite elegir qué aplicación se utiliza en la conexiones SSH a los dispositivos. También configurará Wireshark para capturas de paquetes entre enlaces. Puedes hacerte con el pack de cliente para tu SO (Windows, macOS, Linux).
 
-[EVE-NG Client Download](https://www.eve-ng.net/index.php/download/)
+[Descarga del cliente EVE-NG](https://www.eve-ng.net/index.php/download/)
 
 ![](Images/Day26_Networking1.png)
 
-Quick Tip: If you are using Linux as your client then there is this [client pack](https://github.com/SmartFinn/eve-ng-integration).
+Sugerencia rápida: Si utilizas Linux como cliente, existe este [paquete de cliente](https://github.com/SmartFinn/eve-ng-integration).
 
-The install is straightforward next, next and I would suggest leaving the defaults.
+La instalación es directa y como sugerencia, en un principio, es mejor dejar los valores predeterminados.
 
-### Obtaining network images
+### Obtención de imágenes de red
 
-This step has been a challenge, I have followed some videos that I will link at the end that links to some resources and downloads for our router and switch images whilst telling us how and where to upload them.
+Este paso ha sido todo un reto, he seguido algunos videos que están enlazados al final en el apartado de recursos y descargas para las imágenes de nuestro router y switch a la vez que nos indican cómo y dónde subirlas.
 
-It is important to note that I using everything for education purposes. I would suggest downloading official images from network vendors.
+Es importante tener en cuenta que yo uso todo con fines educativos. Yo sugeriría descargar imágenes oficiales de los proveedores de red.
 
-[Blog & Links to YouTube videos](https://loopedback.com/2019/11/15/setting-up-eve-ng-for-ccna-ccnp-ccie-level-studies-includes-multiple-vendor-node-support-an-absolutely-amazing-study-tool-to-check-out-asap/)
+[Blog y enlaces a vídeos de YouTube](https://loopedback.com/2019/11/15/setting-up-eve-ng-for-ccna-ccnp-ccie-level-studies-includes-multiple-vendor-node-support-an-absolutely-amazing-study-tool-to-check-out-asap/)
 
-[How To Add Cisco VIRL vIOS image to Eve-ng](https://networkhunt.com/how-to-add-cisco-virl-vios-image-to-eve-ng/)
+[Cómo añadir la imagen Cisco VIRL vIOS a Eve-ng](https://networkhunt.com/how-to-add-cisco-virl-vios-image-to-eve-ng/)
 
-Overall the steps here are a little complicated and could be much easier but the above blogs and videos walk through the process of adding the images to your EVE-NG box.
+En general, los pasos aquí son un poco complicados y podrían ser mucho más fáciles, pero los blogs y videos anteriores guían a través del proceso de añadir las imágenes a su caja EVE-NG.
 
-I used FileZilla to transfer the qcow2 to the VM over SFTP.
+Se ha utilizado FileZilla para transferir el qcow2 a la máquina virtual a través de SFTP.
 
-For our lab, we need Cisco vIOS L2 (switches) and Cisco vIOS (router)
+Para nuestro laboratorio, necesitamos Cisco vIOS L2 (switches) y Cisco vIOS (router)
 
-### Create a Lab
+### Crear un Laboratorio
 
-Inside the EVE-NG web interface, we are going to create our new network topology. We will have four switches and one router that will act as our gateway to outside networks.
+Dentro de la interfaz web de EVE-NG, vamos a crear nuestra nueva topología de red. Tendremos cuatro switches y un router que actuará como nuestra puerta de enlace a redes externas.
 
 | Node    | IP Address   |
 | ------- | ------------ |
@@ -42,50 +42,50 @@ Inside the EVE-NG web interface, we are going to create our new network topology
 | Switch3 | 10.10.88.113 |
 | Switch4 | 10.10.88.114 |
 
-#### Adding our Nodes to EVE-NG
+#### Añadir nodos a EVE-NG
 
-When you first log in to EVE-NG you will see a screen like the below, we want to start by creating our first lab.
+La primera vez que inicies sesión en EVE-NG verás una pantalla como la siguiente, queremos empezar por crear nuestro primer laboratorio.
 
 ![](Images/Day26_Networking2.png)
 
-Give your lab a name and the other fields are optional.
+Dale un nombre a tu laboratorio y los otros campos son opcionales.
 
 ![](Images/Day26_Networking3.png)
 
-You will be then greeted with a blank canvas to start creating your network. Right-click on your canvas and choose add node.
+Te aparecerá un lienzo en blanco para crear tu red. Haz clic con el botón derecho del ratón sobre el lienzo y selecciona añadir nodo.
 
-From here you will have a long list of node options, If you have followed along above you will have the two in blue shown below and the others are going to be grey and unselectable.
+A partir de aquí tendrás una larga lista de opciones de nodos, si has seguido lo anterior tendrás los dos en azul que se muestran a continuación y los otros van a ser de color gris y no seleccionables.
 
 ![](Images/Day26_Networking4.png)
 
-We want to add the following to our lab:
+Queremos añadir lo siguiente a nuestro laboratorio:
 
 - 1 x Cisco vIOS Router
 - 4 x Cisco vIOS Switch
 
-Run through the simple wizard to add them to your lab and it should look something like this.
+Ejecuta el sencillo asistente para añadirlos a tu laboratorio y deberías tener este aspecto.
 
 ![](Images/Day26_Networking5.png)
 
-#### Connecting our nodes
+#### Conectando nuestros nodos
 
-We now need to add our connectivity between our routers and switches. We can do this quite easily by hovering over the device and seeing the connection icon as per below and then connecting that to the device we wish to connect to.
+Ahora necesitamos añadir nuestra conectividad entre nuestros routers y switches. Podemos hacerlo fácilmente pasando el ratón por encima del dispositivo y viendo el icono de conexión como se muestra a continuación y conectándolo al dispositivo al que deseamos conectarnos.
 
 ![](Images/Day26_Networking6.png)
 
-When you have finished connecting your environment you may also want to add some way to define physical boundaries or locations using boxes or circles which can also be found in the right-click menu. You can also add text which is useful when we want to define our naming or IP addresses in our labs.
+Cuando hayas terminado de conectar tu entorno, es posible que también desees añadir alguna forma de definir los límites físicos o ubicaciones utilizando cajas o círculos que también se pueden encontrar en el menú del botón derecho. También puedes añadir texto, lo cual es útil cuando queremos definir nuestros nombres o direcciones IP en nuestros laboratorios.
 
-I went ahead and made my lab look like the below.
+Seguí adelante e hice mi laboratorio como el siguiente.
 
 ![](Images/Day26_Networking7.png)
 
-You will also notice that the lab above is all powered off, we can start our lab by selecting everything and right-clicking and selecting start selected.
+También te darás cuenta de que el laboratorio de arriba está todo apagado, podemos iniciar nuestro laboratorio seleccionando todo y haciendo clic derecho y seleccionando iniciar seleccionado.
 
 ![](Images/Day26_Networking8.png)
 
-Once we have our lab up and running you will be able to console into each device and you will notice at this stage they are pretty dumb with no configuration. We can add some configuration to each node by copying or creating your own in each terminal.
+Una vez que tengamos nuestro laboratorio en marcha, podremos acceder a la consola de cada dispositivo y nos daremos cuenta de que en esta etapa son bastante tontos, sin ninguna configuración. Podemos añadir alguna configuración a cada nodo copiando o creando la tuya propia en cada terminal.
 
-I will leave my configuration in the Networking folder of the repository for reference.
+Dejaré mi configuración en la carpeta Networking del repositorio como referencia.
 
 | Node    | Configuration         |
 | ------- | --------------------- |
@@ -95,7 +95,7 @@ I will leave my configuration in the Networking folder of the repository for ref
 | Switch3 | [SW3](Networking/SW3) |
 | Switch4 | [SW4](Networking/SW4) |
 
-## Resources
+## ResRecursosources
 
 - [Free Course: Introduction to EVE-NG](https://www.youtube.com/watch?v=g6B0f_E0NMg)
 - [EVE-NG - Creating your first lab](https://www.youtube.com/watch?v=9dPWARirtK8)
@@ -104,8 +104,8 @@ I will leave my configuration in the Networking folder of the repository for ref
 - [Practical Networking](http://www.practicalnetworking.net/)
 - [Python Network Automation](https://www.youtube.com/watch?v=xKPzLplPECU&list=WL&index=126)
 
-Most of the examples I am using here as I am not a Network Engineer have come from this extensive book which is not free but I am using some of the scenarios to help understand Network Automation.
+La mayoría de los ejemplos utilizados provienen de este extenso libro que no es gratuito, pero estoy utilizando algunos de los escenarios para ayudar a entender la Automatización de Redes.
 
 - [Hands-On Enterprise Automation with Python (Book)](https://www.packtpub.com/product/hands-on-enterprise-automation-with-python/9781788998512)
 
-See you on [Day 27](day27.md)
+Nos vemos el [Día 27](day27.md).
