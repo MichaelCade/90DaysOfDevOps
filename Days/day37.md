@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Gitting to know Git - Day 37'
+title: "#90DaysOfDevOps - Gitting to know Git - Day 37"
 published: false
 description: 90DaysOfDevOps - Gitting to know Git
-tags: 'DevOps, 90daysofdevops, learning'
+tags: "DevOps, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048707
@@ -169,3 +169,5 @@ I have taken these from [atlassian](https://www.atlassian.com/git/tutorials/atla
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 
 See you on [Day 38](day38.md)
+
+# Completed Daily exercises - Git cheatsheet, git help documentation, git ecosystem
