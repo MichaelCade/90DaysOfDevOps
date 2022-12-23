@@ -56,9 +56,32 @@ Managed Cloud offering
 
 - [Terraform Sentinel](https://www.terraform.io/cloud-docs/sentinel) - embedded policy-as-code framework integrated with the HashiCorp Enterprise products. It enables fine-grained, logic-based policy decisions, and can be extended to use information from external sources.
 
-Automated testing
+### Automated testing
 
 - [Terratest](https://terratest.gruntwork.io/) - Terratest is a Go library that provides patterns and helper functions for testing infrastructure
+- Terratest makes it easier to write automated tests for our infrastructure code. It provides a variety of helper functions and patterns for common infrastructure testing.
+
+- To Run this application
+  * git clone #repo_url# <br />
+  * cd test  <br />
+  * go mod init "<MODULE_NAME>"  <br />
+  **MODULE_NAME would be github.com/<YOUR_USERNAME>/<YOUR_REPO_NAME>**  <br />
+  * go mod init github.com/<FOLDER-PATH>  <br/>
+  * go run
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+go mod init "<MODULE_NAME>" would create go.mod file into test folder.  <br />
+* The go.mod file is the root of dependency management in GoLang. 
+* All the modules which are needed or to be used in the project are maintained here in go.mod file.
+* It creates entry for all the packages we are going to use/import in our project.
+* It reduces effort for getting each dependencies manually.
+
+On running **go test** for the first time you would get go.sum file created. <br />
+* go.sum file is created when **go test** or **go build** is executed for the first time.
+* It installs all the packages with specific version(latest)
+* we do not need to edit or modify this file.
+
 
 Worth a mention
 
