@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - The Big Picture: Containers - Day 42'
+title: "#90DaysOfDevOps - The Big Picture: Containers - Day 42"
 published: false
 description: 90DaysOfDevOps - The Big Picture Containers
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048826
@@ -136,3 +136,5 @@ A container image is a lightweight, standalone, executable package of software t
 - [Introduction to Container By Red Hat](https://www.redhat.com/en/topics/containers)
 
 See you on [Day 43](day43.md)
+
+# Completed daily exercises - Docker tutorials
