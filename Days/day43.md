@@ -86,3 +86,5 @@ I will run through the Docker Desktop installation for Windows on another Window
 - [WSL 2 with Docker getting started](https://www.youtube.com/watch?v=5RQbdMn04Oc)
 
 See you on [Day 44](day44.md)
+
+# Completed daily exercises - Installed Docker Desktop
