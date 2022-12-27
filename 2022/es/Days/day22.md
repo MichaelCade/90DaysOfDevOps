@@ -1,99 +1,106 @@
-The content below comes mostly from Practical Networking's [Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). If you prefer this content in video form, check out these two videos:
+El contenido que figura a continuación procede en su mayor parte de Practical Networking [Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). Si prefieres este contenido en forma de vídeo, echa un vistazo a estos dos vídeos:
 
 * [The OSI Model: A Practical Perspective - Layers 1 / 2 / 3](https://www.youtube.com/watch?v=LkolbURrtTs&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=3)
 * [The OSI Model: A Practical Perspective - Layers 4 / 5+](https://www.youtube.com/watch?v=0aGqGKrRE0g&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=4)
 
-## The OSI Model - The 7 Layers
+## El Modelo OSI - Las 7 Capas
 
-The overall purpose of networking as an industry is to allow two hosts to share data. Before networking if I want to get data from this host to this host I'd have to plug something into this host walk it over to the other host and plug it into the other host.
+El propósito general de las redes como industria es permitir que dos hosts compartan datos entre ellos. Antes de la conexión en red, si se necesitaba trasladar datos de un host a otro, se tenía que conectar algo en el primer host, llevarlo al otro host y conectarlo allí para conseguir nuestro propósito. Nos ha solucionado muchos aspectos de la vida siendo una revolución industrial, social y creando incluso una [cultura](https://es.wikipedia.org/wiki/Cibercultura) propia. 
 
-Networking allows us to automate this by allowing the host to share data automatically across the wire for these hosts to do this they must follow a set of rules.
+La conexión en red nos permite automatizar el proceso mencionados, permitiendo que un host comparta datos automáticamente a través de la conexión, sea por cable o por redes inalámbricas. Para que estos hosts puedan realizar esta labor, es necesario que sigan un conjunto de reglas comunes.
 
-This is no different than any language. English has a set of rules that two English speakers must follow. Spanish has its own set of rules. French has its own set of rules, while networking also has its own set of rules
+Esto no es diferente de cualquier idioma. El inglés tiene una serie de reglas que deben seguir dos angloparlantes. El español tiene sus propias reglas. El francés tiene sus propias reglas, y el trabajo en red también tiene las suyas.
 
-The rules for networking are divided into seven different layers and those layers are known as the OSI model.
+Las reglas de las redes actualmente más utilizadas se dividen en siete capas diferentes y esas capas se conocen como el modelo OSI. Aunque existen otros modelos, este es el más extendido y el que ha creado un estándar.
 
-### Introduction to the OSI Model
+### Introducción al Modelo OSI
 
-The OSI Model (Open Systems Interconnection Model) is a framework used to describe the functions of a networking system. The OSI model characterises computing functions into a universal set of rules and requirements to support interoperability between different products and software. In the OSI reference model, the communications between a computing system are split into seven different abstraction layers: **Physical, Data Link, Network, Transport, Session, Presentation, and Application**.
+El modelo OSI (Open Systems Interconnection Model) es un marco utilizado para describir las funciones de un sistema de red. El modelo OSI caracteriza las funciones informáticas en un conjunto universal de reglas y requisitos para apoyar la interoperabilidad entre diferentes productos y software. En el modelo de referencia OSI, las comunicaciones entre un sistema informático se dividen en siete capas de abstracción diferentes:
 
-![](Images/Day22_Networking1.png)
+- **Física**
+- **Enlace de Datos**
+- **Red**
+- **Transporte**
+- **Sesión**
+- **Presentación**
+- **Aplicación**.
 
-### Physical
+Veamos un poco sobre estas capas.
 
-Layer 1 in the OSI model and this is known as physical, the premise of being able to get data from one host to another through a means be it physical cable or we could also consider Wi-Fi in this layer as well. We might also see some more legacy hardware seen here around hubs and repeaters to transport the data from one host to another.
+### Física
+
+Capa 1 en el modelo OSI se conoce como la capa física, la premisa de ser capaz de obtener datos de un host a otro a través de un medio ya sea el cable físico o también podríamos considerar los medios inalámbricos como el Wi-Fi en esta capa. Algo más de hardware heredado de esta capa son los hubs y los repetidores para transportar los datos de un host a otro.
 
 ![](Images/Day22_Networking2.png)
 
-### Data Link
+### Enlace de datos
 
-Layer 2, the data link enables a node to node transfer where data is packaged into frames. There is also a level of error correcting that might have occurred at the physical layer. This is also where we introduce or first see MAC addresses.
+En la capa 2, el enlace de datos permite una transferencia de nodo a nodo donde los datos se empaquetan en tramas. También hay un nivel de corrección de errores que podría haber ocurrido en la capa física. Aquí es donde introducimos o vemos por primera vez las direcciones MAC.
 
-This is where we see the first mention of switches that we covered on our first day of networking on [Day 21](day21.md)
+Los switches que describimos en el [Día 21](day21.md) trabajan principalmente en esta capa.
 
 ![](Images/Day22_Networking3.png)
 
-### Network
+### Red
 
-You have likely heard the term layer 3 switches or layer 2 switches. In our OSI model Layer 3, the Network has a goal of an end to end delivery, this is where we see our IP addresses also mentioned in the first-day overview.
+Es probable que hayas oído el término switches de capa 3 o switches de capa 2. En nuestro modelo OSI Capa 3, la Red tiene como objetivo una entrega de extremo a extremo, aquí es donde vemos nuestras direcciones IP también mencionadas en el resumen del [Día 21](day21.md).
 
-Routers and hosts exist at layer 3, remember the router is the ability to route between multiple networks. Anything with an IP could be considered Layer 3.
+Los Routers y los hosts se ubican en la capa 3, recuerda que el router es la capacidad de enrutar entre múltiples redes. Cualquier dispositivo con IP podría considerarse de Capa 3.
 
 ![](Images/Day22_Networking4.png)
 
-So why do we need addressing schemes on both Layers 2 and 3? (MAC Addresses vs IP Addresses)
+Entonces, ¿por qué necesitamos esquemas de direccionamiento en las Capas 2 y 3? (Direcciones MAC vs Direcciones IP)
 
-If we think about getting data from one host to another, each host has an IP address but there are several switches and routers in between. Each of the devices has that layer 2 MAC address.
+Si pensamos en la transmisión de datos de un host a otro, cada host tiene una dirección IP, pero hay varios switches y routers entre ellos. Cada uno de los dispositivos tiene una dirección MAC de capa 2.
 
-The layer 2 MAC address will go from host to switch/router only, it is focused on hops whereas the layer 3 IP addresses will stay with that packet of data until it reaches its end host. (End to End)
+La dirección MAC de capa 2 sólo irá de host a switch/router, se centra en los saltos mientras que las direcciones IP de capa 3 permanecerán con ese paquete de datos hasta que llegue a su host final. (De extremo a extremo)
 
-IP Addresses - Layer 3 = End to End Delivery
+> Direcciones IP - Capa 3 = Entrega de extremo a extremo.
 
-MAC Addresses - Layer 2 = Hop to Hop Delivery
+> Direcciones MAC - Capa 2 = Entrega de Salto a Salto.
 
-Now there is a network protocol that we will get into but not today called ARP(Address Resolution Protocol) which links our Layer3 and Layer2 addresses.
+Un protocolo de red que veremos, pero no hoy, es el ARP (Protocolo de Resolución de Direcciones) el cuál enlaza nuestras direcciones de Capa3 y Capa2.
 
-### Transport
+### Transporte
 
-Service to Service delivery, Layer 4 is there to distinguish data streams. In the same way that Layer 3 and Layer 2 both had their addressing schemes, in Layer 4 we have ports.
+Entrega de Servicio a Servicio, la Capa 4 está ahí para distinguir los flujos de datos. De la misma manera que la Capa 3 y la Capa 2 tenían sus esquemas de direccionamiento, en la Capa 4 tenemos puertos.
 
 ![](Images/Day22_Networking5.png)
 
-### Session, Presentation, Application
+### Sesión, Presentación, Aplicación
 
-The distinction between Layers 5,6,7 is or had become somewhat vague.
+La distinción entre las Capas 5, 6 y 7 es, o había llegado a ser, algo difusa.
 
-It is worth looking at the [TCP IP Model](https://www.geeksforgeeks.org/tcp-ip-model/) to get a more recent understanding.
+Merece la pena consultar el [TCP IP Model](https://www.geeksforgeeks.org/tcp-ip-model/) para obtener una comprensión más reciente.
 
-Let's now try and explain what's happening when hosts are communicating with each other using this networking stack. This host has an application that's going to generate data that is meant to be sent to another host.
+Intentemos comprender qué ocurre cuando los hosts se comunican entre sí utilizando el modelo OSI. El primer host tiene una aplicación que va a generar datos que están destinados a ser enviados a otro host.
 
-The source host is going to go through is what's known as the encapsulation process. That data will be first sent to layer 4.
+El host de origen va a pasar por lo que se conoce como proceso de encapsulación. Esos datos serán enviados primero a la capa 4.
 
-Layer 4 is going to add a header to that data which can facilitate the goal of layer 4 which is service to service delivery. This is going to be a port using either TCP or UDP. It is also going to include the source port and destination port.
+La capa 4 va a añadir una cabecera a esos datos que puede facilitar el objetivo de la capa 4 que es la entrega de servicio a servicio. Se trata de un puerto TCP o UDP. También incluirá el puerto de origen y el puerto de destino. Esto se conoce como segmento (datos y puerto).
 
-This may also be known as a segment (Data and Port)
+Este segmento bajará por la pila OSI hasta la capa 3, la capa de red, y la capa de red añadirá otra cabecera a estos datos.
+Esta cabecera va a facilitar el objetivo de la capa 3 que es la entrega de extremo a extremo, lo que significa que en esta cabecera tendrás una dirección IP de origen y una IP de destino, la cabecera más los datos también pueden ser referidos como un paquete.
 
-This segment is going to be passed down the OSI stack to layer 3, the network layer, and the network layer is going to add another header to this data.
-This header is going to facilitate the goal of layer 3 which is the end to end delivery meaning in this header you will have a source IP address and a destination IP, the header plus data may also be referred to as a packet.
+La capa 3 tomará ese paquete y se lo pasará a la capa 2, la capa 2 añadirá otra cabecera a esos datos para cumplir el objetivo de la capa 2 de entrega de salto a salto, lo que significa que esta cabecera incluirá una dirección mac de origen y de destino. Esto se conoce como trama cuando se tiene la cabecera de capa 2 y los datos.
 
-Layer 3 will then take that packet and hand it off to layer 2, layer 2 will once again add another header to that data to accomplish layer 2's goal of hop to hop delivery meaning this header will include a source and destination mac address.
-This is known as a frame when you have the layer 2 header and data.
-
-That frame then gets converted into ones and zeros and sent over the Layer 1 Physical cable or wifi.
+Esa trama luego se convierte en unos y ceros y se envía a través de la capa 1 de cable físico o wifi. 
 
 ![](Images/Day22_Networking6.png)
 
-I did mention above the naming for each layer of header plus data but decided to draw this out as well.
+¡No es increíble!
 
 ![](Images/Day22_Networking7.png)
 
-The Application sending the data is being sent somewhere so the receiving is somewhat in reverse to get that back up the stack and into the receiving host.
+La aplicación que envía los datos está siendo enviada a alguna parte por lo que la recepción es algo a la inversa para conseguir que vuelva a la pila y en el host receptor. Es decir, llega a la capa física, sigue por la capa de enlace de datos, la de red, la de transporte hasta la de sesión.
 
 ![](Images/Day22_Networking8.png)
 
-## Resources
+Esto en cada pequeña transmisión de datos que efectuamos en la red. ¿Es tan apasionante para mí como para tí? Pues sigamos al siguiente día.
+
+## Recursos
 
 * [Networking Fundamentals](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
 - [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 
-See you on [Day23](day23.md)
+Nos vemos en el [Día 23](day23.md).

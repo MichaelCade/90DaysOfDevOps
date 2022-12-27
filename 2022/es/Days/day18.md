@@ -273,5 +273,6 @@ Entonces, si todo está configurado correctamente, podrá acceder a través de s
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need to be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 - [Webminal](https://www.webminal.org/) 
+- [Guía básica de Vim](https://gitea.vergaracarmona.es/man-linux/Guia-VIM)
 
 Nos vemos en el [Día 19](day19.md).
