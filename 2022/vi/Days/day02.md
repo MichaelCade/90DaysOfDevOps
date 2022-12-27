@@ -51,7 +51,7 @@ Mặt khác, chúng ta có một các môi trường, cơ sở hạ tầng hoặ
 
 Câu hỏi lớn là làm thế nào để chúng ta đưa những tính năng và bản sửa lỗi đó vào ứng dụng của mình và cung cấp cho những người dùng cuối?
 
-Làm cách nào để chúng tôi phát hành phiên bản mới của ứng dụng? Đây là một trong những nhiệm vụ chính của kỹ sư DevOps và điều quan trọng ở đây là không chỉ tìm ra cách thực hiện điều này một lần mà chúng ta cần thực hiện việc này liên tục theo một cách tự động, hiệu quả mà vẫn bao gồm quá trình kiểm thử!
+Làm cách nào để chúng ta phát hành phiên bản mới của ứng dụng? Đây là một trong những nhiệm vụ chính của kỹ sư DevOps và điều quan trọng ở đây là không chỉ tìm ra cách thực hiện điều này một lần mà chúng ta cần thực hiện việc này liên tục theo một cách tự động, hiệu quả mà vẫn bao gồm quá trình kiểm thử!
 
 Chúng ta sẽ kết thúc ngày thứ 2 tại đây. mong rằng đây là một bài viết hữu ích. Trong vài ngày tới, chúng ta sẽ đi sâu hơn vào một số lĩnh vực khác của DevOps. Sau đó, chúng ta sẽ tìm hiểu kỹ về các công cụ, quy trình cũng như lợi ích của chúng.
 

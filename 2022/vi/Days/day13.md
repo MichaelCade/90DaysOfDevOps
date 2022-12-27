@@ -316,6 +316,6 @@ Các câu lệnh này sẽ cung cấp cho bạn các tệp nhị phân cho tất
 
 Đây sẽ là ngày kết thúc cho 7 ngày tìm hiểu về Ngôn ngữ lập trình! Còn rất nhiều điều chúng ta cần tìm hiểu và tôi hy vọng bạn có thể tiếp tục thông qua các tài nguyên ở trên nhằm có thể hiểu một số khía cạnh khác của ngôn ngữ lập trình Go.
 
-Tiếp theo, chúng tôi tập trung vào Linux và một số nguyên tắc cơ bản mà tất cả chúng ta nên biết về nó.
+Tiếp theo, chúng ta tập trung vào Linux và một số nguyên tắc cơ bản mà tất cả chúng ta nên biết về nó.
 
 Hẹn gặp lại các bạn vào [Ngày 14](day14.md).
