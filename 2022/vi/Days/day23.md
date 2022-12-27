@@ -20,7 +20,7 @@ Các giao thức mạng là một tập hợp các quy tắc giao tiếp tạo t
 
 Nếu bạn muốn tìm hiểu sâu hơn về ARP, bạn có thể đọc Internet Standard tại đây. [RFC 826](https://datatracker.ietf.org/doc/html/rfc826)
 
-Một địa chỉ IP sẽ được gắn với một địa chỉ máy vật lý cố định, còn được gọi là địa chỉ MAC trên mạng lớp 2.
+Một địa chỉ IP sẽ được gắn với một địa chỉ vật lý cố định, còn được gọi là địa chỉ MAC trên mạng lớp 2.
 
 ![](../../Days/Images/Day23_Networking1.png)
 
@@ -115,4 +115,4 @@ Mạng con cũng có thể cải thiện tính an toàn. Nếu một phần củ
 - [Subnetting Mastery](https://www.youtube.com/playlist?list=PLIFyRwBY_4bQUE4IB5c4VPRyDoLgOdExE)
 - [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 
-Hẹn gặp lại các bạn vào [Ngày 24] (day24.md)
+Hẹn gặp lại các bạn vào [Ngày 24](day24.md)

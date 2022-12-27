@@ -100,7 +100,7 @@ Quản lý cấu hình - chúng ta chưa đến phần Quản lý cấu hình, n
 
 [Link to Ansible Network Modules](https://docs.ansible.com/ansible/2.9/modules/list_of_network_modules.html)
 
-Chúng ta cũng sẽ tìm hiểu **Ansible Tower** trong phần quản lý cấu hình, đây là giao diện người dùng GUI cho Ansible.
+Chúng ta cũng sẽ tìm hiểu **Ansible Tower** trong phần quản lý cấu hình, nó được xem như là giao diện người dùng (GUI) cho Ansible.
 
 CI/CD - Một lần nữa, chúng ta sẽ đề cập nhiều hơn về các khái niệm và công cụ xung quanh vấn đề này nhưng điều quan trọng là ít nhất phải đề cập ở đây vì khái niệm này không chỉ xuất hiện trong phần mạng mà còn bao gồm trong tất cả quá trình cung cấp dịch vụ và nền tảng.
 
@@ -146,4 +146,4 @@ Cho đến nay, chúng ta vẫn chưa đề cập đến tất cả các chủ �
 - [Practical Networking](http://www.practicalnetworking.net/)
 - [Python Network Automation](https://www.youtube.com/watch?v=xKPzLplPECU&list=WL&index=126)
 
-Hẹn gặp lại các bạn vào [Ngày 25] (day25.md)
+Hẹn gặp lại các bạn vào [Ngày 25](day25.md)
