@@ -1,14 +1,14 @@
 ---
-title: '#90DaysOfDevOps - Mô hình 7 Lớp OSI - Ngày 23'
+title: '#90DaysOfDevOps - Giao thức mạng - Ngày 23'
 published: false
-description: 90DaysOfDevOps - Mô hình 7 Lớp OSI
+description: 90DaysOfDevOps - Giao thức mạng
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
-id: 1049037
+id: 1048704
 ---
 
-Nội dung của phần này chủ yếu từ sê-ri [Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). Nếu bạn thích học thông qua video, bạn có thể xem 2 video sau:
+Nội dung của phần này chủ yếu từ sê-ri [Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). Nếu bạn thích học thông qua video, bạn có thể xem video sau:
 
 * [Network Protocols - ARP, FTP, SMTP, HTTP, SSL, TLS, HTTPS, DNS, DHCP](https://www.youtube.com/watch?v=E5bSumTAHZE&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=12)
 
