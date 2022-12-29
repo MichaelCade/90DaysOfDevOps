@@ -253,12 +253,21 @@ Contributors
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/SvetlomirBalevski>
+            <img src=https://avatars.githubusercontent.com/u/22419073?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=SvetlomirBalevski/>
+            <br />
+            <sub style="font-size:14px"><b>SvetlomirBalevski</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/karchuntan>
             <img src=https://avatars.githubusercontent.com/u/88613099?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Tan Kar Chun/>
             <br />
             <sub style="font-size:14px"><b>Tan Kar Chun</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/stonedseeker>
             <img src=https://avatars.githubusercontent.com/u/93109628?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Vaibhav Singh Chandel/>
@@ -266,8 +275,6 @@ Contributors
             <sub style="font-size:14px"><b>Vaibhav Singh Chandel</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/chrissieliang>
             <img src=https://avatars.githubusercontent.com/u/82887467?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=chrissieliang/>
@@ -303,6 +310,8 @@ Contributors
             <sub style="font-size:14px"><b>Anosh Bhakare</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/AnvaySingh>
             <img src=https://avatars.githubusercontent.com/u/105000712?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Anvay/>
@@ -310,8 +319,6 @@ Contributors
             <sub style="font-size:14px"><b>Anvay</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/akumbhani66>
             <img src=https://avatars.githubusercontent.com/u/24426308?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Ashvin Kumbhani/>
@@ -347,6 +354,8 @@ Contributors
             <sub style="font-size:14px"><b>Iancu Andrei</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/jesseloudon>
             <img src=https://avatars.githubusercontent.com/u/13147870?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Jesse Loudon/>
@@ -354,8 +363,6 @@ Contributors
             <sub style="font-size:14px"><b>Jesse Loudon</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/kalantelus>
             <img src=https://avatars.githubusercontent.com/u/68246784?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Kalan Chan/>
@@ -391,6 +398,8 @@ Contributors
             <sub style="font-size:14px"><b>Nischay</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/cpk777>
             <img src=https://avatars.githubusercontent.com/u/26348422?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Pavan Kalyan Chiluka/>
@@ -398,8 +407,6 @@ Contributors
             <sub style="font-size:14px"><b>Pavan Kalyan Chiluka</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/prabeshmagar>
             <img src=https://avatars.githubusercontent.com/u/53116461?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Prabesh Magar/>
@@ -435,6 +442,8 @@ Contributors
             <sub style="font-size:14px"><b>Shreyes Srivastava</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/YorikasChopanos>
             <img src=https://avatars.githubusercontent.com/u/99435695?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Georgios Karagiannidis/>
@@ -442,8 +451,6 @@ Contributors
             <sub style="font-size:14px"><b>Georgios Karagiannidis</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/ZvanYang>
             <img src=https://avatars.githubusercontent.com/u/20137434?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Zhaoyang/>
@@ -479,6 +486,8 @@ Contributors
             <sub style="font-size:14px"><b>Mohamed Salah</b></sub>
         </a>
     </td>
+</tr>
+<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/neeljani95>
             <img src=https://avatars.githubusercontent.com/u/91366394?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=neeljani95/>
@@ -486,8 +495,6 @@ Contributors
             <sub style="font-size:14px"><b>neeljani95</b></sub>
         </a>
     </td>
-</tr>
-<tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/nwekechinonso>
             <img src=https://avatars.githubusercontent.com/u/48686617?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=nweke chinonso/>
