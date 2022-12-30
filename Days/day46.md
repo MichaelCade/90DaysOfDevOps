@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Docker Compose - Day 46'
+title: "#90DaysOfDevOps - Docker Compose - Day 46"
 published: false
 description: 90DaysOfDevOps - Docker Compose
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048740
@@ -181,3 +181,5 @@ To remove everything we can use the `docker-compose down` command.
 - [YAML Tutorial: Everything You Need to Get Started in Minute](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started)
 
 See you on [Day 47](day47.md)
+
+# Completed xercises - Docker compose
