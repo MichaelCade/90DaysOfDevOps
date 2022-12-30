@@ -92,7 +92,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] 🏗️ 45 > [The anatomy of a Docker Image](Days/day45.md)
 - [✔️] 🏗️ 46 > [Docker Compose](Days/day46.md)
 - [✔️] 🏗️ 47 > [Docker Networking & Security](Days/day47.md)
-- [] 🏗️ 48 > [Alternatives to Docker](Days/day48.md)
+- [✔️] 🏗️ 48 > [Alternatives to Docker](Days/day48.md)
 
 ### Kubernetes
 
