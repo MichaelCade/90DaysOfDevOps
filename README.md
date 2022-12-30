@@ -88,7 +88,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 
 - [✔️] 🏗️ 42 > [The Big Picture: Containers](Days/day42.md)
 - [✔️] 🏗️ 43 > [What is Docker & Getting installed](Days/day43.md)
-- [] 🏗️ 44 > [Docker Images & Hands-On with Docker Desktop](Days/day44.md)
+- [✔️] 🏗️ 44 > [Docker Images & Hands-On with Docker Desktop](Days/day44.md)
 - [] 🏗️ 45 > [The anatomy of a Docker Image](Days/day45.md)
 - [] 🏗️ 46 > [Docker Compose](Days/day46.md)
 - [] 🏗️ 47 > [Docker Networking & Security](Days/day47.md)

@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Docker Images & Hands-On with Docker Desktop - Day 44'
+title: "#90DaysOfDevOps - Docker Images & Hands-On with Docker Desktop - Day 44"
 published: false
 description: 90DaysOfDevOps - Docker Images & Hands-On with Docker Desktop
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048708
@@ -140,3 +140,5 @@ I wanted that to hopefully give you an overview of Docker Desktop and the not-so
 - [WSL 2 with Docker getting started](https://www.youtube.com/watch?v=5RQbdMn04Oc)
 
 See you on [Day 45](day45.md)
+
+# Completed exercises - Docker Desktop, Docker Engine, Images
