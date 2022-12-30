@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Docker Networking & Security - Day 47'
+title: "#90DaysOfDevOps - Docker Networking & Security - Day 47"
 published: false
 description: 90DaysOfDevOps - Docker Networking & Security
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1049078
@@ -137,3 +137,5 @@ Checking `docker image` is a great command to see the size of your images.
 - [YAML Tutorial: Everything You Need to Get Started in Minute](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started)
 
 See you on [Day 48](day48.md)
+
+# Completed exercises Docker networking and security
