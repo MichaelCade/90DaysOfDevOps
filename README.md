@@ -22,10 +22,11 @@ The two images below will take you to the 2022 and 2023 edition of the learning 
  <a href="2022.md">
  <img src="2022.png?raw=true" alt="2022" width="70%" height="70%" />
 </p>
+
 </a>
 <p align="center">
  <a href="2023.md">
- <img src="2023.png?raw=true" alt="2023" width="50%" height="50%" />
+ <img src="2023.png?raw=true" alt="2023" width="70%" height="70%" />
 </p>
 </a>
 
