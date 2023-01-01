@@ -93,6 +93,13 @@ Contributors
 </tr>
 <tr>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
+        <a href=https://github.com/rishabkumar7>
+            <img src=https://avatars.githubusercontent.com/u/45825464?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Rishab Kumar/>
+            <br />
+            <sub style="font-size:14px"><b>Rishab Kumar</b></sub>
+        </a>
+    </td>
+    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
         <a href=https://github.com/LeslieLeung>
             <img src=https://avatars.githubusercontent.com/u/22127499?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Leslie Leung/>
             <br />
@@ -111,13 +118,6 @@ Contributors
             <img src=https://avatars.githubusercontent.com/u/72659846?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Murali-Puvvada/>
             <br />
             <sub style="font-size:14px"><b>Murali-Puvvada</b></sub>
-        </a>
-    </td>
-    <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
-        <a href=https://github.com/rishabkumar7>
-            <img src=https://avatars.githubusercontent.com/u/45825464?v=4 width="100;"  style="border-radius:50%;align-items:center;justify-content:center;overflow:hidden;padding-top:10px" alt=Rishab Kumar/>
-            <br />
-            <sub style="font-size:14px"><b>Rishab Kumar</b></sub>
         </a>
     </td>
     <td align="center" style="word-wrap: break-word; width: 150.0; height: 150.0">
