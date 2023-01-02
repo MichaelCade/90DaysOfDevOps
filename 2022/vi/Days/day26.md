@@ -105,7 +105,7 @@ Tôi sẽ để cấu hình của mình trong thư mục Networking của kho l�
 | Switch3 | [SW3](../../Days/Networking/SW3) |
 | Switch4 | [SW4](../../Days/Networking/SW4) |
 
-## Resources
+## Tài liệu tham khảo
 
 - [Free Course: Introduction to EVE-NG](https://www.youtube.com/watch?v=g6B0f_E0NMg)
 - [EVE-NG - Creating your first lab](https://www.youtube.com/watch?v=9dPWARirtK8)

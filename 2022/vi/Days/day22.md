@@ -8,7 +8,7 @@ canonical_url: null
 id: 1049037
 ---
 
-Nội dung của phần này chủ yếu từ sê-ri [Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). Nếu bạn thích học thông qua video, bạn có thể xem 2 video sau:
+Nội dung của phần này chủ yếu từ sê-ri [Networking Fundamentals series](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi). Nếu bạn thích học bằng video, hãy tham khảo 2 video sau:
 
 * [The OSI Model: A Practical Perspective - Layers 1 / 2 / 3](https://www.youtube.com/watch?v=LkolbURrtTs&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=3)
 * [The OSI Model: A Practical Perspective - Layers 4 / 5+](https://www.youtube.com/watch?v=0aGqGKrRE0g&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&index=4)
@@ -17,11 +17,11 @@ Nội dung của phần này chủ yếu từ sê-ri [Networking Fundamentals se
 
 Mục đích cơ bản của mạng máy tính là cho phép hai máy tính chia sẻ dữ liệu. Trước khi có mạng máy tính, nếu ta muốn chuyển dữ liệu từ một máy tính này đến một máy tính khác, ta cần phải gắn một thiết bị lưu trữ vào một máy tính, sao chép dữ liệu và đưa nó sang máy tính khác.
 
-Mạng máy tính cho phép chúng ta tự động hóa việc này bằng cách cho phép máy tính chia sẻ dữ liệu một cách tự động qua dây mạng (hoặc kết nối không dây). Để cho các máy tính có thể thực hiện việc đó, chúng cần phải tuân theo một bộ quy tắc.
+Mạng máy tính cho phép làm việc này một cách tự động bằng cách cho phép máy tính chia sẻ dữ liệu qua dây mạng (hoặc kết nối không dây). Để cho các máy tính có thể thực hiện việc đó, chúng cần phải tuân thủ một bộ quy tắc.
 
 Nguyên tắc này cũng tương tự như trong giao tiếp bằng ngôn ngữ. Tiếng Anh có một bộ quy tắc mà hai người nói tiếng Anh phải tuân theo. Tiếng Tây Ban Nha hay tiếng Pháp cũng có bộ quy tắc riêng, và mạng máy tính cũng có bộ quy tắc riêng của nó.
 
-Các quy tắc để giao tiếp trong mạng máy tính được chia thành bảy lớp khác nhau và những lớp đó được gọi là mô hình OSI.
+Các quy tắc để giao tiếp trong mạng máy tính được chia thành bảy lớp khác nhau và được gọi là mô hình OSI.
 
 ### Giới thiệu về mô hình OSI
 
@@ -100,7 +100,7 @@ Quá trình gửi và nhận dữ liệu của ứng dụng ở hai máy tính n
 
 ![](../../Days/Images/Day22_Networking8.png)
 
-## Resources
+## Tài liệu tham khảo
 
 * [Networking Fundamentals](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
 - [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)

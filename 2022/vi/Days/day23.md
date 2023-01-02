@@ -18,7 +18,7 @@ Các giao thức mạng là một tập hợp các quy tắc giao tiếp tạo t
 
 - ARP (Address Resolution Protocol) - Giao thức phân giải địa chỉ
 
-Nếu bạn muốn tìm hiểu sâu hơn về ARP, bạn có thể đọc Internet Standard tại đây. [RFC 826](https://datatracker.ietf.org/doc/html/rfc826)
+Nếu bạn muốn tìm hiểu sâu hơn về ARP, bạn có thể đọc về tiêu chuẩn Internet tại đây. [RFC 826](https://datatracker.ietf.org/doc/html/rfc826)
 
 Một địa chỉ IP sẽ được gắn với một địa chỉ vật lý cố định, còn được gọi là địa chỉ MAC trên mạng lớp 2.
 
@@ -56,7 +56,7 @@ Phiên bản mở rộng của HTTP, được sử dụng để cung cấp liên
 
 - DNS (Domain Name System) - Hệ thống tên miền
 
-DNS được sử dụng để ánh xạ các tên miền theo cách thân thiện với con người, chẳng hạn như tất cả chúng ta đều biết [google.com](https://google.com) nhưng nếu bạn mở trình duyệt và nhập [8.8.8.8](https:/ /8.8.8.8) bạn sẽ nhận được Google như chúng ta vẫn dùng. Tuy nhiên, bạn không thể nhớ tất cả các địa chỉ IP cho tất cả các trang web của bạn.
+DNS được sử dụng để ánh xạ các tên miền theo cách thân thiện với con người, chẳng hạn như tất cả chúng ta đều biết [google.com](https://google.com) nhưng nếu bạn mở trình duyệt và nhập [8.8.8.8](https://8.8.8.8) bạn sẽ truy cập được Google như chúng ta vẫn làm. Tuy nhiên, bạn không thể nhớ tất cả các địa chỉ IP cho tất cả các trang web của bạn.
 
 Đây là nơi DNS xuất hiện, nó đảm bảo rằng các máy tính, dịch vụ và các tài nguyên khác có thể truy cập được.
 
@@ -75,17 +75,17 @@ Có 4 điều chúng ta cần trên mọi máy tính để nó có thể đạt 
 - Gateway mặc định
 - DNS
 
-Chúng ta đã đề cập đến địa chỉ IP là một địa chỉ duy nhất đại diện cho máy tính của bạn trên mạng mà nó tham gia, chúng ta có thể coi đây là số nhà của chúng ta.
+Địa chỉ IP là địa chỉ duy nhất đại diện cho máy tính của chúng ta trên mạng mà nó tham gia, có thể coi đây là số nhà.
 
-Chúng ta sẽ đề cập Subnet Mask ngay sau đây, nhưng bạn có thể coi đây là mã bưu điện hoặc mã zip.
+Chúng ta có thể coi subnet mask như là mã bưu điện hoặc mã zip.
 
 Gateway mặc định là IP của bộ định tuyến đã cung cấp cho chúng ta kết nối đến Internet hoặc các mạng khác. Bạn có thể coi đây là con đường duy nhất cho phép chúng ta ra khỏi con phố của mình.
 
-Sau đó, chúng ta có DNS như chúng ta vừa trình bày để giúp chúng ta chuyển đổi các địa chỉ IP công cộng phức tạp thành các tên miền phù hợp và dễ nhớ hơn. Có lẽ chúng ta có thể coi đây là văn phòng phân loại khổng lồ để đảm bảo rằng chúng ta nhận được đúng gói hàng của mình.
+Sau đó, chúng ta có DNS để chuyển đổi các địa chỉ IP công khai phức tạp thành các tên miền phù hợp và dễ nhớ hơn. Chúng ta có thể coi đây là văn phòng phân loại khổng lồ để đảm bảo chúng ta nhận được đúng gói hàng của mình.
 
-Như tôi đã nói, mỗi máy tính yêu cầu 4 điều này, nếu bạn có 1000 hoặc 10.000 máy tính thì bạn sẽ mất rất nhiều thời gian để xác định từng thứ riêng lẻ. Đây là nơi DHCP xuất hiện và cho phép bạn xác định phạm vi cho mạng của mình và sau đó giao thức này sẽ cất phát những thông tin trên cho tất cả các máy tính có sẵn trong mạng của bạn.
+Như tôi đã nói, mỗi máy tính yêu cầu 4 cài đặt này, nếu bạn có 1000 hoặc 10.000 máy tính thì bạn sẽ mất rất nhiều thời gian để cấu hình tất cả. Chính vì vậy, DHCP xuất hiện và cho phép bạn xác định phạm vi cho mạng của mình và giao thức này sẽ cấp phát những thông tin trên cho tất cả các máy tính trong mạng của bạn.
 
-Một ví dụ khác là bạn đi vào một quán cà phê, lấy một ly cà phê và ngồi xuống với máy tính xách tay hoặc điện thoại của bạn. Bạn kết nối máy tính của mình với Wi-Fi của quán cà phê và bạn có quyền truy cập vào internet, tin nhắn và thư bắt đầu chuyển qua và bạn có thể duyệt web hay truy cập mạng xã hội. Khi bạn kết nối với Wi-Fi của quán cà phê, máy tính của bạn sẽ nhận một địa chỉ DHCP từ máy tính DHCP chuyên dụng hoặc rất có thể là từ bộ định tuyến cũng xử lý DHCP.
+Một ví dụ khác là bạn đi vào một quán cà phê, lấy một ly cà phê và ngồi xuống với máy tính xách tay hoặc điện thoại của bạn. Bạn kết nối máy tính của mình với Wi-Fi của quán cà phê và có quyền truy cập vào internet, tin nhắn và thư bắt đầu được gửi tới và bạn có thể duyệt web hay truy cập mạng xã hội. Khi bạn kết nối với Wi-Fi của quán cà phê, máy tính của bạn sẽ nhận một địa chỉ DHCP từ máy chủ DHCP chuyên dụng hoặc rất có thể là bộ định tuyến (router) của quán cũng xử lý DHCP.
 
 ![](../../Days/Images/Day23_Networking8.png)
 
@@ -105,11 +105,11 @@ Một tổ chức quốc tế chịu trách nhiệm cho xác định số lượ
 
 Bên cạnh một số lợi ích khác, việc phân chia một mạng lớn thành các mạng con cho phép tái sử dụng địa chỉ IP và giảm tắc nghẽn mạng, tăng hiệu quả sử dụng mạng.
 
-Mạng con cũng có thể cải thiện tính an toàn. Nếu một phần của mạng bị xâm phạm, nó có thể bị cách ly, khiến những kẻ xấu khó di chuyển trong mạng lớn hơn.
+Mạng con cũng có thể cải thiện tính bảo mật. Nếu một phần của mạng bị xâm phạm, nó có thể được cô lập khiến những kẻ tấn công khó có thể truy cập được các hệ thống mạng lớn hơn.
 
 ![](../../Days/Images/Day23_Networking9.png)
 
-## Resources
+## Tài liệu tham khảo
 
 - [Networking Fundamentals](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
 - [Subnetting Mastery](https://www.youtube.com/playlist?list=PLIFyRwBY_4bQUE4IB5c4VPRyDoLgOdExE)

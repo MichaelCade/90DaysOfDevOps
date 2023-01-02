@@ -107,7 +107,7 @@ Trong vài ngày tới, chúng ta sẽ tìm hiểu thêm về:
 - DHCP
 - Mạng con
 
-## Resources
+## Tài liệu tham khảo
 
 * [Các nguyên tắc cơ bản về mạng](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
 * [Toàn bộ khóa học Mạng máy tính](https://www.youtube.com/watch?v=IPvYjXCsTg8)

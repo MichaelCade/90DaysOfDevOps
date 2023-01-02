@@ -18,14 +18,14 @@ Mục đích của việc Tự động hóa mạng
 - Đạt được sự linh hoạt
 - Giảm chi phí
 - Loại bỏ lỗi
-- Đảm bảo sự tuân thủ
+- Tuân thủ các quy tắc, quy định (compliance)
 - Quản lý tập trung
 
 Quá trình áp dụng tự động hóa là riêng biệt cho từng doanh nghiệp. Không có một giải pháp nào phù hợp với tất cả các yêu cầu khi triển khai tự động hóa, khả năng xác định và nắm bắt phương pháp phù hợp nhất với tổ chức của bạn là rất quan trọng trong việc tiến tới duy trì hoặc tạo ra một môi trường linh hoạt hơn, trọng tâm luôn phải là giá trị kinh doanh và mục tiêu cuối cùng - trải nghiệm người dùng. (Chúng ta đã nói những điều tương tự ngay từ đầu về văn hóa DevOps và sự thay đổi văn hóa cũng như quy trình tự động mà điều này mang lại)
 
 Để phân tích vấn đề này, bạn cần xác định bằng cách nào những nhiệm vụ hoặc quy trình mà bạn đang cố gắng tự động hóa sẽ giúp cải thiện trải nghiệm của người dùng cuối hoặc giá trị kinh doanh trong khi vẫn tuân theo phương pháp tiếp cận có hệ thống từng bước.
 
-"Nếu bạn không biết mình đang đi đâu, thì bất kỳ con đường nào cũng sẽ đưa bạn đến đó."
+"Nếu bạn không biết mình đang đi đâu, thì bất kỳ con đường nào cũng sẽ đưa bạn đến đích."
 
 Có một framework hoặc bản thiết kế mà bạn đang cố gắng để hoàn thành, biết rõ mục tiêu cuối cùng của mình là gì và sau đó làm việc từng bước để đạt được mục tiêu đó, đo lường mức độ thành công của việc tự động hóa ở các giai đoạn khác nhau dựa trên kết quả kinh doanh.
 
@@ -139,7 +139,7 @@ Trong 3 ngày tới, tôi sẽ cung cấp nhiều hơn các bài thực hành v�
 
 Cho đến nay, chúng ta vẫn chưa đề cập đến tất cả các chủ đề của mạng máy tính nhưng tôi cũng muốn làm cho chủ đề này đủ rộng để theo dõi và các bạn có thể tiếp tục học hỏi từ các tài nguyên mà tôi bổ sung bên dưới.
 
-## Resources
+## Tài liệu tham khảo
 
 - [3 Necessary Skills for Network Automation](https://www.youtube.com/watch?v=KhiJ7Fu9kKA&list=WL&index=122&t=89s)
 - [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
