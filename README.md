@@ -97,7 +97,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 ### Kubernetes
 
 - [✔️] ☸ 49 > [The Big Picture: Kubernetes](Days/day49.md)
-- [] ☸ 50 > [Choosing your Kubernetes platform](Days/day50.md)
+- [✔️] ☸ 50 > [Choosing your Kubernetes platform](Days/day50.md)
 - [] ☸ 51 > [Deploying your first Kubernetes Cluster](Days/day51.md)
 - [] ☸ 52 > [Setting up a multinode Kubernetes Cluster](Days/day52.md)
 - [] ☸ 53 > [Rancher Overview - Hands On](Days/day53.md)

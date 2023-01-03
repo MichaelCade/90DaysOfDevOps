@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Choosing your Kubernetes platform - Day 50'
+title: "#90DaysOfDevOps - Choosing your Kubernetes platform - Day 50"
 published: false
 description: 90DaysOfDevOps - Choosing your Kubernetes platform
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1049046
@@ -77,3 +77,5 @@ I have been through a bit of a journey with my learning around Kubernetes so I a
 - [Kunal Kushwaha - Kubernetes Tutorial for Beginners | What is Kubernetes? Architecture Simplified!](https://www.youtube.com/watch?v=KVBON1lA9N8)
 
 See you on [Day 51](day51.md)
+
+# Completed exercises, Choosing your Kbernetes Platform
