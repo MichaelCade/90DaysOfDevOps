@@ -37,4 +37,6 @@ In summary, Overall, secure coding is a crucial practice that helps protect soft
 
 - [10 Secure Coding Practices You Can Implement Now](https://codesigningstore.com/secure-coding-practices-to-implement)
 
+- [Secure Coding Guidelines And Best Practices For Developers](https://www.softwaretestinghelp.com/guidelines-for-secure-coding/)
+
 In the next part [Day 8](day08.md), we will discuss Static Application Security Testing (SAST) in more detail.
