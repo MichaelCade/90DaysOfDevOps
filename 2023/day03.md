@@ -6,7 +6,7 @@ Yesterday we covered what is DevSecOps, in this post we are going to look at som
 
 First and foremost, all businesses and software is an attack vectors to an attacker, there is no safe place we can only make places safer and less attractive for people to attack. 
 
-![](images\day03-2.jpg)
+![](images/day03-2.jpg)
 ***[image from this source](https://www.trainerize.me/articles/outrun-bear/)***
 
 With that in mind, attackers are a constant threat! 
@@ -57,7 +57,7 @@ If you were to create an Attack Map of your home network or your business some o
 
 An attack map might look something like this with a key explaining what each number represents. 
 
-![](images\day03-1.png)
+![](images/day03-1.png)
 
 From this map we might consider there to be a denial of service or some malicious insider attack and access to S3 bucket to prevent the application saving data or causing it to save bad data. 
 
