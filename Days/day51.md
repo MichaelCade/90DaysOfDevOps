@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Deploying your first Kubernetes Cluster - Day 51'
+title: "#90DaysOfDevOps - Deploying your first Kubernetes Cluster - Day 51"
 published: false
 description: 90DaysOfDevOps - Deploying your first Kubernetes Cluster
-tags: 'DevOps, 90daysofdevops, learning'
+tags: "DevOps, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048778
@@ -89,7 +89,7 @@ Along with the official documentation, I have also found myself with this page o
 | kubectl get nodes        | List all nodes in cluster                  |
 | kubectl get namespaces   | List all namespaces in cluster             |
 | kubectl get pods         | List all pods in default namespace cluster |
-| kubectl get pods -n name | List all pods in the "name" namespace          |
+| kubectl get pods -n name | List all pods in the "name" namespace      |
 
 | Creating Resources            |                                             |
 | ----------------------------- | ------------------------------------------- |
@@ -176,3 +176,5 @@ If you have FREE resources that you have used then please feel free to add them 
 - [Techbeatly - Deploy Minikube Using Vagrant and Ansible on VirtualBox](https://www.youtube.com/watch?v=xPLQqHbp9BM&t=371s)
 
 See you on [Day 52](day52.md)
+
+# Completed exercises, installing Kubernetes with arkade, minikube
