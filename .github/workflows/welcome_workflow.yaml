@@ -14,5 +14,5 @@ jobs:
         uses: garg3133/welcome-new-contributors@v1.2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          issue-message: 'Hello there, thanks for opening an issue. We welcome you to the #90DaysOfDevOps community!'
-          pr-message: 'Hello there, thanks for opening a Pull Request. Someone will review it soon.'
+          issue-message: 'Hello there, thanks for opening your first issue here. We welcome you to the #90DaysOfDevOps community!'
+          pr-message: 'Hello there, thanks for opening your first Pull Request. Someone will review it soon. Welcome to the #90DaysOfDevOps community!'
