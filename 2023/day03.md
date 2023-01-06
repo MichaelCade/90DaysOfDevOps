@@ -61,11 +61,11 @@ An attack map might look something like this with a key explaining what each num
 
 From this map we might consider there to be a denial of service or some malicious insider attack and access to S3 bucket to prevent the application saving data or causing it to save bad data. 
 
-This map then is never final, in the same way that your application continouly moves forward through feedback, this attack map also needs to be tested against, which provides feedback which in turn means the security posture is strengthend against these attacks. You could call this "Continuous Response" in the Security Feedback loop. 
+This map then is never final, in the same way that your application continuously moves forward through feedback, this attack map also needs to be tested against, which provides feedback which in turn means the security posture is strengthened against these attacks. You could call this "Continuous Response" in the Security Feedback loop. 
 
-At a bare minimum we should be following a good, better, best model to better the security posture. 
+At a bare minimum, we should be following a good, better, best model to better the security posture. 
 
-- **Good** - Identify security design contraints and controls that need to be built into the software to reduce an attack. 
+- **Good** - Identify security design constraints and controls that need to be built into the software to reduce an attack. 
 
 - **Better** - Prioritise and build security in for issues found later in the software cycle. 
 
