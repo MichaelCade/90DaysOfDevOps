@@ -8,7 +8,7 @@ In this final introduction section into DevSecOps, I want to attempt to build an
 
 ### Building our first weak application 
 
-<span style="color:red">**Important Message: This exercise is to highlight bad and weaknesses in an application, Please do not try this at home but beware this is bad practice**</span>
+<span style="color:red">**Important Message: This exercise is to highlight bad and weaknesses in an application, Please do try this at home but beware this is bad practice**</span>
 
 At this stage, I am not going to run through my software development environment in any detail. I would generally be using VScode on Windows with WSL2 enabled. We might then use Vagrant to provision dedicated compute instances to VirtualBox all of which I covered throughout the 2022 sections of #90DaysOfDevOps mostly in the Linux section. 
 
@@ -184,6 +184,9 @@ Now edit app/views/bootcamps/show.html.erb and make the description field a raw 
   <%=raw @bootcamp.description %>
 </p>
 ```
+I recorded the steps to get to this point below. Hopefully this renders well, something I found GitHub now supports is embedding videos into markdown. (pretty cool!)
+
+![](images\day06-stage1-creatingapp.mp4)
 
 Now why this is all relevant is that using raw in the description field means that this field now becomes a potential XSS target. Or cross-site scripting. 
 
