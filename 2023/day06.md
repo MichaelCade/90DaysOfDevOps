@@ -76,7 +76,8 @@ end
 ```
 If navigate to this folder, you can use `vagrant up` to spin up your centos7 machine in your environment. 
 
-![](images\day06-1.png)
+![](images/day06-1.png)
+
 
 Then we will need to access our machine, you can do this with `vagrant ssh` 
 
@@ -151,11 +152,11 @@ bundle exec rake db:migrate
 
 We can then run our app with `bundle exec rails server -b 0.0.0.0` 
 
-![](images\day06-2.png)
+![](images/day06-2.png)
 
 Then open a browser to hit that box, I had to change my VirtualBox VM networking to bridged vs NAT so that I would be able to navigate to it vs using vagrant ssh. 
 
-![](images\day06-3.png)
+![](images/day06-3.png)
 
 Now we need to **scaffold** a basic model 
 
@@ -168,13 +169,13 @@ bundle exec rails generate scaffold Bootcamp name:string description:text dates:
 bundle exec rake db:migrate
 ```
 
-![](images\day06-4.png)
+![](images/day06-4.png)
 
 Add a default route to config/routes.rb
 
 `root bootcamps#index`
 
-![](images\day06-5.png)
+![](images/day06-5.png)
 
 Now edit app/views/bootcamps/show.html.erb and make the description field a raw field. Add the below. 
 
