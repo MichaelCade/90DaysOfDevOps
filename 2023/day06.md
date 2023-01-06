@@ -184,10 +184,6 @@ Now edit app/views/bootcamps/show.html.erb and make the description field a raw 
   <%=raw @bootcamp.description %>
 </p>
 ```
-I recorded the steps to get to this point below. Hopefully this renders well, something I found GitHub now supports is embedding videos into markdown. (pretty cool!)
-
-![](images\day06-stage1-creatingapp.mp4)
-
 Now why this is all relevant is that using raw in the description field means that this field now becomes a potential XSS target. Or cross-site scripting. 
 
 This can be explained better with a video [What is Cross-Site Scripting?](https://youtu.be/DxsmEXicXEE)
