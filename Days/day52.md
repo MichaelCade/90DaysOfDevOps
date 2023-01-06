@@ -1,8 +1,8 @@
 ---
-title: '#90DaysOfDevOps - Setting up a multinode Kubernetes Cluster - Day 52'
+title: "#90DaysOfDevOps - Setting up a multinode Kubernetes Cluster - Day 52"
 published: false
 description: 90DaysOfDevOps - Setting up a multinode Kubernetes Cluster
-tags: 'devops, 90daysofdevops, learning'
+tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1049050
@@ -180,3 +180,5 @@ If you have FREE resources that you have used then please feel free to add them 
 - [Kunal Kushwaha - Kubernetes Tutorial for Beginners | What is Kubernetes? Architecture Simplified!](https://www.youtube.com/watch?v=KVBON1lA9N8)
 
 See you on [Day 53](day53.md)
+
+# Completed exercises, setting up a kuberenetes cluster, vagrant
