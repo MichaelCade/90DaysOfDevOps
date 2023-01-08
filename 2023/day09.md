@@ -134,5 +134,6 @@ By default SonarCloud comes with a default quality gate “Sonar way”. You can
 
 - [SonarCloud Documentation](https://docs.sonarcloud.io/)
 - [How to create Quality gates on SonarQube](https://www.youtube.com/watch?v=8_Xt9vchlpY)
+- [Source Code of the repo I used for SAST implementation](https://github.com/prateekjaindev/nodejs-todo-app-demo)
 
 In the next part [Day 10](day10.md), we will discuss Software Composition Analysis (SCA).
