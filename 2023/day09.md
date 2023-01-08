@@ -61,18 +61,15 @@ Read more about SonarCloud [here](https://docs.sonarcloud.io/)
 
 ![](images/day09-12.png)
 
-- You will also see a configuration file that we wil have to add in the source code repo
+- You will also see a configuration file that we will have to add in the source code repo
 
 ![](images/day09-13.png)
+![](images/day09-14.png)
 
 - At the bottom of page, disable the Automatic Analysis
-
-![](images/day09-14.png)
-- Now go to GitHub and add GitHub Secret named SOANR_TOKEN.
-
 ![](images/day09-15.png)
 
-- Add the following configuration `sonar-project.properties` in the root directory.
+- Now go the source code repo and add the following configuration `sonar-project.properties` in the root directory.
 
 ```yaml
 sonar.projectKey=prateekjaindev_nodejs-todo-app-demo
@@ -113,23 +110,19 @@ jobs:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 ```
- 
-- As soon as you commit the changes, the workflow will trigger.
-
+- Now go to GitHub and add GitHub Secret named SOANR_TOKEN.
 ![](images/day09-16.png)
-
-- Now after every commit, you can check the updated reports on the SonarCloud dashboard.
-
+- As soon as you commit the changes, the workflow will trigger.
 ![](images/day09-17.png)
+- Now after every commit, you can check the updated reports on the SonarCloud dashboard.
+![](images/day09-18.png)
 
 ### Quality Gates
 
 A quality gate is an indicator that tells you whether your code meets the minimum level of quality required for your project. It consists of a set of conditions that are applied to the results of each analysis. If the analysis results meet or exceed the quality gate conditions then it shows a **Passed** status otherwise, it shows a **Failed** status.
 
 By default SonarCloud comes with a default quality gate “Sonar way”. You can edit or create new one in the Organisation Settings.
-
-![](images/day09-18.png)
-
+![](images/day09-19.png)
 ### Resources
 
 - [SonarCloud Documentation](https://docs.sonarcloud.io/)
