@@ -72,7 +72,7 @@ Read more about SonarCloud [here](https://docs.sonarcloud.io/)
 
 ![](images/day09-15.png)
 
-- Add the following configuration in the root directory.
+- Add the following configuration `sonar-project.properties` in the root directory.
 
 ```yaml
 sonar.projectKey=prateekjaindev_nodejs-todo-app-demo
@@ -89,7 +89,7 @@ sonar.organization=prateekjaindev
 #sonar.sourceEncoding=UTF-8
 ```
 
-- Update or add the GitHub actions workflow with the following job.
+- Update or add the GitHub actions workflow with the following job in the `.github/workflows` directory
 
 ```yaml
 name: SonarScan
