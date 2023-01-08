@@ -65,3 +65,5 @@ You can customize this workflow to fit your needs. For example, you can specify 
 
 - [Dependency Check Documentation](https://jeremylong.github.io/DependencyCheck/)
 - [Source Code of the repo I used for SCA implementation](https://github.com/prateekjaindev/nodejs-todo-app-demo)
+
+In the next part [Day 12](day12.md), we will discuss Secure Coding Review.
