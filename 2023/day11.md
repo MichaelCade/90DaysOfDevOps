@@ -14,7 +14,7 @@ It is important to note that OWASP Dependency Check is not a replacement for sec
 
 ### Integrate Dependency Check with GitHub Actions
 
-To use Dependency Check with GitHub Actions, you can create a workflow file in your repository's **`.github/workflows`**directory. Here is an example workflow that runs Dependency Check on every push to the **`main`**branch:
+To use Dependency Check with GitHub Actions, you can create a workflow file in your repository's `.github/workflows` directory. Here is an example workflow that runs Dependency Check on every push to the `main` branch:
 
 ```yaml
 name: Dependency-Check
@@ -48,10 +48,10 @@ jobs:
 
 This workflow does the following:
 
-1. Defines a workflow called **`Dependency-Check`** that runs on every push to the **`main`** branch.
-2. Specifies that the workflow should run on the **`ubuntu-latest`** runner.
+1. Defines a workflow called `Dependency-Check` that runs on every push to the `main` branch.
+2. Specifies that the workflow should run on the `ubuntu-latest` runner.
 3. Downloads and installs Dependency Check.
-4. Runs Dependency Check on the current directory (**`.`**) and generate a report in report.html file.
+4. Runs Dependency Check on the current directory (`.`) and generate a report in report.html file.
 5. Removes the downloaded Dependency Check files.
 6. Upload the report file as artifacts.
 
