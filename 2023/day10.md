@@ -1,4 +1,4 @@
-# Day 10: Software Composition Analysis
+# Day 10: Software Composition Analysis Overview
 
 Software composition analysis (SCA) is a process that helps developers identify the open source libraries, frameworks, and components that are included in their software projects. SCA tools scan the codebase of a software project and provide a report that lists all the open source libraries, frameworks, and components that are being used. This report includes information about the licenses and vulnerabilities of these open source libraries and components, as well as any security risks that may be associated with them.
 
@@ -20,6 +20,10 @@ Despite these benefits, there are several challenges associated with SCA:
 4. Lack of standardization: There is no standard way to conduct SCA, and different tools and approaches can produce different results. This can make it difficult for organizations to compare the results of different SCA tools and to determine which one is best for their needs.
 
 Overall, SCA tools provide a number of benefits to software developers and can help to improve the security, compliance, efficiency, risk management, and quality of software projects. By using these tools, developers can ensure that they are using open source libraries and components that are compliant with the appropriate licenses, free of vulnerabilities, and of high quality. This helps to protect the reputation of their software and the company, and leads to a better user experience.
+
+### SCA Tools (Opensource or Free Tier)
+- **[OWASP Dependncy Check](https://owasp.org/www-project-dependency-check/)**: Dependency-Check is a Software Composition Analysis (SCA) tool that attempts to detect publicly disclosed vulnerabilities contained within a project’s dependencies. It does this by determining if there is a Common Platform Enumeration (CPE) identifier for a given dependency. If found, it will generate a report linking to the associated CVE entries.
+- **[Snyk](https://snyk.io/product/open-source-security-management/)**: Snyk Open Source provides a developer-first SCA solution, helping developers find, prioritize, and fix security vulnerabilities and license issues in open source dependencies.
 
 ### Resources
 
