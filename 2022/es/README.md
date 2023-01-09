@@ -100,7 +100,7 @@ Empecemos con lo que vas a poder ver en estos 90 días.
 - [✔️] 🌐 24 > [Automatización de la red](Days/day24.md)
 - [✔️] 🌐 25 > [Python para la automatización de la red](Days/day25.md)
 - [✔️] 🌐 26 > [Construir nuestro Lab](Days/day26.md)
-- [✔️] 🌐 27 > [Ponerse a trabajar con Python y la red](Days/day27.md)
+- [✔️] 🌐 27 > [Manos a la obra con Python y Redes](Days/day27.md)
 
 ### Quédate con solo un Cloud Provider
 

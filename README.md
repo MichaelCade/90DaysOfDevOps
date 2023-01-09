@@ -4,7 +4,7 @@
  <img src="logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
 </p>
 
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.90daysofdevops.com) ![GitHub Repo stars](https://img.shields.io/github/stars/MichaelCade/90DaysOfDevOps)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.90daysofdevops.com)](https://www.90daysofdevops.com) [![GitHub Repo stars](https://img.shields.io/github/stars/MichaelCade/90DaysOfDevOps)](https://github.com/MichaelCade/90DaysOfDevOps)
 
 This repository is used to document my journey on getting a better foundational knowledge of "DevOps". I will be starting this journey on the 1st January 2022 but the idea is that we take 90 days which just so happens to be January 1st to March 31st.
 
@@ -14,19 +14,21 @@ This will **not cover all things** "DevOps" but it will cover the areas that I f
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N33YRCS)
 
-[![](https://dcbadge.vercel.app/api/server/vqwPrNQsyK)](https://discord.gg/vqwPrNQsyK)
+[![Discord Invite Link](https://dcbadge.vercel.app/api/server/vqwPrNQsyK)](https://discord.gg/vqwPrNQsyK)
+
+![GitHub Repo Stars](https://img.shields.io/github/stars/michaelcade/90daysofdevops?style=social?)
 
 The two images below will take you to the 2022 and 2023 edition of the learning journey. 
 
 <p align="center">
  <a href="2022.md">
- <img src="2022.jpg?raw=true" alt="2022" width="50%" height="50%" />
+ <img src="2022.png?raw=true" alt="2022" width="70%" height="70%" />
 </p>
-</a>
 
+</a>
 <p align="center">
  <a href="2023.md">
- <img src="2023.jpg?raw=true" alt="2022" width="50%" height="50%" />
+ <img src="2023.png?raw=true" alt="2023" width="70%" height="70%" />
 </p>
 </a>
 
