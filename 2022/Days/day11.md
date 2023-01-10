@@ -51,7 +51,7 @@ You will then see from the below that we built our code with the above example a
 
 ![](Images/Day11_Go1.png)
 
-We also know that our challenge is 90 days at least for this challenge, but next, maybe it's 100 so we want to define a variable to help us here as well. However, for our program, we want to define this as a constant. Constants are like variables, except that their value cannot be changed within code (we can still create a new app later on down the line with this code and change this constant but this 90 will not change whilst we are running our application)
+We also know that our challenge is 90 days at least for this challenge, but next, maybe it's 100 so we want to define a variable to help us here as well. However, for our program, we want to define this as a constant. Constants are like variables, except that their value cannot be changed within code (we can still create a new app later on down the line with this code and change this constant but this 90 will not change while we are running our application)
 
 Adding the `const` to our code and adding another line of code to print this.
 
