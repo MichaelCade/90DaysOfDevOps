@@ -29,3 +29,5 @@ I highly recommend watching this video to understand how source code analysis ca
 
 - [How to Analyze Code for Vulnerabilities](https://www.youtube.com/watch?v=A8CNysN-lOM&t)
 - [What Is A Secure Code Review And Its Process?](https://valuementor.com/blogs/source-code-review/what-is-a-secure-code-review-and-its-process/)
+
+In the next part [Day 13](day13.md), we will discuss Additional Secure Coding Practices with some more hands-on.
