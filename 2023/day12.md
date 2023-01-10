@@ -24,10 +24,7 @@ Overall, secure code review is a critical component of ensuring that an applicat
 
 I highly recommend watching this video to understand how source code analysis can lead to finding vulnerabilities in large enterprise codebases.
 
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/watch?v=fb-t3WWHsMQ&t" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-
+[![Final video of fixing issues in your code in VS Code](https://img.youtube.com/vi/fb-t3WWHsMQ/maxresdefault.jpg)](https://www.youtube.com/watch?v=fb-t3WWHsMQ)
 ### Resources
 
 - [How to Analyze Code for Vulnerabilities](https://www.youtube.com/watch?v=A8CNysN-lOM&t)
