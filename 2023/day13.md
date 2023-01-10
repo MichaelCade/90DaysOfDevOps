@@ -70,10 +70,10 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-		  - uses: actions/checkout@v2 
-		  - uses: hadolint/hadolint-action@v2.1.0
-		    with:
-		      dockerfile: Dockerfile
+      - uses: actions/checkout@v2 
+      - uses: hadolint/hadolint-action@v2.1.0
+        with:
+          dockerfile: Dockerfile
 ```
 
 1. This workflow will run on every push to the "main" branch, and will run the hadolint command on the "Dockerfile" file.
