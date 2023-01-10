@@ -240,5 +240,5 @@ With that much longer walkthrough than anticipated I am going to hand over to th
 
 - [Cloud Advocate - DevSecOps Pipeline CI Process - Real world example!](https://www.youtube.com/watch?v=ipe08lFQZU8&list=PLsKoqAvws1pvg7qL7u28_OWfXwqkI3dQ1&index=7&t=204s)
 
-See you on [Day 7](day04.md) Where we will start a new section on Secure Coding.  
+See you on [Day 7](day07.md) Where we will start a new section on Secure Coding.  
 
