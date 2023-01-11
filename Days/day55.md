@@ -237,3 +237,5 @@ This wraps up our Kubernetes section, there is so much additional content we cou
 Next up we are going to be taking a look at Infrastructure as Code and the important role it plays from a DevOps perspective.
 
 See you on [Day 56](day56.md)
+
+# Completed daily exercises, State and Ingress
