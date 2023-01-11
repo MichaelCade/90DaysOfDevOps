@@ -101,7 +101,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] ☸ 51 > [Deploying your first Kubernetes Cluster](Days/day51.md)
 - [✔️] ☸ 52 > [Setting up a multinode Kubernetes Cluster](Days/day52.md)
 - [✔️]] ☸ 53 > [Rancher Overview - Hands On](Days/day53.md)
-- [] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
+- [✔️]] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
 - [] ☸ 55 > [State and Ingress in Kubernetes](Days/day55.md)
 
 ### Learn Infrastructure as Code

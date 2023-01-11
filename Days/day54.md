@@ -221,3 +221,5 @@ If you have FREE resources that you have used then please feel free to add them 
 - [Kunal Kushwaha - Kubernetes Tutorial for Beginners | What is Kubernetes? Architecture Simplified!](https://www.youtube.com/watch?v=KVBON1lA9N8)
 
 See you on [Day 55](day55.md)
+
+# Completed daily exercises , deploying Apps YAML file and Helm Charts.
