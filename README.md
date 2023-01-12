@@ -108,7 +108,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 
 - [✔️] 🤖 56 > [The Big Picture: IaC](Days/day56.md)
 - [✔️] 🤖 57 > [An intro to Terraform](Days/day57.md)
-- [] 🤖 58 > [HashiCorp Configuration Language (HCL)](Days/day58.md)
+- [✔️] 🤖 58 > [HashiCorp Configuration Language (HCL)](Days/day58.md)
 - [] 🤖 59 > [Create a VM with Terraform & Variables](Days/day59.md)
 - [] 🤖 60 > [Docker Containers, Provisioners & Modules](Days/day60.md)
 - [] 🤖 61 > [Kubernetes & Multiple Environments](Days/day61.md)

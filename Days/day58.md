@@ -232,3 +232,5 @@ I have listed a lot of resources down below and I think this topic has been cove
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
 
 See you on [Day 59](day59.md)
+
+# Completed daily exercises, Initial Terraform setup explained
