@@ -131,3 +131,5 @@ I have listed a lot of resources down below and I think this topic has been cove
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
 
 See you on [Day 57](day57.md)
+
+# Completed daily exercises, Intro to Terraform
