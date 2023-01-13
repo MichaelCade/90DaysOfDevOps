@@ -1,33 +1,26 @@
-# IAST (Interactive Application Security Testing) 
+# DAST
+DAST, or Dynamic Application Security Testing, is a technique that is used to evaluate the security of an application by simulating attacks from external sources.
+Idea is to automate as much as possible black-box penetration testing. 
+It can be used for acquiring the low-hanging fruits so a real human’s time will be spared and additionally for generating traffic to other security tools (e.g. IAST). 
 
-IAST is a type of security testing tool that is designed to identify vulnerabilities in web applications and help developers fix them. It works by injecting a small agent into the application's runtime environment and monitoring its behavior in real-time. This allows IAST tools to identify vulnerabilities as they occur, rather than relying on static analysis or simulated attacks. 
+Nevertheless, It is an essential component of the SSDLC, as it helps organizations uncover potential vulnerabilities early in the development process, before the application is deployed to production. By conducting DAST testing, organizations can prevent security incidents and protect their data and assets from being compromised by attackers.
 
-IAST works through software instrumentation, or the use of instruments to monitor an application as it runs and gather information about what it does and how it performs. IAST solutions instrument applications by deploying agents and sensors in running applications and continuously analyzing all application interactions initiated by manual tests, automated tests, or a combination of both to identify vulnerabilities in real time Instrumentation. 
-IAST agent is running inside the application and monitor for known attack patterns. As it is part of the application, it can monitor traffic between different components (either as classic MVC deployments and in microservices deployment). 
+## Tools
 
-## For IAST to be used, there are few prerequisites. 
-- Application should be instrumented (inject the agent).
-- Traffic should be generated - via manual or automated tests. Another possible approach is via DAST tools (OWASP ZAP can be used for example).
+There are various open-source tools available for conducting DAST, such as ZAP, Burp Suite, and Arachni. These tools can simulate different types of attacks on the application, such as SQL injection, cross-site scripting, and other common vulnerabilities. For example, if an application is vulnerable to SQL injection, a DAST tool can send a malicious SQL query to the application, such as ' OR 1=1 --, and evaluate its response to determine if it is vulnerable. If the application is vulnerable, it may return all records from the database, indicating that the SQL injection attack was successful.
+As some of the tests could be quite invasive (for example it may include ‘DROP TABLE’ or something similar) or at least put a good amount of test data into the databases or even DOS the app, 
+__DAST tools should never run against a production environment!!!__ 
+All tools have the possibility for authentication into the application and this could lead to production credentials compromise. Also when run authenticated scans against the testing environment, use suitable roles (if RBAC model exists, for the application, of course), e.g. DAST shouldn’t use role that have the possibility to delete or modify other users because this way the whole environment can became unusable.
+As with other testing methodologies it is necessary to analyze the scope, so not unneeded targets are scanned. 
 
-## Advantages 
-One of the main advantages of IAST tools is that they can provide detailed and accurate information about vulnerabilities and how to fix them. This can save developers a lot of time and effort, as they don't have to manually search for vulnerabilities or try to reproduce them in a testing environment. IAST tools can also identify vulnerabilities that might be missed by other testing methods, such as those that require user interaction or are triggered under certain conditions. Testing time depends on the tests used (as IAST is not a standalone system) and with faster tests (automated tests) can be include into CI/CD pipelines. It can be used to detect different kind of vulnerabilities and due to the nature of the tools (it looks for “real traffic only) false positives/negatives findings are relatively rear compared to other testing types.
-IAST can be used in two flavors - as a typical testing tool and as real-time protection (it is called RAST in this case). Both work at the same principals and can be used together.
+## Usage
+Common error is scanning compensating security controls (e.g. WAF) instead of the real application. DAST is in its core an application security testing tool and should be used against actual applications, not against security mitigations. As it uses pretty standardized attacks, external controls can block the attacking traffic and this way to cover potentially exploitable flows (as per definition adversary would be able to eventually bypass such measures)
+Actual scans are quite slow, so sometimes they should be run outside of the DevOps pipeline. Good example is running them nightly or during the weekend. Some of the simple tools (zap / arachny, …) could be used into pipelines but often, due to the nature of the scan can slow down the whole development process.
+Once the DAST testing is complete, the results are analyzed to identify any vulnerabilities that were discovered. The organization can then take appropriate remediation steps to address the vulnerabilities and improve the overall security of the application. This may involve fixing the underlying code, implementing additional security controls, such as input validation and filtering, or both.
+In conclusion, the use of DAST in the SSDLC is essential for ensuring the security of an application. By conducting DAST testing and identifying vulnerabilities early in the development process, organizations can prevent security incidents and protect their assets from potential threats. Open-source tools, such as ZAP, Burp Suite, and Arachni, can be used to conduct DAST testing and help organizations improve their overall security posture.
+As with all other tools part of DevSecOps pipeline DAST should not be the only scanner in place and as with all others, it is not a substitute for penetration test and good development practices.
 
-## There are several disadvantages of the technology as well:
-- It is relatively new technology so there is not a lot of knowledge and experience both for the security teams and for the tools builders (open-source or commercial).
-- The solution cannot be used alone - something (or someone) should generate traffic patterns. It is important that all possible endpoints are queried during the tests.
-- Findings are based on traffic. This is especially true if used for testing alone - if there is no traffic to a portion of the app / site it would not be tested so no findings are going to be generated.
-- Due to need of instrumentation of the app, it can be fairly complex, especially compared to the source scanning tools (SAST or SCA).
-
-There are several different IAST tools available, each with its own features and capabilities.
-## Some common features of IAST tools include:
-- Real-time monitoring: IAST tools monitor the application's behavior in real-time, allowing them to identify vulnerabilities as they occur.
-- Vulnerability identification: IAST tools can identify a wide range of vulnerabilities, including injection attacks, cross-site scripting (XSS), and cross-site request forgery (CSRF).
-- Remediation guidance: IAST tools often provide detailed information about how to fix identified vulnerabilities, including code snippets and recommendations for secure coding practices.
-- Integration with other tools: IAST tools can often be integrated with other security testing tools, such as static code analysis or penetration testing tools, to provide a more comprehensive view of an application's security.
-
-IAST tools can be a valuable addition to a developer's toolkit, as they can help identify and fix vulnerabilities in real-time, saving time and effort. If you are a developer and are interested in using an IAST tool, there are many options available, so it is important to research and compare different tools to find the one that best fits your needs.
-
-## Tool example
-There are almost no open-source tools on the market. Example is the commercial tool: Contrast Community Edition (CE) - Fully featured version for 1 app and up to 5 users (some Enterprise features disabled). Contrast CE supports Java and .NET only. 
-Can be found here - https://www.contrastsecurity.com/contrast-community-edition
+## Some useful links and open-source tools:
+- https://github.com/zaproxy/zaproxy
+- https://www.arachni-scanner.com/
+- https://owasp.org/www-project-devsecops-guideline/latest/02b-Dynamic-Application-Security-Testing 
