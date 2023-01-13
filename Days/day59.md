@@ -128,3 +128,5 @@ I have listed a lot of resources down below and I think this topic has been cove
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
 
 See you on [Day 60](day60.md)
+
+# Completed daily exercises, Create a VM in VirtualBox
