@@ -192,3 +192,5 @@ I have listed a lot of resources down below and I think this topic has been cove
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
 
 See you on [Day 61](day61.md)
+
+# Completed daily exercises, Docker Containers, Provisioners and Modules
