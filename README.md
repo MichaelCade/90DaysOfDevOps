@@ -111,7 +111,7 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 - [✔️] 🤖 58 > [HashiCorp Configuration Language (HCL)](Days/day58.md)
 - [✔️] 🤖 59 > [Create a VM with Terraform & Variables](Days/day59.md)
 - [✔️] 🤖 60 > [Docker Containers, Provisioners & Modules](Days/day60.md)
-- [] 🤖 61 > [Kubernetes & Multiple Environments](Days/day61.md)
+- [✔️] 🤖 61 > [Kubernetes & Multiple Environments](Days/day61.md)
 - [] 🤖 62 > [Testing, Tools & Alternatives](Days/day62.md)
 
 ### Automate Configuration Management
