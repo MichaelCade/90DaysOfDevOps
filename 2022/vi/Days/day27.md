@@ -16,19 +16,17 @@ Chúng ta sẽ sử dụng SSH để kết nối đến các thiết bị trong 
 
 ## Truy cập môi trường giả lập ảo
 
-Để tương tác với các switch, bạn có thể thiết lập một máy trạm bên trong mạng EVE-NG hoặc bạn có thể thiết lập một máy tính chạy Linux có cài đặt Python trong EVE-NG ([Resource for setting up Linux inside EVE-NG](https://www.youtube.com/watch?v=3Qstk3zngrY)), hoặc bạn cũng có thể làm theo cách của tôi là tạo một server quản lý từ xa. 
+Để tương tác với các switch, bạn có thể thiết lập một máy chủ bên trong mạng EVE-NG hoặc bạn có thể thiết lập một máy tính chạy Linux có cài đặt Python trong EVE-NG ([Resource for setting up Linux inside EVE-NG](https://www.youtube.com/watch?v=3Qstk3zngrY)), hoặc bạn cũng có thể làm theo cách của tôi là tạo một server quản lý từ xa. 
 
 ![](../../Days/Images/Day27_Networking3.png)
 
-Để thiết lập như trên, chúng ta nhấp chuột phải vào giao diện ứng dụng, chọn Network, và sau đó chọn "Management(Cloud0)", thao tác này sẽ tạo ra một mạng riêng mới kết nối với máy trạm.
+Để thiết lập như trên, chúng ta nhấp chuột phải vào giao diện ứng dụng, chọn Network, và sau đó chọn "Management(Cloud0)", thao tác này sẽ tạo ra một mạng riêng mới kết nối với máy tính đang dùng (máy host).
 
 ![](../../Days/Images/Day27_Networking4.png)
 
 Tuy nhiên, chúng ta vẫn cần phải kết nối các thiết bị hiện tại với mạng mới này. (Kiến thức về mạng của tôi vẫn còn hạn chế và tôi cảm thấy rằng bạn có thể thực hiện bước tiếp theo này theo một cách khác bằng cách kết nối router với các switch và sau đó có kết nối với phần còn lại của mạng?)
 
-Sau đó, tôi đã đăng nhập vào từng thiết bị của chúng tôi và tôi đã chạy qua các lệnh sau cho các giao diện áp dụng cho nơi đám mây xuất hiện.
-
-Tiếp theo bạn hãy truy cập vào mỗi thiết bị và chạy các lệnh sau trên card mạng được dùng để kết nối với máy trạm.
+Tiếp theo bạn hãy truy cập vào từng thiết bị và chạy các lệnh sau trên card mạng được dùng để kết nối với "Management(Cloud0)".
 
 
 ```
@@ -42,7 +40,7 @@ exit
 sh ip int br
 ```
 
-Lệnh trên nhằm cấp phát địa chỉ IP cho card mạng kết nối với máy trạm. Địa chỉ IP của các thiết bị được liệt kê trong bảng sau:
+Lệnh trên nhằm cấp phát địa chỉ IP cho card mạng kết nối với Home Network. Địa chỉ IP của các thiết bị được liệt kê trong bảng sau:
 
 | Node    | IP Address   | Home Network IP |
 | ------- | ------------ | --------------- |
@@ -54,7 +52,7 @@ Lệnh trên nhằm cấp phát địa chỉ IP cho card mạng kết nối vớ
 
 ### Kết nối SSH đến thiết bị mạng
 
-Với các thông tin địa chỉ IP ở trên, chúng ta có thể kết nối đến các thiết bị trong mạng từ máy trạm. Tôi sử dụng Putty, tuy nhiên bạn cũng có thể sử dụng bất kì phần mềm hỗ trợ kết nối SSH nào khác.
+Với các thông tin địa chỉ IP ở trên, chúng ta có thể kết nối đến các thiết bị trong mạng từ máy host. Tôi sử dụng Putty, tuy nhiên bạn cũng có thể sử dụng bất kì phần mềm hỗ trợ kết nối SSH nào khác.
 
 Bạn có thể thấy tôi đang kết nối SSH đến router của mình trong hình dưới. (R1)
 
