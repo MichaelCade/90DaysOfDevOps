@@ -37,8 +37,8 @@ The Go Fuzzing library (part of the standard language library since Go 1.18) gen
 If we write a fuzz test for this function what will happen is:
 
 1. The fuzzing library will start providing random strings starting from smaller strings and increasing their size.
-2. Once the library provides a string of lenght 4 it will notice a change in the test-coverage (`if (len(s) == 4)` is now `true`) and will continue to generate inputs with this lenght.
-3. Once the library provides a string of lenght 4 that starts with `f` it will notice another change in the test-coverage (`if s[0] == "f"` is now `true`) and will continue to generate inputs that start with `f`.
+2. Once the library provides a string of lenght 4 it will notice a change in the test-coverage (`if (len(s) == 4)` is now `true`) and will continue to generate inputs with this length.
+3. Once the library provides a string of length 4 that starts with `f` it will notice another change in the test-coverage (`if s[0] == "f"` is now `true`) and will continue to generate inputs that start with `f`.
 4. The same thing will repeat for `u` and the double `z`.
 5. Once it provides `fuzz` as input the function will panic and the test will fail.
 6. We have _fuzzed_ successfully!
