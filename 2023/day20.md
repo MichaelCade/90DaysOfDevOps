@@ -97,7 +97,7 @@ Now that we have a vulnerable application let's try to exploit it.
 
 ## Bonus: Image Scanning
 
-We saw how an IAST solution helped us detect attacks in real time.
+We saw how an IAST solution helped us detect attacks by observing the behaviour of the application.
 Let's see whether we could have done something to prevent these attacks in the first place.
 
 The vulnerable application we used for this demo was packages as a container.
