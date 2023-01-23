@@ -84,7 +84,7 @@ If we create an additional file called `samplecode.ps1`, the status would become
 
 ![](Images/Day35_Git10.png)
 
-Add our new file using the `git add sample code.ps1` command and then we can run `git status` again and see our file is ready to be committed.
+Add our new file using the `git add samplecode.ps1` command and then we can run `git status` again and see our file is ready to be committed.
 
 ![](Images/Day35_Git11.png)
 
