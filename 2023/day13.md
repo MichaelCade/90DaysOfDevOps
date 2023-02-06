@@ -85,3 +85,5 @@ jobs:
 - [Hadolint GitHub](https://github.com/hadolint/hadolint)
 - [Hadolint Online](https://hadolint.github.io/hadolint/)
 - [Top 20 Dockerfile best practices](https://sysdig.com/blog/dockerfile-best-practices/)
+
+Next up we will be starting our **Continuous Build, Integration, Testing** with [Day 14](day14.md) covering Container Image Scanning from [Anton Sankov](https://twitter.com/a_sankov). 

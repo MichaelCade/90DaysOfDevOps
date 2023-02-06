@@ -1,7 +1,7 @@
 # Fuzzing
 
 Fuzzing, also known as "fuzz testing," is a software testing technique that involves providing invalid, unexpected, or random data as input to a computer program.
-The goal of fuzzing is to identify security vulnerabilities and other bugs in the program by causing it to crash or exhibit unintended behavior.
+The goal of fuzzing is to identify security vulnerabilities and other bugs in the program by causing it to crash or exhibit unintended behaviour.
 
 Fuzzing can be performed manually or by using a testing library/framework to craft the inputs for us.
 
@@ -32,13 +32,13 @@ However, in more complex systems such fail points may not be obvious, and may be
 
 This is where fuzzing comes in handy.
 
-The Go Fuzzing library (part of the standard language library since Go 1.18) generates many inputs for a test case, and then based on the coverage and the results determines which inputs are "interesting".
+The Go Fuzzing library (part of the standard language library since Go 1.18) generates many inputs for a test case, and then based on the coverage and the results determine which inputs are "interesting".
 
 If we write a fuzz test for this function what will happen is:
 
 1. The fuzzing library will start providing random strings starting from smaller strings and increasing their size.
-2. Once the library provides a string of lenght 4 it will notice a change in the test-coverage (`if (len(s) == 4)` is now `true`) and will continue to generate inputs with this lenght.
-3. Once the library provides a string of lenght 4 that starts with `f` it will notice another change in the test-coverage (`if s[0] == "f"` is now `true`) and will continue to generate inputs that start with `f`.
+2. Once the library provides a string of length 4 it will notice a change in the test-coverage (`if (len(s) == 4)` is now `true`) and will continue to generate inputs with this length.
+3. Once the library provides a string of length 4 that starts with `f` it will notice another change in the test-coverage (`if s[0] == "f"` is now `true`) and will continue to generate inputs that start with `f`.
 4. The same thing will repeat for `u` and the double `z`.
 5. Once it provides `fuzz` as input the function will panic and the test will fail.
 6. We have _fuzzed_ successfully!
@@ -56,7 +56,7 @@ Fuzzing is a useful technique, but there are situations in which it might not be
 
 For example, if the input that fails our code is too specific and there are no clues to help, the fuzzing library might not be able to guess it.
 
-If we change the example code from the previoud paragraph to something like this:
+If we change the example code from the previous paragraph to something like this:
 
 ```go
 func DontPanic(s input) {
