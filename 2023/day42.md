@@ -55,7 +55,7 @@ x = 'My name is' + ' ' + 'Rishab'
 print(x) # outputs: My name is Rishab
 ```
 
-## Printing to the console
+## Printing to the console:
 
 The print function in Python is one of more than 60 built-in functions. It outputs text to the screen.
 Let's see an example of the most famous "Hello World!":
@@ -65,3 +65,9 @@ print('Hello World!')
 ```
 
 The print argument is a string, which is one of Python's basic data types for storing and managing text. Print outputs a newline character at the end of the line by default, so subsequent calls to print will begin on the next line.
+
+## Resources:
+
+[Learn Python - Full course by freeCodeCamp](https://youtu.be/rfscVS0vtbw)
+[Python tutorial for beginners by Nana](https://youtu.be/t8pPdKYpowI)
+[Python Crash Course book](https://amzn.to/40NfY45)
