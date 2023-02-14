@@ -71,7 +71,61 @@ Voila! You have a logging system ;-)
 
 # Application behavior monitoring
 
+We start to come over from general monitoring needs to low-level application monitoring for security purposes. A modern way to do this is to monitor fine-grade application behavior using eBPF.
 
-# Next...
+Monitoring applications with eBPF (extended Berkeley Packet Filter) is important from a security perspective because it provides a powerful and flexible way to monitor and analyze the behavior of applications and the underlying system. Here are some reasons why eBPF is important for application monitoring and security:
 
-Tomorrow we will continue to the application level. Application logs and behavior monitoring will be in focue. We will continue to use the same setup and go deeper into the rabbit hole 😄
+1. Fine-grained monitoring: eBPF allows for fine-grained monitoring of system and application activity, including network traffic, system calls, and other events. This allows you to identify and analyze security threats and potential vulnerabilities in real-time.
+
+2. Relatively low overhead: eBPF has very low overhead, making it ideal for use in production environments. It can be used to monitor and analyze system and application behavior without impacting performance or reliability at scale.
+
+3. Customizable analysis: eBPF allows you to create custom analysis and monitoring tools that are tailored to the specific needs of your application and environment. This allows you to identify and analyze security threats and potential vulnerabilities in a way that is tailored to your unique needs.
+
+4. Real-time analysis: eBPF provides real-time analysis and monitoring, allowing you to detect and respond to security threats and potential vulnerabilities as they occur. This helps you to minimize the impact of security incidents and prevent data loss or other negative outcomes.
+
+Falco is a well-respected project which installs agents on your Kubernetes nodes and monitors applications at the eBPF level. 
+
+In this part, we will install Falco in our Minikube and channel the data it collects to Prometheus (and eventually, Grafana). This part is based on this great [tutorial](https://falco.org/blog/falco-kind-prometheus-grafana/).
+
+In order to install Falco, you need to create private keys and certificates for client-server communication between the Falco and its exporter.
+
+We will use `falcoctl` for this, however you could generate your certificates and keys with `openssl` if you want.
+
+To install `falcoctl`, run the following command (if you are running Linux on amd64 CPU, otherwise check out [here](https://github.com/falcosecurity/falcoctl#installation)):
+```bash
+LATEST=$(curl -sI https://github.com/falcosecurity/falcoctl/releases/latest | awk '/location: /{gsub("\r","",$2);split($2,v,"/");print substr(v[8],2)}')
+curl --fail -LS "https://github.com/falcosecurity/falcoctl/releases/download/v${LATEST}/falcoctl_${LATEST}_linux_amd64.tar.gz" | tar -xz
+sudo install -o root -g root -m 0755 falcoctl /usr/local/bin/falcoctl
+```
+
+Now generate key pair:
+```bash
+FALCOCTL_NAME=falco-grpc.default.svc.cluster.local FALCOCTL_PATH=$PWD falcoctl tls install
+```
+
+We need to add Falco Helm repo and install the Falco services and the exporter:
+```bash
+helm repo add falcosecurity https://falcosecurity.github.io/charts
+helm repo update
+helm install falco falcosecurity/falco --set driver.kind=ebpf --set-file certs.server.key=$PWD/server.key,certs.server.crt=$PWD/server.crt,certs.ca.crt=$PWD/ca.crt --set falco.grpc.enabled=true,falco.grpcOutput.enabled=true
+helm install falco-exporter  --set-file certs.ca.crt=$PWD/ca.crt,certs.client.key=$PWD/client.key,certs.client.crt=$PWD/client.crt falcosecurity/falco-exporter
+```
+
+Make sure that all Falco Pods are running OK
+```bash
+$ kubectl get pods  | grep falco
+falco-exporter-mlc5h                                 1/1     Running       3 (32m ago)   38m
+falco-mlvc4                                          2/2     Running       0             31m
+```
+
+Since Prometheus detects the exporter automatically and we already added the Prometheus data source, we can go directly to Grafana and install the [Falco dashboard](https://grafana.com/grafana/dashboards/11914-falco-dashboard/).
+
+Go to "Dashboard" left side menu and click import. In "Import via grfana.com" insert the ID `11914` and click "load".
+
+Now you should see Falco events in your Grafana! 😎
+
+# Next... 
+
+Next day we will look into how to detect attacks in runtime. See you tomorrow 😃
+
+
