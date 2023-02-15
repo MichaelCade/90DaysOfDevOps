@@ -1,104 +1,93 @@
-## Microsoft Azure Compute Models
+## Modelos de computación de Microsoft Azure
 
-Following on from covering the basics around security models within Microsoft Azure yesterday today we are going to look into the various compute services available to us in Azure.
+Siguiendo con los conceptos básicos sobre los modelos de seguridad dentro de Microsoft Azure vamos a ver los diferentes servicios de computación disponibles en Azure.
 
-### Service Availability Options
+### Opciones de Disponibilidad de Servicio
 
-This section is close to my heart given my role in Data Management. As with on-premises, it is critical to ensure the availability of your services.
+Esta sección es muy importante el autor por su papel en la gestión de datos. Al igual que en el on-premises, es crítico asegurar la disponibilidad de tus servicios.
 
-- High Availability (Protection within a region)
-- Disaster Recovery (Protection between regions)
-- Backup (Recovery from a point in time)
+- Alta Disponibilidad (Protección dentro de una región)
+- Recuperación ante desastres (protección entre regiones)
+- Copia de seguridad (Recuperación desde un punto en el tiempo)
 
-Microsoft deploys multiple regions within a geopolitical boundary.
+Microsoft despliega múltiples regiones dentro de una frontera geopolítica. Dos conceptos con Azure para la Disponibilidad de Servicios con los conjuntos y zonas:
+- **Conjuntos de Disponibilidad** - Proporcionan resiliencia dentro de un centro de datos.
+- **Zonas de Disponibilidad** - Proporcionan resiliencia entre centros de datos dentro de una región.
 
-Two concepts with Azure for Service Availability. Both sets and zones.
+### Máquinas virtuales
 
-Availability Sets - Provide resiliency within a datacenter
+Muy probablemente es el punto de partida para cualquier persona en la nube pública.
 
-Availability Zones - Provide resiliency between data centres within a region.
+- Proporciona una variedad de series y tamaños de MV con diferentes capacidades (Algunas abrumadoras). [Tamaños para máquinas virtuales en Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes)
+- Hay muchas opciones y enfoques diferentes para MVs desde alto rendimiento, y baja latencia hasta MVs con opciones de alta memoria.
+- También tenemos un tipo de MV burstable que se puede encontrar bajo la Serie B. Esto es ideal para las cargas de trabajo en las que puede tener un bajo requerimiento de CPU en su mayor parte, pero pueden requerir una vez al mes el requisito de un pico de rendimiento.
+- Las máquinas virtuales se colocan en una red virtual que puede proporcionar conectividad a cualquier red.
+- Compatibilidad con sistemas operativos invitados como Windows y Linux.
+- También hay kernels ajustados a Azure cuando se trata de distribuciones específicas de Linux. [Azure Tuned Kernals](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/endorsed-distros#azure-tuned-kernels)
 
-### Virtual Machines
+### Plantillas
 
-Most likely the starting point for anyone in the public cloud.
+Ya se ha mencionado antes que todo lo que hay detrás o debajo de Microsoft Azure es JSON.
 
-- Provides a VM from a variety of series and sizes with different capabilities (Sometimes an overwhelming) [Sizes for Virtual machines in Azure](https://docs.microsoft.com/en-us/azure/virtual-machines/sizes)
-- There are many different options and focuses for VMs from high performance, and low latency to high memory options VMs.
-- We also have a burstable VM type which can be found under the B-Series. This is great for workloads where you can have a low CPU requirement for the most part but require that maybe once a month performance spike requirement.
-- Virtual Machines are placed on a virtual network that can provide connectivity to any network.
-- Windows and Linux guest OS support.
-- There are also Azure-tuned kernels when it comes to specific Linux distributions. [Azure Tuned Kernals](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/endorsed-distros#azure-tuned-kernels)
+Hay varios portales de gestión y consolas diferentes que podemos utilizar para crear nuestros recursos, la ruta preferida va a ser a través de plantillas JSON.
 
-### Templating
+Despliegues idempotentes en modo incremental o completo, es decir, estado deseado repetible.
 
-I have mentioned before that everything behind or underneath Microsoft Azure is JSON.
+Hay una gran selección de plantillas que pueden exportar definiciones de recursos desplegados. Me gusta pensar en esta característica de plantillas como AWS CloudFormation o podría ser Terraform para una opción multi-nube. Cubriremos más sobre la potencia de Terraform en la sección de Infraestructura como código.
 
-There are several different management portals and consoles we can use to create our resources the preferred route is going to be via JSON templates.
+### Escalado
 
-Idempotent deployments in incremental or complete mode - i.e repeatable desired state.
+El escalado automático es una gran característica de la nube pública, siendo capaz de reducir los recursos no utilizados o aumentarlos cuando se necesiten.
 
-There is a large selection of templates that can export deployed resource definitions. I like to think about this templating feature to something like AWS CloudFormation or could be Terraform for a multi-cloud option. We will cover Terraform more in the Infrastructure as code section.
+En Azure, existe algo llamado Virtual Machine Scale Sets (VMSS) para IaaS. Esto permite la creación automática y la escala de una imagen estándar de oro basado en horarios y métricas.
 
-### Scaling
+Esto es ideal para actualizar ventanas de modo que pueda actualizar sus imágenes y desplegarlas con el menor impacto.
 
-Automatic scaling is a large feature of the Public Cloud, being able to spin down resources you are not using or spin up when you need them.
+Otros servicios como Azure App Services tienen autoescalado integrado.
 
-In Azure, we have something called Virtual Machine Scale Sets (VMSS) for IaaS. This enables the automatic creation and scale from a gold standard image based on schedules and metrics.
+### Contenedores
 
-This is ideal for updating windows so that you can update your images and roll those out with the least impact.
+No hemos cubierto los contenedores como un caso de uso, ni qué ni cómo deben ser necesarios en nuestro viaje de aprendizaje DevOps, pero tenemos que mencionar que Azure tiene algunos servicios específicos centrados en contenedores que son dignos de mención.
+- **Azure Kubernetes Service (AKS)** - Proporciona una solución Kubernetes gestionada, sin necesidad de preocuparse por el plano de control o la gestión de clústeres subyacentes. También veremos más sobre Kubernetes más adelante.
+- **Azure Container Instances** - Contenedores como servicio con facturación por segundos. Ejecute una imagen e intégrela con su red virtual, sin necesidad de Container Orchestration.
+- **Service Fabric** - Tiene muchas capacidades pero incluye orquestación para instancias de contenedor.
 
-Other services such as Azure App Services have auto-scaling built in.
+Azure también tiene el Container Registry que proporciona un registro privado para Docker Images, Helm charts, OCI Artifacts e imágenes. Más sobre esto de nuevo cuando lleguemos a la sección correspondiente de contenedores.
 
-### Containers
+También debemos mencionar que muchos de los servicios de contenedores también pueden aprovechar los contenedores bajo el capó, pero esto se abstrae de su necesidad de gestionar.
 
-We have not covered containers as a use case and what and how they can and should be needed in our DevOps learning journey but we need to mention that Azure has some specific container-focused services to mention.
+Estos servicios centrados en contenedores mencionados también encontramos servicios similares en todas las demás nubes públicas.
 
-Azure Kubernetes Service (AKS) - Provides a managed Kubernetes solution, no need to worry about the control plane or management of the underpinning cluster management. More on Kubernetes also later on.
+### Servicios de aplicaciones
 
-Azure Container Instances - Containers as a service with Per-Second Billing. Run an image and integrate it with your virtual network, no need for Container Orchestration.
+- Azure Application Services ofrece una solución de alojamiento de aplicaciones que proporciona un método sencillo para establecer servicios.
+- Despliegue y escalado automáticos.
+- Admite soluciones basadas en Windows y Linux.
+- Los servicios se ejecutan en un App Service Plan que tiene un tipo y un tamaño.
+- Número de servicios diferentes que incluyen aplicaciones web, aplicaciones API y aplicaciones móviles.
+- Soporte para ranuras de Despliegue para pruebas y promoción fiables.
 
-Service Fabric - Has many capabilities but includes orchestration for container instances.
+### Computación serverless
 
-Azure also has the Container Registry which provides a private registry for Docker Images, Helm charts, OCI Artifacts and images. More on this again when we reach the containers section.
+El objetivo con serverless es que sólo pagamos por el tiempo de ejecución de la función y no tenemos que tener máquinas virtuales o aplicaciones PaaS en ejecución todo el tiempo. Simplemente ejecutamos nuestra función cuando la necesitamos y luego desaparece.
 
-We should also mention that a lot of the container services may indeed also leverage containers under the hood but this is abstracted away from your requirement to manage.
+**Azure Functions** - Proporciona código serverless. Si nos remontamos a nuestro primer vistazo a la nube pública recordaremos la capa de abstracción de la gestión, con funciones serverless sólo vas a estar gestionando el código.
 
-These mentioned container-focused services we also find similar services in all other public clouds.
+**Event-Driven** con escala masiva. Proporciona enlace de entrada y salida a muchos servicios de Azure y de terceros. 
 
-### Application Services
+Soporta muchos lenguajes de programación diferentes. (C#, NodeJS, Python, PHP, batch, bash, Golang y Rust. Cualquier ejecutable)
 
-- Azure Application Services provides an application hosting solution that provides an easy method to establish services.
-- Automatic Deployment and Scaling.
-- Supports Windows & Linux-based solutions.
-- Services run in an App Service Plan which has a type and size.
-- Number of different services including web apps, API apps and mobile apps.
-- Support for Deployment slots for reliable testing and promotion.
+**Azure Event Grid** permite disparar la lógica desde servicios y eventos.
 
-### Serverless Computing
+**Azure Logic App** proporciona workflows e integración basado en gráficos.
 
-Serverless for me is an exciting next step that I am extremely interested in learning more about.
+También podemos echar un vistazo a Azure Batch, que puede ejecutar trabajos a gran escala en nodos Windows y Linux con una gestión y programación coherentes.
 
-The goal with serverless is that we only pay for the runtime of the function and do not have to have running virtual machines or PaaS applications running all the time. We simply run our function when we need it and then it goes away.
-
-Azure Functions - Provides serverless code. If we remember back to our first look into the public cloud we will remember the abstraction layer of management, with serverless functions you are only going to be managing the code.
-
-Event-Driven with massive scale, I have a plan to build something when I get some hands-on here hopefully later on.
-
-Provides input and output binding to many Azure and 3rd Party Services.
-
-Supports many different programming languages. (C#, NodeJS, Python, PHP, batch, bash, Golang and Rust. Or any Executable)
-
-Azure Event Grid enables logic to be triggered from services and events.
-
-Azure Logic App provides a graphical-based workflow and integration.
-
-We can also look at Azure Batch which can run large-scale jobs on both Windows and Linux nodes with consistent management & scheduling.
-
-## Resources
+## Recursos
 
 - [Hybrid Cloud and MultiCloud](https://www.youtube.com/watch?v=qkj5W98Xdvw)
 - [Microsoft Azure Fundamentals](https://www.youtube.com/watch?v=NKEFWyqJ5XA&list=WL&index=130&t=12s)
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-See you on [Day 32](day32.md)
+Nos vemos en el [Día 32](day32.md).
