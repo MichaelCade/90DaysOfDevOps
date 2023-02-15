@@ -1,0 +1,18 @@
+name: 'Welcome New Contributors'
+
+on:
+  issues:
+    types: [opened]
+  pull_request_target:
+    types: [opened]
+
+jobs:
+  welcome-new-contributor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Greet the contributor'
+        uses: garg3133/welcome-new-contributors@v1.2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: 'Hello there, thanks for opening your first issue here. We welcome you to the #90DaysOfDevOps community!'
+          pr-message: 'Hello there, thanks for opening your first Pull Request. Someone will review it soon. Welcome to the #90DaysOfDevOps community!'
