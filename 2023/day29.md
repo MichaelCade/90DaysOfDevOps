@@ -5,7 +5,7 @@ Let's start 😎
 
 # Application logging
 
-Application logs are important from many perspective. This is the way operators know what is happening inside applications they run on their infrastrucutre. For the same reason, keeping application logs is important from a security perspective because they provide a detailed record of the system's activity, which can be used to detect and investigate security incidents.
+Application logs are important from many perspectives. This is the way operators know what is happening inside applications they run on their infrastructure. For the same reason, keeping application logs is important from a security perspective because they provide a detailed record of the system's activity, which can be used to detect and investigate security incidents.
 
 By analyzing application logs, security teams can identify unusual or suspicious activity, such as failed login attempts, access attempts to sensitive data, or other potentially malicious actions. Logs can also help track down the source of security breaches, including when and how an attacker gained access to the system, and what actions they took once inside.
 
@@ -107,7 +107,7 @@ We need to add Falco Helm repo and install the Falco services and the exporter:
 ```bash
 helm repo add falcosecurity https://falcosecurity.github.io/charts
 helm repo update
-helm install falco falcosecurity/falco --set driver.kind=ebpf --set-file certs.server.key=$PWD/server.key,certs.server.crt=$PWD/server.crt,certs.ca.crt=$PWD/ca.crt --set falco.grpc.enabled=true,falco.grpcOutput.enabled=true
+helm install falco falcosecurity/falco --set driver.kind=ebpf --set-file certs.server.key=$PWD/server.key,certs.server.crt=$PWD/server.crt,certs.ca.crt=$PWD/ca.crt --set falco.grpc.enabled=true,falco.grpcOutput.enabled=true,falco.grpc_output.enabled=true
 helm install falco-exporter  --set-file certs.ca.crt=$PWD/ca.crt,certs.client.key=$PWD/client.key,certs.client.crt=$PWD/client.crt falcosecurity/falco-exporter
 ```
 
@@ -123,6 +123,9 @@ Since Prometheus detects the exporter automatically and we already added the Pro
 Go to "Dashboard" left side menu and click import. In "Import via grfana.com" insert the ID `11914` and click "load".
 
 Now you should see Falco events in your Grafana! 😎
+
+![](images/day29-4.png)
+
 
 # Next... 
 
