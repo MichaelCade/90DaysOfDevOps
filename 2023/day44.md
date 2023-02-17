@@ -1,4 +1,4 @@
-# Day 44 - Programming Language: Python
+# Day 44 - Programming Language: Python Data Structures and OOP
 
 Welcome to the third day of Python, and today we will cover some more advanced concepts:
 
