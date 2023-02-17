@@ -14,7 +14,6 @@ However, there are proprietary tools that require a paid license to use them.
 That is why for our demonstration today we are going to use a simple open-source CLI written in Go that was inspired by Burp Intruder and provides similar functionality.
 It is called [httpfuzz](https://github.com/JonCooperWorks/httpfuzz).
 
-
 ## Getting started
 
 This tool is quite simple.
@@ -240,3 +239,5 @@ There are many tools that can help us in fuzzy testing our web applications, bot
 [Fuzzing Session: Finding Bugs and Vulnerabilities Automatically](https://youtu.be/DSJePjhBN5E)
 
 [Fuzzing the CNCF Landscape](https://youtu.be/zIyIZxAZLzo)
+
+On [Day 17](day18.md) DAST.

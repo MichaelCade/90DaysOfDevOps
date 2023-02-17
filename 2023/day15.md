@@ -229,5 +229,4 @@ It is between 0 and 10.
 
 <https://www.aquasec.com/cloud-native-academy/supply-chain-security/sbom/>
 
-
-On [Day 16](day16.md) we will take a look into "Fuzzing" or Fuzz Testing. 
+On [Day 16](day16.md) we will take a look into "Fuzzing" or Fuzz Testing.
