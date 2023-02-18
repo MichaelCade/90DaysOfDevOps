@@ -68,6 +68,6 @@ The print argument is a string, which is one of Python's basic data types for st
 
 ## Resources:
 
-[Learn Python - Full course by freeCodeCamp](https://youtu.be/rfscVS0vtbw)
-[Python tutorial for beginners by Nana](https://youtu.be/t8pPdKYpowI)
-[Python Crash Course book](https://amzn.to/40NfY45)
+- [Learn Python - Full course by freeCodeCamp](https://youtu.be/rfscVS0vtbw)
+- [Python tutorial for beginners by Nana](https://youtu.be/t8pPdKYpowI)
+- [Python Crash Course book](https://amzn.to/40NfY45)

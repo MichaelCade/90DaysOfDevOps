@@ -1,4 +1,4 @@
-# Day 43 - Programming Language: Python
+# Day 43 - Programming Language: Python Loops, functions, modules and libraries
 
 Welcome to the second day of Python, and today we will cover some more concepts:
 - Loops
