@@ -1,128 +1,126 @@
-## Microsoft Azure Hands-On Scenarios
+## Microsoft Azure Escenarios Prácticos
 
-The last 6 days have been focused on Microsoft Azure and the public cloud in general, a lot of this foundation had to contain a lot of theory to understand the building blocks of Azure but also this will nicely translate to the other major cloud providers as well.
+En los últimos 6 días nos hemos centrado en Microsoft Azure y la nube pública para conseguir una mínima base, teníamos que pasar por la teoría para entender los bloques de construcción de Azure. Lo bueno es que esto se traduce muy bien a los otros proveedores de la nube más importantes, tan solo hay que saber como le llaman a cada componente o servicio homólogo.
 
-I mentioned at the very beginning about getting a foundational knowledge of the public cloud and choosing one provider to at least begin with, if you are dancing between different clouds then I believe you can get lost quite easily whereas choosing one you get to understand the fundamentals and when you have those it is quite easy to jump into the other clouds and accelerate your learning.
+Al principio se mencionó esta necesidad de obtener un conocimiento básico de la nube pública y importación de la elección de un proveedor, al menos para empezar, porque si estás danzando entre diferentes nubes puede crear confusiones y perderse con facilidad. Mientras que con la elección de una en concreto se llega a entender mejor los fundamentos, así cuando surja la necesidad de saltar a otras nubes será mucho más ágil el aprendizaje.
 
-In this final session, I am going to be picking and choosing my hands-on scenarios from this page here which is a reference created by Microsoft and is used for preparations for the [AZ-104 Microsoft Azure Administrator](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/)
+En esta última sesión veremos escenarios prácticos de la siguiente página que se enlaza, una referencia creada por Microsoft para la preparación del examen [AZ-104 Microsoft Azure Administrator](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/).
 
-There are some here such as Containers and Kubernetes that we have not covered in any detail as of yet so I don't want to jump in there just yet.
+Algunos como contenedores y Kubernetes aun no están cubiertos en detalle en este viaje, así que no adelantemos acontecimientos todavía.
 
-In previous posts, we have created most of Modules 1,2 and 3.
+En los días anteriores sí que se ha visto gran parte de los Módulos 1,2 y 3 👍
 
-### Virtual Networking
+### Redes Virtuales
 
-Following [Module 04](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_04-Implement_Virtual_Networking.html):
+Siguiendo y revisando el [Módulo 04](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_04-Implement_Virtual_Networking.html) se han cambiado algunos nombres para #90DaysOfDevOps.
 
-I went through the above and changed a few namings for #90DaysOfDevOps. I also instead of using the Cloud Shell went ahead and logged in with my new user created on previous days with the Azure CLI on my Windows machine.
+También, en lugar de utilizar el Cloud Shell iniciamos sesión con el nuevo usuario creado en días anteriores con el CLI de Azure.
 
-You can do this using the `az login` which will open a browser and let you authenticate to your account.
+Se puede hacer esto usando el `az login` que abrirá un navegador y permite autenticar en la cuenta.
 
-I have then created a PowerShell script and some references from the module to use to build out some of the tasks below. You can find the associated files in this folder.
-(Cloud\01VirtualNetworking)
+A continuación, veremos un script PowerShell y algunas referencias del módulo a utilizar para construir algunas de las tareas. Puedes encontrar los archivos asociados en esta carpeta [Cloud\01VirtualNetworking](Cloud/01VirtualNetworking/)
 
-Please make sure you change the file location in the script to suit your environment.
+Asegúrese de cambiar la ubicación del archivo en el script para adaptarlo a tu entorno.
 
-At this first stage, we have no virtual network or virtual machines created in our environment, I only have a cloud shell storage location configured in my resource group.
+En esta primera etapa, no tenemos ninguna red virtual o máquinas virtuales creadas en nuestro entorno, sólo tengo una ubicación de almacenamiento shell en la nube configurada en mi grupo de recursos.
 
-I first of all run my [PowerShell script](Cloud/01VirtualNetworking/Module4_90DaysOfDevOps.ps1)
+En primer lugar ejecuto mi [script PowerShell](Cloud/01VirtualNetworking/Module4_90DaysOfDevOps.ps1).
 
 ![](Images/Day34_Cloud1.png)
 
-- Task 1: Create and configure a virtual network
+- Tarea 1: Crear y configurar una red virtual.
 
 ![](Images/Day34_Cloud2.png)
 
-- Task 2: Deploy virtual machines into the virtual network
+- Tarea 2: Desplegar máquina virtual en la red virtual.
 
 ![](Images/Day34_Cloud3.png)
 
-- Task 3: Configure private and public IP addresses of Azure VMs
+- Tarea 3: Configurar las direcciones IP privadas y públicas de las máquinas virtuales Azure.
 
 ![](Images/Day34_Cloud4.png)
 
-- Task 4: Configure network security groups
+- Tarea 4: Configurar grupos de seguridad en red.
 
 ![](Images/Day34_Cloud5.png)
 ![](Images/Day34_Cloud6.png)
 
-- Task 5: Configure Azure DNS for internal name resolution
+- Tarea 5: Configurar Azure DNS para la resolución de nombres internos.
 
 ![](Images/Day34_Cloud7.png)
 ![](Images/Day34_Cloud8.png)
 
-### Network Traffic Management
+### Gestión de tráfico de red
 
-Following [Module 06](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.html):
+Siguiendo el [Módulo 06](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_06-Implement_Network_Traffic_Management.html):
 
-Next walkthrough, from the last one we have gone into our resource group and deleted our resources, if you had not set up the user account like me to only have access to that one resource group you could follow the module changing the name to `90Days*` this will delete all resources and resource group. This will be my process for each of the following labs.
+Si no has configurado la cuenta de usuario para que sólo tenga acceso a ese grupo de recursos, puedes seguir el módulo cambiando el nombre a '90 días*'. Esto eliminará todos los recursos y el grupo de recursos. Este será el proceso para cada uno de los siguientes laboratorios.
 
-For this lab, I have also created a PowerShell script and some references from the module to use to build out some of the tasks below. You can find the associated files in this folder.
-(Cloud\02TrafficManagement)
+Para este laboratorio, también se ha creado una secuencia de comandos PowerShell y algunas referencias del módulo a utilizar para construir algunas de las tareas. Puede encontrar los archivos asociados en esta carpeta.
+[Nube\02GestiónDeTráfico](Nube\02GestiónDeTráfico)
 
-- Task 1: Provision of the lab environment
+- Tarea 1: Provisión del entorno de laboratorio
 
-I first of all run my [PowerShell script](Cloud/02TrafficManagement/Mod06_90DaysOfDevOps.ps1)
+En primer lugar ejecuto mi [script PowerShell](Cloud/02TrafficManagement/Mod06_90DaysOfDevOps.ps1)
 
 ![](Images/Day34_Cloud9.png)
 
-- Task 2: Configure the hub and spoke network topology
+- Tarea 2: Configurar la [topología de red de concentrador y radio (Hub-and-spoke)](https://learn.microsoft.com/es-es/azure/cloud-adoption-framework/ready/azure-best-practices/hub-spoke-network-topology)
 
 ![](Images/Day34_Cloud10.png)
 
-- Task 3: Test transitivity of virtual network peering
+- Tarea 3: Probar la transitividad del peering de la red virtual
 
-For this my 90DaysOfDevOps group did not have access to the Network Watcher because of permissions, I expect this is because Network Watchers are one of those resources that are not tied to a resource group which is where our RBAC was covered for this user. I added the East US Network Watcher contributor role to the 90DaysOfDevOps group.
+El grupo 90DaysOfDevOps no tenía acceso al Network Watcher debido a los permisos, espero que esto se deba a que los Network Watchers son uno de esos recursos que no están ligados a un grupo de recursos, que es donde nuestro RBAC estaba cubierto para este usuario. Se ha añadido el rol de colaborador del Vigilante de Red del Este de EEUU al grupo 90DaysOfDevOps.
 
 ![](Images/Day34_Cloud11.png)
 ![](Images/Day34_Cloud12.png)
 ![](Images/Day34_Cloud13.png)
 
-^ This is expected since the two spoke virtual networks do not peer with each other (virtual network peering is not transitive).
+^ Esto es lo esperado ya que las dos redes virtuales spoke no son peer entre sí (el peering de redes virtuales no es transitivo).
 
-- Task 4: Configure routing in the hub and spoke topology
+- Tarea 4: Configurar el enrutamiento en la topología de red de concentrador y radio
 
-I had another issue here with my account not being able to run the script as my user within the group 90DaysOfDevOps which I am unsure of so I did jump back into my main admin account. The 90DaysOfDevOps group is an owner of everything in the 90DaysOfDevOps Resource Group so would love to understand why I cannot run a command inside the VM?
+Tuve otro problema aquí con mi cuenta no ser capaz de ejecutar el script como mi usuario dentro del grupo 90DaysOfDevOps que no estoy seguro de lo que hice saltar de nuevo en mi cuenta de administrador principal. El grupo 90DaysOfDevOps es el propietario de todo lo que hay en el grupo de recursos 90DaysOfDevOps, así que me gustaría saber por qué no puedo ejecutar un comando dentro de la máquina virtual.
 
 ![](Images/Day34_Cloud14.png)
 ![](Images/Day34_Cloud15.png)
 
-I then was able to go back into my michael.cade@90DaysOfDevOps.com account and continue this section. Here we are running the same test again but now with the result being reachable.
+Entonces pude volver a entrar en la cuenta michael.cade@90DaysOfDevOps.com y continuar con esta sección. Aquí estamos ejecutando la misma prueba de nuevo pero ahora con el resultado alcanzable.
 
 ![](Images/Day34_Cloud16.png)
 
-- Task 5: Implement Azure Load Balancer
+- Tarea 5: Implementar Azure Load Balancer
 
 ![](Images/Day34_Cloud17.png)
 ![](Images/Day34_Cloud18.png)
 
-- Task 6: Implement Azure Application Gateway
+- Tarea 6: Implementar Azure Application Gateway
 
 ![](Images/Day34_Cloud19.png)
 ![](Images/Day34_Cloud20.png)
 
-### Azure Storage
+### Almcacenamiento Azure
 
-Following [Module 07](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_07-Manage_Azure_Storage.html):
+Siguiendo el [Módulo 07](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_07-Manage_Azure_Storage.html):
 
-For this lab, I have also created a PowerShell script and some references from the module to use to build out some of the tasks below. You can find the associated files in this folder.
-(Cloud\03Storage)
+Para el siguiente laboratorio, también tenemos un script de PowerShell y algunas referencias del módulo a utilizar para construir algunas de las tareas. Puedes encontrar los archivos asociados en la carpeta [Cloud\03Storage](Cloud\03Storage).
 
-- Task 1: Provision of the lab environment
+- Tarea 1: Provisión del entorno de laboratorio.
 
-I first of all run my [PowerShell script](Cloud/03Storage/Mod07_90DaysOfDeveOps.ps1)
+En primer lugar se ejecuta el [script PowerShell](Cloud/03Storage/Mod07_90DaysOfDeveOps.ps1)
 
 ![](Images/Day34_Cloud21.png)
 
-- Task 2: Create and configure Azure Storage accounts
+- Tarea 2: Crear y configurar cuentas Azure Storage.
 
 ![](Images/Day34_Cloud22.png)
 
-- Task 3: Manage blob storage
+- Tarea 3: Gestionar el almacenamiento blob
 
 ![](Images/Day34_Cloud23.png)
 
-- Task 4: Manage authentication and authorization for Azure Storage
+- Tarea 4: Gestionar la autenticación y autorización para Azure Storage
 
 ![](Images/Day34_Cloud24.png)
 ![](Images/Day34_Cloud25.png)
@@ -133,55 +131,55 @@ I was a little impatient waiting for this to be allowed but it did work eventual
 
 - Task 5: Create and configure an Azure Files shares
 
-On the run command, this would not work with michael.cade@90DaysOfDevOps.com so I used my elevated account.
+Se debe tener paciencia esperando a que esto se autorice.
 
 ![](Images/Day34_Cloud27.png)
 ![](Images/Day34_Cloud28.png)
 ![](Images/Day34_Cloud29.png)
 
-- Task 6: Manage network access for Azure Storage
+- Tarea 6: Gestionar acceso a la red para Azure Storage
 
 ![](Images/Day34_Cloud30.png)
 
-### Serverless (Implement Web Apps)
+### Serverless (Implementar Web Apps)
 
-Following [Module 09a](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_09a-Implement_Web_Apps.html):
+Ahora toca el [Módulo 09a](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_09a-Implement_Web_Apps.html):
 
-- Task 1: Create an Azure web app
+- Tarea 1: Crear un Azure web app
 
 ![](Images/Day34_Cloud31.png)
 
-- Task 2: Create a staging deployment slot
+- Tarea 2: Crear un slot de despliegue de preparación
 
 ![](Images/Day34_Cloud34.png)
 
-- Task 3: Configure web app deployment settings
+- Tarea 3: Configurar opciones del despliegue web app
 
 ![](Images/Day34_Cloud33.png)
 
-- Task 4: Deploy code to the staging deployment slot
+- Tarea 4: Desplegar el código en el slot de despliegue de preparación
 
 ![](Images/Day34_Cloud32.png)
 
-- Task 5: Swap the staging slots
+- Tarea 5: Intercambiar slots de preparación
 
 ![](Images/Day34_Cloud35.png)
 
-- Task 6: Configure and test autoscaling of the Azure web app
+- Tarea 6: Configurar y testear el autoescalado de Azure web app
 
-This script I am using can be found in (Cloud/05Serverless)
+Este script que estoy usando se puede encontrar en la carpeta [Cloud/05Serverless](Cloud/05Serverless)
 
 ![](Images/Day34_Cloud36.png)
 
-This wraps up the section on Microsoft Azure and the public cloud in general. I will say that I had lots of fun attacking and working through these scenarios.
+Con esto terminamos la sección sobre Microsoft Azure y la nube pública en general. Espero que te hayas divertido trabajando los distintos escenarios.
 
-## Resources
+## Recursos
 
 - [Hybrid Cloud and MultiCloud](https://www.youtube.com/watch?v=qkj5W98Xdvw)
 - [Microsoft Azure Fundamentals](https://www.youtube.com/watch?v=NKEFWyqJ5XA&list=WL&index=130&t=12s)
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-Next, we will be diving into version control systems, specifically around git and then also code repository overviews and we will be choosing GitHub as this is my preferred option.
+A continuación, vamos a sumergirnos en los sistemas de control de versiones, en concreto en torno a git. Para los repositorios de código veremos GitHub, una de las opciones más utilizadas.
 
-See you on [Day 35](day35.md)
+Nos vemos en el [Día 35](day35.md)
