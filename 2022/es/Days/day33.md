@@ -1,180 +1,174 @@
-## Microsoft Azure Networking Models + Azure Management
+## Modelos de red de Microsoft Azure + Gestión de Azure
 
-As if today marks the anniversary of Microsoft Azure and its 12th Birthday! (1st February 2022) Anyway, we are going to cover the networking models within Microsoft Azure and some of the management options for Azure. So far we have only used the Azure portal but we have mentioned other areas that can be used to drive and create our resources within the platform.
+Vamos a cubrir los modelos de red dentro de Microsoft Azure y algunas de las opciones de gestión de Azure. Hasta ahora solo hemos utilizado el portal de Azure pero hemos mencionado otras áreas que pueden ser utilizadas para manejar y crear nuestros recursos dentro de la plataforma.
 
-## Azure Network Models
+## Modelos de Red Azure
 
-### Virtual Networks
+### Redes Virtuales
 
-- A virtual network is a construct created in Azure.
-- A virtual network has one or more IP ranges assigned to it.
-- Virtual networks live within a subscription within a region.
-- Virtual subnets are created in the virtual network to break up the network range.
-- Virtual machines are placed in virtual subnets.
-- All virtual machines within a virtual network can communicate.
-- 65,536 Private IPs per Virtual Network.
-- Only pay for egress traffic from a region. (Data leaving the region)
-- IPv4 & IPv6 Supported.
-  - IPv6 for public-facing and within virtual networks.
+- Una red virtual es una construcción creada en Azure.
+- Una red virtual tiene uno o más rangos de IP asignados.
+- Las redes virtuales viven dentro de una suscripción dentro de una región.
+- Se crean subredes virtuales en la red virtual para dividir el rango de red.
+- Las máquinas virtuales se colocan en subredes virtuales.
+- Todas las máquinas virtuales dentro de una red virtual pueden comunicarse.
+- 65.536 IPs privadas por red virtual.
+- Sólo se paga por el tráfico de salida de una región. (Datos que salen de la región)
+- Soporta IPv4 e IPv6.
+  - IPv6 para redes virtuales de cara al público y dentro de ellas.
 
-We can liken Azure Virtual Networks to AWS VPCs. However, there are some differences to note:
+Podemos comparar las redes virtuales de Azure con las VPC de AWS. Sin embargo, hay algunas diferencias a tener en cuenta:
 
-- In AWS a default VNet is created that is not the case in Microsoft Azure, you have to create your first virtual network to your requirements.
-- All Virtual Machines by default in Azure have NAT access to the internet. No NAT Gateways as per AWS.
-- In Microsoft Azure, there is no concept of Private or Public subnets.
-- Public IPs are a resource that can be assigned to vNICs or Load Balancers.
-- The Virtual Network and Subnets have their own ACLs enabling subnet level delegation.
-- Subnets across Availability Zones whereas in AWS you have subnets per Availability Zones.
+- En AWS se crea una VNet por defecto que no es el caso en Microsoft Azure, tienes que crear tu primera red virtual a tu medida.
+- Todas las máquinas virtuales por defecto en Azure tienen acceso NAT a Internet. No hay NAT Gateways como en AWS.
+- En Microsoft Azure no existe el concepto de subredes Privadas o Públicas.
+- Las IPs Públicas son un recurso que puede ser asignado a vNICs o Balanceadores de Carga.
+- La red virtual y las subredes tienen sus propias ACL que permiten la delegación a nivel de subred.
+- Subredes a través de Zonas de Disponibilidad mientras que en AWS tienes subredes por Zonas de Disponibilidad.
 
-We also have Virtual Network Peering. This enables virtual networks across tenants and regions to be connected using the Azure backbone. Not transitive but can be enabled via Azure Firewall in the hub virtual network. Using a gateway transit allows peered virtual networks to the connectivity of the connected network and an example of this could ExpressRoute to On-Premises.
+También tenemos Virtual Network Peering. Esto permite la conexión de redes virtuales entre inquilinos y regiones utilizando la red troncal de Azure. No es transitivo, pero puede activarse a través de Azure Firewall en la red virtual central. El uso de una pasarela de tránsito permite a las redes virtuales peered la conectividad de la red conectada y un ejemplo de esto podría ser [ExpressRoute](https://learn.microsoft.com/es-es/azure/expressroute/expressroute-introduction) a On-Premises.
 
-### Access Control
+### Control de acceso
 
-- Azure utilises Network Security Groups, these are stateful.
-- Enable rules to be created and then assigned to a network security group
-- Network security groups applied to subnets or VMs.
-- When applied to a subnet it is still enforced at the Virtual Machine NIC that it is not an "Edge" device.
+- Azure utiliza Grupos de Seguridad de Red, estos son de estado.
+- Permiten crear reglas y luego asignarlas a un grupo de seguridad de red
+- Los grupos de seguridad de red se aplican a subredes o máquinas virtuales.
+- Cuando se aplica a una subred todavía se aplica en el NIC de la máquina virtual que no es un dispositivo "Edge".
 
 ![](Images/Day33_Cloud1.png)
 
-- Rules are combined in a Network Security Group.
-- Based on the priority, flexible configurations are possible.
-- Lower priority number means high priority.
-- Most logic is built by IP Addresses but some tags and labels can also be used.
+- Las reglas se combinan en un Grupo de Seguridad de Red.
+- En función de la prioridad, es posible realizar configuraciones flexibles.
+- Un número de prioridad bajo significa una prioridad alta.
+- La mayor parte de la lógica se construye por Direcciones IP pero también se pueden utilizar algunas etiquetas.
 
-| Description      | Priority | Source Address     | Source Port | Destination Address | Destination Port | Action |
-| ---------------- | -------- | ------------------ | ----------- | ------------------- | ---------------- | ------ |
-| Inbound 443      | 1005     | \*                 | \*          | \*                  | 443              | Allow  |
-| ILB              | 1010     | Azure LoadBalancer | \*          | \*                  | 10000            | Allow  |
-| Deny All Inbound | 4000     | \*                 | \*          | \*                  | \*               | DENY   |
+| Descripción                | Prioridad | Dirección origen   | Puerto de origen | Dirección de destino | Puerto de destino | Acción   |
+| -------------------------- | --------- | ------------------ | ---------------- | -------------------- | ----------------- | -------- |
+| Entrada 443                | 1005      | \*                 | \*               | \*                   | 443               | Permitir |
+| ILB                        | 1010      | Azure LoadBalancer | \*               | \*                   | 10000             | Permitir |
+| Denegar todas las entradas | 4000      | \*                 | \*               | \*                   | \*                | Denegar  |
 
-We also have Application Security Groups (ASGs)
+También tenemos Grupos de Seguridad de Aplicaciones (ASG - Application Security Groups)
 
-- Where NSGs are focused on the IP address ranges which may be difficult to maintain for growing environments.
-- ASGs enable real names (Monikers) for different application roles to be defined (Webservers, DB servers, WebApp1 etc.)
-- The Virtual Machine NIC is made a member of one or more ASGs.
+- Los NSGs se centran en los rangos de direcciones IPs, que pueden ser difíciles de mantener para entornos en crecimiento.
+- Los ASGs permiten definir nombres reales (Monikers) para diferentes roles de aplicación (Webservers, DB servers, WebApp1 etc.)
+- La NIC de la máquina virtual se convierte en miembro de uno o más ASG.
 
-The ASGs can then be used in rules that are part of Network Security Groups to control the flow of communication and can still use NSG features like service tags.
+Los ASG se pueden utilizar en reglas que forman parte de Grupos de Seguridad de Red para controlar el flujo de comunicación y pueden seguir utilizando funciones de NSG como las etiquetas de servicio.
 
-| Action | Name               | Source     | Destination | Port         |
-| ------ | ------------------ | ---------- | ----------- | ------------ |
-| Allow  | AllowInternettoWeb | Internet   | WebServers  | 443(HTTPS)   |
-| Allow  | AllowWebToApp      | WebServers | AppServers  | 443(HTTPS)   |
-| Allow  | AllowAppToDB       | AppServers | DbServers   | 1443 (MSSQL) |
-| Deny   | DenyAllinbound     | Any        | Any         | Any          |
+| Acción   | Nombre             | Origen     | Destino    | Puerto       |
+| -------- | ------------------ | ---------- | ---------- | ------------ |
+| Permitir | AllowInternettoWeb | Internet   | WebServers | 443(HTTPS)   |
+| Permitir | AllowWebToApp      | WebServers | AppServers | 443(HTTPS)   |
+| Permitir | AllowAppToDB       | AppServers | DbServers  | 1443 (MSSQL) |
+| Denegar  | DenyAllinbound     | Any        | Any        | Any          |
 
-### Load Balancing
+### Balanceador de carga
 
-Microsoft Azure has two separate load balancing solutions. (the first party, there are third parties available in the Azure marketplace.) Both can operate with externally facing or internally facing endpoints.
+Microsoft Azure tiene dos soluciones separadas de equilibrio de carga. Ambas pueden funcionar con puntos finales orientados externamente o internamente. La primera solución son las opciones de terceros disponibles en el marketplace de Azure. 
 
-- Load Balancer (Layer 4) supporting hash-based distribution and port-forwarding.
-- App Gateway (Layer 7) supports features such as SSL offload, cookie-based session affinity and URL-based content routing.
+- Balanceador de carga (capa 4) que admite la distribución basada en hash y el reenvío de puertos.
+- App Gateway (capa 7) admite funciones como SSL offload, afinidad de sesión basada en cookies y enrutamiento de contenido basado en URL.
 
-Also with the App Gateway, you can optionally use the Web Application firewall component.
+También con App Gateway, puede utilizar opcionalmente el componente Web Application firewall.
 
-## Azure Management Tools
+## Herramientas de gestión de Azure
 
-We have spent most of our theory time walking through the Azure Portal, I would suggest that when it comes to following a DevOps culture and process a lot of these tasks, especially around provisioning will be done via an API or a command-line tool. I wanted to touch on some of those other management tools that we have available to us as we need to know this for when we are automating the provisioning of our Azure environments.
+Hemos pasado la mayor parte teórica por el Portal de Azure, pero cuando se trata de seguir una cultura DevOps el proceso de muchas de estas tareas (especialmente en torno a aprovisionamiento) se hará a través de una API o una herramienta de línea de comandos. Habría que revisar algunas de estas otras herramientas de gestión que tenemos a nuestra disposición, ya que necesitamos conocerla para cuando estemos automatizando el aprovisionamiento de nuestros entornos Azure.
 
-### Azure Portal
+### Portal Azure
 
-The Microsoft Azure Portal is a web-based console, that provides an alternative to command-line tools. You can manage your subscriptions within the Azure Portal. Build, Manage, and Monitor everything from a simple web app to complex cloud deployments. Another thing you will find within the portal are these breadcrumbs, JSON as mentioned before is the underpinning of all Azure Resources, It might be that you start in the Portal to understand the features, services and functionality but then later understand the JSON underneath to incorporate into your automated workflows.
+El Microsoft Azure Portal es una consola basada en web, que proporciona una alternativa a las herramientas de línea de comandos. Puedes gestionar tus suscripciones dentro del Portal Azure. Construya, Gestione y Monitorice todo, desde una simple aplicación web hasta complejos despliegues en la nube. Otra cosa que encontrarás en el portal son las migas de pan. Como ya se mencionó, JSON es la base de todos los recursos de Azure. Puede ser que comiences en el Portal para entender las características, servicios y funcionalidad, pero tarde o temprano tendrás que entender el JSON para incorporar flujos de trabajo automatizados.
 
 ![](Images/Day33_Cloud2.png)
 
-There is also the Azure Preview portal, this can be used to view and test new and upcoming services and enhancements.
+También existe el portal Azure Preview, que puede utilizarse para ver y probar servicios y mejoras.
 
 ![](Images/Day33_Cloud3.png)
 
 ### PowerShell
 
-Before we get into Azure PowerShell it is worth introducing PowerShell first. PowerShell is a task automation and configuration management framework, a command-line shell and a scripting language. We might and dare I say this liken this to what we have covered in the Linux section around shell scripting. PowerShell was very much first found on Windows OS but it is now cross-platform.
+Antes de adentrarnos en Azure PowerShell, conviene presentar PowerShell. PowerShell es un marco de automatización de tareas y gestión de la configuración, un shell de línea de comandos y un lenguaje de scripting. Podríamos decir que esto se asemeja a lo que hemos visto en la sección de Linux sobre shell scripting. PowerShell se utilizó por primera vez en el sistema operativo Windows, pero ahora es multiplataforma.
 
-Azure PowerShell is a set of cmdlets for managing Azure resources directly from the PowerShell command line.
+Azure PowerShell es un conjunto de cmdlets para gestionar los recursos de Azure directamente desde la línea de comandos de PowerShell.
 
-We can see below that you can connect to your subscription using the PowerShell command `Connect-AzAccount`
+Podemos ver a continuación que te puedes conectar a una suscripción mediante el comando PowerShell `Connect-AzAccount`.
 
 ![](Images/Day33_Cloud4.png)
 
-Then if we wanted to find some specific commands associated with Azure VMs we can run the following command. You could spend hours learning and understanding more about this PowerShell programming language.
+Luego, si quisiéramos encontrar algunos comandos específicos asociados a las VMs de Azure podemos ejecutar el siguiente comando. Podrías pasarte horas aprendiendo y entendiendo más sobre este lenguaje de programación.
 
 ![](Images/Day33_Cloud5.png)
 
-There are some great quickstarts from Microsoft on getting started and provisioning services from PowerShell [here](https://docs.microsoft.com/en-us/powershell/azure/get-started-azureps?view=azps-7.1.0)
+Hay algunos buenos quickstarts de Microsoft para empezar a aprovisionar servicios desde PowerShell [aquí](https://docs.microsoft.com/en-us/powershell/azure/get-started-azureps?view=azps-7.1.0)
 
 ### Visual Studio Code
 
-Like many, and as you have all seen my go-to IDE is Visual Studio Code.
+Como habréis visto la IDE de cabecera en el tutorial es Visual Studio Code. Visual Studio Code es un editor de código fuente gratuito creado por Microsoft para Windows, Linux y macOS.
 
-Visual Studio Code is a free source-code editor made by Microsoft for Windows, Linux and macOS.
-
-You will see below that there are lots of integrations and tools built into Visual Studio Code that you can use to interact with Microsoft Azure and the services within.
+Verás a continuación que hay un montón de integraciones y herramientas integradas en Visual Studio Code que puedes utilizar para interactuar con Microsoft Azure y los servicios que contiene.
 
 ![](Images/Day33_Cloud6.png)
 
 ### Cloud Shell
 
-Azure Cloud Shell is an interactive, authenticated, browser-accessible shell for managing Azure resources. It provides the flexibility of choosing the shell experience that best suits the way you work.
+Azure Cloud Shell es un shell interactivo, autenticado y accesible desde el navegador para gestionar los recursos de Azure. Proporciona la flexibilidad de elegir la experiencia de shell que mejor se adapte a su forma de trabajar.
 
 ![](Images/Day33_Cloud7.png)
 
-You can see from the below when we first launch Cloud Shell within the portal we can choose between Bash and PowerShell.
+Puedes ver en la siguiente imagen que cuando lanzamos Cloud Shell por primera vez dentro del portal podemos elegir entre Bash y PowerShell.
 
 ![](Images/Day33_Cloud8.png)
 
-To use the cloud shell you will have to provide a bit of storage in your subscription.
+Para utilizar Cloud Shell tendrás que proporcionar un poco de almacenamiento en tu suscripción.
 
-When you select to use the cloud shell it is spinning up a machine, these machines are temporary but your files are persisted in two ways; through a disk image and a mounted file share.
+Cuando seleccionas el intérprete de comandos en la nube, se pone en marcha una máquina. Estas máquinas son temporales, pero tus archivos se conservan de dos maneras: a través de una imagen de disco y en un archivo compartido montado.
 
 ![](Images/Day33_Cloud9.png)
 
-- Cloud Shell runs on a temporary host provided on a per-session, per-user basis
-- Cloud Shell times out after 20 minutes without interactive activity
-- Cloud Shell requires an Azure file share to be mounted
-- Cloud Shell uses the same Azure file share for both Bash and PowerShell
-- Cloud Shell is assigned one machine per user account
-- Cloud Shell persists $HOME using a 5-GB image held in your file share
-- Permissions are set as a regular Linux user in Bash
+- Cloud Shell se ejecuta en un host temporal proporcionado por sesión y por usuario.
+- Cloud Shell se desconecta después de 20 minutos sin actividad interactiva.
+- Cloud Shell requiere que se monte un archivo compartido de Azure.
+- Cloud Shell utiliza el mismo recurso compartido de archivos de Azure para Bash y PowerShell.
+- Cloud Shell tiene asignada una máquina por cuenta de usuario.
+- Cloud Shell persiste $HOME utilizando una imagen de 5 GB guardada en su recurso compartido de archivos.
+- Los permisos se establecen como un usuario normal de Linux en Bash.
 
-The above was copied from [Cloud Shell Overview](https://docs.microsoft.com/en-us/azure/cloud-shell/overview)
+Lo anterior fue copiado de [Cloud Shell Overview](https://docs.microsoft.com/en-us/azure/cloud-shell/overview).
 
 ### Azure CLI
 
-Finally, I want to cover the Azure CLI, The Azure CLI can be installed on Windows, Linux and macOS. Once installed you can type `az` followed by other commands to create, update, delete and view Azure resources.
+Por último vamos a echar un ojo a Azure CLI. Azure CLI se puede instalar en Windows, Linux y macOS. Una vez instalado se puede escribir `az` seguido de otros comandos para crear, actualizar, eliminar y ver los recursos de Azure.
 
-When I initially came into my Azure learning I was a little confused by there being Azure PowerShell and the Azure CLI.
+Al empezar con Azure es confusa la existencia de Azure PowerShell y Azure CLI. Estaría bien algún comentario de la comunidad sobre esto. Pero una visión objetica es que Azure PowerShell es un módulo añadido a Windows PowerShell o PowerShell Core (También disponible en otros sistemas operativos, pero no todos), mientras que Azure CLI es un programa de línea de comandos multiplataforma que se conecta a Azure y ejecuta los comandos.
 
-I would love some feedback from the community on this as well. But the way I see it is that Azure PowerShell is a module added to Windows PowerShell or PowerShell Core (Also available on other OS but not all) Whereas Azure CLI is a cross-platform command-line program that connects to Azure and executes those commands.
+Ambas opciones tienen una sintaxis diferente, aunque pueden hacer tareas muy similares.
 
-Both of these options have a different syntax, although they can from what I can see and what I have done do very similar tasks.
-
-For example, creating a virtual machine from PowerShell would use the `New-AzVM` cmdlet whereas Azure CLI would use `az VM create`.
-
-You saw previously that I have the Azure PowerShell module installed on my system but then I also have the Azure CLI installed that can be called through PowerShell on my Windows machine.
+Por ejemplo, crear una máquina virtual desde PowerShell usaría el cmdlet `New-AzVM` mientras que Azure CLI usaría `az VM create`.
 
 ![](Images/Day33_Cloud10.png)
 
-The takeaway here as we already mentioned is about choosing the right tool. Azure runs on automation. Every action you take inside the portal translates somewhere to code being executed to read, create, modify, or delete resources.
+Como ya hemos mencionado, lo importante aquí es elegir la herramienta adecuada para cada tarea. Azure se basa en la automatización. Cada acción que realizas dentro del portal se traduce en algún lugar en código que se ejecuta para leer, crear, modificar o eliminar recursos.
 
 Azure CLI
 
-- Cross-platform command-line interface, installable on Windows, macOS, Linux
-- Runs in Windows PowerShell, Cmd, Bash and other Unix shells.
+- Interfaz de línea de comandos multiplataforma, instalable en Windows, macOS y Linux.
+- Se ejecuta en Windows PowerShell, Cmd, Bash y otros shells Unix.
 
 Azure PowerShell
 
-- Cross-platform PowerShell module, runs on Windows, macOS, Linux
-- Requires Windows PowerShell or PowerShell
+- Módulo PowerShell multiplataforma, ejecutable en Windows, macOS, Linux.
+- Requiere Windows PowerShell o PowerShell.
 
-If there is a reason you cannot use PowerShell in your environment but you can use .mdor bash then the Azure CLI is going to be your choice.
+Si hay una razón por la que no puede utilizar PowerShell en su entorno, pero puede utilizar .mdor bash entonces el Azure CLI va a ser su elección.
 
-Next up we take all the theories we have been through and create some scenarios and get hands-on in Azure.
+A continuación vamos a tomar todas las teorías que hemos estado a través de y crear algunos escenarios y ponerse manos a la obra en Azure.
 
-## Resources
+## Recursos
 
 - [Hybrid Cloud and MultiCloud](https://www.youtube.com/watch?v=qkj5W98Xdvw)
 - [Microsoft Azure Fundamentals](https://www.youtube.com/watch?v=NKEFWyqJ5XA&list=WL&index=130&t=12s)
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-See you on [Day 34](day34.md)
+Nos vemos en el [Día 34](day34.md)

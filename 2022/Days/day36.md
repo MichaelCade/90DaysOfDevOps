@@ -44,7 +44,7 @@ Now we can choose additional components that we would like to also install but a
 
 ![](Images/Day36_Git4.png)
 
-We can then choose which SSH Executable we wish to use. IN leave this as the bundled OpenSSH that you might have seen in the Linux section.
+We can then choose which SSH Executable we wish to use. I leave this as the bundled OpenSSH that you might have seen in the Linux section.
 
 ![](Images/Day36_Git5.png)
 
