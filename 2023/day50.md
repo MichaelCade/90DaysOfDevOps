@@ -42,4 +42,3 @@ Once you have access to your free tier account, there are a few additional steps
 [Create your free AWS account](https://youtu.be/uZT8dA3G-S4)
 
 [Generate credentials, budget, and billing alarms via CLI](https://youtu.be/OdUnNuKylHg)
-
