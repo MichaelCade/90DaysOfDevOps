@@ -163,4 +163,4 @@ Tôi cũng nghĩ về việc sẽ dễ dàng hơn khi hướng dẫn nhiều bư
 
 Ngày mai, chúng ta bắt đầu 7 ngày tìm hiểu về Mạng máy tính, chúng ta sẽ tìm cách trang bị cho mình kiến ​​thức và hiểu biết cơ bản về Mạng liên quan tới DevOps.
 
-Hẹn gặp lại vào [Ngày21](day21.md)
+Hẹn gặp lại vào [ngày 21](day21.md)
