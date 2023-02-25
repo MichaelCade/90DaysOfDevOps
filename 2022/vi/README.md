@@ -62,13 +62,13 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 
 ### Tìm hiểu về một Cloud Provider
 
-- [✔️] ☁️ 28 > [The Big Picture: DevOps & The Cloud](Days/day28.md)
-- [✔️] ☁️ 29 > [Microsoft Azure Fundamentals](Days/day29.md)
+- [✔️] ☁️ 28 > [Bức tranh toàn cảnh: DevOps & The Cloud](Days/day28.md)
+- [✔️] ☁️ 29 > [Kiến thức cơ bản về Microsoft Azure](Days/day29.md)
 - [✔️] ☁️ 30 > [Microsoft Azure Security Models](Days/day30.md)
 - [✔️] ☁️ 31 > [Microsoft Azure Compute Models](Days/day31.md)
 - [✔️] ☁️ 32 > [Microsoft Azure Storage & Database Models](Days/day32.md)
 - [✔️] ☁️ 33 > [Microsoft Azure Networking Models + Azure Management](Days/day33.md)
-- [✔️] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](Days/day34.md)
+- [✔️] ☁️ 34 > [Thực hành với Microsoft Azure](Days/day34.md)
 
 ### Cách sử dụng Git hiệu quả
 
