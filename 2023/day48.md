@@ -7,11 +7,29 @@ Let's create a simple blog app with the help of [Flask](https://flask.palletspro
 Let's create a directory for our blog project. After you have created your project directory, create virtual environment using the following commands:
 - Windows
   ``` bash
+  c:\>python -m venv c:\path\to\myenv
   ```
 - Linux//MacOs
   ``` bash
+  python3 -m venv /path/to/new/virtual/environment
   ```
-  
+
+Activate the virtual environment:
+  - Windows cmd
+  ``` bash
+  C:\> <venv>\Scripts\activate.bat
+  ```
+
+  - Windows powershell
+  ``` powershell
+  <venv>\Scripts\Activate.ps1
+  ```
+
+  - Linux//MacOs
+  ``` bash
+  source <venv>/bin/activate
+  ```
+
 Now let's use `pip` to install required modules and packages that we will be using in this project.
 ``` bash
 pip install flask markdown
@@ -19,7 +37,7 @@ pip install flask markdown
 
 ## Creating the flask app
 
-First, create a new Flask app:
+First, create a new Flask app, by creating a file in root of the project directory called `main.py`:
 
 ``` python
 from flask import Flask, render_template
@@ -34,8 +52,6 @@ Define a route for the home page:
 def home():
     return render_template('index.html')
 ```
-
-Create a directory called posts and add some Markdown files with blog post content.
 
 Define a route to handle requests for individual blog posts:
 
@@ -94,4 +110,35 @@ def home():
     return render_template('index.html', posts=posts)
 ```
 
-  
+## Adding markdown posts
+
+Now before running the app, let's add few posts.
+Create a directory called `posts` and add some Markdown files with blog post content.
+Let's add a `hello.md`:
+
+``` markdown
+# Hello
+
+This is my first blog post
+### Heading level 3
+#### Heading level 4
+##### Heading level 5
+###### Heading level 6
+
+I just love **bold text**.
+
+```
+
+Now, let's run the app, type the following command:
+
+``` bash
+python main.py
+```
+
+Here is how it would look, I have 2 blog posts and have some gifs in my blog posts. Navigate to `127.0.0.0:5000` in a browser window:
+
+![Home Page of our blog](/2023/images/day48-1.png)
+
+If we click on the `hello` blog post:
+
+![Hello blog post](/2023/images/day48-2.png)
