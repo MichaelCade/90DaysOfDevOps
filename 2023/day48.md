@@ -136,6 +136,16 @@ Now, let's run the app, type the following command:
 python main.py
 ```
 
+And you should see the following output in the termainal:
+
+``` bash
+ python main.py                                                                                                                * Serving Flask app 'main'                                                                                                     * Debug mode: on                                                                                                              WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.         
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+```
+
 Here is how it would look, I have 2 blog posts and have some gifs in my blog posts. Navigate to `127.0.0.0:5000` in a browser window:
 
 ![Home Page of our blog](/2023/images/day48-1.png)
