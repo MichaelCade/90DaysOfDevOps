@@ -64,8 +64,9 @@ def post(path):
         return render_template('post.html', content=html)
 ```
 
-Create templates for the home page and individual blog posts:
-- `home.html`:
+Create templates for the home page and individual blog posts, we can do this by creating a new directory in root of project called `templates`. And then further create the two following `html` files:
+
+- `index.html`:
 
 ``` html
 <!DOCTYPE html>
