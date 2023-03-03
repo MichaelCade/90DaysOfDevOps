@@ -72,14 +72,13 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 
 ### Cách sử dụng Git hiệu quả
 
-- [✔️] 📚 35 > [The Big Picture: Git - Version Control](Days/day35.md)
-- [✔️] 📚 36 > [Installing & Configuring Git](Days/day36.md)
-- [✔️] 📚 37 > [Gitting to know Git](Days/day37.md)
+- [✔️] 📚 35 > [Bức tranh toàn cảnh: Git - Quản lý phiên bản](Days/day35.md)
+- [✔️] 📚 36 > [Cài đặt & Cấu hình Git](Days/day36.md)
+- [✔️] 📚 37 > [Giới thiệu về Git](Days/day37.md)
 - [✔️] 📚 38 > [Staging & Changing](Days/day38.md)
-- [✔️] 📚 39 > [Viewing, unstaging, discarding & restoring](Days/day39.md)
-- [✔️] 📚 40 > [Social Network for code](Days/day40.md)
-- [✔️] 📚 41 > [The Open Source Workflow](Days/day41.md)
-
+- [✔️] 📚 39 > [Xem, unstaging, loại bỏ & khôi phục](Days/day39.md)
+- [✔️] 📚 40 > [Mạng xã hội dành cho code](Days/day40.md)
+- [✔️] 📚 41 > [Quy trình làm việc với mã nguồn mở](Days/day41.md)
 ### Containers
 
 - [✔️] 🏗️ 42 > [The Big Picture: Containers](Days/day42.md)
