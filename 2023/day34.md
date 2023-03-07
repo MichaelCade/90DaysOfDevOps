@@ -1,4 +1,4 @@
-# Runtime access control and monitoring
+# Runtime access control
 
 Runtime access control is crucial in a computer system because it helps ensure the security and integrity of a computer system cluster and the applications running on it. A computer system is a complex system with many moving parts, and it is essential to control access to these components to prevent unauthorized access or malicious activities.
 
