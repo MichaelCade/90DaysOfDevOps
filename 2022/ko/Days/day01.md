@@ -60,5 +60,6 @@ date: '2022-04-17T10:12:40Z'
 - [DevOps in 5 Minutes](https://www.youtube.com/watch?v=Xrgk023l4lI)
 - [What is DevOps? Easy Way](https://www.youtube.com/watch?v=_Gpe1Zn-1fE&t=43s)
 - [DevOps roadmap 2022 | Success Roadmap 2022](https://www.youtube.com/watch?v=7l_n97Mt0ko)
+- [From Zero to DevOps Engineer - DevOps Roadmap for YOUR specific background](https://www.youtube.com/watch?v=G_nVMUtaqCk)
 
 여기까지 읽었다면 나에게 필요한 내용인지 아닌지 알 수 있을 것입니다. [Day 2](day02.md)
