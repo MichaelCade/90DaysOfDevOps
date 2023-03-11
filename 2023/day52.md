@@ -7,7 +7,12 @@ As cloud computing continues to gain popularity, more and more organizations are
 
 AWS IAM is a web service that allows you to manage users and their access to AWS resources. With IAM, you can create and manage AWS users and groups, control access to AWS resources, and set permissions that determine what actions users can perform on those resources. IAM provides fine-grained access control, which means that you can grant or deny permissions to specific resources at a granular level.
 
-IAM is an essential tool for securing your AWS resources. Without it, anyone with access to your AWS account would have unrestricted access to all your resources. With IAM, you can control who has access to your resources, what actions they can perform, and what resources they can access. IAM also enables you to create and manage multiple AWS accounts, which is essential as large organizations will always have many accounts that will need some level of interaction with each other. 
+IAM is an essential tool for securing your AWS resources. Without it, anyone with access to your AWS account would have unrestricted access to all your resources. With IAM, you can control who has access to your resources, what actions they can perform, and what resources they can access. IAM also enables you to create and manage multiple AWS accounts, which is essential as large organizations will always have many accounts that will need some level of interaction with each other:
+
+|![](images/day52-2.png)|
+|:-:|
+| <b>Multi-Account IAM access is essential knowledge</b>|
+
 
 ## How to Get Started with AWS IAM
 
@@ -27,11 +32,11 @@ The next step is to create an IAM user. An IAM user is an entity that you create
 
 ### Step 4: Create an IAM Group
 
-After you've created an IAM user, the next step is to create an IAM group. An IAM group is a collection of IAM users. When you create an IAM group, you can specify the permissions that the group should have. Watch "IAM Basics" in the resources section to accomplish this.
+After you've created an IAM user, the next step is to create an IAM group. An IAM group is a collection of IAM users. When you create an IAM group, you can specify the permissions that the group should have. Watch "IAM Basics" and read "IAM User Guide:Getting Started" in the resources section to accomplish this.
 
 ### Step 5: Assign Permissions to the IAM Group
 
-Once you've created an IAM group, you can assign permissions to the group. This involves creating an IAM policy that defines the permissions that the group should have. You can then attach the policy to the group. Watch "IAM Tutorial & Deep Dive" in the resources section to accomplish this.
+Once you've created an IAM group, you can assign permissions to the group. This involves creating an IAM policy that defines the permissions that the group should have. You can then attach the policy to the group. Watch "IAM Tutorial & Deep Dive" and go through the IAM Tutorial in the resources section to accomplish this.
 
 ### Step 6: Test the IAM User
 
@@ -40,4 +45,9 @@ After you've assigned permissions to the IAM group, you can test the IAM user to
 ## Resources:
 [IAM Basics](https://youtu.be/iF9fs8Rw4Uo)
 
-[IAM Tutorial & Deep Dive](https://youtu.be/ExjW3HCFG1U)
+[IAM User Guide: Getting started](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html)
+
+[IAM Video Tutorial & Deep Dive](https://youtu.be/ExjW3HCFG1U)
+
+[IAM Tutorial: Delegate access across AWS accounts using IAM roles](https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_cross-account-with-roles.html)
+
