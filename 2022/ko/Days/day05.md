@@ -12,7 +12,7 @@ id: 1048830
 
 오늘은 데브옵스 환경에서 애플리케이션의 시작부터 끝까지 개별 단계와 continuous cycle에 대해 집중적으로 살펴보겠습니다.
 
-![DevOps](https://github.com/MichaelCade/90DaysOfDevOps/tree/main/2022/Days/Images/Day5_DevOps8.png)
+![DevOps](/2022/Days/Images/Day5_DevOps8.png)
 
 ### 계획
 
