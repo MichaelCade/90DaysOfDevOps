@@ -3,7 +3,7 @@
 ![](images/day54-01.png)
 
 
-AWS CodeCommit is a fully managed source control service provided by Amazon Web Services (AWS) that makes it easy for developers to host and manage private Git repositories. Think "GitHub but with less features" 🤣 It allows teams to collaborate on code and keep their code securely stored in the cloud, with support for secure access control, encryption, and automatic backups.
+AWS CodeCommit is a fully managed source control service provided by Amazon Web Services (AWS) that makes it easy for developers to host and manage private Git repositories. Think "GitHub but with less features" 🤣 (j/k, see the resource "CodeCommit vs GitHub" for a breakdown) It allows teams to collaborate on code and keep their code securely stored in the cloud, with support for secure access control, encryption, and automatic backups.
 
 With AWS CodeCommit, developers can easily create, manage, and collaborate on Git repositories with powerful code review and workflow tools. It integrates seamlessly with other AWS services like AWS CodePipeline and AWS CodeBuild, making it easier to build and deploy applications in a fully automated manner.
 
@@ -20,6 +20,8 @@ Overall, AWS CodeCommit is a powerful tool for teams that need to collaborate on
 
 
 ## Resources:
+
+[AWS CodeCommit User Guide](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html)
 
 [AWS CodeCommit Overview](https://youtu.be/5kFmfgFYOx4)
 
