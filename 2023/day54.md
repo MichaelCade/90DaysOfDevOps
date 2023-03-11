@@ -20,10 +20,9 @@ Overall, AWS CodeCommit is a powerful tool for teams that need to collaborate on
 
 
 ## Resources:
-[AWS Systems Manager Introduction](https://youtu.be/pSVK-ingvfc)
 
-[Patch and manage your AWS Instances in MINUTES with AWS Systems Manager](https://youtu.be/DEQFJba3h4M)
+[AWS CodeCommit Overview](https://youtu.be/5kFmfgFYOx4)
+
+[AWS CodeCommit tutorial: your first Repo, Commit and Push](https://youtu.be/t7M8pHCh5Xs)
 
 [AWS CodeCommit vs GitHub: Which will Shine in 2023?](https://appwrk.com/aws-codecommit-vs-github)
-
-
