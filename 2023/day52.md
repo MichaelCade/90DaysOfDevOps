@@ -3,7 +3,10 @@
 As cloud computing continues to gain popularity, more and more organizations are turning to cloud platforms to manage their infrastructure. However, with this comes the need to ensure proper security measures are in place to protect data and resources. One of the most critical tools for managing security in AWS is Identity and Access Management (IAM).
 
 ## What is AWS IAM?
-![](images/day52-1.png) 
+|![](images/day52-1.png)| 
+|:-:|
+| <i>IAM is (1) WHO (2) CAN ACCESS (3) WHAT</i>|
+
 
 AWS IAM is a web service that allows you to manage users and their access to AWS resources. With IAM, you can create and manage AWS users and groups, control access to AWS resources, and set permissions that determine what actions users can perform on those resources. IAM provides fine-grained access control, which means that you can grant or deny permissions to specific resources at a granular level.
 
@@ -11,7 +14,7 @@ IAM is an essential tool for securing your AWS resources. Without it, anyone wit
 
 |![](images/day52-2.png)|
 |:-:|
-| <b>Multi-Account IAM access is essential knowledge</b>|
+| <i>Multi-Account IAM access is essential knowledge</i>|
 
 
 ## How to Get Started with AWS IAM
