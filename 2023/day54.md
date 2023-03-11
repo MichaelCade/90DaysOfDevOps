@@ -1,1 +1,1 @@
-# Day 54: AWS Code Commit
+# Day 54: AWS CodeCommit
