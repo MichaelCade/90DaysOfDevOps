@@ -21,7 +21,7 @@ AWS CodePipeline integrates with other AWS services:
 
 ## Getting started with AWS CodePipeline
 
-To get started with AWS CodePipeline, there are several excellent [tutorials](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials.html) in the [AWS User Guide](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html). They all basically break down into the following 3 steps 
+To get started with AWS CodePipeline, there are several excellent [tutorials](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials.html) in the [AWS User Guide](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html). They all basically break down into the following 3 steps: 
 
 ### Step 1: Create an IAM role
 
