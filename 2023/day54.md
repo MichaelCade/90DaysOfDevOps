@@ -15,6 +15,8 @@ Some key features of AWS CodeCommit include:
 - Highly scalable and available, with automatic backups and failover capabilities
 - Integration with other AWS developer tools like AWS CodePipeline and AWS CodeBuild
 
+In order to effectively leverage CodeCommit, you of course need to know how to use Git. There are [many](https://www.youtube.com/playlist?list=PL2rC-8e38bUXloBOYChAl0EcbbuVjbE3t) [excellent](https://youtu.be/tRZGeaHPoaw) [Git](https://youtu.be/USjZcfj8yxE) [tutorials](https://youtu.be/RGOj5yH7evk) out there, (and that's not my section anyway 😉) so I won't go into that myself.
+
 Overall, AWS CodeCommit is a powerful tool for teams that need to collaborate on code, manage their repositories securely, and streamline their development workflows.
 
 
