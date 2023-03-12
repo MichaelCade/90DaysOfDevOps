@@ -57,6 +57,6 @@ To tie up this AWS section of the 90 Days of DevOps, I recommend that you go thr
 There are a number of <i>excellent</i> instructors out there and picking 2-3 is always hard, but [Adrian Cantrill](https://learn.cantrill.io/), [Andrew Brown](https://www.exampro.co/), and [Stephane Maarek](https://www.udemy.com/user/stephane-maarek/) always come to mind when discussing fantastic content out there. 
 
 ## Final Thoughts
-I hope that this section of the 90 Days of DevOps has given you a taste of what is available in the AWS ecosystem. It was difficult to pick out 7 items of discussion because (1) there are so many services that I could have talked about and (2) each one could have been a much deeper dive on it's own. 
+I hope that this section of the 90 Days of DevOps has given you a taste of what is available in the AWS ecosystem. 
 
 Good luck in your studies! Up next is Red Hat OpenShift!
