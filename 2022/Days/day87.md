@@ -12,7 +12,7 @@ id: 1048717
 
 In the last session, we touched on [Kopia](https://kopia.io/) an Open-Source backup tool that we used to get some important data off to a local NAS and off to some cloud-based object storage.
 
-In this section, I want to get into the world of Kubernetes backup. It is a platform we covered [The Big Picture: Kubernetes](Days/day49.md) earlier in the challenge.
+In this section, I want to get into the world of Kubernetes backup. It is a platform we covered [The Big Picture: Kubernetes](/90dayspractical/90DaysOfDevOps/2022/Days/day49.md) earlier in the challenge.
 
 We will again be using our minikube cluster but this time we are going to take advantage of some of those addons that are available.
 
@@ -187,4 +187,4 @@ Next, we will take a look at Application consistency.
 - [Disaster Recovery vs. Backup: What's the difference?](https://www.youtube.com/watch?v=07EHsPuKXc0)
 - [Veeam Portability & Cloud Mobility](https://www.youtube.com/watch?v=hDBlTdzE6Us&t=3s)
 
-See you on [Day 88](day88.md)
+See you on [Day 88](/90dayspractical/90DaysOfDevOps/2022/Days/day88.md)

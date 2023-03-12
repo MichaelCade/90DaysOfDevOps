@@ -175,4 +175,4 @@ If you have FREE resources that you have used then please feel free to add them 
 - [Kunal Kushwaha - Kubernetes Tutorial for Beginners | What is Kubernetes? Architecture Simplified!](https://www.youtube.com/watch?v=KVBON1lA9N8)
 - [Techbeatly - Deploy Minikube Using Vagrant and Ansible on VirtualBox](https://www.youtube.com/watch?v=xPLQqHbp9BM&t=371s)
 
-See you on [Day 52](day52.md)
+See you on [Day 52](/90dayspractical/90DaysOfDevOps/2022/Days/day52.md)

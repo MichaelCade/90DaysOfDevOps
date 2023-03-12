@@ -78,4 +78,4 @@ Log Management is a key aspect of the overall observability of your applications
 - [What is ELK Stack?](https://www.youtube.com/watch?v=4X0WLg05ASw)
 - [Fluentd simply explained](https://www.youtube.com/watch?v=5ofsNyHZwWE&t=14s)
 
-See you on [Day 80](day80.md)
+See you on [Day 80](/90dayspractical/90DaysOfDevOps/2022/Days/day80.md)

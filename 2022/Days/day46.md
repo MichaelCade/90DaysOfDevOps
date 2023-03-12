@@ -180,4 +180,4 @@ To remove everything we can use the `docker-compose down` command.
 - [Docker documentation for building an image](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 - [YAML Tutorial: Everything You Need to Get Started in Minute](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started)
 
-See you on [Day 47](day47.md)
+See you on [Day 47](/90dayspractical/90DaysOfDevOps/2022/Days/day47.md)

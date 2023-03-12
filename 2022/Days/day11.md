@@ -173,4 +173,4 @@ There are many different types of integer and float types the links above will c
 
 Next up we are going to start adding some user input functionality to our program so that we are asked how many days have been completed.
 
-See you on [Day 12](day12.md).
+See you on [Day 12](/90dayspractical/90DaysOfDevOps/2022/Days/day12.md).

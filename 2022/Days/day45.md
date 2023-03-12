@@ -115,4 +115,4 @@ Then if we go and take a look in our DockerHub repository you can see that we ju
 - [Blog on gettng started building a docker image](https://stackify.com/docker-build-a-beginners-guide-to-building-docker-images/)
 - [Docker documentation for building an image](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 
-See you on [Day 46](day46.md)
+See you on [Day 46](/90dayspractical/90DaysOfDevOps/2022/Days/day46.md)

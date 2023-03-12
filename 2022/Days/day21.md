@@ -113,4 +113,4 @@ Over the next few days, we are going to get to know a little more about this lis
 * [Networking Fundamentals](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
 * [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 
-See you on [Day22](day22.md)
+See you on [Day22](/90dayspractical/90DaysOfDevOps/2022/Days/day22.md)

@@ -172,4 +172,4 @@ You can customise this portal with your branding and this might be something we 
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-See you on [Day 31](day31.md)
+See you on [Day 31](/90dayspractical/90DaysOfDevOps/2022/Days/day31.md)

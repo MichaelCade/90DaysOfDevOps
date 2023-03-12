@@ -168,4 +168,4 @@ I have taken these from [atlassian](https://www.atlassian.com/git/tutorials/atla
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 
-See you on [Day 38](day38.md)
+See you on [Day 38](/90dayspractical/90DaysOfDevOps/2022/Days/day38.md)

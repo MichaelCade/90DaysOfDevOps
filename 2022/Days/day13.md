@@ -322,4 +322,4 @@ This wraps up the Programming language for 7 days! So much more that can be cove
 
 Next, we take our focus into Linux and some of the fundamentals that we should all know there.
 
-See you on [Day 14](day14.md).
+See you on [Day 14](/90dayspractical/90DaysOfDevOps/2022/Days/day14.md).

@@ -124,4 +124,4 @@ This then wraps up our look into Git and GitHub, next we are diving into contain
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 
-See you on [Day 42](day42.md)
+See you on [Day 42](/90dayspractical/90DaysOfDevOps/2022/Days/day42.md)

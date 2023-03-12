@@ -118,4 +118,4 @@ Most of the examples I am using here as I am not a Network Engineer have come fr
 
 - [Hands-On Enterprise Automation with Python (Book)](https://www.packtpub.com/product/hands-on-enterprise-automation-with-python/9781788998512)
 
-See you on [Day 27](day27.md)
+See you on [Day 27](/90dayspractical/90DaysOfDevOps/2022/Days/day27.md)

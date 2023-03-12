@@ -102,4 +102,4 @@ I am also going to build out a scenario as I have done in the other sections whe
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-See you on [Day 29](day29.md)
+See you on [Day 29](/90dayspractical/90DaysOfDevOps/2022/Days/day29.md)

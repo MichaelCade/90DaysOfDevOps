@@ -102,4 +102,4 @@ I am going to be looking for a step-by-step example of an application that we ca
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 72](day72.md)
+See you on [Day 72](/90dayspractical/90DaysOfDevOps/2022/Days/day72.md)

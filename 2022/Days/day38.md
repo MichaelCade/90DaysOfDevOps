@@ -124,4 +124,4 @@ In the post tomorrow we will continue to look through these short examples of th
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 
-See you on [Day 39](day39.md)
+See you on [Day 39](/90dayspractical/90DaysOfDevOps/2022/Days/day39.md)

@@ -207,4 +207,4 @@ You will also come across hosted options. Most commonly here I have seen GitLab 
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 
-See you on [Day 41](day41.md)
+See you on [Day 41](/90dayspractical/90DaysOfDevOps/2022/Days/day41.md)

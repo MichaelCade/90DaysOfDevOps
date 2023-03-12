@@ -140,4 +140,4 @@ This final playlist listed above is where a lot of the code and ideas came from 
 
 This post wraps up our look into configuration management, we next move into CI/CD Pipelines and some of the tools and processes that we might see and use out there to achieve this workflow for our application development and release.
 
-See you on [Day 70](day70.md)
+See you on [Day 70](/90dayspractical/90DaysOfDevOps/2022/Days/day70.md)

@@ -76,4 +76,4 @@ I have been through a bit of a journey with my learning around Kubernetes so I a
 - [TechWorld with Nana - Kubernetes Crash Course for Absolute Beginners](https://www.youtube.com/watch?v=s_o8dwzRlu4)
 - [Kunal Kushwaha - Kubernetes Tutorial for Beginners | What is Kubernetes? Architecture Simplified!](https://www.youtube.com/watch?v=KVBON1lA9N8)
 
-See you on [Day 51](day51.md)
+See you on [Day 51](/90dayspractical/90DaysOfDevOps/2022/Days/day51.md)

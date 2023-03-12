@@ -188,4 +188,4 @@ We have one more bit of theory remaining around networking before we can get som
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-See you on [Day 33](day33.md)
+See you on [Day 33](/90dayspractical/90DaysOfDevOps/2022/Days/day33.md)

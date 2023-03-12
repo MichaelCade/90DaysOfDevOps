@@ -120,4 +120,4 @@ If a section of a network is compromised, it can be quarantined, making it diffi
 - [Subnetting Mastery](https://www.youtube.com/playlist?list=PLIFyRwBY_4bQUE4IB5c4VPRyDoLgOdExE)
 - [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 
-See you on [Day 24](day24.md)
+See you on [Day 24](/90dayspractical/90DaysOfDevOps/2022/Days/day24.md)

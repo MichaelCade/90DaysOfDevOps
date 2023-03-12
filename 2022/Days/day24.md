@@ -144,4 +144,4 @@ We have nowhere near covered all of the networking topics so far but wanted to m
 - [Practical Networking](http://www.practicalnetworking.net/)
 - [Python Network Automation](https://www.youtube.com/watch?v=xKPzLplPECU&list=WL&index=126)
 
-See you on [Day 25](day25.md)
+See you on [Day 25](/90dayspractical/90DaysOfDevOps/2022/Days/day25.md)

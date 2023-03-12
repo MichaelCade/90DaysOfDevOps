@@ -127,4 +127,4 @@ I have listed a lot of resources down below and I think this topic has been cove
 - [Terraform Tutorial - The Best Project Ideas](https://www.youtube.com/watch?v=oA-pPa0vfks)
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
 
-See you on [Day 60](day60.md)
+See you on [Day 60](/90dayspractical/90DaysOfDevOps/2022/Days/day60.md)

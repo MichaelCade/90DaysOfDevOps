@@ -135,4 +135,4 @@ A container image is a lightweight, standalone, executable package of software t
 - [Docker Tutorial for Beginners - What is Docker? Introduction to Containers](https://www.youtube.com/watch?v=17Bl31rlnRM&list=WL&index=128&t=61s)
 - [Introduction to Container By Red Hat](https://www.redhat.com/en/topics/containers)
 
-See you on [Day 43](day43.md)
+See you on [Day 43](/90dayspractical/90DaysOfDevOps/2022/Days/day43.md)

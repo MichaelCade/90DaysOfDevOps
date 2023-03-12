@@ -67,4 +67,4 @@ My advice is to watch all of the below and hopefully you also picked something u
 - [What is DevOps? - AWS](https://aws.amazon.com/devops/what-is-devops/)
 - [What is DevOps? - Microsoft](https://docs.microsoft.com/en-us/devops/what-is-devops)
 
-If you made it this far then you will know if this is where you want to be or not. See you on [Day 3](day03.md).
+If you made it this far then you will know if this is where you want to be or not. See you on [Day 3](/90dayspractical/90DaysOfDevOps/2022/Days/day03.md).

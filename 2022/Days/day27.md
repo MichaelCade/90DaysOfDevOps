@@ -136,4 +136,4 @@ Most of the examples I am using here as I am not a Network Engineer have come fr
 
 - [Hands-On Enterprise Automation with Python (Book)](https://www.packtpub.com/product/hands-on-enterprise-automation-with-python/9781788998512)
 
-See you on [Day 28](day28.md) where will start looking into cloud computing and get a good grasp and foundational knowledge of the topic and what is available.
+See you on [Day 28](/90dayspractical/90DaysOfDevOps/2022/Days/day28.md) where will start looking into cloud computing and get a good grasp and foundational knowledge of the topic and what is available.

@@ -161,4 +161,4 @@ In the next section, we will be building a Jenkins Pipeline.
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 73](day73.md)
+See you on [Day 73](/90dayspractical/90DaysOfDevOps/2022/Days/day73.md)

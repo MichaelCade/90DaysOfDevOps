@@ -151,4 +151,4 @@ Unlike the Client-Server version control model, each developer downloads the sou
 - [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk&t=8s)
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 
-See you on [Day 37](day37.md)
+See you on [Day 37](/90dayspractical/90DaysOfDevOps/2022/Days/day37.md)

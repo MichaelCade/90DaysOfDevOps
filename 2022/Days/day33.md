@@ -187,4 +187,4 @@ Next up we take all the theories we have been through and create some scenarios 
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-See you on [Day 34](day34.md)
+See you on [Day 34](/90dayspractical/90DaysOfDevOps/2022/Days/day34.md)

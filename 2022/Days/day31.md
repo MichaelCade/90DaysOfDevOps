@@ -111,4 +111,4 @@ We can also look at Azure Batch which can run large-scale jobs on both Windows a
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-See you on [Day 32](day32.md)
+See you on [Day 32](/90dayspractical/90DaysOfDevOps/2022/Days/day32.md)

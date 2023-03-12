@@ -109,4 +109,4 @@ I am not going to get into APM here but you can find out more on the [Elastic si
 - [What is ELK Stack?](https://www.youtube.com/watch?v=4X0WLg05ASw)
 - [Fluentd simply explained](https://www.youtube.com/watch?v=5ofsNyHZwWE&t=14s)
 
-See you on [Day 83](day83.md)
+See you on [Day 83](/90dayspractical/90DaysOfDevOps/2022/Days/day83.md)

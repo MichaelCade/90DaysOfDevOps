@@ -80,4 +80,4 @@ The next section we move into is around Observability, another concept or area t
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 77](day77.md)
+See you on [Day 77](/90dayspractical/90DaysOfDevOps/2022/Days/day77.md)

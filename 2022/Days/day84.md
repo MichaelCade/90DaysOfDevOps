@@ -69,4 +69,4 @@ During the next 6 sessions we are going to be taking a closer look at Databases,
 - [Disaster Recovery vs. Backup: What's the difference?](https://www.youtube.com/watch?v=07EHsPuKXc0)
 - [Veeam Portability & Cloud Mobility](https://www.youtube.com/watch?v=hDBlTdzE6Us&t=3s)
 
-See you on [Day 85](day85.md)
+See you on [Day 85](/90dayspractical/90DaysOfDevOps/2022/Days/day85.md)

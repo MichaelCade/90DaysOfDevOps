@@ -84,4 +84,4 @@ Ad hoc commands use a declarative model, calculating and executing the actions r
 - [Ansible 101 - Episode 1 - Introduction to Ansible](https://www.youtube.com/watch?v=goclfp6a2IQ)
 - [NetworkChuck - You need to learn Ansible right now!](https://www.youtube.com/watch?v=5hycyr-8EKs&t=955s)
 
-See you on [Day 65](day65.md)
+See you on [Day 65](/90dayspractical/90DaysOfDevOps/2022/Days/day65.md)

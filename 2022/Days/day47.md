@@ -136,4 +136,4 @@ Checking `docker image` is a great command to see the size of your images.
 - [Docker documentation for building an image](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 - [YAML Tutorial: Everything You Need to Get Started in Minute](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started)
 
-See you on [Day 48](day48.md)
+See you on [Day 48](/90dayspractical/90DaysOfDevOps/2022/Days/day48.md)

@@ -120,4 +120,4 @@ I plan to look at the following:
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 71](day71.md)
+See you on [Day 71](/90dayspractical/90DaysOfDevOps/2022/Days/day71.md)

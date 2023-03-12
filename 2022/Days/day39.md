@@ -209,4 +209,4 @@ Although it's still not a foregone conclusion, choosing the cleaner history also
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
 - [Exploring the Git command line – A getting started guide](https://veducate.co.uk/exploring-the-git-command-line/)
 
-See you on [Day40](day40.md)
+See you on [Day40](/90dayspractical/90DaysOfDevOps/2022/Days/day40.md)

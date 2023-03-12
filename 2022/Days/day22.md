@@ -106,4 +106,4 @@ The Application sending the data is being sent somewhere so the receiving is som
 * [Networking Fundamentals](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
 - [Computer Networking full course](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 
-See you on [Day23](day23.md)
+See you on [Day23](/90dayspractical/90DaysOfDevOps/2022/Days/day23.md)

@@ -112,4 +112,4 @@ We could also mention toolings and options around Rancher, and VirtualBox but we
 - [Podman | Daemonless Docker | Getting Started with Podman](https://www.youtube.com/watch?v=Za2BqzeZjBk)
 - [LXC - Guide to building an LXC Lab](https://www.youtube.com/watch?v=cqOtksmsxfg)
 
-See you on [Day 49](day49.md)
+See you on [Day 49](/90dayspractical/90DaysOfDevOps/2022/Days/day49.md)

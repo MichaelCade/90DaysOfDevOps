@@ -163,4 +163,4 @@ I also thought on this it was easier to show you a lot of the steps through vide
 
 Tomorrow we start our 7 days of diving into Networking, we will be looking to give ourselves the foundational knowledge and understanding of Networking around DevOps.
 
-See you on [Day21](day21.md)
+See you on [Day21](/90dayspractical/90DaysOfDevOps/2022/Days/day21.md)

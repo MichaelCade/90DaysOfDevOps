@@ -79,4 +79,4 @@ the `Println()` that we have here is a way in which to write standard output to 
 - [FreeCodeCamp - Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s)
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N)
 
-See you on [Day 10](day10.md).
+See you on [Day 10](/90dayspractical/90DaysOfDevOps/2022/Days/day10.md).

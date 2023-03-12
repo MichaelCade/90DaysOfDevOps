@@ -117,4 +117,4 @@ There are going to be lots of resources I find as we go through and much like th
 
 As I mentioned next up we will take a look at the commands we might be using on a daily whilst in our Linux environments.
 
-See you on [Day15](day15.md)
+See you on [Day15](/90dayspractical/90DaysOfDevOps/2022/Days/day15.md)

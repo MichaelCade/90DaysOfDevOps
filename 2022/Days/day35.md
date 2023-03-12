@@ -137,4 +137,4 @@ Next up we will be getting git installed and set up on your local machine and di
 - [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk&t=8s)
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 
-See you on [Day 36](day36.md)
+See you on [Day 36](/90dayspractical/90DaysOfDevOps/2022/Days/day36.md)

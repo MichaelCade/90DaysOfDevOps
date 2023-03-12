@@ -93,4 +93,4 @@ It is worth noting here that I have added into my Kubernetes cluster a secret th
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 75](day75.md)
+See you on [Day 75](/90dayspractical/90DaysOfDevOps/2022/Days/day75.md)

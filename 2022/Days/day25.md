@@ -172,4 +172,4 @@ Next up we are going to:
 - [Practical Networking](http://www.practicalnetworking.net/)
 - [Python Network Automation](https://www.youtube.com/watch?v=xKPzLplPECU&list=WL&index=126)
 
-See you on [Day 26](day26.md)
+See you on [Day 26](/90dayspractical/90DaysOfDevOps/2022/Days/day26.md)

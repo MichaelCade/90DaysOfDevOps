@@ -80,4 +80,4 @@ In the next session, we will get hands-on with a monitoring tool and see what we
 - [How Prometheus Monitoring works](https://www.youtube.com/watch?v=h4Sl21AKiDg)
 - [Introduction to Prometheus monitoring](https://www.youtube.com/watch?v=5o37CGlNLr8)
 
-See you on [Day 78](day78.md)
+See you on [Day 78](/90dayspractical/90DaysOfDevOps/2022/Days/day78.md)

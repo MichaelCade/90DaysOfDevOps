@@ -96,4 +96,4 @@ Hopefully, if you are following along, you are watching one of the playlists or 
 - [FreeCodeCamp - Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s)
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N)
 
-See you on [Day 11](day11.md).
+See you on [Day 11](/90dayspractical/90DaysOfDevOps/2022/Days/day11.md).

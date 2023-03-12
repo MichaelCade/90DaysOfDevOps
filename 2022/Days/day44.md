@@ -139,4 +139,4 @@ I wanted that to hopefully give you an overview of Docker Desktop and the not-so
 - [Docker Tutorial for Beginners - What is Docker? Introduction to Containers](https://www.youtube.com/watch?v=17Bl31rlnRM&list=WL&index=128&t=61s)
 - [WSL 2 with Docker getting started](https://www.youtube.com/watch?v=5RQbdMn04Oc)
 
-See you on [Day 45](day45.md)
+See you on [Day 45](/90dayspractical/90DaysOfDevOps/2022/Days/day45.md)

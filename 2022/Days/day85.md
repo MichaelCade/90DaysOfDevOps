@@ -149,4 +149,4 @@ There are a ton of resources I have linked below, you could honestly spend 90 ye
 - [FaunaDB Basics - The Database of your Dreams](https://www.youtube.com/watch?v=2CipVwISumA)
 - [Fauna Crash Course - Covering the Basics](https://www.youtube.com/watch?v=ihaB7CqJju0)
 
-See you on [Day 86](day86.md)
+See you on [Day 86](/90dayspractical/90DaysOfDevOps/2022/Days/day86.md)

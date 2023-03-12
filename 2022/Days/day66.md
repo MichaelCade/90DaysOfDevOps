@@ -127,4 +127,4 @@ I am going to leave this one here and in the next session, we will start working
 
 This final playlist listed above is where a lot of the code and ideas came from for this section, a great resource and walkthrough in video format.
 
-See you on [Day 67](day67.md)
+See you on [Day 67](/90dayspractical/90DaysOfDevOps/2022/Days/day67.md)

@@ -138,4 +138,4 @@ Hit create, then in our list of resource groups, we now have our "90DaysOfDevOps
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-See you on [Day 30](day30.md)
+See you on [Day 30](/90dayspractical/90DaysOfDevOps/2022/Days/day30.md)

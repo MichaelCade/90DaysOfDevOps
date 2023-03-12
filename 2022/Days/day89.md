@@ -218,4 +218,4 @@ Next, we will take a look at Application mobility and transformation.
 - [Disaster Recovery vs. Backup: What's the difference?](https://www.youtube.com/watch?v=07EHsPuKXc0)
 - [Veeam Portability & Cloud Mobility](https://www.youtube.com/watch?v=hDBlTdzE6Us&t=3s)
 
-See you on [Day 90](day90.md)
+See you on [Day 90](/90dayspractical/90DaysOfDevOps/2022/Days/day90.md)

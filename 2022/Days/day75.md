@@ -183,4 +183,4 @@ Next up we will cover another area of CD, we will be looking into ArgoCD to depl
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 76](day76.md)
+See you on [Day 76](/90dayspractical/90DaysOfDevOps/2022/Days/day76.md)

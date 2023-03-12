@@ -63,4 +63,4 @@ My advice is to watch all of the below and hopefully you have also picked someth
 - [From Zero to DevOps Engineer - DevOps Roadmap for YOUR specific background
 ](https://www.youtube.com/watch?v=G_nVMUtaqCk)
 
-If you made it this far, then you will know if this is where you want to be or not. See you on [Day 2](day02.md).
+If you made it this far, then you will know if this is where you want to be or not. See you on [Day 2](/90dayspractical/90DaysOfDevOps/2022/Days/day02.md)

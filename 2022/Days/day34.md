@@ -194,4 +194,4 @@ This wraps up the section on Microsoft Azure and the public cloud in general. I 
 
 Next, we will be diving into version control systems, specifically around git and then also code repository overviews and we will be choosing GitHub as this is my preferred option.
 
-See you on [Day 35](day35.md)
+See you on [Day 35](/90dayspractical/90DaysOfDevOps/2022/Days/day35.md)
