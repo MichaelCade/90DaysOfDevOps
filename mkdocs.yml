@@ -1,0 +1,37 @@
+site_name: 90DaysOfDevOps
+theme:
+  name: material
+  palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+
+
+# Repository
+repo_name: MichaelCade/90DaysOfDevOps
+repo_url: https://github.com/MichaelCade/90DaysOfDevOps
+  
+font:
+    text: Roboto
+    code: Roboto Mono
+
+icon:
+    logo: logo
+
