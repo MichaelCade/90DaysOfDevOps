@@ -22,135 +22,135 @@ The quickest way to get in touch is going to be via Twitter, my handle is [@Mich
 
 ## Progress
 
-- [✔️] ♾️ 1 > [Introduction](2022/Days/day01.md)
+- [✔️] ♾️ 1 > [Introduction](day01)
 
 ### What is and why do we use DevOps
 
-- [✔️] ♾️ 2 > [Responsibilities of a DevOps Engineer](2022/Days/day02.md)
-- [✔️] ♾️ 3 > [DevOps Lifecycle - Application Focused](2022/Days/day03.md)
-- [✔️] ♾️ 4 > [DevOps & Agile](2022/Days/day04.md)
-- [✔️] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](2022/Days/day05.md)
-- [✔️] ♾️ 6 > [DevOps - The real stories](2022/Days/day06.md)
+- [✔️] ♾️ 2 > [Responsibilities of a DevOps Engineer](day02)
+- [✔️] ♾️ 3 > [DevOps Lifecycle - Application Focused](day03)
+- [✔️] ♾️ 4 > [DevOps & Agile](day04)
+- [✔️] ♾️ 5 > [Plan > Code > Build > Testing > Release > Deploy > Operate > Monitor >](day05)
+- [✔️] ♾️ 6 > [DevOps - The real stories](day06)
 
 ### Learning a Programming Language
 
-- [✔️] ⌨️ 7 > [The Big Picture: DevOps & Learning a Programming Language](2022/Days/day07.md)
-- [✔️] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](2022/Days/day08.md)
-- [✔️] ⌨️ 9 > [Let's explain the Hello World code](2022/Days/day09.md)
-- [✔️] ⌨️ 10 > [The Go Workspace & Compiling & running code](2022/Days/day10.md)
-- [✔️] ⌨️ 11 > [Variables, Constants & Data Types](2022/Days/day11.md)
-- [✔️] ⌨️ 12 > [Getting user input with Pointers and a finished program](2022/Days/day12.md)
-- [✔️] ⌨️ 13 > [Tweet your progress with our new App](2022/Days/day13.md)
+- [✔️] ⌨️ 7 > [The Big Picture: DevOps & Learning a Programming Language](day07)
+- [✔️] ⌨️ 8 > [Setting up your DevOps environment for Go & Hello World](day08)
+- [✔️] ⌨️ 9 > [Let's explain the Hello World code](day09)
+- [✔️] ⌨️ 10 > [The Go Workspace & Compiling & running code](day10)
+- [✔️] ⌨️ 11 > [Variables, Constants & Data Types](day11)
+- [✔️] ⌨️ 12 > [Getting user input with Pointers and a finished program](day12)
+- [✔️] ⌨️ 13 > [Tweet your progress with our new App](day13)
 
 ### Knowing Linux Basics
 
-- [✔️] 🐧 14 > [The Big Picture: DevOps and Linux](2022/Days/day14.md)
-- [✔️] 🐧 15 > [Linux Commands for DevOps (Actually everyone)](2022/Days/day15.md)
-- [✔️] 🐧 16 > [Managing your Linux System, Filesystem & Storage](2022/Days/day16.md)
-- [✔️] 🐧 17 > [Text Editors - nano vs vim](2022/Days/day17.md)
-- [✔️] 🐧 18 > [SSH & Web Server(LAMP)](2022/Days/day18.md)
-- [✔️] 🐧 19 > [Automate tasks with bash scripts](2022/Days/day19.md)
-- [✔️] 🐧 20 > [Dev workstation setup - All the pretty things](2022/Days/day20.md)
+- [✔️] 🐧 14 > [The Big Picture: DevOps and Linux](day14)
+- [✔️] 🐧 15 > [Linux Commands for DevOps (Actually everyone)](day15)
+- [✔️] 🐧 16 > [Managing your Linux System, Filesystem & Storage](day16)
+- [✔️] 🐧 17 > [Text Editors - nano vs vim](day17)
+- [✔️] 🐧 18 > [SSH & Web Server(LAMP)](day18)
+- [✔️] 🐧 19 > [Automate tasks with bash scripts](day19)
+- [✔️] 🐧 20 > [Dev workstation setup - All the pretty things](day20)
 
 ### Understand Networking
 
-- [✔️] 🌐 21 > [The Big Picture: DevOps and Networking](2022/Days/day21.md)
-- [✔️] 🌐 22 > [The OSI Model - The 7 Layers](2022/Days/day22.md)
-- [✔️] 🌐 23 > [Network Protocols](2022/Days/day23.md)
-- [✔️] 🌐 24 > [Network Automation](2022/Days/day24.md)
-- [✔️] 🌐 25 > [Python for Network Automation](2022/Days/day25.md)
-- [✔️] 🌐 26 > [Building our Lab](2022/Days/day26.md)
-- [✔️] 🌐 27 > [Getting Hands-On with Python & Network](2022/Days/day27.md)
+- [✔️] 🌐 21 > [The Big Picture: DevOps and Networking](day21)
+- [✔️] 🌐 22 > [The OSI Model - The 7 Layers](day22)
+- [✔️] 🌐 23 > [Network Protocols](day23)
+- [✔️] 🌐 24 > [Network Automation](day24)
+- [✔️] 🌐 25 > [Python for Network Automation](day25)
+- [✔️] 🌐 26 > [Building our Lab](day26)
+- [✔️] 🌐 27 > [Getting Hands-On with Python & Network](day27)
 
 ### Stick to one Cloud Provider
 
-- [✔️] ☁️ 28 > [The Big Picture: DevOps & The Cloud](2022/Days/day28.md)
-- [✔️] ☁️ 29 > [Microsoft Azure Fundamentals](2022/Days/day29.md)
-- [✔️] ☁️ 30 > [Microsoft Azure Security Models](2022/Days/day30.md)
-- [✔️] ☁️ 31 > [Microsoft Azure Compute Models](2022/Days/day31.md)
-- [✔️] ☁️ 32 > [Microsoft Azure Storage & Database Models](2022/Days/day32.md)
-- [✔️] ☁️ 33 > [Microsoft Azure Networking Models + Azure Management](2022/Days/day33.md)
-- [✔️] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](2022/Days/day34.md)
+- [✔️] ☁️ 28 > [The Big Picture: DevOps & The Cloud](day28)
+- [✔️] ☁️ 29 > [Microsoft Azure Fundamentals](day29)
+- [✔️] ☁️ 30 > [Microsoft Azure Security Models](day30)
+- [✔️] ☁️ 31 > [Microsoft Azure Compute Models](day31)
+- [✔️] ☁️ 32 > [Microsoft Azure Storage & Database Models](day32)
+- [✔️] ☁️ 33 > [Microsoft Azure Networking Models + Azure Management](day33)
+- [✔️] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](day34)
 
 ### Use Git Effectively
 
-- [✔️] 📚 35 > [The Big Picture: Git - Version Control](2022/Days/day35.md)
-- [✔️] 📚 36 > [Installing & Configuring Git](2022/Days/day36.md)
-- [✔️] 📚 37 > [Gitting to know Git](2022/Days/day37.md)
-- [✔️] 📚 38 > [Staging & Changing](2022/Days/day38.md)
-- [✔️] 📚 39 > [Viewing, unstaging, discarding & restoring](2022/Days/day39.md)
-- [✔️] 📚 40 > [Social Network for code](2022/Days/day40.md)
-- [✔️] 📚 41 > [The Open Source Workflow](2022/Days/day41.md)
+- [✔️] 📚 35 > [The Big Picture: Git - Version Control](day35)
+- [✔️] 📚 36 > [Installing & Configuring Git](day36)
+- [✔️] 📚 37 > [Gitting to know Git](day37)
+- [✔️] 📚 38 > [Staging & Changing](day38)
+- [✔️] 📚 39 > [Viewing, unstaging, discarding & restoring](day39)
+- [✔️] 📚 40 > [Social Network for code](day40)
+- [✔️] 📚 41 > [The Open Source Workflow](day41)
 
 ### Containers
 
-- [✔️] 🏗️ 42 > [The Big Picture: Containers](2022/Days/day42.md)
-- [✔️] 🏗️ 43 > [What is Docker & Getting installed](2022/Days/day43.md)
-- [✔️] 🏗️ 44 > [Docker Images & Hands-On with Docker Desktop](2022/Days/day44.md)
-- [✔️] 🏗️ 45 > [The anatomy of a Docker Image](2022/Days/day45.md)
-- [✔️] 🏗️ 46 > [Docker Compose](2022/Days/day46.md)
-- [✔️] 🏗️ 47 > [Docker Networking & Security](2022/Days/day47.md)
-- [✔️] 🏗️ 48 > [Alternatives to Docker](2022/Days/day48.md)
+- [✔️] 🏗️ 42 > [The Big Picture: Containers](day42)
+- [✔️] 🏗️ 43 > [What is Docker & Getting installed](day43)
+- [✔️] 🏗️ 44 > [Docker Images & Hands-On with Docker Desktop](day44)
+- [✔️] 🏗️ 45 > [The anatomy of a Docker Image](day45)
+- [✔️] 🏗️ 46 > [Docker Compose](day46)
+- [✔️] 🏗️ 47 > [Docker Networking & Security](day47)
+- [✔️] 🏗️ 48 > [Alternatives to Docker](day48)
 
 ### Kubernetes
 
-- [✔️] ☸ 49 > [The Big Picture: Kubernetes](2022/Days/day49.md)
-- [✔️] ☸ 50 > [Choosing your Kubernetes platform](2022/Days/day50.md)
-- [✔️] ☸ 51 > [Deploying your first Kubernetes Cluster](2022/Days/day51.md)
-- [✔️] ☸ 52 > [Setting up a multinode Kubernetes Cluster](2022/Days/day52.md)
-- [✔️] ☸ 53 > [Rancher Overview - Hands On](2022/Days/day53.md)
-- [✔️] ☸ 54 > [Kubernetes Application Deployment](2022/Days/day54.md)
-- [✔️] ☸ 55 > [State and Ingress in Kubernetes](2022/Days/day55.md)
+- [✔️] ☸ 49 > [The Big Picture: Kubernetes](day49)
+- [✔️] ☸ 50 > [Choosing your Kubernetes platform](day50)
+- [✔️] ☸ 51 > [Deploying your first Kubernetes Cluster](day51)
+- [✔️] ☸ 52 > [Setting up a multinode Kubernetes Cluster](day52)
+- [✔️] ☸ 53 > [Rancher Overview - Hands On](day53)
+- [✔️] ☸ 54 > [Kubernetes Application Deployment](day54)
+- [✔️] ☸ 55 > [State and Ingress in Kubernetes](day55)
 
 ### Learn Infrastructure as Code
 
-- [✔️] 🤖 56 > [The Big Picture: IaC](2022/Days/day56.md)
-- [✔️] 🤖 57 > [An intro to Terraform](2022/Days/day57.md)
-- [✔️] 🤖 58 > [HashiCorp Configuration Language (HCL)](2022/Days/day58.md)
-- [✔️] 🤖 59 > [Create a VM with Terraform & Variables](2022/Days/day59.md)
-- [✔️] 🤖 60 > [Docker Containers, Provisioners & Modules](2022/Days/day60.md)
-- [✔️] 🤖 61 > [Kubernetes & Multiple Environments](2022/Days/day61.md)
-- [✔️] 🤖 62 > [Testing, Tools & Alternatives](2022/Days/day62.md)
+- [✔️] 🤖 56 > [The Big Picture: IaC](day56)
+- [✔️] 🤖 57 > [An intro to Terraform](day57)
+- [✔️] 🤖 58 > [HashiCorp Configuration Language (HCL)](day58)
+- [✔️] 🤖 59 > [Create a VM with Terraform & Variables](day59)
+- [✔️] 🤖 60 > [Docker Containers, Provisioners & Modules](day60)
+- [✔️] 🤖 61 > [Kubernetes & Multiple Environments](day61)
+- [✔️] 🤖 62 > [Testing, Tools & Alternatives](day62)
 
 ### Automate Configuration Management
 
-- [✔️] 📜 63 > [The Big Picture: Configuration Management](2022/Days/day63.md)
-- [✔️] 📜 64 > [Ansible: Getting Started](2022/Days/day64.md)
-- [✔️] 📜 65 > [Ansible Playbooks](2022/Days/day65.md)
-- [✔️] 📜 66 > [Ansible Playbooks Continued...](2022/Days/day66.md)
-- [✔️] 📜 67 > [Using Roles & Deploying a Loadbalancer](2022/Days/day67.md)
-- [✔️] 📜 68 > [Tags, Variables, Inventory & Database Server config](2022/Days/day68.md)
-- [✔️] 📜 69 > [All other things Ansible - Automation Controller, AWX, Vault](2022/Days/day69.md)
+- [✔️] 📜 63 > [The Big Picture: Configuration Management](day63)
+- [✔️] 📜 64 > [Ansible: Getting Started](day64)
+- [✔️] 📜 65 > [Ansible Playbooks](day65)
+- [✔️] 📜 66 > [Ansible Playbooks Continued...](day66)
+- [✔️] 📜 67 > [Using Roles & Deploying a Loadbalancer](day67)
+- [✔️] 📜 68 > [Tags, Variables, Inventory & Database Server config](day68)
+- [✔️] 📜 69 > [All other things Ansible - Automation Controller, AWX, Vault](day69)
 
 ### Create CI/CD Pipelines
 
-- [✔️] 🔄 70 > [The Big Picture: CI/CD Pipelines](2022/Days/day70.md)
-- [✔️] 🔄 71 > [What is Jenkins?](2022/Days/day71.md)
-- [✔️] 🔄 72 > [Getting hands on with Jenkins](2022/Days/day72.md)
-- [✔️] 🔄 73 > [Building a Jenkins pipeline](2022/Days/day73.md)
-- [✔️] 🔄 74 > [Hello World - Jenkinsfile App Pipeline](2022/Days/day74.md)
-- [✔️] 🔄 75 > [GitHub Actions Overview](2022/Days/day75.md)
-- [✔️] 🔄 76 > [ArgoCD Overview](2022/Days/day76.md)
+- [✔️] 🔄 70 > [The Big Picture: CI/CD Pipelines](day70)
+- [✔️] 🔄 71 > [What is Jenkins?](day71)
+- [✔️] 🔄 72 > [Getting hands on with Jenkins](day72)
+- [✔️] 🔄 73 > [Building a Jenkins pipeline](day73)
+- [✔️] 🔄 74 > [Hello World - Jenkinsfile App Pipeline](day74)
+- [✔️] 🔄 75 > [GitHub Actions Overview](day75)
+- [✔️] 🔄 76 > [ArgoCD Overview](day76)
 
 ### Monitoring, Log Management, and Data Visualisation
 
-- [✔️] 📈 77 > [The Big Picture: Monitoring](2022/Days/day77.md)
-- [✔️] 📈 78 > [Hands-On Monitoring Tools](2022/Days/day78.md)
-- [✔️] 📈 79 > [The Big Picture: Log Management](2022/Days/day79.md)
-- [✔️] 📈 80 > [ELK Stack](2022/Days/day80.md)
-- [✔️] 📈 81 > [Fluentd & FluentBit](2022/Days/day81.md)
-- [✔️] 📈 82 > [EFK Stack](2022/Days/day82.md)
-- [✔️] 📈 83 > [Data Visualisation - Grafana](2022/Days/day83.md)
+- [✔️] 📈 77 > [The Big Picture: Monitoring](day77)
+- [✔️] 📈 78 > [Hands-On Monitoring Tools](day78)
+- [✔️] 📈 79 > [The Big Picture: Log Management](day79)
+- [✔️] 📈 80 > [ELK Stack](day80)
+- [✔️] 📈 81 > [Fluentd & FluentBit](day81)
+- [✔️] 📈 82 > [EFK Stack](day82)
+- [✔️] 📈 83 > [Data Visualisation - Grafana](day83)
 
 ### Store & Protect Your Data
 
-- [✔️] 🗃️ 84 > [The Big Picture: Data Management](2022/Days/day84.md)
-- [✔️] 🗃️ 85 > [Data Services](2022/Days/day85.md)
-- [✔️] 🗃️ 86 > [Backup all the platforms](2022/Days/day86.md)
-- [✔️] 🗃️ 87 > [Hands-On Backup & Recovery](2022/Days/day87.md)
-- [✔️] 🗃️ 88 > [Application Focused Backups](2022/Days/day88.md)
-- [✔️] 🗃️ 89 > [Disaster Recovery](2022/Days/day89.md)
-- [✔️] 🗃️ 90 > [Data & Application Mobility](2022/Days/day90.md)
+- [✔️] 🗃️ 84 > [The Big Picture: Data Management](day84)
+- [✔️] 🗃️ 85 > [Data Services](day85)
+- [✔️] 🗃️ 86 > [Backup all the platforms](day86)
+- [✔️] 🗃️ 87 > [Hands-On Backup & Recovery](day87)
+- [✔️] 🗃️ 88 > [Application Focused Backups](day88)
+- [✔️] 🗃️ 89 > [Disaster Recovery](day89)
+- [✔️] 🗃️ 90 > [Data & Application Mobility](day90)
 
 ## License
 
