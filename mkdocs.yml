@@ -2,6 +2,7 @@ site_name: 90DaysOfDevOps
 copyright: Copyright &copy; 90DaysOfDevOps
 theme:
   logo: images/devops_icon.svg
+  favicon: images/devops_icon.svg
   features:
     - navigation.footer
   name: material
