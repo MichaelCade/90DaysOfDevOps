@@ -36,7 +36,7 @@ Go가 데브옵스를 위한 유망한 프로그래밍 언어인 이유. Go는 �
 
 앞서 언급했듯이, Kubernetes, Docker, Grafana, Prometheus 등 가장 잘 알려진 데브옵스 도구 및 플랫폼 중 일부는 Go로 작성되었습니다.
 
-데브옵스 목적에 특히 적합한 Go의 주요 기능이나 특성을 무엇일까요?
+데브옵스 목적에 특히 적합한 Go의 주요 기능이나 특성은 무엇일까요?
 
 ## Go 프로그램 구축 및 배포
 
@@ -66,6 +66,6 @@ Go는 Python에 비해 컴파일 및 실행 시간이 빠르고 CPU와 메모리
 - [FreeCodeCamp - Learn Go Programming - Golang Tutorial for Beginners](https://www.youtube.com/watch?v=YS4e4q9oBaU&t=1025s)
 - [Hitesh Choudhary - Complete playlist](https://www.youtube.com/playlist?list=PLRAV69dS1uWSR89FRQGZ6q9BR2b44Tr9N)
 
-앞으로 6일 동안 위에서 언급한 자료를 공부하고 매일 진행 상황을 메모할 계획입니다. 전체 과정은 약 3시간 정도 걸리지만, 저는 이 학습에 하루에 한 시간씩 할애할 예정입니다. 시간이 여유가 있으신 분들도 함께 따라하며 깊이 있게 공부하실 수 있도록 전체 리소스 목록을 공유해 드립니다.
+앞으로 6일 동안 위에서 언급한 자료를 공부하고 매일 진행 상황을 메모할 계획입니다. 전체 과정은 약 3시간 정도 걸리지만, 저는 이 학습에 하루 한 시간씩 할애할 예정입니다. 시간이 여유가 있으신 분들도 함께 하며 깊이 있게 공부하실 수 있도록 전체 리소스 목록을 공유해 드립니다.
 
 [Day 8](day08.md)에서 봐요!
