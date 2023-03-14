@@ -89,11 +89,17 @@ go build main.go
 ```
 
 ![](/2022/Days/Images/Day8_Go12.png)
+_(Mac 운영체제의 경우 `main` 파일이 생성됩니다. - 옮긴이)_
 
 이를 실행한다면 동일한 결과를 볼 수 있습니다:
 
 ```bash
+# Windows
 $ ./main.exe
+Hello #90DaysOfDevOps
+
+# Mac - 올긴이
+$ ./main
 Hello #90DaysOfDevOps
 ```
 
@@ -110,3 +116,7 @@ Hello #90DaysOfDevOps
 [Day 9](day09.md)에서 봐요!
 
 ![](/2022/Days/Images/Day8_Go13.png)
+
+```
+
+```
