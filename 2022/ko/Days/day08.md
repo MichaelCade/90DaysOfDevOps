@@ -116,7 +116,3 @@ Hello #90DaysOfDevOps
 [Day 9](day09.md)에서 봐요!
 
 ![](/2022/Days/Images/Day8_Go13.png)
-
-```
-
-```
