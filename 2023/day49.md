@@ -1,5 +1,13 @@
 # Day 49: AWS Cloud Overview
 
+Welcome to the AWS section of the 90 Days of DevOps! Picking 7 items to learn about is difficult for several reasons:
+1. At last count, there were 250+ AWS services
+2. Each service could get it's own multi-day deep dive 😅
+
+Because of that, we're going to do a gentle intro that starts off easy, goes into some very DevOps-salient services, then ends with a section-capstone project that will give you a lot of exposure to AWS DevOps services.
+
+I hope you enjoy the next 7 days as much as I did creating them. If you have any questions feel free to ask!
+
 AWS Cloud is a cloud computing platform provided by Amazon Web Services (AWS). It offers a wide range of services, including computing, storage, networking, database, analytics, machine learning, security, and more. AWS Cloud allows businesses and organizations to access these services on a pay-as-you-go basis, which means they only pay for what they use and can scale their resources up or down as needed.
 
 ![](images/day49-1.png)
