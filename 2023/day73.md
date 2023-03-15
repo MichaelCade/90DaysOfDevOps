@@ -1,3 +1,5 @@
+# Serverless APIs
+
 If you're new to the application development world, [API stands for Application Programming Interface](https://aws.amazon.com/what-is/api/), an interface that offers a 'service' of sorts for applications to consume. [Google Maps](https://www.google.com/maps), for instance, has a [public API](https://developers.google.com/maps) that you or I could use if we're building an application to locate all of the restaurants in our town. They surface this, and many, many other data points via documented endpoints, and we can use things like [API keys](https://cloud.google.com/endpoints/docs/openapi/when-why-api-key) to access this data. If you're a developer, chances are you will build an API at some point in your career, if not several, and you will definitely work with them. As a key building block in application development, [AWS provides a few API solutions](https://aws.amazon.com/serverless/).
 
 ![Open laptop with code. Image via Unsplash.](images/day73-1.jpg)
