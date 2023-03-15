@@ -64,7 +64,7 @@ Go 설치와 마찬가지로, 기본값으로 다운로드하여 설치합니다
 
 이제 Hello World 앱을 실행하고 다음 코드를 새 `main.go` 파일에 복사하여 저장해 보겠습니다.
 
-```
+```go
 package main
 
 import "fmt"
