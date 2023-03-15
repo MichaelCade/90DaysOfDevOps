@@ -1,4 +1,4 @@
-**Serverless Orchestration**
+# Serverless Orchestration
 
 ![Conductor. Image via Unsplash.](images/day74-1.jpg)
 
