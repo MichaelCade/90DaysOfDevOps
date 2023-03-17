@@ -10,20 +10,19 @@ Of course for this section, we are dedicating ourselves to Red Hat OpenShift.
 
 I decided to cheat a bit for this opening, and consult ChatGPT, the AI Service of the moment, to provide an opinion on why Red Hat OpenShift.
 
-```
-Why choose an enterprise Kubernetes platform such as Red Hat OpenShift?
+>Why choose an enterprise Kubernetes platform such as Red Hat OpenShift?
+>
+>
+>1. Automation and Enterprise-grade Security: Red Hat OpenShift provides an automated platform to help you deploy, manage, and scale your applications quickly and easily while ensuring that the underlying infrastructure is secure.
+>
+>2. Open Source: Red Hat OpenShift is built on top of open source technologies such as Kubernetes, Docker, and Red Hat Enterprise Linux. This ensures that your applications are always up-to-date with the latest technologies.
+>
+>3. Continuous Integration and Delivery: Red Hat OpenShift provides an integrated set of tools for continuous integration and delivery that make it easy to deploy and manage your applications in a secure and reliable manner.
+>
+>4. Scalability and High Availability: Red Hat OpenShift provides a highly available and scalable platform that can handle large amounts of traffic and data without any downtime.
+>
+>5. Cost Savings: Red Hat OpenShift provides a cost-effective solution for running your applications in the cloud. You can save money on infrastructure and operations costs by leveraging OpenShift's automated platform.
 
-
-1. Automation and Enterprise-grade Security: Red Hat OpenShift provides an automated platform to help you deploy, manage, and scale your applications quickly and easily while ensuring that the underlying infrastructure is secure.
-
-2. Open Source: Red Hat OpenShift is built on top of open source technologies such as Kubernetes, Docker, and Red Hat Enterprise Linux. This ensures that your applications are always up-to-date with the latest technologies.
-
-3. Continuous Integration and Delivery: Red Hat OpenShift provides an integrated set of tools for continuous integration and delivery that make it easy to deploy and manage your applications in a secure and reliable manner.
-
-4. Scalability and High Availability: Red Hat OpenShift provides a highly available and scalable platform that can handle large amounts of traffic and data without any downtime.
-
-5. Cost Savings: Red Hat OpenShift provides a cost-effective solution for running your applications in the cloud. You can save money on infrastructure and operations costs by leveraging OpenShift's automated platform.
-```
 
 # What does Red Hat OpenShift bring to the party?
 
