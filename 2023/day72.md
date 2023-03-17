@@ -1,3 +1,5 @@
+# Serverless Storage
+
 [Lambda functions](https://aws.amazon.com/lambda/) and [Fargate](https://aws.amazon.com/fargate/) serve a great purpose and might accomplish what you need for a very small, [hello world-type project](https://aws.amazon.com/getting-started/hands-on/run-serverless-code/), but chances are you want to do a bit more with your serverless applications. Maybe you have a subscription-based product and you have user profiles with data. Or maybe your application is an e-commerce site and you need to store sensitive information, like credit card details. Or maybe you're just trying to save some images or files. Whatever the reason, you clearly need a storage solution, and this is where our serverless storage options come in.
 
 ![Storage Solutions for every need! Image via Unsplash.](images/day72-1.jpg)
