@@ -23,7 +23,7 @@ id: 1048703
 
 ![](/2022/Days/Images/Day17_Linux1.png)
 
-이제 `control x + enter`를 입력한 다음 `ls`를 실행하면 새 텍스트 파일을 볼 수 있습니다.
+이제 `Ctrl X + enter`를 입력한 다음 `ls`를 실행하면 새 텍스트 파일을 볼 수 있습니다.
 
 ![](/2022/Days/Images/Day17_Linux2.png)
 
