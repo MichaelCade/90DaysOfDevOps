@@ -40,6 +40,8 @@ Next up we also need to get [Virtual Box](https://www.virtualbox.org/wiki/Downlo
 
 Both installations are pretty straightforward and both have great communitites around them so feel free to reach out if you have issues and I can try and assist too.
 
+> If you are using m1 macOS, I recommend to use [multiplass]([url](https://multipass.run/)) instead of Vagrant and VirtualBox. (reference : https://github.com/MichaelCade/90DaysOfDevOps/issues/365)
+
 ## Our first VAGRANTFILE
 
 The VAGRANTFILE describes the type of machine we want to deploy. It also defines the configuration and provisioning for this machine.
