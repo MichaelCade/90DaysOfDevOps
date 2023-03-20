@@ -1,4 +1,4 @@
-## 2 - Install and Test a Service Mesh
+## Day 78 - Install and Test a Service Mesh
 > **Tutorial**
 > *Let's install our first service mesh.*
 
