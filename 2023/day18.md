@@ -24,3 +24,5 @@ As with all other tools part of DevSecOps pipeline DAST should not be the only s
 - https://github.com/zaproxy/zaproxy
 - https://www.arachni-scanner.com/
 - https://owasp.org/www-project-devsecops-guideline/latest/02b-Dynamic-Application-Security-Testing 
+
+See you on [Day 19](day19.md).

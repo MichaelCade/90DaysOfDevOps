@@ -39,3 +39,5 @@ Similar to other services, you can define and configure your EventBridge instanc
 Although not what I would consider 'core' cloud services, the orchestration and communication services are key to event driven development and robust application design. If you are structuring your application to take advantage of event flow, these are tools you are going to want to be familiar with, and will be instrumental in your success by saving you time, money, complexity, and management overhead. This about wraps up what I want to cover with [serverless cloud services](https://aws.amazon.com/serverless/), though there is so much out there to explore. Tune in tomorrow as we start to put all of this together with best practices.*
 
 *This is part of a series that will be covered here, but I also encourage you to follow along with the rest of the series on [Medium](https://kristiperreault.medium.com/serverless-orchestration-d012aa7cae38) or [Dev.to](https://dev.to/aws-heroes/serverless-orchestration-3879).
+
+See you in [Day 75](day75.md).

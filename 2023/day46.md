@@ -45,3 +45,4 @@ Having a good understanding of how these web apps work, will help you with autom
 You can dive deeper into how you can build APIs using Python and serverless technologies like AWS Lambda, Azure Functions etc.
 
 I have a demo on [how I built a serverless resume API](https://github.com/rishabkumar7/AzureResumeAPI).
+See you tomorrow in [Day 47](day47.md).

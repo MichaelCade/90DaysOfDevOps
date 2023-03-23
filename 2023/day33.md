@@ -295,5 +295,4 @@ status: {}
 ### Summary
 These were examples of how to turn behavior to policy! Good stuff 😃
 
-
-
+See you on [Day 34](day34.md).

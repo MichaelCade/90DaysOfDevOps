@@ -29,3 +29,5 @@ Thanks again for taking this serverless journey with me this week, and please en
 ….and so much more out there for you to explore!
 
 *This is part of a series that will be covered here, but I also encourage you to follow along with the rest of the series on [Medium](https://kristiperreault.medium.com/serverless-beyond-the-basics-22ba22733dd1) or [Dev.to](https://dev.to/aws-heroes/serverless-beyond-the-basics-kom).
+
+See you in [Day 77](day77.md).

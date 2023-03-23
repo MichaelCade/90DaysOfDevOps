@@ -159,3 +159,4 @@ A Secure SDLC would include scanning of all artifacts that end up in our product
 
 Today we learned how to scan non-container artifacts like Kubernetes manifests, Helm charts and Terraform code.
 The tools we looked at are free and open-source and can be integrated into any workflow or CI pipeline.
+See you on [Day 24](day24.md).

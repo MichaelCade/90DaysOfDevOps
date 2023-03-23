@@ -251,3 +251,5 @@ The data is back! We have successfully performed a point in time restore of our 
 Join us tomorrow where we will be talking about high availability and disaster recovery.
 
 Thanks for reading!
+
+See you in [Day 66](day66.md).

@@ -82,3 +82,4 @@ A scan can detect something that is vulnerability, but it cannot be actively exp
 This makes the vulnerability a low priority one, because why fix something that presents no danger to you.
 
 If an issue comes up in penetration testing then that means that this issue is exploitable, and probably a high priority - in the penetation testers managed to exploit it, so will the hackers.
+See you on [Day 26](day26.md).

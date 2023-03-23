@@ -53,3 +53,4 @@ The reason I am raising this is that security never stops, the growth of Open-So
 - [IBM - The 3 A's of Open Source Security](https://www.youtube.com/watch?v=baZH6CX6Zno)
 - [Log4j (CVE-2021-44228) RCE Vulnerability Explained](https://www.youtube.com/watch?v=0-abhd-CLwQ)
 
+See you on [Day 6](day06.md).

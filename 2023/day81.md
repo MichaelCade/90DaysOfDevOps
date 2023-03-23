@@ -200,3 +200,5 @@ Go ahead and end the Kiali dashboard process with *ctrl+c*.
 
 ### Conclusion
 I've explored a few of the tools to be able to understand how we can observe services in our mesh and better understand how our applications are performing, or, if there are any issues.
+
+See you on [Day 82](day82.md)

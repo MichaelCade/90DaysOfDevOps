@@ -136,3 +136,5 @@ And there we have it! Our query now has a supporting index!
 Join us tommorrow where we'll be talking about database security.
 
 Thanks for reading!
+
+See you in [Day 68](day68.md).
