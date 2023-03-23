@@ -58,7 +58,7 @@ print('hello world')
 
 ### 시작하기
 
-커뮤니티 에디션은 [download](https://www.eve-ng.net/index.php/download/)를 위해 ISO 및 OVF 형식으로 제공됩니다.
+[커뮤니티 에디션](https://www.eve-ng.net/index.php/download/)은 ISO 및 OVF 형식으로 제공됩니다.
 
 저희는 OVF 다운로드를 사용할 예정이지만, ISO를 사용하면 하이퍼바이저 없이 베어메탈 서버에서 빌드할 수 있습니다.
 
