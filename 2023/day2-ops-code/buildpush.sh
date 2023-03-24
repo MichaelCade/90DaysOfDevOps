@@ -1,0 +1,2 @@
+docker build ./async/requestor/ -f async/requestor/Dockerfile -t heyal/requestor:async && docker push heyal/requestor:async
+docker build ./async/generator/ -f async/generator/Dockerfile -t heyal/generator:async&& docker push heyal/generator:async
