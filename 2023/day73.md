@@ -19,3 +19,5 @@ I'm keeping this section a bit shorter for you all, since [AppSync](https://aws.
 As with all of these short, daily articles, there is so much more that I could dive into here, but my purpose this week is to provide you with a little taste of what the serverless space has to offer, and get you started as a newbie to serverless. I'd highly encourage you to read up even more on [effective API Design](https://thenewstack.io/werner-vogels-6-rules-for-good-api-design/), and even get started with a tutorial, workshop, or even your own project (feel free to try out the travel website and let me know how it goes!) Believe it or not, there is still more to explore in the serverless space, so in my next post we will continue on with some really helpful integration & orchestration services.*
 
 *This is part of a series that will be covered here, but I also encourage you to follow along with the rest of the series on [Medium](https://kristiperreault.medium.com/serverless-apis-4c852f0955ef) or [Dev.to](https://dev.to/aws-heroes/serverless-apis-5bdp).
+
+See you in [Day 74](day74.md).

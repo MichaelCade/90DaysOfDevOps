@@ -48,3 +48,5 @@ In addition to the six pillars, AWS Well Architected has this concept of [Well A
 
 If you'd like to learn more about Well Architected or hear about it in practice, I have actually given a [recent talk on the subject with Build On at AWS Re:Invent](https://www.twitch.tv/videos/1674539542?collection=T1passDrLhdY6Q). This is an area of technology I have been very passionate about, and I truly believe these pillars and Well Architected Reviews are well worth the time and effort. We're coming up to end of our team together this week (I know, already?!) so for our last day tomorrow, I'm excited to summarize what we've learned so far, and present you with some next steps for going beyond the serverless basics.*
 *This is part of a series that will be covered here, but I also encourage you to follow along with the rest of the series on [Medium](https://kristiperreault.medium.com/serverless-well-architected-b379d5be10ad) or [Dev.to](https://dev.to/aws-heroes/serverless-well-architected-40jn).
+
+See you in [Day 76](day76.md).

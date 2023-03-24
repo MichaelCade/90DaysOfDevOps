@@ -108,3 +108,4 @@ In [day 57](/day57.md) we will dive into the Architecture and components of Open
 - [OKD](https://www.okd.io/)
 - [Official Red Hat OpenShift product page](https://www.redhat.com/en/technologies/cloud-computing/openshift)
 - [Red Hat Hybrid Cloud Learning Hub](https://cloud.redhat.com/learn)
+

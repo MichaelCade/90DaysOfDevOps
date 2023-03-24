@@ -102,3 +102,5 @@ After the installation you can access the vulnerabilities via CRD with kubectl:
 kubectl get vulnerabilityreports --all-namespaces -o wide
 ```
 ![](images/day32-2.png)
+
+[Day 33](day33.md).

@@ -23,3 +23,5 @@ In addition to these benefits, CloudFormation also offers a range of other featu
 [AWS CloudFormation User Guide](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html)
 
 [AWS CloudFormation Getting Started step-by-step guides](https://aws.amazon.com/cloudformation/getting-started/) 
+
+See you in [Day 52](day52.md).

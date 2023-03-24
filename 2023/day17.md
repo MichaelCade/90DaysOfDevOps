@@ -240,3 +240,5 @@ There are many tools that can help us in fuzzy testing our web applications, bot
 [Fuzzing Session: Finding Bugs and Vulnerabilities Automatically](https://youtu.be/DSJePjhBN5E)
 
 [Fuzzing the CNCF Landscape](https://youtu.be/zIyIZxAZLzo)
+
+See you on [Day 18](day18.md).

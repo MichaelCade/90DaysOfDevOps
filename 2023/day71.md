@@ -25,3 +25,5 @@ Fargate stands sort of in the middle as a container service that offers many of 
 These two options pretty much sum up serverless compute, believe it or not. When it comes to your business logic code in AWS or other cloud provider, these two services cover most, if not all, serverless application needs. As we continue on in this series, you'll realize there are a ton of other 'supporting' serverless services for storage, APIs, orchestration, and more to dive into. I hope this has given you a good preview on serverless compute and what's to come, tune in tomorrow where we'll discuss the various serverless storage solutions available to us. See you then!
 
 *This is part of a series that will be covered here, but I also encourage you to follow along with the rest of the series on [Medium](https://kristiperreault.medium.com/serverless-compute-b19df2ea0935) or [Dev.to](https://dev.to/aws-heroes/serverless-compute-3bgo).
+
+See you in [Day 72](day72.md).

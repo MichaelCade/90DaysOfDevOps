@@ -111,4 +111,4 @@ try:
 
 ## Conclusion
 
-That is it for today, I will see you tomorrow in Day 3 of Python!
+That is it for today, I will see you tomorrow in [Day 44 | Day 3 of Python!](day44.md).

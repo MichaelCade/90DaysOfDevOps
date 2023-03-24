@@ -205,3 +205,4 @@ So if we have sensitive data within our database, this is one method of encrypti
 Join us tomorrow for the final post in the database series of 90DaysOfDevOps where we'll be talking about monitoring and troubleshooting.
 
 Thanks for reading!
+See you in [Day 69](day69.md).

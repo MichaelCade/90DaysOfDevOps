@@ -127,3 +127,4 @@ More on VM security:
 <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security.html>
 
 <https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.security.doc/GUID-60025A18-8FCF-42D4-8E7A-BB6E14708787.html>
+See you on [Day 27](day27.md).

@@ -153,3 +153,5 @@ Here is how it would look, I have 2 blog posts and have some gifs in my blog pos
 If we click on the `hello` blog post:
 
 ![Hello blog post](/2023/images/day48-2.png)
+
+See you tomorrow in [Day 49](day49.md).

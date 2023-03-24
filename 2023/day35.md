@@ -45,3 +45,5 @@ In a DevOps and automated world, secrets management solutions must be centered a
 * Azure Key Vault
 * GCP Secret Manager
 * Thycotic Secret Server
+
+See you on [Day 36](day36.md).

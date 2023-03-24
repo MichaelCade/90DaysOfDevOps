@@ -82,3 +82,5 @@ That will be done by either patching up the system, closing a hole that is not n
 <https://www.comparitech.com/net-admin/free-network-vulnerability-scanners/>
 
 <https://www.rapid7.com/solutions/network-vulnerability-scanner/>
+
+See you on [Day 28](day28.md).

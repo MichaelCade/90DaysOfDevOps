@@ -75,3 +75,4 @@ Another place is your container registry (as seen today).
 
 Both are good options, both have their pros and cons.
 It is up to the DevSecOps architect to decide which approach works better for them and their thread model.
+See you on [Day 23](day23.md).
