@@ -101,7 +101,7 @@ id: 1048763
 
 ![](/2022/Days/Images/Day34_Cloud16.png)
 
-- Task 5: Azure 부하 분산 장치 구현하기
+- Task 5: Azure 로드밸런싱 장치 구현하기
 
 ![](/2022/Days/Images/Day34_Cloud17.png)
 ![](/2022/Days/Images/Day34_Cloud18.png)
