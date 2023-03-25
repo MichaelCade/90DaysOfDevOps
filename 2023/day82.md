@@ -1,4 +1,4 @@
-## 6 - Securing your microservices
+## Day 82 - Securing your microservices
 > **Tutorial**
 >> *Let's secure our microservices*
 
@@ -284,8 +284,6 @@ Seeing this in action:
 
 Now we know our AuthZ policies are working.
 
-On Day 6 (plus several days), I dug into Authentication with mMTLS and Authorization with Authorization Policies. This just scratches the surface and we absolutely need to dig deeper.
+On Day 82 (plus several days), I dug into Authentication with mMTLS and Authorization with Authorization Policies. This just scratches the surface and we absolutely need to dig deeper. Want to get deeper into Service Mesh Security? Head over to [#70DaysofServiceMesh](https://github.com/distributethe6ix/70DaysOfServiceMesh)!
 
-In the more security specific sections of #70DaysofServiceMesh, I'll break down some of the detail.
-
-Thanks y'all!
+See you on [Day 83](day83.md)
