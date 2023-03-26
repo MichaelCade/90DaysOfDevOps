@@ -22,15 +22,15 @@ Google hoặc bất kỳ công cụ tìm kiểm nào có thể là điểm đế
 
 Tiếp sau đó có thể là trang chính thức của git và tài liệu. [git-scm.com/docs](http://git-scm.com/docs) Tại đây, bạn sẽ không những chỉ tìm thấy tài liệu tham khảo tốt cho tất cả các câu lệnh, mà còn có rất nhiều các tài nguyên khác.
 
-![](Images/Day37_Git1.png)
+![](../../Days/Images/Day37_Git1.png)
 
 Chúng ta cũng có thể truy cập tài liệu tương tự sau, điều này cực kỳ hữu ích nếu bạn không có kết nối nào từ terminal. Ví dụ: nếu chúng ta sử dụng lệnh `git add`, chúng ta có thể chạy `git add --help`  và đọc hướng dẫn dưới đây.
 
-![](Images/Day37_Git2.png)
+![](../../Days/Images/Day37_Git2.png)
 
 Chúng ta cũng có thể dụng `git add -h` để cung cấp tống hợp các tuỳ chọn có sẵn mà chúng ta có thể sử dụng.
 
-![](Images/Day37_Git3.png)
+![](../../Days/Images/Day37_Git3.png)
 
 ### Những câu chuyện xung quanh Git
 
@@ -156,7 +156,7 @@ Tôi đã lấy những câu lệnh từ [atlassian](https://www.atlassian.com/g
 | git push <remote> --all   | `git push <remote> --all`   | Đẩy tất cả các nhánh ở local đến một remote xác định.                                                                                        |
 | git push <remote> --tags  | `git push <remote> --tags`  | Tage không được tự động đẩy lên khi bạn đẩy một nhánh hay sử dụng --all. --tags sẽ gửi tất cả những local tags lên remote repo. |
 
-## Resources
+## Tài liệu tham khảo
 
 - [What is Version Control?](https://www.youtube.com/watch?v=Yc8sCSeMhi4)
 - [Types of Version Control System](https://www.youtube.com/watch?v=kr62e_n6QuQ)

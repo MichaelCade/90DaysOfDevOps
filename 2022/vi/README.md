@@ -81,13 +81,13 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 - [✔️] 📚 41 > [Quy trình làm việc với mã nguồn mở](Days/day41.md)
 ### Containers
 
-- [✔️] 🏗️ 42 > [The Big Picture: Containers](Days/day42.md)
-- [✔️] 🏗️ 43 > [What is Docker & Getting installed](Days/day43.md)
-- [✔️] 🏗️ 44 > [Docker Images & Hands-On with Docker Desktop](Days/day44.md)
-- [✔️] 🏗️ 45 > [The anatomy of a Docker Image](Days/day45.md)
+- [✔️] 🏗️ 42 > [Bức tranh toàn cảnh: Containers](Days/day42.md)
+- [✔️] 🏗️ 43 > [Docker là gì & Cài đặt](Days/day43.md)
+- [✔️] 🏗️ 44 > [Docker Images & Thực hành với Docker Desktop](Days/day44.md)
+- [✔️] 🏗️ 45 > [Phân tích một Docker Image](Days/day45.md)
 - [✔️] 🏗️ 46 > [Docker Compose](Days/day46.md)
 - [✔️] 🏗️ 47 > [Docker Networking & Security](Days/day47.md)
-- [✔️] 🏗️ 48 > [Alternatives to Docker](Days/day48.md)
+- [✔️] 🏗️ 48 > [Các lựa chọn thay thế cho Docker](Days/day48.md)
 
 ### Kubernetes
 
