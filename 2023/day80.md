@@ -334,4 +334,6 @@ I briefly covered several traffic management components that allow requests to f
 
 And I got to show you all of this in action!
 
+Want to get deeper into Service Mesh Traffic Engineering? Head over to [#70DaysofServiceMesh](https://github.com/distributethe6ix/70DaysOfServiceMesh)!
+
 See you on [Day 81](day81.md) and beyond! :smile:!

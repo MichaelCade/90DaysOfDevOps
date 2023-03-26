@@ -201,4 +201,6 @@ Go ahead and end the Kiali dashboard process with *ctrl+c*.
 ### Conclusion
 I've explored a few of the tools to be able to understand how we can observe services in our mesh and better understand how our applications are performing, or, if there are any issues.
 
+Want to get deeper into Service Mesh Observability? Head over to [#70DaysofServiceMesh](https://github.com/distributethe6ix/70DaysOfServiceMesh)!
+
 See you on [Day 82](day82.md)
