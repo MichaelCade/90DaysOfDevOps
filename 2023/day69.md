@@ -162,3 +162,5 @@ Caution does need to be taken with some of these tools as they can have a negati
 So having the correct monitoring, log collection, and query tracking tools are vital when it comes to not only preventing issues from arising but allowing for quick resolution when they do occur.
 
 And that’s it for the database part of the 90DaysOfDevOps blog series. We hope this has been useful…thanks for reading!
+
+See you in [Day 70](day70.md).

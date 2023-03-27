@@ -8,7 +8,8 @@
 
 With CodePipeline, you can create pipelines that automate your build, test, and deployment workflows, ensuring that your code changes are reliably deployed to your target environments. It enables you to achieve faster release cycles, improve collaboration among development and operations teams, and improve the overall quality and reliability of your software releases.
 
-AWS CodePipeline integrates with other AWS services: 
+AWS CodePipeline integrates with other AWS services:
+
 - [Source Action Integrations](https://docs.aws.amazon.com/codepipeline/latest/userguide/integrations-action-type.html#integrations-source)
 - [Build Action Integrations](https://docs.aws.amazon.com/codepipeline/latest/userguide/integrations-action-type.html#integrations-build)
 - [Test Action Integrations](https://docs.aws.amazon.com/codepipeline/latest/userguide/integrations-action-type.html#integrations-test)
@@ -16,12 +17,11 @@ AWS CodePipeline integrates with other AWS services:
 - [Approval Action Integrations](https://docs.aws.amazon.com/codepipeline/latest/userguide/integrations-action-type.html#integrations-approval)
 - [Invoke Action Integrations](https://docs.aws.amazon.com/codepipeline/latest/userguide/integrations-action-type.html#integrations-invoke)
 
-
  It also integrates with third-party tools such as GitHub, Jenkins, and Bitbucket. You can use AWS CodePipeline to manage your application updates across multiple AWS accounts and regions.
 
 ## Getting started with AWS CodePipeline
 
-To get started with AWS CodePipeline, there are several excellent [tutorials](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials.html) in the [AWS User Guide](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html). They all basically break down into the following 3 steps: 
+To get started with AWS CodePipeline, there are several excellent [tutorials](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials.html) in the [AWS User Guide](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html). They all basically break down into the following 3 steps:
 
 ### Step 1: Create an IAM role
 
@@ -36,14 +36,15 @@ To create a CodePipeline pipeline, go to the AWS CodePipeline console, click on 
 Once you have created your CodePipeline pipeline, you can test and deploy your code changes. AWS CodePipeline will automatically build, test, and deploy your code changes to your target environments. You can monitor the progress of your pipeline in the AWS CodePipeline console.
 
 ## Capstone Project
-To tie up this AWS section of the 90 Days of DevOps, I recommend that you go through Adrian Cantrill's excellent mini-project, the [CatPipeline](https://www.youtube.com/playlist?list=PLTk5ZYSbd9MgARTJHbAaRcGSn7EMfxRHm). In it you will be exposed to CodeCommit, CodeBuild, CodeDeploy, and CodePipeline in a fun little project that will give you a taste of a day in the life of a DevOps engineer. 
+
+To tie up this AWS section of the 90 Days of DevOps, I recommend that you go through Adrian Cantrill's excellent mini-project, the [CatPipeline](https://www.youtube.com/playlist?list=PLTk5ZYSbd9MgARTJHbAaRcGSn7EMfxRHm). In it you will be exposed to CodeCommit, CodeBuild, CodeDeploy, and CodePipeline in a fun little project that will give you a taste of a day in the life of a DevOps engineer.
+
 - [YouTube CatPipeline Playlist](https://www.youtube.com/playlist?list=PLTk5ZYSbd9MgARTJHbAaRcGSn7EMfxRHm)
-- [GitHub CatPipeline Repo](https://github.com/acantril/learn-cantrill-io-labs/tree/master/aws-codepipeline-catpipeline) 
+- [GitHub CatPipeline Repo](https://github.com/acantril/learn-cantrill-io-labs/tree/master/aws-codepipeline-catpipeline)
 
+## Resources (Free)
 
-## Resources (Free):
-
-[AWS: Real-world CodePipeline CI/CD Examples ](https://youtu.be/MNt2HGxClZ0)
+[AWS: Real-world CodePipeline CI/CD Examples](https://youtu.be/MNt2HGxClZ0)
 
 [AWS CodePipeline User Guide](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html)
 
@@ -53,10 +54,13 @@ To tie up this AWS section of the 90 Days of DevOps, I recommend that you go thr
 
 [AWS CodeCommit vs GitHub: Which will Shine in 2023?](https://appwrk.com/aws-codecommit-vs-github)
 
-## Resources (Paid):
-There are a number of <i>excellent</i> instructors out there and picking 2-3 is always hard, but [Adrian Cantrill](https://learn.cantrill.io/), [Andrew Brown](https://www.exampro.co/), and [Stephane Maarek](https://www.udemy.com/user/stephane-maarek/) always come to mind when discussing fantastic content out there. 
+## Resources (Paid)
+
+There are a number of <i>excellent</i> instructors out there and picking 2-3 is always hard, but [Adrian Cantrill](https://learn.cantrill.io/), [Andrew Brown](https://www.exampro.co/), and [Stephane Maarek](https://www.udemy.com/user/stephane-maarek/) always come to mind when discussing fantastic content out there.
 
 ## Final Thoughts
-I hope that this section of the 90 Days of DevOps has given you a taste of what is available in the AWS ecosystem. 
+
+I hope that this section of the 90 Days of DevOps has given you a taste of what is available in the AWS ecosystem.
 
 Good luck in your studies! Up next is Red Hat OpenShift!
+See you in [Day 56](day56.md).

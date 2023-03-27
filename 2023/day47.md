@@ -60,3 +60,5 @@ In this example, we're using the Pulumi Python SDK to define an EC2 instance on 
 - [Learn more about Fabric](https://docs.fabfile.org/en/stable/index.html)
 - [PyWinRM](https://github.com/diyan/pywinrm)
 - [Pulumi - IaC Tool](https://www.pulumi.com/docs/reference/pkg/python/pulumi/)
+
+See you tomorrow in [Day 48](day48.md).

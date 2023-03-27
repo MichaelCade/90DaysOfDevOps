@@ -145,3 +145,4 @@ However, integrating signing into your workflow adds yet another layer of defenc
 Signing artifacts prevents supply-chain and man-in-the-middle attacks, by allowing you to verify the integrity of your artifacts.
 
 [Sigstore](https://sigstore.dev/) and [cosign](https://docs.sigstore.dev/cosign/overview/) are useful tools to sign your artifacts and they come with many integrations to choose from.
+See you on [Day 25](day25.md).

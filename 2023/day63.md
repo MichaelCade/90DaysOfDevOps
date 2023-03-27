@@ -14,7 +14,7 @@ Here’s what we’ll be covering: -
 - Database security
 - Monitoring and troubleshooting database issues
 
-We’ll also be providing examples to accompany the concepts discussed. In order to do so you will need Docker Desktop installed. Docker can be downloaded here (https://www.docker.com/products/docker-desktop/) and is completely free. 
+We’ll also be providing examples to accompany the concepts discussed. In order to do so you will need Docker Desktop installed. Docker can be downloaded here (https://www.docker.com/products/docker-desktop/) and is completely free.
 
 Alternatives to Docker Desktop can be used (such as Rancher Desktop or Finch) but the examples will focus on Docker.
 
@@ -132,3 +132,5 @@ The great thing about databases is that there are so many choices to choose from
 Join us tommorrow when we'll be talking about querying databases.
 
 Thanks for reading!
+
+See you in [Day 64](day64.md).

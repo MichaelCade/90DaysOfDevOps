@@ -89,3 +89,4 @@ There are several tools available to monitor network traffic in Kubernetes, each
 
 These are just a few examples of the many tools available for monitoring network traffic in Kubernetes. When selecting a tool, consider the specific needs of your application and infrastructure, and choose a tool that provides the features and capabilities that best fit your requirements.
 
+See you on [Day 32](day32.md).

@@ -151,3 +151,5 @@ Container Image Scanning can help us find vulnerabilities in our application bas
 
 Image Scanning and IAST/DAST are not mutually-exclusive.
 They both have their place in a Secure SDLC and can help us find different problems before the attackers do.
+
+See you on [Day 21](day21.md).

@@ -229,4 +229,6 @@ Let's label our default namespace with the *istio-injection=enabled* label. This
 ### Conclusion
 I decided to jump into getting a service mesh up and online. It's easy enough if you have the right pieces in place, like a Kubernetes cluster and a load-balancer service. Using the demo profile, you can have Istiod, and the Ingress/Egress gateway deployed. Deploy a sample app with a service definition, and you can expose it via the Ingress-Gateway and route to it using a virtual service.
 
-See you on Day 79 and beyond of #90DaysofServiceMesh
+Want to get deeper into Service Mesh? Head over to [#70DaysofServiceMesh](https://github.com/distributethe6ix/70DaysOfServiceMesh)!
+
+See you on [Day 79](day79.md) and beyond of #90DaysofServiceMesh

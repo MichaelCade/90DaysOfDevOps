@@ -1,6 +1,6 @@
 # Introduction to Runtime Defence & Monitoring
 
-Welcome to all the DevOps and DevSecOps enthusiasts! 🙌 
+Welcome to all the DevOps and DevSecOps enthusiasts! 🙌
 
 We are here to learn about "Runtime defence". This is a huge subject, but we are not deterred by it and will learn about it together in the next 7 days.
 
@@ -39,7 +39,6 @@ Elaborating on this, here are the key reasons why monitoring is important for ru
 
 * Gaining visibility: Monitoring provides insight into system activity, which can be used to optimize performance, troubleshoot issues, and identify opportunities for improvement.
 
-
 ## What to monitor and record?
 
 In theory, the ideal solution would be to log everything that is happening in the system and keep the data forever.
@@ -63,6 +62,7 @@ Security configurations: Monitor security configurations, such as firewall rules
 Backup and disaster recovery systems: Monitor backup and disaster recovery systems to ensure that they are operating correctly and data can be recovered in the event of a failure or disaster.
 
 ## A practical implementation
+
 In this part, we move from theory to practice.
 
 There isn't a silver bullet here, every system has its tools. We will work on Kubernetes as infrastructure with [Microservices demo](https://github.com/GoogleCloudPlatform/microservices-demo) application.
@@ -145,3 +145,4 @@ Browse Grafana for more dashboards [here](https://grafana.com/grafana/dashboards
 # Next...
 
 Tomorrow we will continue to the application level. Application logs and behavior monitoring will be in focue. We will continue to use the same setup and go deeper into the rabbit hole 😄
+See you on [Day 29](day29.md).

@@ -31,3 +31,5 @@ This is my serverless database catch-all section. In my opinion, S3 and DynamoDB
 Well, this about sums up the serverless storage solutions available. As always, there are definitely equivalents of these resources in your cloud provider of choice, and you can't go wrong with any service you choose, as long as you're evaluating based on your specific application needs. Join me tomorrow, as we take another step further into serverless with API design.*
 
 *This is part of a series that will be covered here, but I also encourage you to follow along with the rest of the series on [Medium](https://kristiperreault.medium.com/serverless-storage-4b7974683d3d) or [Dev.to](https://dev.to/aws-heroes/serverless-storage-50i3).
+
+See you in [Day 73](day73.md).

@@ -216,4 +216,4 @@ no-privileged-containers:
 ```
 
 I hope this short intro gave a little taste of how admission controllers can help you to enforce runtime rules over a Kubernetes cluster!.
-
+See you on [Day 35](day35.md).

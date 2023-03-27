@@ -66,4 +66,6 @@ Governance and Oversight | Istio Community | Linkered Community | AWS | Hashicor
 ### Conclusion 
 Service Meshes have come a long way in terms of capabilities and the environments they support. Istio appears to be the most feature-complete service mesh, providing a balance of platform support, customizability, extensibility, and is most production ready. Linkered trails right behind with a lighter-weight approach, and is mostly complete as a service mesh. AppMesh is mostly feature-filled but specific to the AWS Ecosystem. Consul is a great contender to Istio and Linkered. The Cilium CNI is taking the approach of using eBPF and climbing up the networking stack to address Service Mesh capabilities, but it has a lot of catching up to do.
 
-See you on Day 4 of #70DaysOfServiceMesh! 
+Want to get deeper into Service Mesh? Head over to [#70DaysofServiceMesh](https://github.com/distributethe6ix/70DaysOfServiceMesh)!
+
+See you on [Day 80](day80.md) of #70DaysOfServiceMesh! 

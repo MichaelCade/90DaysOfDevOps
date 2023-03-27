@@ -81,4 +81,5 @@ Also please add any additional resources.
 - [Introducing the InfoSec colour wheel — blending developers with red and blue security teams.](https://hackernoon.com/introducing-the-infosec-colour-wheel-blending-developers-with-red-and-blue-security-teams-6437c1a07700)
 
 
-See you on [Day 5](day05.md) 
+See you on [Day 5](day05.md).
+

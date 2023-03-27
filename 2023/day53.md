@@ -47,3 +47,4 @@ Once you have created a resource group, you can view and manage your resources f
 
 [Getting started with AWS System Manager](https://docs.aws.amazon.com/systems-manager/latest/userguide/getting-started-launch-managed-instance.html)
 
+See you in [Day 54](day54.md).

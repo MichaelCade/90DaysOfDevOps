@@ -129,6 +129,5 @@ Now you should see Falco events in your Grafana! 😎
 
 # Next... 
 
-Next day we will look into how to detect attacks in runtime. See you tomorrow 😃
-
-
+Next day we will look into how to detect attacks in runtime. 
+See you tomorrow 😃 [Day 30](day30.md).
