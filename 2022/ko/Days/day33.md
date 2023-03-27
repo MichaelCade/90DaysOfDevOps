@@ -84,11 +84,11 @@ Microsoft Azure에는 두 가지 로드 밸런싱 솔루션이 있습니다. (�
 
 ## Azure 관리 도구
 
-대부분의 이론 시간을 Azure 포털을 살펴보는 데 할애했는데, 데브옵스 문화를 따르고 이러한 작업, 특히 프로비저닝과 관련된 많은 작업을 처리할 때 API 또는 명령줄 도구를 통해 수행한다고 제안하고 싶습니다. Azure 환경의 프로비저닝을 자동화할 때 이를 알아야 하므로 사용할 수 있는 다른 관리 도구 몇 가지를 언급하고 싶었습니다.
+대부분의 이론 시간을 Azure 포털을 살펴보는 데 할애했는데, 데브옵스 문화를 따르고 이러한 작업, 특히 프로비저닝과 관련된 많은 작업을 처리할 때 API 또는 커맨드라인 도구를 통해 수행한다고 제안하고 싶습니다. Azure 환경의 프로비저닝을 자동화할 때 이를 알아야 하므로 사용할 수 있는 다른 관리 도구 몇 가지를 언급하고 싶었습니다.
 
 ### Azure 포털
 
-Microsoft Azure Portal은 명령줄 도구의 대안을 제공하는 웹 기반 콘솔입니다. Azure 포털에서 구독을 관리할 수 있습니다. 간단한 웹 앱부터 복잡한 클라우드 배포까지 모든 것을 빌드, 관리 및 모니터링할 수 있습니다. 포털 내에서 찾을 수 있는 또 다른 것은 이러한 이동 경로이며, 앞서 언급했듯이 JSON은 모든 Azure 리소스의 기반이며, 포털에서 시작하여 기능, 서비스 및 기능을 이해한 다음 나중에 자동화된 워크플로우에 통합하기 위해 그 아래에 있는 JSON을 이해할 수 있습니다.
+Microsoft Azure Portal은 커맨드라인 도구의 대안을 제공하는 웹 기반 콘솔입니다. Azure 포털에서 구독을 관리할 수 있습니다. 간단한 웹 앱부터 복잡한 클라우드 배포까지 모든 것을 빌드, 관리 및 모니터링할 수 있습니다. 포털 내에서 찾을 수 있는 또 다른 것은 이러한 이동 경로이며, 앞서 언급했듯이 JSON은 모든 Azure 리소스의 기반이며, 포털에서 시작하여 기능, 서비스 및 기능을 이해한 다음 나중에 자동화된 워크플로우에 통합하기 위해 그 아래에 있는 JSON을 이해할 수 있습니다.
 
 ![](/2022/Days/Images/Day33_Cloud2.png)
 
@@ -98,9 +98,9 @@ Azure Preview Portal도 있으며, 이 포털을 사용하여 새로운 서비�
 
 ### PowerShell
 
-Azure PowerShell을 살펴보기 전에 PowerShell에 대해 먼저 소개할 필요가 있습니다. PowerShell은 작업 자동화 및 구성 관리 프레임워크, 명령줄 셸 및 스크립팅 언어입니다. Linux 섹션에서 셸 스크립팅에 대해 다룬 것과 비슷하다고 감히 말할 수 있습니다. PowerShell은 Windows OS에서 처음 발견되었지만, 이제는 크로스 플랫폼입니다.
+Azure PowerShell을 살펴보기 전에 PowerShell에 대해 먼저 소개할 필요가 있습니다. PowerShell은 작업 자동화 및 구성 관리 프레임워크, 커맨드라인 셸 및 스크립팅 언어입니다. Linux 섹션에서 셸 스크립팅에 대해 다룬 것과 비슷하다고 감히 말할 수 있습니다. PowerShell은 Windows OS에서 처음 발견되었지만, 이제는 크로스 플랫폼입니다.
 
-Azure PowerShell은 PowerShell 명령줄에서 직접 Azure 리소스를 관리하기 위한 cmdlets의 집합입니다.
+Azure PowerShell은 PowerShell 커맨드라인에서 직접 Azure 리소스를 관리하기 위한 cmdlets의 집합입니다.
 
 아래에서 PowerShell 명령 `Connect-AzAccount`를 사용하여 구독에 연결할 수 있음을 확인할 수 있습니다.
 
@@ -154,7 +154,7 @@ Cloud Shell을 사용하도록 선택하면 머신이 스핀업되며, 이러한
 
 처음 Azure 학습에 들어갔을 때 Azure PowerShell과 Azure CLI가 있어서 약간 혼란스러웠습니다.
 
-이에 대한 커뮤니티의 피드백이 있으면 좋겠습니다. 하지만 제가 알기로 Azure PowerShell은 Windows PowerShell 또는 PowerShell Core에 추가된 모듈(다른 OS에서도 사용 가능하지만 전부는 아님)인 반면, Azure CLI는 Azure에 연결하여 해당 명령을 실행하는 크로스 플랫폼 명령줄 프로그램이라고 알고 있습니다.
+이에 대한 커뮤니티의 피드백이 있으면 좋겠습니다. 하지만 제가 알기로 Azure PowerShell은 Windows PowerShell 또는 PowerShell Core에 추가된 모듈(다른 OS에서도 사용 가능하지만 전부는 아님)인 반면, Azure CLI는 Azure에 연결하여 해당 명령을 실행하는 크로스 플랫폼 커맨드라인 프로그램이라고 알고 있습니다.
 
 이 두 옵션 모두 구문은 다르지만, 제가 보기에는 매우 유사한 작업을 수행할 수 있습니다.
 
@@ -168,7 +168,7 @@ Cloud Shell을 사용하도록 선택하면 머신이 스핀업되며, 이러한
 
 Azure CLI
 
-- Windows, macOS, Linux에 설치할 수 있는 크로스 플랫폼 명령줄 인터페이스
+- Windows, macOS, Linux에 설치할 수 있는 크로스 플랫폼 커맨드라인 인터페이스
 - Windows PowerShell, Cmd, Bash 및 기타 Unix 셸에서 실행됩니다.
 
 Azure PowerShell

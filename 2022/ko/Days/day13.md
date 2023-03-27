@@ -52,7 +52,7 @@ API token이 제공됩니다. 이를 안전한 장소에 저장해야 합니다.
 
 트위터에 메시지나 출력을 트윗 형태로 전달하기 위한 코드를 생각해봐야 합니다. 이를 위해 [go-twitter](https://github.com/dghubble/go-twitter) 라이브러리를 사용할 것입니다. 이 라이브러리는 Go 언어로 작성된 트위터 API 클라이언트 라이브러리입니다.
 
-메인 애플리케이션에 적용하기 전에 `src` 폴더에 'go-twitter-bot'이라는 새 디렉터리를 만들고, 해당 폴더에서 `go mod init github.com/michaelcade/go-Twitter-bot` 명령을 실행하여 `go.mod` 파일을 생성한 후, 새로운 'main.go' 파일을 작성하여 테스트해 보았습니다.
+메인 애플리케이션에 적용하기 전에 `src` 폴더에 'go-twitter-bot'이라는 새 디렉토리를 만들고, 해당 폴더에서 `go mod init github.com/michaelcade/go-Twitter-bot` 명령을 실행하여 `go.mod` 파일을 생성한 후, 새로운 'main.go' 파일을 작성하여 테스트해 보았습니다.
 
 트위터 개발자 포털에서 생성한 key, token 및 비밀번호가 필요하며, 이를 환경 변수로 설정해야 합니다. 하지만 이는 실행 중인 운영 체제에 따라 다를 수 있습니다.
 

@@ -14,7 +14,7 @@ Microsoft Azure 개요에 이어서 Azure 보안부터 시작하여 일상적인
 
 Microsoft Azure가 다른 퍼블릭 클라우드 공급자와 다르게 작동하는 것처럼 보이는 영역 중 하나는 Azure에는 항상 Azure AD가 있다는 것입니다.
 
-### 디렉터리 서비스
+### 디렉토리 서비스
 
 - Azure Active Directory는 Microsoft Azure 및 기타 Microsoft 클라우드 서비스에서 사용하는 보안 원칙을 호스팅합니다.
 - 인증은 SAML, WS-Federation, OpenID Connect 및 OAuth2와 같은 프로토콜을 통해 수행됩니다.
@@ -30,7 +30,7 @@ Microsoft Azure AD(Active Directory)에서 클라우드 계정을 만들 수 있
 
 Azure AD Connect를 사용하면 Windows AD 서버뿐만 아니라 다른 Azure AD, Google 및 기타 서버도 볼 수 있습니다. 또한 외부 사람 및 조직과 공동 작업할 수 있는 기능을 제공하는데, 이를 Azure B2B라고 합니다.
 
-액티브 디렉터리 도메인 서비스와 Microsoft Azure 액티브 디렉터리 간의 인증 옵션은 암호 해시와 ID 동기화를 통해 모두 가능합니다.
+액티브 디렉토리 도메인 서비스와 Microsoft Azure 액티브 디렉토리 간의 인증 옵션은 암호 해시와 ID 동기화를 통해 모두 가능합니다.
 
 ![](/2022/Days/Images/Day30_Cloud1.png)
 
@@ -46,7 +46,7 @@ Azure AD Connect를 사용하면 Windows AD 서버뿐만 아니라 다른 Azure 
 
 Microsoft 365, Microsoft Dynamics 및 온-프레미스 Active Directory를 사용하는 경우 페더레이션을 위해 Azure AD를 이해하고 통합하는 것은 매우 쉽습니다. 하지만 Microsoft 에코시스템 외부의 다른 서비스를 사용하고 있을 수도 있습니다.
 
-Azure AD는 이러한 다른 타사 앱 및 기타 디렉터리 서비스에 대한 페더레이션 브로커 역할을 할 수 있습니다.
+Azure AD는 이러한 다른 타사 앱 및 기타 디렉토리 서비스에 대한 페더레이션 브로커 역할을 할 수 있습니다.
 
 이는 Azure 포털에서 다양한 옵션이 있는 엔터프라이즈 애플리케이션으로 표시됩니다.
 
