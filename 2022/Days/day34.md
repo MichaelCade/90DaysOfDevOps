@@ -179,7 +179,7 @@ Following [Module 09a](https://microsoftlearning.github.io/AZ-104-MicrosoftAzure
 
 - Task 6: Configure and test autoscaling of the Azure web app
 
-This script I am using can be found in (Cloud/05Serverless)
+This script I am using can be found in (Cloud/04Serverless)
 
 ![](Images/Day34_Cloud36.png)
 
