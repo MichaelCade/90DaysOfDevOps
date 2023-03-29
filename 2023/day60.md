@@ -268,4 +268,5 @@ There is just so much to cover, but hopefully you've now learned that Projects a
 On [Day 61](/2023/day61.md), we shall cover the larger subject of RBAC within the cluster, and bring it back to applying access to projects.
 
 ## Resources
-- Red Hat OpenShift Documentation - [Using RBAC to define and apply permissions](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.12/html/authentication_and_authorization/using-rbac)
+
+- Red Hat OpenShift Documentation - Building Applications - [Projects](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.12/html/building_applications/projects#doc-wrapper)
