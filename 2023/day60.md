@@ -1,4 +1,4 @@
-# OpenShift Projects, RBAC, Service Accounts and beyond
+# OpenShift Projects - Creation, Configuration and Governance
 
 ## Understanding OpenShift Projects: How They Differ from Kubernetes Namespaces
 
@@ -10,7 +10,7 @@ OpenShift Projects are an abstraction layer built on top of Kubernetes Namespace
 
 - Simplified multi-tenancy: Projects enable better isolation between users and teams, ensuring that each group works within its own environment without impacting others.
 - Access control: Projects facilitate role-based access control (RBAC), allowing administrators to define and manage user permissions at the project level.
-- Resource quotas and limits: Projects support setting resource quotas and limits to prevent over consumption of cluster resources by individual projects.
+- Resource quotas and limits: Projects support setting resource quotas and limits to prevent overconsumption of cluster resources by individual projects.
 
 ## Creating and Configuring an OpenShift Project
 
@@ -188,11 +188,12 @@ Note that under ```labels``` section, we have several pod-security settings that
 $ oc delete -f nginx.yaml
 ````
 
-4. Let's alter the configuration of this project to consume the ````privileged```` SCC, allowing us to brute force our pod to run. (In the real world, we would create an appropriate SCC and this use, rather than giving workloads god mode type access)
+5. Let's alter the configuration of this project to consume the ````privileged```` SCC, allowing us to brute force our pod to run. (In the real world, we would create an appropriate SCC and this use, rather than giving workloads god mode type access)
 
 We are going to use the `oc patch` command and pass in the modifications to the labels. There are two ways to achieve this using the patch argument, we can either pass in the changes within the command line in JSON format, or we can pass in a file that is either JSON or YAML content. I'll detail both options below. 
 
 This first command passes JSON content as part of the executions to alert the configuration.
+
 ````sh
 $ oc patch namespace/scc-ns-test -p '{"metadata":{"labels":{"pod-security.kubernetes.io/audit":"privileged","pod-security.kubernetes.io/enforce":"privileged","pod-security.kubernetes.io/warn":"privileged","security.openshift.io/scc.podSecurityLabelSync":"false"}}}'
 ````
@@ -201,7 +202,7 @@ To break this down further, from the above example showing the Project configura
 
 Rather than including the JSON changes in the same command line, which can get very long if you have a lot of changes, you can simply create a JSON or YAML file, containing content such as below and then apply it using the ```--patch-file``` argument. 
 
-```yaml
+````yaml
 metadata:
   labels:
     pod-security.kubernetes.io/audit: privileged
@@ -209,6 +210,7 @@ metadata:
     pod-security.kubernetes.io/warn: privileged
     security.openshift.io/scc.podSecurityLabelSync: false
 ````
+
 ````sh
 oc patch namespace/scc-ns-test  --patch-file ns-patch.yaml
 ````
@@ -219,7 +221,7 @@ oc patch namespace/scc-ns-test  --patch-file ns-patch.yaml
 oc get project scc-ns-test -o json
 ````
 
-````json
+```json
 {
     "apiVersion": "project.openshift.io/v1",
     "kind": "Project",
@@ -257,5 +259,13 @@ oc get project scc-ns-test -o json
 }
 ````
 
-6. Redeploy the nginx instances, or other containers you've been working with.
+6. Redeploy the nginx instances or other containers you've been working with.
 
+# Summary
+
+There is just so much to cover, but hopefully you've now learned that Projects are more than just a Kubernetes Namespace with a different name. One of the areas we didn't cover, is the ability to [control Project creation](https://docs.openshift.com/container-platform/4.12/applications/projects/configuring-project-creation.html) by OpenShift users, either from a governed default template, or simply removing the ability for self-service access to create templates.
+
+On [Day 61](/2023/day61.md), we shall cover the larger subject of RBAC within the cluster, and bring it back to applying access to projects.
+
+## Resources
+- Red Hat OpenShift Documentation - [Using RBAC to define and apply permissions](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.12/html/authentication_and_authorization/using-rbac)

@@ -473,7 +473,7 @@ If they do need some sort of privilege, then defining tight RBAC and SCC control
 
 In this post, we discussed how the default security context constraints in OpenShift can prevent deployments from running as expected. We provided a solution to the specific issue of running an initContainer as root for a MongoDB application. Understanding and managing SCCs in OpenShift is essential for maintaining secure and compliant applications within your cluster.
 
-On [Day 60](/day60.md)](/day60.md), we will look at OpenShift Projects and RBAC in a cluster in more detail, such as the accounts used to access a cluster, the service accounts used by container, and how you tie it all together to areas such as consuming SCC via the project level, and other features of Red Hat OpenShift.
+On [Day 60](/day60.md)](/day60.md), we will look at OpenShift Projects Creation, Configuration and Governance, for example consuming SCC via the project level, and other features of Red Hat OpenShift.
 
 ## Resources
 
