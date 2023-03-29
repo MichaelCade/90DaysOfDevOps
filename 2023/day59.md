@@ -485,3 +485,4 @@ On [Day 60](/day60.md)](/day60.md), we will look at OpenShift Projects Creation,
 - [Using the legacy restricted SCC in OCP 4.11+](https://access.redhat.com/articles/6973044)
 - [Role-based access to security context constraints](https://docs.openshift.com/container-platform/4.12/authentication/managing-security-context-constraints.html#role-based-access-to-ssc_configuring-internal-oauth)
   - You can specify SCCs as resources that are handled by RBAC. This allows you to scope access to your SCCs to a certain project or to the entire cluster.
+- Kubernetes.io - [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
