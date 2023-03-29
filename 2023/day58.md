@@ -103,7 +103,7 @@ After selecting datastore and the network, I need to now input the address for:
 
 However I hit a bug ([GitHub PR](https://github.com/openshift/installer/pull/6783),[Red Hat Article](https://access.redhat.com/solutions/6994972)) in the installer, where by the software installer is hardcoded to only accept addresses in the 10.0.0.0/16 range.
 
-![OpenShift-Install create cluster - Sorry, your reply was invalid: IP expected to be in one of the machine networks: 10.0.0.0/16](images/Day58%20-%20OpenShift%20Cluster%20Install/OpenShift-Install%20create%20cluster%20-%20Sorry%2C%20your%20reply%20was%20invalid-%20IP%20expected%20to%20be%20in%20one%20of%20the%20machine%20networks-%2010.0.0.0%3A16.jpg)
+![OpenShift-Install create cluster - Sorry, your reply was invalid: IP expected to be in one of the machine networks: 10.0.0.0/16](images/Day58%20-%20OpenShift%20Cluster%20Install/OpenShift-Install%20create%20cluster%20-%20Sorry%2C%20your%20reply%20was%20invalid-%20IP%20expected%20to%20be%20in%20one%20of%20the%20machine%20networks-%2010.0.0.0-16.jpg)
 
 The current work around for this is to run ````openshift-install create install-config```` provide ip addresses in the 10.0.0.0/16 range, and then alter the ```install-config.yaml``` file manually before running ````openshift-install create cluster````, which will read the available ```install-config.yaml``` file and create the cluster (rather than presenting you another wizard).
 
@@ -233,7 +233,7 @@ If we now look within our directory where we ran the ```openshift-install``` ins
 
 Below is a screenshot showing the directory, folders and example of my logging output.
 
-![OpenShift-Install - .openshift_install.log output](/images/Day58%20-%20OpenShift%20Cluster%20Install/OpenShift-Install%20create%20cluster%20-%20.openshift_install.log%20output.jpg)
+![OpenShift-Install - .openshift_install.log output](images/Day58%20-%20OpenShift%20Cluster%20Install/OpenShift-Install%20create%20cluster%20-%20.openshift_install.log%20output.jpg)
 
 ## Connecting to your cluster
 

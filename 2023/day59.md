@@ -1,16 +1,16 @@
 # Deploying a Sample Application on Red Hat OpenShift: Handling Security Context Constraints (SCC)
 
-In [Day 58](/day58.md) we finished up looking around the developer and administator interfaces of a newly deployed cluster.
+On [Day 58](/day58.md) we finished looking around the developer and administrator interfaces of a newly deployed cluster.
 
 In this submission (Day 59), we will walk through the process of deploying a sample MongoDB application to a newly deployed Red Hat OpenShift cluster. However, this deployment will fail due to the default security context constraints (SCC) in OpenShift. We will explain why the deployment fails, how to resolve the issue, and provide a brief overview of SCC in OpenShift with examples.
 
 ## Understanding Security Context Constraints (SCC)
 
-Security context constraints in OpenShift are a security feature that allows administrators to control various aspects of container runtime, such as user and group IDs, SELinux context, and the use of host resources. In Short, SCCs determine which security settings are allowed or disallowed for containerized applications. By default, OpenShift comes with several predefined SCCs, such as restricted, anyuid, and hostaccess. These SCCs serve as templates for creating custom SCCs to meet specific security requirements.
+Security context constraints in OpenShift are a security feature that allows administrators to control various aspects of the container runtime, such as user and group IDs, SELinux context, and the use of host resources. In Short, SCCs determine which security settings are allowed or disallowed for containerized applications. By default, OpenShift comes with several predefined SCCs, such as ```restricted```, ```anyuid```, and ```hostaccess```. These SCCs serve as templates for creating custom SCCs to meet specific security requirements.
 
 > Warning: Do not modify the default SCCs. Customizing the default SCCs can lead to issues when some of the platform pods deploy or OpenShift Container Platform is upgraded. Additionally, the default SCC values are reset to the defaults during some cluster upgrades, which discards all customizations to those SCCs. Instead of modifying the default SCCs, create and modify your own SCCs as needed.
 
-For example, the restricted SCC (default for most deployments, or restricted-v2 for new installs of OCP 4.11 and later) does not allow containers to run as root or with privileged access, while the anyuid SCC permits containers to run with any user ID, including root. By creating custom SCCs and granting them to service accounts or users, administrators can ensure that applications adhere to the desired security policies without compromising functionality.
+For example, the restricted SCC (default for most deployments, or restricted-v2 for new installs of OCP 4.11 and later) does not allow containers to run as root or with privileged access, while the ```anyuid``` SCC permits containers to run with any user ID, including root. By creating custom SCCs and granting them to service accounts or users, administrators can ensure that applications adhere to the desired security policies without compromising functionality.
 
 Security context constraints allow an administrator to control:
 
@@ -32,19 +32,19 @@ Security context constraints allow an administrator to control:
 
     - The configuration of allowable supplemental groups
 
-    - Whether a container requires write access to its root file system
+    - Whether a container requires to write access to its root file system
 
     - The usage of volume types
 
     - The configuration of allowable seccomp profiles
 
-To learn more details about what each of the out-of-the-box default security context constraint does, see [this official documentation page](https://docs.openshift.com/container-platform/4.12/authentication/managing-security-context-constraints.html#default-sccs_configuring-internal-oauth).
+To learn more details about what each of the out-of-the-box default security context constraints does, see [this official documentation page](https://docs.openshift.com/container-platform/4.12/authentication/managing-security-context-constraints.html#default-sccs_configuring-internal-oauth).
 
-![Red Hat OpenShift - oc get scc](/images/Day58%20-%20OpenShift%20Cluster%20Install/Red%20Hat%20OpenShift%20-%20oc%20get%20scc.jpg)
+![Red Hat OpenShift - oc get scc](/2023/images/day59-Red%20Hat%20OpenShift%20-%20oc%20get%20scc.jpg)
 
 ### Anatomy of a Security Context Constraint configuration
 
-SCCs consist of settings and strategies that control the security features a pod has access to. These settings fall into three categories:
+SCCs consist of settings and strategies that control the security features that a pod has access to. These settings fall into three categories:
 
 - Controlled by a boolean
   - Fields of this type default to the most restrictive value. For example;
@@ -78,7 +78,7 @@ You can learn more about Linux capabilities [here](https://linuxera.org/containe
 
 You can [specify additional capabilities for your pod](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-capabilities-for-a-container) as per the below example. 
 
-````
+````yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -92,7 +92,7 @@ spec:
         add: ["NET_ADMIN", "SYS_TIME"]
 ````
 
-Let's look at some of the default contexts in futher detail.
+Let's look at some of the default contexts in further detail.
 
 ### Example SCC Configurations
 
@@ -118,7 +118,7 @@ The restricted-v2 SCC:
 
 You can get this SCC configuration by running ```oc get scc restricted-v2 -o yaml```
 
-````
+````yaml
 allowHostDirVolumePlugin: false
 allowHostIPC: false
 allowHostNetwork: false
@@ -198,7 +198,7 @@ The privileged SCC allows:
 
 You can get this SCC configuration by running ```oc get scc privileged -o yaml```
 
-````
+````yaml
 allowHostDirVolumePlugin: true
 allowHostIPC: true
 allowHostNetwork: true
@@ -253,14 +253,14 @@ volumes:
 ````
 Now let's look at some specific items from the above YAML:
 
-- **allowedCapabilities:** - A list of capabilities that a pod can request. An empty list means that none of capabilities can be requested while the special symbol * allows any capabilities.
+- **allowedCapabilities:** - A list of capabilities that a pod can request. An empty list means that none of the capabilities can be requested while the special symbol * allows any capabilities.
 - **defaultAddCapabilities: []** - A list of additional capabilities that are added to any pod.
-- **fsGroup:** - The FSGroup strategy, which dictates the allowable values for the security context.
+- **fsGroup:** - The FSGroup strategy, dictates the allowable values for the security context.
 - **groups** - The groups that can access this SCC.
 - **requiredDropCapabilities** A list of capabilities to drop from a pod. Or, specify ALL to drop all capabilities.
 - **runAsUser:** - The runAsUser strategy type, which dictates the allowable values for the security context.
-- **seLinuxContext:** - The seLinuxContext strategy type, which dictates the allowable values for the security context.
-- **supplementalGroups** - The supplementalGroups strategy, which dictates the allowable supplemental groups for the security context.
+- **seLinuxContext:** - The seLinuxContext strategy type, dictates the allowable values for the security context.
+- **supplementalGroups** - The supplementalGroups strategy, dictates the allowable supplemental groups for the security context.
 - **users:** - The users who can access this SCC.
 - **volumes:** - The allowable volume types for the security context. In the example, * allows the use of all volume types.
 
@@ -274,7 +274,7 @@ First, I need to create the namespace to place the components in, ```oc create n
 
 Now I apply the below YAML file ```oc apply -f mongo-test.yaml```
 
-````
+````yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -404,7 +404,7 @@ replicaset.apps/mongo-56cc764fb   1         0         0       3m9s
 
 The provided Kubernetes application includes an initContainer with the following security context:
 
-````
+````yaml
 securityContext:
   runAsUser: 0
 ````
@@ -415,9 +415,9 @@ This configuration means that the initContainer will attempt to run as the root 
 
 To resolve this issue, we need to modify the deployment configuration to comply with the SCC policies in OpenShift. There are several ways to achieve this, but in this example, we will create a custom SCC that allows the initContainer to run as root. Follow these steps:
 
-1. Create a new custom SCC, save the below YAML in a file called mongo-custom-scc.yaml:
+1. Create a new custom SCC, and save the below YAML in a file called mongo-custom-scc.yaml:
 
-````
+````yaml
 apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
 metadata:
@@ -439,13 +439,13 @@ supplementalGroups:
 
 2. Apply the custom SCC to your OpenShift cluster:
 
-````
+````sh
 oc apply -f mongo-custom-scc.yaml
 ````
 
 3. Grant the mongo-custom-scc SCC to the service account that the MongoDB deployment is using:
 
-````
+````sh
 oc adm policy add-scc-to-user mongo-custom-scc system:serviceaccount:<namespace>:default
 
 # In my environment, I run:
@@ -465,15 +465,15 @@ deployment.apps/mongo scaled
 
 deployment.apps/mongo scaled
 ````
-In the real-world, the first port of call should always be to work to ensure your containers and applications run with the least privileges necessary, and therefore don't need to run as root.
+In the real world, the first port of call should always be to work to ensure your containers and applications run with the least privileges necessary and therefore don't need to run as root.
 
-If they do need some sort of privilege, then defining tight RBAC and SCC control in-place is key.
+If they do need some sort of privilege, then defining tight RBAC and SCC control in place is key.
 
 # Summary
 
 In this post, we discussed how the default security context constraints in OpenShift can prevent deployments from running as expected. We provided a solution to the specific issue of running an initContainer as root for a MongoDB application. Understanding and managing SCCs in OpenShift is essential for maintaining secure and compliant applications within your cluster.
 
-In [Day 60](/day60.md), we will look at RBAC in a cluster in more details, such as the accounts used to access a cluster, the service accounts used by container, and how you tie it all together to areas such as consuming SCC and other features of Red Hat OpenShift.
+On [Day 60](/day60.md)](/day60.md), we will look at OpenShift Projects Creation, Configuration and Governance, for example consuming SCC via the project level, and other features of Red Hat OpenShift.
 
 ## Resources
 
@@ -485,3 +485,4 @@ In [Day 60](/day60.md), we will look at RBAC in a cluster in more details, such 
 - [Using the legacy restricted SCC in OCP 4.11+](https://access.redhat.com/articles/6973044)
 - [Role-based access to security context constraints](https://docs.openshift.com/container-platform/4.12/authentication/managing-security-context-constraints.html#role-based-access-to-ssc_configuring-internal-oauth)
   - You can specify SCCs as resources that are handled by RBAC. This allows you to scope access to your SCCs to a certain project or to the entire cluster.
+- Kubernetes.io - [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
