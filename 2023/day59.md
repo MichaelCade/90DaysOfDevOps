@@ -40,7 +40,7 @@ Security context constraints allow an administrator to control:
 
 To learn more details about what each of the out-of-the-box default security context constraint does, see [this official documentation page](https://docs.openshift.com/container-platform/4.12/authentication/managing-security-context-constraints.html#default-sccs_configuring-internal-oauth).
 
-![Red Hat OpenShift - oc get scc](/images/Day58%20-%20OpenShift%20Cluster%20Install/Red%20Hat%20OpenShift%20-%20oc%20get%20scc.jpg)
+![Red Hat OpenShift - oc get scc](/2023/images/day59-Red%20Hat%20OpenShift%20-%20oc%20get%20scc.jpg)
 
 ### Anatomy of a Security Context Constraint configuration
 

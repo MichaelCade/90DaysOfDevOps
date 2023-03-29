@@ -47,7 +47,7 @@ Again, this is not an exhausive list:
 
 You can read a more indepth coverage of the benefits and features of Red Hat OpenShift in [this datasheet](https://www.redhat.com/en/resources/openshift-container-platform-datasheet), or a full breakdown on the [Red Hat Developers page](https://developers.redhat.com/products/openshift/overview)
 
-![OpenShift Overview](images/cl-OpenShift-container-platform-datasheet-f31593_image1.png)
+![OpenShift Overview](images/Day56-OpenShift-container-platform-datasheet.png)
 
 ## Where can I deploy OpenShift?
 

@@ -27,7 +27,7 @@ At a basic level, Red Hat OpenShift if built ontop of the open-source platform, 
 
 If you haven't visited the [#90DaysOfDevOps - Kubernetes section](https://github.com/MichaelCade/90DaysOfDevOps/blob/main/2022.md#kubernetes), then I urge you to do so, before continuing with this section on Red Hat OpenShift. 
 
-![Red Hat OpenShift - Product Architect](images/Red%20Hat%20OpenShift%20-%20Product%20Architecture.png)
+![Red Hat OpenShift - Product Architect](images/Day57%20-%20Red%20Hat%20OpenShift%20Architecture/Red%20Hat%20OpenShift%20-%20Product%20Architecture.png)
 
 Ontop of the Kubernetes platform, Red Hat then delivers it's enterprise sauce sprinkled around to help make your cloud native strategy a sucess:
 
@@ -55,7 +55,7 @@ The below image nicely finishes off this section covering the product and it's c
 - Simplification of creating and managing a cluster
 - Built in tooling for the Application Developer to create and deploy their applications, with workload lifecycle management included, such as ability to monitor and scale those applications.
 
-![Red Hat OpenShift Container Platform Lifecycle](images/OpenShift%20Container%20Platform%20lifecycle.png)
+![Red Hat OpenShift Container Platform Lifecycle](images/Day57%20-%20Red%20Hat%20OpenShift%20Architecture/OpenShift%20Container%20Platform%20lifecycle.png)
 
 For a further deep dive into the control plane architecture, you can read the [official documentation here](https://docs.openshift.com/container-platform/4.12/architecture/control-plane.html).
 
@@ -100,7 +100,7 @@ There is also additional files which may be stored along side the root of the ``
 
 Once you have all of these files, by running the ```openshift-install``` CLI tool, this will create the ignition files for your boostrap, control plane, and compute plane nodes. Returning to the earlier descriptions of RHCOS, these files contain the first boot information to configure the Operation System and start the process of building a consistent Kubernetes cluster with minimal to no interaction.
 
-![OpenShift Container Platform installation targets and dependencies](images/OpenShift%20Container%20Platform%20installation%20targets%20and%20dependencies.png)
+![OpenShift Container Platform installation targets and dependencies](images/Day57%20-%20Red%20Hat%20OpenShift%20Architecture/OpenShift%20Container%20Platform%20installation%20targets%20and%20dependencies.png)
 
 ## Installer provisioned infrastructure (IPI)
 
@@ -134,7 +134,7 @@ You can find out more from this [Red Hat blog post](How to use the OpenShift Ass
 
 A temporary bootstrap machine is provisioned using IPI or UPI, which contains the necessary information to build the OpenShift cluster itself (which becomes the permanent control plane nodes). Once the control plane is online, the control plane will initiate the creation of the compute plane (worker) nodes.
 
-![Creating the bootstrap, control plane, and compute machines](images/Creating%20the%20bootstrap%20control%20plane%20and%20compute%20machines.png)
+![Creating the bootstrap, control plane, and compute machines](images/Day57%20-%20Red%20Hat%20OpenShift%20Architecture/Creating%20the%20bootstrap%20control%20plane%20and%20compute%20machines.png)
 
 Once the control plane is initialised, the bootstrap machine is destroyed. If you are manually provisioning the platform (UPI), then you complete a number of the provisioning steps manually.
 
