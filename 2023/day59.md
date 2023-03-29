@@ -78,7 +78,7 @@ You can learn more about Linux capabilities [here](https://linuxera.org/containe
 
 You can [specify additional capabilities for your pod](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-capabilities-for-a-container) as per the below example. 
 
-````
+````yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -118,7 +118,7 @@ The restricted-v2 SCC:
 
 You can get this SCC configuration by running ```oc get scc restricted-v2 -o yaml```
 
-````
+````yaml
 allowHostDirVolumePlugin: false
 allowHostIPC: false
 allowHostNetwork: false
@@ -198,7 +198,7 @@ The privileged SCC allows:
 
 You can get this SCC configuration by running ```oc get scc privileged -o yaml```
 
-````
+````yaml
 allowHostDirVolumePlugin: true
 allowHostIPC: true
 allowHostNetwork: true
@@ -274,7 +274,7 @@ First, I need to create the namespace to place the components in, ```oc create n
 
 Now I apply the below YAML file ```oc apply -f mongo-test.yaml```
 
-````
+````yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -404,7 +404,7 @@ replicaset.apps/mongo-56cc764fb   1         0         0       3m9s
 
 The provided Kubernetes application includes an initContainer with the following security context:
 
-````
+````yaml
 securityContext:
   runAsUser: 0
 ````
@@ -417,7 +417,7 @@ To resolve this issue, we need to modify the deployment configuration to comply 
 
 1. Create a new custom SCC, and save the below YAML in a file called mongo-custom-scc.yaml:
 
-````
+````yaml
 apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
 metadata:
@@ -439,13 +439,13 @@ supplementalGroups:
 
 2. Apply the custom SCC to your OpenShift cluster:
 
-````
+````sh
 oc apply -f mongo-custom-scc.yaml
 ````
 
 3. Grant the mongo-custom-scc SCC to the service account that the MongoDB deployment is using:
 
-````
+````sh
 oc adm policy add-scc-to-user mongo-custom-scc system:serviceaccount:<namespace>:default
 
 # In my environment, I run:
@@ -473,7 +473,7 @@ If they do need some sort of privilege, then defining tight RBAC and SCC control
 
 In this post, we discussed how the default security context constraints in OpenShift can prevent deployments from running as expected. We provided a solution to the specific issue of running an initContainer as root for a MongoDB application. Understanding and managing SCCs in OpenShift is essential for maintaining secure and compliant applications within your cluster.
 
-On [Day 60](/day60.md)](/day60.md), we will look at RBAC in a cluster in more detail, such as the accounts used to access a cluster, the service accounts used by container, and how you tie it all together to areas such as consuming SCC and other features of Red Hat OpenShift.
+On [Day 60](/day60.md)](/day60.md), we will look at OpenShift Projects and RBAC in a cluster in more detail, such as the accounts used to access a cluster, the service accounts used by container, and how you tie it all together to areas such as consuming SCC via the project level, and other features of Red Hat OpenShift.
 
 ## Resources
 
