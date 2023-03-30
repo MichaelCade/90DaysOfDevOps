@@ -478,7 +478,8 @@ On [Day 60](/day60.md)](/day60.md), we will look at OpenShift Projects Creation,
 ## Resources
 
 - Red Hat OpenShift - [Managing security context constraints](https://docs.openshift.com/container-platform/4.12/authentication/managing-security-context-constraints.html)
-- [Capabilities and Seccomp Profiles on Kubernetes](https://linuxera.org/capabilities-seccomp-kubernetes/)
+- Red Hat Blog - [Managing SCCs in OpenShift](https://cloud.redhat.com/blog/managing-sccs-in-openshift)
+- Linuxera - [Capabilities and Seccomp Profiles on Kubernetes](https://linuxera.org/capabilities-seccomp-kubernetes/)
 - Red Hat OpenShift - [Important OpenShift changes to Pod Security Standards](https://connect.redhat.com/en/blog/important-openshift-changes-pod-security-standards)
   - OCP 4.11 and later - With the introduction of a new built-in admission controller that enforces the [Pod Security Standards](https://kubernetes.io/docs/concepts/security/pod-security-standards/), namespaces and pods can be defined with three different policies: Privileged, Baseline and Restricted. Therefore, pods not configured according to the enforced security standards defined globally, or on the namespace level, will not be admitted and will not run.
 - [Pods fail to create due to "allowPrivilegeEscalation: true" in OpenShift 4.11](https://access.redhat.com/solutions/6976492)
