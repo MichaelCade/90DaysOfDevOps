@@ -33,11 +33,64 @@ In short, when a user logs in to the OpenShift cluster, OpenShift will contact t
 
 - LDAP server URL (e.g., ldap://ldap.example.com:389)
 - Bind DN and password for the LDAP server (e.g., cn=admin,dc=example,dc=com and password)
-  - The password needs to be [base64](https://en.wikipedia.org/wiki/Base64) encoded
+  - This password will be [base64](https://en.wikipedia.org/wiki/Base64) encoded in the secret.
 - User search base and filter (e.g., ou=users,dc=example,dc=com and (uid=%u))
 - Group search base and filter (e.g., ou=groups,dc=example,dc=com and (member=%u))
 
-2. Create a secret that contains the ```bindPassword```, i.e the password of the domain account used to connect to the LDAP server for the user lookups. 
+2. Create a secret that contains the ```bindPassword```, i.e the password of the domain account used to connect to the LDAP server for the user lookups.
+
+````sh
+$ oc create secret generic ldap-secret --from-literal=bindPassword=<secret> -n openshift-config 
+
+# my example
+oc create secret generic ldap-secret --from-literal=bindPassword=VMware1! -n openshift-config
+````
+
+3. Now we apply the configuration that tells the OAuth service about our LDAP server and how to connect to it. I have not performed the extra steps to save the CA cert from the LDAP Server, as I am using the insecure LDAP port 389.
+
+Save the below file as ```ldap-provider.yaml```, change for your user details, and apply to your cluster using ```oc apply -f ldap-provider.yaml```.
+
+````yaml
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  name: cluster
+spec:
+  identityProviders:
+  - name: ldapidp 
+    mappingMethod: claim 
+    type: LDAP
+    ldap:
+      attributes:
+        id: 
+        - name
+        name: 
+        - cn
+        preferredUsername: 
+        - sAMAccountName
+      bindDN: "CN=svc_openshift,OU=Services,OU=Accounts,DC=simon,DC=local" 
+      bindPassword: 
+        name: ldap-secret
+      insecure: true
+      url: "ldap://sc-step-01.simon.local:389/CN=Users,DC=simon,DC=local?sAMAccountName"
+````
+
+Some notes about the above configuration;
+- attributes - A first non-empty attribute is used. At least one attribute is required. If none of the listed attribute have a value, authentication fails. Defined attributes are retrieved as raw, allowing for binary values to be used.
+  - Ensure the values provided appear as attributes in your domain controller, this is usually a cause of failures.
+- bindDN - DN to use to bind during the search phase. Must be set if bindPassword is defined.
+- insecure - When true, no TLS connection is made to the server. When false, ldaps:// URLs connect using TLS, and ldap:// URLs are upgraded to TLS.
+- url - ensure you add the port, and that your search OU/CN path is correct, as well as the [search filter attribute](https://docs.openshift.com/container-platform/4.12/authentication/identity_providers/configuring-ldap-identity-provider.html#identity-provider-about-ldap_configuring-ldap-identity-provider), in this example it is ```sAMAccountName```
+
+> If a CR does not exist, oc apply creates a new CR and might trigger the following warning: Warning: oc apply should be used on resources created by either oc create --save-config or oc apply. In this case you can safely ignore this warning.
+
+
+4. Now you can login to the OpenShift cluster as an LDAP user either via the ```oc login``` CLI command, or via the Console UI. You can logout with ```oc logout```
+
+![oc login](/2023/images/Day61%20-%20Authentication%20-%20Role-Based%20Access%20Control%20and%20Auditing%20in%20Red%20Hat%20OpenShift/oc%20login.jpg)
+
+Final note on this subject which caught me out. Once you log out, you will remain in the ```oc context``` of that user you've logged in, and if you view your ```KUBECONFIG``` file, you will see that user's context has now been added. So for me, I wanted to get back to using my kubeadmin account, but I had to run ```oc config use-context admin``` command. 
+
 ## What is Role-Based Access Control (RBAC)?
 
 RBAC is a method of managing permissions by assigning roles to users, groups, or service accounts. In OpenShift, roles are sets of rules that define the actions (verbs) allowed on specific resources (API objects). By granting roles to users or groups, you control their access to cluster resources based on the principle of least privilege, ensuring that users have only the necessary permissions to perform their tasks. Here, Red Hat OpenShift is just consuming the native features of Kubernetes, concerning RBAC. However, it's important to understand this area, as it then features in the enterprise features OpenShift brings, such as Projects and pipelines to name but a few.
