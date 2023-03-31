@@ -28,7 +28,7 @@ In this post, we'll be focusing on the Compliance Operator, which empowers the p
 
 The Compliance Operator provides the ability to describe the required compliance state of a cluster and report overviews of gaps and ways to remediate them. The Compliance Operator assesses compliance of both the Kubernetes API resources of OpenShift Container Platform, as well as the nodes running the cluster. The Compliance Operator uses OpenSCAP, a NIST-certified tool, to scan and enforce security policies provided by the content. You can view details of the out-of-the-box compliance profiles that are [provided here](https://docs.openshift.com/container-platform/4.12/security/compliance_operator/compliance-operator-supported-profiles.html).
 
-## Installing the Compliance Operator
+### Installing the Compliance Operator
 
 1. We need to create a specially managed OpenShift namespace. Save the below content as ```openshift-compliance-namespace.yaml``` and apply using the ```oc apply -f openshift-compliance-namespace.yaml``` command.
 
@@ -77,7 +77,201 @@ spec:
 $ oc get csv -n openshift-compliance
 $ oc get deploy -n openshift-compliance
 ````
+### Reviewing the profiles and the rules
 
+We can see the installed profiles by running the below command, each profile has the product name that it applies to added as a prefix to the profile’s name. ocp4-e8 applies the Essential 8 benchmark to the OpenShift Container Platform product, while rhcos4-e8 applies the Essential 8 benchmark to the Red Hat Enterprise Linux CoreOS (RHCOS) product.
+
+````sh
+$ oc get -n openshift-compliance profiles.compliance
+NAME                 AGE
+ocp4-cis             107m
+ocp4-cis-node        107m
+ocp4-e8              107m
+ocp4-high            107m
+ocp4-high-node       107m
+ocp4-moderate        107m
+ocp4-moderate-node   107m
+ocp4-nerc-cip        107m
+ocp4-nerc-cip-node   107m
+ocp4-pci-dss         107m
+ocp4-pci-dss-node    107m
+rhcos4-e8            107m
+rhcos4-high          107m
+rhcos4-moderate      107m
+rhcos4-nerc-cip      107m
+````
+
+We can view the details of a profile by running:
+
+````sh
+$ oc get -n openshift-compliance -oyaml profiles.compliance ocp4-cis
+````
+````yaml
+apiVersion: compliance.openshift.io/v1alpha1
+description: This profile defines a baseline that aligns to the Center for Internet
+  Security® Red Hat OpenShift Container Platform 4 Benchmark™, V1.1. This profile
+  includes Center for Internet Security® Red Hat OpenShift Container Platform 4 CIS
+  Benchmarks™ content. Note that this part of the profile is meant to run on the Platform
+  that Red Hat OpenShift Container Platform 4 runs on top of. This profile is applicable
+  to OpenShift versions 4.6 and greater.
+id: xccdf_org.ssgproject.content_profile_cis
+kind: Profile
+metadata:
+  annotations:
+    compliance.openshift.io/image-digest: pb-ocp477wpm
+    compliance.openshift.io/product: redhat_openshift_container_platform_4.1
+    compliance.openshift.io/product-type: Platform
+  creationTimestamp: "2023-03-31T09:09:52Z"
+  generation: 1
+  labels:
+    compliance.openshift.io/profile-bundle: ocp4
+  name: ocp4-cis
+  namespace: openshift-compliance
+  ownerReferences:
+  - apiVersion: compliance.openshift.io/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ProfileBundle
+    name: ocp4
+    uid: 19c2e4a5-094f-416a-a06b-eb0598e39618
+  resourceVersion: "12971302"
+  uid: 6dc3cca4-5649-43ae-8c46-614f82fd6744
+rules:
+- ocp4-accounts-restrict-service-account-tokens
+- ocp4-accounts-unique-service-account
+- ocp4-api-server-admission-control-plugin-alwaysadmit
+- ocp4-api-server-admission-control-plugin-alwayspullimages
+- ocp4-api-server-admission-control-plugin-namespacelifecycle
+- ocp4-api-server-admission-control-plugin-noderestriction
+- ocp4-api-server-admission-control-plugin-scc
+- ocp4-api-server-admission-control-plugin-securitycontextdeny
+- ocp4-api-server-admission-control-plugin-service-account
+- ocp4-api-server-anonymous-auth
+- ocp4-api-server-api-priority-flowschema-catch-all
+- ocp4-api-server-api-priority-gate-enabled
+- ocp4-api-server-audit-log-maxbackup
+- ocp4-api-server-audit-log-maxsize
+- ocp4-api-server-audit-log-path
+- ocp4-api-server-auth-mode-no-aa
+- ocp4-api-server-auth-mode-node
+- ocp4-api-server-auth-mode-rbac
+- ocp4-api-server-basic-auth
+- ocp4-api-server-bind-address
+...
+- ocp4-scc-limit-privileged-containers
+- ocp4-scc-limit-process-id-namespace
+- ocp4-scc-limit-root-containers
+- ocp4-scheduler-no-bind-address
+- ocp4-secrets-consider-external-storage
+- ocp4-secrets-no-environment-variables
+- ocp4-version-detect-in-hypershift
+- ocp4-version-detect-in-ocp
+title: CIS Red Hat OpenShift Container Platform 4 Benchmark
+````
+
+
+
+### Running a Scan
+
+Now that we have the operator installed, we have two key configurations:
+
+- ScanSettings - This is the Schema for the scansettings API, and therefore you will provide configurations for running the scan, such as where it stores data, configurations for the container that is run on the platform to perform the scan, which components are subject to be scanned, and schedules to run the scan.
+- ScanSettingsBinding - This is the Schema for the scansettingbindings API. This is used to bind the ScanSettings configuration to the compliance profiles you want to run against your chosen components.
+
+There is a default ScanSettings called ```default``` supplied when you install the Compliance Operator, which you can run against your system.
+
+````sh
+$ oc describe scansettings default -n openshift-compliance
+
+Name:                  default
+Namespace:             openshift-compliance
+Labels:                <none>
+Annotations:           <none>
+API Version:           compliance.openshift.io/v1alpha1
+Kind:                  ScanSetting
+Max Retry On Timeout:  3
+Metadata:
+  Creation Timestamp:  2023-03-31T09:09:33Z
+  Generation:          1
+  Resource Version:  12971055
+  UID:               78945c1e-c323-40d8-87d9-c571275d58e3
+Raw Result Storage:
+  Node Selector:
+    node-role.kubernetes.io/master:  
+  Pv Access Modes:
+    ReadWriteOnce
+  Rotation:  3
+  Size:      1Gi
+  Tolerations:
+    Effect:              NoSchedule
+    Key:                 node-role.kubernetes.io/master
+    Operator:            Exists
+    Effect:              NoExecute
+    Key:                 node.kubernetes.io/not-ready
+    Operator:            Exists
+    Toleration Seconds:  300
+    Effect:              NoExecute
+    Key:                 node.kubernetes.io/unreachable
+    Operator:            Exists
+    Toleration Seconds:  300
+    Effect:              NoSchedule
+    Key:                 node.kubernetes.io/memory-pressure
+    Operator:            Exists
+Roles:
+  master
+  worker
+Scan Tolerations:
+  Operator:           Exists
+Schedule:             0 1 * * *
+Show Not Applicable:  false
+Strict Node Scan:     true
+Timeout:              30m
+Events:               <none>
+````
+You can read more details about the above [configuration here](https://docs.openshift.com/container-platform/4.12/security/compliance_operator/compliance-scans.html#running-compliance-scans_compliance-operator-scans), however, most of the lines are self-explanatory.
+
+There is a second provided ScanSettings called ```default-auto-apply```, which follows the same premise as the above, however` will auto-remediate any findings as part of the scan.
+
+Now we need to create a ScanSettingBinding to the CIS benchmark profiles. Create a YAML file using the below content called ````compliance-scansettingbinding.yaml```` and apply with ````oc apply -f compliance-scansettingbinding.yaml````.
+
+````yaml
+apiVersion: compliance.openshift.io/v1alpha1
+kind: ScanSettingBinding
+metadata:
+  name: cis-compliance
+  namespace: openshift-compliance
+profiles:
+  - name: ocp4-cis-node
+    kind: Profile
+    apiGroup: compliance.openshift.io/v1alpha1
+  - name: ocp4-cis
+    kind: Profile
+    apiGroup: compliance.openshift.io/v1alpha1
+settingsRef:
+  name: default
+  kind: ScanSetting
+  apiGroup: compliance.openshift.io/v1alpha1
+````
+
+At this stage of the workflow, the Compliance Operator reconciles the ScanSettingBinding object, taking into account both the ```Binding``` and ```Bound``` settings. As a result, it generates a ComplianceSuite object along with the corresponding ComplianceScan objects to streamline the compliance evaluation process.
+
+
+````sh
+$ oc get compliancescan -n openshift-compliance
+NAME                   PHASE         RESULT
+ocp4-cis               AGGREGATING   NOT-AVAILABLE
+ocp4-cis-node-master   AGGREGATING   NOT-AVAILABLE
+ocp4-cis-node-worker   AGGREGATING   NOT-AVAILABLE
+````
+The scans will now work through the scanning phases and finish on the ```DONE``` phase once completed. At this point, you are probably going to find that the result is ```NON-COMPLIANT```. Now we can review the scan results and apply any necessary remediations to bring the cluster into compliance with the profile.
+
+````sh
+$ oc get compliancescan -n openshift-compliance
+NAME                   PHASE   RESULT
+ocp4-cis               DONE    NON-COMPLIANT
+ocp4-cis-node-master   DONE    NON-COMPLIANT
+ocp4-cis-node-worker   DONE    NON-COMPLIANT
+````
 
 # Red Hat Quay Container Security Operator
 
