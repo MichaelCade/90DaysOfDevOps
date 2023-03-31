@@ -106,6 +106,7 @@ We can view the details of a profile by running:
 ````sh
 $ oc get -n openshift-compliance -oyaml profiles.compliance ocp4-cis
 ````
+
 ````yaml
 apiVersion: compliance.openshift.io/v1alpha1
 description: This profile defines a baseline that aligns to the Center for Internet
@@ -169,7 +170,76 @@ rules:
 title: CIS Red Hat OpenShift Container Platform 4 Benchmark
 ````
 
+To read the descriptions of one of the rules that form the policy:
 
+````sh
+$ oc get -n openshift-compliance rules ocp4-api-server-anonymous-auth -oyaml
+````
+
+````yaml
+apiVersion: compliance.openshift.io/v1alpha1
+checkType: Platform
+description: |-
+  By default, anonymous access to the OpenShift API is enabled, but at the same time, all requests must be authorized. If no authentication mechanism is used, the request is assigned the system:anonymous virtual user and the system:unauthenticated virtual group. This allows the authorization layer to determin which requests, if any, is an anonymous user authorized to make. To verify the authorization rules for anonymous requests run the following:
+
+  $ oc describe clusterrolebindings
+
+  and inspect the bidnings of the system:anonymous virtual user and the system:unauthenticated virtual group. To test that an anonymous request is authorized to access the readyz endpoint, run:
+
+  $ oc get --as="system:anonymous" --raw='/readyz?verbose'
+
+  In contrast, a request to list all projects should not be authorized:
+
+  $ oc get --as="system:anonymous" projects
+id: xccdf_org.ssgproject.content_rule_api_server_anonymous_auth
+instructions: |-
+  Run the following command to view the authorization rules for anonymous requests:
+  $ oc describe clusterrolebindings
+  Make sure that there exists at least one clusterrolebinding that binds
+  either the system:unauthenticated group or the system:anonymous
+  user.
+  To test that an anonymous request is authorized to access the readyz
+  endpoint, run:
+  $ oc get --as="system:anonymous" --raw='/readyz?verbose'
+  In contrast, a request to list all projects should not be authorized:
+  $ oc get --as="system:anonymous" projects
+kind: Rule
+metadata:
+  annotations:
+    compliance.openshift.io/image-digest: pb-ocp477wpm
+    compliance.openshift.io/rule: api-server-anonymous-auth
+    control.compliance.openshift.io/CIS-OCP: 1.2.1
+    control.compliance.openshift.io/NERC-CIP: CIP-003-8 R6;CIP-004-6 R3;CIP-007-3
+      R6.1
+    control.compliance.openshift.io/NIST-800-53: CM-6;CM-6(1)
+    control.compliance.openshift.io/PCI-DSS: Req-2.2
+    policies.open-cluster-management.io/controls: 1.2.1,CIP-003-8 R6,CIP-004-6 R3,CIP-007-3
+      R6.1,CM-6,CM-6(1),Req-2.2
+    policies.open-cluster-management.io/standards: CIS-OCP,NERC-CIP,NIST-800-53,PCI-DSS
+  creationTimestamp: "2023-03-31T09:09:53Z"
+  generation: 1
+  labels:
+    compliance.openshift.io/profile-bundle: ocp4
+  name: ocp4-api-server-anonymous-auth
+  namespace: openshift-compliance
+  ownerReferences:
+  - apiVersion: compliance.openshift.io/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ProfileBundle
+    name: ocp4
+    uid: 19c2e4a5-094f-416a-a06b-eb0598e39618
+  resourceVersion: "12971338"
+  uid: 12db5786-4ff6-4e80-90e0-2b370541f6e1
+rationale: When enabled, requests that are not rejected by other configured authentication
+  methods are treated as anonymous requests. These requests are then served by the
+  API server. If you are using RBAC authorization, it is generally considered reasonable
+  to allow anonymous access to the API Server for health checks and discovery purposes,
+  and hence this recommendation is not scored. However, you should consider whether
+  anonymous discovery is an acceptable risk for your purposes.
+severity: medium
+title: Ensure that anonymous requests to the API Server are authorized
+````
 
 ### Running a Scan
 
@@ -273,6 +343,182 @@ ocp4-cis-node-master   DONE    NON-COMPLIANT
 ocp4-cis-node-worker   DONE    NON-COMPLIANT
 ````
 
+Let's look at the first scan in more detail, as we also want to capture the label attached, so we can get the full results to view.
+
+````sh
+$ oc get compliancescan -n openshift-compliance ocp4-cis -o yaml
+````
+
+````yaml
+oc get compliancescan -n openshift-compliance ocp4-cis -o yaml
+apiVersion: compliance.openshift.io/v1alpha1
+kind: ComplianceScan
+metadata:
+  creationTimestamp: "2023-03-31T10:49:41Z"
+  finalizers:
+  - scan.finalizers.compliance.openshift.io
+  generation: 1
+  labels:
+    compliance.openshift.io/suite: cis-compliance
+  name: ocp4-cis
+  namespace: openshift-compliance
+  ownerReferences:
+  - apiVersion: compliance.openshift.io/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ComplianceSuite
+    name: cis-compliance
+    uid: c40db43f-0635-4731-b537-5ad3fc08cc06
+  resourceVersion: "13035410"
+  uid: 9d5b10b8-f67c-44f3-b13d-0765cb037091
+spec:
+  content: ssg-ocp4-ds.xml
+  contentImage: registry.redhat.io/compliance/openshift-compliance-content-rhel8@sha256:c4bf5b2b20ff538adbc430b7ee993fbd7c291203a9810534005148304e3b169b
+  maxRetryOnTimeout: 3
+  profile: xccdf_org.ssgproject.content_profile_cis
+  rawResultStorage:
+    nodeSelector:
+      node-role.kubernetes.io/master: ""
+    pvAccessModes:
+    - ReadWriteOnce
+    rotation: 3
+    size: 1Gi
+    tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+  scanTolerations:
+  - operator: Exists
+  scanType: Platform
+  showNotApplicable: false
+  strictNodeScan: true
+  timeout: 30m
+status:
+  conditions:
+  - lastTransitionTime: "2023-03-31T10:51:20Z"
+    message: Compliance scan run is done running the scans
+    reason: NotRunning
+    status: "False"
+    type: Processing
+  - lastTransitionTime: "2023-03-31T10:51:20Z"
+    message: Compliance scan run is done and has results
+    reason: Done
+    status: "True"
+    type: Ready
+  phase: DONE
+  remainingRetries: 3
+  result: NON-COMPLIANT
+  resultsStorage:
+    name: ocp4-cis
+    namespace: openshift-compliance
+  warnings: |-
+    could not fetch /apis/flowcontrol.apiserver.k8s.io/v1alpha1/flowschemas/catch-all: the server could not find the requested resource
+    could not fetch /apis/logging.openshift.io/v1/namespaces/openshift-logging/clusterlogforwarders/instance: the server could not find the requested resource
+    could not fetch /apis/apps/v1/namespaces/openshift-sdn/daemonsets/sdn: daemonsets.apps "sdn" not found
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch "/api/v1/nodes/NODE_NAME/proxy/configz": the server could not find the requested resource
+    could not fetch /apis/hypershift.openshift.io/v1beta1/namespaces/clusters/hostedclusters/None: the server could not find the requested resource
+    Kubelet configs for 90days-ocp-72ptq-master-1 are not consistent with role master, Diff: [{"op":"replace","path":"/address","value":"192.168.200.183"}] of KubeletConfigs for master role will not be saved.
+    Kubelet configs for 90days-ocp-72ptq-worker-x7v4j are not consistent with role worker, Diff: [{"op":"replace","path":"/address","value":"192.168.200.194"}] of KubeletConfigs for worker role will not be saved.
+    Kubelet configs for 90days-ocp-72ptq-master-2 are not consistent with role master, Diff: [{"op":"add","path":"/address","value":"192.168.200.181"}] of KubeletConfigs for master role will not be saved.
+    Kubelet configs for 90days-ocp-72ptq-master-0 are not consistent with role control-plane, Diff: [{"op":"replace","path":"/address","value":"192.168.200.185"}] of KubeletConfigs for control-plane role will not be saved.
+    Kubelet configs for 90days-ocp-72ptq-master-2 are not consistent with role control-plane, Diff: [{"op":"add","path":"/address","value":"192.168.200.181"}] of KubeletConfigs for control-plane role will not be saved.
+    Kubelet configs for 90days-ocp-72ptq-worker-5cgp8 are not consistent with role worker, Diff: [{"op":"add","path":"/address","value":"192.168.200.187"}] of KubeletConfigs for worker role will not be saved.
+````
+
+In the output, we can see the warnings from the results straight away. To view the full results we can run the command below using the label from the above output. Alternatively, I can list all failed results across the conducted scans by running the command:
+
+````sh
+$ oc get compliancecheckresults -n openshift-compliance -l 'compliance.openshift.io/check-status=FAIL'
+NAME                                                          STATUS   SEVERITY
+ocp4-cis-api-server-encryption-provider-cipher                FAIL     medium
+ocp4-cis-api-server-encryption-provider-config                FAIL     medium
+ocp4-cis-audit-log-forwarding-enabled                         FAIL     medium
+ocp4-cis-configure-network-policies-namespaces                FAIL     high
+ocp4-cis-kubeadmin-removed                                    FAIL     medium
+ocp4-cis-node-master-kubelet-enable-protect-kernel-defaults   FAIL     medium
+ocp4-cis-node-master-kubelet-enable-protect-kernel-sysctl     FAIL     medium
+ocp4-cis-node-worker-kubelet-enable-protect-kernel-defaults   FAIL     medium
+ocp4-cis-node-worker-kubelet-enable-protect-kernel-sysctl     FAIL     medium
+````
+
+We can look at the individual ```ComplianceRemediation``` in more detail with the command;
+
+````sh
+ oc get compliancecheckresults -n openshift-compliance ocp4-cis-audit-log-forwarding-enabled  -o yaml
+````
+
+Which provides us the following output:
+
+````yaml
+apiVersion: compliance.openshift.io/v1alpha1
+description: |-
+  Ensure that Audit Log Forwarding Is Enabled
+  OpenShift audit works at the API server level, logging all requests coming to the server. Audit is on by default and the best practice is to ship audit logs off the cluster for retention. The cluster-logging-operator is able to do this with the
+
+  ClusterLogForwarders
+
+  resource. The forementioned resource can be configured to logs to different third party systems. For more information on this, please reference the official documentation: https://docs.openshift.com/container-platform/4.6/logging/cluster-logging-external.html
+id: xccdf_org.ssgproject.content_rule_audit_log_forwarding_enabled
+instructions: |-
+  Run the following command:
+  oc get clusterlogforwarders instance -n openshift-logging -ojson | jq -r '.spec.pipelines[].inputRefs | contains(["audit"])'
+  The output should return true.
+kind: ComplianceCheckResult
+metadata:
+  annotations:
+    compliance.openshift.io/rule: audit-log-forwarding-enabled
+  creationTimestamp: "2023-03-31T10:51:02Z"
+  generation: 1
+  labels:
+    compliance.openshift.io/check-severity: medium
+    compliance.openshift.io/check-status: FAIL
+    compliance.openshift.io/scan-name: ocp4-cis
+    compliance.openshift.io/suite: cis-compliance
+  name: ocp4-cis-audit-log-forwarding-enabled
+  namespace: openshift-compliance
+  ownerReferences:
+  - apiVersion: compliance.openshift.io/v1alpha1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ComplianceScan
+    name: ocp4-cis
+    uid: 9d5b10b8-f67c-44f3-b13d-0765cb037091
+  resourceVersion: "13034914"
+  uid: c5b7342d-af35-4944-86bd-8a4f907acccc
+rationale: Retaining logs ensures the ability to go back in time to investigate or
+  correlate any events. Offloading audit logs from the cluster ensures that an attacker
+  that has access to the cluster will not be able to tamper with the logs because
+  of the logs being stored off-site.
+severity: medium
+status: FAIL
+````
+
+This particular remediation has no automatic remediation, but you can see [another example here](https://docs.openshift.com/container-platform/4.12/security/compliance_operator/compliance-operator-remediation.html#compliance-review_compliance-remediation), whereby a ```MachineConfig``` resource will be applied by the remediation. Applying remediation can take different forms, depending on what the remediation is. Therefore I won't dive into this detail today, I think we've covered enough to understand how to run and view compliance checks against our platform. You can read more about [remediations here](https://docs.openshift.com/container-platform/4.12/security/compliance_operator/compliance-operator-remediation.html#compliance-applying_compliance-remediation). The final point I wanted to highlight on this topic, is the ```oc-compliance``` plugin, which extends the functionality of the ```oc``` CLI tool, you can few the [details and how to use it here](https://docs.openshift.com/container-platform/4.12/security/compliance_operator/oc-compliance-plug-in-using.html).
+
 # Red Hat Quay Container Security Operator
 
 ## Vulnerability Scanning Overview
@@ -289,9 +535,164 @@ OpenShift provides several features and tools to facilitate vulnerability scanni
 
 - Third-party integrations: OpenShift can be easily integrated with external vulnerability scanning tools and platforms, such as Aqua Security, Sysdig, or Twistlock. These tools can be configured to automatically scan container images stored in the OpenShift registry and provide detailed reports on identified vulnerabilities and suggested remediation steps.
 
-- OpenShift Operators: OpenShift supports the use of Operators, which are automated software extensions that manage applications and their components. Operators can be used to deploy and manage vulnerability scanning tools within the OpenShift cluster, ensuring a consistent and automated scanning process. Red Hat provides the ```Red Hat Quay Container Security Operator```, however you can also implement third party scanners such as [Trivy](https://github.com/aquasecurity/trivy) from [Aqua Security](https://aquasec.com/).
+- OpenShift Operators: OpenShift supports the use of Operators, which are automated software extensions that manage applications and their components. Operators can be used to deploy and manage vulnerability scanning tools within the OpenShift cluster, ensuring a consistent and automated scanning process. Red Hat provides the ```Red Hat Quay Container Security Operator```, however, you can also implement third-party scanners such as [Trivy](https://github.com/aquasecurity/trivy) from [Aqua Security](https://aquasec.com/).
 
 By leveraging these features and tools, Red Hat OpenShift enables organizations to perform comprehensive vulnerability scanning on container images, reducing the risk of security breaches and enhancing the overall security of the platform.
+
+Focusing on the ```Red Hat Quay Container Security Operator```, this provides the following:
+
+- Watches containers associated with pods on all or specified namespaces
+
+- Queries the container registry where the containers came from for vulnerability information, provided an image’s registry is running image scanning (such as Quay.io or a Red Hat Quay registry with Clair scanning)
+
+- Exposes vulnerabilities via the ImageManifestVuln object in the Kubernetes API
+
+## Installing the Red Hat Quay Container Security Operator
+
+This time I'm going to provide instructions on how to perform these steps in the Red Hat Console interface, rather than CLI.
+
+1. In the administrator view within the console, navigate to Operators > OperatorHub and search for "Red Hat Quay Container Security Operator".
+2. Select the tile, and click to install.
+3. Confirm the settings
+    -  All namespaces and automatic approval strategy are selected, by default.
+4. Select Install. The Container Security Operator appears after a few moments on the Installed Operators screen.
+
+When you now browse to the homepage of the Red Hat OpenShit Console, you will see an "Image vulnerability" component on the status tile, which you can select to see high-level information about your estate.
+
+![Red Hat OpenShift Console - Image vulnerability](/2023/images/Day62%20-%20Red%20Hat%20Quay%20Container%20Security%20Operator/Red%20Hat%20Console%20-%20Image%20vulnerability.jpg)
+
+You can click on the circle graph or the namespaces to see more details which takes you to the navigation page of Adminstration (1) > Image Vulnerabilities (2).
+
+Now you can see a list of the vulnerabilities and you can change the project view for all projects or a specific one to curate this list.
+
+![Red Hat OpenShift Console - Administration - Image vulnerabilities](/2023/images/Day62%20-%20Red%20Hat%20Quay%20Container%20Security%20Operator/Red%20Hat%20OpenShift%20Console%20-%20Administration%20-%20Image%20vulnerabilities.jpg)
+
+Clicking the image name (3) will show further manifest details via the OpenShift console, including which pods are affected. Or you can click the Manifest details on the right-hand side (4) which will take you to the Quay Security Scanner report hosted on [Quay.io](https://Quay.io).
+
+Below shows the Image manifest details including each vulnerability found with that image, and links to appropriate documentation, such as CVE information held on [access.redhat.com](https://access.redhat.com
+)
+![Red Hat OpenShift Console - Administration - Image vulnerabilities - Manifest details](/2023/images/Day62%20-%20Red%20Hat%20Quay%20Container%20Security%20Operator/Red%20Hat%20OpenShift%20Console%20-%20Administration%20-%20Image%20vulnerabilities%20-%20Manifest%20details.jpg)
+
+Below is the ```affected pods``` tab view on the Image manifests page. 
+
+![Red Hat OpenShift Console - Administration - Image vulnerabilities - Manifest details - Affected pods](/2023/images/Day62%20-%20Red%20Hat%20Quay%20Container%20Security%20Operator/Red%20Hat%20OpenShift%20Console%20-%20Administration%20-%20Image%20vulnerabilities%20-%20Manifest%20details%20-%20Affected%20pods.jpg)
+
+And finally the Quay Security Scanner page for one of the images shown in the report. This was for my pacman application, you can see the Quay.io report yourself [here](https://quay.io/repository/ifont/pacman-nodejs-app/manifest/sha256:196ae9a1a33a2d32046a46739779ca273667f1d4f231f8a721e8064c3509405e?tab=vulnerabilities)(free sign up account required).
+
+![Red Hat OpenShift Console - Administration - Image vulnerabilities - Quay Manifest](/2023/images/Day62%20-%20Red%20Hat%20Quay%20Container%20Security%20Operator/Red%20Hat%20OpenShift%20Console%20-%20Administration%20-%20Image%20vulnerabilities%20-%20Quay%20Manifest.jpg)
+
+Of course we can also see information in the command line too, to see all vulnerabilities found, use the command:
+
+```sh
+oc get vuln --all-namespaces
+NAMESPACE                                          NAME                                                                      AGE
+openshift-apiserver-operator                       sha256.01974e4c0e0d112e09bee8fe2625d565d3d62fa42013b38d7ce43d2d40f6057a   20h
+openshift-apiserver                                sha256.13640b919950fc648219c528ee7ed30262bae856566fbd6c4cb5e15ffd457d6f   20h
+openshift-apiserver                                sha256.8829aefa24dd606d2fe3ff86b97858c07acedae5f5eb3f044c20395762e7c02b   20h
+openshift-authentication-operator                  sha256.31b617cec5c22e187cc22da606fc6998ea3529b1b6e8d80d1799c3dc9705997e   20h
+openshift-authentication                           sha256.41e06255fc823c0082a74466b69ccfb672947b7075ea43a10e729c5f39314d00   20h
+openshift-cloud-controller-manager-operator        sha256.a7856b6371fc4a7ade8a678daca149db6c6a55ee7137d9e308721d2d3bebf364   20h
+openshift-cloud-credential-operator                sha256.1986315effe0f3ee415e86df3a87765268ed1da405c7a297c278e1d7030286a4   20h
+...
+openshift-vsphere-infra                            sha256.ddf81e535cf7a6b2775f3db690ec1e6eaa1c7427a0f9b98ce120d8ad06520440   20h
+test-app                                           sha256.196ae9a1a33a2d32046a46739779ca273667f1d4f231f8a721e8064c3509405e   20h
+```
+
+You can inspect the details of a specific vulnerability by running the command:
+
+```sh
+oc describe vuln -n {namespace} {sha ID of vuln}
+
+# Example
+
+oc describe vuln -n openshift-apiserver-operator sha256.01974e4c0e0d112e09bee8fe2625d565d3d62fa42013b38d7ce43d2d40f6057a
+```
+
+Example output:
+
+```yaml
+Name:         sha256.01974e4c0e0d112e09bee8fe2625d565d3d62fa42013b38d7ce43d2d40f6057a
+Namespace:    openshift-apiserver-operator
+Labels:       openshift-apiserver-operator/openshift-apiserver-operator-7bd84bd596-pgpct=true
+Annotations:  <none>
+API Version:  secscan.quay.redhat.com/v1alpha1
+Kind:         ImageManifestVuln
+Metadata:
+  Creation Timestamp:  2023-03-30T19:01:40Z
+  Generation:          17
+  Resource Version:  13206497
+  UID:               dbec02e5-e4c6-412f-b561-757237844d43
+Spec:
+  Features:
+    Name:     pip
+    Version:  9.0.3
+    Vulnerabilities:
+      Description:     Pip 21.1 updates its dependency 'urllib3' to v1.26.4 due to security issues.
+      Metadata:        {"UpdatedBy": "pyupio", "RepoName": "pypi", "RepoLink": "https://pypi.org/simple", "DistroName": "", "DistroVersion": "", "NVD": {"CVSSv3": {"Vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N", "Score": 6.5}}}
+      Name:            pyup.io-40291 (CVE-2021-28363)
+      Namespace Name:  pyupio
+      Severity:        Medium
+      Description:     A flaw was found in python-pip in the way it handled Unicode separators in git references. A remote attacker could possibly use this issue to install a different revision on a repository. The highest threat from this vulnerability is to data integrity. This is fixed in python-pip version 21.1.
+      Metadata:        {"UpdatedBy": "pyupio", "RepoName": "pypi", "RepoLink": "https://pypi.org/simple", "DistroName": "", "DistroVersion": "", "NVD": {"CVSSv3": {"Vectors": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:N/I:H/A:N", "Score": 5.7}}}
+      Name:            pyup.io-42559 (CVE-2021-3572)
+      Namespace Name:  pyupio
+      Severity:        Medium
+      Description:     Pip before 19.2 allows Directory Traversal when a URL is given in an install command, because a Content-Disposition header can have ../ in a filename, as demonstrated by overwriting the /root/.ssh/authorized_keys file. This occurs in _download_http_url in _internal/download.py.
+      Metadata:        {"UpdatedBy": "pyupio", "RepoName": "pypi", "RepoLink": "https://pypi.org/simple", "DistroName": "", "DistroVersion": "", "NVD": {"CVSSv3": {"Vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N", "Score": 7.5}}}
+      Name:            pyup.io-38765 (CVE-2019-20916)
+      Namespace Name:  pyupio
+      Severity:        High
+    Name:              openssl-libs
+    Version:           1:1.1.1k-7.el8_6
+    Vulnerabilities:
+      Description:  OpenSSL is a toolkit that implements the Secure Sockets Layer (SSL) and Transport Layer Security (TLS) protocols, as well as a full-strength general-purpose cryptography library.
+
+Security Fix(es):
+
+* openssl: X.400 address type confusion in X.509 GeneralName (CVE-2023-0286)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.
+      Fixedby:         1:1.1.1k-8.el8_6
+      Link:            https://access.redhat.com/errata/RHSA-2023:1441 https://access.redhat.com/security/cve/CVE-2023-0286
+      Metadata:        {"UpdatedBy": "RHEL8-rhel-8.6-eus", "RepoName": "cpe:/o:redhat:rhel_eus:8.6::baseos", "RepoLink": null, "DistroName": "Red Hat Enterprise Linux Server", "DistroVersion": "8", "NVD": {"CVSSv3": {"Vectors": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:H", "Score": 7.4}}}
+      Name:            RHSA-2023:1441: openssl security update (Important)
+      Namespace Name:  RHEL8-rhel-8.6-eus
+      Severity:        High
+    Name:              urllib3
+    Version:           1.24.2
+    Vulnerabilities:
+      Description:     Urllib3 1.26.5 includes a fix for CVE-2021-33503: When provided with a URL containing many @ characters in the authority component, the authority regular expression exhibits catastrophic backtracking, causing a denial of service if a URL were passed as a parameter or redirected to via an HTTP redirect.
+      Metadata:        {"UpdatedBy": "pyupio", "RepoName": "pypi", "RepoLink": "https://pypi.org/simple", "DistroName": "", "DistroVersion": "", "NVD": {"CVSSv3": {"Vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H", "Score": 7.5}}}
+      Name:            pyup.io-43975 (CVE-2021-33503)
+      Namespace Name:  pyupio
+      Severity:        High
+      Description:     urllib3 before 1.25.9 allows CRLF injection if the attacker controls the HTTP request method, as demonstrated by inserting CR and LF control characters in the first argument of putrequest(). NOTE: this is similar to CVE-2020-26116.
+      Metadata:        {"UpdatedBy": "pyupio", "RepoName": "pypi", "RepoLink": "https://pypi.org/simple", "DistroName": "", "DistroVersion": "", "NVD": {"CVSSv3": {"Vectors": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N", "Score": 7.2}}}
+      Name:            pyup.io-38834 (CVE-2020-26137)
+      Namespace Name:  pyupio
+      Severity:        High
+    Name:              setuptools
+    Version:           39.2.0
+    Vulnerabilities:
+      Description:     Python Packaging Authority (PyPA) setuptools before 65.5.1 allows remote attackers to cause a denial of service via HTML in a crafted package or custom PackageIndex page. There is a Regular Expression Denial of Service (ReDoS) in package_index.py.
+      Metadata:        {"UpdatedBy": "pyupio", "RepoName": "pypi", "RepoLink": "https://pypi.org/simple", "DistroName": "", "DistroVersion": "", "NVD": {"CVSSv3": {"Vectors": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H", "Score": 5.9}}}
+      Name:            pyup.io-52495 (CVE-2022-40897)
+      Namespace Name:  pyupio
+      Severity:        Medium
+  Image:               quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256
+  Manifest:            sha256:01974e4c0e0d112e09bee8fe2625d565d3d62fa42013b38d7ce43d2d40f6057a
+Status:
+  Affected Pods:
+    openshift-apiserver-operator/openshift-apiserver-operator-7bd84bd596-pgpct:
+      cri-o://dd4fcb700a95c041d19bf7829d3e07516ccf2a36522027f920d76ed0aa57f84c
+  Fixable Count:     1
+  High Count:        4
+  Highest Severity:  High
+  Last Update:       2023-03-31 15:31:32.853602342 +0000 UTC
+  Medium Count:      3
+Events:              <none>
+```
+
 # Summary
 
 Whilst for this 2023 edition focusing on DevSecOps, we could have purely spent time focusing on Security and Compliance for Red Hat OpenShift in-depth, I wanted to start at a higher level, understanding why you would choose an enterprise Kubernetes offering, and what features will enhance your cloud-native platform. Hopefully, this has given you a solid understanding of this offering, as well as being able to understand the basics of how to run and operate it. Another area we only touched upon briefly was application deployment, instead focusing on the security posture of deploying workloads, rather than the methods of building and running the applications themselves. This topic of application build, deployment and management requires a whole section on its own.
@@ -300,7 +701,11 @@ I urge you to spend time reading through the official documentation for Red Hat 
 
 ## Resources
 
-- Red Hat OpenShift Documentation 
-    - [OpenShift Container Platform security and compliance](https://docs.openshift.com/container-platform/4.12/security/index.html)
-    - [Understanding container security](https://docs.openshift.com/container-platform/4.12/security/container_security/security-understanding.html#security-understanding)
+- Red Hat OpenShift Documentation
+  - [OpenShift Container Platform security and compliance](https://docs.openshift.com/container-platform/4.12/security/index.html)
+  - [Understanding container security](https://docs.openshift.com/container-platform/4.12/security/container_security/security-understanding.html#security-understanding)
+  - [Troubleshooting the Compliance Operator](https://docs.openshift.com/container-platform/4.12/security/compliance_operator/compliance-operator-troubleshooting.html)
+  - [Running the Red Hat Quay Container Security Operator](https://docs.openshift.com/container-platform/4.12/security/pod-vulnerability-scan.html)
+  - [Securing container content](https://docs.openshift.com/container-platform/4.12/security/container_security/security-container-content.html)
 - [Red Hat OpenShift security guide (ebook)](https://www.redhat.com/en/resources/openshift-security-guide-ebook)
+- YouTube - [ CVE and CVSS explained | Security Detail | Presented by Red Hat](https://www.youtube.com/watch?v=oSyEGkX6sX0)

@@ -287,7 +287,7 @@ INFO Login to the console with user: "kubeadmin", and password: "ur6xT-gxmVW-WVU
 ````
 ![Red Hat OpenShift Web Console](images/Day58%20-%20OpenShift%20Cluster%20Install/Red%20Hat%20OpenShift%20Web%20Console.jpg)
 
-Once logged in, you'll view the persona that you have access to (1). In my example, I'm using the kubeadmin account, so I see the administrative view first, and I have the ability to change this to the Developer view as well (see second screenshot).
+Once logged in, you'll view the persona that you have access to (1). In my example, I'm using the kubeadmin account, so I see the administrative view first, and I can change this to the Developer view as well (see second screenshot).
 
 Under the left-hand navigation pane (2), you can easily browse all the common areas for platform administration, and view details of the live cluster, as well as make changes to existing configurations, or commit new configurations.
 
