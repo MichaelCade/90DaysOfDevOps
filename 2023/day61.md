@@ -291,13 +291,15 @@ $ oc adm node-logs <node_name> --path=openshift-apiserver/<log_name>
 # Example command
 $ oc adm node-logs 90days-ocp-72ptq-master-2 --path=openshift-apiserver/audit-2023-03-29T14-39-01.789.log
 ````
-Example output
+
+Example output:
+
 ````json
 {"kind":"Event","apiVersion":"audit.k8s.io/v1","level":"Metadata","auditID":"5d08341a-8fa2-4fab-8e4a-4fb1c01d2d6e","stage":"ResponseStarted","requestURI":"/apis/template.openshift.io/v1/namespaces/openshift/templates?allowWatchBookmarks=true\u0026resourceVersion=9537849\u0026timeout=5m44s\u0026timeoutSeconds=344\u0026watch=true","verb":"watch","user":{"username":"system:serviceaccount:openshift-cluster-samples-operator:cluster-samples-operator","groups":["system:serviceaccounts","system:serviceaccounts:openshift-cluster-samples-operator","system:authenticated"],"extra":{"authentication.kubernetes.io/pod-name":["cluster-samples-operator-7f8d575897-s7566"],"authentication.kubernetes.io/pod-uid":["8a96caaf-1de9-4cef-915f-ace02c764e52"]}},"sourceIPs":["192.168.200.181","10.130.0.2"],"userAgent":"cluster-samples-operator/v0.0.0 (linux/amd64) kubernetes/$Format","objectRef":{"resource":"templates","namespace":"openshift","apiGroup":"template.openshift.io","apiVersion":"v1"},"responseStatus":{"metadata":{},"code":200},"requestReceivedTimestamp":"2023-03-27T09:44:50.239076Z","stageTimestamp":"2023-03-27T09:44:50.242747Z","annotations":{"authorization.k8s.io/decision":"allow","authorization.k8s.io/reason":"RBAC: allowed by RoleBinding \"shared-resource-viewers/openshift\" of Role \"shared-resource-viewer\" to Group \"system:authenticated\""}}
 {"kind":"Event","apiVersion":"audit.k8s.io/v1","level":"Metadata","auditID":"e65876d9-6fca-422c-93a9-110921648d1b","stage":"ResponseComplete","requestURI":"/metrics","verb":"get","user":{"username":"system:serviceaccount:openshift-monitoring:prometheus-k8s","groups":["system:authenticated"]},"sourceIPs":["10.129.2.13"],"userAgent":"Prometheus/2.39.1","responseStatus":{"metadata":{},"code":200},"requestReceivedTimestamp":"2023-03-27T09:44:51.044096Z","stageTimestamp":"2023-03-27T09:44:51.065007Z","annotations":{"authorization.k8s.io/decision":"allow","authorization.k8s.io/reason":"RBAC: allowed by ClusterRoleBinding \"prometheus-k8s\" of ClusterRole \"prometheus-k8s\" to ServiceAccount \"prometheus-k8s/openshift-monitoring\""}}
 ````
 
-Next we have the OpenShift OAuth API Server audit logs, which will capture our user interactions
+Next, we have the OpenShift OAuth API Server audit logs, which will capture our user interactions
 
 1. List the relevant logs on the control-plane nodes
 
@@ -315,7 +317,8 @@ oc adm node-logs --role=master --path=oauth-apiserver/
 90days-ocp-72ptq-master-2 audit-2023-03-29T08-10-51.942.log
 90days-ocp-72ptq-master-2 audit.log
 ````
-2. View a specific OAuth API Server log
+
+2. View a specific OAuth API Server log:
 
 ````sh
 $ oc adm node-logs <node_name> --path=oauth-apiserver/<log_name>
@@ -323,6 +326,7 @@ $ oc adm node-logs <node_name> --path=oauth-apiserver/<log_name>
 # Example command
 $ oc adm node-logs 90days-ocp-72ptq-master-2 --path=oauth-apiserver/audit-2023-03-29T08-10-51.942.log
 `````
+
 Example output
 
 ````json
@@ -333,7 +337,7 @@ Example output
 
 And finally the OAuth server audit logs
 
-1. List the available logs on the control-plane nodes
+1. List the available logs on the control-plane nodes:
 
 ````sh
 oc adm node-logs --role=master --path=oauth-server/
@@ -344,14 +348,13 @@ oc adm node-logs --role=master --path=oauth-server/
 90days-ocp-72ptq-master-2 audit.log
 ````
 
-2. View a specific log
+2. View a specific log:
 
 ````sh
 $ oc adm node-logs <node_name> --path=oauth-server/<log_name>
 
 # Example command
 $ oc adm node-logs 90days-ocp-72ptq-master-2 --path=oauth-server/audit.log
-
 ````
 
 Example output:
@@ -361,9 +364,8 @@ Example output:
 {"kind":"Event","apiVersion":"audit.k8s.io/v1","level":"Metadata","auditID":"0ae79d4b-a44e-4f16-aadf-a600f42a63d0","stage":"ResponseComplete","requestURI":"/","verb":"head","user":{"username":"system:anonymous","groups":["system:unauthenticated"]},"sourceIPs":["10.131.0.2"],"userAgent":"Go-http-client/1.1","responseStatus":{"metadata":{},"status":"Failure","message":"forbidden: User \"system:anonymous\" cannot head path \"/\"","reason":"Forbidden","details":{},"code":403},"requestReceivedTimestamp":"2023-03-30T14:13:04.446550Z","stageTimestamp":"2023-03-30T14:13:04.456751Z","annotations":{"authorization.k8s.io/decision":"forbid","authorization.k8s.io/reason":""}}
 {"kind":"Event","apiVersion":"audit.k8s.io/v1","level":"Metadata","auditID":"a151df17-578c-415f-a83e-64753a0d16dc","stage":"RequestReceived","requestURI":"/oauth/authorize?client_id=openshift-challenging-client\u0026code_challenge=L56_-VuTMU7qF36WuKxF6mnA2nj_oEEETPsAdQ-w24I\u0026code_challenge_method=S256\u0026redirect_uri=https%3A%2F%2Foauth-openshift.apps.90days-ocp.simon.local%2Foauth%2Ftoken%2Fimplicit\u0026response_type=code","verb":"get","user":{"username":"system:anonymous","groups":["system:unauthenticated"]},"sourceIPs":["10.131.0.2"],"userAgent":"Go-http-client/1.1","requestReceivedTimestamp":"2023-03-30T14:13:04.489643Z","stageTimestamp":"2023-03-30T14:13:04.489643Z"}
 ````
-You can filter the logs using the ```jq``` tool (See the [jq Manual](https://stedolan.github.io/jq/manual/) for detailed information).
 
-And example command would be:
+You can filter the logs using the ```jq``` tool (See the [jq Manual](https://stedolan.github.io/jq/manual/) for detailed information). An example command would be:
 
 ````sh
 $ oc adm node-logs 90days-ocp-72ptq-master-2 --path=openshift-apiserver/audit.log | jq 'select(.user.username == "test")'
@@ -461,11 +463,11 @@ To wrap up this section, I think it's worth highlighting that keeping the logs o
 
 # Summary
 
-In this post, we've seen more of how Red Hat OpenShift takes the out of the box functionality from upstream Kubernetes and entwines it with enterprise engineering, such as the ability to easily add an Identity provider for Authorization without having to pull in more open-source components. The AAA model is a basic premise when it comes to managing the security stance of your environment, and before you let users consume the Red Hat OpenShift platform, it's key to understand how this works and start putting in the structure upfront around the likes of Roles and Role Bindings for user privileges.
+In this post, we've seen more of how Red Hat OpenShift takes the out-of-the-box functionality from upstream Kubernetes and entwines it with enterprise engineering, such as the ability to easily add an Identity provider for Authorization without having to pull in more open-source components. The AAA model is a basic premise when it comes to managing the security stance of your environment, and before you let users consume the Red Hat OpenShift platform, it's key to understand how this works and start putting in the structure upfront around the likes of Roles and Role Bindings for user privileges.
 
 This post only takes you into the beginnings of setting up RBAC, and we haven't discussed a cohesive strategy of how to implement it within your organisation. It's safe to say least privilege is the best, and the outcome you need to aim for. I've included several links below for you to understand RBAC in Kubernetes and OpenShift in more detail, and I'm sure with a quick search on your favourite search engine, you'll also find lots of posts around how best to implement a least privilege model.
 
-To wrap up this section on Red Hat OpenShift with [Day 62](/2023/day62.md) we will cover compliance and vulnerability scanning provided by Red Hat Operators. 
+To wrap up this section on Red Hat OpenShift with [Day 62](/2023/day62.md) we will cover compliance and vulnerability scanning provided by Red Hat Operators.
 
 ## Resources
 - Kubernetes.io 
@@ -476,6 +478,7 @@ To wrap up this section on Red Hat OpenShift with [Day 62](/2023/day62.md) we wi
   - [Using RBAC to define and apply permissions](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.12/html/authentication_and_authorization/using-rbac)
   - [Viewing Audit logs](https://docs.openshift.com/container-platform/4.12/security/audit-log-view.html)
   - [Configuring the audit log policy](https://docs.openshift.com/container-platform/4.12/security/audit-log-policy-config.html#audit-log-policy-config)
+  - [Monitoring cluster events and logs](https://docs.openshift.com/container-platform/4.12/security/container_security/security-monitoring.html)
 - Red Hat Blog - [Multiple ways of Authentication on OpenShift Container Platform (OCP), Part 2](https://cloud.redhat.com/blog/multiple-ways-of-authentication-on-openshift-container-platform-ocp-part-2)
 - OpenShift Examples - [Active Directory/LDAP](https://examples.openshift.pub/cluster-configuration/authentication/activedirectory-ldap/)
 - vEducate.co.uk - [How to configure Red Hat OpenShift to forward logs to VMware vRealize Log Insight Cloud](https://veducate.co.uk/openshift-forward-logs-log-insight-cloud/)
