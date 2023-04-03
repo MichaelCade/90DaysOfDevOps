@@ -1,4 +1,4 @@
-#Monitoring, Alerting and On-Call
+# Monitoring, Alerting and On-Call
 
 As we have discussed there is no such thing as a perfect system that will never fail. Therefore we need to think about what to do when things go wrong. First and foremost the most important thing is not to panic. What tools and processes can we put in place to make incidents less stressful, easier to resolve and less likely to occur again?
 
