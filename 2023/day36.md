@@ -23,7 +23,7 @@ Beyond installing Vault, there are additional requirements that you'll want to c
  
 As somebody who has worked on Vault for over six years and a dedicated member of the HashiCorp community, I have all of this on [my GitHub](https://github.com/btkrausen/hashicorp) for your consumption. These are files that I use for production-level deployments, so they are tried and tested in the real world. Feel free to use these as a starting point and customize them per your needs.
  
-> If all this seems confusing, you can check out my [Getting Started with HashiCorp Vault Course] (https://btk.me/v) to learn all about these configurations (and so much more!), along with getting access to hands-on labs.
+> If all this seems confusing, you can check out my [Getting Started with HashiCorp Vault Course](https://btk.me/v) to learn all about these configurations (and so much more!), along with getting access to hands-on labs.
  
 ## Vault is Up and Running. What's Next?
  
@@ -45,3 +45,5 @@ stanza).
 * Using a root token gives you complete, unrestricted access to anything in Vault. The root token is highly privileged and should NOT be shared. In fact, it is not evaluated against any Vault policies. Therefore, it is recommended to use the root token to perform the initial configuration, namely auth methods, and then the token should be revoked. [Another root token can be generated](https://youtu.be/rcQsNinVl0Y) in the future if needed.
  
 * A single Vault node may be sufficient for lab environments if redundancy and high availability aren't a concern. If service uptime is essential, use a minimum of 3 nodes (assuming integrated storage). I recommend five nodes for production clusters to give you n + 2 redundancy, meaning you can lose up to two nodes, and the Vault service remains functional.
+
+See you on [Day 37](day37.md).
