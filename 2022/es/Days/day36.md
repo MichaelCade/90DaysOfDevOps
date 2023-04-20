@@ -134,7 +134,7 @@ A diferencia del modelo de control de versiones Cliente-Servidor, cada desarroll
 
 ![](Images/Day36_Git16.png)
 
-## Resources
+## Recursos
 
 - [What is Version Control?](https://www.youtube.com/watch?v=Yc8sCSeMhi4)
 - [Types of Version Control System](https://www.youtube.com/watch?v=kr62e_n6QuQ)
