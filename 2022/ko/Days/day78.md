@@ -18,7 +18,7 @@ id: 1049056
 
 우선, Prometheus는 컨테이너와 마이크로서비스 기반 시스템뿐만 아니라 물리적, 가상 및 기타 서비스를 모니터링하는 데 도움이 되는 오픈 소스입니다. Prometheus 뒤에는 대규모 커뮤니티가 있습니다.
 
-Prometheus에는 다양한 [통합 및 내보내기](https://prometheus.io/docs/instrumenting/exporters/)가 있습니다. 핵심은 기존 메트릭을 Prometheus 메트릭으로 내보내는 것입니다. 또한 여러 프로그래밍 언어도 지원합니다.
+Prometheus에는 다양한 [통합 및 exporter](https://prometheus.io/docs/instrumenting/exporters/)가 있습니다. 핵심은 기존 메트릭을 Prometheus 메트릭으로 내보내는 것입니다. 또한 여러 프로그래밍 언어도 지원합니다.
 
 pull 접근 방식 - 수천 개의 마이크로서비스 또는 시스템 및 서비스와 대화하는 경우 push 방식은 일반적으로 서비스가 모니터링 시스템으로 push되는 것을 볼 수 있는 곳입니다. 이 경우 네트워크 과부하, 높은 CPU 사용량, 단일 장애 지점 등의 문제가 발생합니다. pull 방식은 모든 서비스의 메트릭 엔드포인트에서 Prometheus가 끌어오는 훨씬 더 나은 경험을 제공합니다.
 
@@ -26,7 +26,7 @@ pull 접근 방식 - 수천 개의 마이크로서비스 또는 시스템 및 �
 
 ![](/2022/Days/Images/Day78_Monitoring7.png)
 
-나중에 이것이 Kubernetes에 배포되었을 때 어떻게 보이는지, 특히 작업/내보내기로부터 메트릭을 가져오는 **PushGateway**가 있는 것을 보게 될 것입니다.
+나중에 이것이 Kubernetes에 배포되었을 때 어떻게 보이는지, 특히 작업/exporter로부터 메트릭을 가져오는 **PushGateway**가 있는 것을 보게 될 것입니다.
 
 알림을 push하는 **AlertManager**가 있으며, 여기에서 이메일, 슬랙 및 기타 도구와 같은 외부 서비스와 통합할 수 있습니다.
 
