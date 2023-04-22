@@ -121,5 +121,6 @@ En el post de mañana seguiremos viendo estos breves ejemplos de estos comandos 
   - ["Estrategias de fusión en git: Ship / Show / Ask"](https://vergaracarmona.es/estrategias-bifurcacion-git-ship-show-ask/)
   - ["Resolver conflictos en Git. Merge, Squash, Rebase o Pull"](https://vergaracarmona.es/merge-squash-rebase-pull/)
   - ["Borrar commits de git: reset, rebase y cherry-pick"](https://vergaracarmona.es/reset-rebase-cherry-pick/)
+- [Ejemplos README.md para tus proyectos](https://gitea.vergaracarmona.es/manuelver/plantillas-README)
 
 Nos vemos en el [Día 39](day39.md).
