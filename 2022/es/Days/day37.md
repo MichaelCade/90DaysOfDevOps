@@ -49,7 +49,19 @@ Casi todas las herramientas de desarrollo modernas soportan Git.
 
 No hemos cubierto la mayoría de comandos de git, ya que tiene un amplio abanico de posibilidades, pero después de haber mirado algunas hojas de trucos disponibles en línea vamos a documentar algunos de ellos y su propósito. No necesitamos recordarlos todos, ya que a través de la práctica y el uso aprenderás al menos mucho más de git.
 
-Estos comandos se han sacado de [atlassian](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet), escribirlos y leer la descripción es una buena forma de conocer su uso, así que manos a la obra en las tareas diarias.
+Estos comandos se han sacado de [atlassian](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet), escribirlos y leer la descripción es una buena forma de conocer su uso, así que manos a la obra en las tareas diarias:
+
+- [Conceptos básicos de Git](#conceptos-básicos-de-git)
+- [Deshacer cambios Git](#deshacer-cambios-git)
+- [Historial de reescritura de Git](#historial-de-reescritura-de-git)
+- [Git Branches](#git-branches)
+- [Repositorios remotos Git](#repositorios-remotos-git)
+- [Git Diff](#git-diff)
+- [Git Config](#git-config)
+- [Git Rebase](#git-rebase)
+- [Git Pull](#git-pull)
+- [Git Reset](#git-reset)
+- [Git Push](#git-push)
 
 ### Conceptos básicos de Git
 
