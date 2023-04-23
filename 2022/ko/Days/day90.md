@@ -32,7 +32,7 @@ id: 1048748
 
 가장 먼저 해야 할 일은 재해 복구 테스트를 위해 89일에 수행한 복원 작업을 제거하는 것입니다.
 
-"standby" Minikube 클러스터에서 `kubectl delete ns pacman`을 사용하여 이 작업을 수행할 수 있다.
+"standby" Minikube 클러스터에서 `kubectl delete ns pacman`을 사용하여 이 작업을 수행할 수 있습니다.
 
 ![](/2022/Days/Images/Day90_Data1.png)
 

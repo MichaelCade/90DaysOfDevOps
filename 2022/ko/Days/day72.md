@@ -67,7 +67,7 @@ Jenkins의 기본 개념은 파이프라인의 상태를 저장하는 것으로,
 
 ![](/2022/Days/Images/Day72_CICD8.png)
 
-위의 프로세스로 pod가 수정되어야 하지만, 그렇지 않은 경우 `kubectl delete pod jenkins-0 -n jenkins` 명령으로 pod를 강제로 새로 고칠 수 있다. 이 시점에서, 2/2의 실행 중인 pod인 jenkins-0이 있어야 한다.
+위의 프로세스로 pod가 수정되어야 하지만, 그렇지 않은 경우 `kubectl delete pod jenkins-0 -n jenkins` 명령으로 pod를 강제로 새로 고칠 수 있습니다. 이 시점에서, 2/2의 실행 중인 pod인 jenkins-0이 있어야 합니다.
 
 ![](/2022/Days/Images/Day72_CICD9.png)
 

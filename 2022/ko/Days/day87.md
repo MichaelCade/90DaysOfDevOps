@@ -51,13 +51,13 @@ Kasten Helm 리포지토리를 추가합니다.
 
 ![](/2022/Days/Images/Day87_Data1.png)
 
-다음 명령어를 실행하여 pod가 생성되는 것을 확인할 수 있다.
+다음 명령어를 실행하여 pod가 생성되는 것을 확인할 수 있습니다.
 
 `kubectl get pods -n kasten-io -w`
 
 ![](/2022/Days/Images/Day87_Data3.png)
 
-포트 포워딩을 통해 K10 대시보드에 접속하고, 새 터미널을 열어 아래 명령을 실행한다.
+포트 포워딩을 통해 K10 대시보드에 접속하고, 새 터미널을 열어 아래 명령을 실행합니다.
 
 `kubectl --namespace kasten-io port-forward service/gateway 8080:8000`
 
@@ -91,7 +91,7 @@ Kubernetes 섹션에서 사용한 stateful 애플리케이션을 사용합니다
 
 ![](/2022/Days/Images/Day55_Kubernetes1.png)
 
-이 애플리케이션의 YAML 구성 파일은 여기에서 찾을 수 있습니다. -> [pacman-stateful-demo.yaml](Kubernetes/pacman-stateful-demo.yaml)
+이 애플리케이션의 YAML 구성 파일은 여기에서 찾을 수 있습니다. -> [pacman-stateful-demo.yaml](/2022/Days/Kubernetes/pacman-stateful-demo.yaml)
 
 ![](/2022/Days/Images/Day87_Data8.png)
 
@@ -101,7 +101,7 @@ Kubernetes 섹션에서 사용한 stateful 애플리케이션을 사용합니다
 
 그런 다음 새 터미널에서 pacman 프론트엔드를 포트 포워드할 수 있습니다. `kubectl port-forward svc/pacman 9090:80 -n pacman`을 실행합니다.
 
-브라우저에서 다른 탭을 열어 http://localhost:9090/
+브라우저에서 다른 탭을 열어 http://localhost:9090/ 에접속합니다.
 
 ![](/2022/Days/Images/Day87_Data10.png)
 

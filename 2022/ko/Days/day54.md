@@ -112,7 +112,7 @@ YAML 파일 위치로 이동한 다음 `kubectl create -f nginx-stateless-demo.y
 
 위 그림에서 replicaset가 있는 것을 볼 수 있는데, 배포에서 배포할 이미지의 레플리카 개수를 정의합니다. 처음에는 1로 설정되었지만, 애플리케이션을 빠르게 확장하려면 여러 가지 방법으로 확장할 수 있습니다.
 
-터미널 내에서 텍스트 편집기를 열고 배포를 수정할 수 있는 `kubectl edit deployment  nginx-deployment -n nginx`를 사용하여 파일을 편집할 수 있다.
+터미널 내에서 텍스트 편집기를 열고 배포를 수정할 수 있는 `kubectl edit deployment  nginx-deployment -n nginx`를 사용하여 파일을 편집할 수 있습니다.
 
 ![](/2022/Days/Images/Day54_Kubernetes9.png)
 

@@ -126,9 +126,9 @@ echo $TOKEN
 
 `helm install k10 kasten/k10 --namespace=kasten-io --set auth.tokenAuth.enabled=true --set injectKanisterSidecar.enabled=true --set-string injectKanisterSidecar.namespaceSelector.matchLabels.k10/injectKanisterSidecar=true --create-namespace`
 
-이 작업에는 시간이 걸리겠지만, 그동안 `kubectl get pods -n kasten-io -w`를 사용하여 pod가 실행 상태가 되는 진행 상황을 확인할 수 있다.
+이 작업에는 시간이 걸리겠지만, 그동안 `kubectl get pods -n kasten-io -w`를 사용하여 pod가 실행 상태가 되는 진행 상황을 확인할 수 있습니다.
 
-Minikube를 사용하고 있기 때문에 import 정책을 실행할 때 애플리케이션이 실행되며, 이 standby 클러스터에서 스토리지 클래스가 동일하다는 점에 주목할 필요가 있다. 그러나 마지막 세션에서 다룰 내용은 이동성과 변환입니다.
+Minikube를 사용하고 있기 때문에 import 정책을 실행할 때 애플리케이션이 실행되며, 이 standby 클러스터에서 스토리지 클래스가 동일하다는 점에 주목할 필요가 있습니다. 그러나 마지막 세션에서 다룰 내용은 이동성과 변환입니다.
 
 pod가 가동되고 실행되면 다른 클러스터에서 이전 단계에서 수행한 단계를 따를 수 있습니다.
 
