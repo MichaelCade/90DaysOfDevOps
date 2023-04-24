@@ -120,5 +120,10 @@ Una imagen de contenedor es un paquete de software ligero, independiente y ejecu
 - [Programming with Mosh - Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI)
 - [Docker Tutorial for Beginners - What is Docker? Introduction to Containers](https://www.youtube.com/watch?v=17Bl31rlnRM&list=WL&index=128&t=61s)
 - [Introduction to Container By Red Hat](https://www.redhat.com/en/topics/containers)
+- [En español] En los [apuntes](https://vergaracarmona.es/apuntes/) del traductor:
+  - [Preparación de entorno de pruebas local para docker](https://vergaracarmona.es/preparacion-de-entorno-de-pruebas-local-para-docker/)
+  - [Uso básico de docker](https://vergaracarmona.es/uso-basico-de-docker/)
+  - [Una breve historia sobre contenedores](https://vergaracarmona.es/breve-historia-de-contenedores/)
+  - [Desplegar con docker-compose los servicios Traefik y Portainer](https://vergaracarmona.es/desplegar-con-docker-compose-los-servicios-traefik-y-portainer/)
 
 Nos vemos en el [Día 43](day43.md)
