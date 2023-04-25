@@ -97,7 +97,7 @@ kubectl run mysql-client --rm --env APP_NS=${APP_NAME} --env MYSQL_EXEC="${MYSQL
 ```
 
 ```Shell
-Note: if you already have an existing MySQL client pod running, delete with the command
+참고: 이미 기존 MySQL 클라이언트 pod가 실행 중인 경우 다음 명령으로 삭제하세요.
 
 kubectl delete pod -n ${APP_NAME} mysql-client
 ```
@@ -249,7 +249,7 @@ ActionSet 이름을 가져와서 다음 명령 `kubectl --namespace kanister des
 
 ### 복원
 
-복원하기 전에 약간의 손상을 입혀야 합니다. 테이블을 떨어뜨릴 수도 있고, 실수일 수도 있고 그렇지 않을 수도 있습니다.
+복원하기 전에 약간의 손상을 입혀야 합니다. 테이블을 drop할 수도 있고, 실수일 수도 있고 그렇지 않을 수도 있습니다.
 
 MySQL pod에 연결합니다.
 
@@ -258,7 +258,7 @@ APP_NAME=my-production-app
 kubectl run mysql-client --rm --env APP_NS=${APP_NAME} --env MYSQL_EXEC="${MYSQL_EXEC}" --env MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD} --env MYSQL_HOST=${MYSQL_HOST} --namespace ${APP_NAME} --tty -i --restart='Never' --image  docker.io/bitnami/mysql:latest --command -- bash
 ```
 
-중요 데이터 DB는 `echo "SHOW DATABASES;"와 함께 있는 것을 볼 수 있습니다. | ${mysql_exec}`로 확인할 수 있습니다.
+중요 데이터 DB는 `echo "SHOW DATABASES;" | ${mysql_exec}`로 확인할 수 있습니다.
 
 그런 다음 drop하기 위해 `echo "DROP DATABASE myImportantData;" | ${mysql_exec}`를 실행했습니다.
 
