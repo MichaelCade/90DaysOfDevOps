@@ -31,7 +31,7 @@ How do we do it? there are three ways:
 - Login manually to all of our servers and check all the data about service processes and resources.
 - Write a script that logs in to the servers for us and checks on the data.
 
-Both of these options would require a considerable amount of work on our part,
+Both of these options would require a considerable amount of work on our part good
 
 The third option is easier, we could use a monitoring solution that is available in the market.
 
