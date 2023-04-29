@@ -106,9 +106,9 @@ Trong vài ngày tới, chúng ta sẽ tìm hiểu thêm về:
 - DHCP
 - Mạng con
 
-## Tài nguyên
+## Tài liệu tham khảo
 
 * [Các nguyên tắc cơ bản về mạng](https://www.youtube.com/playlist?list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi)
 * [Toàn bộ khóa học Mạng máy tính](https://www.youtube.com/watch?v=IPvYjXCsTg8)
 
-Hẹn gặp lại các bạn vào [Day22](day22.md)
+Hẹn gặp lại bạn vào [Ngày 22](day22.md)

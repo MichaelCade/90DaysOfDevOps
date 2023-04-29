@@ -1,165 +1,165 @@
-## Microsoft Azure Security Models
+## Modelos de seguridad de Microsoft Azure
 
-Following on from the Microsoft Azure Overview, we are going to start with Azure Security and see where this can help in our day to day. For the most part, I have found the built-in roles have been sufficient but knowing that we can create and work with many different areas of authentication and configurations. I have found Microsoft Azure to be quite advanced with its Active Directory background compared to other public clouds.
+Siguiendo con la visión general de Microsoft Azure, vamos a empezar con Azure Security y ver cómo esto puede ayudar. En gran medida, con los roles por defecto son suficientes, pero además podemos trabajar con muchas áreas diferentes de autenticación y configuraciones. Microsoft Azure puede ser bastante avanzado gracias a Active Directory en comparación con otras nubes públicas.
 
-This is one area in which Microsoft Azure seemingly works differently from other public cloud providers, in Azure there is ALWAYS Azure AD.
+Esta es un área en la que Microsoft Azure aparentemente funciona de manera diferente a otros proveedores de nube pública, en Azure SIEMPRE tiene Active Directory.
 
-### Directory Services
+### Servicios de directorio
 
-- Azure Active Directory hosts the security principles used by Microsoft Azure and other Microsoft cloud services.
-- Authentication is accomplished through protocols such as SAML, WS-Federation, OpenID Connect and OAuth2.
-- Queries are accomplished through REST API called Microsoft Graph API.
-- Tenants have a tenant.onmicrosoft.com default name but can also have custom domain names.
-- Subscriptions are associated with an Azure Active Directory tenant.
+- Azure Active Directory alberga los principios de seguridad utilizados por Microsoft Azure y otros servicios en la nube de Microsoft.
+- La autenticación se realiza a través de protocolos como SAML, WS-Federation, OpenID Connect y OAuth2.
+- Las consultas se realizan a través de la API REST denominada Microsoft Graph API.
+- Los tenants tienen un nombre por defecto tenant.onmicrosoft.com pero también pueden tener nombres de dominio personalizados.
+- Las suscripciones están asociadas a un tenant de Azure Active Directory.
 
-If we think about AWS to compare the equivalent offering would be AWS IAM (Identity & Access Management) Although still very different
+Si pensamos en AWS para comparar el servicio equivalente sería AWS IAM (Identity & Access Management), aunque es bastante diferente
 
-Azure AD Connect provides the ability to replicate accounts from AD to Azure AD. This can also include groups and sometimes objects. This can be granular and filtered. Supports multiple forests and domains.
+Azure AD Connect ofrece la posibilidad de replicar cuentas de AD a Azure AD. Esto también puede incluir grupos y a veces objetos. Esto puede ser granulado y filtrado. Admite varios bosques y dominios.
 
-It is possible to create cloud accounts in Microsoft Azure Active Directory (AD) but most organisations already have accounted for their users in their own Active Directory being on-premises.
+Es posible crear cuentas en la nube en Microsoft Azure Active Directory (AD), pero la mayoría de las organizaciones ya tienen contabilizados a sus usuarios en su propio Active Directory local.
 
-Azure AD Connect also allows you to not only see Windows AD servers but also other Azure AD, Google and others. This also provides the ability to collaborate with external people and organisations this is called Azure B2B.
+Azure AD Connect también permite ver no sólo los servidores Windows AD sino también otros Azure AD, Google y otros. Esto también proporciona la capacidad de colaborar con personas y organizaciones externas, lo que se denomina Azure B2B.
 
-Authentication options between Active Directory Domain Services and Microsoft Azure Active Directory are possible with both identity sync with a password hash.
+Las opciones de autenticación entre Active Directory Domain Services y Microsoft Azure Active Directory son posibles con ambas identidades sincronizadas con un hash de contraseña.
 
 ![](Images/Day30_Cloud1.png)
 
-The passing of the password hash is optional, if this is not used then pass-through authentication is required.
+El paso del hash de la contraseña es opcional, si esto no se utiliza entonces se requiere autenticación passthrough.
 
-There is a video linked below that goes into detail about Passthrough authentication.
+Hay un vídeo enlazado a continuación que entra en detalle sobre la autenticación Passthrough.
 
-[User sign-in with Azure Active Directory Pass-through Authentication](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-pta)
+[Inicio de sesión de usuario con autenticación Pass-through de Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-pta)
 
 ![](Images/Day30_Cloud2.png)
 
-### Federation
+### Federación
 
-It's fair to say that if you are using Microsoft 365, Microsoft Dynamics and on-premises Active Directory it is quite easy to understand and integrate into Azure AD for federation. However, you might be using other services outside of the Microsoft ecosystem.
+Es justo decir que utilizando Microsoft 365, Microsoft Dynamics y Active Directory local es bastante fácil de entender e integrar en Azure AD para la federación. Sin embargo, es posible utilizar otros servicios fuera del ecosistema de Microsoft.
 
-Azure AD can act as a federation broker to these other Non-Microsoft apps and other directory services.
+Azure AD puede actuar como intermediario de federación para estas otras aplicaciones ajenas a Microsoft y otros servicios de directorio.
 
-This will be seen in the Azure Portal as Enterprise Applications of which there are a large number of options.
+Esto se verá en el Portal Azure como Aplicaciones Empresariales de las cuales hay un gran número de opciones.
 
 ![](Images/Day30_Cloud3.png)
 
-If you scroll down on the enterprise application page you are going to see a long list of featured applications.
+Desplazando hacia abajo la página de aplicaciones empresariales se puede obtener una larga lista de aplicaciones destacadas.
 
 ![](Images/Day30_Cloud4.png)
 
-This option also allows for "bring your own" integration, an application you are developing or a non-gallery application.
+Esta opción también permite "traer su propia" integración, una aplicación que está desarrollando o una aplicación no galería.
 
-I have not looked into this before but I can see that this is quite the feature set when compared to the other cloud providers and capabilities.
+No he mirado en esto antes, pero puedo ver que esto es bastante el conjunto de características en comparación con los otros proveedores de nube y capacidades.
 
-### Role-Based Access Control
+### Control de acceso basado en roles
 
-We have already covered on [Day 29](day29.md) the scopes we are going to cover here, we can set our role-based access control according to one of these areas.
+Ya hemos cubierto en [Día 29](day29.md) los ámbitos que vamos a cubrir aquí, podemos establecer nuestro control de acceso basado en roles de acuerdo a uno de estos ámbitos:
 
-- Subscriptions
-- Management Group
-- Resource Group
-- Resources
+- Suscripciones
+- Grupo de Gestión
+- Grupo de Recursos
+- Recursos
 
-Roles can be split into three, there are many built-in roles in Microsoft Azure. Those three are:
+Los roles se pueden dividir en tres, hay muchos roles incorporados en Microsoft Azure. Estos tres son:
 
-- Owner
-- Contributor
-- Reader
+- Propietario
+- Contribuidor
+- Lector
 
-Owner and Contributor are very similar in their boundaries of scope however the owner can change permissions.
+Propietario y Contribuidor son muy similares en sus límites de alcance. Sin embargo, el propietario puede cambiar permisos.
 
-Other roles are specific to certain types of Azure Resources as well as custom roles.
+Otros roles son específicos para ciertos tipos de Azure Resources, así como roles personalizados.
 
-We should focus on assigning permissions to groups vs users.
+Deberíamos centrarnos en asignar permisos a grupos frente a usuarios.
 
-Permissions are inherited.
+Los permisos se heredan.
 
-If we go back and look at the "90DaysOfDevOps" Resource group we created and check the Access Control (IAM) within you can see we have a list of contributors and a customer User Access Administrator, and we do have a list of owners (But I cannot show this)
+Si volvemos atrás y miramos el grupo de Recursos "90DaysOfDevOps" creado y comprobamos el Control de Acceso (IAM) dentro podemos ver que tenemos una lista de contribuidores y un cliente Administrador de Acceso de Usuario, y tenemos una lista de propietarios (Pero no puedo mostrar esto)
 
 ![](Images/Day30_Cloud5.png)
 
-We can also check the roles we have assigned here if they are BuiltInRoles and which category they fall under.
+Podemos comprobar aquí si los roles que tenemos asignados son BuiltInRoles y a qué categoría pertenecen.
 
 ![](Images/Day30_Cloud6.png)
 
-We can also use the check access tab if we want to check an account against this resource group and make sure that the account we wish to have that access to has the correct permissions or maybe we want to check if a user has too much access.
+También podemos comprobar acceso si queremos comprobar una cuenta contra este grupo de recursos y asegurarnos de que la cuenta a la que queremos dar ese acceso tiene los permisos correctos o quizás queremos comprobar si un usuario tiene demasiado acceso.
 
 ![](Images/Day30_Cloud7.png)
 
 ### Microsoft Defender for Cloud
 
-- Microsoft Defender for Cloud (formerly known as Azure Security Center) provides insight into the security of the entire Azure environment.
+- Microsoft Defender for Cloud (anteriormente conocido como Azure Security Center) proporciona información sobre la seguridad de todo el entorno Azure.
 
-- A single dashboard for visibility into the overall security health of all Azure and non-Azure resources (via Azure Arc) and security hardening guidance.
+- Un único panel de control para la visibilidad del estado general de la seguridad de todos los recursos Azure y no Azure (a través de Azure Arc) y orientación sobre el refuerzo de la seguridad.
 
-- Free tier includes continuous assessment and security recommendations.
+- El nivel gratuito incluye evaluación continua y recomendaciones de seguridad.
 
-- Paid plans for protected resource types (e.g. Servers, AppService, SQL, Storage, Containers, KeyVault).
+- Planes de pago para tipos de recursos protegidos (por ejemplo, Servidores, AppService, SQL, Almacenamiento, Contenedores, KeyVault).
 
-I have switched to another subscription to view the Azure Security Center and you can see here based on very few resources that I have some recommendations in one place.
+He cambiado a otra suscripción para ver el Centro de Seguridad de Azure y se puede ver aquí sobre la base de muy pocos recursos con algunas recomendaciones en un solo lugar.
 
 ![](Images/Day30_Cloud8.png)
 
 ### Azure Policy
 
-- Azure Policy is an Azure native service that helps to enforce organizational standards and assess compliance at scale.
+- Azure Policy es un servicio nativo de Azure que ayuda a aplicar las normas de la organización y evaluar el cumplimiento a escala.
 
-- Integrated into Microsoft Defender for Cloud. Azure Policy audits non-compliant resources and applies remediation.
+- Integrado en Microsoft Defender for Cloud. Azure Policy audita los recursos no conformes y aplica correcciones.
 
-- Commonly used for governing resource consistency, regulatory compliance, security, cost, and management standards.
+- Se utiliza habitualmente para regular la coherencia de los recursos, el cumplimiento normativo, la seguridad, los costes y las normas de gestión.
 
-- Uses JSON format to store evaluation logic and determine whether a resource is compliant or not, and any actions to take for non-compliance (e.g. Audit, AuditIfNotExists, Deny, Modify, DeployIfNotExists).
+- Utiliza el formato JSON para almacenar la lógica de evaluación y determinar si un recurso es conforme o no, así como las medidas que deben tomarse en caso de incumplimiento (por ejemplo, Audit, AuditIfNotExists, Deny, Modify, DeployIfNotExists).
 
-- Free for use. The exception is Azure Arc connected resources charged per server/month for Azure Policy Guest Configuration usage.
+- Uso gratuito. La excepción son los recursos conectados a Azure Arc que se cobran por servidor/mes para el uso de Azure Policy Guest Configuration.
 
-### Hands-On
+### Manos a la obra
 
-I have gone out and I have purchased www.90DaysOfDevOps.com and I would like to add this domain to my Azure Active Directory portal, [Add your custom domain name using the Azure Active Directory Portal](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain)
+He comprado www.90DaysOfDevOps.com y quisiera añadir el dominio al portal Azure Active Directory, [Añada su nombre de dominio personalizado utilizando el portal Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-custom-domain)
 
 ![](Images/Day30_Cloud9.png)
 
-With that now, we can create a new user on our new Active Directory Domain.
+Con eso ahora, podemos crear un nuevo usuario en nuestro nuevo dominio de Active Directory.
 
 ![](Images/Day30_Cloud10.png)
 
-Now we want to create a group for all of our new 90DaysOfDevOps users in one group. We can create a group as per the below, notice that I am using "Dynamic User" which means Azure AD will query user accounts and add them dynamically vs assigned which is where you manually add the user to your group.
+Ahora queremos crear un grupo para todos los nuevos usuarios 90DaysOfDevOps en un grupo. Podemos crear un grupo como el siguiente. Tenga en cuenta que estoy usando "Usuario dinámico", lo que significa que Azure AD consultará las cuentas de usuario y agregarlos dinámicamente.Asignado es donde se agrega manualmente el usuario al grupo.
 
 ![](Images/Day30_Cloud11.png)
 
-There are lots of options when it comes to creating your query, I plan to simply find the principal name and make sure that the name contains @90DaysOfDevOps.com.
+Hay muchas opciones a la hora de crear la consulta, como buscar el nombre de la entidad de seguridad y asegurar de que el nombre contiene @90DaysOfDevOps.com.
 
 ![](Images/Day30_Cloud12.png)
 
-Now because we have created our user account already for michael.cade@90DaysOfDevOps.com we can validate the rules are working. For comparison I have also added another account I have associated to another domain here and you can see that because of this rule our user will not land in this group.
+Ahora que ya hemos creado la cuenta de usuario para michael.cade@90DaysOfDevOps.com podemos validar que las reglas funcionan. Para comparar se ha añadido otra cuenta asociada a otro dominio y podéis ver que debido a esta regla nuestro usuario no aterrizará en este grupo.
 
 ![](Images/Day30_Cloud13.png)
 
-I have since added a new user1@90DaysOfDevOps.com and if we go and check the group we can see our members.
+Se añade un nuevo user1@90DaysOfDevOps.com y comprobando el grupo podemos ver a todos los miembros.
 
 ![](Images/Day30_Cloud14.png)
 
-If we have this requirement x100 then we are not going to want to do this all in the console we are going to want to take advantage of either bulk options to create, invite, and delete users or you are going to want to look into PowerShell to achieve this automated approach to scale.
+Si tenemos este requisito x100 no querremos hacer todo esto en la consola, podemos tomar ventaja de cualquiera de las opciones a granel para crear, invitar y eliminar usuarios o lo haremos en PowerShell para lograr este enfoque automatizado a escala.
 
-Now we can go to our Resource Group and specify that on the 90DaysOfDevOps resource group we want the owner to be the group we just created.
+Ahora podemos ir a nuestro grupo de recursos y especificar que en el grupo de recursos 90DaysOfDevOps queremos que el propietario sea el grupo que acabamos de crear.
 
 ![](Images/Day30_Cloud15.png)
 
-We can equally go in here and deny assignments access to our resource group as well.
+Igualmente podemos denegar también el acceso de las asignaciones a nuestro grupo de recursos.
 
-Now if we log in to the Azure Portal with our new user account, you can see that we only have access to our 90DaysOfDevOps resource group and not the others seen in previous pictures because we do not have the access.
+Si entramos en el Azure Portal con la nueva cuenta de usuario, podemos ver que sólo tenemos acceso a nuestro grupo de recursos 90DaysOfDevOps y no a los otros vistos en imágenes anteriores.
 
 ![](Images/Day30_Cloud16.png)
 
-The above is great if this is a user that has access to resources inside of your Azure portal, not every user needs to be aware of the portal, but to check access we can use the [Apps Portal](https://myapps.microsoft.com/) This is a single sign-on portal for us to test.
+Lo anterior está muy bien si se trata de un usuario que tiene acceso a los recursos dentro de su portal de Azure, no todos los usuarios necesitan conocer el portal, pero para comprobar el acceso podemos utilizar el [Apps Portal](https://myapps.microsoft.com/) Es un portal de inicio de sesión único para que podamos probar.
 
 ![](Images/Day30_Cloud17.png)
 
-You can customise this portal with your branding and this might be something we come back to later on.
+Puedes personalizar este portal con tu marca y esto podría ser algo a lo que volveremos más adelante.
 
-## Resources
+## Recursos
 
 - [Hybrid Cloud and MultiCloud](https://www.youtube.com/watch?v=qkj5W98Xdvw)
 - [Microsoft Azure Fundamentals](https://www.youtube.com/watch?v=NKEFWyqJ5XA&list=WL&index=130&t=12s)
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-See you on [Day 31](day31.md)
+Nos vemos en el [Día 31](day31.md).

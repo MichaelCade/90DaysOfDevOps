@@ -106,7 +106,7 @@ We have also mentioned that the state file will contain sensitive information. W
 ```
 variable "some resource"  {
     description = "something important"
-    type: string
+    type= string
     sensitive = true
 
 }

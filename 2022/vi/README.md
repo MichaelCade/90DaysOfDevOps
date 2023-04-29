@@ -62,24 +62,23 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 
 ### Tìm hiểu về một Cloud Provider
 
-- [✔️] ☁️ 28 > [The Big Picture: DevOps & The Cloud](Days/day28.md)
-- [✔️] ☁️ 29 > [Microsoft Azure Fundamentals](Days/day29.md)
-- [✔️] ☁️ 30 > [Microsoft Azure Security Models](Days/day30.md)
-- [✔️] ☁️ 31 > [Microsoft Azure Compute Models](Days/day31.md)
-- [✔️] ☁️ 32 > [Microsoft Azure Storage & Database Models](Days/day32.md)
-- [✔️] ☁️ 33 > [Microsoft Azure Networking Models + Azure Management](Days/day33.md)
-- [✔️] ☁️ 34 > [Microsoft Azure Hands-On Scenarios](Days/day34.md)
+- [✔️] ☁️ 28 > [Bức tranh toàn cảnh: DevOps & The Cloud](Days/day28.md)
+- [✔️] ☁️ 29 > [Kiến thức cơ bản về Microsoft Azure](Days/day29.md)
+- [✔️] ☁️ 30 > [Mô hình bảo mật Microsoft Azure](Days/day30.md)
+- [✔️] ☁️ 31 > [Mô hình Điện toán Microsoft Azure](Days/day31.md)
+- [✔️] ☁️ 32 > [Mô hình lưu trữ và cơ sở dữ liệu Microsoft Azure](Days/day32.md)
+- [✔️] ☁️ 33 > [Mô hình Mạng Microsoft Azure + Quản lý Azure](Days/day33.md)
+- [✔️] ☁️ 34 > [Thực hành với Microsoft Azure](Days/day34.md)
 
 ### Cách sử dụng Git hiệu quả
 
-- [✔️] 📚 35 > [The Big Picture: Git - Version Control](Days/day35.md)
-- [✔️] 📚 36 > [Installing & Configuring Git](Days/day36.md)
-- [✔️] 📚 37 > [Gitting to know Git](Days/day37.md)
+- [✔️] 📚 35 > [Bức tranh toàn cảnh: Git - Quản lý phiên bản](Days/day35.md)
+- [✔️] 📚 36 > [Cài đặt & Cấu hình Git](Days/day36.md)
+- [✔️] 📚 37 > [Giới thiệu về Git](Days/day37.md)
 - [✔️] 📚 38 > [Staging & Changing](Days/day38.md)
-- [✔️] 📚 39 > [Viewing, unstaging, discarding & restoring](Days/day39.md)
-- [✔️] 📚 40 > [Social Network for code](Days/day40.md)
-- [✔️] 📚 41 > [The Open Source Workflow](Days/day41.md)
-
+- [✔️] 📚 39 > [Xem, unstaging, loại bỏ & khôi phục](Days/day39.md)
+- [✔️] 📚 40 > [Mạng xã hội dành cho code](Days/day40.md)
+- [✔️] 📚 41 > [Quy trình làm việc với mã nguồn mở](Days/day41.md)
 ### Containers
 
 - [✔️] 🏗️ 42 > [The Big Picture: Containers](Days/day42.md)

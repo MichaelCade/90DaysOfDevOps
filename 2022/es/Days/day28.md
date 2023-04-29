@@ -1,95 +1,95 @@
-## The Big Picture: DevOps & The Cloud
+## El panorama: DevOps & The Cloud
 
-When it comes to cloud computing and what is offered, it goes very nicely with the DevOps ethos and processes. We can think of Cloud Computing as bringing the technology and services whilst DevOps as we have mentioned many times before is about the process and process improvement.
+Cuando se trata de la computación en nube y lo que se ofrece, va muy bien con la ética y los procesos DevOps. Podemos pensar que la computación en nube aporta tecnología y servicios, mientras que DevOps, como ya hemos mencionado muchas veces, trata del proceso y de la mejora del proceso.
 
-But to start with that cloud learning journey is a steep one and making sure you know and understand all elements or the best service to choose for the right price point is confusing.
+Pero para empezar, el viaje de aprendizaje de la nube es empinado y asegurarse de conocer y entender todos los elementos o el mejor servicio a elegir para el punto de precio correcto es confuso.
 
 ![](Images/Day28_Cloud1.png)
 
-Does the public cloud require a DevOps mindset? My answer here is not, but to really take advantage of cloud computing and possibly avoid those large cloud bills that so many people have been hit with then it is important to think of Cloud Computing and DevOps together.
+¿Requiere la nube pública una mentalidad DevOps? Mi respuesta aquí es no, pero para realmente tomar ventaja de la computación en nube y posiblemente evitar esas grandes facturas de nube que tanta gente ha sido golpeada con entonces es importante pensar en Cloud Computing y DevOps juntos.
 
-If we look at what we mean by the Public Cloud at a 40,000ft view, it is about removing some responsibility to a managed service to enable you and your team to focus on more important aspects which name should be the application and the end-users. After all the Public Cloud is just someone else's computer.
+Si nos fijamos en lo que queremos decir con la nube pública en una vista de 40.000 pies, se trata de la eliminación de algunas responsabilidades a un servicio gestionado para permitir que usted y su equipo para centrarse en aspectos más importantes que el nombre debe ser la aplicación y los usuarios finales. Al fin y al cabo, la nube pública no es más que el ordenador de otra persona.
 
 ![](Images/Day28_Cloud2.png)
 
-In this first section, I want to get into and describe a little more of what a Public Cloud is and some of the building blocks that get referred to as the Public Cloud overall.
+En esta primera sección, quiero entrar y describir un poco más de lo que es una Nube Pública y algunos de los bloques de construcción que se refieren a la Nube Pública en general.
 
 ### SaaS
 
-The first area to cover is Software as a service, this service is removing almost all of the management overhead of a service that you may have once run on-premises. Let's think about Microsoft Exchange for our email, this used to be a physical box that lived in your data centre or maybe in the cupboard under the stairs. You would need to feed and water that server. By that I mean you would need to keep it updated and you would be responsible for buying the server hardware, most likely installing the operating system, installing the applications required and then keeping that patched, if anything went wrong you would have to troubleshoot and get things back up and running.
+La primera área a tratar es el software como servicio, que elimina casi toda la sobrecarga de gestión de un servicio que antes se ejecutaba in situ. Pensemos en Microsoft Exchange para nuestro correo electrónico: antes era una caja física que vivía en el centro de datos o quizá en el armario de debajo de las escaleras. Había que alimentar y regar ese servidor. Con esto quiero decir que tendrías que mantenerlo actualizado y que serías responsable de comprar el hardware del servidor, probablemente instalar el sistema operativo, instalar las aplicaciones necesarias y luego mantenerlo parcheado, si algo fuera mal tendrías que solucionar los problemas y hacer que las cosas volvieran a funcionar.
 
-Oh, and you would also have to make sure you were backing up your data, although this doesn't change with SaaS for the most part either.
+Ah, y también habría que asegurarse de hacer copias de seguridad de los datos, aunque esto tampoco cambia con SaaS en su mayor parte.
 
-What SaaS does and in particular Microsoft 365, because I mentioned Exchange is removing that administration overhead and they provide a service that delivers your exchange functionality by way of mail but also much other productivity (Office 365) and storage options (OneDrive) that overall gives a great experience to the end-user.
+Lo que hace SaaS y, en particular, Microsoft 365, ya que he mencionado Exchange, es eliminar esa sobrecarga de administración y ofrecer un servicio que proporciona la funcionalidad de Exchange a través del correo, pero también muchas otras opciones de productividad (Office 365) y almacenamiento (OneDrive) que, en general, ofrecen una gran experiencia al usuario final.
 
-Other SaaS applications are widely adopted, such as Salesforce, SAP, Oracle, Google, and Apple. All removing that burden of having to manage more of the stack.
+Otras aplicaciones SaaS son ampliamente adoptadas, como Salesforce, SAP, Oracle, Google y Apple. Todas ellas eliminan esa carga de tener que gestionar más de la pila.
 
-I am sure there is a story with DevOps and SaaS-based applications but I am struggling to find out what they may be. I know Azure DevOps has some great integrations with Microsoft 365 that I might have a look into and report back to.
+Estoy seguro de que hay una historia con DevOps y aplicaciones basadas en SaaS, pero estoy luchando para averiguar lo que pueden ser. Sé que Azure DevOps tiene algunas grandes integraciones con Microsoft 365 que podría echar un vistazo e informar. 
 
 ![](Images/Day28_Cloud3.png)
 
-### Public Cloud
+### Cloud público
 
-Next up we have the public cloud, most people would think of this in a few different ways, some would see this as the hyper scalers only such as Microsoft Azure, Google Cloud Platform and AWS.
+A continuación tenemos la nube pública, la mayoría de la gente podría pensar en esto de varias maneras diferentes, algunos verían esto como los hiperescaladores sólo como Microsoft Azure, Google Cloud Platform y AWS.
 
 ![](Images/Day28_Cloud4.png)
 
-Some will also see the public cloud as a much wider offering that includes those hyper scalers but also the thousands of MSPs all over the world as well. For this post, we are going to consider Public Cloud including hyper scalers and MSPs, although later on, we will specifically dive into one or more of the hyper scalers to get that foundational knowledge.
+Algunos también verán la nube pública como una oferta mucho más amplia que incluye a los hiperescaladores, pero también a los miles de MSP de todo el mundo. Para este post, vamos a considerar la nube pública incluyendo hiperescaladores y MSPs, aunque más adelante, nos sumergiremos específicamente en uno o más de los hiperescaladores para obtener ese conocimiento fundacional.
 
 ![](Images/Day28_Cloud5.png)
-_thousands more companies could land on this, I am merely picking from local, regional, telco and global brands I have worked with and am aware of._
+_Podría haber miles de empresas más en esta lista, sólo estoy seleccionando las marcas locales, regionales, de telecomunicaciones y globales con las que he trabajado y que conozco._
 
-We mentioned in the SaaS section that Cloud removed the responsibility or the burden of having to administer parts of a system. If SaaS we see a lot of the abstraction layers removed i.e the physical systems, network, storage, operating system, and even application to some degree. When it comes to the cloud there are various levels of abstraction we can remove or keep depending on your requirements.
+Mencionamos en la sección SaaS que Cloud eliminaba la responsabilidad o la carga de tener que administrar partes de un sistema. Si hablamos de SaaS, vemos que se eliminan muchas de las capas de abstracción, es decir, los sistemas físicos, la red, el almacenamiento, el sistema operativo e incluso la aplicación hasta cierto punto. Cuando se trata de la nube, hay varios niveles de abstracción que podemos eliminar o mantener en función de nuestros requisitos.
 
-We have already mentioned SaaS but there are at least two more to mention regarding the public cloud.
+Ya hemos mencionado SaaS, pero hay al menos dos más que mencionar en relación con la nube pública.
 
-Infrastructure as a service - You can think of this layer as a virtual machine but whereas on-premises you will be having to look after the physical layer in the cloud this is not the case, the physical is the cloud provider's responsibility and you will manage and administer the Operating System, the data and the applications you wish to run.
+Infraestructura como servicio: puede pensar en esta capa como una máquina virtual, pero mientras que en las instalaciones tendrá que ocuparse de la capa física, en la nube no es así, la física es responsabilidad del proveedor de la nube y usted gestionará y administrará el sistema operativo, los datos y las aplicaciones que desee ejecutar.
 
-Platform as a service - This continues to remove the responsibility of layers and this is really about you taking control of the data and the application but not having to worry about the underpinning hardware or operating system.
+Plataforma como servicio: sigue eliminando la responsabilidad de las capas y en realidad se trata de que usted tome el control de los datos y la aplicación, pero sin tener que preocuparse por el hardware o el sistema operativo subyacentes.
 
-There are many other aaS offerings out there but these are the two fundamentals. You might see offerings around StaaS (Storage as a service) which provide you with your storage layer but without having to worry about the hardware underneath. Or you might have heard CaaS for Containers as a service which we will get onto, later on, another aaS we will look to cover over the next 7 days is FaaS (Functions as a Service) where maybe you do not need a running system up all the time and you just want a function to be executed as and when.
+Existen muchas otras ofertas de aaS, pero éstas son las dos fundamentales. Puede que haya ofertas de StaaS (almacenamiento como servicio) que le proporcionan la capa de almacenamiento sin tener que preocuparse por el hardware subyacente. O puede que hayas oído hablar de CaaS (Containers as a Service), del que hablaremos más adelante. Otro aaS que trataremos en los próximos 7 días es FaaS (Functions as a Service), en el que puede que no necesites un sistema en funcionamiento todo el tiempo y sólo quieras que una función se ejecute cuando y como quieras.
 
-There are many ways in which the public cloud can provide abstraction layers of control that you wish to pass up and pay for.
+Hay muchas maneras en que la nube pública puede proporcionar capas de abstracción de control que usted desea pasar y pagar.
 
 ![](Images/Day28_Cloud6.png)
 
-### Private Cloud
+### Cloud privado
 
-Having your own data centre is not a thing of the past I would think that this has become a resurgence among a lot of companies that have found the OPEX model difficult to manage as well as skill sets in just using the public cloud.
+Tener su propio centro de datos no es una cosa del pasado, creo que esto se ha convertido en un resurgimiento entre una gran cantidad de empresas que han encontrado el modelo OPEX difícil de manejar, así como conjuntos de habilidades en sólo el uso de la nube pública.
 
-The important thing to note here is the public cloud is likely now going to be your responsibility and it is going to be on your premises.
+Lo importante a tener en cuenta aquí es la nube pública es probable que ahora va a ser su responsabilidad y va a estar en sus instalaciones.
 
-We have some interesting things happening in this space not only with VMware that dominated the virtualisation era and on-premises infrastructure environments. We also have the hyper scalers offering an on-premises version of their public clouds.
+En este espacio están ocurriendo cosas interesantes, no sólo con VMware, que dominó la era de la virtualización y los entornos de infraestructura locales. También tenemos a los hiperescaladores que ofrecen una versión local de sus nubes públicas.
 
 ![](Images/Day28_Cloud7.png)
 
-### Hybrid Cloud
+### Cloud híbrida
 
-To follow on from the Public and Private cloud mentions we also can span across both of these environments to provide flexibility between the two, maybe take advantage of services available in the public cloud but then also take advantage of features and functionality of being on-premises or it might be a regulation that dictates you having to store data locally.
+Para continuar con las menciones a la nube pública y privada, también podemos abarcar ambos entornos para proporcionar flexibilidad entre los dos, tal vez aprovechando los servicios disponibles en la nube pública, pero también aprovechando las características y la funcionalidad de estar en las instalaciones o podría ser una regulación que dicta que tienes que almacenar los datos localmente.
 
 ![](Images/Day28_Cloud8.png)
 
-Putting this all together we have a lot of choices for where we store and run our workloads.
+Si juntamos todo esto, tenemos muchas opciones para elegir dónde almacenar y ejecutar nuestras cargas de trabajo.
 
 ![](Images/Day28_Cloud9.png)
 
-Before we get into a specific hyper-scale, I have asked the power of Twitter where we should go?
+Antes de entrar en una hiperescala específica, he preguntado al poder de Twitter ¿dónde deberíamos ir?
 
 ![](Images/Day28_Cloud10.png)
 
 [Link to Twitter Poll](https://twitter.com/MichaelCade1/status/1486814904510259208?s=20&t=x2n6QhyOXSUs7Pq0itdIIQ)
 
-Whichever one gets the highest percentage we will take a deeper dive into the offerings, I think the important to mention though is that services from all of these are quite similar which is why I say to start with one because I have found that in knowing the foundation of one and how to create virtual machines, set up networking etc. I have been able to go to the others and quickly ramp up in those areas.
+Cualquiera que obtenga el porcentaje más alto vamos a tomar una inmersión más profunda en las ofertas, creo que el importante mencionar sin embargo es que los servicios de todos ellos son bastante similares por lo que digo que empezar con uno porque he encontrado que en el conocimiento de la base de uno y cómo crear máquinas virtuales, configurar la red, etc . He sido capaz de ir a los otros y rápidamente la rampa en esas áreas.
 
-Either way, I am going to share some great **FREE** resources that cover all three of the hyper scalers.
+De cualquier manera, voy a compartir algunos recursos **GRATIS** que cubren los tres hiperescaladores.
 
-I am also going to build out a scenario as I have done in the other sections where we can build something as we move through the days.
+También voy a construir un escenario como lo he hecho en las otras secciones donde podemos construir algo a medida que avanzamos a través de los días.
 
-## Resources
+## Recursos
 
 - [Hybrid Cloud and MultiCloud](https://www.youtube.com/watch?v=qkj5W98Xdvw)
 - [Microsoft Azure Fundamentals](https://www.youtube.com/watch?v=NKEFWyqJ5XA&list=WL&index=130&t=12s)
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-See you on [Day 29](day29.md)
+Nos vemos en el [Día 29](day29.md).

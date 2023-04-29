@@ -1,131 +1,131 @@
-## Microsoft Azure Fundamentals
+## Fundamentos de Microsoft Azure
 
-Before we get going, the winner of the Twitter poll was Microsoft Azure, hence the title of the page. It was close and also quite interesting to see the results come in over the 24 hours.
+Antes de empezar, el ganador de la encuesta de Twitter fue Microsoft Azure, de ahí el título de la página. Ha estado reñido y también ha sido muy interesante ver los resultados a lo largo de las 24 horas.
 
 ![](Images/Day29_Cloud1.png)
 
-I would say in terms of covering this topic is going to give me a better understanding and update around the services available on Microsoft Azure, I lean towards Amazon AWS when it comes to my day today. I have however left resources I had lined up for all three of the major cloud providers.
+Yo diría que en términos de cubrir este tema me va a dar una mejor comprensión y actualización en torno a los servicios disponibles en Microsoft Azure, me inclino hacia Amazon AWS cuando se trata de mi día a día. Sin embargo, he dejado recursos que había alineado para los tres principales proveedores de nube.
 
-I do appreciate that there are more and the poll only included these 3 and in particular, there were some comments about Oracle Cloud. I would love to hear more about other cloud providers being used out in the wild.
+Me doy cuenta de que hay más y la encuesta sólo incluía estos 3 y, en particular, hubo algunos comentarios sobre Oracle Cloud. Me encantaría saber más acerca de otros proveedores de nube que se utilizan, podéis dejar comentarios.
 
-### The Basics
+### Lo básico
 
-- Provides public cloud services
-- Geographically distributed (60+ Regions worldwide)
-- Accessed via the internet and/or private connections
-- Multi-tenant model
-- Consumption-based billing - (Pay as you go | Pay as you grow)
-- A large number of service types and offerings for different requirements.
+- Proporciona servicios de nube pública
+- Distribuidos geográficamente (más de 60 regiones en todo el mundo)
+- Acceso a través de Internet y/o conexiones privadas
+- Modelo multiinquilino
+- Facturación basada en el consumo - Pay as you go (Pague a medida que avanza) | Pay as you grow (Pague a medida que crece)
+- Un gran número de tipos de servicio y ofertas para diferentes requisitos.
 
-- [Microsoft Azure Global Infrastructure](https://infrastructuremap.microsoft.com/explore)
+[Microsoft Azure Global Infrastructure](https://infrastructuremap.microsoft.com/explore)
 
-As much as we spoke about SaaS and Hybrid Cloud we are not planning on covering those topics here.
+Aunque ya hemos hablado de SaaS y de la nube híbrida, no vamos a tratar esos temas aquí.
 
-The best way to get started and follow along is by clicking the link, which will enable you to spin up a [Microsoft Azure Free Account](https://azure.microsoft.com/en-gb/free/)
+La mejor manera de empezar es haciendo clic en el siguiente enlace que permite crear una [Cuenta gratuita de Microsoft Azure](https://azure.microsoft.com/en-gb/free/)
 
-### Regions
+### Regiones
 
-I linked the interactive map above, but we can see the image below the breadth of regions being offered in the Microsoft Azure platform worldwide.
+He enlazado el mapa interactivo más arriba, pero podemos ver en la imagen de abajo la amplitud de regiones que se ofrecen en la plataforma Microsoft Azure en todo el mundo.
 
 ![](Images/Day29_Cloud2.png)
-_image taken from [Microsoft Docs - 01/05/2021](https://docs.microsoft.com/en-us/azure/networking/microsoft-global-network)_
+_imagen tomada de [Microsoft Docs - 01/05/2021](https://docs.microsoft.com/en-us/azure/networking/microsoft-global-network)_
 
-You will also see several "sovereign" clouds meaning they are not linked or able to speak to the other regions, for example, these would be associated with governments such as the `AzureUSGovernment` also `AzureChinaCloud` and others.
+También verás varias nubes "soberanas", lo que significa que no están vinculadas o no pueden hablar con las otras regiones, por ejemplo, éstas estarían asociadas con gobiernos como `AzureUSGovernment`, `AzureChinaCloud` y otras.
 
-When we are deploying our services within Microsoft Azure we will choose a region for almost everything. However, it is important to note that not every service is available in every region. You can see [Products available by region](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=all) at the time of my writing this that in West Central US we cannot use Azure Databricks.
+Cuando estemos desplegando nuestros servicios dentro de Microsoft Azure elegiremos una región para casi todo. Sin embargo, es importante tener en cuenta que no todos los servicios están disponibles en todas las regiones. Puedes ver [Productos disponibles por región](https://azure.microsoft.com/en-us/global-infrastructure/services/?products=all) en el momento de escribir esto que en West Central US no podemos usar Azure Databricks.
 
-I also mentioned "almost everything" above, there are certain services that are linked to the region such as Azure Bot Services, Bing Speech, Azure Virtual Desktop, Static Web Apps, and some more.
+También se mencionó arriba que hay ciertos servicios que están ligados a la región como Azure Bot Services, Bing Speech, Azure Virtual Desktop, Static Web Apps, y algunos más.
 
-Behind the scenes, a region may be made up of more than one data centre. These will be referred to as Availability Zones.
+Entre bastidores, una región puede estar formada por más de un centro de datos. Estos se denominarán Zonas de Disponibilidad.
 
-In the below image you will see and again this is taken from the Microsoft official documentation it describes what a region is and how it is made up of Availability Zones. However not all regions have multiple Availability Zones.
+En la siguiente imagen, extraída de la documentación oficial de Microsoft, se describe qué es una región y cómo se compone de zonas de disponibilidad. Sin embargo no todas las regiones tienen múltiples Zonas de Disponibilidad.
 
 ![](Images/Day29_Cloud3.png)
 
-The Microsoft Documentation is very good, and you can read up more on [Regions and Availability Zones](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview) here.
+La documentación de Microsoft es muy buena, y puedes obtener mucha más información sobre [Regiones y zonas de disponibilidad](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview).
 
-### Subscriptions
+### Suscripciones
 
-Remember we mentioned that Microsoft Azure is a consumption model cloud you will find that all major cloud providers follow this model.
+Recuerda que mencionamos que Microsoft Azure es una nube de modelo de consumo que encontrará que todos los principales proveedores de nube siguen este modelo.
 
-If you are an Enterprise then you might want or have an Enterprise Agreement set up with Microsoft to enable your company to consume these Azure Services.
+Si tienes una empresa, entonces es posible que desee tener un acuerdo de empresa establecido con Microsoft para permitir servicios especializados de Azure.
 
-If you are like me and you are using Microsoft Azure for education then we have a few other options.
+Si usted es como yo y está utilizando Microsoft Azure para la educación, entonces tenemos algunas otras opciones.
 
-We have the [Microsoft Azure Free Account](https://azure.microsoft.com/en-gb/free/) which generally gives you several free cloud credits to spend in Azure over some time.
+Tenemos la [Cuenta gratuita de Microsoft Azure](https://azure.microsoft.com/en-gb/free/) que generalmente te da varios créditos de nube gratuitos para gastar en Azure durante algún tiempo.
 
-There is also the ability to use a Visual Studio subscription which gives you maybe some free credits each month alongside your annual subscription to Visual Studio, this was commonly known as the MSDN years ago. [Visual Studio](https://azure.microsoft.com/en-us/pricing/member-offers/credit-for-visual-studio-subscribers/)
+También existe la posibilidad de utilizar una suscripción a Visual Studio que te da algunos créditos gratuitos cada mes junto con tu suscripción anual a Visual Studio, esto era comúnmente conocido como MSDN hace años. [Visual Studio](https://azure.microsoft.com/en-us/pricing/member-offers/credit-for-visual-studio-subscribers/)
 
-Then finally there is the hand over a credit card and have a pay as you go, model. [Pay-as-you-go](https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/)
+Por último, está el modelo de pago por uso con tarjeta de crédito. [Pago por uso](https://azure.microsoft.com/en-us/pricing/purchase-options/pay-as-you-go/)
 
-A subscription can be seen as a boundary between different subscriptions potentially cost centres but completely different environments. A subscription is where the resources are created.
+Una suscripción puede verse como un límite entre diferentes suscripciones potencialmente centros de costes pero entornos completamente diferentes. Una suscripción es donde se crean los recursos.
 
-### Management Groups
+### Grupos de gestión
 
-Management groups give us the ability to segregate control across our Azure Active Directory (AD) or our tenant environment. Management groups allow us to control policies, Role Based Access Control (RBAC), and budgets.
+Los grupos de gestión nos dan la capacidad de segregar el control a través de nuestro Azure Active Directory (AD) o nuestro entorno de inquilinos. Los grupos de gestión nos permiten controlar las políticas, el control de acceso basado en roles (RBAC) y los presupuestos.
 
-Subscriptions belong to these management groups so you could have many subscriptions in your Azure AD Tenant, these subscriptions then can also control policies, RBAC, and budgets.
+Las suscripciones pertenecen a estos grupos de gestión por lo que podría tener muchas suscripciones en su Azure AD Tenant, estas suscripciones a continuación, también puede controlar las políticas, RBAC, y los presupuestos.
 
-### Resource Manager and Resource Groups
+### Administrador de recursos y grupos de recursos
 
-#### Azure Resource Manager
+#### Gestor de Recursos Azure
 
-- JSON based API that is built on resource providers.
-- Resources belong to a resource group and share a common life cycle.
-- Parallelism
-- JSON-Based deployments are declarative, idempotent and understand dependencies between resources to govern creation and order.
+- API basada en JSON que se basa en proveedores de recursos.
+- Los recursos pertenecen a un grupo de recursos y comparten un ciclo de vida común.
+- Paralelismo
+- Los despliegues basados en JSON son declarativos, idempotentes y comprenden las dependencias entre recursos para gobernar la creación y el orden.
 
-#### Resource Groups
+#### Grupos de recursos
 
-- Every Azure Resource Manager resource exists in one and only one resource group!
-- Resource groups are created in a region that can contain resources from outside the region.
-- Resources can be moved between resource groups
-- Resource groups are not walled off from other resource groups, there can be communication between resource groups.
-- Resource Groups can also control policies, RBAC, and budgets.
+- Cada recurso de Azure Resource Manager existe en uno y sólo un grupo de recursos.
+- Los grupos de recursos se crean en una región que puede contener recursos de fuera de la región.
+- Los recursos pueden moverse entre grupos de recursos
+- Los grupos de recursos no están aislados de otros grupos de recursos, puede haber comunicación entre grupos de recursos.
+- Los grupos de recursos también pueden controlar políticas, RBAC y presupuestos.
 
-### Hands-On
+### Manos a la obra
 
-Let's go and get connected and make sure we have a **Subscription** available to us. We can check our simple out of the box **Management Group**, We can then go and create a new dedicated **Resource Group** in our preferred **Region**.
+Vamos a conectarnos y a asegurarnos de que tenemos una **Suscripción** disponible. Podemos marcar nuestro simple **Grupo de Gestión**, podemos ir y crear un nuevo **Grupo de Recursos** dedicado en nuestra **Región** preferida.
 
-When we first login to our [Azure portal](https://portal.azure.com/#home) you will see at the top the ability to search for resources, services and docs.
+La primera vez que iniciemos sesión en nuestro [portal Azure](https://portal.azure.com/#home) veremos en la parte superior la posibilidad de buscar recursos, servicios y documentos.
 
 ![](Images/Day29_Cloud4.png)
 
-We are going to first look at our subscription, you will see here that I am using a Visual Studio Professional subscription which gives me some free credit each month.
+Vamos a ver primero nuestra suscripción, verás aquí que estoy usando una suscripción Visual Studio Professional que me da algo de crédito gratis cada mes.
 
 ![](Images/Day29_Cloud5.png)
 
-If we go into that you will get a wider view and a look into what is happening or what can be done with the subscription, we can see billing information with control functions on the left where you can define IAM Access Control and further down there are more resources available.
+Si entramos en ella obtendremos una visión más amplia a lo que está sucediendo y a lo que se puede hacer con la suscripción, podemos ver información de facturación con funciones de control a la izquierda donde se puede definir el Control de Acceso IAM y más abajo hay más recursos disponibles.
 
 ![](Images/Day29_Cloud6.png)
 
-There might be a scenario where you have multiple subscriptions and you want to manage them all under one, this is where management groups can be used to segregate responsibility groups. In mine below, you can see there is just my tenant root group with my subscription.
+Podría haber un escenario en el que tienes varias suscripciones y deseas gestionarla todas bajo una cuenta, aquí puedes utilizar los grupos de gestión para segregar por grupos de responsabilidad. Abajo puedes ver que hay sólo un grupo raíz de inquilino con la suscripción.
 
-You will also see in the previous image that the parent management group is the same id used on the tenant root group.
+También verás en la imagen anterior que el grupo de gestión padre es el mismo ID utilizado en el grupo raíz del inquilino.
 
 ![](Images/Day29_Cloud7.png)
 
-Next up we have Resource groups, this is where we combine our resources and we can easily manage them in one place. I have a few created for various other projects.
+A continuación tenemos los grupos de recursos, aquí es donde combinamos nuestros recursos y podemos gestionarlos fácilmente en un solo lugar. Hay algunos creados para otros proyectos.
 
 ![](Images/Day29_Cloud8.png)
 
-With what we are going to be doing over the next few days, we want to create our resource group. This is easily done in this console by hitting the create option on the previous image.
+En los próximos días vamos a crear un grupo de recursos. Esto se hace fácilmente en esta consola pulsando la opción crear de la imagen anterior.
 
 ![](Images/Day29_Cloud9.png)
 
-A validation step takes place and then you have the chance to review your creation and then create. You will also see down the bottom "Download a template for automation" this allows us to grab the JSON format so that we can perform this simple in an automated fashion later on if we wanted, we will cover this later on as well.
+Se produce un paso de validación y luego tienes la oportunidad de revisar tu creación antes de crear. También verás abajo "Descargar una plantilla para automatización" esto nos permite tomar en formato JSON una plantilla que podremos utilizar de forma automatizada más adelante, lo veremos más adelante también.
 
 ![](Images/Day29_Cloud10.png)
 
-Hit create, then in our list of resource groups, we now have our "90DaysOfDevOps" group ready for what we do in the next session.
+Pulsamos crear. Ahora en nuestra lista de grupos de recursos tenemos nuestro grupo "90DaysOfDevOps" listo para lo que hagamos en las siguientes sesiones.
 
 ![](Images/Day29_Cloud11.png)
 
-## Resources
+## Recursos
 
 - [Hybrid Cloud and MultiCloud](https://www.youtube.com/watch?v=qkj5W98Xdvw)
 - [Microsoft Azure Fundamentals](https://www.youtube.com/watch?v=NKEFWyqJ5XA&list=WL&index=130&t=12s)
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-See you on [Day 30](day30.md)
+Nos vemos en el [Día 30](day30.md)

@@ -56,6 +56,8 @@ To test this before putting this into our main application, I created a new dire
 
 We now need those keys, tokens and secrets we gathered from the Twitter developer portal. We are going to set these in our environment variables. This will depend on the OS you are running:
 
+I have had a few questions regarding environment variables, here is a blog post that goes into more detail so you can understand what is happening. [How To Set Environment Variables](https://www.twilio.com/blog/2017/01/how-to-set-environment-variables.html)
+
 Windows
 
 ```

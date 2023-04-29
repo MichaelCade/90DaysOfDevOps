@@ -77,14 +77,14 @@ The ones we want to learn more about are the build, install and run.
 ![](Images/Day10_Go8.png)
 
 - `go run` - This command compiles and runs the main package comprised of the .go files specified on the command line. The command is compiled to a temporary folder.
-- `go build` - To compile packages and dependencies, compile the package in the current directory. If the `main` package, will place the executable in the current directory if not then it will place the executable in the `pkg` folder. `go build` also enables you to build an executable file for any Go Supported OS platform.
-- `go install` - The same as go build but will place the executable in the `bin` folder
+- `go build` - To compile packages and dependencies, compile the package in the current directory. If Go project contains a `main` package, it will create and place the executable in the current directory if not then it will put the executable in the `pkg` folder, and that can be imported and used by other Go programs. `go build` also enables you to build an executable file for any Go Supported OS platform.
+- `go install` - The same as go build but will place the executable in the `bin` folder.
 
 We have run through go build and go run but feel free to run through them again here if you wish, `go install` as stated above puts the executable in our bin folder.
 
 ![](Images/Day10_Go9.png)
 
-Hopefully, if you are following along you are watching one of the playlists or videos below, I am taking bits of all of these and translating these into my notes so that I can understand the foundational knowledge of the Golang language. The resources below are likely going to give you a much better understanding of a lot of the areas you need overall but I am trying to document the 7 days or 7 hours worth of the journey with interesting things that I have found.
+Hopefully, if you are following along, you are watching one of the playlists or videos below. I am taking bits of all of these and translating these into my notes so that I can understand the foundational knowledge of the Golang language. The resources below are likely going to give you a much better understanding of a lot of the areas you need overall, but I am trying to document the 7 days or 7 hours worth of the journey with interesting things that I have found.
 
 ## Resources
 

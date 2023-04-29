@@ -44,7 +44,7 @@ Cả hai đều khá dễ đề cài đặt và đều có những cộng đồn
 
 VAGRANTFILE mô tả loại máy chúng ta muốn triển khai. Nó cũng định nghĩa cấu hình và khởi tạo máy này.
 
-Khi nói đến việc lưu các tệp này và sắp xếp các VAGRANTFILE của bạn, tôi có xu hướng đặt chúng vào các thư mục của chúng trong không gian làm việc của mình. Bạn có thể thấy bên dưới giao diện này trên hệ thống của tôi. Hy vọng rằng sau đây, bạn sẽ chơi với Vagrant và thấy sự dễ dàng thay đổi hệ thống, nó cũng tuyệt vời cho lỗ thỏ được gọi là nhảy distro cho Máy tính để bàn Linux.
+Khi nói đến việc lưu các tệp này và sắp xếp các VAGRANTFILE của bạn, tôi có xu hướng đặt chúng vào các thư mục của chúng trong không gian làm việc của mình. Bạn có thể thấy bên dưới giao diện này trên hệ thống của tôi. Hy vọng rằng bạn cũng sẽ thử sử dụng Vagrant và thấy sự dễ dàng khi muốn thay đổi hệ thống, rồi cuối cùng bạn sẽ nghiện vọc vạch các bản distro khác nhau của Linux cho Máy tính để bàn Linux.
 
 ![](../../Days/Images/Day14_Linux1.png)
 
@@ -61,9 +61,9 @@ Vagrant.configure("2") do |config|
 end
 ```
 
-Đây là một VAGRANTFILE đơn giản. Chúng ta muốn nói rằng chúng ta muốn có một box cụ thể, một box có thể là hình ảnh công khai hoặc bản dựng riêng của hệ thống mà bạn đang tìm kiếm. Bạn có thể tìm thấy một danh sách dài các box công khai có sẵn tại đây trong [danh mục công khai của hộp Vagrant](https://app.vagrantup.com/boxes/search)
+Đây là một VAGRANTFILE đơn giản. Chúng ta muốn nói rằng chúng ta muốn có một box cụ thể, một box có thể là hình ảnh công khai hoặc bản dựng riêng của hệ thống mà bạn đang tìm kiếm. Bạn có thể tìm thấy một danh sách dài các box công khai có sẵn tại đây trong [danh mục công khai của Vagrant box](https://app.vagrantup.com/boxes/search)
 
-Dòng tiếp theo, chúng ta nói rằng chúng ta muốn sử dụng một nhà cung cấp cụ thể và trong trường hợp này là `VirtualBox`. Chúng ta cũng muốn bộ nhớ của máy là `8GB` và số lượng CPU là `4`. Theo kinh nghiệm của tôi, bạn có thể sẽ phải thêm dòng sau nếu bạn gặp sự cố hiển thị. Nó sẽ đặt bộ nhớ video thành những gì bạn muốn, tôi sẽ tăng bộ nhớ này lên đến `128MB` nhưng nó hoàn toàn phụ thuộc vào cấu hình hệ thống của bạn.
+Dòng tiếp theo, chúng ta nói rằng chúng ta muốn sử dụng một nhà cung cấp cụ thể và trong trường hợp này là `VirtualBox`. Chúng ta cũng muốn bộ nhớ của máy là `8GB` và số lượng CPU là `4`. Theo kinh nghiệm của tôi, bạn có thể sẽ phải thêm dòng sau nếu bạn gặp sự cố hiển thị. Tôi sẽ tăng bộ nhớ này lên đến `128MB` nhưng nó hoàn toàn phụ thuộc vào cấu hình hệ thống của bạn.
 
 ```ruby
 v.customize ["modifyvm", :id, "--vram", ""]

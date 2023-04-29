@@ -1,181 +1,179 @@
-## Microsoft Azure Storage Models
+## Modelos de almacenamiento de Microsoft Azure
 
-### Storage Services
+### Servicios de almacenamiento
 
-- Azure storage services are provided by storage accounts.
-- Storage accounts are primarily accessed via REST API.
-- A storage account must have a unique name that is part of a DNS name `<Storage Account name>.core.windows.net`
-- Various replication and encryption options.
-- Sits within a resource group
+- Los servicios de almacenamiento de Azure se proporcionan mediante cuentas de almacenamiento.
+- A las cuentas de almacenamiento se accede principalmente a través de la API REST.
+- Una cuenta de almacenamiento debe tener un nombre único que forme parte de un nombre DNS `<Nombre de la cuenta de almacenamiento>.core.windows.net`.
+- Varias opciones de replicación y cifrado.
+- Se encuentra dentro de un grupo de recursos
 
-We can create our storage group by simply searching for Storage Group in the search bar at the top of the Azure Portal.
+Podemos crear nuestro grupo de almacenamiento simplemente buscando Storage Group en la barra de búsqueda de la parte superior del Azure Portal.
 
 ![](Images/Day32_Cloud1.png)
 
-We can then run through the steps to create our storage account remembering that this name needs to be unique and it also needs to be all lower case, with no spaces but can include numbers.
+A continuación, podemos ejecutar los pasos para crear nuestra cuenta de almacenamiento recordando que este nombre tiene que ser único y también tiene que ser todo en minúsculas, sin espacios, pero puede incluir números.
 
 ![](Images/Day32_Cloud2.png)
 
-We can also choose the level of redundancy we would like against our storage account and anything we store here. The further down the list the more expensive option but also the spread of your data.
+También podemos elegir el nivel de redundancia que queremos para nuestra cuenta de almacenamiento y para todo lo que guardemos aquí. Cuanto más abajo de la lista más cara es la opción, pero también la dispersión de sus datos.
 
-Even the default redundancy option gives us 3 copies of our data.
+Incluso la opción de redundancia por defecto nos da 3 copias de nuestros datos.
 
 [Azure Storage Redundancy](https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy)
 
-Summary of the above link down below:
+Resumen del enlace anterior:
 
-- **Locally-redundant storage** - replicates your data three times within a single data centre in the primary region.
-- **Geo-redundant storage** - copies your data synchronously three times within a single physical location in the primary region using LRS.
-- **Zone-redundant storage** - replicates your Azure Storage data synchronously across three Azure availability zones in the primary region.
-- **Geo-zone-redundant storage** - combines the high availability provided by redundancy across availability zones with protection from regional outages provided by geo-replication. Data in a GZRS storage account is copied across three Azure availability zones in the primary region and is also replicated to a second geographic region for protection from regional disasters.
+- **Almacenamiento redundante local**: replica los datos tres veces en un único centro de datos de la región primaria.
+- **Almacenamiento georredundante**: copia los datos de forma sincrónica tres veces en una única ubicación física de la región principal mediante LRS.
+- **Almacenamiento redundante en zonas**: replica los datos de Azure Storage de forma sincrónica en tres zonas de disponibilidad de Azure en la región principal.
+- **Almacenamiento georredundante**: combina la alta disponibilidad proporcionada por la redundancia entre zonas de disponibilidad con la protección contra interrupciones regionales proporcionada por la georreplicación. Los datos de una cuenta de almacenamiento GZRS se copian en tres zonas de disponibilidad de Azure en la región principal y también se replican en una segunda región geográfica para protegerlos de desastres regionales.
 
 ![](Images/Day32_Cloud3.png)
 
-Just moving back up to performance options. We have Standard and Premium to choose from. We have chosen Standard in our walkthrough but premium gives you some specific options.
+Volviendo a las opciones de rendimiento. Podemos elegir entre Estándar y Premium. Hemos elegido Estándar en el tutorial, pero Premium te da algunas opciones específicas.
 
 ![](Images/Day32_Cloud4.png)
 
-Then in the drop-down, you can see we have these three options to choose from.
+A continuación, en el menú desplegable, puedes ver que tenemos estas tres opciones para elegir.
 
 ![](Images/Day32_Cloud5.png)
 
-There are lots more advanced options available for your storage account but for now, we do not need to get into these areas. These options are around encryption and data protection.
+Hay muchas más opciones avanzadas disponibles para su cuenta de almacenamiento, pero por ahora, no necesitamos entrar en estas áreas. Estas opciones están relacionadas con el cifrado y la protección de datos.
 
-### Managed Disks
+### Discos gestionados
 
-Storage access can be achieved in a few different ways.
+El acceso al almacenamiento puede realizarse de varias formas.
 
-Authenticated access via:
+Acceso autenticado mediante:
+- Una clave compartida para un control total.
+- Firma de acceso compartido para un acceso delegado y granular.
+- Azure Active Directory (cuando esté disponible)
 
-- A shared key for full control.
-- Shared Access Signature for delegated, granular access.
-- Azure Active Directory (Where Available)
+Acceso público:
+- El acceso público también se puede conceder para permitir el acceso anónimo, incluso a través de HTTP.
+- Un ejemplo de esto podría ser alojar contenido básico y archivos en un blob de bloques para que un navegador pueda ver y descargar estos datos.
 
-Public Access:
+Si accede a su almacenamiento desde otro servicio Azure, el tráfico permanece dentro de Azure.
 
-- Public access can also be granted to enable anonymous access including via HTTP.
-- An example of this could be to host basic content and files in a block blob so a browser can view and download this data.
+Cuando se trata del rendimiento del almacenamiento tenemos dos tipos diferentes:
 
-If you are accessing your storage from another Azure service, traffic stays within Azure.
+- **Estándar** - Número máximo de IOPS
+- **Premium** - Número garantizado de IOPS
 
-When it comes to storage performance we have two different types:
+IOPS => Operaciones de entrada/salida por segundo.
 
-- **Standard** - Maximum number of IOPS
-- **Premium** - Guaranteed number of IOPS
+También hay que tener en cuenta la diferencia entre discos no gestionados y gestionados a la hora de elegir el almacenamiento adecuado para la tarea que tenemos.
 
-IOPS => Input/Output operations per sec.
+### Almacenamiento de Máquinas Virtuales
 
-There is also a difference between unmanaged and managed disks to consider when choosing the right storage for the task you have.
+- Los discos del sistema operativo de la máquina virtual suelen almacenarse en un almacenamiento persistente.
+- Algunas cargas de trabajo sin estado no requieren almacenamiento persistente y la reducción de la latencia es un beneficio mayor.
+- Hay máquinas virtuales que soportan discos efímeros gestionados por el SO que se crean en el almacenamiento local del nodo.
+  - Estos también se pueden utilizar con VM Scale Sets.
 
-### Virtual Machine Storage
+Los discos gestionados son un almacenamiento en bloque duradero que puede utilizarse con las máquinas virtuales Azure. Pueden tener Ultra Disk Storage, Premium SSD, Standard SSD o Standard HDD. También tienen algunas características.
 
-- Virtual Machine OS disks are typically stored on persistent storage.
-- Some stateless workloads do not require persistent storage and reduced latency is a larger benefit.
-- There are VMs that support ephemeral OS-managed disks that are created on the node-local storage.
-  - These can also be used with VM Scale Sets.
+- Compatibilidad con instantáneas e imágenes
+- Movimiento sencillo entre SKUs
+- Mejor disponibilidad cuando se combina con conjuntos de disponibilidad
+- Facturación basada en el tamaño del disco, no en el almacenamiento consumido.
 
-Managed Disks are durable block storage that can be used with Azure Virtual Machines. You can have Ultra Disk Storage, Premium SSD, Standard SSD, or Standard HDD. They also carry some characteristics.
+## Almacenamiento de archivos
 
-- Snapshot and Image support
-- Simple movement between SKUs
-- Better availability when combined with availability sets
-- Billed based on disk size not on consumed storage.
+- **Cool Tier** - Está disponible para bloquear y anexar blobs.
+  - Menor coste de almacenamiento
+  - Mayor coste de transacción.
+- **Archive Tier** - Está disponible para bloques BLOB.
+  - Se configura para cada BLOB.
+  - Coste más bajo, latencia de recuperación de datos más larga.
+  - Misma durabilidad de datos que el almacenamiento Azure normal.
+  - Se pueden habilitar niveles de datos personalizados según sea necesario.
 
-## Archive Storage
+### Compartir Archivos
 
-- **Cool Tier** - A cool tier of storage is available to block and append blobs.
-  - Lower Storage cost
-  - Higher transaction cost.
-- **Archive Tier** - Archive storage is available for block BLOBs.
-  - This is configured on a per-BLOB basis.
-  - Cheaper cost, Longer Data retrieval latency.
-  - Same Data Durability as regular Azure Storage.
-  - Custom Data tiering can be enabled as required.
-
-### File Sharing
-
-From the above creation of our storage account, we can now create file shares.
+A partir de la creación anterior de nuestra cuenta de almacenamiento podemos crear archivos compartidos.
 
 ![](Images/Day32_Cloud6.png)
 
-This will provide SMB2.1 and 3.0 file shares in Azure.
+Esto proporcionará recursos compartidos de archivos SMB2.1 y 3.0 en Azure.
 
-Useable within the Azure and externally via SMB3 and port 445 open to the internet.
+Utilizable dentro de Azure y externamente a través de SMB3 y el puerto 445 abierto a Internet.
 
-Provides shared file storage in Azure.
+Proporciona almacenamiento compartido de archivos en Azure.
 
-Can be mapped using standard SMB clients in addition to REST API.
+Se puede asignar utilizando clientes SMB estándar además de la API REST.
 
-You might also notice [Azure NetApp Files](https://vzilla.co.uk/vzilla-blog/azure-netapp-files-how) (SMB and NFS)
+Consultar [Azure NetApp Files](https://vzilla.co.uk/vzilla-blog/azure-netapp-files-how) (SMB y NFS).
 
-### Caching & Media Services
+### Almacenamiento en caché y servicios multimedia
 
-The Azure Content Delivery Network provides a cache of static web content with locations throughout the world.
+Azure Content Delivery Network proporciona una caché de contenido web estático con ubicaciones en todo el mundo.
 
-Azure Media Services, provides media transcoding technologies in addition to playback services.
+Azure Media Services, proporciona tecnologías de transcodificación de medios además de servicios de reproducción.
 
-## Microsoft Azure Database Models
+## Modelos de bases de datos de Microsoft Azure
 
-Back on [Day 28](day28.md), we covered various service options. One of these was PaaS (Platform as a Service) where you abstract a large amount of the infrastructure and operating system away and you are left with the control of the application or in this case the database models.
+En el [Día 28](day28.md) vimos varias opciones de servicio. Una de ellas era PaaS (Platform as a Service), en la que se abstrae gran parte de la infraestructura y el sistema operativo y se deja el control de la aplicación o, en este caso, de los modelos de bases de datos.
 
-### Relational Databases
+### Bases de datos relacionales
 
-Azure SQL Database provides a relational database as a service based on Microsoft SQL Server.
+Azure SQL Database proporciona una base de datos relacional como servicio basada en Microsoft SQL Server.
 
-This is SQL running the latest SQL branch with database compatibility level available where a specific functionality version is required.
+Se trata de SQL que ejecuta la última rama de SQL con un nivel de compatibilidad de base de datos disponible cuando se requiere una versión de funcionalidad específica.
 
-There are a few options on how this can be configured, we can provide a single database that provides one database in the instance, while an elastic pool enables multiple databases that share a pool of capacity and collectively scale.
+Hay algunas opciones sobre cómo esto se puede configurar, podemos proporcionar una única base de datos que proporciona una base de datos en la instancia, mientras que un pool elástico permite múltiples bases de datos que comparten un pool de capacidad y escalan colectivamente.
 
-These database instances can be accessed like regular SQL instances.
+Se puede acceder a estas instancias de base de datos como a instancias SQL normales.
 
-Additional managed offerings for MySQL, PostgreSQL and MariaDB.
+Ofertas gestionadas adicionales para MySQL, PostgreSQL y MariaDB.
 
 ![](Images/Day32_Cloud7.png)
 
 ### NoSQL Solutions
 
-Azure Cosmos DB is a scheme agnostic NoSQL implementation.
+Azure Cosmos DB es una implementación NoSQL de esquema agnóstico.
 
 99.99% SLA
 
-Globally distributed database with single-digit latencies at the 99th percentile anywhere in the world with automatic homing.
+Base de datos distribuida globalmente con latencias de un solo dígito en el porcentaje 99 en cualquier parte del mundo con homing automático.
 
-Partition key leveraged for the partitioning/sharding/distribution of data.
+Partition key aprovechada para la partición/sharding/distribución de datos.
 
-Supports various data models (documents, key-value, graph, column-friendly)
+Admite varios modelos de datos (documentos, clave-valor, gráfico, amigable con las columnas).
 
-Supports various APIs (DocumentDB SQL, MongoDB, Azure Table Storage and Gremlin)
+Soporta varias APIs (DocumentDB SQL, MongoDB, Azure Table Storage y Gremlin)
 
 ![](Images/Day32_Cloud9.png)
 
-Various consistency models are available based around [CAP theorem](https://en.wikipedia.org/wiki/CAP_theorem).
+Existen varios modelos de consistencia basados en el [teorema CAP](https://es.wikipedia.org/wiki/Teorema_CAP).
 
 ![](Images/Day32_Cloud8.png)
 
-### Caching
+### Caché
 
-Without getting into the weeds about caching systems such as Redis I wanted to include that Microsoft Azure has a service called Azure Cache for Redis.
+Sin entrar en la maleza sobre los sistemas de almacenamiento en caché como Redis quería incluir que Microsoft Azure tiene un servicio llamado Azure Cache para Redis.
 
-Azure Cache for Redis provides an in-memory data store based on the Redis software.
+Azure Cache for Redis proporciona un almacén de datos en memoria basado en el software Redis.
 
-- It is an implementation of the open-source Redis Cache.
-  - A hosted, secure Redis cache instance.
-  - Different tiers are available
-  - Application must be updated to leverage the cache.
-  - Aimed for an application that has high read requirements compared to writes.
-  - Key-Value store based.
+- Se trata de una implementación de la caché Redis de código abierto.
+  - Una instancia de caché Redis alojada y segura.
+  - Diferentes niveles disponibles
+  - La aplicación debe actualizarse para aprovechar la caché.
+  - Dirigido a aplicaciones que requieren más lecturas que escrituras.
+  - Basado en almacén clave-valor.
 
 ![](Images/Day32_Cloud10.png)
 
-I appreciate the last few days have been a lot of note-taking and theory on Microsoft Azure but I wanted to cover the building blocks before we get into the hands-on aspects of how these components come together and work.
+Los últimos días han sido un montón de teorías y tomar notas sobre Microsoft Azure, pero ahora ya tenemos cubierto los bloques de construcción antes de entrar en los aspectos prácticos de cómo estos componentes se unen y trabajan.
 
-We have one more bit of theory remaining around networking before we can get some scenario-based deployments of services up and running. We also want to take a look at some of the different ways we can interact with Microsoft Azure vs just using the portal that we have been using so far.
+Solo queda un poco más de teoría sobre redes para que podamos ponernos en marcha con despliegues de servicios basados en escenarios reales. También echaremos un vistazo a algunas de las diferentes formas en que podemos interactuar con Microsoft Azure.
 
-## Resources
+## Recursos
 
 - [Hybrid Cloud and MultiCloud](https://www.youtube.com/watch?v=qkj5W98Xdvw)
 - [Microsoft Azure Fundamentals](https://www.youtube.com/watch?v=NKEFWyqJ5XA&list=WL&index=130&t=12s)
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-See you on [Day 33](day33.md)
+Nos vemos en el [Día  33](day33.md).
