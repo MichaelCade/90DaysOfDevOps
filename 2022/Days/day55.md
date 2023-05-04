@@ -102,7 +102,7 @@ We also have two other types of volumes that we will not get into detail on but 
 
 In the session yesterday we walked through creating a stateless application, here we want to do the same but we want to use our minikube cluster to deploy a stateful workload.
 
-A recap on the minikube command we are using to have the capability and addons to use persistence is `minikube start --addons volumesnapshots,csi-hostpath-driver --apiserver-port=6443 --container-runtime=containerd -p mc-demo --Kubernetes-version=1.21.2`
+A recap on the minikube command we are using to have the capability and addons to use persistence is `minikube start --addons volumesnapshots,csi-hostpath-driver --apiserver-port=6443 --container-runtime=containerd -p mc-demo --kubernetes-version=1.21.2`
 
 This command uses the CSI-hostpath-driver which is what gives us our storageclass, something I will show later.
 
@@ -208,7 +208,7 @@ We can then create this in our ingress namespace with `kubectl create -f Pacman-
 
 ![](Images/Day55_Kubernetes15.png)
 
-Then if we run `kubectl get ingress -n Pacman
+Then if we run `kubectl get ingress -n Pacman`
 
 ![](Images/Day55_Kubernetes16.png)
 
