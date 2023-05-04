@@ -17,7 +17,7 @@ Chúng ta sẽ sử dụng và giải thích về docker nhưng cũng sẽ đề
 Docker là một khung phần mềm để xây dựng, chạy, quản lý các vùng chứa. Thuật ngữ "docker" có thể đề cập đến các công cụ (các lệnh và deamon)
  hoặc định dạng tệp Dockerfile. 
 
-Chúng ta sẽ sử dọng Docker Personal trong tuần này, nó sẽ được miễn phí cho mục đích học tập. Tất cả những chức năng cần thiết mà chúng ta cần trang bị để có kiến thức nền tảng tốt về container và công cụ xung quanh đều có trong Docker Personal.
+Chúng ta sẽ sử dụng Docker Personal trong tuần này, nó sẽ được miễn phí cho mục đích học tập. Tất cả những chức năng cần thiết mà chúng ta cần trang bị để có kiến thức nền tảng tốt về container và công cụ xung quanh đều có trong Docker Personal.
 
 Có lẽ đáng để chia nhỏ một số công cụ "docker" mà chúng ta sẽ sử dụng và cách chúng được sử dụng. Thuật ngữ docker có thể đề cập đến dự án docker nói chung, đây là một nền tảng dành cho các nhà phát triển và quản trị viên để phát triển, vận chuyển và chạy các ứng dụng. Nó cũng có thể nhắn tới process docker daemon chạy trên máy chủ quản lý image và container, hay còn được gọi là Docker Engine.
 

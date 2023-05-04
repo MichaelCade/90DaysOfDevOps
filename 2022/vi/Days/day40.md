@@ -12,11 +12,11 @@ id: 1049044
 
 Khám phá GitHub | GitLab | BitBucket
 
-Hôm nay tôi muốn đề cập đến một số dịch vụ dựa trên git mà có lẽ tất cả chúng ta đều đã nghe nói đến và mong rằng chúng ta cũng sử dụng hàng ngày.
+Hôm nay tôi muốn đề cập đến một số dịch vụ dựa trên git mà có lẽ tất cả chúng ta đều đã nghe nói đến và có thể đang sử dụng hàng ngày.
 
-Sau đó, chúng ta sẽ sử dụng một số kiến thức trong buổi trước của mình để di chuyển các bản sao dữ liệu của chúng ta sang từng dịch vụ chính.
+Sau đó, chúng ta sẽ sử dụng một số kiến thức trong buổi trước của mình để.
 
-Tôi gọi phần này là "Mạng xã hội cho mã" hãy để tôi giải thích tại sao?
+Tôi gọi phần này là "Mạng xã hội cho mã" và hãy để tôi giải thích tại sao?
 
 ### GitHub
 
@@ -83,7 +83,7 @@ Nếu cuộn xuống thêm một chút, bạn cũng sẽ thấy rằng chúng ta
 
 Ở đầu trang, bạn sẽ thấy một danh sách các tab. Chúng có thể khác nhau và chúng có thể được tuỳ biến để chỉ hiển thị những thứ bạn yêu cầu. Bạn sẽ thấy ở đây tôi không sử dụng tất cả những thứ này và nên loại bỏ chúng để đảm bảo toàn bộ kho lưu trữ gọn gàng.
 
-Đầu tiên, chúng ta có tab code mà chúng ta vừa thảo luận nhưng các tab này sẽ giúp điều hướng qua trong kho lưu trữ, điều này cực kỳ hữu ích để chúng ta có thể chuyển đổi giữa các phần một cách nhanh chóng và dễ dàng. Tiếp theo, chúng tôi có tab Issues.
+Đầu tiên, chúng ta có tab code mà chúng ta vừa thảo luận nhưng các tab này sẽ giúp điều hướng qua trong kho lưu trữ, điều này cực kỳ hữu ích để chúng ta có thể chuyển đổi giữa các phần một cách nhanh chóng và dễ dàng. Tiếp theo, chúng ta có tab Issues.
 
 Issues cho phép bạn theo dõi công việc của mình trên GitHub, nơi quá trình phát triển diễn ra. Trong kho lưu trữ cụ thể này, bạn có thể thấy tôi có một số issue tập trung vào việc thêm sơ đồ hoặc lỗi chính tả nhưng chúng ta cũng có yêu cầu có phiên bản tiếng Trung cho kho lưu trữ.
 
@@ -93,7 +93,7 @@ Nếu đây là một kho lưu trữ mã thì đây là nơi tuyệt vời để
 
 Tab tiếp theo là Pull Requests, Pull Requests cho phép bạn thông báo cho người khác về những thay đổi mà bạn đã đẩy tới một nhánh trong kho lưu trữ. Đây là nơi ai đó có thể đã phân nhánh kho lưu trữ của bạn, thực hiện các thay đổi như sửa lỗi hoặc cải tiến tính năng hoặc chỉ lỗi đánh máy.
 
-Chúng tôi sẽ đề cập đến fork sau.
+Chúng ta sẽ đề cập đến fork sau.
 
 ![](../../Days/Images/Day40_Git11.png)
 
@@ -115,7 +115,7 @@ Tôi biết rằng issues có vẻ là một nơi tốt để ghi lại các yê
 
 ![](../../Days/Images/Day40_Git15.png)
 
-Không có trong dự án này nhưng có tab Security để đảm bảo rằng những contributors biết cách xử lý một số tác vụ nhất định, chúng tôi có thể xác định một policy tại đây cũng như các tiện ích quét mã để đảm bảo mã của bạn không chứa các biến môi trường bí mật.
+Không có trong dự án này nhưng có tab Security để đảm bảo rằng những contributors biết cách xử lý một số tác vụ nhất định, chúng ta có thể xác định một policy tại đây cũng như các tiện ích quét mã để đảm bảo mã của bạn không chứa các biến môi trường bí mật.
 
 ![](../../Days/Images/Day40_Git16.png)
 
@@ -123,7 +123,7 @@ Không có trong dự án này nhưng có tab Security để đảm bảo rằng
 
 ![](../../Days/Images/Day40_Git17.png)
 
-Cuối cùng, chúng tôi có tab Settings, đây là nơi chúng tôi có thể xem chi tiết cách chúng tôi chạy kho lưu trữ của mình, tôi hiện là người bảo trì duy nhất của kho lưu trữ nhưng chúng tôi có thể chia sẻ trách nhiệm này tại đây. Chúng ta có thể định nghĩa tích hợp và các tác vụ khác tương tự như vậy tại đây.
+Cuối cùng, chúng ta có tab Settings, đây là nơi chúng ta có thể xem chi tiết cách chúng ta chạy kho lưu trữ của mình, tôi hiện là người bảo trì duy nhất của kho lưu trữ nhưng chúng ta có thể chia sẻ trách nhiệm này tại đây. Chúng ta có thể định nghĩa tích hợp và các tác vụ khác tương tự như vậy tại đây.
 
 ![](../../Days/Images/Day40_Git18.png)
 
@@ -133,73 +133,69 @@ This was a super quick overview of GitHub, I think there are some other areas th
 
 ### Forking
 
-Ta sẽ tìm hiểu thêm về Nguồn mở trong buổi ngày mai nhưng một phần quan trọng của bất kỳ kho lưu trữ mã nào là khả năng cộng tác với cộng đồng. Hãy nghĩ về kịch bản sau: tôi muốn có một bản sao của kho lưu trữ vì tôi muốn thực hiện một số thay đổi, có thể tôi muốn sửa lỗi hoặc có thể tôi muốn thay đổi thứ gì đó để sử dụng nó cho trường hợp sử dụng mà tôi có thể không trường hợp sử dụng dự định cho người bảo trì ban đầu của mã. Đây là những gì chúng tôi gọi là forking một kho lưu trữ. Một ngã ba là một bản sao của một kho lưu trữ. Forking một kho lưu trữ cho phép bạn tự do thử nghiệm các thay đổi mà không ảnh hưởng đến dự án ban đầu.
+Ta sẽ tìm hiểu thêm về Nguồn mở trong buổi ngày mai nhưng một phần quan trọng của bất kỳ kho lưu trữ mã nào là khả năng cộng tác với cộng đồng. Hãy nghĩ về kịch bản sau: tôi muốn có một bản sao của kho lưu trữ vì tôi muốn thực hiện một số thay đổi, có thể tôi muốn sửa lỗi hoặc có thể tôi muốn thay đổi thứ gì đó để sử dụng nó cho trường hợp sử dụng mà tôi có thể không trường hợp sử dụng dự định cho người bảo trì ban đầu của mã. Đây là những gì chúng ta gọi là forking một kho lưu trữ. Một fork là một bản sao của một kho lưu trữ. Forking một kho lưu trữ cho phép bạn tự do thử nghiệm các thay đổi mà không ảnh hưởng đến dự án ban đầu.
 
-Hãy để tôi quay lại trang mở đầu sau khi đăng nhập và xem một trong những kho lưu trữ được đề xuất đó.
-
-I am going to get more into Open-Source in the session tomorrow but a big part of any code repository is the ability to collaborate with the community. Let's think of the scenario I want a copy of a repository because I want to make some changes to it, maybe I want to fix a bug or maybe I want to change something to use it for a use case that I have that was maybe not the intended use case for the original maintainer of the code. This is what we would call forking a repository. A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
+Hãy quay lại trang mở đầu sau khi đăng nhập và xem một trong những kho lưu trữ được đề xuất đó.
 
 ![](../../Days/Images/Day40_Git19.png)
 
 Nếu chúng ta nhấp vào kho lưu trữ đó, chúng ta sẽ có giao diện giống như kho lưu trữ 90DaysOfDevOps.
 
-
 ![](../../Days/Images/Day40_Git20.png)
 
-If we notice below we have 3 options, we have watch, fork and star.
+Nếu để ý bên dưới, chúng ta có 3 tùy chọn, chúng ta có watch, fork và star.
 
-- Watch - Updates when things happen to the repository.
-- Fork - a copy of a repository.
-- Star - "I think your project is cool"
+- Watch - Cập nhật các thay đổi của kho lưu trữ.
+- Fork - một bản sao của một kho lưu trữ.
+- Star - "Tôi nghĩ dự án của bạn rất tuyệt"
 
 ![](../../Days/Images/Day40_Git21.png)
 
-Given our scenario of wanting a copy of this repository to work on we are going to hit the fork option. If you are a member of multiple organisations then you will have to choose where the fork will take place, I am going to choose my profile.
+Với kịch bản của chúng ta là muốn một bản sao của kho lưu trữ để làm việc với nó, chúng ta sẽ nhấn tùy chọn fork. Nếu bạn là thành viên của nhiều tổ chức thì bạn sẽ phải chọn nơi để fork, tôi sẽ chọn profile của mình.
 
 ![](../../Days/Images/Day40_Git22.png)
 
-Now we have our copy of the repository that we can freely work on and change as we see fit. This would be the start of the pull request process that we mentioned briefly before but we will cover it in more detail tomorrow.
+Bây giờ chúng ta có bản sao của kho lưu trữ để có thể tự do làm việc và thay đổi phù hợp. Đây sẽ là bước khởi đầu của quy trình pull request mà chúng ta đã đề cập ngắn gọn trước đây, nó sẽ được đề cập chi tiết hơn vào ngày mai.
 
 ![](../../Days/Images/Day40_Git23.png)
 
-Ok, I hear you say, but how do I make changes to this repository and code if it's on a website, well you can go through and edit on the website but it's not going to be the same as using your favourite IDE on your local system with your favourite colour theme. For us to get a copy of this repository on our local machine we will perform a clone of the repository. This will allow us to work on things locally and then push our changes back into our forked copy of the repository.
+Ok, nhưng làm cách nào để thay đổi kho lưu trữ và mã này nếu nó ở trên một trang web, bạn có thể xem qua và chỉnh sửa trực tiếp trên đó nhưng bạn không thể sử dụng IDE yêu thích của bạn trên máy cá nhân với theme màu yêu thích của bạn. Để chúng ta có được một bản sao của kho lưu trữ này trên máy của mình, chúng ta sẽ clone kho lưu trữ đó. Điều này sẽ cho phép chúng ta làm việc trên môi trường cục bộ và sau đó đẩy (push) các thay đổi trở lại bản sao được fork từ kho lưu trữ gốc.
 
-We have several options when it comes to getting a copy of this code as you can see below.
+Chúng ta có một số tùy chọn khi nhận được một bản sao của mã này như bạn có thể thấy bên dưới.
 
-There is a local version available of GitHub Desktop which gives you a visual desktop application to track changes and push and pull changes between local and GitHub.
+Có một phiên bản của GitHub Desktop cung cấp cho bạn một ứng dụng máy tính t để theo dõi các thay đổi cũng như push và pull các thay đổi giữa môi trường local và GitHub.
 
-For this little demo, I am going to use the HTTPS URL we see on there.
+Đối với demo nhỏ này, tôi sẽ sử dụng URL HTTPS mà chúng ta thấy trên đó.
 
 ![](../../Days/Images/Day40_Git24.png)
 
-Now on our local machine, I am going to navigate to a directory I am happy to download this repository to and then run `git clone url`
+Bây giờ trên máy cục bộ của chúng ta, tôi sẽ điều hướng đến một thư mục mà tôi muốn tải xuống kho lưu trữ này và sau đó chạy `git clone url`
 
 ![](../../Days/Images/Day40_Git25.png)
 
-Now we could take it to VScode to make some changes to this.
+Bây giờ chúng ta có thể mở nó bằng VSCode và thay đổi một số thứ.
 
 ![](../../Days/Images/Day40_Git26.png)
 
-Let's now make some changes, I want to make a change to all those links and replace that with something else.
+Hãy thực hiện một số thay đổi, tôi muốn thay đổi các liên kết đó và thay thế nó bằng thứ gì khác.
 
 ![](../../Days/Images/Day40_Git27.png)
 
-Now if we check back on GitHub and we find our readme.mdin that repository, you should be able to see a few changes that I made to the file.
+Bây giờ, nếu chúng ta kiểm tra lại GitHub và tìm tệp Readme.md trong kho lưu trữ đó, bạn có thể thấy một vài thay đổi mà tôi đã thực hiện đối với tệp đó.
 
 ![](../../Days/Images/Day40_Git28.png)
 
-At this stage, this might be complete and we might be happy with our change as we are the only people going to use our new change but maybe it was a bug change and if that is the case then we will want to contribute via a Pull Request to notify the original repository maintainers of our change and see if they accept our changes.
+Ở thời điểm này, quá trình này có thể đã hoàn tất và chúng ta có thể hài lòng với thay đổi của mình vì chúng ta là những người duy nhất sẽ sử dụng thay đổi mới đó. Nhưng rất có thể sẽ có lúc thay đổi của chúng ta là để sửa một bug và thông qua một Pull request, chúng ta sẽ thông báo cho những người bảo trì kho lưu trữ đó về thay đổi của chúng ta và xem liệu họ có chấp nhận những thay đổi đó hay không.
 
-We can do this by using the contribute button highlighted below. I will cover more on this tomorrow when we look into Open-Source workflows.
+Chúng ta có thể làm điều này bằng cách sử dụng nút Contribute được làm rõ ở dưới đây. Tôi sẽ đề cập nhiều hơn về vấn đề này vào ngày mai khi chúng ta xem xét quy trình làm việc với các phần mềm mã nguồn mở.
 
 ![](../../Days/Images/Day40_Git29.png)
 
-I have spent a long time looking through GitHub and I hear some of you cry but what about other options!
+Tôi đã dành một thời gian dài để hướng dẫn về Github và tôi nghe thấy một số yêu cầu vê những lựa chọn khác.
 
-Well, there are and I am going to find some resources that cover the basics for some of those as well. You are going to come across GitLab and BitBucket amongst others in your travels and whilst they are git-based services they have their differences.
+Và tôi cũng sẽ tìm một số tài nguyên cơ bản cho những vấn đề đó. Bạn sẽ thấy GitLab và BitBucket trong số những lựa chọn khi bạn sử dụng các dịch vụ quản lý phiên bản, tuy chúng là những dịch vụ dựa trên git nhưng chúng cũng có một số khác biệt nhất dịnh.
 
-You will also come across hosted options. Most commonly here I have seen GitLab as a hosted version vs GitHub Enterprise (Don't believe there is a free hosted GitHub?)
-
+Bạn cũng sẽ bắt gặp các tuỳ chọn tự host. Phổ biến nhất ở đây tôi có thể thấy là GitLab và GitHub Enterprise (Tôi không nghĩ rằng có dịch vụ tự host miễn phí của Github?)
 ## Tài liệu tham khảo
 
 - [Learn GitLab in 3 Hours | GitLab Complete Tutorial For Beginners](https://www.youtube.com/watch?v=8aV5AxJrHDg)

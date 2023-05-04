@@ -56,7 +56,7 @@ Cuối cùng thì chúng ta cũng đã xây dựng xong ứng dụng, kiểm th�
 
 Các ứng dụng khác nhau đòi hỏi các yêu cầu khác nhau về phần cứng và cấu hình. Đó là khi quản lý cấu hình ứng dụng (Application Configuration Management) và cơ sở hạ tầng ứng dụng dưới dạng mã (Infrastructure as Code) đóng vai trò then chốt trong vòng đời DevOps. Các ứng dụng có thể được đóng gói và chạy trong các containers hoặc chạy trên các máy ảo (VM). Điều này khiến chúng ta cần sử dụng các nền tảng như Kubernetes để điều phối các containers và đảm bảo ứng dụng ở trong trạng thái mong muốn nhằm phục vụ người dùng cuối.
 
-Chúng ta sẽ tìm hiểu chi tiết về các chủ đề quan trọng này trong vài tuần tới để có kiến thức nền tẳng tốt hơn về chúng và khi nào thì nên sử dụng.
+Chúng ta sẽ tìm hiểu chi tiết về các chủ đề quan trọng này trong vài tuần tới để có kiến thức nền tảng tốt hơn về chúng và khi nào thì nên sử dụng.
 
 ## Giám sát
 

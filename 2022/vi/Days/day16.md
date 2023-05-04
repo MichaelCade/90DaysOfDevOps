@@ -138,7 +138,7 @@ Trên Windows, bạn có ổ C: và đó là thứ mà chúng ta coi là gốc. 
 
 Khi đề cập tới một hệ thống Linux hoặc bất kỳ hệ thống nào, chúng ta có thể muốn biết các ổ đĩa có sẵn và chúng tôi có bao nhiêu dung lượng trống trên các đĩa đó. Một vài lệnh sau đây giúp xác định và sử dụng cũng như quản lý bộ lưu trữ.
 
-- `lsblk` Liệt kê các thiết bị chặn(List Block devices). `sda` là đĩa vật lý của chúng ta và sau đó `sda1, sda2, sda3` là các phân vùng của chúng ta trên đĩa đó.
+- `lsblk` Liệt kê các thiết bị khối (List Block devices). `sda` là đĩa vật lý của chúng ta và sau đó `sda1, sda2, sda3` là các phân vùng của chúng ta trên đĩa đó.
 
 ![](../../Days/Images/Day16_Linux25.png)
 

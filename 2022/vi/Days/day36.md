@@ -16,7 +16,7 @@ Ngay cả khi bạn đã cài đặt git trên hệ thống của mình, bạn c
 
 ### Cài đặt Git
 
-Như đã đề cập, Git là công cụ đa nền tẳng, chúng ta sẽ nhắc tới Windows và Linux và bạn cũng có thể tìm thấy hướng dẫn cho macOS tại [đây](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+Như đã đề cập, Git là công cụ đa nền tảng, chúng ta sẽ nhắc tới Windows và Linux và bạn cũng có thể tìm thấy hướng dẫn cho macOS tại [đây](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 Đối với [Windows](https://git-scm.com/download/win), chúng ta có thể download trình cài đặt từ trang web chính thức.
 

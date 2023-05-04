@@ -91,13 +91,13 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 
 ### Kubernetes
 
-- [✔️] ☸ 49 > [The Big Picture: Kubernetes](Days/day49.md)
-- [✔️] ☸ 50 > [Choosing your Kubernetes platform](Days/day50.md)
-- [✔️] ☸ 51 > [Deploying your first Kubernetes Cluster](Days/day51.md)
-- [✔️] ☸ 52 > [Setting up a multinode Kubernetes Cluster](Days/day52.md)
-- [✔️] ☸ 53 > [Rancher Overview - Hands On](Days/day53.md)
-- [✔️] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
-- [✔️] ☸ 55 > [State and Ingress in Kubernetes](Days/day55.md)
+- [✔️] ☸ 49 > [Bức tranh toàn cảnh: Kubernetes](Days/day49.md)
+- [✔️] ☸ 50 > [Chọn nền tảng chạy Kubernetes](Days/day50.md)
+- [✔️] ☸ 51 > [Triển khai Kubernetes cluster đầu tiên](Days/day51.md)
+- [✔️] ☸ 52 > [Thiết lập Kubernetes cluster đa node](Days/day52.md)
+- [✔️] ☸ 53 > [Tổng quan về Rancher - Thực hành](Days/day53.md)
+- [✔️] ☸ 54 > [Triển khai ứng dụng Kubernetes](Days/day54.md)
+- [✔️] ☸ 55 > [State và Ingress trong Kubernetes](Days/day55.md)
 
 ### Học cơ sở hạ tầng dưới dạng mã (Infrastructure as Code)
 
