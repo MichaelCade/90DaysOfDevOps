@@ -18,11 +18,11 @@ Git không phải là hệ thống quản lý phên bản duy nhất, vì vậy 
 
 Lợi ích rõ ràng nhất và lớn nhất của quản lý phiên bản là khả năng theo dõi lịch sử của dự án. Chúng ta có thể xem lại kho lưu trữ (repository) bằng cách sử dụng `git log` và xem lại toàn bộ các commit cũng như comments cũng như những gì đã diễn ra trong toàn bộ dự án. Đừng lo, chúng ta sẽ đi vào cách lệnh ở phần sau. Bây giờ, hãy tưởng tượng đây là một dự án phần mềm thực tế với rất nhiều mã nguồn và có nhiều người đang làm việc chung để phát triển sản phẩn tại các thời điểm khác nhau, tất cả các kỹ sư đã đóng góp code, và tất cả những người review code đều được ghi lại ở đây để cho chúng ta biết điều gì đã xảy ra, khi nào, bởi ai và ai đã review.
 
-![](Images/Day35_Git1.png)
+![](../../Days/Images/Day35_Git1.png)
 
 Quản lý phiên bản trước đây sẽ giống như việc tạo một bản sao phiên bản code của bạn theo cách thủ công trước khi bạn thực hiện các thay đổi. CÓ thể bạn cũng không cần sử dụng những phiên bản cũ nữa nhưng nó được tạo ra để bạn có thể yên tâm hơn, nhỡ đâu...
 
-![](Images/Day35_Git2.png)
+![](../../Days/Images/Day35_Git2.png)
 
 Tôi đã bắt đầu áp dụng quản lý phiên bản không chỉ đối với mã nguồn mà hầu hết mọi thứ, ví dụ như dự án này (90DaysOfDevOps). Tại sao lại không sử dụng các tính năng như khôi phục, ghi lại mọi thứ đã diễn ra.
 
@@ -34,11 +34,11 @@ Một lợi ích khác của quản lý phiên bản là khả năng quản lý 
 
 Cách chúng ta có thể làm được điều này trong quản lý phiên bản là thông qua phân nhánh (branching)
 
-![](Images/Day35_Git3.png)
+![](../../Days/Images/Day35_Git3.png)
 
 Phân nhánh cho phép hai luồng mã cùng tồn tại cho một ứng dụng như chúng ta đã nói ở trên. Nhưng chúng ta vẫn muốn các tính năm mới có trong phiên bản miễn phí có trong phiên bản trả phí, để làm được điều này, chúng ta có một thứ gọi là merge.
 
-![](Images/Day35_Git4.png)
+![](../../Days/Images/Day35_Git4.png)
 
 Bây giờ, điều này có vẻ dễ dàng nhưng việc merge có thể phức tạp vì bạn có thể có một nhóm làm việc trên phiên bản miễn phí và một nhóm khác làm việc với phiên bản trả phí và điều gì sẽ xảy ra nếu cả hai cùng thay đổi đến cấu trúc tổng thể của mã. CÓ thể một biến được cập nhật và làm hỏng phần nào đó. Sau đó, bạn có các conflict làm một chức năng không chạy được. Quản lý phiên bản không thể khắc phục được các conflict do bạn tạo ra. Nhưng quản lý phiên bản cho phép điều này được quản lý một cách dễ dàng.
 
@@ -48,7 +48,7 @@ Nếu không có quản lý phiên bản, làm thể nào các nhóm phát tri�
 
 Với quản lý phiên bản, chúng ta có một nguồn sự thật duy nhất (single source of truth). Chúng ta có thể làm việc trên các module khác nhau nhưng nó cho phép chúng ta cộng tác tốt hơn.
 
-![](Images/Day35_Git5.png)
+![](../../Days/Images/Day35_Git5.png)
 
 Một việc khác cần đề cập tới là không chỉ các nhà phát triển có thể hưởng lợi từ quản lý phiên bản, tất cả các thành viên và các công cụ có thể nhìn rõ dự án và tận dụng, các công cụ quản lý dự án có thể được liên kết và theo dõi tiến độ công việc. Chúng ta cũng có thể có một máy build, chẳng hạn như là một Jenkins server mà chúng ta sẽ nói trong phần sau. Một công cụ xây dựng mà nguồn và đóng gói hệ thống, tự động hoá quá trình kiểm thử và các metrics liên quan tới mã nguồn.
 
@@ -62,59 +62,59 @@ Bây giờ chúng ta sẽ xem qua một cách tổng quát trước khi cài đ�
 
 Hãy sử dụng thư mục mà chúng ta đã tạo trước đó.
 
-![](Images/Day35_Git2.png)
+![](../../Days/Images/Day35_Git2.png)
 
 Để sử dụng thư mục này với quản lý phiên bản, trước tiên chúng ta cần khởi tạo thư mục nào bằng lệnh `git init`. Hiện tại, chỉ cần nghĩ rằng lệnh này đặt thư mục của chúng ta làm kho lưu trữ trong cơ sở dữ liệu ở đâu đó trên máy tính của chúng ta.
 
-![](Images/Day35_Git6.png)
+![](../../Days/Images/Day35_Git6.png)
 
 Bây giờ chúng ta có thể tạo một số tệp và thư mục cho mã nguồn hoặc cũng có thể đã có sẵn từ trước đó. Sử dụng lệnh `git add .` sẽ đặt tất cả cá tệp và thư mục trong thư mục của chúng ta vào một chiếc hộp nhưng chúng ta chưa commit bất cứ thứ gì vào cơ sở dữ liệu đó. Thao tác này chỉ có nghĩ là tất cả các tệp có `.` đã sẵn sàng để được thêm vào.
 
-![](Images/Day35_Git7.png)
+![](../../Days/Images/Day35_Git7.png)
 
 Sau đó, chúng ta có thể muốn tiếp tục và commit các tệp của mình, việc này có thể thực hiện bằng lệnh `git commit -m "My First Commit"`. Chúng ta có thể đưa ra lý do cho commit của mình, điều này được khuyến khích để chúng ta có thể biết điều gì xảy ra trong mỗi commit.
 
-![](Images/Day35_Git8.png)
+![](../../Days/Images/Day35_Git8.png)
 
 Bây giờ chúng ta có thể thấy những gì xảy ra trong lịch sử của dự án. Sử dụng lệnh `git log`
 
-![](Images/Day35_Git9.png)
+![](../../Days/Images/Day35_Git9.png)
 
 Nếu chugns ta tạo một tệp bổ sung có tên là `samplecode.ps1`, thì trạng thái sẽ bị thay đổi. Chúng ta cũng có thể kiểm tra trạng thái của kho lưu trữ của mình bằng cách sử dụng `git status`, lệnh này cho chúng ta thấy không có gì để commit và chúng ta có thể thêm một tệp mới có thên samplecode.ps1. Sau đó, nếu chạy lại lệnh `git status` một lần nữa bạn sẽ thấy file mà chúng ta có thể commit.
 
-![](Images/Day35_Git10.png)
+![](../../Days/Images/Day35_Git10.png)
 
 Thêm tệp mới của chúng ta bằng lệnh `git add samplecode.ps1` và sau đó chạy lại lệnh `git status` một lần nữa và thấy tệp này đã được sẵn sàng để commit.
 
-![](Images/Day35_Git11.png)
+![](../../Days/Images/Day35_Git11.png)
 
 Sau đó dùng lệnh `git commit -m "My Second Commit"`.
 
-![](Images/Day35_Git12.png)
+![](../../Days/Images/Day35_Git12.png)
 
 `git status` bây giờ cũng thể hiện rằng chúng ta đã dọn dẹp mọi thứ.
 
-![](Images/Day35_Git13.png)
+![](../../Days/Images/Day35_Git13.png)
 
 Sau đó, chúng ta có thể sử dụng lệnh `git log` để hiện thị các commit mới nhất và commit đầu tiên.
 
-![](Images/Day35_Git14.png)
+![](../../Days/Images/Day35_Git14.png)
 
 Nếu chúng ta muốn xem các thay đổi giữa các lần commit của mình, tức là những tệp nào đã được thêm hoặc sửa đổi, chúng ta có thể sử dụng `git diff b8f8 709a`
 
-![](Images/Day35_Git15.png)
+![](../../Days/Images/Day35_Git15.png)
 
 Nó sẽ hiển thị những gì đã thay đổi, trong trường hợp của chúng ta, một tệp mới đã được thêm vào.
 
-![](Images/Day35_Git16.png)
+![](../../Days/Images/Day35_Git16.png)
 
 Chúng ta sẽ đi sâu hơn vào vấn đề này sau nhưng chúng ta có thể nhảy giữa các commit của mình, đại loại là chúng ta có thể du hành thời gian! Bằng cách sử dụng hash của commit, có thể sử dụng lệnh `git checkout 709a` để nhảy ngược thời gian mà không làm mất tệp mới của chúng ta.
 
-![](Images/Day35_Git17.png)
+![](../../Days/Images/Day35_Git17.png)
 
 Nhưng sau đó, chúng ta cũng sẽ muốn tiếp tục và có thể thực hiện điều này theo cách tương tự với hash của commit hoặc bạn có thể thấy như ở đây chúng ta sử dụng `git switch -` câu lệnh hoàn tác thao tác trước đó.
 
-![](Images/Day35_Git18.png)
+![](../../Days/Images/Day35_Git18.png)
 
 TLDR:
 

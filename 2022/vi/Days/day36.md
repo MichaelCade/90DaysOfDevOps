@@ -16,7 +16,7 @@ Ngay cả khi bạn đã cài đặt git trên hệ thống của mình, bạn c
 
 ### Cài đặt Git
 
-Như đã đề cập, Git là công cụ đa nền tẳng, chúng ta sẽ nhắc tới Windows và Linux và bạn cũng có thể tìm thấy hướng dẫn cho macOS tại [đây](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+Như đã đề cập, Git là công cụ đa nền tảng, chúng ta sẽ nhắc tới Windows và Linux và bạn cũng có thể tìm thấy hướng dẫn cho macOS tại [đây](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 Đối với [Windows](https://git-scm.com/download/win), chúng ta có thể download trình cài đặt từ trang web chính thức.
 
@@ -24,11 +24,11 @@ Bạn cũng có thể sử dụng `winget` trên máy tính Windows của mình,
 
 Trước khi chúng ta cài đặt bất cứ thứ gì, hãy kiểm tra phiên bản hiện tại trên máy của bạn. Mởi cửa sổ PowerShell và chạy `git --version`
 
-![](Images/Day36_Git1.png)
+![](../../Days/Images/Day36_Git1.png)
 
 Chúng ta cũng có thể kiểm tra phiên bản Git trên WSL Ubuntu của mình.
 
-![](Images/Day36_Git2.png)
+![](../../Days/Images/Day36_Git2.png)
 
 Tại thời điểm viết bài, bản phát hành mới nhất trên Windows là `2.35.1`, vì vậy tôi sẽ hướng dẫn việc update một vài thứ. Linux cũng có thể tương tự như vậy.
 
@@ -38,33 +38,33 @@ Có nghĩ là quy trình bên dưới cũng là quy trình mà chúng ta phải 
 
 Đây là một cài đặt khá đơn giản. Sau khi tài xuống, click đúp và bắt đầu. Đọc qua thoả thuận về giấy phép GNU. Nhưng hãy nhớ đây là phần mềm mã nguồn mở và miễn phí.
 
-![](Images/Day36_Git3.png)
+![](../../Days/Images/Day36_Git3.png)
 
 Bây giờ chúng ta có thể chọn các thành phần bổ sung mà chúng ta muốn cài đặt cũng như liên kết với git. Trên Windows, tôi luôn đảm bảo rằng mình đã cài đặt Git Bash vì điều này cho phép chúng ta chạy các lệnh bash trên Windows.
 
-![](Images/Day36_Git4.png)
+![](../../Days/Images/Day36_Git4.png)
 
 Sau đó, chúng ta có thể chọn phần mềm SSH mà chúng ta muốn sử dụng. Tôi chọn OpenSSH như bản có thể thấy trong phần tìm hiểu về Linux.
 
-![](Images/Day36_Git5.png)
+![](../../Days/Images/Day36_Git5.png)
 
 Chúng ta cũng có thể bật các tính năng thử nghiệm, đối với tôi, tôi không cần chúng nên đã không bật chúng, bạn luôn có thể quay lại việc cài đặt để bật các tính năng này.
 
-![](Images/Day36_Git6.png)
+![](../../Days/Images/Day36_Git6.png)
 
 Cài đặt hoàn tất, bây giờ chúng ta có thể chọn mở Git Bash hoặc đọc bản ghi chú cho bản phát hành mới nhất.
 
-![](Images/Day36_Git7.png)
+![](../../Days/Images/Day36_Git7.png)
 
 Bước kiểm tra cuối cùng là mở PowerShell và thử lại câu lệnh kiểm tra phiên bản git.
 
-![](Images/Day36_Git8.png)
+![](../../Days/Images/Day36_Git8.png)
 
 Sau các bước siêu đơn giản ở trên, chúng ta sẽ có phiên bản mới nhất của git. Đối với Linux, quá trình có thể sẽ mất thời gian hơn một chúng nhưng tôi cũng muốn nói qua về nó.
 
 Tôi chỉ cần chạy lệnh `sudo apt-get install git`.
 
-![](Images/Day36_Git9.png)
+![](../../Days/Images/Day36_Git9.png)
 
 Bạn cũng có thể chạy các câu lệnh dưới dây để add thêm git repository cho các cài đặt phần mềm.
 
@@ -101,11 +101,11 @@ bây giờ, nếu chúng ta muốn kiểm tra tất cả các cầu hình git th
 
 `git config --global -e`
 
-![](Images/Day36_Git10.png)
+![](../../Days/Images/Day36_Git10.png)
 
 Trên tất cả các máy, tệp này sẽ được đặt tên là `.gitconfig`. Trên máy Windows của tôi, bạn sẽ tìm thấy tệp này trong thư mục người dùng của mình.
 
-![](Images/Day36_Git11.png)
+![](../../Days/Images/Day36_Git11.png)
 
 ### Lý thuyết Git
 
@@ -117,15 +117,15 @@ Trước khi git xuất hiện, Client-Server là phương thức chính để q
 
 Trong mô hình quản lý phiên bản Client-Server này, bước đầu tiên nhà phát triểu cần làm là tải xuống mã nguồn và các tệp từ máy chủ. Điều này không giải quyết các xung đột nhưng nó loại bỏ sự phức tạp của các xung đột và cách giải quyết chúng.
 
-![](Images/Day36_Git12.png)
+![](../../Days/Images/Day36_Git12.png)
 
 Bây giờ, giả sử chúng ta có hai nhà phát triển làm việc trên cùng một tệp và một người xong trước, upload file của họ lên server trước với những thay đổi của họ. Khi người thứ hai cập nhật file đó, xung đột sẽ xảy ra.
 
-![](Images/Day36_Git13.png)
+![](../../Days/Images/Day36_Git13.png)
 
 Vì vậy, bây giờ người thứ hai cần kéo thay đổi mã của người đầu tiên xuống và giải quyết các xung đột trong mã nguồn rồi sau đó mới commit lên máy chủ.
 
-![](Images/Day36_Git15.png)
+![](../../Days/Images/Day36_Git15.png)
 
 ### Distributed Version Control
 
@@ -140,7 +140,7 @@ Một số lợi ích chính của Git là:
 
 Khác với mô hình kiểm soát phiên bản Client-Server, mỗi nhà phát triển tải xuống một repository thì nó sẽ bao gồm tất cả mọi thứ. Lịch sử các commit, tất cả các nhánh,...
 
-![](Images/Day36_Git16.png)
+![](../../Days/Images/Day36_Git16.png)
 
 ## Tài liệu tham khảo
 
