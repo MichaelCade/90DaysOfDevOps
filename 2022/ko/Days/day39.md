@@ -196,7 +196,7 @@ git rebase main
 
 rebase의 가장 큰 장점은 프로젝트 히스토리가 훨씬 깔끔해진다는 것입니다. 또한 불필요한 merge commit을 제거하며, 마지막 두 이미지를 비교하면 훨씬 더 깔끔한 선형 프로젝트 히스토리를 따라갈 수 있습니다.
 
-아직 확실한 결론은 아니지만, 더 깔끔한 히스토리를 선택하는 것도 장단점이 있는데, [rebase의 황금률](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)을 따르지 않는다면 프로젝트 히스토리를 다시 작성하는 것은 협업 워크플로에 치명적일 수 있습니다. 그리고 더 중요한 것은 rebase를 하면 merge commit이 제공하는 컨텍스트가 사라져 업스트림 변경 사항이 언제 feature에 통합되었는지 알 수 없다는 것입니다.
+아직 확실한 결론은 아니지만, 더 깔끔한 히스토리를 선택하는 것도 장단점이 있는데, [rebase의 황금률](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)을 따르지 않는다면 프로젝트 히스토리를 다시 작성하는 것은 협업 workflow에 치명적일 수 있습니다. 그리고 더 중요한 것은 rebase를 하면 merge commit이 제공하는 컨텍스트가 사라져 업스트림 변경 사항이 언제 feature에 통합되었는지 알 수 없다는 것입니다.
 
 ## 자료
 

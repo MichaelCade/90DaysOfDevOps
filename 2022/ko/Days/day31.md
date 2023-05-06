@@ -100,7 +100,7 @@ Azure Functions - 서버리스 코드를 제공합니다. 퍼블릭 클라우드
 
 Azure Event Grid를 사용하면 서비스 및 이벤트에서 로직을 트리거할 수 있습니다.
 
-Azure Logic App은 그래픽 기반 워크플로 및 통합을 제공합니다.
+Azure Logic App은 그래픽 기반 workflow 및 통합을 제공합니다.
 
 또한 일관된 관리 및 예약을 통해 Windows 및 Linux 노드 모두에서 대규모 작업을 실행할 수 있는 Azure Batch도 살펴볼 수 있습니다.
 
