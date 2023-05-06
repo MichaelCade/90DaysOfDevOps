@@ -37,7 +37,7 @@ Before we then start to look at controlling other nodes in our environment, we c
 
 ![](Images/Day64_config2.png)
 
-Or an actual real-life use for a module might be something like `ansible webservers --m service -a "name=httpd state=started"` this will tell us if all of our webservers have the httpd service running. I have glossed over the webservers term used in that command.
+Or an actual real-life use for a module might be something like `ansible webservers -m service -a "name=httpd state=started"` this will tell us if all of our webservers have the httpd service running. I have glossed over the webservers term used in that command.
 
 ### hosts
 
