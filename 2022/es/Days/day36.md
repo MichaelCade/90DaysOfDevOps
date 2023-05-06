@@ -1,138 +1,140 @@
-## Installing & Configuring Git
+## Instalación y configuración de Git
 
-Git is an open source, cross-platform tool for version control. If you are like me, using Ubuntu or most Linux environments you might find that you already have git installed but we are going to run through the install and configuration.
+Git es una herramienta multiplataforma de código abierto para el control de versiones. En la mayoría de entornos Linux viene instalado por defecto, pero de todas formas vamos a repasar la instalación y configuración.
 
-Even if you already have git installed on your system it is also a good idea to make sure we are up to date.
+Incluso si ya tienes git instalado en tu sistema es una buena idea asegurarse de que está actualizado.
 
-### Installing Git
+### Instalación de Git
 
-As already mentioned Git is cross-platform, we will be running through Windows and Linux but you can find macOS also listed [here](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+Como ya se ha mencionado Git es multiplataforma, vamos a ver Windows y Linux, pero también puedes encontrar macOS en la lista de [descargas](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-For [Windows](https://git-scm.com/download/win) we can grab our installers from the official site.
+Para [Windows](https://git-scm.com/download/win) podemos obtener nuestros instaladores desde el sitio oficial o también puedes usar `winget`, Windows Application Package Manager.
 
-You could also use `winget` on your Windows machine, think of this as your Windows Application Package Manager.
-
-Before we install anything let's see what version we have on our Windows Machine. Open a PowerShell window and run `git --version`
+Antes de instalar nada vamos a ver qué versión tenemos en nuestra máquina Windows. Abre una ventana de PowerShell y ejecuta `git --version`.
 
 ![](Images/Day36_Git1.png)
 
-We can also check our WSL Ubuntu version of Git as well.
+También podemos comprobar nuestra versión en el [WSL](https://es.wikipedia.org/wiki/Subsistema_de_Windows_para_Linux) Ubuntu.
 
 ![](Images/Day36_Git2.png)
 
-At the time of writing the latest Windows release is `2.35.1` so we have some updating to do there which I will run through. I expect the same for Linux.
+En el momento de escribir esto la última versión de Windows es `2.35.1` por lo que tenemos que actualizarla. Lo mismo con Linux.
 
-I went ahead and downloaded the latest installer and ran through the wizard and will document that here. The important thing to note is that git will uninstall previous versions before installing the latest.
+Descargué el último instalador y ejecuté el asistente. Lo importante a tener en cuenta es que git desinstalará las versiones anteriores antes de instalar la última. Lo que significa que el proceso que se muestra a continuación es también el mismo proceso en su mayor parte como si estuviera instalando por primera vez.
 
-Meaning that the process shown below is also the same process for the most part as if you were installing from no git.
-
-It is a very simple installation. Once downloaded double click and get started. Read through the GNU license agreement. But remember this is free and open-source software.
+Es una instalación muy sencilla. Una vez descargado haga doble clic y comience. Lea el acuerdo de licencia GNU. Pero recuerde que este es un software libre y de código abierto.
 
 ![](Images/Day36_Git3.png)
 
-Now we can choose additional components that we would like to also install but also associate with git. On Windows, I always make sure I install Git Bash as this allows us to run bash scripts on Windows.
+Ahora podemos elegir componentes adicionales que nos gustaría también instalar para asociar con git. En Windows, siempre me aseguro de instalar Git Bash ya que nos permite ejecutar scripts bash en Windows.
 
 ![](Images/Day36_Git4.png)
 
-We can then choose which SSH Executable we wish to use. IN leave this as the bundled OpenSSH that you might have seen in the Linux section.
+Podemos entonces elegir qué ejecutable SSH deseamos utilizar. 
 
 ![](Images/Day36_Git5.png)
 
-We then have experimental features that we may wish to enable, for me I don't need them so I don't enable them, you can always come back in through the installation and enable these later on.
+Luego tenemos características experimentales que podemos habilitar, yo no las necesito así que no las habilito, siempre puedes volver a la instalación y habilitarlas más tarde.
 
 ![](Images/Day36_Git6.png)
 
-Installation complete, we can now choose to open Git Bash and or the latest release notes.
+Instalación completada, ahora podemos elegir abrir Git Bash y o las últimas notas de la versión.
 
 ![](Images/Day36_Git7.png)
 
-The final check is to take a look in our PowerShell window at what version of git we have now.
+La comprobación final es echar un vistazo en PowerShell la versión actual de git.
 
 ![](Images/Day36_Git8.png)
 
-Super simple stuff and now we are on the latest version. On our Linux machine, we seemed to be a little behind so we can also walk through that update process.
+Super simple y ahora estamos en la última versión. 
 
-I simply run the `sudo apt-get install git` command.
+En nuestra máquina Linux el proceso de actualización resulta más directo ejecutando el comando `sudo apt-get install git`.
 
 ![](Images/Day36_Git9.png)
 
-You could also run the following which will add the git repository for software installations.
+También puedes añadir el repositorio git para las actualizaciones del software.
 
-```
+```shell
 sudo add-apt-repository ppa:git-core/ppa -y
 sudo apt-get update
-sudo apt-get install git -y
+sudo apt-get install git -yinstalaciones
 git --version
 ```
 
-### Configuring Git
+### Configurando Git
 
-When we first use git we have to define some settings,
+Cuando usamos git por primera vez tenemos que definir algunas configuraciones,
 
-- Name
-- Email
-- Default Editor
-- Line Ending
+- Nombre de usuario
+- Correo electrónico
+- Editor por defecto
+- Fin de línea
 
-This can be done at three levels
+Esto se puede hacer en tres niveles
 
-- System = All users
-- Global = All repositories of the current user
-- Local = The current repository
+- Sistema = Todos los usuarios
+- Global = Todos los repositorios del usuario actual
+- Local = El repositorio actual
 
-Example:
-`git config --global user.name "Michael Cade"`
-`git config --global user.email Michael.Cade@90DaysOfDevOPs.com"`
-Depending on your Operating System will determine the default text editor. In my Ubuntu machine without setting the next command is using nano. The below command will change this to visual studio code.
+Ejemplo:
+```shell
+git config --global user.name "Michael Cade"
+git config --global user.email "Michael.Cade@90DaysOfDevOPs.com"
+```
+Dependiendo del sistema operativo se determinará el editor de texto por defecto. En  Ubuntu sin configurar el siguiente comando está utilizando nano. El siguiente comando cambiará esto a visual studio code.
 
-`git config --global core.editor "code --wait"`
+```shell
+git config --global core.editor "code --wait"
+```
 
-now if we want to be able to see all git configurations then we can use the following command.
+Podemos ver todas las configuraciones de git con el siguiente comando.
 
-`git config --global -e`
+```shell
+git config --global -e
+```
 
 ![](Images/Day36_Git10.png)
 
-On any machine this file will be named `.gitconfig` on my Windows machine you will find this in your user account directory.
+En cualquier máquina este archivo se llamará `.gitconfig`. En Windows lo encontrarás en el directorio de la cuenta de usuario.
 
 ![](Images/Day36_Git11.png)
 
-### Git Theory
+### Teoría Git
 
-I mentioned in the post yesterday that there were other version control types and we can split these down into two different types. One is Client Server and the other is Distributed.
+Mencioné en el post de ayer que había otros tipos de control de versiones y podemos dividirlos en dos tipos diferentes. Los que son Cliente-Servidor y los que son Distribuidos.
 
-### Client-Server Version Control
+### Control de versiones Cliente-Servidor
 
-Before git was around Client-Server was the defacto method for version control. An example of this would be [Apache Subversion](https://subversion.apache.org/) which is an open source version control system founded in 2000.
+Antes de que existiera git, el tipo de Cliente-Servidor era el método de facto para el control de versiones. Un ejemplo de esto sería [Apache Subversion](https://subversion.apache.org/) que es un sistema de control de versiones de código abierto fundado en el año 2000.
 
-In this model of Client-Server version control, the first step the developer downloads the source code and the actual files from the server. This doesn't remove the conflicts but it does remove the complexity of the conflicts and how to resolve them.
+En este modelo de control de versiones Cliente-Servidor, el primer paso que da el desarrollador es descargar el código fuente y los archivos reales del servidor. Esto no elimina los conflictos, pero sí la complejidad de los conflictos y cómo resolverlos.
 
 ![](Images/Day36_Git12.png)
 
-Now for example let's say we have two developers working on the same files and one wins the race and commits or uploads their file back to the server first with their new changes. When the second developer goes to update they have a conflict.
+Ahora, por ejemplo, digamos que tenemos dos desarrolladores trabajando en los mismos archivos y uno gana la carrera y confirma o sube su archivo de nuevo al servidor en primer lugar con sus nuevos cambios. Cuando el segundo desarrollador va a actualizar tiene un conflicto.
 
 ![](Images/Day36_Git13.png)
 
-So now the Dev needs to pull down the first devs code change next to their check and then commit once those conflicts have been settled.
+Así que ahora el desarrollador tiene que tirar hacia abajo el primer cambio de código junto a su cheque y luego confirmar una vez que los conflictos se han resuelto.
 
 ![](Images/Day36_Git15.png)
 
-### Distributed Version Control
+### Control de versiones distribuido
 
-Git is not the only distributed version control system. But it is very much the defacto.
+Git no es el único sistema de control de versiones distribuido. Pero es en gran medida el defacto.
 
-Some of the major benefits of Git are:
+Algunos de los principales beneficios de Git son:
 
-- Fast
-- Smart
+- Rápido
+- Inteligente
 - Flexible
-- Safe & Secure
+- Seguro
 
-Unlike the Client-Server version control model, each developer downloads the source repository meaning everything. History of commits, all the branches etc.
+A diferencia del modelo de control de versiones Cliente-Servidor, cada desarrollador descarga el repositorio fuente, es decir, todo. Historial de commits, todas las ramas, etc.
 
 ![](Images/Day36_Git16.png)
 
-## Resources
+## Recursos
 
 - [What is Version Control?](https://www.youtube.com/watch?v=Yc8sCSeMhi4)
 - [Types of Version Control System](https://www.youtube.com/watch?v=kr62e_n6QuQ)
@@ -140,5 +142,13 @@ Unlike the Client-Server version control model, each developer downloads the sou
 - [Git for Professionals Tutorial](https://www.youtube.com/watch?v=Uszj_k0DGsg)
 - [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk&t=8s)
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
+- [En español] [Comandos Git](https://gitea.vergaracarmona.es/man-linux/comandos-git)
+- [En español][Apuntes Curso de Git](https://vergaracarmona.es/wp-content/uploads/2022/10/Curso-git_vergaracarmona.es_.pdf) de [Juan Carlos Rubio](https://www.linkedin.com/in/juan-carlos-rubio-pineda/Curso-git_vergaracarmona-es).
+- [En español] En los [apuntes](https://vergaracarmona.es/apuntes/) del traductor:
+  - ["Instalar git en ubuntu"](https://vergaracarmona.es/instalar-git-en-ubuntu/)
+  - ["Comandos de git"](https://vergaracarmona.es/comandos-de-git/)
+  - ["Estrategias de fusión en git: Ship / Show / Ask"](https://vergaracarmona.es/estrategias-bifurcacion-git-ship-show-ask/)
+  - ["Resolver conflictos en Git. Merge, Squash, Rebase o Pull"](https://vergaracarmona.es/merge-squash-rebase-pull/)
+  - ["Borrar commits de git: reset, rebase y cherry-pick"](https://vergaracarmona.es/reset-rebase-cherry-pick/)
 
-See you on [Day 37](day37.md)
+Nos vemos en el [Día 37](day37.md)

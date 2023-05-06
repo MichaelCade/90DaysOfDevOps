@@ -1,191 +1,195 @@
-## Social Network for code
+## Red social para el código
 
-Exploring GitHub | GitLab | BitBucket
+Explorando GitHub | GitLab | BitBucket 🚀
 
-Today I want to cover some of the git-based services that we have likely all heard of and expect we also use daily.
+Hoy veremos algunos de los servicios basados en git de los que probablemente hemos oído hablar. Utilizaremos algunos de nuestros conocimientos adquiridos para mover copias de nuestros datos a cada uno de los principales servicios.
 
-We will then use some of our prior session knowledge to move copies of our data to each of the main services.
-
-I called this section "Social Network for Code" let me explain why?
+He llamado a esta sección "Red Social para el Código", ya verás por qué...
 
 ### GitHub
 
-Most common at least for me is GitHub, GitHub is a web-based hosting service for git. It is most commonly used by software developers to store their code. Source Code Management with the git version control features as well as a lot of additional features. It allows for teams or open contributors to easily communicate and provides a social aspect to coding. (hence the social networking title) Since 2018 GitHub is part of Microsoft.
+El más común es GitHub, un servicio de alojamiento basado en web para git. Es muy utilizado por los desarrolladores de software para almacenar código. Tienes la gestión del código fuente centralizada en un repositorio remoto y distribuida gracias a las características de control de versiones git, así como un montón de características adicionales. Permite a los equipos y colaboradores comunicarse fácilmente y proporciona un aspecto social a la codificación. Desde 2018 GitHub forma parte de Microsoft (A golpe de talonario).
 
-GitHub has been around for quite some time and was founded in 2007/2008. With Over 40 million users on the platform today.
+GitHub fue fundada en 2007/2008. Con Más de 40 millones de usuarios en la plataforma a día de hoy.
 
-GitHub Main Features
+Características principales de GitHub
 
-- Code Repository
-- Pull Requests
-- Project Management toolset - Issues
-- CI / CD Pipeline - GitHub Actions
+- Repositorio de código
+- Solicitudes de Pull
+- Herramientas de gestión de proyectos - Issues
+- Canalización CI / CD - Acciones GitHub
 
-In terms of pricing, GitHub has different levels of pricing for its users. More can be found on [Pricing](https://github.com/pricing)
+En términos de precios, GitHub tiene diferentes niveles de precios para sus usuarios. Puedes encontrar más información en [Pricing](https://github.com/pricing)
 
-For this, we will cover the free tier.
+Aquí veremos tan solo el nivel gratuito.
 
-I am going to be using my already created GitHub account during this walkthrough, if you do not have an account then on the opening GitHub page there is a sign-up option and some easy steps to get set up.
+Voy a utilizar mi cuenta de GitHub ya creada durante este tutorial, si no tienes una cuenta, en la página de apertura de GitHub hay una opción de registro y algunos pasos sencillos para configurarla.
 
-### GitHub opening page
+### Página de inicio de GitHub
 
-When you first log in to your GitHub account you get a page containing a lot of widgets giving you options of where and what you would like to see or do. First up we have the "All Activity" this is going to give you a look into what is happening with your repositories or activity in general associated with your organisation or account.
+La primera vez que accedes a tu cuenta de GitHub aparece una página que contiene un montón de widgets que te dan opciones de dónde y qué te gustaría ver o hacer. En primer lugar tenemos "Toda la actividad", que te dará una visión de lo que está sucediendo con tus repositorios o actividad en general asociada a tu organización o cuenta.
 
 ![](Images/Day40_Git1.png)
 
-Next, we have our Code Repositories, either our own or repositories that we have interacted with recently. We can also quickly create new repositories or search repositories.
+A continuación, tenemos nuestros repositorios de código, ya sean propios o repositorios con los que hemos interactuado recientemente. También podemos crear rápidamente nuevos repositorios o buscar repositorios.
 
 ![](Images/Day40_Git2.png)
 
-We then have our recent activity, these for me are issues and pull requests that I have created or contributed to recently.
+Luego tenemos nuestra actividad reciente, que para mí son temas y pull requests que he creado o contribuido recientemente.
 
 ![](Images/Day40_Git3.png)
 
-Over on the right side of the page, we have some referrals for repositories that we might be interested in, most likely based on your recent activity or own projects.
+En la parte derecha tenemos algunas referencias de repositorios en los que podríamos estar interesados, probablemente basados en tu actividad reciente o en tus propios proyectos.
 
 ![](Images/Day40_Git4.png)
 
-To be honest I am very rarely on my home page that we just saw and described, although I now see that the feed could be really useful to help interact with the community a little better on certain projects.
+Para ser honesto no suelo entrar en mi propia página de inicio, veo que el feed podría ser realmente útil para ayudar a interactuar mejor con la comunidad en ciertos proyectos.
 
-Next up if we want to head into our GitHub Profile we can navigate to the top right corner and on your image, there is a drop-down which allows you to navigate through your account. From here to access your Profile select "Your Profile"
+A continuación, si queremos entrar en nuestro perfil de GitHub podemos navegar a la esquina superior derecha y en tu imagen, hay un desplegable que te permite navegar a través de tu cuenta. Desde aquí para acceder a tu Perfil selecciona "Tu Perfil"
 
 ![](Images/Day40_Git5.png)
 
-Next, your profile page will appear, by default, unless you change your configuration you are not going to see what I have, I have added some functionality that shows my recent blog posts over on [vZilla](https://vzilla.co.uk) and then also my latest videos on my [YouTube](https://m.youtube.com/c/MichaelCade1) Channel.
+A continuación, aparecerá tu página de perfil, por defecto, a menos que cambies tu configuración no vas a ver lo que yo tengo, he añadido alguna funcionalidad que muestra mis últimas entradas de blog en [vZilla](https://vzilla.co.uk) y también mis últimos vídeos en mi canal de [YouTube](https://m.youtube.com/c/MichaelCade1) Channel.
 
-You are not going to be spending much time looking at your profile, but this is a good profile page to share around your network so they can see the cool projects you are working on.
+No vas a pasar mucho tiempo mirando tu perfil, pero esta es una buena página de perfil para compartir en tu red para que puedan ver los proyectos interesantes en los que estás trabajando.
+
+Si quieres ver algunos ejemplos de páginas de inicio:
+- Página del autor [Michael Cade](https://github.com/MichaelCade/MichaelCade)
+- Página del traductor [manuelver](https://github.com/manuelver/manuelver) 
 
 ![](Images/Day40_Git6.png)
 
-We can then drill down into the building block of GitHub, the repositories. Here you are going to see your repositories and if you have private repositories they are also going to be shown in this long list.
+A continuación, podemos profundizar en el bloque de construcción de GitHub, los repositorios. Aquí vas a ver tus repositorios y si tienes repositorios privados también se mostrarán en esta larga lista.
 
 ![](Images/Day40_Git7.png)
 
-As the repository is so important to GitHub let me choose a pretty busy one of late and run through some of the core functionality that we can use here on top of everything I am already using when it comes to editing our "code" in git on my local system.
+El repositorio es muy importante en GitHub, así que elijo uno bastante movido últimamente para ejecutar algunas de las funciones básicas que podemos utilizar.
 
-First of all, from the previous window, I have selected the 90DaysOfDevOps repository and we get to see this view. You can see from this view we have a lot of information, we have our main code structure in the middle showing our files and folders that are stored in our repository. We have our readme. mdbeing displayed down at the bottom. Over to the right of the page, we have an about section where the repository has a description and purpose. Then we have a lot of information underneath this showing how many people have starred in the project, forked, and watched.
+Desde la ventana anterior, he seleccionado el repositorio 90DaysOfDevOps. Se puede ver en esta vista que tenemos una gran cantidad de información, tenemos nuestra estructura de código principal en el centro mostrando nuestros archivos y carpetas que se almacenan en nuestro repositorio. Tenemos nuestro readme.md que se muestra en la parte inferior y le da más importancia al fichero, ya que es nuestra presentación del proyecto. A la derecha de la página, tenemos una sección con una descripción y propósito del proyecto. Luego tenemos un montón de información debajo de esto que muestra cuántas personas han destacado en el proyecto con una star, cuántas lo han visto y cuántas lo han bifurcado.
 
 ![](Images/Day40_Git8.png)
 
-If we scroll down a little further you will also see that we have Released, these are from the golang part of the challenge. We do not have any packages in our project, we have our contributors listed here. (Thank you community for assisting in my spelling and fact checking) We then have languages used again these are from different sections in the challenge.
+Si nos desplazamos un poco más abajo también veremos que tenemos Releases, estos son de la parte golang del desafío. No tenemos ningún paquete en nuestro proyecto en este momento, y también vemos a nuestros colaboradores listados. (Gracias comunidad por ayudar en mi ortografía y otras correcciones) Luego tenemos lenguajes utilizados.
 
 ![](Images/Day40_Git9.png)
 
-A the top of the page you are going to see a list of tabs. These may vary and these can be modified to only show the ones you require. You will see here that I am not using all of these and I should remove them to make sure my whole repository is tidy.
+En la parte superior de la página verás una lista de pestañas. Éstas pueden variar y pueden modificarse para mostrar sólo las que necesites. Aquí verás que no estoy usando todas y que debería quitarlas para asegurarme de que todo mi repositorio está ordenado y limpio.
 
-First up we had the code tab which we just discussed but these tabs are always available when navigating through a repository which is super useful so we can jump between sections quickly and easily. Next, we have the issues tab.
+En primer lugar tenemos la pestaña de código, de la que acabamos de hablar, pero estas pestañas están siempre disponibles cuando se navega a través de un repositorio, lo que es muy útil para que podamos saltar entre las secciones de forma rápida y sencilla. A continuación, tenemos la pestaña de problemas.
 
-Issues let you track your work on GitHub, where development happens. In this specific repository you can see I have some issues focused on adding diagrams or typos but also we have an issue stating a need or requirement for a Chinese version of the repository.
+Las incidencias te permiten hacer un seguimiento de tu trabajo en GitHub, donde tiene lugar el desarrollo. En este repositorio específico se puede ver que tengo algunas cuestiones centradas en la adición de diagramas o errores tipográficos, pero también tenemos una cuestión que indica una necesidad o requisito para una versión china del repositorio.
 
-If this was a code repository then this is a great place to raise concerns or issues with the maintainers, but remember to be mindful and detailed about what you are reporting, and give as much detail as possible.
+Si esto fuera un repositorio de código, entonces este es un gran lugar para plantear inquietudes o problemas con los mantenedores, pero recuerde que debe ser consciente y detallado acerca de lo que está informando, y dar tantos detalles como sea posible.
 
 ![](Images/Day40_Git10.png)
 
-The next tab is Pull Requests, Pull requests let you tell others about changes you've pushed to a branch in a repository. This is where someone may have forked your repository, made changes such as bug fixes or feature enhancements or just typos in a lot of the cases in this repository.
+La siguiente pestaña es Pull Requests. Permite informar a otros sobre los cambios que ha empujado a una rama en un repositorio. Aquí es donde alguien puede haber bifurcado el repositorio en otra rama, sea del mismo proyecto o de un fork, ha hecho cambios como correcciones de errores o mejoras de características o simplemente errores tipográficos, y luego ha solicitado que se fusionen esos cambios en la rama principal del proyecto.
 
-We will cover forking later on.
+Cubriremos el forking con más detalle más adelante.
 
 ![](Images/Day40_Git11.png)
 
-I believe the next tab is quite new? But I thought for a project like #90DaysOfDevOps this could help guide the content journey but also help the community as they walk through their learning journey. I have created some discussion groups for each section of the challenge so people can jump in and discuss.
+La siguiente pestaña es bastante nueva, pero se ha creado para #90DaysOfDevOps porque no solo puede ayudar a guiar en el viaje por el contenido, sino que también ayuda a la comunidad a medida que caminan a través de su aprendizaje. Dentro hay grupos de discusión para cada sección del desafío para que quien quiera pueda entrar y comentar, a modo de foro.
 
 ![](Images/Day40_Git12.png)
 
-The Actions tab is going to enable you to build, test and deploy code and a lot more right from within GitHub. GitHub Actions will be something we cover in the CI/CD section of the challenge but this is where we can set some configuration here to automate steps for us.
+La pestaña de Actions te permitirá construir, probar, desplegar código y mucho más. GitHub Actions lo veremos en la sección de CI/CD del desafío. Como info previa, es aquí donde podemos establecer automatizaciones de tareas repetitivas para que se hagan por si solas con un disparador.
 
-On my main GitHub Profile, I am using GitHub Actions to fetch the latest blog posts and YouTube videos to keep things up to date on that home screen.
+Por ejemplo, en mi perfil principal de GitHub utilizo las Actions para obtener las últimas entradas del blog y vídeos de YouTube y mantener al día mi página de perfil Github.
 
 ![](Images/Day40_Git13.png)
 
-I mentioned above how GitHub is not just a source code repository but is also a project management tool, The Project tab enables us to build out project tables kanban type boards so that we can link issues and PRs to better collaborate on the project and have visibility of those tasks.
+Ya he mencionado que GitHub no es sólo un repositorio de código fuente, sino también una herramienta de gestión de proyectos. La pestaña Projects nos permite crear tablas de proyecto tipo kanban para que podamos vincular las incidencias y PRs para colaborar mejor en el proyecto y tener visibilidad/transparencia de las tareas.
 
 ![](Images/Day40_Git14.png)
 
-I know that issues to me seem like a good place to log feature requests and they are but the wiki page allows for a comprehensive roadmap for the project to be outlined with the current status and in general better document your project is it troubleshooting or how-to type content.
+La página wiki permite una hoja de ruta completa para el proyecto que se describe con el estado actual y, en general, documentar mejor el proyecto.
 
 ![](Images/Day40_Git15.png)
 
-Not so applicable to this project but the Security tab is there to make sure that contributors know how to deal with certain tasks, we can define a policy here but also code scanning add-ons to make sure your code for example does not contain secret environment variables.
+No es tan aplicable a este proyecto, pero la pestaña de Security está ahí para asegurarse de que los contribuyentes saben cómo hacer frente a ciertas tareas, podemos definir una política aquí, pero también complementos de escaneo de código para asegurarse de que su código, por ejemplo, no contiene variables de entorno con contraseñas.
 
 ![](Images/Day40_Git16.png)
 
-For me the insights tab is great, it provides so much information about the repository from how much activity has been going on down to commits and issues, but it also reports on traffic to the repository. You can see a list on the left side that allows you to go into great detail about metrics on the repository.
+Para mí la pestaña de Insights es genial ya que proporciona mucha información sobre el repositorio. Desde cuantificar la actividad que ha habido hasta los commits e issues, pasando también por informes sobre el tráfico del repositorio. Puedes ver una lista en el lado izquierdo que te permite entrar en gran detalle sobre las métricas del repositorio.
 
 ![](Images/Day40_Git17.png)
 
-Finally, we have the Settings tab, this is where we can get into the details of how we run our repository, I am currently the only maintainer of the repository but we could share this responsibility here. We can define integrations and other such tasks here.
+Por último, tenemos la pestaña Configuración donde podemos entrar en los detalles de cómo personalizar nuestro repositorio. Actualmente soy el único mantenedor del repositorio pero podríamos compartir esta responsabilidad aquí. Podemos definir integraciones, políticas de ramas y otras tareas.
 
 ![](Images/Day40_Git18.png)
 
-This was a super quick overview of GitHub, I think there are some other areas that I might have mentioned that need explaining in a little more detail. As mentioned GitHub houses millions of repositories mostly these are holding source code and these can be public or privately accessible.
+Como se mencionó GitHub alberga millones de repositorios, en su mayoría son código fuente y estos pueden ser de acceso público o privado.
+
+Hemos echado un vistazo súper rápido de GitHub, creo que se podría detallar mucho más, pero por ahora no somos comerciales de la herramienta, así que vamos a la parte técnica. 
 
 ### Forking
 
-I am going to get more into Open-Source in the session tomorrow but a big part of any code repository is the ability to collaborate with the community. Let's think of the scenario I want a copy of a repository because I want to make some changes to it, maybe I want to fix a bug or maybe I want to change something to use it for a use case that I have that was maybe not the intended use case for the original maintainer of the code. This is what we would call forking a repository. A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
+Voy a entrar más en Open-Source en la sesión de mañana, pero una gran parte de cualquier repositorio de código es la capacidad de colaborar con la comunidad. Pensemos en el escenario que quiero una copia de un repositorio porque quiero hacer algunos cambios en él, tal vez quiero corregir un error o tal vez quiero cambiar algo para utilizarlo para un caso de uso que tengo que tal vez no era el caso de uso previsto para el mantenedor original del código. Esto es lo que llamaríamos bifurcar un repositorio. Un fork es una copia de un repositorio. La bifurcación de un repositorio permite experimentar libremente con los cambios sin afectar al proyecto original.
 
-Let me head back to the opening page after login and see one of those suggested repositories.
+Permíteme volver a la página de inicio después de iniciar sesión y ver uno de esos repositorios sugeridos.
 
 ![](Images/Day40_Git19.png)
 
-If we click on that repository we are going to get the same look as we have just walked through on the 90DaysOfDevOps repository.
+Si hacemos click en ese repositorio vamos a obtener el mismo aspecto que acabamos de ver en el repositorio 90DaysOfDevOps.
 
 ![](Images/Day40_Git20.png)
 
-If we notice below we have 3 options, we have watch, fork and star.
+Si nos fijamos a continuación tenemos 3 opciones:
 
-- Watch - Updates when things happen to the repository.
-- Fork - a copy of a repository.
-- Star - "I think your project is cool"
+- Watch - Se actualiza con los visitante al repositorio.
+- Fork - Las copias del repositorio.
+- Star - "Creo que tu proyecto es genial".
 
 ![](Images/Day40_Git21.png)
 
-Given our scenario of wanting a copy of this repository to work on we are going to hit the fork option. If you are a member of multiple organisations then you will have to choose where the fork will take place, I am going to choose my profile.
+Vamos a darle a la opción fork para hacer una copia en la que trabajar. Si eres miembro de varias organizaciones entonces tendrás que elegir donde se realizará el fork, yo voy a elegir mi perfil.
 
 ![](Images/Day40_Git22.png)
 
-Now we have our copy of the repository that we can freely work on and change as we see fit. This would be the start of the pull request process that we mentioned briefly before but we will cover it in more detail tomorrow.
+Ahora ya tenemos nuestra copia del repositorio sobre la que podemos trabajar libremente y modificarla a nuestro antojo. Este sería el comienzo del proceso de pull request que mencionamos brevemente antes pero que cubriremos con más detalle mañana.
 
 ![](Images/Day40_Git23.png)
 
-Ok, I hear you say, but how do I make changes to this repository and code if it's on a website, well you can go through and edit on the website but it's not going to be the same as using your favourite IDE on your local system with your favourite colour theme. For us to get a copy of this repository on our local machine we will perform a clone of the repository. This will allow us to work on things locally and then push our changes back into our forked copy of the repository.
+Ok, te oigo decir, pero ¿cómo puedo hacer cambios en este repositorio y el código si está en un sitio web? Bueno, puedes editarlo directamente en el página Github, pero no va a ser lo mismo que usar tu IDE favorito en local. Para obtener una copia de este repositorio en local vamos a realizar un clon del repositorio. Esto nos permitirá trabajar localmente y luego empujar/pushear nuestros cambios de nuevo en nuestra copia bifurcada en el repositorio remoto.
 
-We have several options when it comes to getting a copy of this code as you can see below.
+Tenemos varias opciones cuando se trata de obtener una copia de este código como se puede ver a continuación.
 
-There is a local version available of GitHub Desktop which gives you a visual desktop application to track changes and push and pull changes between local and GitHub.
+Hay una versión local disponible de GitHub Desktop que le da una aplicación de escritorio visual para realizar un seguimiento de los cambios y empujar/pushear y tirar/pullear los cambios entre el local y GitHub.
 
-For this little demo, I am going to use the HTTPS URL we see on there.
+Para esta pequeña demostración, voy a utilizar la URL HTTPS.
 
 ![](Images/Day40_Git24.png)
 
-Now on our local machine, I am going to navigate to a directory I am happy to download this repository to and then run `git clone url`
+Ahora, en nuestra máquina local, voy a navegar al directorio donde quiero descargar el repositorio y luego ejecutar `git clone url`.
 
 ![](Images/Day40_Git25.png)
 
-Now we could take it to VScode to make some changes to this.
+Podemos llevarlo a VScode para hacer algunos cambios.
 
 ![](Images/Day40_Git26.png)
 
-Let's now make some changes, I want to make a change to all those links and replace that with something else.
+Vamos a hacer algunos cambios, quiero hacer un cambio en todos esos enlaces y sustituirlos por otra cosa.
 
 ![](Images/Day40_Git27.png)
 
-Now if we check back on GitHub and we find our readme.mdin that repository, you should be able to see a few changes that I made to the file.
+Si nos fijamos de nuevo en GitHub y encontramos nuestro readme.md, deberías ser capaz de ver algunos cambios que he hecho en el archivo.
 
 ![](Images/Day40_Git28.png)
 
-At this stage, this might be complete and we might be happy with our change as we are the only people going to use our new change but maybe it was a bug change and if that is the case then we will want to contribute via a Pull Request to notify the original repository maintainers of our change and see if they accept our changes.
+En esta etapa, esto podría estar completo y podríamos estar contentos con nuestro cambio, ya que somos las únicas personas que van a utilizar nuestro nuevo cambio, pero tal vez fue un cambio de error y si ese es el caso, entonces vamos a querer contribuir a través de un Pull Request para notificar a los mantenedores del repositorio original de nuestro cambio y ver si aceptan nuestros cambios.
 
-We can do this by using the contribute button highlighted below. I will cover more on this tomorrow when we look into Open-Source workflows.
+Podemos hacer esto utilizando el botón de contribución que se muestra a continuación. Mañana con los flujos de trabajo Open-Source veremos más sobre esto.
 
 ![](Images/Day40_Git29.png)
 
-I have spent a long time looking through GitHub and I hear some of you cry but what about other options!
+Me han dicho muchos: ¿qué pasa con las otras opciones de repositorios remotos?
 
-Well, there are and I am going to find some resources that cover the basics for some of those as well. You are going to come across GitLab and BitBucket amongst others in your travels and whilst they are git-based services they have their differences.
+Bueno, voy a dejar algunos recursos que cubren los conceptos básicos para el resto de opciones. En tus viajes te encontrarás con GitLab y BitBucket, entre otros, y aunque son servicios basados en Git, tienen sus diferencias.
 
-You will also come across hosted options. Most commonly here I have seen GitLab as a hosted version vs GitHub Enterprise (Don't believe there is a free hosted GitHub?)
+También encontrarás opciones alojadas, la más común es GitLab frente a GitHub Enterprise. El traductor recomienda la opcíon de código libre gitea.io.
 
-## Resources
+## Recursos
 
 - [Learn GitLab in 3 Hours | GitLab Complete Tutorial For Beginners](https://www.youtube.com/watch?v=8aV5AxJrHDg)
 - [BitBucket Tutorials Playlist](https://www.youtube.com/watch?v=OMLh-5O6Ub8&list=PLaD4FvsFdarSyyGl3ooAm-ZyAllgw_AM5)
@@ -196,5 +200,14 @@ You will also come across hosted options. Most commonly here I have seen GitLab 
 - [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk&t=8s)
 - [Complete Git and GitHub Tutorial](https://www.youtube.com/watch?v=apGV9Kg7ics)
 - [Git cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
+- [En español] [Comandos Git](https://gitea.vergaracarmona.es/man-linux/comandos-git)
+- [En español][Apuntes Curso de Git](https://vergaracarmona.es/wp-content/uploads/2022/10/Curso-git_vergaracarmona.es_.pdf) de [Juan Carlos Rubio](https://www.linkedin.com/in/juan-carlos-rubio-pineda/Curso-git_vergaracarmona-es).
+- [En español] En los [apuntes](https://vergaracarmona.es/apuntes/) del traductor:
+  - ["Instalar git en ubuntu"](https://vergaracarmona.es/instalar-git-en-ubuntu/)
+  - ["Comandos de git"](https://vergaracarmona.es/comandos-de-git/)
+  - ["Estrategias de fusión en git: Ship / Show / Ask"](https://vergaracarmona.es/estrategias-bifurcacion-git-ship-show-ask/)
+  - ["Resolver conflictos en Git. Merge, Squash, Rebase o Pull"](https://vergaracarmona.es/merge-squash-rebase-pull/)
+  - ["Borrar commits de git: reset, rebase y cherry-pick"](https://vergaracarmona.es/reset-rebase-cherry-pick/)
+- [GitHub Profile README Generator](https://github.com/rahuldkjain/github-profile-readme-generator)
 
-See you on [Day 41](day41.md)
+Nos vemos en el [Día 41](day41.md)
