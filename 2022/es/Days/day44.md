@@ -1,132 +1,145 @@
-## Docker Images & Hands-On with Docker Desktop
+## Imágenes Docker y Manos a la Obra con Docker Desktop
 
-We now have Docker Desktop installed on our system. (If you are running Linux then you still have options but no GUI but docker does work on Linux.)[Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/) (Other distributions also available.)
+Ahora tenemos Docker Desktop instalado en nuestro sistema. (Si estás ejecutando Linux, tienes más opciones pero no el GUI.)[Instalar Docker Engine en Ubuntu](https://docs.docker.com/engine/install/ubuntu/) (También está disponible para otras distribuciones.)
 
-In this post, we are going to get started with deploying some images into our environment. A recap on what a Docker Image is - A Docker image is a file used to execute code in a Docker container. Docker images act as a set of instructions to build a Docker container, like a template. Docker images also act as the starting point when using Docker.
+En este post, vamos a empezar con el despliegue de algunas imágenes en nuestro entorno. Una imagen Docker es un archivo utilizado para ejecutar código en un contenedor Docker. Las imágenes Docker actúan como un conjunto de instrucciones para construir un contenedor Docker, como una plantilla. Las imágenes Docker también actúan como el punto de partida cuando se utiliza Docker.
 
-Now is a good time to go and create your account on [DockerHub](https://hub.docker.com/)
+Ahora es un buen momento para crear tu cuenta en [DockerHub](https://hub.docker.com/)
 
 ![](Images/Day44_Containers1.png)
 
-DockerHub is a centralised resource for working with Docker and its components. Most commonly known as a registry to host docker images. But there are a lot of additional services here which can be used in part with automation or integrated into GitHub as well as security scanning.
+DockerHub es un recurso centralizado para trabajar con Docker y sus componentes. Más comúnmente conocido como un registro para alojar imágenes Docker. Pero hay un montón de servicios adicionales que se pueden utilizar en parte con la automatización o integración en GitHub, así como el escaneo de seguridad.
 
-If you scroll down once logged in you are going to see a list of container images, You might see database images for MySQL, hello-world etc. Think of these as great baseline images or you might just need a database image and you are best to use the official one which means you don't need to create your own.
+Desplazándote hacia abajo una vez logueado verás una lista de imágenes de contenedores, es posible que veas imágenes de bases de datos MySQL, hello-world, etc. Piensa en estas como las imágenes de referencia, puede que sólo necesites una imagen de BBDD MySQL y la mejor sea utilizar la oficial, lo que significa que no es necesario crear una propia personalizada.
 
 ![](Images/Day44_Containers2.png)
 
-We can drill deeper into the view of available images and search across categories, operating systems and architectures. The one thing I highlight below is the Official Image, this should give you peace of mind about the origin of this container image.
+Podemos profundizar en la vista de imágenes disponibles y buscar por categorías, sistemas operativos y arquitecturas. Hay que destacar la Imagen Oficial, porque esta debería darte tranquilidad sobre su origen. Para nada recomiendo utilizar imágenes no oficiales, sobretodo en producción. En caso de que lo hagas, asegúrate al menos de que son de un editor verificado.
 
 ![](Images/Day44_Containers3.png)
 
-We can also search for a specific image, for example, WordPress might be a good base image that we want we can do that at the top and find all container images related to WordPress. Below are notices that we also have verified publisher.
-
-- Official Image - Docker Official images are a curated set of Docker open source and "drop-in" solution repositories.
-
-- Verified Publisher - High-quality Docker content from verified publishers. These products are published and maintained directly by a commercial entity.
+Por otra parte, podemos buscar una imagen específica, por ejemplo, WordPress podría ser una buena imagen de base que incluye todas las imágenes de contenedores relacionados que necesite la aplicación. Ten en cuenta que existe diferencias entre imagen oficial y editor verificado.
+- **Imagen Oficial** - Las imágenes Oficiales de Docker son un conjunto curado de código abierto de Docker y repositorios de soluciones "drop-in".
+- **Editor verificado** - Contenido Docker de alta calidad de editores verificados. Estos productos son publicados y mantenidos directamente por una entidad comercial.
 
 ![](Images/Day44_Containers4.png)
 
-### Exploring Docker Desktop
+### Explorando Docker Desktop
 
-We have Docker Desktop installed on our system and if you open this I expect unless you had this already installed you will see something similar to the image below. As you can see we have no containers running and our docker engine is running.
+Tenemos Docker Desktop instalado en nuestro equipo windows. Si lo abres por primera vez verás algo similar a la imagen de abajo. Como puedes ver no tenemos ningún contenedor ejecutándose y nuestro motor docker está funcionando.
 
 ![](Images/Day44_Containers5.png)
 
-Because this was not a fresh install for me, I do have some images already downloaded and available on my system. You will likely see nothing in here.
+Debido a que esta no fue la primera instalación, tengo algunas imágenes ya descargadas y disponibles en mi sistema. Es probable que lo veas diferente.
 
 ![](Images/Day44_Containers6.png)
 
-Under remote repositories, this is where you will find any container images you have stored in your docker hub. You can see from the below I do not have any images.
+En los repositorios remotos es donde encontrarás cualquier imagen de contenedor que hayas almacenado en tu docker hub. Puedes ver en la imagen de abajo que no tengo ninguna imagen.
 
 ![](Images/Day44_Containers7.png)
 
-We can also clarify this on our dockerhub site and confirm that we have no repositories there.
+Hay que confirmarlo en nuestro sitio dockerhub y confirmar que no tenemos repositorios allí.
 
 ![](Images/Day44_Containers8.png)
 
-Next, we have the Volumes tab, If you have containers that require persistence then this is where we can add these volumes to your local file system or a shared file system.
+A continuación, tenemos la pestaña Volumes. Si tienes contenedores que requieren persistencia será aquí donde podemos añadir estos volúmenes al sistema de archivos local o a un sistema de archivos compartido.
 
 ![](Images/Day44_Containers9.png)
 
-At the time of writing, there is also a Dev Environments tab, this is going to help you collaborate with your team instead of moving between different git branches. We won't be covering this.
+En el momento de escribir esto, también hay una pestaña de Entornos de Desarrollo, esto va a ayudarte a colaborar con tu equipo en lugar de moverte entre diferentes ramas de git. No vamos a cubrir esto.
 
 ![](Images/Day44_Containers10.png)
 
-Going back to the first tab you can see that there is a command we can run which is a getting started container. Let's run `docker run -d -p 80:80 docker/getting-started` in our terminal.
+Volviendo a la primera pestaña puedes ver que hay un comando que podemos ejecutar para iniciar el contenedor.  Ejecutamos en nuestro terminal:
+
+```shell
+docker run -d -p 80:80 docker/getting-started
+```
 
 ![](Images/Day44_Containers11.png)
 
-If we go and check our docker desktop window again, we are going to see that we have a running container.
+Si comprobamos nuestro docker desktop veremos que ya tenemos un contenedor en ejecución.
 
 ![](Images/Day44_Containers12.png)
 
-You might have noticed that I am using WSL2 and for you to be able to use that you will need to make sure this is enabled in the settings.
+Te habrás dado cuenta de que estoy usando WSL2. Para usarlo tendrás que asegurarte de que está activado en la configuración.
 
 ![](Images/Day44_Containers13.png)
 
-If we now go and check our Images tab again, you should now see an in-use image called docker/getting-started.
+Si ahora comprobamos nuestra pestaña Imágenes deberías ver una imagen en uso llamada docker/getting-started.
 
 ![](Images/Day44_Containers14.png)
 
-Back to the Containers/Apps tab, click on your running container. You are going to see the logs by default and along the top, you have some options to choose from, in our case I am pretty confident that this is going to be a web page running in this container so we are going to choose the open in the browser.
+De vuelta a la pestaña Contenedores/Apps, haz click en tu contenedor en ejecución. Verás los registros por defecto y en la parte superior tiene algunas opciones para elegir. En nuestro caso no va a ser una web que se ejecute en este contenedor por lo que vamos a elegir la apertura en el navegador.
 
 ![](Images/Day44_Containers15.png)
 
-When we hit that button above sure enough a web page should open hitting your localhost and display something similar to below.
+Cuando pulsemos el botón de arriba, se abrirá una web que mostrará algo similar a lo que se muestra a continuación.
 
-This container also has some more detail on our containers and images.
+Este contenedor también tiene algunos detalles más sobre nuestros contenedores e imágenes.
 
 ![](Images/Day44_Containers16.png)
 
-We have now run our first container. Nothing too scary just yet. What about if we wanted to pull one of the container images down from DockerHub? Maybe there is a `hello world` docker container we could use.
+Ya hemos ejecutado nuestro primer contenedor. Nada demasiado aterrador todavía. ¿Y si quisiéramos bajar una de las imágenes de contenedor de DockerHub? Podemos usar un contenedor docker llamado `hello world` para comprobarlo.
 
-I went ahead and stopped the getting started container not that it's taking up any mass amount of resources but for tidiness, as we walk through some more steps.
+Me adelanté y detuve el contenedor de inicio, no es que esté ocupando una cantidad masiva de recursos, sino para mantener un orden mientras vemos algunos pasos más.
 
-Back in our terminal let's go ahead and run `docker run hello-world` and see what happens.
+De vuelta en nuestro terminal vamos a seguir adelante y ejecutar `docker run hello-world` y a ver qué pasa.
 
-You can see we did not have the image locally so we pulled that down and then we got a message that is written into the container image with some information on what it did to get up and running and some links to reference points.
+Puedes ver que no teníamos la imagen localmente así que la bajamos y entonces tenemos un mensaje que está escrito en la imagen del contenedor con alguna información sobre lo que hizo para ponerse en marcha y algunos enlaces a puntos de referencia.
 
 ![](Images/Day44_Containers17.png)
 
-However, if we go and look in Docker Desktop now we have no running containers but we do have an exited container that used the hello-world message, meaning it came up, delivered the message and then is terminated.
+Sin embargo, si vamos y miramos en Docker Desktop ahora no tenemos ningún contenedor en ejecución, pero sí tenemos un contenedor que utilizó el mensaje hola-mundo, lo que significa que apareció, entregó el mensaje y luego se terminó.
 
 ![](Images/Day44_Containers18.png)
 
-And for the last time, let's just go and check the images tab and see that we have a new hello-world image locally on our system, meaning that if we run the `docker run hello-world` command again in our terminal we would not have to pull anything unless a version changes.
+Y para terminar vamos a comprobar la pestaña images de nuevo en la que tendremos una nueva imagen hello-world localmente, lo que significa que si ejecutamos de nuevo el comando `docker run hello-world` en nuestro terminal no tendríamos que descargar nada a menos de que cambie la versión.
 
 ![](Images/Day44_Containers19.png)
 
-The message from the hello-world container set down the challenge of running something a little more ambitious.
+El mensaje del contenedor hello-world nos planteó el reto de ejecutar algo un poco más ambicioso.
 
-Challenge Accepted!
+¡Reto aceptado!
 
 ![](Images/Day44_Containers20.png)
 
-In running `docker run -it ubuntu bash` in our terminal we are going to run a containerised version of Ubuntu well not a full copy of the Operating system. You can find out more about this particular image on [DockerHub](https://hub.docker.com/_/ubuntu)
+Al ejecutar `docker run -it ubuntu bash` en nuestro terminal vamos a ejecutar una versión en un contenedor de Ubuntu, que no es una copia completa del sistema operativo. Puedes encontrar más información sobre esta imagen en particular en [DockerHub](https://hub.docker.com/_/ubuntu)
 
-You can see below when we run the command we now have an interactive prompt (`-it`) and we have a bash shell into our container.
+Puedes ver a continuación cuando ejecutamos el comando que ahora tenemos un símbolo del sistema interactivo (`-it`) y tenemos un shell bash en nuestro contenedor.
 
 ![](Images/Day44_Containers21.png)
 
-We have a bash shell but we don't have much more which is why this container image is less than 30MB.
+Tenemos una shell bash pero no tenemos mucho más, piensa que la imagen de este contenedor pesa menos de 30MB.
 
 ![](Images/Day44_Containers22.png)
 
-But we can still use this image and we can still install software using our apt package manager, we can update our container image and upgrade also.
+Pero con esta imagen podemos, por ejemplo:
+- Instalar todo el software que necesitemos usando nuestro gestor de paquetes apt.
+- Actualizar nuestra imagen de contenedor
+- Crear un nuevo contenedor a partir de esta imagen
+- Utilizar el contenedor interactivo para pruebas.
+
+Y todo lo que imaginemos.
 
 ![](Images/Day44_Containers23.png)
 
-Or maybe we want to install some software into our container, I have chosen a really bad example here as pinta is an image editor and it's over 200MB but hopefully you get where I am going with this. This would increase the size of our container considerably but still, we are going to be in the MB and not in the GB.
+He instalado algún software en el contenedor, he elegido un ejemplo muy malo aquí ya que `pinta` es un editor de imágenes de más de 200 MB, pero espero que entiendas a dónde voy con esto. Esto aumentaría el tamaño de nuestro contenedor considerablemente pero aún así, vamos a estar en unos MB sin llegar al GB.
 
 ![](Images/Day44_Containers24.png)
 
-I wanted that to hopefully give you an overview of Docker Desktop and the not-so-scary world of containers when you break it down with simple use cases, we do need to cover some networking, security and other options we have vs just downloading container images and using them like this. By the end of the section, we want to have made something and uploaded it to our DockerHub repository and be able to deploy it.
+Quería que esto te diera una visión general de Docker Desktop y el mundo no tan aterrador de los contenedores cuando lo desglosas con casos de uso simples. Ahora tenemos que ver algo de redes, de seguridad y otras opciones mínimas que necesitamos de base. 
 
-## Resources
+## Recursos
 
 - [TechWorld with Nana - Docker Tutorial for Beginners](https://www.youtube.com/watch?v=3c-iBn73dDE)
 - [Programming with Mosh - Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI)
 - [Docker Tutorial for Beginners - What is Docker? Introduction to Containers](https://www.youtube.com/watch?v=17Bl31rlnRM&list=WL&index=128&t=61s)
 - [WSL 2 with Docker getting started](https://www.youtube.com/watch?v=5RQbdMn04Oc)
+- [En español] En los [apuntes](https://vergaracarmona.es/apuntes/) del traductor:
+  - [Preparación de entorno de pruebas local para docker](https://vergaracarmona.es/preparacion-de-entorno-de-pruebas-local-para-docker/)
+  - [Uso básico de docker](https://vergaracarmona.es/uso-basico-de-docker/)
+  - [Una breve historia sobre contenedores](https://vergaracarmona.es/breve-historia-de-contenedores/)
+  - [Desplegar con docker-compose los servicios Traefik y Portainer](https://vergaracarmona.es/desplegar-con-docker-compose-los-servicios-traefik-y-portainer/)
 
-See you on [Day 45](day45.md)
+Nos vemos en el [Día 45](day45.md)
