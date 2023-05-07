@@ -189,17 +189,6 @@ Esto es sólo una visión general rápida y notas sobre los bloques de construcc
 
 ![](Images/Day49_Kubernetes12.png)
 
-### Lo que veremoes en la serie sobre Kubernetes
-
-- Arquitectura de Kubernetes
-- Comandos Kubectl
-- Kubernetes YAML
-- Entrada de Kubernetes
-- Servicios Kubernetes
-- Gestor de paquetes Helm
-- Almacenamiento Persistente
-- Aplicaciones con estado
-
 ## Recursos
 
 - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
