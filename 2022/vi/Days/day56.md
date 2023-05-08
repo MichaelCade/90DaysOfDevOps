@@ -73,41 +73,43 @@ Sau khi hạ tầng máy chủ đã sẵn sàng chúng ta sẽ triển khai ứn
 - Cập nhật phần mềm (cũng có thể là các thư viện phụ thuộc)
 - Định lại cấu hình trong trường hợp cần thiết
 
-### Difference between IaC tools
+### Sự khác nhau giữa các công cụ IaC
 
-Declarative vs procedural
+Khai báo và trình tự thực hiện
+Declarative  vs procedural
 
-Procedural
+Trình tự thực hiện
+- Các bước trong IaC được làm tuần tự, theo từng bước
+- Khởi tạo máy chủ, thêm máy chủ vào hệ thống và thay đổi cấu hình
 
-- Step-by-step instruction
-- Create a server > Add a server > Make this change
+Khai báo
+- Khai báo kết quả mong muốn (eg: tạo 1 hoặc nhiều máy chủ cùng lúc)
+- Ví dụ: Khởi tạo 2 máy chủ, hoặc 2 bucket
 
-Declarative
+Tính bất biến và tính khả biến (có thể và không thể thay đổi)
+Tác giả so sánh tính khả biến với các con thú cưng, tính bất biến với các loại gia súc 
 
-- declare the result
-- 2 Servers
+Khả biến
+- Có thể thay đổi cấu hình thay vì ghi đè hoặc thay thế (ví dụ: thay đổi tên của máy chủ Windows, đổi tagging của s3 bucket)
+- Vì có tính khả biến nên vòng đời sẽ lâu hơn.
 
-Mutable (pets) vs Immutable (cattle)
+Bất biến
+- Khi muốn thay đổi chúng ta buộc phải thay thế mới
+- Vòng đời ngắn hơn.
 
-Mutable
+Mỗi tài nguyên trong hệ thống đều có thể có một hoặc nhiều tính khả biến và bất biến
+Lấy ví dụ như sau:
+- 01 AWS S3 bucket khi đã đặt tên (bucket name) sẽ bắt buộc là duy nhất và không thể thay đổi được tuy nhiên ta hoàn toàn có thể thay đổi nhãn (tag) của chúng mà không cần phải tạo mới bucket
+- Ví dụ thứ 2, với một container image, chúng ta sẽ cần nó là bất biến, nghĩa là khi muốn cập nhật mã nguồn chúng ta bắt buộc phải tạo container image mới
 
-- Change instead of replacing
-- Generally long lived
+Với các ví dụ trên, có rất nhiều lựa chọn cho IaC, tuy nhiên không có công cụ IaC nào có thể định nghĩa cũng như giải quyết được hết các tính chất này, thay vào đó chúng ta phải hiểu được tính chất của từng tài nguyên (resource, infra - hạ tầng)
 
-Immutable
+Cũng trong seri này, chúng ta sẽ bắt đầu thực hành với Terraform, công cụ được coi là thích hợp nhất ở thời điểm hiện tại để giúp chúng ta thấy được lợi ích mà IaC mang lại. Việc thực hành cũng là cách tốt nhất để nâng cao khả năng, kỹ năng lập trình.
 
-- Replace instead of change
-- Possibly short-lived
+Tiếp theo, bắt đầu với lý thuyết về Terraform ở mức độ cơ bản (101) sau đó chúng ta sẽ bắt đầu thực hành
 
-This is really why we have lots of different options for Infrastructure as Code because there is no one tool to rule them all.
-
-We are going to be mostly using terraform and getting hands-on as this is the best way to start seeing the benefits of Infrastructure as Code when it is in action. Getting hands-on is also the best way to pick up the skills you are going to be writing code.
-
-Next up we will start looking into Terraform with a 101 before we get some hands-on getting used.
-
-## Resources
-
-I have listed a lot of resources down below and I think this topic has been covered so many times out there, If you have additional resources be sure to raise a PR with your resources and I will be happy to review and add them to the list.
+## Tài liệu Tham khảo
+Tác giả đã liệt kê ra rất nhiều nội dung bên dưới đây để chúng ta có thể bắt đầu học và tham khảo, với các nội dung này phần nào có thể giúp chúng ta nhanh chóng nắm được khái niệm và các lý thuyết xung quanh IaC
 
 - [What is Infrastructure as Code? Difference of Infrastructure as Code Tools](https://www.youtube.com/watch?v=POPP2WTJ8es)
 - [Terraform Tutorial | Terraform Course Overview 2021](https://www.youtube.com/watch?v=m3cKkYXl-8o)
@@ -120,4 +122,4 @@ I have listed a lot of resources down below and I think this topic has been cove
 - [Terraform Tutorial - The Best Project Ideas](https://www.youtube.com/watch?v=oA-pPa0vfks)
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
 
-See you on [Day 57](day57.md)
+Hẹn gặp lại các bạn ở ngày tiếp theo [Day 57](day57.md)
