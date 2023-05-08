@@ -43,7 +43,7 @@ Quay trở lại nội dung chính, tiếp theo sau khi các bước cài đặt
 
 Các bạn hãy tưởng tượng từng đó công việc sẽ được lặp đi lặp lại cho các môi trường phát triển như: dev, test, production ... độ phức tạp vì vậy cũng tăng lên.
 
-Đó cũng chính là lý do mà IaC giải quyết được các vấn đề này, việc triển khai lúc này cũng giống như việc chúng ta nuôi dưỡng một chú mèo, chúng ta có thể đặt tên cho chúng, nuôi dưỡng chúng và sống cùng chúng ta, gọi là vòng đời của một phần mềm (SDLC)
+Đó cũng chính là lý do mà IaC giải quyết được các vấn đề này, việc triển khai lúc này cũng giống như việc chúng ta nuôi dưỡng một vật nuôi trong gia đình, chúng ta có thể đặt tên cho chúng, nuôi dưỡng chúng và sống cùng chúng ta, gọi là vòng đời của một phần mềm (SDLC)
 
 Với IaC, chúng ta tự động hóa tất cả các bước nêu trên từ đầu đến cuối. IaC chính là khái niệm và một số các công cụ chúng ta quan tâm để khởi tạo tự động hạ tầng, trong trường hợp xấu, rủi ro xẩy ra và ảnh hưởng đến hệ thống máy chủ, chúng ta hoàn toàn có thể loại bỏ nó và khởi tạo một máy chủ khác để thay thế nó. Cũng chính vì nó được tự động hóa hoàn toàn nên khi máy chủ mới được khởi tạo nó sẽ giống chính xác hoàn toàn với các đoạn mã mà chúng ta viết. **Câu này khó quá** `At this point we don't care what they are called they are there in the field serving their purpose until they are no longer in the field and we have another to replace it either because of a failure or because we updated part or all of our application.`
 
