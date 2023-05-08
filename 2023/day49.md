@@ -1,5 +1,14 @@
 # Day 49: AWS Cloud Overview
 
+Welcome to the AWS section of the 90 Days of DevOps! Picking 7 items to learn about is difficult for several reasons:
+
+1. At last count, there were 250+ AWS services
+2. Each service could get it's own multi-day deep dive 😅
+
+Because of that, we're going to do a gentle intro that starts off easy, goes into some very DevOps-salient services, then ends with a section-capstone project that will give you a lot of exposure to AWS DevOps services.
+
+I hope you enjoy the next 7 days as much as I did creating them. If you have any questions feel free to ask!
+
 AWS Cloud is a cloud computing platform provided by Amazon Web Services (AWS). It offers a wide range of services, including computing, storage, networking, database, analytics, machine learning, security, and more. AWS Cloud allows businesses and organizations to access these services on a pay-as-you-go basis, which means they only pay for what they use and can scale their resources up or down as needed.
 
 ![](images/day49-1.png)
@@ -8,7 +17,7 @@ AWS Cloud is a cloud computing platform provided by Amazon Web Services (AWS). I
 
 One of the main benefits of AWS Cloud is its flexibility. You can choose the services that best meet your needs and only pay for what you use. This makes it an ideal solution for small businesses, startups, and enterprises, as it allows them to access the resources they need without having to make a significant upfront investment in infrastructure.
 
-## Security 
+## Security
 
 Another benefit of AWS Cloud is its security. AWS has a number of security measures in place to protect your data and resources, including encryption, identity and access management, and network security. It also has a number of compliance programs in place, including HIPAA, PCI DSS, and GDPR, to ensure that your data is secure and compliant with relevant regulations.
 
@@ -20,13 +29,13 @@ One of the most popular services offered by AWS Cloud is Amazon Elastic Compute 
 
 ![](images/day49-2.png)
 
-## S3 
+## S3
 
 Another popular service offered by AWS Cloud is Amazon Simple Storage Service (S3). S3 is an object storage service that allows you to store and retrieve large amounts of data from anywhere on the internet. It is highly scalable, durable, and secure, making it an ideal solution for storing and managing data in the cloud.
 
 ![](images/day49-3.png)
 
-## Databases 
+## Databases
 
 AWS Cloud also offers a range of other services, including Amazon Relational Database Service (RDS) for managing databases, Amazon Redshift for data warehousing and analytics, and Amazon Elasticsearch Service for search and analytics. These services make it easy to build and manage complex applications in the cloud, without having to worry about infrastructure or scaling.
 
@@ -36,3 +45,4 @@ Overall, AWS Cloud is a powerful and flexible cloud computing platform that offe
 
 ## Resources
 
+See you tomorrow in [Day 50](day50.md).

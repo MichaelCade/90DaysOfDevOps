@@ -92,3 +92,5 @@ It contains the example I used in this article + a fuzz test that triggers a fai
 - <https://en.wikipedia.org/wiki/Fuzzing>
 - [Fuzzing in Go by Valentin Deleplace, Devoxx Belgium 2022](https://www.youtube.com/watch?v=Zlf3s4EjnFU)
 - [Write applications faster and securely with Go by Cody Oss, Go Day 2022](https://www.youtube.com/watch?v=aw7lFSFGKZs)
+
+See you on [Day 17](day17.md).

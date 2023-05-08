@@ -288,3 +288,5 @@ So that’s how to retrieve, update, and delete data from a database. We also lo
 Join us tommorrow where we will be looking at backing up and restoring databases.
 
 Thank you for reading!
+
+See you in [Day 65](day65.md).

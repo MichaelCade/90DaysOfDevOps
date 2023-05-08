@@ -72,33 +72,32 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 
 ### Cách sử dụng Git hiệu quả
 
-- [✔️] 📚 35 > [The Big Picture: Git - Version Control](Days/day35.md)
-- [✔️] 📚 36 > [Installing & Configuring Git](Days/day36.md)
-- [✔️] 📚 37 > [Gitting to know Git](Days/day37.md)
+- [✔️] 📚 35 > [Bức tranh toàn cảnh: Git - Quản lý phiên bản](Days/day35.md)
+- [✔️] 📚 36 > [Cài đặt & Cấu hình Git](Days/day36.md)
+- [✔️] 📚 37 > [Giới thiệu về Git](Days/day37.md)
 - [✔️] 📚 38 > [Staging & Changing](Days/day38.md)
-- [✔️] 📚 39 > [Viewing, unstaging, discarding & restoring](Days/day39.md)
-- [✔️] 📚 40 > [Social Network for code](Days/day40.md)
-- [✔️] 📚 41 > [The Open Source Workflow](Days/day41.md)
-
+- [✔️] 📚 39 > [Xem, unstaging, loại bỏ & khôi phục](Days/day39.md)
+- [✔️] 📚 40 > [Mạng xã hội dành cho code](Days/day40.md)
+- [✔️] 📚 41 > [Quy trình làm việc với mã nguồn mở](Days/day41.md)
 ### Containers
 
-- [✔️] 🏗️ 42 > [The Big Picture: Containers](Days/day42.md)
-- [✔️] 🏗️ 43 > [What is Docker & Getting installed](Days/day43.md)
-- [✔️] 🏗️ 44 > [Docker Images & Hands-On with Docker Desktop](Days/day44.md)
-- [✔️] 🏗️ 45 > [The anatomy of a Docker Image](Days/day45.md)
+- [✔️] 🏗️ 42 > [Bức tranh toàn cảnh: Containers](Days/day42.md)
+- [✔️] 🏗️ 43 > [Docker là gì & Cài đặt](Days/day43.md)
+- [✔️] 🏗️ 44 > [Docker Images & Thực hành với Docker Desktop](Days/day44.md)
+- [✔️] 🏗️ 45 > [Phân tích một Docker Image](Days/day45.md)
 - [✔️] 🏗️ 46 > [Docker Compose](Days/day46.md)
 - [✔️] 🏗️ 47 > [Docker Networking & Security](Days/day47.md)
-- [✔️] 🏗️ 48 > [Alternatives to Docker](Days/day48.md)
+- [✔️] 🏗️ 48 > [Các lựa chọn thay thế cho Docker](Days/day48.md)
 
 ### Kubernetes
 
-- [✔️] ☸ 49 > [The Big Picture: Kubernetes](Days/day49.md)
-- [✔️] ☸ 50 > [Choosing your Kubernetes platform](Days/day50.md)
-- [✔️] ☸ 51 > [Deploying your first Kubernetes Cluster](Days/day51.md)
-- [✔️] ☸ 52 > [Setting up a multinode Kubernetes Cluster](Days/day52.md)
-- [✔️] ☸ 53 > [Rancher Overview - Hands On](Days/day53.md)
-- [✔️] ☸ 54 > [Kubernetes Application Deployment](Days/day54.md)
-- [✔️] ☸ 55 > [State and Ingress in Kubernetes](Days/day55.md)
+- [✔️] ☸ 49 > [Bức tranh toàn cảnh: Kubernetes](Days/day49.md)
+- [✔️] ☸ 50 > [Chọn nền tảng chạy Kubernetes](Days/day50.md)
+- [✔️] ☸ 51 > [Triển khai Kubernetes cluster đầu tiên](Days/day51.md)
+- [✔️] ☸ 52 > [Thiết lập Kubernetes cluster đa node](Days/day52.md)
+- [✔️] ☸ 53 > [Tổng quan về Rancher - Thực hành](Days/day53.md)
+- [✔️] ☸ 54 > [Triển khai ứng dụng Kubernetes](Days/day54.md)
+- [✔️] ☸ 55 > [State và Ingress trong Kubernetes](Days/day55.md)
 
 ### Học cơ sở hạ tầng dưới dạng mã (Infrastructure as Code)
 

@@ -123,3 +123,4 @@ student = Student("John", "Canada", "Computer Science")
 person.speak()   # "Hello, my name is Rishab and I am from Canada."
 student.speak()  # "Hello, my name is John and I am a Computer Science major."
 ```
+ See you tomorrow in [Day 45](day45.md).

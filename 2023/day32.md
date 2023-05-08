@@ -71,6 +71,16 @@ Auditing Kubernetes configuration is simple and there are multiple tools you can
 
 
 We will see the simple way to scan our cluster with Kubescape:
+
+```
+kubescape installation in macOs M1 and M2 chip error fixed
+
+[kubescape](https://github.com/kubescape/kubescape)
+
+```
+
+
+
 ```bash
 curl -s https://raw.githubusercontent.com/kubescape/kubescape/master/install.sh | /bin/bash
 kubescape scan --enable-host-scan --verbose
@@ -102,3 +112,5 @@ After the installation you can access the vulnerabilities via CRD with kubectl:
 kubectl get vulnerabilityreports --all-namespaces -o wide
 ```
 ![](images/day32-2.png)
+
+[Day 33](day33.md).

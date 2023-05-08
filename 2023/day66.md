@@ -1,6 +1,5 @@
 # High availability and disaster recovery
 
-
 Hello and welcome to the fourth post in the database part of the 90 Days of DevOps blog series! Today we’ll be talking about high availability and disaster recovery.
 
 One of the main jobs of a database administrator is to configure and maintain disaster recovery and high availability strategies for the databases that they look after. In a nutshell they boil down to: -
@@ -207,3 +206,4 @@ Join us tomorrow where we'll be talking about performance tuning.
 
 Thanks for reading!
 
+See you in [Day 67](day67.md).

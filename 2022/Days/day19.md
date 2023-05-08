@@ -92,7 +92,7 @@ This way when and where we use `$challenge` in our code, if we change the variab
 
 If we now run our `sh` script you will see the printout that was added to our script.
 
-![](Images/Day19_Linux5.png)
+![](Images/Day19_Linux6.png)
 
 We can also ask for user input that can set our variables using the following:
 
