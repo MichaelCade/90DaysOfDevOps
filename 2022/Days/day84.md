@@ -12,7 +12,7 @@ id: 1048747
 
 ![](Images/Day84_Data1.png)
 
-Data Management is by no means a new wall to climb, although we do know that data is more important than it maybe was a few years ago. Valuable and ever-changing it can also be a massive nightmare when we are talking about automation and continuously integrating, testing and deploying frequent software releases. Enter the persistent data and underlying data services are often the main culprit when things go wrong.
+Data Management is by no means a new wall to climb, although we do know that data is more important than it may be was a few years ago. Valuable and ever-changing it can also be a massive nightmare when we are talking about automation and continuously integrating, testing and deploying frequent software releases. Enter the persistent data and underlying data services are often the main culprit when things go wrong.
 
 But before I get into Cloud-Native Data Management, we need to go up a level. We have touched on many different platforms throughout this challenge. Be it Physical, Virtual, Cloud or Cloud-Native obviously including Kubernetes there is none of these platforms that provide the lack of requirement for data management.
 
