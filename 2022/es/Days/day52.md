@@ -1,52 +1,52 @@
-## Setting up a multinode Kubernetes Cluster
+## Configuración de un clúster de Kubernetes multinodo
 
-I wanted this title to be "Setting up a multinode Kubernetes cluster with Vagrant" but thought it might be a little too long!
+Quería que este título fuera "Configuración de un clúster de Kubernetes multinodo con Vagrant", pero pensé que podría ser un poco largo.
 
-In the session yesterday we used a cool project to deploy our first Kubernetes cluster and get a little hands-on with the most important CLI tool you will come across when using Kubernetes (kubectl).
+En la sesión de ayer, utilizamos un proyecto interesante para implementar nuestro primer clúster de Kubernetes y tener un poco de práctica con la herramienta CLI más importante que encontrarás al usar Kubernetes (`kubectl`).
 
-Here we are going to use VirtualBox as our base but as mentioned the last time we spoke about Vagrant back in the Linux section we can use any hypervisor or virtualisation tool supported. It was [Day 14](day14.md) when we went through and deployed an Ubuntu machine for the Linux section.
+Aquí vamos a utilizar VirtualBox como base, pero como mencioné la última vez que hablamos de Vagrant en la sección de Linux, podemos usar cualquier hipervisor o herramienta de virtualización compatible. Fue [Día 14](day14.md) cuando pasamos por el proceso de implementar una máquina Ubuntu para la sección de Linux.
 
-### A quick recap on Vagrant
+### Un breve repaso sobre Vagrant
 
-Vagrant is a CLI utility that manages the lifecycle of your virtual machines. We can use vagrant to spin up and down virtual machines across many different platforms including vSphere, Hyper-v, Virtual Box and also Docker. It does have other providers but we will stick with that we are using Virtual Box here so we are good to go.
+Vagrant es una utilidad de línea de comandos que gestiona el ciclo de vida de tus máquinas virtuales. Podemos usar Vagrant para crear y eliminar máquinas virtuales en diferentes plataformas, incluyendo vSphere, Hyper-V, VirtualBox y también Docker. Tiene otros proveedores, pero nos quedaremos con el que estamos usando aquí, que es VirtualBox.
 
-I am going to be using a baseline this [blog and repository](https://devopscube.com/kubernetes-cluster-vagrant/) to walk through the configuration. I would however advise that if this is your first time deploying a Kubernetes cluster then maybe also look into how you would do this manually and then at least you know what this looks like. Although I will say that this Day 0 operations and effort is being made more efficient with every release of Kubernetes. I liken this very much to the days of VMware and ESX and how you would need at least a day to deploy 3 ESX servers now we can have that up and running in an hour. We are heading in that direction when it comes to Kubernetes.
+Voy a utilizar como referencia el [blog y repositorio](https://devopscube.com/kubernetes-cluster-vagrant/) para guiarme en la configuración. Sin embargo, te recomendaría que si es la primera vez que implementas un clúster de Kubernetes, también investigues cómo hacerlo manualmente, así al menos sabrás cómo se ve el proceso. Aunque debo decir que las operaciones del Día 0 y el esfuerzo se están volviendo más eficientes con cada versión de Kubernetes. Esto me recuerda mucho a los días de VMware y ESX, cuando necesitábamos al menos un día para implementar 3 servidores ESX, y ahora podemos tener todo funcionando en una hora. Nos estamos acercando a ese nivel en lo que respecta a Kubernetes.
 
-### Kubernetes Lab environment
+### Entorno de laboratorio de Kubernetes
 
-I have uploaded in [Kubernetes folder](Kubernetes) the vagrantfile that we will be using to build out our environment. Grab this and navigate to this directory in your terminal. I am again using Windows so I will be using PowerShell to perform my workstation commands with vagrant. If you do not have vagrant then you can use arkade, we covered this yesterday when installing minikube and other tools. A simple command `arkade get vagrant` should see your download and install the latest version of vagrant.
+He subido en la [carpeta de Kubernetes](Kubernetes) el archivo `vagrantfile` que usaremos para construir nuestro entorno. Descárgalo y navega hasta este directorio en tu terminal. En mi caso, estoy usando Windows, así que usaré PowerShell para ejecutar los comandos de mi estación de trabajo con Vagrant. Si no tienes Vagrant instalado, puedes usar arkade, que cubrimos ayer al instalar minikube y otras herramientas. Un simple comando `arkade get vagrant` debería descargar e instalar la última versión de Vagrant.
 
-When you are in your directory then you can simply run `vagrant up` and if all is configured correctly then you should see the following kick-off in your terminal.
+Cuando estés en el directorio, simplemente ejecuta `vagrant up` y, si todo está configurado correctamente, deberías ver que se inicia el proceso en tu terminal.
 
-![](Images/Day52_Kubernetes1.png)
+![Day52_Kubernetes1.png](https://example.com/Day52_Kubernetes1.png)
 
-In the terminal, you are going to see several steps taking place, but in the meantime let's take a look at what we are building here.
+En la terminal, verás que se ejecutan varios pasos, pero mientras tanto, echemos un vistazo a lo que estamos construyendo aquí.
 
-![](Images/Day52_Kubernetes2.png)
+![Day52_Kubernetes2.png](https://example.com/Day52_Kubernetes2.png)
 
-From the above you can see that we are going to build out 3 virtual machines, we will have a control plane node and then two worker nodes. If you head back to [Day 49](day49.md) You will see some more descriptions of these areas we see in the image.
+Desde lo anterior, puedes ver que vamos a crear 3 máquinas virtuales. Tendremos un nodo de control y luego dos nodos de trabajo. Si vuelves al [Día 49](day49.md), verás más descripciones de estas áreas que vemos en la imagen.
 
-Also in the image, we indicate that our kubectl access will come from outside of the cluster and hit that kube apiserver when in fact as part of the vagrant provisioning we are deploying kubectl on each of these nodes so that we can access the cluster from within each of our nodes.
+Además, en la imagen indicamos que nuestro acceso a `kubectl` vendrá desde fuera del clúster y llegará al `kube-apiserver`. En realidad, como parte de la provisión de Vagrant, estamos implementando `kubectl` en cada uno de estos nodos para poder acceder al clúster desde dentro de cada uno de ellos.
 
-The process of building out this lab could take anything from 5 minutes to 30 minutes depending on your setup.
+El proceso de construcción de este laboratorio puede tardar entre 5 y 30 minutos, según la configuración que tengas.
 
-I am going to cover the scripts shortly as well but you will notice if you look into the vagrant file that we are calling on 3 scripts as part of the deployment and this is really where the cluster is created. We have seen how easy it is to use vagrant to deploy our virtual machines and OS installations using vagrant boxes but having the ability to run a shell script as part of the deployment process is where it gets quite interesting around automating these lab build-outs.
+Voy a cubrir los scripts en breve, pero notarás que, si examinas el archivo Vagrant, estamos llamando a 3 scripts como parte de la implementación, y es aquí donde se crea realmente el clúster. Hemos visto lo fácil que es usar Vagrant para implementar nuestras máquinas virtuales e instalaciones del sistema operativo mediante cajas de Vagrant, pero la capacidad de ejecutar un script de shell como parte del proceso de implementación es lo que resulta interesante para automatizar la creación de estos laboratorios.
 
-Once complete we can then ssh to one of our nodes `vagrant ssh master` from the terminal should get you access, the default username and password is `vagrant/vagrant`
+Una vez completado, podemos acceder a uno de nuestros nodos con `vagrant ssh master` desde la terminal. El nombre de usuario y contraseña predeterminados son `vagrant/vagrant`.
 
-You can also use `vagrant ssh node01` and `vagrant ssh node02` to gain access to the worker nodes should you wish.
+También puedes usar `vagrant ssh node01` y `vagrant ssh node02` para acceder a los nodos de trabajo si así lo deseas.
 
-![](Images/Day52_Kubernetes3.png)
+![Day52_Kubernetes3.png](https://example.com/Day52_Kubernetes3.png)
 
-Now we are in one of the above nodes in our new cluster we can issue `kubectl get nodes` to show our 3 node cluster and the status of this.
+Ahora estamos en uno de los nodos anteriores de nuestro nuevo clúster y podemos ejecutar `kubectl get nodes` para mostrar nuestro clúster de 3 nodos y su estado.
 
-![](Images/Day52_Kubernetes4.png)
+![Day52_Kubernetes4.png](https://example.com/Day52_Kubernetes4.png)
 
-At this point, we have a running 3 node cluster, with 1 control plane node and 2 worker nodes.
+En este punto, tenemos un clúster de 3 nodos en funcionamiento, con 1 nodo de control y 2 nodos de trabajo.
 
-### Vagrantfile and Shell Script walkthrough
+### Recorrido por el Vagrantfile y los scripts de shell
 
-If we take a look at our vagrantfile, you will see that we are defining several worker nodes, networking IP addresses for the bridged network within VirtualBox and then some naming. Another you will notice is that we are also calling upon some scripts that we want to run on specific hosts.
+Si echamos un vistazo a nuestro Vagrantfile, verás que estamos definiendo varios nodos de trabajo, direcciones IP de red para la red puente dentro de VirtualBox y algunos nombres. Otra cosa que notarás es que también estamos llamando a algunos scripts que queremos ejecutar en hosts específicos.
 
 ```
 NUM_WORKER_NODES=2
@@ -91,51 +91,52 @@ Vagrant.configure("2") do |config|
   end
 ```
 
-Let's break down those scripts that are being run. We have three scripts listed in the above VAGRANTFILE to run on specific nodes.
+Vamos a analizar esos scripts que se están ejecutando. Tenemos tres scripts enumerados en el VAGRANTFILE anterior que se ejecutarán en nodos específicos.
 
 `master.vm.provision "shell", path: "scripts/common.sh"`
 
-This script above is going to focus on getting the nodes ready, it is going to be run on all 3 of our nodes and it will remove any existing Docker components and reinstall Docker and ContainerD as well kubeadm, kubelet and kubectl. This script will also update existing software packages on the system.
+Este script se centrará en preparar los nodos, se ejecutará en los 3 de nuestros nodos y eliminará cualquier componente de Docker existente y volverá a instalar Docker y ContainerD, así como kubeadm, kubelet y kubectl. Este script también actualizará los paquetes de software existentes en el sistema.
 
 `master.vm.provision "shell", path: "scripts/master.sh"`
 
-The master.sh script will only run on the control plane node, this script is going to create the Kubernetes cluster using kubeadm commands. It will also prepare the config context for access to this cluster which we will cover next.
+El script master.sh solo se ejecutará en el nodo del plano de control, este script creará el clúster de Kubernetes utilizando comandos de kubeadm. También preparará el contexto de configuración para acceder a este clúster, lo cual veremos a continuación.
 
 `node.vm.provision "shell", path: "scripts/node.sh"`
 
-This is simply going to take the config created by the master and join our nodes to the Kubernetes cluster, this join process again uses kubeadm and another script which can be found in the config folder.
+Esto simplemente tomará la configuración creada por el nodo maestro y unirá nuestros nodos al clúster de Kubernetes. Este proceso de unión también utiliza kubeadm y otro script que se puede encontrar en la carpeta de configuración.
 
-### Access to the Kubernetes cluster
+### Acceso al clúster de Kubernetes
 
-Now we have two clusters deployed we have the minikube cluster that we deployed in the previous section and we have the new 3 node cluster we just deployed to VirtualBox.
+Ahora que tenemos dos clústeres desplegados, el clúster minikube que desplegamos en la sección anterior y el nuevo clúster de 3 nodos que acabamos de desplegar en VirtualBox.
 
-Also, that config file that you will also have access to on the machine, you ran vagrant from consists of how we can gain access to our cluster from our workstation.
+Además, ese archivo de configuración al que también tendrás acceso en la máquina desde la que ejecutaste Vagrant, consiste en cómo podemos acceder a nuestro clúster desde nuestro puesto de trabajo.
 
-Before we show that let me touch on the context.
+Antes de mostrar eso, permíteme hablar sobre el contexto.
 
 ![](Images/Day52_Kubernetes5.png)
 
-Context is important, the ability to access your Kubernetes cluster from your desktop or laptop is required. Lots of different options out there and people use different operating systems as their daily drivers.
+El contexto es importante, se requiere la capacidad de acceder a tu clúster de Kubernetes desde tu escritorio o portátil. Hay muchas opciones diferentes y las personas utilizan diferentes sistemas operativos como sus controladores diarios.
 
-By default, the Kubernetes CLI client (kubectl) uses the C:\Users\username\.kube\config to store the Kubernetes cluster details such as endpoint and credentials. If you have deployed a cluster you will be able to see this file in that location. But if you have been using maybe the master node to run all of your kubectl commands so far via SSH or other methods then this post will hopefully help you get to grips with being able to connect with your workstation.
+Por defecto, el cliente de línea de comandos de Kubernetes (kubectl) utiliza el archivo C:\Users\nombredeusuario.kube\config para almacenar los detalles del clúster de Kubernetes, como el punto final y las credenciales. Si has desplegado un clúster, podrás ver este archivo en esa ubicación. Pero si hasta ahora has estado utilizando quizás el nodo maestro para ejecutar todos tus comandos de kubectl a través de SSH u otros métodos, esta publicación espero que te ayude a familiarizarte con la capacidad de conectarte desde tu estación de trabajo.
 
-We then need to grab the kubeconfig file from the cluster or we can also get this from our config file once deployed, grab the contents of this file either via SCP or just open a console session to your master node and copy to the local windows machine.
+Luego debemos obtener el archivo kubeconfig del clúster, o también podemos obtenerlo de nuestro archivo de configuración una vez desplegado, obtener el contenido de este archivo ya sea mediante SCP o simplemente abrir una sesión de consola en tu nodo maestro y copiarlo a la máquina local de Windows.
 
 ![](Images/Day52_Kubernetes6.png)
 
-We then want to take a copy of that config file and move it to our `$HOME/.kube/config` location.
+Luego queremos hacer una copia de ese archivo de configuración y moverlo a nuestra ubicación $HOME/.kube/config.
 
 ![](Images/Day52_Kubernetes7.png)
 
-Now from your local workstation, you will be able to run `kubectl cluster-info` and `kubectl get nodes` to validate that you have access to your cluster.
+Ahora, desde tu estación de trabajo local, podrás ejecutar `kubectl cluster-info` y `kubectl get nodes` para validar que tienes acceso a tu clúster.
 
 ![](Images/Day52_Kubernetes8.png)
 
-This not only allows for connectivity and control from your windows machine but this then also allows us to do some port forwarding to access certain services from our windows machine
+Esto no solo permite la conectividad y el control desde tu máquina con Windows, sino que también nos permite realizar un reenvío de puertos para acceder a ciertos servicios desde nuestra máquina con Windows.
 
-If you are interested in how you would manage multiple clusters on your workstation then I have a more detailed walkthrough [here](https://vzilla.co.uk/vzilla-blog/building-the-home-lab-kubernetes-playground-part-6).
+Si te interesa saber cómo gestionar múltiples clústeres en tu estación de trabajo, tengo un tutorial más detallado [aquí](https://vzilla.co.uk/vzilla-blog/building-the-home-lab-kubernetes-playground-part-6).
 
-I have added this list which are walkthrough blogs I have done around different Kubernetes clusters being deployed.
+He añadido esta lista de blogs explicativos que he realizado sobre el despliegue de diferentes clústeres de Kubernetes.
+
 
 - [Kubernetes playground – How to choose your platform](https://vzilla.co.uk/vzilla-blog/building-the-home-lab-kubernetes-playground-part-1)
 - [Kubernetes playground – Setting up your cluster](https://vzilla.co.uk/vzilla-blog/building-the-home-lab-kubernetes-playground-part-2)
@@ -147,26 +148,13 @@ I have added this list which are walkthrough blogs I have done around different 
 - [Getting started with CIVO Cloud](https://vzilla.co.uk/vzilla-blog/getting-started-with-civo-cloud)
 - [Minikube - Kubernetes Demo Environment For Everyone](https://vzilla.co.uk/vzilla-blog/project_pace-kasten-k10-demo-environment-for-everyone)
 
-### What we will cover in the series on Kubernetes
+## Recursos
 
-We have started covering some of these mentioned below but we are going to get more hands-on tomorrow with our second cluster deployment then we can start deploying applications into our clusters.
-
-- Kubernetes Architecture
-- Kubectl Commands
-- Kubernetes YAML
-- Kubernetes Ingress
-- Kubernetes Services
-- Helm Package Manager
-- Persistent Storage
-- Stateful Apps
-
-## Resources
-
-If you have FREE resources that you have used then please feel free to add them here via a PR to the repository and I will be happy to include them.
+Si tienes recursos GRATUITOS que has utilizado, no dudes en añadirlos aquí mediante un PR (Pull Request) al repositorio y estaré encantado de incluirlos.
 
 - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
 - [TechWorld with Nana - Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]](https://www.youtube.com/watch?v=X48VuDVv0do)
 - [TechWorld with Nana - Kubernetes Crash Course for Absolute Beginners](https://www.youtube.com/watch?v=s_o8dwzRlu4)
 - [Kunal Kushwaha - Kubernetes Tutorial for Beginners | What is Kubernetes? Architecture Simplified!](https://www.youtube.com/watch?v=KVBON1lA9N8)
 
-See you on [Day 53](day53.md)
+Nos vemos en el [Día 53](day53.md)
