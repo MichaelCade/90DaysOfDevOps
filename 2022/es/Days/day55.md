@@ -1,216 +1,216 @@
-## State and Ingress in Kubernetes
+## Estado e Ingress en Kubernetes
 
-In this closing section of Kubernetes, we are going to take a look at State and ingress.
+En esta sección final de Kubernetes, vamos a echar un vistazo al estado e Ingress.
 
-Everything we have said so far is about stateless, stateless is really where our applications do not care which network it is using and does not need any permanent storage. Whereas stateful apps and databases for example for such an application to function correctly, you’ll need to ensure that pods can reach each other through a unique identity that does not change (hostnames, IPs...etc.). Examples of stateful applications include MySQL clusters, Redis, Kafka, MongoDB and others. Basically, through any application that stores data.
+Todo lo que hemos dicho hasta ahora es acerca de stateless, stateless es realmente donde nuestras aplicaciones no se preocupan por qué red están utilizando y no necesitan ningún almacenamiento permanente. Mientras que las aplicaciones y bases de datos stateful, por ejemplo, para que dicha aplicación funcione correctamente, deberás asegurarte de que los pods puedan alcanzarse entre sí a través de una identidad única que no cambie (nombres de host, IP, etc.). Ejemplos de aplicaciones stateful incluyen clústeres MySQL, Redis, Kafka, MongoDB y otros. Básicamente, a través de cualquier aplicación que almacene datos.
 
-### Stateful Application
+### Aplicación stateful
 
-StatefulSets represent a set of Pods with unique, persistent identities and stable hostnames that Kubernetes maintains regardless of where they are scheduled. The state information and other resilient data for any given StatefulSet Pod are maintained in persistent disk storage associated with the StatefulSet.
+StatefulSets representan un conjunto de Pods con identidades únicas y persistentes y nombres de host estables que Kubernetes mantiene independientemente de dónde se programen. La información de estado y otros datos resilientes para cualquier Pod dado de StatefulSet se mantienen en almacenamiento de disco persistente asociado con StatefulSet.
 
-### Deployment vs StatefulSet
+### DImplementación frente a StatefulSet
 
-- Replicating stateful applications is more difficult.
-- Replicating our pods in a deployment (Stateless Application) is identical and interchangeable.
-- Create pods in random order with random hashes
-- One Service that load balances to any Pod.
+- Replicar aplicaciones stateful es más difícil.
+- Replicar nuestros pods en una implementación (aplicación sin estado) es idéntico e intercambiable.
+- Crea pods en orden aleatorio con hashes aleatorios
+- Un solo servicio que equilibra la carga a cualquier Pod.
 
-When it comes to StatefulSets or Stateful Applications the above is more difficult.
+Cuando se trata de StatefulSets o aplicaciones stateful, lo anterior es más difícil.
 
-- Cannot be created or deleted at the same time.
-- Can't be randomly addressed.
-- replica Pods are not identical
+- No se pueden crear ni eliminar al mismo tiempo.
+- No se pueden abordar aleatoriamente.
+- Los Pods de réplica no son idénticos.
 
-Something you will see in our demonstration shortly is that each pod has its own identity. With a stateless Application, you will see random names. For example `app-7469bbb6d7-9mhxd` whereas a Stateful Application would be more aligned to `mongo-0` and then when scaled it will create a new pod called `mongo-1`.
+Algo que verás en nuestra demostración en breve es que cada pod tiene su propia identidad. Con una aplicación stateless, verás nombres aleatorios. Por ejemplo, `app-7469bbb6d7-9mhxd`, mientras que una aplicación stateful estaría más alineada con `mongo-0` y luego, cuando se escala, creará un nuevo pod llamado `mongo-1`.
 
-These pods are created from the same specification, but they are not interchangeable. Each StatefulSet pod has a persistent identifier across any rescheduling. This is necessary because when we require stateful workloads such as a database where we require writing and reading to a database, we cannot have two pods writing at the same time with no awareness as this will give us data inconsistency. We need to ensure that only one of our pods is writing to the database at any given time however we can have multiple pods reading that data.
+Estos pods se crean a partir de la misma especificación, pero no son intercambiables. Cada pod de StatefulSet tiene un identificador persistente en cualquier reprogramación. Esto es necesario porque cuando requerimos cargas de trabajo stateful como una base de datos donde requerimos escribir y leer en una base de datos, no podemos tener dos pods escribiendo al mismo tiempo sin conciencia ya que esto nos dará inconsistencia de datos. Necesitamos asegurarnos de que solo uno de nuestros pods esté escribiendo en la base de datos en cualquier momento dado, sin embargo, podemos tener múltiples pods leyendo esos datos.
 
-Each pod in a StatefulSet would have access to its persistent volume and replica copy of the database to read from, this is continuously updated from the master. It's also interesting to note that each pod will also store its pod state in this persistent volume, if then `mongo-0` dies then when a new one is provisioned it will take over the pod state stored in storage.
+Cada pod en un StatefulSet tendría acceso a su volumen persistente y copia de réplica de la base de datos para leer, esto se actualiza continuamente desde el maestro. También es interesante destacar que cada pod almacenará su estado de pod en este volumen persistente, si luego `mongo-0` muere, cuando se provisione uno nuevo, tomará el estado de pod almacenado en el almacenamiento.
 
 TLDR; StatefulSets vs Deployments
 
-- Predictable pod name = `mongo-0`
-- Fixed individual DNS name
-- Pod Identity - Retain State, Retain Role
-- Replicating stateful apps is complex
-  - There are lots of things you must do:
-    - Configure cloning and data synchronisation.
-    - Make remote shared storage available.
-    - Management & backup
+- Nombre predecible del pod = mongo-0
+- Nombre de DNS individual fijo
+- Identidad del pod: Mantener estado, mantener rol
+- Replicar aplicaciones con estado es complejo
+   - Hay muchas cosas que debes hacer:
+    - Configurar la clonación y la sincronización de datos.
+    - Hacer que el almacenamiento compartido remoto esté disponible.
+    - Gestión y copia de seguridad
 
-### Persistant Volumes | Claims | StorageClass
+### Volúmenes Persistentes | Reclamaciones | StorageClass
 
-How to persist data in Kubernetes?
+¿Cómo persistir datos en Kubernetes?
 
-We mentioned above when we have a stateful application, we have to store the state somewhere and this is where the need for a volume comes in, out of the box Kubernetes does not provide persistence out of the box.
+Mencionamos anteriormente que cuando tenemos una aplicación con estado, debemos almacenar el estado en algún lugar y aquí es donde surge la necesidad de un volumen. Por defecto, Kubernetes no proporciona persistencia.
 
-We require a storage layer that does not depend on the pod lifecycle. This storage should be available and accessible from all of our Kubernetes nodes. The storage should also be outside of the Kubernetes cluster to be able to survive even if the Kubernetes cluster crashes.
+Necesitamos una capa de almacenamiento que no dependa del ciclo de vida del pod. Este almacenamiento debe estar disponible y accesible desde todos los nodos de Kubernetes. El almacenamiento también debe estar fuera del clúster de Kubernetes para poder sobrevivir incluso si el clúster de Kubernetes falla.
 
-### Persistent Volume
+### Volumen Persistente
 
-- A cluster resource (like CPU and RAM) to store data.
-- Created via a YAML file
-- Needs actual physical storage (NAS)
-- External integration to your Kubernetes cluster
-- You can have different types of storage available in your storage.
-- PVs are not namespaced
-- Local storage is available but it would be specific to one node in the cluster
-- Database persistence should use remote storage (NAS)
+- Un recurso del clúster (como CPU y RAM) para almacenar datos.
+- Se crea mediante un archivo YAML.
+- Necesita almacenamiento físico real (NAS).
+- Integración externa en tu clúster de Kubernetes.
+- Puedes tener diferentes tipos de almacenamiento disponibles en tu almacenamiento.
+- Los PV no tienen espacio de nombres.
+- El almacenamiento local está disponible, pero estaría específico de un nodo en el clúster.
+- La persistencia de la base de datos debe usar almacenamiento remoto (NAS).
 
 ### Persistent Volume Claim
 
-A persistent volume alone above can be there and available but unless it is claimed by an application it is not being used.
+Un volumen persistente por sí solo puede estar disponible, pero a menos que sea reclamado por una aplicación, no se está utilizando.
 
-- Created via a YAML file
-- Persistent Volume Claim is used in pod configuration (volumes attribute)
-- PVCs live in the same namespace as the pod
-- Volume is mounted into the pod
-- Pods can have multiple different volume types (ConfigMap, Secret, PVC)
+- Se crea mediante un archivo YAML.
+- La reclamación de volumen persistente se utiliza en la configuración del pod (atributo de volúmenes).
+- Las PVCs (reclamaciones de volumen persistente) se encuentran en el mismo espacio de nombres que el pod.
+- El volumen se monta en el pod.
+- Los pods pueden tener múltiples tipos de volumen diferentes (ConfigMap, Secret, PVC).
 
-Another way to think of PVs and PVCs is that
+Otra forma de pensar en los PV y PVCs es que:
 
-PVs are created by the Kubernetes Admin
-PVCs are created by the user or application developer
+Los PV son creados por el administrador de Kubernetes.
+Los PVCs son creados por el usuario o el desarrollador de la aplicación.
 
-We also have two other types of volumes that we will not get into detail on but are worth mentioning:
+También tenemos otros dos tipos de volúmenes de los que no entraremos en detalle pero que vale la pena mencionar
 
 ### ConfigMaps | Secrets
 
-- Configuration file for your pod.
-- Certificate file for your pod.
+- Archivo de configuración para tu pod.
+- Archivo de certificado para tu pod.
 
 ### StorageClass
 
-- Created via a YAML file
-- Provisions Persistent Volumes Dynamically when a PVC claims it
-- Each storage backend has its provisioner
-- Storage backend is defined in YAML (via provisioner attribute)
-- Abstracts underlying storage provider
-- Define parameters for that storage
+- Se crea mediante un archivo YAML.
+- Provee volúmenes persistentes dinámicamente cuando una PVC lo reclama.
+- Cada backend de almacenamiento tiene su proveedor.
+- El backend de almacenamiento se define en YAML (mediante el atributo provisioner).
+- Abstrae al proveedor de almacenamiento subyacente.
+- Define parámetros para ese almacenamiento.
 
 ### Walkthrough time
 
-In the session yesterday we walked through creating a stateless application, here we want to do the same but we want to use our minikube cluster to deploy a stateful workload.
+En la sesión de ayer recorrimos la creación de una aplicación sin estado, ahora queremos hacer lo mismo pero utilizando nuestro clúster de minikube para implementar una carga de trabajo con estado.
 
-A recap on the minikube command we are using to have the capability and addons to use persistence is `minikube start --addons volumesnapshots,csi-hostpath-driver --apiserver-port=6443 --container-runtime=containerd -p mc-demo --Kubernetes-version=1.21.2`
+Un resumen del comando de minikube que estamos utilizando para tener la capacidad y complementos para utilizar la persistencia es `minikube start --addons volumesnapshots,csi-hostpath-driver --apiserver-port=6443 --container-runtime=containerd -p mc-demo --Kubernetes-version=1.21.2`
 
-This command uses the CSI-hostpath-driver which is what gives us our storageclass, something I will show later.
+Este comando utiliza el controlador CSI-hostpath-driver, que es lo que nos proporciona nuestra clase de almacenamiento, algo que mostraré más adelante.
 
-The build-out of the application looks like the below:
+La construcción de la aplicación se ve así:
 
-![](Images/Day55_Kubernetes1.png)
+![Day55_Kubernetes1](Images/Day55_Kubernetes1.png)
 
-You can find the YAML configuration file for this application here [pacman-stateful-demo.yaml](Kubernetes)
+Puedes encontrar el archivo de configuración YAML de esta aplicación aquí [pacman-stateful-demo.yaml](Kubernetes)
 
-### StorageClass Configuration
+### Configuración de StorageClass
 
-There is one more step though that we should run before we start deploying our application and that is to make sure that our storageclass (CSI-hostpath-sc) is our default one. We can firstly check this by running the `kubectl get storageclass` command but out of the box, the minikube cluster will be showing the standard storageclass as default so we have to change that with the following commands.
+Sin embargo, hay un paso más que debemos realizar antes de comenzar a implementar nuestra aplicación y es asegurarnos de que nuestra clase de almacenamiento (CSI-hostpath-sc) sea la predeterminada. Podemos verificar esto ejecutando el comando `kubectl get storageclass`, pero de forma predeterminada, el clúster de minikube mostrará la clase de almacenamiento estándar como predeterminada, por lo que debemos cambiarla con los siguientes comandos.
 
-This first command will make our CSI-hostpath-sc storageclass our default.
+Este primer comando hará que nuestra clase de almacenamiento CSI-hostpath-sc sea la predeterminada.
 
 `kubectl patch storageclass csi-hostpath-sc -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'`
 
-This command will remove the default annotation from the standard StorageClass.
+Este comando eliminará la anotación predeterminada de la clase de almacenamiento estándar.
 
 `kubectl patch storageclass standard -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"false"}}}'`
 
 ![](Images/Day55_Kubernetes2.png)
 
-We start with no Pacman namespace in our cluster. `kubectl get namespace`
+Comenzamos sin un espacio de nombres de Pacman en nuestro clúster. `kubectl get namespace`
 
 ![](Images/Day55_Kubernetes3.png)
 
-We will then deploy our YAML file. `kubectl create -f pacman-stateful-demo.yaml` you can see from this command we are creating several objects within our Kubernetes cluster.
+Luego implementaremos nuestro archivo YAML. `kubectl create -f pacman-stateful-demo.yaml`. Puedes ver que con este comando estamos creando varios objetos dentro de nuestro clúster de Kubernetes.
 
 ![](Images/Day55_Kubernetes4.png)
 
-We now have our newly created namespace.
+Ahora tenemos nuestro espacio de nombres recién creado.
 
 ![](Images/Day55_Kubernetes5.png)
 
-You can then see from the next image and command `kubectl get all -n pacman` that we have several things happening inside of our namespace. We have our pods running our NodeJS web front end, we have mongo running our backend database. There are services for both Pacman and mongo to access those pods. We have a deployment for Pacman and a statefulset for mongo.
+A continuación, puedes ver en la siguiente imagen y en el comando `kubectl get all -n pacman` que hay varias cosas sucediendo dentro de nuestro espacio de nombres. Tenemos nuestros pods ejecutando nuestra interfaz web NodeJS, tenemos mongo ejecutando nuestra base de datos de backend. Hay servicios tanto para Pacman como para mongo para acceder a esos pods. Tenemos una implementación para Pacman y un conjunto de estado para mongo.
 
 ![](Images/Day55_Kubernetes6.png)
 
-We also have our persistent volume and persistent volume claim by running `kubectl get pv` will give us our non-namespaced persistent volumes and running `kubectl get pvc -n pacman` will give us our namespaced persistent volume claims.
+También tenemos nuestro volumen persistente y la solicitud de volumen persistente mediante el comando `kubectl get pv` nos mostrará nuestros volúmenes persistentes sin espacio de nombres y ejecutando `kubectl get pvc -n pacman` nos mostrará nuestras solicitudes de volumen persistente con espacio de nombres.
 
 ![](Images/Day55_Kubernetes7.png)
 
-### Playing the game | I mean accessing our mission-critical application
+### Jugando el juego | Quiero decir, accediendo a nuestra aplicación crítica
 
-Because we are using Minikube as mentioned in the stateless application we have a few hurdles to get over when it comes to accessing our application, however, we had access to ingress or a load balancer within our cluster the service is set up to automatically get an IP from that to gain access externally. (you can see this above in the image of all components in the Pacman namespace).
+Debido a que estamos utilizando Minikube, como se mencionó en la aplicación sin estado, tenemos algunos obstáculos para acceder a nuestra aplicación. Sin embargo, si tenemos acceso a un Ingress o a un balanceador de carga dentro de nuestro clúster, el servicio está configurado para obtener automáticamente una dirección IP de ellos para acceder externamente (puedes ver esto arriba en la imagen de todos los componentes en el espacio de nombres de Pacman).
 
-For this demo, we are going to use the port forward method to access our application. By opening a new terminal and running the following `kubectl port-forward svc/pacman 9090:80 -n pacman` command, opening a browser we will now have access to our application. If you are running this in AWS or specific locations then this will also report on the cloud and zone as well as the host which equals your pod within Kubernetes, again you can look back and see this pod name in our screenshots above.
+Para esta demostración, vamos a utilizar el método de "port forwarding" para acceder a nuestra aplicación. Abriendo una nueva terminal y ejecutando el siguiente comando `kubectl port-forward svc/pacman 9090:80 -n pacman`, al abrir un navegador ahora tendremos acceso a nuestra aplicación. Si estás ejecutando esto en AWS u otras ubicaciones específicas, también se mostrará la nube y la zona, así como el host que corresponde a tu pod dentro de Kubernetes, nuevamente puedes volver atrás y ver este nombre de pod en nuestras capturas de pantalla anteriores.
 
-![](Images/Day55_Kubernetes8.png)
+![Day55_Kubernetes8](Images/Day55_Kubernetes8.png)
 
-Now we can go and create a high score which will then be stored in our database.
+Ahora podemos ir y crear una puntuación alta que luego se almacenará en nuestra base de datos.
 
-![](Images/Day55_Kubernetes9.png)
+![Day55_Kubernetes9](Images/Day55_Kubernetes9.png)
 
-Ok, great we have a high score but what happens if we go and delete our `mongo-0` pod? by running `kubectl delete pod mongo-0 -n pacman` I can delete that and if you are still in the app you will see that high score not available at least for a few seconds.
+¡Ok, genial! Tenemos una puntuación alta, pero ¿qué sucede si eliminamos nuestro pod `mongo-0`? ejecutando `kubectl delete pod mongo-0 -n pacman` puedo eliminarlo y si aún estás en la aplicación, verás que la puntuación alta no estará disponible, al menos por unos segundos.
 
-![](Images/Day55_Kubernetes10.png)
+![Day55_Kubernetes10](Images/Day55_Kubernetes10.png)
 
-Now if I go back to my game I can create a new game and see my high scores. The only way you can truly believe me on this though is if you give it a try and share on social media your high scores!
+Ahora, si vuelvo a mi juego, puedo crear un nuevo juego y ver mis puntuaciones altas. La única forma en que realmente puedas creerme es si lo intentas tú mismo y compartes tus puntuaciones altas en las redes sociales.
 
-![](Images/Day55_Kubernetes11.png)
+![Day55_Kubernetes11](Images/Day55_Kubernetes11.png)
 
-With the deployment, we can scale this up using the commands that we covered in the previous session but in particular here, especially if you want to host a huge Pacman party then you can scale this up using `kubectl scale deployment pacman --replicas=10 -n pacman`
+Con la implementación, podemos aumentar la escala utilizando los comandos que vimos en la sesión anterior, pero en particular aquí, especialmente si quieres organizar una gran fiesta de Pacman, puedes escalar esto usando `kubectl scale deployment pacman --replicas=10 -n pacman`
 
-![](Images/Day55_Kubernetes12.png)
+![Day55_Kubernetes12](Images/Day55_Kubernetes12.png)
 
-### Ingress explained
+### Explicación de Ingress
 
-Before we wrap things up with Kubernetes I also wanted to touch on a huge aspect of Kubernetes and that is ingress.
+Antes de terminar con Kubernetes, también quería mencionar un aspecto importante de Kubernetes: Ingress.
 
-### What is ingress?
+### ¿Qué es Ingress?
 
-So far with our examples, we have used port-forward or we have used specific commands within minikube to gain access to our applications but this in production is not going to work. We are going to want a better way of accessing our applications at scale with multiple users.
+Hasta ahora, con nuestros ejemplos, hemos utilizado "port-forward" o hemos utilizado comandos específicos dentro de Minikube para acceder a nuestras aplicaciones, pero esto no funcionará en producción. Queremos una mejor forma de acceder a nuestras aplicaciones a gran escala con múltiples usuarios.
 
-We also spoke about NodePort being an option but again this should be only for test purposes.
+También hemos hablado sobre NodePort como una opción, pero nuevamente, esto debería ser solo para fines de prueba.
 
-Ingress gives us a better way of exposing our applications, this allows us to define routing rules within our Kubernetes cluster.
+Ingress nos proporciona una mejor forma de exponer nuestras aplicaciones, lo cual nos permite definir reglas de enrutamiento dentro de nuestro clúster de Kubernetes.
 
-For ingress, we would create a forward request to the internal service of our application.
+Con Ingress, crearíamos una solicitud de reenvío hacia el servicio interno de nuestra aplicación.
 
-### When do you need ingress?
+### ¿Cuándo necesitas Ingress?
 
-If you are using a cloud provider, a managed Kubernetes offering they most likely will have their ingress option for your cluster or they provide you with their load balancer option. You don't have to implement this yourself, one of the benefits of managed Kubernetes.
+Si estás utilizando un proveedor de servicios en la nube que ofrece Kubernetes administrado, es muy probable que tengan su opción de Ingress para tu clúster o te proporcionen su opción de balanceador de carga. No necesitas implementar esto tú mismo, es uno de los beneficios de Kubernetes administrado.
 
-If you are running your cluster then you will need to configure an entrypoint.
+Si estás ejecutando tu propio clúster, entonces deberás configurar un punto de entrada.
 
-### Configure Ingress on Minikube
+### Configurar Ingress en Minikube
 
-On my particular running cluster called mc-demo, I can run the following command to get ingress enabled on my cluster.
+En mi clúster en ejecución llamado "mc-demo", puedo ejecutar el siguiente comando para habilitar Ingress en mi clúster.
 
 `minikube --profile='mc-demo' addons enable ingress`
 
 ![](Images/Day55_Kubernetes13.png)
 
-If we check our namespaces now you will see that we have a new ingress-nginx namespace. `kubectl get ns`
+Si verificamos nuestros espacios de nombres ahora, verás que tenemos un nuevo espacio de nombres "ingress-nginx". `kubectl get ns`
 
 ![](Images/Day55_Kubernetes14.png)
 
-Now we must create our ingress YAML configuration to hit our Pacman service I have added this file to the repository [pacman-ingress.yaml](Kubernetes)
+Ahora debemos crear nuestra configuración YAML de Ingress para acceder a nuestro servicio Pacman. He agregado este archivo al repositorio [pacman-ingress.yaml](Kubernetes)
 
-We can then create this in our ingress namespace with `kubectl create -f Pacman-ingress.yaml`
+Luego, podemos crear esto en nuestro espacio de nombres "ingress" con `kubectl create -f Pacman-ingress.yaml`
 
 ![](Images/Day55_Kubernetes15.png)
 
-Then if we run `kubectl get ingress -n Pacman
+Luego, si ejecutamos `kubectl get ingress -n Pacman
 
 ![](Images/Day55_Kubernetes16.png)
 
-I am then told because we are using minikube running on WSL2 in Windows we have to create the minikube tunnel using `minikube tunnel --profile=mc-demo`
+Luego se me informa que, debido a que estamos utilizando Minikube en WSL2 en Windows, debemos crear el túnel de Minikube usando `minikube tunnel --profile=mc-demo`
 
-But I am still not able to gain access to 192.168.49.2 and play my Pacman game.
+Pero aún no puedo acceder a 192.168.49.2 y jugar a mi juego de Pacman.
 
-If anyone has or can get this working on Windows and WSL I would appreciate the feedback. I will raise an issue on the repository for this and come back to it once I have time and a fix.
+Si alguien lo ha logrado o puede hacerlo funcionar en Windows y WSL, agradecería los comentarios. Abriré un problema en el repositorio para esto y volveré a él una vez que tenga tiempo y una solución.
 
-UPDATE: I feel like this blog helps identify maybe the cause of this not working with WSL [Configuring Ingress to run Minikube on WSL2 using Docker runtime](https://hellokube.dev/posts/configure-minikube-ingress-on-wsl2/)
+ACTUALIZACIÓN: Siento que este blog ayuda a identificar quizás la causa de que esto no funcione con WSL [Configuring Ingress to run Minikube on WSL2 using Docker runtime](https://hellokube.dev/posts/configure-minikube-ingress-on-wsl2/)
 
-## Resources
+## Recursos
 
 If you have FREE resources that you have used then please feel free to add them here via a PR to the repository and I will be happy to include them.
 
@@ -221,9 +221,10 @@ If you have FREE resources that you have used then please feel free to add them 
 - [TechWorld with Nana - Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]](https://www.youtube.com/watch?v=X48VuDVv0do)
 - [TechWorld with Nana - Kubernetes Crash Course for Absolute Beginners](https://www.youtube.com/watch?v=s_o8dwzRlu4)
 - [Kunal Kushwaha - Kubernetes Tutorial for Beginners | What is Kubernetes? Architecture Simplified!](https://www.youtube.com/watch?v=KVBON1lA9N8)
+- [WSL2 - Windows corriendo contenedores Linux??](https://youtu.be/_Hne4gm8plo)
 
-This wraps up our Kubernetes section, there is so much additional content we could cover on Kubernetes and 7 days gives us foundational knowledge but people are running through [100DaysOfKubernetes](https://100daysofkubernetes.io/overview.html) where you can get really into the weeds.
+Aquí concluye la sección de Kubernetes, hay mucho contenido adicional que podríamos ver sobre Kubernetes y 7 días nos brinda conocimientos fundamentales, pero hay personas que están pasando por [100DaysOfKubernetes](https://100daysofkubernetes.io/overview.html) donde se puede profundizar más.
 
-Next up we are going to be taking a look at Infrastructure as Code and the important role it plays from a DevOps perspective.
+A continuación, vamos a echar un vistazo a la Infraestructura como Código y el papel importante que desempeña desde una perspectiva de DevOps.
 
-See you on [Day 56](day56.md)
+Nos vemos en el [Día 56](day56.md)
