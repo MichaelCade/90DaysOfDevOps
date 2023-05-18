@@ -14,8 +14,6 @@ Lo primero que debemos hacer es implementar Rancher en nuestra estación de trab
 
 También están disponibles otros métodos de implementación de Rancher. Puedes consultar la [Guía de inicio rápido de Rancher](https://rancher.com/docs/rancher/v2.6/en/quick-start-guide/deployment/).
 
-
-
 `sudo docker run -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher`
 
 Como puedes ver en nuestro Docker Desktop, tenemos un contenedor de Rancher en ejecución.
