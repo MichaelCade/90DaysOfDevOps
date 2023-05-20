@@ -72,7 +72,7 @@ For example, a Person table may have an addressID column which points to a row w
 
 The AddressID column is a unique “key” in the Address table but is present in the Person table as a “foreign key”.  We display this relationship in the diagram above.  This is a simple example of an [Entity-Relationship](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model) diagram that shows the structure of our database.
 
-The design of the tables and the relations between them in a relational database is said to be the database schema. The process of building this schema is called [database normalisation](https://en.wikipedia.org/wiki/).
+The design of the tables and the relations between them in a relational database is said to be the database schema. The process of building this schema is called [database normalisation](https://en.wikipedia.org/wiki/Database_normalization).
 
 Data is selected, updated, or deleted from a relational database via a programming language called SQL (Structured Query Language).  We'll cover some of the basic concepts of SQL in [Day 64](./day64.md).
 
