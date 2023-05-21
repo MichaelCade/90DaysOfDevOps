@@ -1,0 +1,16 @@
+name: Auto message on Creating a Issue.
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create comment for issue
+      if: github.event_name =='issues'
+      uses: peter-evans/create-or-update-comment@v1
+      with:
+        issue-number: ${{tojson(github.event.issue.number)}}
+        body: Hello there!👋, @${{ github.actor }} Welcome to the Solidity-Pathshala! 🚀⚡Thank you and Congratulations🎉 for opening a issue in this project. Please make sure not to start working on this issue, unless you are assigned to it.😄
