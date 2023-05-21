@@ -1,26 +1,28 @@
-## Kubernetes Application Deployment
+## Implementación de aplicaciones en Kubernetes
 
-Now we finally get to deploying some applications into our clusters, some would say this is the reason Kubernetes exists, for Application delivery.
+Ahora finalmente vamos a implementar algunas aplicaciones en nuestros clústeres, algunos podrían decir que esta es la razón por la cual Kubernetes existe, para la entrega de aplicaciones.
 
-The idea here is that we can take our container images and now deploy these as pods into our Kubernetes cluster to take advantage of Kubernetes as a container orchestrator.
+La idea aquí es que podemos tomar nuestras imágenes de contenedor y desplegarlas como pods en nuestro clúster de Kubernetes para aprovechar Kubernetes como un orquestador de contenedores.
 
-### Deploying Apps into Kubernetes
+### Implementación de aplicaciones en Kubernetes
 
-There are several ways in which we can deploy our applications into our Kubernetes cluster, we will cover two of the most common approaches which will be YAML files and Helm charts.
+Existen varias formas en las que podemos implementar nuestras aplicaciones en nuestro clúster de Kubernetes, cubriremos dos de los enfoques más comunes que son archivos YAML y gráficos Helm.
 
-We will be using our minikube cluster for these application deployments. We will be walking through some of the previously mentioned components or building blocks of Kubernetes.
+Utilizaremos nuestro clúster minikube para estas implementaciones de aplicaciones. Repasaremos algunos de los componentes o bloques de construcción de Kubernetes mencionados anteriormente.
 
-All through this section and the Container section we have discussed images and the benefits of Kubernetes and how we can handle scale quite easily on this platform.
+En esta sección y la sección de Contenedores, hemos discutido las imágenes y los beneficios de Kubernetes, y cómo podemos manejar fácilmente la escala en esta plataforma.
 
-In this first step, we are simply going to create a stateless application within our minikube cluster. We will be using the defacto standard stateless application in our first demonstration `nginx` we will configure a Deployment, which will provide us with our pods and then we will also create a service which will allow us to navigate to the simple web server hosted by the nginx pod. All of this will be contained in a namespace.
+En este primer paso, simplemente vamos a crear una aplicación sin estado dentro de nuestro clúster minikube. Utilizaremos la aplicación sin estado de facto estándar en nuestra primera demostración: `nginx`. Configuraremos una Implementación (Deployment), que nos proporcionará nuestros pods, y luego también crearemos un servicio que nos permitirá acceder al servidor web simple alojado por el pod de nginx. Todo esto estará contenido en un espacio de nombres.
 
 ![](Images/Day54_Kubernetes1.png)
 
 ### Creating the YAML
 
-In the first demo, we want to define everything we do with YAML, we could have a whole section on YAML but I am going to skim over this and leave some resources at the end that will cover YAML in more detail.
+Creación del archivo YAML
 
-We could create the following as one YAML file or we could break this down for each aspect of our application, i.e this could be separate files for namespace, deployment and service creation but in this file, below we separate these by using `---` in one file. You can find this file located [here](Kubernetes) (File name:- nginx-stateless-demo.YAML)
+En la primera demostración, queremos definir todo lo que hacemos con YAML. Podríamos tener una sección completa sobre YAML, pero voy a pasar por alto esto y dejar algunos recursos al final que cubrirán YAML en más detalle.
+
+Podemos crear lo siguiente como un archivo YAML o podemos dividir esto en cada aspecto de nuestra aplicación, es decir, podrían ser archivos separados para el espacio de nombres, la implementación y la creación del servicio, pero en este archivo, a continuación, separamos esto usando `---` en un solo archivo. Puede encontrar este archivo ubicado [aquí](Kubernetes) (File name:- nginx-stateless-demo.YAML)
 
 ```Yaml
 apiVersion: v1
@@ -66,113 +68,113 @@ spec:
       targetPort: 80
 ```
 
-### Checking our cluster
+### Verificando nuestro clúster
 
-Before we deploy anything we should just make sure that we have no existing namespaces called `nginx` we can do this by running the `kubectl get namespace` command and as you can see below we do not have a namespace called `nginx`
+Antes de implementar cualquier cosa, debemos asegurarnos de que no tengamos ningún espacio de nombres existente llamado `nginx`. Podemos hacer esto ejecutando el comando kubectl get namespace y como puedes ver a continuación, no tenemos un espacio de nombres llamado `nginx`.
 
 ![](Images/Day54_Kubernetes2.png)
 
-### Time to deploy our App
+### Hora de implementar nuestra aplicación
 
-Now we are ready to deploy our application to our minikube cluster, this same process will work on any other Kubernetes cluster.
+Ahora estamos listos para implementar nuestra aplicación en nuestro clúster de minikube, este mismo proceso funcionará en cualquier otro clúster de Kubernetes.
 
-We need to navigate to our YAML file location and then we can run `kubectl create -f nginx-stateless-demo.yaml` which you then see that 3 objects have been created, and we have a namespace, deployment and service.
+Necesitamos navegar hasta la ubicación de nuestro archivo YAML y luego podemos ejecutar kubectl `create -f nginx-stateless-demo.yaml`, lo que te mostrará que se han creado 3 objetos, y tenemos un espacio de nombres, una implementación y un servicio.
 
 ![](Images/Day54_Kubernetes3.png)
 
-Let's run the command again to see our available namespaces in our cluster `kubectl get namespace` and you can now see that we have our new namespace.
+Ejecutemos el comando nuevamente para ver nuestros espacios de nombres disponibles en nuestro clúster `kubectl get namespace` y ahora puedes ver que tenemos nuestro nuevo espacio de nombres.
 
 ![](Images/Day54_Kubernetes5.png)
 
-If we then check our namespace for pods using `kubectl get pods -n nginx` you will see that we have 1 pod in a ready and running state.
+Si luego verificamos nuestro espacio de nombres para los pods usando `kubectl get pods -n nginx`, verás que tenemos 1 pod en estado listo y en ejecución.
 
 ![](Images/Day54_Kubernetes4.png)
 
-We can also check our service is created by running `kubectl get service -n nginx`
+También podemos verificar que nuestro servicio se haya creado ejecutando `kubectl get service -n nginx`.
 
 ![](Images/Day54_Kubernetes6.png)
 
-Finally, we can then go and check our deployment, the deployment is where and how we keep our desired configuration.
+Finalmente, podemos verificar nuestra implementación, la implementación es donde y cómo mantenemos nuestra configuración deseada.
 
 ![](Images/Day54_Kubernetes7.png)
 
-The above takes a few commands that are worth knowing but you can also use `kubectl get all -n nginx` to see everything we deployed with that one YAML file.
+Lo anterior requiere algunos comandos que vale la pena conocer, pero también puedes usar `kubectl get all -n nginx` para ver todo lo que implementamos con ese archivo YAML.
 
 ![](Images/Day54_Kubernetes8.png)
 
-You will notice in the above that we also have a replicaset, in our deployment we define how many replicas of our image we would like to deploy. This was set to 1 initially, but if we wanted to quickly scale our application then we can do these several ways.
+Observarás que también tenemos un replicaset en la implementación. En nuestra implementación, definimos cuántas réplicas de nuestra imagen nos gustaría implementar. Inicialmente se estableció en 1, pero si quisiéramos escalar rápidamente nuestra aplicación, podemos hacerlo de varias formas.
 
-We can edit our file using `kubectl edit deployment nginx-deployment -n nginx` which will open a text editor within your terminal and enable you to modify your deployment.
+Podemos editar nuestro archivo usando `kubectl edit deployment nginx-deployment -n nginx`, lo cual abrirá un editor de texto dentro de tu terminal y te permitirá modificar tu implementación.
 
 ![](Images/Day54_Kubernetes9.png)
 
-Upon saving the above in your text editor within the terminal if there were no issues and the correct formatting was used then you should see additional deployed in your namespace.
+Al guardar lo anterior en tu editor de texto dentro de la terminal, si no hubo problemas y se utilizó el formato correcto, deberías ver que se implementan réplicas adicionales en tu espacio de nombres.
 
 ![](Images/Day54_Kubernetes10.png)
 
-We can also make a change to the number of replicas using kubectl and the `kubectl scale deployment nginx-deployment --replicas=10 -n nginx`
+También podemos realizar un cambio en el número de réplicas utilizando `kubectl scale deployment nginx-deployment --replicas=10 -n nginx`.
 
 ![](Images/Day54_Kubernetes11.png)
 
-We can equally use this method to scale our application down back to 1 again if we wish to use either method. I used the edit option but you can also use the scale command above.
+Del mismo modo, podemos utilizar este método para reducir la escala de nuestra aplicación nuevamente a 1 si deseamos utilizar cualquiera de los dos métodos. Yo utilicé la opción de edición, pero también puedes usar el comando de escala mencionado anteriormente.
 
 ![](Images/Day54_Kubernetes12.png)
 
-Hopefully, here you can see the use case not only are things super fast to spin up and down but we have the ability to quickly scale up and down our applications. If this was a web server we could scale up during busy times and down when the load is quiet.
+Espero que aquí puedas ver el caso de uso. No solo es extremadamente rápido iniciar y detener las cosas, sino que también tenemos la capacidad de escalar rápidamente nuestras aplicaciones hacia arriba y hacia abajo. Si esto fuera un servidor web, podríamos escalar durante los momentos de alta demanda y reducirlo cuando la carga sea baja.
 
-### Exposing our app
+### Exponiendo nuestra aplicación
 
-But how do we access our web server?
+Pero ¿cómo accedemos a nuestro servidor web?
 
-If you look above at our service you will see there is no External IP available so we cannot just open a web browser and expect this to be there magically. For access, we have a few options.
+Si observas arriba nuestro servicio, verás que no hay una IP externa disponible, por lo que no podemos abrir un navegador web y esperar que esté ahí mágicamente. Para acceder, tenemos algunas opciones.
 
-**ClusterIP** - The IP you do see is a ClusterIP this is on an internal network on the cluster. Only things within the cluster can reach this IP.
+**ClusterIP** - La IP que ves es un ClusterIP, que se encuentra en una red interna del clúster. Solo los elementos dentro del clúster pueden acceder a esta IP.
 
-**NodePort** - Exposes the service on the same port of each of the selected nodes in the cluster using NAT.
+**NodePort** - Expone el servicio en el mismo puerto de cada uno de los nodos seleccionados en el clúster utilizando NAT.
 
-**LoadBalancer** - Creates an external load balancer in the current cloud, we are using minikube but also if you have built your own Kubernetes cluster i.e what we did in VirtualBox you would need to deploy a LoadBalancer such as metallb into your cluster to provide this functionality.
+**LoadBalancer** - Crea un balanceador de carga externo en la nube actual. Estamos utilizando minikube, pero si has creado tu propio clúster de Kubernetes, como lo hicimos en VirtualBox, necesitarías implementar un balanceador de carga como metallb en tu clúster para proporcionar esta funcionalidad.
 
-**Port-Forward** - We also have the ability to Port Forward, which allows you to access and interact with internal Kubernetes cluster processes from your localhost. This option is only for testing and fault finding.
+**Port-Forward** - También tenemos la capacidad de reenvío de puertos, lo que te permite acceder e interactuar con los procesos internos del clúster de Kubernetes desde tu localhost. Esta opción solo se utiliza para pruebas y solución de problemas.
 
-We now have a few options to choose from, Minikube has some limitations or differences I should say to a full-blown Kubernetes cluster.
-
-We could simply run the following command to port forward our access using our local workstation.
+Ahora tenemos algunas opciones para elegir. Minikube tiene algunas limitaciones o diferencias, podríamos simplemente ejecutar el siguiente comando para redirigir nuestro acceso utilizando nuestra estación de trabajo local.
 
 `kubectl port-forward deployment/nginx-deployment -n nginx 8090:80`
 
 ![](Images/Day54_Kubernetes13.png)
 
-note that when you run the above command this terminal is now unusable as this is acting as your port forward to your local machine and port.
+Ten en cuenta que cuando ejecutas el comando anterior, esta terminal ya no es utilizable, ya que actúa como reenvío de puertos a tu máquina local y puerto.
 
 ![](Images/Day54_Kubernetes14.png)
 
-We are now going to run through specifically with Minikube how we can expose our application. We can also use minikube to create a URL to connect to a service [More details](https://minikube.sigs.k8s.io/docs/commands/service/)
+Ahora vamos a explicar específicamente con Minikube cómo podemos exponer nuestra aplicación. También podemos usar minikube para crear una URL y conectarnos a un servicio [Más detalles](https://minikube.sigs.k8s.io/docs/commands/service/)
 
-First of all, we will delete our service using `kubectl delete service nginx-service -n nginx`
+En primer lugar, eliminaremos nuestro servicio usando `kubectl delete service nginx-service -n nginx`
 
-Next, we are going to create a new service using `kubectl expose deployment nginx-deployment --name nginx-service --namespace nginx --port=80 --type=NodePort` notice here that we are going to use the expose and change the type to NodePort.
+A continuación, crearemos un nuevo servicio utilizando `kubectl expose deployment nginx-deployment --name nginx-service --namespace nginx --port=80 --type=NodePort`. Observa que aquí estamos usando "expose" y cambiamos el tipo a NodePort.
 
 ![](Images/Day54_Kubernetes15.png)
 
-Finally in a new terminal run `minikube --profile='mc-demo' service nginx-service --URL -n nginx` to create a tunnel for our service.
+Finalmente, en una nueva terminal, ejecuta `minikube --profile='mc-demo' service nginx-service --URL -n nginx` para crear un túnel para nuestro servicio.
 
 ![](Images/Day54_Kubernetes16.png)
 
-Open a browser or control and click on the link in your terminal.
+Abre un navegador o haz clic en el enlace en tu terminal.
+
 
 ![](Images/Day54_Kubernetes17.png)
 
 ### Helm
 
-Helm is another way in which we can deploy our applications. Known as "The package manager for Kubernetes" You can find out more [here](https://helm.sh/)
+Helm es otra forma en la que podemos implementar nuestras aplicaciones. Conocido como "el administrador de paquetes para Kubernetes". Puedes obtener más información [aquí](https://helm.sh/).
 
-Helm is a package manager for Kubernetes. Helm could be considered the Kubernetes equivalent of yum or apt. Helm deploys charts, which you can think of like a packaged application., it is a blueprint for your pre-configured application resources which can be deployed as one easy-to-use chart. You can then deploy another version of the chart with a different set of configurations.
+Helm es un administrador de paquetes para Kubernetes. Se podría considerar que Helm es el equivalente de Kubernetes a yum o apt. Helm implementa gráficos, que puedes pensar como una aplicación empaquetada. Es un modelo para los recursos de tu aplicación preconfigurada, que se pueden implementar como un gráfico fácil de usar. Luego, puedes implementar otra versión del gráfico con un conjunto diferente de configuraciones.
 
-They have a site where you can browse all the Helm charts available and of course, you can create your own. The documentation is also clear and concise and not as daunting as when I first started hearing the term helm amongst all of the other new words in this space.
+Tienen un sitio web donde puedes explorar todos los gráficos de Helm disponibles y, por supuesto, puedes crear los tuyos propios. La documentación también es clara y concisa, no es tan abrumadora como cuando escuché el término "helm" por primera vez junto con todas las demás palabras nuevas en este espacio.
 
-It is super simple to get Helm up and running or installed. Simply. You can find the binaries and download links here for pretty much all distributions including your RaspberryPi arm64 devices.
+Es muy sencillo poner en marcha o instalar Helm. Simplemente puedes encontrar los binarios y los enlaces de descarga aquí, para prácticamente todas las distribuciones, incluyendo dispositivos Raspberry Pi arm64.
 
-Or you can use an installer script, the benefit here is that the latest version of the helm will be downloaded and installed.
+O puedes utilizar un script de instalación, la ventaja aquí es que se descargará e instalará la última versión de Helm.
+
 
 ```Shell
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
@@ -182,32 +184,23 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 ```
 
-Finally, there is also the option to use a package manager for the application manager, homebrew for mac, chocolatey for windows, apt with Ubuntu/Debian, snap and pkg also.
+Finalmente, también existe la opción de utilizar un administrador de paquetes para el administrador de aplicaciones, como Homebrew para Mac, Chocolatey para Windows, apt para Ubuntu/Debian, snap y pkg también.
 
-Helm so far seems to be the go-to way to get different test applications downloaded and installed in your cluster.
+Hasta ahora, Helm parece ser la forma preferida de descargar e instalar diferentes aplicaciones de prueba en tu clúster.
 
-A good resource to link here would be [ArtifactHUB](https://artifacthub.io/) which is a resource to find, install and publish Kubernetes packages. I will also give a shout-out to [KubeApps](https://kubeapps.com/) which is a UI to display helm charts.
+Un buen recurso para enlazar aquí sería [ArtifactHUB](https://artifacthub.io/), que es un recurso para encontrar, instalar y publicar paquetes de Kubernetes. También quiero mencionar [KubeApps](https://kubeapps.com/), que es una interfaz de usuario para mostrar gráficos de Helm.
 
-### What we will cover in the series on Kubernetes
+## Recursos
 
-We have started covering some of these mentioned below but we are going to get more hands-on tomorrow with our second cluster deployment then we can start deploying applications into our clusters.
-
-- Kubernetes Architecture
-- Kubectl Commands
-- Kubernetes YAML
-- Kubernetes Ingress
-- Kubernetes Services
-- Helm Package Manager
-- Persistent Storage
-- Stateful Apps
-
-## Resources
-
-If you have FREE resources that you have used then please feel free to add them here via a PR to the repository and I will be happy to include them.
+Si tienes recursos GRATUITOS que has utilizado, siéntete libre de agregarlos aquí mediante un PR al repositorio y estaré encantado de incluirlos.
 
 - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
 - [TechWorld with Nana - Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]](https://www.youtube.com/watch?v=X48VuDVv0do)
 - [TechWorld with Nana - Kubernetes Crash Course for Absolute Beginners](https://www.youtube.com/watch?v=s_o8dwzRlu4)
 - [Kunal Kushwaha - Kubernetes Tutorial for Beginners | What is Kubernetes? Architecture Simplified!](https://www.youtube.com/watch?v=KVBON1lA9N8)
+- [Guía Helm](https://gitea.vergaracarmona.es/man-linux/Guia-Tutorial-kubernetes/src/branch/main/guias/05-helm.md)
+- [Ejecutar Charts de Helm con helmfile](https://vergaracarmona.es/ejecutar-charts-de-helm-con-helmfile/)
+- [Helm Umbrella Charts](https://vergaracarmona.es/helm-umbrella-charts/)
+- [Apuntes de curso Helm](https://vergaracarmona.es/wp-content/uploads/2022/12/Curso_Helm_vergaracarmona.es_.pdf)
 
-See you on [Day 55](day55.md)
+Nos vemos en el [Día 55](day55.md)
