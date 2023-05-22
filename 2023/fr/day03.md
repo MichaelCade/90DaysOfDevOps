@@ -7,7 +7,7 @@ Hier, nous avons abordé en détail ce qu'est le DevSecOps. Aujourd'hui, nous al
 
 Pour commencer, toutes les entreprises et tous les software sont des vecteurs d'attaque pour un hacker. Il n'existe pas d'endroit 100% sûr. Tout ce qui est possible de faire, c'est de rendre un réseau, une SI, une entreprise, moins "attirante" aux hackers.
 
-![](/images/day03-2.jpg)
+![](images/day03-2.jpg)
 ***[image from this source](https://www.trainerize.me/articles/outrun-bear/)***
 
 En partant de ce principe, les attaquants sont des menaces constantes. 
