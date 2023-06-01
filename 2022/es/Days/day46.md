@@ -1,42 +1,40 @@
 ## Docker Compose
 
-The ability to run one container could be great if you have a self-contained image that has everything you need for your single use case, where things get interesting is when you are looking to build multiple applications between different container images. For example, if I had a website front end but required a backend database I could put everything in one container but better and more efficient would be to have its container for the database.
+La capacidad de ejecutar un contenedor puede ser muy grande si tienes una imagen auto-contenida que tiene todo lo que necesita para su caso de uso único. Donde las cosas se ponen interesantes es cuando estás buscando construir múltiples aplicaciones entre diferentes imágenes de contenedores. Por ejemplo, si tuvieras un sitio web front-end, pero requiere una base de datos back-end podría poner todo en un contenedor, aunque lo más eficiente es tener un contenedor propio para la base de datos.
 
-This is where Docker compose comes in which is a tool that allows you to run more complex apps over multiple containers. With the benefit of being able to use a single file and command to spin up your application. The example I am going to the walkthrough in this post is from the [Docker QuickStart sample apps (Quickstart: Compose and WordPress)](https://docs.docker.com/samples/wordpress/).
+Aquí es donde entra en juego Docker compose, una herramienta que permite ejecutar aplicaciones más complejas en varios contenedores. Con el beneficio de ser capaz de utilizar un único archivo y comando para hacer girar su aplicación. El ejemplo que voy a mostrar en este día es de [Docker QuickStart sample apps (Quickstart: Compose and WordPress)](https://docs.docker.com/samples/wordpress/).
 
-In this first example we are going to:
+Veremos cómo:
 
-- Use Docker compose to bring up WordPress and a separate MySQL instance.
-- Use a YAML file which will be called `docker-compose.yml`
-- Build the project
-- Configure WordPress via a Browser
-- Shutdown and Clean up
+- Usar Docker Compose para traer WordPress y una instancia separada de MySQL.
+- Utilizar un archivo YAML que se llamará `docker-compose.yml`.
+- Construir el proyecto
+- Configurar WordPress a través de un navegador
+- Apagar y limpiar
 
-### Install Docker Compose
+###  Instalar Docker Compose
 
-As mentioned Docker Compose is a tool, If you are on macOS or Windows then compose is included in your Docker Desktop installation. However, you might be wanting to run your containers on a Windows server host or Linux server and in which case you can install using these instructions [Install Docker Compose](https://docs.docker.com/compose/install/)
+Como se ha mencionado Docker Compose es una herramienta, si estás en macOS o Windows entonces compose está incluido en tu instalación de Docker Desktop, así como en las últimas versiones de docker para linux. Sin embargo, es posible que desees ejecutar tus contenedores con una versión de docker más antigua, en cuyo caso puedes instalarlo siguiendo estas instrucciones [Install Docker Compose](https://docs.docker.com/compose/install/)
 
-To confirm we have `docker-compose` installed on our system we can open a terminal and simply type the above command.
+Para confirmar que tenemos `docker-compose` instalado en nuestro sistema podemos abrir un terminal y simplemente escribir el comando anterior. En la últimas versiones se está dejando de usar el guión medio: `docker compose`.
 
 ![](Images/Day46_Containers1.png)
 
 ### Docker-Compose.yml (YAML)
 
-The next thing to talk about is the docker-compose.yml which you can find in the container folder of the repository. But more importantly, we need to discuss YAML, in general, a little.
+Lo siguiente de lo que hablar es de como construir el fichero docker-compose.yml, pero realmente es más importante de que hablemos un poco de YAML, en general.
 
-YAML could almost have its session as you are going to find it in so many different places. But for the most part
+YAML casi podría tener su propio día en #90DaysOfDevOps, ya que lo vas a encontrar en muchos lugares diferentes. Pero en general "YAML es un lenguaje de serialización de datos amigable para todos los lenguajes de programación", al igual que JSON o TOML.
 
-"YAML is a human-friendly data serialization language for all programming languages."
+Se utiliza habitualmente para archivos de configuración y en algunas aplicaciones en las que se almacenan o transmiten datos. Sin duda te habrás encontrado con archivos XML que suelen ofrecer ese mismo archivo de configuración. YAML proporciona una sintaxis mínima pero está orientado a esos mismos casos de uso.
 
-It is commonly used for configuration files and in some applications where data is being stored or transmitted. You have no doubt come across XML files that tend to offer that same configuration file. YAML provides a minimal syntax but is aimed at those same use cases.
+YAML no es un lenguaje de marcas, como se ha mencionado es un lenguaje de serialización y ha ido ganando popularidad en los últimos años. Las capacidades de serialización de objetos lo convierten en un sustituto viable de lenguajes como JSON.
 
-YAML Ain't Markup Language (YAML) is a serialisation language that has steadily increased in popularity over the last few years. The object serialisation abilities make it a viable replacement for languages like JSON.
+El acrónimo YAML era la abreviatura de Yet Another Markup Language. Pero los mantenedores lo renombraron a YAML Ain't Markup Language para poner más énfasis en sus características orientadas a los datos.
 
-The YAML acronym was shorthand for Yet Another Markup Language. But the maintainers renamed it to YAML Ain't Markup Language to place more emphasis on its data-oriented features.
+De todos modos, volvamos al archivo docker-compose.yml. Este es un archivo de configuración de lo que queremos hacer cuando se trata de múltiples contenedores que se despliegan en nuestro único sistema.
 
-Anyway, back to the docker-compose.yml file. This is a configuration file of what we want to do when it comes to multiple containers being deployed on our single system.
-
-Straight from the tutorial linked above you can see the contents of the file looks like this:
+Directamente desde el tutorial vinculado anteriormente se puede ver el contenido del archivo se parece a esto:
 
 ```
 version: "3.9"
@@ -72,95 +70,93 @@ volumes:
   wordpress_data: {}
 ```
 
-We declare a version and then a large part of this docker-compose.yml file is made up of our services, we have a DB service and a WordPress service. You can see each of those has an image defined with a version tag associated. We are now also introducing state into our configuration unlike our first walkthroughs, but now we are going to create volumes so we can store our databases there.
+Declaramos una versión y luego una gran parte de este archivo docker-compose.yml se compone de nuestros servicios, tenemos un servicio DB y un servicio de WordPress. Puedes ver que cada uno de ellos tiene una imagen definida con una etiqueta de versión asociada. Ahora también estamos introduciendo el estado en nuestra configuración a diferencia de nuestros primeros paseos, pero ahora vamos a crear volúmenes para que podamos almacenar nuestras bases de datos allí.
 
-We then have some environmental variables such as passwords and usernames. These files can get very complicated but the YAML configuration file simplifies what these look like overall.
+Luego tenemos algunas variables de entorno como contraseñas y nombres de usuario. Estos archivos pueden llegar a ser muy complicados, pero el archivo de configuración YAML simplifica su aspecto general.
 
-### Build the project
+### Construir el proyecto
 
-Next up we can head back into our terminal and we can use some commands with our docker-compose tool. Navigate to your directory, where your docker-compose.yml file is located.
+A continuación podemos volver a nuestro terminal y podemos utilizar algunos comandos con nuestra herramienta docker-compose. Asegurate de estar ubicado en el directorio donde se encuentra el archivo docker-compose.yml.
 
-From the terminal, we can simply run `docker-compose up -d` this will start the process of pulling those images and standing up your multi-container application.
+Desde el terminal, podemos simplemente ejecutar `docker-compose up -d` esto iniciará el proceso de extracción de las imágenes y la puesta en marcha de su aplicación multi-contenedor.
 
-The `-d` in this command means detached mode, which means that the Run command is or will be in the background.
+La `-d` en este comando significa modo separado, lo que significa que el comando Run estará en segundo plano.
 
 ![](Images/Day46_Containers2.png)
 
-If we now run the `docker ps` command, you can see we have 2 containers running, one being WordPress and the other being MySQL.
+Si ahora ejecutamos el comando `docker ps`, podemos ver que tenemos 2 contenedores ejecutándose, uno es WordPress y el otro es MySQL.
 
 ![](Images/Day46_Containers3.png)
 
-Next, we can validate that we have WordPress up and running by opening a browser and going to `http://localhost:8000` and you should see the WordPress set-up page.
+A continuación, podemos verificar que tenemos WordPress funcionando abriendo un navegador y yendo a `http://localhost:8000`. Deberías ver la página de configuración de WordPress.
 
 ![](Images/Day46_Containers4.png)
 
-We can run through the setup of WordPress, and then we can start building our website as we see fit in the console below.
+Podemos ejecutar la configuración de WordPress, y luego podemos empezar a construir nuestro sitio web como mejor nos parezca en la consola de abajo.
 
 ![](Images/Day46_Containers5.png)
 
-If we then open a new tab and navigate to that same address we did before `http://localhost:8000` we will now see a simple default theme with our site title "90DaysOfDevOps" and then a sample post.
+Si a continuación abrimos una nueva pestaña y navegamos a la misma dirección que antes `http://localhost:8000` veremos ahora un sencillo tema por defecto con el título de nuestro sitio "90DaysOfDevOps" y a continuación un post de ejemplo.
 
 ![](Images/Day46_Containers6.png)
 
-Before we make any changes, open Docker Desktop and navigate to the volumes tab and here you will see two volumes associated with our containers, one for WordPress and one for DB.
+Antes de hacer ningún cambio, abre Docker Desktop y navega hasta la pestaña de volúmenes y aquí verás dos volúmenes asociados a nuestros contenedores, uno para WordPress y otro para DB.
 
 ![](Images/Day46_Containers7.png)
 
-My Current wordpress theme is "Twenty Twenty-Two" and I want to change this to "Twenty Twenty" Back in the dashboard we can make those changes.
+Mi tema actual de wordpress es "Twenty Twenty-Two" y quiero cambiarlo por "Twenty Twenty". De vuelta en el dashboard podemos hacer esos cambios.
 
 ![](Images/Day46_Containers8.png)
 
-I am also going to add a new post to my site, and here below you see the latest version of our new site.
+También voy a añadir un nuevo post a mi sitio, y aquí abajo se ve la última versión de nuestro nuevo sitio.
 
 ![](Images/Day46_Containers9.png)
 
-### Clean Up or not
+### Limpiar o no limpiar
 
-If we were now to use the command `docker-compose down` this would bring down our containers. But will leave our volumes in place.
+Si ahora usáramos el comando `docker-compose down` esto bajaría nuestros contenedores. Pero dejará nuestros volúmenes en su sitio.
 
 ![](Images/Day46_Containers10.png)
 
-We can just confirm in Docker Desktop that our volumes are still there though.
+Podemos confirmar en Docker Desktop que nuestros volúmenes siguen ahí.
 
 ![](Images/Day46_Containers11.png)
 
-If we then want to bring things back up then we can issue the `docker up -d` command from within the same directory and we have our application back up and running.
+Si luego queremos volver a poner las cosas en marcha, podemos ejecutar el comando `docker up -d` desde el mismo directorio y ya tenemos nuestra aplicación de nuevo en marcha.
 
 ![](Images/Day46_Containers12.png)
 
-We then navigate in our browser to that same address of `http://localhost:8000` and notice that our new post and our theme change are all still in place.
+A continuación, navegamos en nuestro navegador a la misma dirección de `http://localhost:8000` y observamos que nuestro nuevo post y nuestro cambio de tema siguen en su lugar.
 
 ![](Images/Day46_Containers13.png)
 
-If we want to get rid of the containers and those volumes then issuing the `docker-compose down --volumes` will also destroy the volumes.
+Si queremos deshacernos de los contenedores y de esos volúmenes, al ejecutar `docker-compose down --volumes` también destruiremos los volúmenes.
 
 ![](Images/Day46_Containers14.png)
 
-Now when we use `docker-compose up -d` again we will be starting, however, the images will still be local on our system so you won't need to re-pull them from the DockerHub repository.
+Ahora cuando usemos `docker-compose up -d` de nuevo estaremos arrancando, sin embargo, las imágenes seguirán siendo locales en nuestro sistema por lo que no será necesario volver a extraerlas del repositorio de DockerHub.
 
-I know that when I started diving into docker-compose and its capabilities I was then confused as to where this sits alongside or with Container Orchestration tools such as Kubernetes, well everything we have done here in this short demo is focused on one host we have WordPress and DB running on the local desktop machine. We don't have multiple virtual machines or multiple physical machines, we also can't easily scale up and down the requirements of our application.
+Sé que cuando empecé a bucear en docker-compose y sus capacidades estaba confundido en cuanto las diferencias con otras herramientas de orquestación de contenedores como Kubernetes. Por ahora lo que hemos hecho en esta breve demostración se centra en un host que tenemos WordPress y DB se ejecuta en la máquina de escritorio local. No tenemos múltiples máquinas virtuales o múltiples máquinas físicas, tampoco podemos escalar fácilmente hacia arriba y hacia abajo los requisitos de nuestra aplicación.
 
-Our next section is going to cover Kubernetes but we have a few more days of Containers in general first.
+En la sección de Kubernetes despejaremos algunas dudas, por ahora tenemos algunos días más de Contenedores en general.
 
-This is also a great resource for samples of docker-compose applications with multiple integrations. [Awesome-Compose](https://github.com/docker/awesome-compose)
+Este es también un gran recurso para muestras de aplicaciones docker-compose con múltiples integraciones.  [Awesome-Compose](https://github.com/docker/awesome-compose)
 
-In the above repository, there is a great example which will deploy an Elasticsearch, Logstash, and Kibana (ELK) in single-node.
-
-I have uploaded the files to the [Containers folder](2022/Days/Containers/elasticsearch-logstash-kibana/) When you have this folder locally, navigate there and you can simply use `docker-compose up -d`
+En el repositorio hay un gran ejemplo que desplegará un Elasticsearch, Logstash, y Kibana (ELK) en single-node. Podrás encontrar los ficheros en la carpeta [Containers](2022/Days/Containers/elasticsearch-logstash-kibana/). Si tienes esta carpeta en local, tan solo navega hasta allí y usa `docker-compose up -d`.
 
 ![](Images/Day46_Containers15.png)
 
-We can then check we have those running containers with `docker ps`
+Podrás comprobar que tenemos esos contenedores en ejecución con `docker ps`. Estos mantendrán el mismo entorno que en mi pc. 
 
 ![](Images/Day46_Containers16.png)
 
-Now we can open a browser for each of the containers:
+Ahora podemos abrir un navegador para cada uno de los contenedores:
 
 ![](Images/Day46_Containers17.png)
 
-To remove everything we can use the `docker-compose down` command.
+Como en la anterior práctica, para eliminar todo podemos usar el comando `docker-compose down`.
 
-## Resources
+## Recursos
 
 - [TechWorld with Nana - Docker Tutorial for Beginners](https://www.youtube.com/watch?v=3c-iBn73dDE)
 - [Programming with Mosh - Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI)
@@ -169,5 +165,11 @@ To remove everything we can use the `docker-compose down` command.
 - [Blog on getting started building a docker image](https://stackify.com/docker-build-a-beginners-guide-to-building-docker-images/)
 - [Docker documentation for building an image](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 - [YAML Tutorial: Everything You Need to Get Started in Minute](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started)
+- [En español] En los [apuntes](https://vergaracarmona.es/apuntes/) del traductor:
+  - [Preparación de entorno de pruebas local para docker](https://vergaracarmona.es/preparacion-de-entorno-de-pruebas-local-para-docker/)
+  - [Uso básico de docker](https://vergaracarmona.es/uso-basico-de-docker/)
+  - [Una breve historia sobre contenedores](https://vergaracarmona.es/breve-historia-de-contenedores/)
+  - [Desplegar con docker-compose los servicios Traefik y Portainer](https://vergaracarmona.es/desplegar-con-docker-compose-los-servicios-traefik-y-portainer/)
+  - [Comparando TOML, JSON y YAML](https://vergaracarmona.es/comparando-toml-json-y-yaml/)
 
-See you on [Day 47](day47.md)
+Nos vemos en el [Día 47](day47.md)

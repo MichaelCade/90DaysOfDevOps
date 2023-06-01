@@ -62,11 +62,11 @@ As Cybersecurity grows in importance with all the big brands getting hit there i
 
 The above abstract was taken from the top resource listed at the end of the post. 
 
-<span style="color:red">**Red**</span>, <span style="color:blue">**Blue**</span>, <span style="color:yellow">**Yellow**</span> are primary colours, combine them and we start to understand where the other colours or secondary colours come into play, again really great explanation in that first link. 
+<span style="color:red">**Red**</span>, <span style="color:blue">**Blue**</span>, <span style="color:yellow">**Yellow**</span> are primary colours, combine them and we start to understand where the other colours or secondary colours come into play, again a really great explanation in that first link. 
 
-- <span style="color:purple">**Purple Team**</span> - The special team! If the you take <span style="color:blue">**Blue**</span> and <span style="color:red">**Red**</span> you get <span style="color:purple">**Purple**</span>. If you integrate defence with offence and you collaborate and share knowledge between the teams you overall provide a better posture throughout. 
+- <span style="color:purple">**Purple Team**</span> - The special team! If you take <span style="color:blue">**Blue**</span> and <span style="color:red">**Red**</span> you get <span style="color:purple">**Purple**</span>. If you integrate defence with offence and you collaborate and share knowledge between the teams you overall provide a better posture throughout. 
 
-- <span style="color:green">**Green Team**</span> - Feedback loop, the <span style="color:green">**Green**</span> team are going to take insights from the <span style="color:blue">**Blue**</span> team and work closely with the <span style="color:yellow">**Yellow**</span> team to be more effcient. Mix <span style="color:blue">**Blue**</span> and <span style="color:green">**Green**</span> and what do you <span style="color:purple">**get**</span>? 
+- <span style="color:green">**Green Team**</span> - Feedback loop, the <span style="color:green">**Green**</span> team are going to take insights from the <span style="color:blue">**Blue**</span> team and work closely with the <span style="color:yellow">**Yellow**</span> team to be more efficient. Mix <span style="color:blue">**Blue**</span> and <span style="color:green">**Green**</span> and what do you <span style="color:purple">**get**</span>? 
  
 - <span style="color:orange">**Orange Team**</span> - Much like the <span style="color:green">**Green**</span> team working with the <span style="color:blue">**Blue**</span> team for feedback, the <span style="color:orange">**Orange**</span> team works with the <span style="color:red">**Red**</span> team and pass on what they have learnt to the <span style="color:yellow">**Yellow**</span> team to build better security into their code.  
 

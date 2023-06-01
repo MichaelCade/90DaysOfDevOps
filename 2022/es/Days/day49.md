@@ -1,224 +1,199 @@
-## The Big Picture: Kubernetes
+## El panorama: Kubernetes
 
-In the last section we covered Containers, Containers fall short when it comes to scale and orchestration alone. The best we can do is use docker-compose to bring up multiple containers together. When it comes to Kubernetes which is a Container Orchestrator, this gives us the ability to scale up and down in an automated way or based on a load of your applications and services.
+En la última sección vimos los Contenedores. Los contenedores se quedan cortos cuando se trata de escalar y de orquestación, no pueden por sí solos. Lo mejor que podemos hacer es utilizar docker-compose para reunir varios contenedores. Cuando se trata de Kubernetes, que es un orquestador de contenedores, esto nos da la capacidad de escalar hacia arriba y hacia abajo de manera automatizada o basada en una carga de sus aplicaciones y servicios.
 
-As a platform Kubernetes offers the ability to orchestrate containers according to your requirements and desired state. We are going to cover Kubernetes in this section as it is growing rapidly as the next wave of infrastructure. I would also suggest that from a DevOps perspective Kubernetes is just one platform that you will need to have a basic understanding of, you will also need to understand bare metal, virtualisation and most likely cloud-based services as well. Kubernetes is just another option to run our applications.
+Como plataforma, Kubernetes ofrece la capacidad de orquestar contenedores de acuerdo a sus necesidades y el estado deseado. Vamos a cubrir Kubernetes en esta sección, ya que está creciendo rápidamente como la próxima ola de infraestructura. También me gustaría sugerir que, desde una perspectiva DevOps, Kubernetes es sólo una plataforma de las que tendrás que tener al menos un conocimiento básico. También tendrá que entender el bare metal, la virtualización y muy probablemente también los servicios basados en cloud. Kubernetes es sólo otra opción para ejecutar nuestras aplicaciones y se puede aplicar en estás dos mencionadas.
 
-### What is Container Orchestration?
+### ¿Qué es la orquestación de contenedores?
 
-I have mentioned Kubernetes and I have mentioned Container Orchestration, Kubernetes is the technology whereas container orchestration is the concept or the process behind the technology. Kubernetes is not the only Container Orchestration platform we also have Docker Swarm, HashiCorp Nomad and others. But Kubernetes is going from strength to strength so I want to cover Kubernetes but wanted to say that it is not the only one out there.
+He mencionado Kubernetes y he mencionado orquestación de contenedores, Kubernetes es la tecnología mientras que la orquestación de contenedores es el concepto o el proceso detrás de esta tecnología. Kubernetes no es la única plataforma de orquestación de contenedores, también tenemos  las mencionadas anteriormente docker compose y Docker Swarm, o otras como HashiCorp Nomad. Pero Kubernetes va viento en popa, es la más utilizada, así que nos centraremos en ella.
 
-### What is Kubernetes?
+### ¿Qué es Kubernetes?
 
-The first thing you should read if you are new to Kubernetes is the official documentation, My experience of really deep diving into Kubernetes a little over a year ago was that this is going to be a steep learning curve. Coming from a virtualisation and storage background I was thinking about how daunting this felt.
+Lo primero que debes leer si eres nuevo en Kubernetes es la documentación oficial, es el mejor tutorial para aprender y además la van utilizando con más ejemplos o nuevas implementaciones. Mi experiencia de buceo realmente profundo en Kubernetes fue una curva de aprendizaje empinada. Viniendo de un fondo de virtualización y almacenamiento pensaba en lo desalentador que esto se sentía, pero el camino se hace al andar.
 
-But the community, free learning resources and documentation are amazing. [Kubernetes.io](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
+La comunidad, los recursos de aprendizaje gratuitos y la documentación son increíbles, no dejes de empaparte en ella: [Kubernetes.io](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
 
-_Kubernetes is a portable, extensible, open-source platform for managing containerized workloads and services, that facilitates both declarative configuration and automation. It has a large, rapidly growing ecosystem. Kubernetes services, support, and tools are widely available._
+Ahora al pastel. Kubernetes es una plataforma portátil, extensible y de código abierto para gestionar cargas de trabajo y servicios en contenedores. Facilita tanto la configuración declarativa como la automatización. Cuenta con un ecosistema amplio y de rápido crecimiento. Los servicios, el soporte y las herramientas de Kubernetes están ampliamente disponibles.
 
-Important things to note from the above quote, Kubernetes is Open-Source with a rich history that goes back to Google who donated the project to the Cloud Native Computing Foundation (CNCF) and it has now been progressed by the open-source community as well as large enterprise vendors contributing to making Kubernetes what it is today.
+Cosas importantes a tener en cuenta de la cita anterior, Kubernetes es de código abierto con una rica historia que se remonta a cuando Google donó el proyecto a la Cloud Native Computing Foundation (CNCF). Ahora está siendo desarrollado por la comunidad de código abierto, así como grandes proveedores empresariales que contribuyen a hacer Kubernetes lo que es hoy.
 
-I mentioned above that containers are great and in the previous section, we spoke about how containers and container images have changed and accelerated the adoption of cloud-native systems. But containers alone are not going to give you the production-ready experience you need from your application. Kubernetes gives us the following:
+Antes he mencionado que los contenedores son geniales y, en la sección anterior, hemos hablado de cómo los contenedores y las imágenes de contenedores han cambiado y acelerado la adopción de sistemas nativos de la nube. Pero los contenedores por sí solos no van a darte la experiencia lista para producción que necesitas de tu aplicación. Kubernetes nos proporciona estas soluciones:
 
-- **Service discovery and load balancing** Kubernetes can expose a container using the DNS name or using their IP address. If traffic to a container is high, Kubernetes can load balance and distribute the network traffic so that the deployment is stable.
+- **Descubrimiento de servicios y equilibrio de carga** - Kubernetes puede exponer un contenedor utilizando el nombre DNS o su dirección IP. Si el tráfico a un contenedor es alto, Kubernetes puede equilibrar la carga y distribuir el tráfico de red para que el despliegue sea estable.
+- **Orquestación de almacenamiento** - Kubernetes permite montar automáticamente un sistema de almacenamiento de su elección, como almacenamiento local, proveedores de nubes públicas, etc.
+- **Rollouts y rollbacks automatizados** - Puedes describir el estado deseado para los contenedores desplegados utilizando Kubernetes, y puedes cambiar el estado actual al estado deseado a un ritmo controlado. Por ejemplo, puedes automatizar Kubernetes para crear nuevos contenedores para su despliegue, eliminar los contenedores existentes y adoptar todos sus recursos al nuevo contenedor.
+- **Empaquetado automático de contenedores** - Proporcionas a Kubernetes un clúster de nodos que pueda utilizar para ejecutar tareas en contenedores, indicas cuánta CPU y memoria (RAM) necesitas para cada contenedor y Kubernetes puede acomodar los contenedores en sus nodos para hacer el mejor uso de los recursos.
+- **Auto-reparación** - Kubernetes reinicia los contenedores que fallan, reemplaza los contenedores, mata los contenedores que no responden a su chequeo de salud definido por el usuario y no los anuncia a los clientes hasta que estén listos para servir.
+- **Gestión de secretos y configuración** - Kubernetes permite almacenar y gestionar información confidencial, como contraseñas, tokens OAuth y claves SSH. Puede desplegar y actualizar secretos y la configuración de la aplicación sin reconstruir sus imágenes de contenedor, y sin exponer secretos en la configuración de su pila.
 
-- **Storage orchestration** Kubernetes allows you to automatically mount a storage system of your choice, such as local storage, public cloud providers, and more.
+Kubernetes proporciona un marco para ejecutar sistemas distribuidos de forma resiliente.
 
-- **Automated rollouts and rollbacks** You can describe the desired state for your deployed containers using Kubernetes, and it can change the actual state to the desired state at a controlled rate. For example, you can automate Kubernetes to create new containers for your deployment, remove existing containers and adopt all their resources to the new container.
+La orquestación de contenedores gestiona el despliegue, la colocación y el ciclo de vida de los contenedores.
 
-- **Automatic bin packing** You provide Kubernetes with a cluster of nodes that it can use to run containerized tasks. You tell Kubernetes how much CPU and memory (RAM) each container needs. Kubernetes can fit containers onto your nodes to make the best use of your resources.
+También tiene muchas otras responsabilidades:
 
-- **Self-healing** Kubernetes restarts containers that fail, replaces containers, kills containers that don't respond to your user-defined health check, and doesn't advertise them to clients until they are ready to serve.
+- La gestión de clústeres federa hosts en un objetivo.
+- La gestión de la programación distribuye los contenedores entre los nodos a través del programador.
+- El descubrimiento de servicios sabe dónde se encuentran los contenedores y distribuye las solicitudes de los clientes entre ellos.
+- La replicación garantiza la disponibilidad del número adecuado de nodos y contenedores para la carga de trabajo solicitada.
+- La gestión de la salud detecta y reemplaza los contenedores y nodos no saludables.
 
-- **Secret and configuration management** Kubernetes lets you store and manage sensitive information, such as passwords, OAuth tokens, and SSH keys. You can deploy and update secrets and application configuration without rebuilding your container images, and without exposing secrets in your stack configuration.
+### Principales componentes de Kubernetes
 
-Kubernetes provides you with a framework to run distributed systems resiliently.
+Kubernetes es un orquestador de contenedores para aprovisionar, gestionar y escalar aplicaciones. Puede utilizarlo para gestionar el ciclo de vida de aplicaciones en contenedores en un clúster de nodos, que es una colección de máquinas de trabajo como VMs o máquinas físicas.
 
-Container Orchestration manages the deployment, placement, and lifecycle of containers.
+Es posible que sus aplicaciones necesiten muchos otros recursos para ejecutarse, como volúmenes, redes y secretos que pueden ayudarle a conectarse a bases de datos, comunicarse con back-ends con firewalls y proteger claves. Con Kubernetes, puede añadir estos recursos a su aplicación. Los recursos de infraestructura que sus aplicaciones necesitan que se gestionen de forma declarativa.
 
-It also has many other responsibilities:
+El paradigma clave de Kubernetes es su modelo declarativo. Usted proporciona el estado que desea y Kubernetes lo hace posible. Si necesita cinco instancias, no inicie cinco instancias separadas por su cuenta. En su lugar, le dice a Kubernetes que necesita cinco instancias, y Kubernetes reconcilia automáticamente el estado. Si algo sale mal con una de sus instancias y falla, Kubernetes aún conoce el estado que usted desea y crea instancias en un nodo disponible.
 
-- Cluster management federates hosts into one target.
-
-- Schedule management distributes containers across nodes through the scheduler.
-- Service discovery knows where containers are located and distributes client requests across them.
-
-- Replication ensures that the right number of nodes and containers are available for the requested workload.
-
-- Health management detects and replaces unhealthy containers and nodes.
-
-### Main Kubernetes Components
-
-Kubernetes is a container orchestrator to provision, manage, and scale apps. You can use it to manage the lifecycle of containerized apps in a cluster of nodes, which is a collection of worker machines such as VMs or physical machines.
-
-Your apps might need many other resources to run, such as volumes, networks, and secrets that can help you connect to databases, talk to firewalled back ends, and secure keys. With Kubernetes, you can add those resources to your app. Infrastructure resources that your apps need are managed declaratively.
-
-The key paradigm of Kubernetes is its declarative model. You provide the state that you want and Kubernetes makes it happen. If you need five instances, you don't start five separate instances on your own. Instead, you tell Kubernetes that you need five instances, and Kubernetes automatically reconciles the state. If something goes wrong with one of your instances and it fails, Kubernetes still knows the state that you want and creates instances on an available node.
-
-### Node
+### Nodo
 
 #### Control Plane
 
-Every Kubernetes cluster requires a Control Plane node, the control plane's components make global decisions about the cluster (for example, scheduling), as well as detecting and responding to cluster events.
+Cada clúster Kubernetes requiere un nodo de Control Plane, los componentes del Control Plane toman decisiones globales sobre el clúster, por ejemplo la programación, así como la detección y respuesta a los eventos del clúster.
 
 ![](Images/Day49_Kubernetes1.png)
 
 #### Worker Node
 
-A worker machine that runs Kubernetes workloads. It can be a physical (bare metal) machine or a virtual machine (VM). Each node can host one or more pods. Kubernetes nodes are managed by a control plane
+Un Worker machine que ejecuta cargas de trabajo Kubernetes. Puede ser una máquina física (bare metal) o una máquina virtual (VM). Cada nodo puede alojar uno o más pods. Los nodos Kubernetes son gestionados por un plano de control.
 
 ![](Images/Day49_Kubernetes2.png)
 
-There are other node types but I won't be covering them here.
+Existen otros tipos de nodos pero no los trataré aquí.
 
 #### kubelet
 
-An agent that runs on each node in the cluster. It makes sure that containers are running in a Pod.
+Un agente que se ejecuta en cada nodo del clúster. Se asegura de que los contenedores se ejecutan en un Pod.
 
-The kubelet takes a set of PodSpecs that are provided through various mechanisms and ensures that the containers described in those PodSpecs are running and healthy. The kubelet doesn't manage containers which were not created by Kubernetes.
+El kubelet toma un conjunto de PodSpecs que se proporcionan a través de diversos mecanismos y se asegura de que los contenedores descritos en los PodSpecs se están ejecutando y en buen estado. El kubelet no gestiona contenedores que no hayan sido creados por Kubernetes.
 
 ![](Images/Day49_Kubernetes3.png)
 
 #### kube-proxy
 
-kube-proxy is a network proxy that runs on each node in your cluster, implementing part of the Kubernetes Service concept.
+kube-proxy es un proxy de red que se ejecuta en cada nodo de su clúster, implementando parte del concepto de Servicio Kubernetes.
 
-kube-proxy maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your cluster.
+kube-proxy mantiene reglas de red en los nodos. Estas reglas de red permiten la comunicación de red a sus Pods desde sesiones de red dentro o fuera de su cluster.
 
-kube-proxy uses the operating system packet filtering layer if there is one and it's available. Otherwise, kube-proxy forwards the traffic itself.
+kube-proxy utiliza la capa de filtrado de paquetes del sistema operativo si existe y está disponible. De lo contrario, kube-proxy reenvía el tráfico por sí mismo.
 
 ![](Images/Day49_Kubernetes4.png)
 
 #### Container runtime
 
-The container runtime is the software that is responsible for running containers.
+El container runtime es el software responsable de ejecutar los contenedores.
 
-Kubernetes supports several container runtimes: Docker, containerd, CRI-O, and any implementation of the Kubernetes CRI (Container Runtime Interface).
+Kubernetes soporta varios container runtime: Docker, containerd, CRI-O, y cualquier implementación del CRI (Container Runtime Interface) de Kubernetes.
 
 ![](Images/Day49_Kubernetes5.png)
 
 ### Cluster
 
-A cluster is a group of nodes, where a node can be a physical machine or a virtual machine. Each of the nodes will have the container runtime (Docker) and will also be running a kubelet service, which is an agent that takes in the commands from the Master controller (more on that later) and a Proxy, that is used to proxy connections to the Pods from another component (Services, that we will see later).
+Un cluster es un grupo de nodos, donde un nodo puede ser una máquina física o una máquina virtual. Cada uno de los nodos tendrá el tiempo de ejecución del contenedor (Docker) y también estará ejecutando un servicio kubelet, que es un agente que recibe los comandos del controlador Maestro (veremos más sobre esto más adelante) y un Proxy, que se utiliza para proxy conexiones a los Pods de otro componente (Servicios, que veremos más adelante).
 
-Our control plane which can be made highly available will contain some unique roles compared to the worker nodes, the most important will be the kube API server, this is where any communication will take place to get information or push information to our Kubernetes cluster.
+Nuestro control plane, que se puede hacer altamente disponible, contendrá algunos roles únicos en comparación con los nodos Workers, el más importante será el servidor API kube, aquí es donde cualquier comunicación se llevará a cabo para obtener información o enviar información a nuestro clúster Kubernetes.
 
-#### Kube API-Server
+#### Servidor API Kube
 
-The Kubernetes API server validates and configures data for the API objects which include pods, services, replication controllers, and others. The API Server services REST operations and provide the frontend to the cluster's shared state through which all other components interact.
+El servidor API de Kubernetes valida y configura los datos para los objetos API que incluyen pods, servicios, controladores de replicación y otros. El servidor API da servicio a las operaciones REST y proporciona el frontend al estado compartido del cluster a través del cual interactúan el resto de componentes.
 
-#### Scheduler
+#### Planificador (Scheduler)
 
-The Kubernetes scheduler is a control plane process which assigns Pods to Nodes. The scheduler determines which Nodes are valid placements for each Pod in the scheduling queue according to constraints and available resources. The scheduler then ranks each valid Node and binds the Pod to a suitable Node.
+El programador de Kubernetes es un proceso del control plane que asigna Pods a Nodos. El programador determina qué Nodos son válidos para cada Pod en la cola de programación de acuerdo con las restricciones y los recursos disponibles. A continuación, el planificador clasifica cada Nodo válido y vincula el Pod a un Nodo adecuado.
 
-#### Controller Manager
+#### Gestor de Controladores
 
-The Kubernetes controller manager is a daemon that embeds the core control loops shipped with Kubernetes. In applications of robotics and automation, a control loop is a non-terminating loop that regulates the state of the system. In Kubernetes, a controller is a control loop that watches the shared state of the cluster through the apiserver and makes changes attempting to move the current state towards the desired state.
+El gestor de controladores de Kubernetes es un demonio que incorpora los bucles de control centrales incluidos en Kubernetes. En aplicaciones de robótica y automatización, un bucle de control es un bucle no terminal que regula el estado del sistema. En Kubernetes, un controlador es un bucle de control que observa el estado compartido del cluster a través del apiserver y realiza cambios intentando mover el estado actual hacia el estado deseado.
 
 #### etcd
 
-Consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
+Almacén de valores clave consistente y de alta disponibilidad utilizado como almacén de respaldo de Kubernetes para todos los datos del clúster.
 
 ![](Images/Day49_Kubernetes6.png)
 
 #### kubectl
 
-To manage this from a CLI point of view we have kubectl, kubectl interacts with the API server.
+Para gestionar esto desde un punto de vista CLI tenemos kubectl, kubectl interactúa con el servidor API.
 
-The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs.
+La herramienta de línea de comandos de Kubernetes, kubectl, le permite ejecutar comandos contra clústeres Kubernetes. Puede utilizar kubectl para desplegar aplicaciones, inspeccionar y gestionar recursos de clúster y ver registros.
 
 ![](Images/Day49_Kubernetes7.png)
 
 ### Pods
 
-A Pod is a group of containers that form a logical application. E.g. If you have a web application that is running a NodeJS container and also a MySQL container, then both these containers will be located in a single Pod. A Pod can also share common data volumes and they also share the same networking namespace. Remember that Pods are ephemeral and they could be brought up and down by the Master Controller. Kubernetes uses a simple but effective means to identify the Pods via the concepts of Labels (name – values).
+Un Pod es un grupo de contenedores que forman una aplicación lógica. Por ejemplo, si tienes una aplicación web que está ejecutando un contenedor NodeJS y también un contenedor MySQL, entonces ambos contenedores pueden estar ubicados en un único Pod, aunque no es lo aconsejable. Un Pod también puede compartir volúmenes de datos comunes y también comparten el mismo espacio de nombres de red. Recuerda que los Pods son efímeros y pueden ser subidos y bajados por el Controlador Maestro. Kubernetes utiliza un medio simple pero eficaz para identificar los Pods a través de los conceptos de Labels (nombre - valor).
 
-- Pods handle Volumes, Secrets, and configuration for containers.
-
-- Pods are ephemeral. They are intended to be restarted automatically when they die.
-
-- Pods are replicated when the app is scaled horizontally by the ReplicationSet. Each Pod will run the same container code.
-
-- Pods live on Worker Nodes.
+Algunas características importantes de los Pods:
+- Los Pods son la unidad más pequeña de Kubernetes.
+- Los Pods manejan Volúmenes, Secretos y configuración para los contenedores.
+- Los Pods son efímeros. Están pensados para reiniciarse automáticamente cuando mueren.
+- Los Pods se replican cuando la aplicación se escala horizontalmente mediante el ReplicationSet. Cada Pod ejecutará el mismo código de contenedor.
+- Los Pods viven en Nodos Workers.
+- Los Pods pueden comunicarse entre sí usando localhost.
 
 ![](Images/Day49_Kubernetes8.png)
 
 ### Deployments
 
-- You can just decide to run Pods but when they die they die.
+Puedes decidir ejecutar Pods pero cuando mueren, mueren. Los Deployments son una forma de ejecutar Pods de forma continua. Los Deployments también le permiten actualizar una aplicación en ejecución sin tiempo de inactividad.
 
-- A Deployment will enable your pod to run continuously.
-
-- Deployments allow you to update a running app without downtime.
-
-- Deployments also specify a strategy to restart Pods when they die
+- Un Deployment permitirá que tu pod se ejecute continuamente.
+- Los Deployments le permiten actualizar una aplicación en ejecución sin tiempo de inactividad.
+- Los Deployments también especifican una estrategia para reiniciar Pods cuando mueren.
+- Los Deployments son la forma recomendada de administrar Pods en producción.
+- Los Deployments son una abstracción de alto nivel que maneja la creación de Pods y ReplicaSets.
+- Los Deployments son declarativos, como todo en Kubernetes, esto significa que describe el estado deseado en su clúster y Kubernetes se encarga de cambiar el estado real para que coincida con el estado deseado.
 
 ![](Images/Day49_Kubernetes9.png)
 
 ### ReplicaSets
 
-- The Deployment can also create the ReplicaSet
+Como se ha comentado, el Deployment también puede crear el ReplicaSet. Un ReplicaSet es un objeto que define un conjunto de Pods idénticos. Un ReplicaSet garantiza que un número especificado de réplicas de un Pod se estén ejecutando en todo momento. Si hay demasiados Pods, el ReplicaSet eliminará los Pods adicionales. Si hay muy pocos Pods, el ReplicaSet creará más. Los ReplicaSets son la forma recomendada de administrar Pods en producción.
 
-- A ReplicaSet ensures your app has the desired number of Pods
-
-- ReplicaSets will create and scale Pods based on the Deployment
-
-- Deployments, ReplicaSets, and Pods are not exclusive but can be
+- Un ReplicaSet asegura que su aplicación tiene el número deseado de Pods
+- Los ReplicaSets crearán y escalarán Pods basándose en el Deployment
+- Los Deployments, ReplicaSets y Pods no son excluyentes, pero pueden ser
 
 ### StatefulSets
 
-- Does your App require you to keep information about its state?
+¿Necesita tu App mantener información sobre su estado? Por ejemplo, una base de datos necesita estado. Los StatefulSets son la forma de ejecutar aplicaciones que necesitan mantener un estado. Los StatefulSets son similares a los Deployments, pero tienen algunas diferencias importantes:
 
-- A database needs state
-
-- A StatefulSet’s Pods are not interchangeable.
-
-- Each pod has a unique, persistent identifier that the controller maintains over any rescheduling.
+- Los Pods de un StatefulSet no son intercambiables.
+- Cada pod tiene un identificador único y persistente que el controlador mantiene por encima de cualquier reprogramación.
+- Los Pods de un StatefulSet se crean en orden secuencial, uno a la vez.
+- Los Pods de un StatefulSet tienen un nombre DNS estable y predecible. Mantienen el mismo nombre a través de las reprogramaciones.
+- Los volúmenes pueden ser persistentes.
 
 ![](Images/Day49_Kubernetes10.png)
 
 ### DaemonSets
 
-- DaemonSets are for continuous process
-
-- They run one Pod per Node.
-
-- Each new node added to the cluster gets a pod started
-
-- Useful for background tasks such as monitoring and log collection
-
-- Each pod has a unique, persistent identifier that the controller maintains over any rescheduling.
+- Los DaemonSets son para procesos continuos que se ejecutan en todos los nodos. Un Pod por Nodo.
+- Cada nuevo nodo añadido al cluster hace que se inicie un pod.
+- Útiles para tareas en segundo plano como monitorización y recogida de logs.
+- Cada pod tiene un identificador único y persistente que el controlador mantiene por encima de cualquier reprogramación.
 
 ![](Images/Day49_Kubernetes11.png)
 
-### Services
+### Servicios
 
-- A single endpoint to access Pods
+Características de los Servicios:
+- Un único punto final para acceder a los Pods
+- Una forma unificada de dirigir el tráfico a un cluster y eventualmente a una lista de Pods.
+- Usando un Servicio, los Pods pueden ser subidos y bajados sin afectar a nada.
+- Los Servicios pueden ser expuestos interna o externamente. También pueden ser expuestos en diferentes puertos.
 
-- a unified way to route traffic to a cluster and eventually to a list of Pods.
-
-- By using a Service, Pods can be brought up and down without affecting anything.
-
-This is just a quick overview and notes around the fundamental building blocks of Kubernetes, we can take this knowledge and add in some other areas around Storage and Ingress to enhance our applications but we then also have a lot of choices on where our Kubernetes cluster runs. The next session will focus on those options on where can I run a Kubernetes cluster, whilst also exploring some specifics around Storage.
+Esto es sólo una visión general rápida y notas sobre los bloques de construcción fundamentales de Kubernetes, podemos tomar este conocimiento y añadir en algunas otras áreas alrededor de almacenamiento y de entrada para mejorar nuestras aplicaciones, pero entonces también tenemos un montón de opciones sobre dónde se ejecuta nuestro clúster Kubernetes. La siguiente sesión se centrará en esas opciones sobre dónde se puede ejecutar un clúster Kubernetes, mientras que también exploraremos algunos detalles sobre el almacenamiento.
 
 ![](Images/Day49_Kubernetes12.png)
 
-### What we will cover in the series on Kubernetes
-
-- Kubernetes Architecture
-- Kubectl Commands
-- Kubernetes YAML
-- Kubernetes Ingress
-- Kubernetes Services
-- Helm Package Manager
-- Persistent Storage
-- Stateful Apps
-
-## Resources
+## Recursos
 
 - [Kubernetes Documentation](https://kubernetes.io/docs/home/)
 - [TechWorld with Nana - Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]](https://www.youtube.com/watch?v=X48VuDVv0do)
 - [TechWorld with Nana - Kubernetes Crash Course for Absolute Beginners](https://www.youtube.com/watch?v=s_o8dwzRlu4)
 - [Kunal Kushwaha - Kubernetes Tutorial for Beginners | What is Kubernetes? Architecture Simplified!](https://www.youtube.com/watch?v=KVBON1lA9N8)
 
-See you on [Day 50](day50.md)
+Nos vemos en el [Día 50](day50.md)

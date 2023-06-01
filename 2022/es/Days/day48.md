@@ -1,96 +1,94 @@
-## Alternatives to Docker
+## Alternativas a Docker
 
-I did say at the very beginning of this section that we were going to be using Docker, simply because resource wise there is so much and the community is very big, but also this was really where the indents to making containers popular came from. I would encourage you to go and watch some of the history around Docker and how it came to be, I found it very useful.
+Dije al principio de esta sección que íbamos a usar Docker, simplemente porque tiene muchos recursos ya que la comunidad es muy grande, pero también porque fue de aquí de donde vinieron los impulsos para popularizar los contenedores. Te animo a que veas algo de la [historia de los contenedores](https://vergaracarmona.es/breve-historia-de-contenedores/), me pareció muy útil para entender todos los conceptos que trae.
 
-But as I have alluded to there are other alternatives to Docker. If we think about what Docker is and what we have covered. It is a platform for developing, testing, deploying, and managing applications.
+Pero como he aludido existen alternativas a Docker si pensamos en lo que es Docker y de qué se ocupa: una plataforma para desarrollar, probar, desplegar y gestionar aplicaciones.
 
-I want to highlight a few alternatives to Docker that you might or will in the future see out in the wild.
+Quiero destacar algunas alternativas a Docker que podrías ver o verás en el futuro.
 
 ### Podman
 
-What is Podman? Podman is a daemon-less container engine for developing, managing, and running OCI Containers on your Linux System. Containers can either be run as root or in rootless mode.
+¿Qué es Podman? [Podman](https://podman.io/) es un motor de contenedores sin demonio para desarrollar, gestionar y ejecutar contenedores OCI en tu sistema Linux. Los contenedores se pueden ejecutar como root o en modo rootless.
 
-I am going to be looking at this from a Windows point of view but know that like Docker there is no requirement for virtualisation there as it will use the underlying OS which is cannot do in the Windows world.
+Al igual que Docker no hay ningún requisito para la virtualización, pero utilizará el sistema operativo subyacente y por eso no se puede ejecutar en Windows a pelo. Se puede ejecutar bajo WSL2 pero no es tan visual como la experiencia con Docker Desktop, que está hecho para quienes usan el ratón. 
 
-Podman can be run under WSL2 although not as sleek as the experience with Docker Desktop. There is also a Windows remote client where you can connect to a Linux VM where your containers will run.
-
-My Ubuntu on WSL2 is the 20.04 release. Following the next steps will enable you to install Podman on your WSL instance.
+También hay un cliente remoto de Windows donde se puede conectar a una máquina virtual Linux donde se ejecutarán los contenedores. Con el Ubuntu en WSL2 de la versión 20.04, siguiendo los siguientes pasos podrás instalar Podman en tu instancia WSL.
 
 ```Shell
 echo "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/xUbuntu_20.04/ /" |
 sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
 ```
 
-Add the GPG Key
+Para añadir la clave GPG:
 
 ```Shell
 curl -L "https://download.opensuse.org/repositories/devel:/kubic:\
 /libcontainers:/stable/xUbuntu_20.04/Release.key" | sudo apt-key add -
 ```
 
-Run a system update and upgrade with the `sudo apt-get update && sudo apt-get upgrade` command. Finally, we can install podman using `sudo apt install podman`
+Ejecute una actualización del sistema con `sudo apt-get update && sudo apt-get upgrade`. Por último, podemos instalar podman usando `sudo apt install podman`. Espero que os déis cuenta de la incomodidad que es usar un sistema operativo que no sea Linux para trabajar con contenedores. Suele pasar con la mayoría de aplicaciones de Sistemas o desarrollo. Así como hemos visto la optimización de los contenedores, deberéis tener en cuenta que el sistema operativo anfitrión también es importante.
 
-We can now use a lot of the same commands we have been using for docker, note that we do not have that nice docker desktop UI. You can see below I used `podman images` and I have nothing after installation then I used `podman pull ubuntu` to pull down the ubuntu container image.
+Ahora podemos utilizar muchos de los mismos comandos que hemos estado utilizando para docker. Como puedes ver a continuación, he utilizado `podman images` y no tengo nada después de la instalación. Luego, he utilizado `podman pull ubuntu` para bajar la imagen del contenedor ubuntu.
 
 ![](Images/Day48_Containers1.png)
 
-We can then run our Ubuntu image using `podman run -dit ubuntu` and `podman ps` to see our running image.
+Podemos ejecutar nuestra imagen de Ubuntu usando `podman run -dit ubuntu` y `podman ps` para ver nuestra imagen en ejecución.
 
 ![](Images/Day48_Containers2.png)
 
-To then get into that container we can run `podman attach dazzling_darwin` your container name will most likely be different.
+Para entrar en ese contenedor podemos ejecutar `podman attach dazzling_darwin` el nombre de tu contenedor seguramente será diferente.
 
 ![](Images/Day48_Containers3.png)
 
-If you are moving from docker to podman it is also common to change your config file to have `alias docker=podman` that way any command you run with docker will use podman.
+Si te estás moviendo de docker a podman también es común cambiar el archivo de configuración para tener `alias docker=podman` de esa manera cualquier comando que ejecute con docker utilizará podman.
 
 ### LXC
 
-LXC is a containerisation engine that enables users again to create multiple isolated Linux container environments. Unlike Docker, LXC acts as a hypervisor for creating multiple Linux machines with separate system files, and networking features. Was around before Docker and then made a short comeback due to Docker's shortcomings.
+LXC es un motor de contenedorización que permite a los usuarios crear múltiples entornos de contenedores Linux aislados. A diferencia de Docker, LXC actúa como un hipervisor para crear múltiples máquinas Linux con archivos de sistema separados, y características de red. Existió antes que Docker y volvió a aparecer debido a las deficiencias de Docker.
 
-LXC is as lightweight though as docker and easily deployed.
+Sin embargo, LXC es tan ligero como Docker y fácil de desplegar.
 
 ### Containerd
 
-A standalone container runtime. Containerd brings simplicity and robustness as well as of course portability. Containerd was formerly a tool that runs as part of Docker container services until Docker decided to graduate its components into standalone components.
+Un runtime de contenedor independiente. Containerd aporta simplicidad y robustez, así como, por supuesto, portabilidad. Containerd era antes una herramienta que se ejecutaba como parte de los servicios de contenedores Docker hasta que Docker decidió graduar sus componentes en componentes independientes.
 
-A project in the Cloud Native Computing Foundation, placing it in the same class as popular container tools like Kubernetes, Prometheus, and CoreDNS.
+Es un proyecto de la Cloud Native Computing Foundation, lo que lo sitúa en la misma clase que herramientas de contenedores populares como Kubernetes, Prometheus y CoreDNS. De hecho, a partir de la versión 1.11, Kubernetes utiliza containerd como su runtime de contenedor predeterminado mientras que antes era Docker.
 
-### Other Docker tooling
+### Otras herramientas Docker
 
-We could also mention toolings and options around Rancher, and VirtualBox but we can cover them in more detail another time.
+También podríamos mencionar herramientas y opciones alrededor de Rancher, y VirtualBox pero podemos cubrirlas en más detalle en otra ocasión.
 
 [**Gradle**](https://gradle.org/)
 
-- Build scans allow teams to collaboratively debug their scripts and track the history of all builds.
-- Execution options give teams the ability to continuously build so that whenever changes are inputted, the task is automatically executed.
-- The custom repository layout gives teams the ability to treat any file directory structure as an artefact repository.
+- Las exploraciones de construcción permiten a los equipos depurar sus scripts de forma colaborativa y realizar un seguimiento del historial de todas las construcciones.
+- Las opciones de ejecución dan a los equipos la capacidad de construir continuamente de modo que cada vez que se introducen cambios, la tarea se ejecuta automáticamente.
+- El diseño personalizado del repositorio ofrece a los equipos la posibilidad de tratar cualquier estructura de directorios de archivos como un repositorio de artefactos.
 
 [**Packer**](https://packer.io/)
 
-- Ability to create multiple machine images in parallel to save developer time and increase efficiency.
-- Teams can easily debug builds using Packer’s debugger, which inspects failures and allows teams to try out solutions before restarting builds.
-- Support with many platforms via plugins so teams can customize their builds.
+- Posibilidad de crear varias imágenes de máquina en paralelo para ahorrar tiempo a los desarrolladores y aumentar la eficacia.
+- Los equipos pueden depurar fácilmente las compilaciones mediante el depurador de Packer, que inspecciona los fallos y permite a los equipos probar soluciones antes de reiniciar las compilaciones.
+- Compatibilidad con muchas plataformas mediante plugins para que los equipos puedan personalizar sus compilaciones.
 
 [**Logspout**](https://github.com/gliderlabs/logspout)
 
-- Logging tool - The tool’s customizability allows teams to ship the same logs to multiple destinations.
-- Teams can easily manage their files because the tool only requires access to the Docker socket.
-- Completely open-sourced and easy to deploy.
+- Herramienta de registro: la capacidad de personalización de la herramienta permite a los equipos enviar los mismos registros a varios destinos.
+- Los equipos pueden gestionar fácilmente sus archivos porque la herramienta sólo requiere acceso al socket Docker.
+- Completamente de código abierto y fácil de desplegar.
 
 [**Logstash**](https://www.elastic.co/products/logstash)
 
-- Customize your pipeline using Logstash’s pluggable framework.
-- Easily parse and transform your data for analysis and to deliver business value.
-- Logstash’s variety of outputs lets you route your data where you want.
+- Personaliza tu pipeline utilizando el marco de trabajo pluggable de Logstash.
+- Analice y transforme fácilmente sus datos para el análisis y para ofrecer valor empresarial.
+- La variedad de salidas de Logstash le permite dirigir sus datos hacia donde desee.
 
 [**Portainer**](https://www.portainer.io/)
 
-- Utilise pre-made templates or create your own to deploy applications.
-- Create teams and assign roles and permissions to team members.
-- Know what is running in each environment using the tool’s dashboard.
+- Utilice plantillas prediseñadas o cree las suyas propias para desplegar aplicaciones.
+- Cree equipos y asigne funciones y permisos a sus miembros.
+- Sepa qué se está ejecutando en cada entorno mediante el panel de control de la herramienta.
 
-## Resources
+## Recursos
 
 - [TechWorld with Nana - Docker Tutorial for Beginners](https://www.youtube.com/watch?v=3c-iBn73dDE)
 - [Programming with Mosh - Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI)
@@ -101,5 +99,10 @@ We could also mention toolings and options around Rancher, and VirtualBox but we
 - [YAML Tutorial: Everything You Need to Get Started in Minute](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started)
 - [Podman | Daemonless Docker | Getting Started with Podman](https://www.youtube.com/watch?v=Za2BqzeZjBk)
 - [LXC - Guide to building an LXC Lab](https://www.youtube.com/watch?v=cqOtksmsxfg)
+- [En español] En los [apuntes](https://vergaracarmona.es/apuntes/) del traductor:
+  - [Preparación de entorno de pruebas local para docker](https://vergaracarmona.es/preparacion-de-entorno-de-pruebas-local-para-docker/)
+  - [Uso básico de docker](https://vergaracarmona.es/uso-basico-de-docker/)
+  - [Una breve historia sobre contenedores](https://vergaracarmona.es/breve-historia-de-contenedores/)
+  - [Desplegar con docker-compose los servicios Traefik y Portainer](https://vergaracarmona.es/desplegar-con-docker-compose-los-servicios-traefik-y-portainer/)
 
-See you on [Day 49](day49.md)
+Nos vemos en el [Día 49](day49.md)

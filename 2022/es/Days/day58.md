@@ -1,22 +1,23 @@
 ## HashiCorp Configuration Language (HCL)
 
-Before we start making stuff with Terraform we have to dive a little into HashiCorp Configuration Language (HCL). So far during our challenge, we have looked at a few different scripting and programming languages and here is another one. We touched on the [Go programming language](day07.md) then [bash scripts](day19.md) we even touched on a little python when it came to [network automation](day27.md)
+Antes de empezar a hacer cosas con Terraform, tenemos que adentrarnos un poco en el lenguaje de configuración de HashiCorp (HCL). Hasta ahora, durante nuestro desafío, hemos visto varios lenguajes de scripting y programación, y aquí tenemos otro. Hemos mencionado el [lenguaje de programación Go](day07.md), luego los [scripts bash](day19.md) e incluso un poco de Python cuando se trata de [automatización de redes](day27.md).
 
-Now we must cover HashiCorp Configuration Language (HCL) if this is the first time you are seeing the language it might look a little daunting but it's quite simple and very powerful.
+Ahora debemos cubrir el lenguaje de configuración de HashiCorp (HCL). Si esta es la primera vez que ves este lenguaje, puede parecer un poco intimidante, pero es bastante simple y muy potente.
 
-As we move through this section, we are going to be using examples that we can run locally on our system regardless of what OS you are using, we will be using VirtualBox, albeit not the infrastructure platform you would usually be using with Terraform. However running this locally, is free and will allow us to achieve what we are looking for in this post. We could also extend this post's concept to docker or Kubernetes as well.
+A medida que avanzamos en esta sección, vamos a utilizar ejemplos que podemos ejecutar localmente en nuestro sistema, independientemente del sistema operativo que estés usando. Vamos a utilizar VirtualBox, aunque no sea la plataforma de infraestructura que normalmente se usa con Terraform. Sin embargo, ejecutar esto localmente es gratuito y nos permitirá lograr lo que buscamos en esta publicación. También podríamos extender este concepto a Docker o Kubernetes.
 
-In general, though, you would or should be using Terraform to deploy your infrastructure in the public cloud (AWS, Google, Microsoft Azure) but then also in your virtualisation environments such as (VMware, Microsoft Hyper-V, Nutanix AHV). In the public cloud Terraform allows for us to do a lot more than just Virtual Machine automated deployment, we can create all the required infrastructure such as PaaS workloads and all of the networking required assets such as VPCs and Security Groups.
+En general, sin embargo, deberías usar Terraform para implementar tu infraestructura en la nube pública (AWS, Google, Microsoft Azure), pero también en tus entornos de virtualización, como VMware, Microsoft Hyper-V, Nutanix AHV. En la nube pública, Terraform nos permite hacer mucho más que simplemente implementar máquinas virtuales. Podemos crear toda la infraestructura necesaria, como cargas de trabajo de PaaS y todos los activos de red requeridos, como VPC y grupos de seguridad.
 
-There are two important aspects to Terraform, we have the code which we are going to get into in this post and then we also have the state. Both of these together could be called the Terraform core. We then have the environment we wish to speak to and deploy into, which is executed using Terraform providers, briefly mentioned in the last session, but we have an AWS provider, we have Azure providers etc. There are hundreds.
+Hay dos aspectos importantes en Terraform: el código, que vamos a explorar en esta publicación, y el estado. Ambos juntos podrían denominarse el núcleo de Terraform. Luego tenemos el entorno con el que deseamos interactuar e implementar, que se ejecuta mediante proveedores de Terraform, mencionados brevemente en la última sesión. Pero hay muchos proveedores disponibles, como AWS, Azure, etc. Hay cientos.
 
-### Basic Terraform Usage
+### Uso básico de Terraform
 
-Let's take a look at a Terraform `.tf` file to see how they are made up. The first example we will walk through will be code to deploy resources to AWS, this would then also require the AWS CLI to be installed on your system and configured for your account.
+Echemos un vistazo a un archivo `.tf` de Terraform para ver cómo se componen. El primer ejemplo que veremos será código para implementar recursos en AWS, lo que también requeriría tener la CLI de AWS instalada en tu sistema y configurada para tu cuenta.
 
-### Providers
+### Proveedores
 
-At the top of our `.tf` file structure, generally called `main.tf` at least until we make things more complex. Here we will define the providers that we have mentioned before. Our source of the AWS provider as you can see is `hashicorp/aws` this means the provider is maintained or has been published by hashicorp themselves. By default you will reference providers that are available from the [Terraform Registry](https://registry.terraform.io/), you also can write your providers, and use these locally, or self-publish to the Terraform Registry.
+En la parte superior de nuestra estructura de archivo `.tf`, generalmente llamada `main.tf`, al menos hasta que las cosas se vuelvan más complejas, vamos a definir los proveedores que mencionamos anteriormente. Nuestra fuente del proveedor de AWS, como puedes ver, es `hashicorp/aws`, lo que significa que el proveedor es mantenido o ha sido publicado por HashiCorp ellos mismos. Por defecto, haremos referencia a proveedores disponibles en el [Terraform Registry](https://registry.terraform.io/). También puedes escribir tus propios proveedores y utilizarlos localmente, o publicarlos en el Terraform Registry.
+
 
 ```
 terraform {
@@ -68,9 +69,10 @@ resource "aws_instance" "90daysofdevops" {
 }
 ```
 
-You can see from the above we are also running a `yum` update and installing `httpd` into our ec2 instance.
+Puedes ver que también estamos ejecutando una actualización de `yum` e instalando `httpd` en nuestra instancia de EC2.
 
-If we now look at the complete main.tf file it might look something like this.
+Si ahora observamos el archivo main.tf completo, podría lucir algo así.
+
 
 ```
 terraform {
@@ -113,9 +115,9 @@ resource "aws_instance" "90daysofdevops" {
 }
 ```
 
-The above code will go and deploy a very simple web server as an ec2 instance in AWS, the great thing about this and any other configuration like this is that we can repeat this and we will get the same output every single time. Other than the chance that I have messed up the code there is no human interaction with the above.
+El código anterior desplegará un servidor web muy sencillo como una instancia EC2 en AWS. Lo genial de esto y de cualquier otra configuración similar es que podemos repetirlo y obtener la misma salida cada vez. Aparte de la posibilidad de que haya cometido un error en el código, no hay interacción humana con lo anterior.
 
-We can take a look at a super simple example, one that you will likely never use but let's humour it anyway. Like with all good scripting and programming language we should start with a hello-world scenario.
+Podemos echar un vistazo a un ejemplo super sencillo, uno que probablemente nunca usarás, pero vamos a hacerle honor de todos modos. Como en todos los buenos lenguajes de scripting y programación, deberíamos comenzar con un escenario de "Hola mundo".
 
 ```
 terraform {
@@ -131,64 +133,65 @@ output "hello_world" {
 }
 ```
 
-You will find this file in the IAC folder under hello-world, but out of the box, this is not going to simply work there are some commands we need to run to use our terraform code.
+Encontrarás este archivo en la carpeta IAC dentro de hello-world, pero de entrada, esto no funcionará simplemente, hay algunos comandos que debemos ejecutar para usar nuestro código de Terraform.
 
-In your terminal navigate to your folder where the main.tf has been created, this could be from this repository or you could create a new one using the code above.
+En tu terminal, navega hasta la carpeta donde se haya creado el archivo main.tf, esto puede ser desde este repositorio o puedes crear uno nuevo usando el código anterior.
 
-When in that folder we are going to run `terraform init`
+Cuando estés en esa carpeta, ejecutaremos `terraform init`.
 
-We need to perform this on any directory where we have or before we run any terraform code. Initialising a configuration directory downloads and installs the providers defined in the configuration, in this case, we have no providers but in the example above this would download the AWS provider for this configuration.
+Necesitamos realizar esto en cualquier directorio donde tengamos, o antes de ejecutar cualquier código de Terraform. La inicialización de un directorio de configuración descarga e instala los proveedores definidos en la configuración. En este caso, no tenemos proveedores, pero en el ejemplo anterior, esto descargaría el proveedor de AWS para esta configuración.
 
-![](Images/Day58_IAC1.png)
+![Day58_IAC1](Images/Day58_IAC1.png)
 
-The next command will be `terraform plan`
+El siguiente comando será `terraform plan`.
 
-The `terraform plan` command creates an execution plan, which lets you preview the changes that Terraform plans to make to your infrastructure.
+El comando `terraform plan` crea un plan de ejecución que te permite previsualizar los cambios que Terraform planea realizar en tu infraestructura.
 
-You can simply see below that with our hello-world example we are going to see output if this was an AWS ec2 instance we would see all the steps that we will be creating.
+Puedes ver simplemente a continuación que con nuestro ejemplo de hello-world veremos la salida. Si esto fuera una instancia EC2 de AWS, veríamos todos los pasos que se crearán.
 
-![](Images/Day58_IAC2.png)
+![Day58_IAC2](Images/Day58_IAC2.png)
 
-At this point, we have initialised our repository and we have our providers downloaded where required, we have run a test walkthrough to make sure this is what we want to see so now we can run and deploy our code.
+En este punto, hemos inicializado nuestro repositorio y hemos descargado los proveedores donde sea necesario. Hemos realizado una prueba para asegurarnos de que esto es lo que queremos ver, así que ahora podemos ejecutar y desplegar nuestro código.
 
-`terraform apply` allows us to do this there is a built-in safety measure to this command and this will again give you a plan view on what is going to happen which warrants a response from you to say yes to continue.
+`terraform apply` nos permite hacer esto. Hay una medida de seguridad incorporada en este comando, y nuevamente te mostrará un plan de lo que va a suceder, lo cual requiere una respuesta de tu parte para decir que sí, para continuar.
 
-![](Images/Day58_IAC3.png)
+![Day58_IAC3](Images/Day58_IAC3.png)
 
-When we type in yes to enter a value, our code is deployed. Not that exciting but you can see we have the output that we defined in our code.
+Cuando escribimos "yes" para ingresar un valor, nuestro código se despliega. No es muy emocionante, pero puedes ver que tenemos la salida que definimos en nuestro código.
 
-![](Images/Day58_IAC4.png)
+![Day58_IAC4](Images/Day58_IAC4.png)
 
-Now we have not deployed anything, we have not added, changed or destroyed anything but if we did then we would see that indicated also in the above. If however we had deployed something and we wanted to get rid of everything we deployed we can use the `terraform destroy` command. Again this has that safety where you have to type yes although you can use `--auto-approve` on the end of your `apply` and `destroy` commands to bypass that manual intervention. But I would advise only using this shortcut when learning and testing as everything will disappear sometimes faster than it was built.
+Ahora, no hemos desplegado nada, no hemos agregado, cambiado o destruido nada, pero si lo hiciéramos, también lo veríamos indicado en lo anterior. Sin embargo, si hubiéramos desplegado algo y quisiéramos eliminar todo lo que hemos creado, podemos usar el comando `terraform destroy`. Nuevamente, este tiene esa medida de seguridad donde tienes que escribir "yes". Aunque puedes usar `--auto-approve` al final de tus comandos `apply` y `destroy` para evitar esa intervención manual. Pero te aconsejaría que solo uses este atajo cuando estés aprendiendo y probando, ya que todo desaparecerá a veces más rápido de lo que se construyó.
 
-From this, there are 4 commands we have covered from the Terraform CLI.
+A partir de esto, hemos cubierto 4 comandos de la CLI de Terraform.
 
-- `terraform init` = get your project folder ready with providers
-- `terraform plan` = show what is going to be created, and changed during the next command based on our code.
-- `terraform apply` = will go and deploy the resources defined in our code.
-- `terraform destroy` = will destroy the resources we have created in our project
+- `terraform init` = prepara la carpeta del proyecto con los proveedores.
+- `terraform plan` = muestra lo que se va a crear y cambiar durante el próximo comando, según nuestro código.
+- `terraform apply` = desplegará los recursos definidos en nuestro código.
+- `terraform destroy` = destruirá los recursos que hemos creado en nuestro proyecto.
 
-We also covered two important aspects of our code files.
+También hemos cubierto dos aspectos importantes de nuestros archivos de código.
 
-- providers = how does terraform speak to the end platform via APIs
-- resources = what it is we want to deploy with code
+- Proveedores = cómo Terraform se comunica con la plataforma final a través de APIs.
+- Recursos = lo que queremos desplegar con código.
 
-Another thing to note when running `terraform init` take a look at the tree on the folder before and after to see what happens and where we store providers and modules.
+Otra cosa a tener en cuenta al ejecutar `terraform init` es observar el árbol de la carpeta antes y después para ver qué sucede y dónde almacenamos los proveedores y los módulos.
 
-### Terraform state
+### Estado de Terraform
 
-We also need to be aware of the state file that is created also inside our directory and for this hello world example our state file is simple. This is a JSON file which is the representation of the world according to Terraform. The state will happily show off your sensitive data so be careful and as a best practice put your `.tfstate` files in your `.gitignore` folder before uploading to GitHub.
+También debemos tener en cuenta el archivo de estado que se crea dentro de nuestro directorio. Para este ejemplo de hello world, nuestro archivo de estado es simple. Se trata de un archivo JSON que representa el estado del mundo según Terraform. El estado mostrará felizmente tus datos confidenciales, así que ten cuidado y, como buena práctica, agrega tus archivos `.tfstate` a tu archivo `.gitignore` antes de subirlos a GitHub.
 
-By default, the state file as you can see lives inside the same directory as your project code, but it can also be stored remotely as an option. In a production environment, this is likely going to be a shared location such as an S3 bucket.
+Por defecto, el archivo de estado, como puedes ver, se encuentra dentro del mismo directorio que tu código de proyecto, pero también se puede almacenar de forma remota como opción. En un entorno de producción, es probable que esto se almacene en un lugar compartido, como un bucket de S3.
 
-Another option could be Terraform Cloud, this is a paid-for-managed service. (Free up to 5 users)
+Otra opción podría ser Terraform Cloud, que es un servicio gestionado de pago (gratuito hasta 5 usuarios).
 
-The pros for storing state in a remote location are that we get:
+Las ventajas de almacenar el estado en un lugar remoto son:
 
-- Sensitive data encrypted
-- Collaboration
-- Automation
-- However, it could bring increase the complexity
+- Datos confidenciales encriptados.
+- Colaboración.
+- Automatización.
+
+Sin embargo, esto podría aumentar la complejidad.
 
 ```JSON
 {
@@ -206,9 +209,9 @@ The pros for storing state in a remote location are that we get:
 }
 ```
 
-## Resources
+## Recursos
 
-I have listed a lot of resources down below and I think this topic has been covered so many times out there, If you have additional resources be sure to raise a PR with your resources and I will be happy to review and add them to the list.
+A continuación, he enumerado muchos recursos y creo que este tema se ha cubierto muchas veces en otros lugares. Si tienes recursos adicionales, asegúrate de enviar una solicitud de extracción (PR) con tus recursos y estaré encantado de revisarlos y agregarlos a la lista.
 
 - [What is Infrastructure as Code? Difference of Infrastructure as Code Tools](https://www.youtube.com/watch?v=POPP2WTJ8es)
 - [Terraform Tutorial | Terraform Course Overview 2021](https://www.youtube.com/watch?v=m3cKkYXl-8o)
@@ -220,5 +223,6 @@ I have listed a lot of resources down below and I think this topic has been cove
 - [Terraform Simple Projects](https://terraform.joshuajebaraj.com/)
 - [Terraform Tutorial - The Best Project Ideas](https://www.youtube.com/watch?v=oA-pPa0vfks)
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
+- [Herramientas para Terraform](https://vergaracarmona.es/herramientas-para-terraform/)
 
-See you on [Day 59](day59.md)
+Nos vemos en el [Día 59](day59.md)

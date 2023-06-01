@@ -1,99 +1,102 @@
 ---
-title: '#90DaysOfDevOps - What is Jenkins? - Day 71'
+title: '#90DaysOfDevOps - 什么是 Jenkins？ - 第七十一天'
 published: false
-description: 90DaysOfDevOps - What is Jenkins?
-tags: "devops, 90daysofdevops, learning"
+description: 90DaysOfDevOps - 什么是 Jenkins？
+tags: 'DevOps, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048745
 ---
-## What is Jenkins?
 
-Jenkins is a continous integration tool that allows continous development, test and deployment of newly created code. 
+## 什么是 Jenkins？
 
-There are two ways we can achieve this with either nightly builds or continous development. The first option is that our developers are developing throughout the day on their tasks and come the end of the set day they push their changes to the source code repository. Then during the night we run our unit tests and build of the software. This could be deemed as the old way to integrate all code. 
+Jenkins是一个持续集成工具，允许对新建的代码进行持续开发、测试和部署。
 
-![](Images/Day71_CICD1.png)
+可以通过夜间构建或持续开发两种方法来实现这些。第一种选择是，我们的开发人员全天都在开发他们的任务，并在当天结束时将他们的更改推送（push）到源代码仓库。然后在晚上，我们运行单元测试并构建软件。这可以被认为是集成所有代码的旧方法。
 
-The other option and the preferred way is that our developers are still committing their changes to source code, then when that code commit has been made there is a build process kicked off continously. 
+![](../../Days/Images/Day71_CICD1.png)
 
-![](Images/Day71_CICD2.png)
+另一种选择也是首选的方式是，我们的开发人员仍在提交他们对源代码的更改，然后当代码提交完成后，构建过程就会不断启动。
 
-The above methods means that with distributed developers across the world we don't have a set time each day where we have to stop committing our code changes. This is where Jenkins comes in to act as that CI server to control those tests and build processes. 
+![](../../Days/Images/Day71_CICD2.png)
 
-![](Images/Day71_CICD3.png)
+上述方法意味着，对于分布在世界各地的开发人员来说，我们每天都没有固定的时间来停止提交代码更改。这就是Jenkins作为CI服务器来控制这些测试和构建过程。
 
-I know we are talking about Jenkins here but I also want to add a few more to maybe look into later on down the line to get an understanding why I am seeing Jenkins as the overall most popular, why is that and what can the others do over Jenkins. 
+![](../../Days/Images/Day71_CICD3.png)
 
-- TravisCI - A hosted, distributed continous integration service used to build and test software projects hosted on GitHub. 
-  
-- Bamboo - Can run multiple builds in parallel for faster compilation, built in functionality to connect with repositories and has build tasks for Ant, Maven. 
-  
-- Buildbot - is an open-source framework for automating software build, test and release processes. It is written in Python and supports distributed, parallel execution of jobs across multiple platforms. 
-  
-- Apache Gump - Specific to Java projects, designed with the aim to build and test those Java projects every night. ensures that all projects are compatible at both API and functionality level. 
+虽然我们在这里讨论的是Jenkins，但我也想补充一些内容（也许以后会深入研究），了解为什么我会认为Jenkins是最受欢迎的，为什么会得出这样的判断，以及其他人能在Jenkins上做些什么。
 
-Because we are now going to focus on Jenkins - Jenkins is again open source like all of the above tools and is an automation server written in Java. It is used to automate the software development process via continous integration adn faciliates continous delivery. 
+- TravisCI，一种托管的分布式持续集成服务，用于构建和测试托管在GitHub上的软件项目。
+- Bamboo，可以并行运行多个构建以实现更快的编译，内置与仓库连接的功能，并具有Ant和Maven的构建任务功能。
+- Buildbot，是一个用于自动化软件构建、测试和发布过程的开源框架。它是用Python编写的，支持跨多个平台分布式并行执行作业。
+- ApacheGump，专门针对Java项目，旨在每晚构建和测试这些Java项目。确保所有项目在API和功能级别都兼容。
 
-### Features of Jenkins
+因为我们现在将重点关注Jenkins - Jenkins和上述所有工具一样，是开源的，是一个用Java编写的自动化服务器。它用于通过持续集成实现软件开发过程的自动化，并有助于持续交付。
 
-As you can probably expect Jenkins has a lot of features spanning a lot of areas. 
+### Jenkins的特性
 
-**Easy Installation** - Jenkins is a self contained java based program ready to run with packages for Windows, macOS and Linux operating systems. 
+正如你所料，Jenkins有很多功能，涵盖了很多领域。
 
-**Easy Configuration** - Easy setup and configured via a web interface which includes error checks and built in help. 
+**易于安装** - Jenkins是一个独立的基于java的程序，可以与Windows、macOS和Linux操作系统上的软件包一起运行。
 
-**Plug-ins** - Lots of plugins available in the Update Centre and integrates with many tools in the CI / CD toolchain. 
+**轻松配置** - 通过内置的web界面进行设置和配置，包括错误检查和内置帮助。
 
-**Extensible** - In addition to the Plug-Ins available, Jenkins can be extended by that plugin architecture which provides nearly infinite options for what it can be used for. 
+**插件** - 更新中心提供了许多插件，并与CI/CD工具链中的许多工具集成。
 
-**Distributed** - Jenkins easily distributes work across multiple machines, helping to speed up builds, tests and deployments across multiple platforms. 
+**可扩展** - 除了可用的插件外，Jenkins还可以通过该插件架构进行扩展，该架构为它的用途提供了几乎无限的选项。
 
-### Jenkins Pipeline 
+**分布式** - Jenkins可以轻松地在多台机器上分配工作，有助于加快跨多个平台的构建、测试和部署。
 
-You will have seen this pipeline but used in a much broader and we have not spoken about specific tools. 
+### Jenkins的管道pipeline
 
-You are going to be committing code to Jenkins, which then will build out your application, with all automated tests, it will then release and deploy that code when each step is completed. Jenkins is what allows for the automation of this process. 
 
-![](Images/Day71_CICD4.png)
+你将会了解这个管道流程，但其还有更广的使用范围，而且我们还没有谈到具体的工具。
 
-### Jenkins Architecture 
+您会把代码提交给Jenkins，然后它将构建您的应用程序，并进行所有自动化测试。接着在每个步骤都完成后进行代码的发布和部署。Jenkins是实现这一过程自动化的工具。
 
-First up and not wanting to reinvent the wheel, the [Jenkins Documentation](https://www.jenkins.io/doc/developer/architecture/) is always the place to start but I am going to put down my notes and learnings here as well. 
+![](../../Days/Images/Day71_CICD4.png)
 
-Jenkins can be installed on many different operating systems, Windows, Linux and macOS but then also the ability to deploy as a Docker container and within Kubernetes. [Installing Jenkins](https://www.jenkins.io/doc/book/installing/)
+### Jenkins的架构
 
-As we get into this we will likely take a look at installing Jenkins within a minikube cluster simulating the deployment to Kubernetes. But this will depend on the scenarios we put together throughout the rest of the section. 
+首先，不要想着重新造轮子，[Jenkins Documentation](https://www.jenkins.io/doc/developer/architecture/)总是一个开始开始学习的地方，但我也会在这里记下我的笔记和学到的东西。
 
-Let's now break down the image below. 
+Jenkins可以被安装在许多不同的操作系统上，包括Windows、Linux和macOS，也可以作为Docker容器或在Kubernetes中进行部署。[安装Jenkins](https://www.jenkins.io/doc/book/installing/)
 
-Step 1 - Developers commit changes to the source code repository.
+当我们开始使用它时，我们可能会考虑在一个minikube集群中安装Jenkins，模拟部署到Kubernetes的过程。但这将取决于我们在本节后续部分中所设置的场景。
 
-Step 2 - Jenkins checks the repository at regular intervals and pulls any new code.
+现在让我们对下面的图像进行拆解。
 
-Step 3 - A build server then builds the code into an executable, in this example we are using maven as a well known build server. Another area to cover. 
+步骤1 - 开发人员提交对源代码仓库的更改。
 
-Step 4 - If the build fails then feedback is sent back to the developers. 
+步骤2 - Jenkins定期检查仓库并提取（pull）任何新代码。
 
-Step 5 - Jenkins then deploys the build app to the test server, in this example we are using selenium as a well known test server. Another area to cover. 
+步骤3 - 构建服务器（build server）将代码构建为可执行文件，在本例中，我们使用maven作为构建服务器。
 
-Step 6 - If the test fails then feedback is passed to the developers.
+步骤4 - 如果构建失败，则将反馈发送至开发人员。
 
-Step 7 - If the tests are successful then we can release to production. 
+步骤5 - Jenkins将构建应用程序部署到测试服务器，在本例中，我们使用selenium作为测试服务器。
 
-This cycle is continous, this is what allows applications to be updated in minutes vs hours, days, months, years! 
+步骤6 - 如果测试失败，则将反馈发送至开发人员。
 
-![](Images/Day71_CICD5.png)
+步骤7 - 如果测试成功，那么我们可以将它们发布到生产中。
 
-There is a lot more to the architecture of Jenkins if you require it, they have a master-slave capability, which enables a master to distribute the tasks to slave jenkins environment. 
+这个周期是连续的，这使得应用程序可以在几分钟内更新，而不是几小时、几天、几个月和几年！
 
-For reference with Jenkins being open source, there are going to be lots of enterprises that require support, CloudBees is that enterprise version of Jenkins that brings support and possibly other functionality for the paying enterprise customer. 
+![](../../Days/Images/Day71_CICD5.png)
+
+Jenkins的架构中还有很多东西，如果你需要的话，它们有主从功能，可以使主机能够将任务分配到从属Jenkins环境。
+
+参考开源的Jenkins，将会有很多企业需要支持，CloudBees是Jenkins的企业版本，为付费企业客户提供支持，并可能提供其他功能。
 
 An example of this in a customer is Bosch, you can find the Bosch case study [here](https://assets.ctfassets.net/vtn4rfaw6n2j/case-study-boschpdf/40a0b23c61992ed3ee414ae0a55b6777/case-study-bosch.pdf)
 
-I am going to be looking for a step by step example of an application that we can use to walkthrough using Jenkins and then also use this with some other tools.
+I am going to be looking for a step-by-step example of an application that we can use to walk through using Jenkins and then also use this with some other tools.
 
-## Resources
+博世Bosch就是一个例子，您可以在这里找到博世案例研究(https://assets.ctfassets.net/vtn4rfaw6n2j/case-study-boschpdf/40a0b23c61992ed3ee414ae0a55b6777/case-study-bosch.pdf)
+
+我将通过一个应用程序示例，我们可以一步步地使用Jenkins进行实操，然后也可以将它与其他一些工具一起使用。
+
+## 相关资料
 
 - [Jenkins is the way to build, test, deploy](https://youtu.be/_MXtbjwsz3A)
 - [Jenkins.io](https://www.jenkins.io/)
@@ -104,4 +107,4 @@ I am going to be looking for a step by step example of an application that we ca
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 72](day72.md)
+[第七十二天](day72.md)见。

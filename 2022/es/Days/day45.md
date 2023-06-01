@@ -1,66 +1,67 @@
-## The anatomy of a Docker Image
+## La anatomía de una imagen Docker
 
-In the last session, we covered some basics of how we can use Docker Desktop combined with DockerHub to deploy and run some verified images. A recap on what an image is, you won't forget things if I keep mentioning them. 
+En la última sesión, vimos algunos aspectos básicos de cómo podemos utilizar Docker Desktop combinado con DockerHub para desplegar y ejecutar algunas imágenes verificadas. Una recapitulación sobre lo que es una imagen, no olvidarás cosas si sigo mencionándolas. 
 
-A Docker image is a read-only template that contains a set of instructions for creating a container that can run on the Docker platform. It provides a convenient way to package up applications and preconfigured server environments, which you can use for your private use or share publicly with other Docker users. Docker images are also the starting point for anyone using Docker for the first time.
+Una imagen Docker es una plantilla de sólo lectura que contiene un conjunto de instrucciones para crear un contenedor que se puede ejecutar en la plataforma Docker. Proporciona una forma práctica de empaquetar aplicaciones y entornos de servidor preconfigurados, que puedes utilizar para tu uso privado o compartir públicamente con otros usuarios de Docker. Las imágenes Docker son también el punto de partida para cualquiera que utilice Docker por primera vez.
 
-What happens if we want to create our own Docker image? For us to do this we would create a Dockerfile. You saw how we could take that Ubuntu container image and we could add our software and we would have our container image with the software that we wanted and everything is good, however, if that container is shut down or thrown away then all those software updates and installations go away there is no repeatable version of what we had done. So that is great for showing off the capabilities but it doesn't help with the transport of images across multiple environments with the same set of software installed each time the container is run. 
+¿Qué ocurre si queremos crear nuestra propia imagen Docker? Para ello crearíamos un Dockerfile. Ya viste cómo podríamos tomar esa imagen de contenedor Ubuntu y añadir nuestro software. Con lo que tendríamos nuestra imagen de contenedor con el software que queremos, sin embargo, si ese contenedor se apaga o se destruye todas esas actualizaciones de software y las instalaciones desaparecen, perdemos los cambios sin una versión repetible. Así que eso es genial para mostrar las capacidades, pero no ayuda con el transporte de imágenes a través de múltiples entornos con el mismo conjunto de software instalado cada vez que se ejecuta el contenedor, que es la potencia de docker. 
 
-### What is a Dockerfile 
+### ¿Qué es un Dockerfile? 
 
-A dockerfile is a text file that contains commands you would normally execute manually to build a docker image. Docker can build images automatically by reading the instructions we have in our dockerfile.
+Un dockerfile es un archivo de texto que contiene comandos que normalmente ejecutarías manualmente para construir una imagen docker. Docker puede construir imágenes automáticamente leyendo las instrucciones que tenemos en nuestro dockerfile.
 
-Each of the files that make up a docker image is known as a layer. these layers form a series of images, built on top of each other in stages. Each layer is dependent on the layer immediately below it. The order of your layers is key to the efficiency of the lifecycle management of your docker images. 
+Cada uno de los archivos que componen una imagen docker se conoce como una capa. Estas capas forman una serie de imágenes, construidas unas sobre otras por etapas. Cada capa depende de la capa inmediatamente inferior. El orden de tus capas es clave para la eficiencia de la gestión del ciclo de vida de tus imágenes docker. 
 
-We should organise our layers that change most often as high in the stack as possible, this is because when you make changes to a layer in your image, Docker not only rebuilds that particular layer but all layers built from it. Therefore a change to a layer at the top involves the least amount of work to rebuild the entire image. 
+Debemos organizar nuestras capas que cambian más a menudo lo más alto posible en la pila, esto se debe a que cuando se realizan cambios en una capa de la imagen, Docker no sólo reconstruye esa capa en particular, sino todas las capas construidas a partir de ella. Por lo tanto, un cambio en una capa en la parte superior implica la menor cantidad de trabajo para reconstruir toda la imagen. 
 
-Each time docker launches a container from an image (like we ran yesterday) it adds a writeable layer, known as the container layer. This stores all changes to the container throughout its runtime. This layer is the only difference between a live operational container and the source image itself. Any number of like-for-like containers can share access to the same underlying image while maintaining their state. 
+Cada vez que docker lanza un contenedor desde una imagen (como hicimos ayer) añade una capa escribible, conocida como la capa del contenedor. Esto almacena todos los cambios en el contenedor a lo largo de su tiempo de ejecución. Esta capa es la única diferencia entre un contenedor operativo en vivo y la propia imagen de origen. Cualquier número de contenedores similares pueden compartir el acceso a la misma imagen subyacente, manteniendo su estado. 
 
-Back to the example, we used yesterday with the Ubuntu image. We could run that same command multiple times and on the first container we could go and install pinta and on the second we could install figlet with two different applications, different purposes, different sizes etc. Each container that we deployed shares the same image but not the same state and then that state is then gone when we remove the container. 
+Volviendo al ejemplo que utilizamos ayer con la imagen de Ubuntu. Podríamos ejecutar ese mismo comando múltiples veces y en el primer contenedor podríamos instalar pinta y en el segundo podríamos instalar figlet con dos aplicaciones diferentes, diferentes propósitos, diferentes tamaños, etc. Cada contenedor que desplegamos comparte la misma imagen pero no el mismo estado y luego ese estado desaparece cuando eliminamos el contenedor. 
 
 ![](Images/Day45_Containers1.png)
 
-Following the example above with the Ubuntu image, but also many other ready-built container images available on DockerHub and other third-party repositories. These images are generally known as the parent image. It is the foundation upon which all other layers are built and provides the basic building blocks for our container environments. 
+Estas imágenes se conocen generalmente como la imagen padre. Es la base sobre la que se construyen todas las demás capas y proporciona los bloques de construcción básicos para nuestros entornos de contenedores. 
 
-Together with a set of individual layer files, a Docker image also includes an additional file known as a manifest. This is essentially a description of the image in JSON format and comprises information such as image tags, a digital signature, and details on how to configure the container for different types of host platforms.
+Junto con un conjunto de archivos de capas individuales, una imagen Docker también incluye un archivo adicional conocido como manifiesto. Se trata básicamente de una descripción de la imagen en formato JSON y contiene información como las etiquetas de la imagen, una firma digital y detalles sobre cómo configurar el contenedor para distintos tipos de plataformas host.
 
 ![](Images/Day45_Containers2.png)
 
-### How to create a docker image 
+### Cómo crear una imagen docker 
 
- There are two ways we can create a docker image. We can do it a little on the fly with the process that we started yesterday, we pick our base image spin up that container, and install all of the software and dependencies that we wish to have on our container. 
+ Hay dos maneras en que podemos crear una imagen docker. Podemos hacerlo un poco sobre la marcha con el proceso que empezamos ayer, elegimos nuestra imagen base, giramos ese contenedor e instalamos todo el software y las dependencias que deseamos tener en nuestro contenedor. 
 
- Then we can use the `docker commit container name` then we have a local copy of this image under docker images and in our docker desktop images tab. 
+ Luego podemos usar el `docker commit container name` entonces tenemos una copia local de esta imagen bajo docker images y en nuestra pestaña docker desktop images. 
 
- Super simple, I would not recommend this method unless you want to understand the process, it is going to be very difficult to manage lifecycle management this way and a lot of manual configuration/reconfiguration. But it is the quickest and most simple way to build a docker image. Great for testing, troubleshooting, validating dependencies etc. 
+ Con este método no entenderás el proceso y será muy difícil manejar la gestión del ciclo de vida, además de tener un montón de configuraciones manuales/reconfiguraciones. Pero se entiende que es la forma más rápida y sencilla de construir una imagen docker. Aunque no sea recomendable puede resultar ideal para pruebas, resolución de problemas, validación de dependencias, etc. 
 
-The way we intend to build our image is through a dockerfile. Which gives us a clean, compact and repeatable way to create our images. Much easier lifecycle management and easy integration into Continous Integration and Continuous delivery processes. But as you might gather it is a little more difficult than the first mentioned process. 
+La mejor práctica de construir imágenes es a través de un dockerfile. Lo que nos da una forma limpia, compacta y repetible para crear nuestras imágenes con unas pocas líneas. La gestión del ciclo de vida es mucho más fácil, así como la integración en procesos de CI/CD. Pero como se puede deducir, implica un aprendizaje. El saber no ocupa lugar. 
 
-Using the dockerfile method is much more in tune with real-world, enterprise-grade container deployments. 
+El uso del método dockerfile está mucho más en sintonía con el mundo real, los despliegues de contenedores de nivel empresarial. 
 
-A dockerfile is a three-step process whereby you create the dockerfile and add the commands you need to assemble the image. 
+Un dockerfile es un proceso de tres pasos mediante el cual se crea el dockerfile y se añaden los comandos necesarios para montar la imagen. 
 
-The following table shows some of the dockerfile statements we will be using or that you will most likely be using. 
+La siguiente tabla muestra algunas de las sentencias dockerfile que utilizaremos o que probablemente necesitarás. 
 
-| Command    | Purpose                                                                                                                                     |
-| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| FROM       | To specify the parent image.                                                                                                                |
-| WORKDIR    | To set the working directory for any commands that follow in the Dockerfile.                                                                |
-| RUN        | To install any applications and packages required for your container.                                                                       |
-| COPY       | To copy over files or directories from a specific location.                                                                                 |
-| ADD        | As COPY, but also able to handle remote URLs and unpack compressed files.                                                                   |
-| ENTRYPOINT | Command that will always be executed when the container starts. If not specified, the default is /bin/sh -c                                 |
-| CMD       | Arguments passed to the entrypoint. If ENTRYPOINT is not set (defaults to /bin/sh -c), the CMD will be the commands the container executes. |
-| EXPOSE     | To define which port through which to access your container application.                                                                    |
-| LABEL      | To add metadata to the image.                                                                                                               |
+| Comando    | Propósito                                                                                                                   |
+| ---------- | --------------------------------------------------------------------------------------------------------------------------- |
+| FROM       | Para especificar la imagen base.                                                                                            |
+| WORKDIR    | Para establecer el directorio de trabajo para cualquier comando que siga en el Dockerfile.                                  |
+| RUN        | Para instalar las aplicaciones y paquetes necesarios para su contenedor.                                                    |
+| COPY       | Para copiar archivos o directorios desde una ubicación específica.                                                          |
+| ADD        | Como COPY, pero también capaz de manejar URLs remotas y desempaquetar archivos comprimidos.                                 |
+| ENTRYPOINT | Comando que se ejecutará siempre cuando se inicie el contenedor. Si no se especifica, el valor por defecto es `/bin/sh -c`  |
+| CMD        | Argumentos pasados al punto de entrada. Si no se establece ENTRYPOINT, el CMD serán los comandos que ejecute el contenedor. |
+| EXPOSE     | Para definir el puerto a través del cual acceder a su aplicación contenedora.                                               |
+| LABEL      | Para añadir metadatos a la imagen.                                                                                          |
 
-Now we have the detail on how to build our first dockerfile we can create a working directory and create our dockerfile. I have created a working directory within this repository where you can see the files and folders I have to walk through. [Containers](Containers)
+Con estos detalles ya podemos crear un directorio de trabajo para construir el primer dockerfile. En este repositorio puedes encontrar el directorio de trabajo con los archivos y carpetas que veremos: [Containers](Containers)
 
-In this directory, I am going to create a .dockerignore file similar to the .gitignore we used in the last section. This file will list any files that would otherwise be created during the Docker build process, which you want to exclude from the final build.
+En este directorio tendré el archivo `.dockerignore` que es similar al `.gitignore`, ¿Lo recuerdas?. Este archivo enumerará todos los archivos que se desean excluir en el proceso de construcción de Docker, para evitarlos en la construcción final.
 
-Remember everything about containers is about being compact, as fast as possible with no bloat. 
+Recuerda, en la creación de los contenedores es importante ser compacto, tan rápido como sea posible sin bloat (código hinchado). 
 
-I want to create a very simple Dockerfile with the below layout also can be found in the folder linked above. 
+Así que haremos un Dockerfile muy simple con el siguiente diseño:
+
 
 ```
 # Use the official Ubuntu 18.04 as base
@@ -71,33 +72,33 @@ RUN apt-get install -y nginx curl
 RUN rm -rf /var/lib/apt/lists/*
 ```
 
-Navigate to this directory in your terminal, and then run `docker build -t 90daysofdevops:0.1 .` we are using the `-t` and then setting an image name and tag. 
+Es importante que le fichero se llame `Dockerfile` para que docker lo pueda reconocer. Cuando lo tengas ejecuta `docker build -t 90daysofdevops:0.1 .`. Fíjate que usamos el punto para que busque el Dockerfile en el directorio donde estamos ubicados. Con el anterior comando estamos usando la `-t` y luego estableciendo un nombre de imagen y una etiqueta. 
 
 ![](Images/Day45_Containers3.png)
 
-Now we have created our image we can then go and run our image using Docker Desktop or we could use the docker command line. I have used Docker Desktop I have fired up a container and you can see that we have `curl` available to us in the cli of the container. 
+Ahora que hemos creado nuestra imagen podemos ir y ejecutar nuestra imagen utilizando Docker Desktop o podríamos utilizar la línea de comandos docker. He utilizado Docker Desktop, he lanzado un contenedor y puedes ver que tenemos `curl` disponible para nosotros en el cli del contenedor. 
 
 ![](Images/Day45_Containers4.png)
 
-Whilst in Docker Desktop there is also the ability to leverage the UI to do some more tasks with this new image. 
+Mientras que en Docker Desktop también existe la posibilidad de aprovechar la interfaz de usuario para hacer algunas tareas más con esta nueva imagen. 
 
 ![](Images/Day45_Containers5.png)
 
-We can inspect our image, in doing so you see very much of the dockerfile and the lines of code that we wanted to run within our container. 
+Podemos inspeccionar nuestra imagen, al hacerlo se ve gran parte del dockerfile y las líneas de código que queríamos ejecutar dentro de nuestro contenedor. 
 
 ![](Images/Day45_Containers6.png)
 
-We have a pull option, now this would fail for us because this image is not hosted anywhere so we would get that as an error. However, we do have a Push to hub which would enable us to push our image to DockerHub. 
+Tenemos una opción pull, ahora esto fallaría porque la imagen no está alojada en ningún lugar por lo que obtendríamos un error. Sin embargo, tenemos una opción Push al hub que nos permitiría enviar nuestra imagen a nuestro registro DockerHub. 
 
-If you are using the same `docker build` we ran earlier then this would not work either, you would need the build command to be `docker build -t {{username}}/{{imagename}}:{{version}}`
+Si estás usando el mismo `docker build` que ejecutamos antes, esto tampoco funcionaría, necesitarías que el comando de compilación fuera `docker build -t {{username}}/{{imagename}}:{{version}}`. 
 
 ![](Images/Day45_Containers7.png)
 
-Then if we go and take a look in our DockerHub repository you can see that we just pushed a new image. Now in Docker Desktop, we would be able to use that pull tab. 
+A continuación, si echamos un vistazo a nuestro repositorio DockerHub se puede ver que acabamos de subir una nueva imagen. Ahora en Docker Desktop, seríamos capaces de utilizar la pestaña pull. 
 
 ![](Images/Day45_Containers8.png)
 
-## Resources 
+## Recursos 
 
 - [TechWorld with Nana - Docker Tutorial for Beginners](https://www.youtube.com/watch?v=3c-iBn73dDE)
 - [Programming with Mosh - Docker Tutorial for Beginners](https://www.youtube.com/watch?v=pTFZFxd4hOI)
@@ -105,5 +106,10 @@ Then if we go and take a look in our DockerHub repository you can see that we ju
 - [WSL 2 with Docker getting started](https://www.youtube.com/watch?v=5RQbdMn04Oc)
 - [Blog on gettng started building a docker image](https://stackify.com/docker-build-a-beginners-guide-to-building-docker-images/)
 - [Docker documentation for building an image](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
+- [En español] En los [apuntes](https://vergaracarmona.es/apuntes/) del traductor:
+  - [Preparación de entorno de pruebas local para docker](https://vergaracarmona.es/preparacion-de-entorno-de-pruebas-local-para-docker/)
+  - [Uso básico de docker](https://vergaracarmona.es/uso-basico-de-docker/)
+  - [Una breve historia sobre contenedores](https://vergaracarmona.es/breve-historia-de-contenedores/)
+  - [Desplegar con docker-compose los servicios Traefik y Portainer](https://vergaracarmona.es/desplegar-con-docker-compose-los-servicios-traefik-y-portainer/)
 
-See you on [Day 46](day46.md)
+Nos vemos en el [Día 46](day46.md)

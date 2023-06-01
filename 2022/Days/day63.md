@@ -95,7 +95,7 @@ I think it is important to touch on some of the differences between Ansible and 
 | Language       | Ansible follows procedural language                          | Terraform follows a declarative language                          |
 | Provisioning   | Ansible provides partial provisioning (VM, Network, Storage) | Terraform provides extensive provisioning (VM, Network, Storage) |
 | Packaging      | Ansible provides complete support for packaging & templating | Terraform provides partial support for packaging & templating    |
-| Lifecycle Mgmt | Ansible does not have lifecycle management                   | Terraform is heavily dependent on lifecycle and state mgmt       |
+| Lifecycle Mgmt | Ansible does not have lifecycle management                   | Terraform is heavily dependent on lifecycle and state management  |
 
 ## Resources
 
