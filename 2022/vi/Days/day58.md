@@ -1,3 +1,13 @@
+---
+title: '#90DaysOfDevOps - Ngôn ngữ cấu hình HashiCorp (HCL) - ngày 58'
+published: false
+description: 90DaysOfDevOps - Ngôn ngữ cấu hình HashiCorp (HCL)
+tags: 'devops, 90daysofdevops, learning'
+cover_image: null
+canonical_url: null
+id: 1048741
+---
+
 ## HashiCorp Configuration Language (HCL)
 
 Trước khi chúng ta bắt đầu tạo các thành phần với Terraform, chúng ta cần tìm hiểu một chút về ngôn ngữ cấu hình của HashiCorp (HCL). Cho đến nay, trong thử thách 90 ngày DevOps, chúng ta đã tìm hiểu về một số ngôn ngữ script và lập trình khác nhau, ví dụ như ngôn ngữ lập trình Go, sau đó đến với các tập lệnh bash, thậm chí chúng ta cũng có đề cập đến Python khi làm việc với tự động hóa triển khai mạng máy tính.
@@ -8,16 +18,16 @@ Tiếp theo, chúng ta phải tìm hiểu về HashiCorp Configuration Language 
 
 Nhìn chung, bạn nên sử dụng Terraform để triển khai hạ tầng của mình trên các hệ thống điện toán đám công cộng (AWS, Google, Microsoft Azure), cũng như trong môi trường ảo hóa như VMware, Microsoft Hyper-V, Nutanix AHV. Trên đám mây công cộng, Terraform cho phép chúng ta làm nhiều hơn chỉ triển khai tự động máy ảo. Chúng ta có thể tạo ra tất cả các hạ tầng cần thiết như khối công việc PaaS và tài nguyên mạng như VPC và Security Groups.
 
-Có hai khía cạnh quan trọng trong Terraform, chúng ta có mã nguồn mà chúng ta sẽ thảo luận trong bài viết này và sau đó chúng ta còn có trạng thái (state). Cả hai điều này cùng nhau có thể được gọi là lõi của Terraform. Tiếp theo, chúng ta có môi trường mà chúng ta muốn tương tác và triển khai, điều này được thực hiện bằng cách sử dụng các nhà cung cấp (providers) của Terraform, đã được đề cập ngắn gọn trong buổi trước, nhưng chúng ta có nhà cung cấp AWS, nhà cung cấp Azure, v.v. Có hàng trăm nhà cung cấp khác nhau.
+Có hai khía cạnh quan trọng trong Terraform, chúng ta có mã nguồn mà chúng ta sẽ thảo luận trong bài viết này và sau đó chúng ta còn có trạng thái (state). Cả hai điều này cùng nhau có thể được gọi là lõi của Terraform. Tiếp theo, chúng ta có môi trường mà chúng ta muốn tương tác và triển khai, điều này được thực hiện bằng cách sử dụng các provider của Terraform, đã được đề cập ngắn gọn trong buổi trước, nhưng chúng ta có provider AWS, provider Azure, v.v. Có hàng trăm provider khác nhau.
 
 ### Hướng dẫn sử dụng Terraform đơn giản
 
 Hãy xem qua một tệp `.tf` trong Terraform để hiểu hơn về cấu trúc. Ví dụ đầu tiên chúng ta sẽ thảo luận sẽ là mã để triển khai tài nguyên lên AWS. Điều này cũng đòi hỏi bạn đã cài đặt AWS CLI trên hệ thống của bạn và đã cấu hình cho tài khoản của bạn.
 
 
-### Nhà cung cấp
+### Provider
 
-Ở đầu cấu trúc tệp `.tf`, thông thường được gọi là `main.tf`, ít nhất cho đến khi chúng ta làm các thứ phức tạp hơn, chúng ta sẽ định nghĩa các nhà cung cấp mà chúng ta đã đề cập trước đó. Nguồn của nhà cung cấp AWS như bạn có thể thấy là `hashicorp/aws`, điều này có nghĩa là nhà cung cấp này được duy trì hoặc đã được phát triển bởi chính HashiCorp và cộng đồng sử dụng. Mặc định, bạn sẽ tham chiếu đến các nhà cung cấp có sẵn từ Terraform Registry, bạn cũng có thể viết các nhà cung cấp riêng của bạn và sử dụng chúng cục bộ hoặc tự xuất bản lên Terraform Registry.
+Ở đầu cấu trúc tệp `.tf`, thông thường được gọi là `main.tf`, ít nhất cho đến khi chúng ta làm các thứ phức tạp hơn, chúng ta sẽ định nghĩa các provider mà chúng ta đã đề cập trước đó. Nguồn của provider AWS như bạn có thể thấy là `hashicorp/aws`, điều này có nghĩa là provider này được duy trì hoặc đã được phát triển bởi chính HashiCorp và cộng đồng sử dụng. Mặc định, bạn sẽ tham chiếu đến các provider có sẵn từ Terraform Registry, bạn cũng có thể viết các provider riêng của bạn và sử dụng chúng cục bộ hoặc tự xuất bản lên Terraform Registry.
 
 ```
 terraform {
@@ -60,7 +70,6 @@ resource "aws_instance" "90daysofdevops" {
                 sudo systemctl enable httpd
                 echo "
 <h1>Deployed via Terraform</h1>
-
 " | sudo tee /var/www/html/index.html
         EOF
   tags = {
@@ -81,15 +90,12 @@ terraform {
       version = "~> 3.27"
     }
   }
-
   required_version = ">= 0.14.9"
 }
-
 provider "aws" {
   profile = "default"
   region  = "us-west-2"
 }
-
 resource "aws_instance" "90daysofdevops" {
   ami           = "ami-830c94e3"
   instance_type = "t2.micro"
@@ -102,12 +108,10 @@ resource "aws_instance" "90daysofdevops" {
                 sudo systemctl enable httpd
                 echo "
 <h1>Deployed via Terraform</h1>
-
 " | sudo tee /var/www/html/index.html
         EOF
   tags = {
     Name = "Created by Terraform"
-
   tags = {
     Name = "ExampleAppServerInstance"
   }
@@ -125,7 +129,6 @@ terraform {
   # forwards compatible with 0.13.x code.
   required_version = ">= 0.12.26"
 }
-
 # website::tag::1:: The simplest possible Terraform module: it just outputs "Hello, World!"
 output "hello_world" {
   value = "Hello, 90DaysOfDevOps from Terraform"
@@ -138,9 +141,9 @@ Trong cửa sổ terminal, hãy điều hướng đến thư mục nơi tệp ma
 
 Khi đã ở trong thư mục đó, chúng ta sẽ chạy lệnh `terraform init`.
 
-Chúng ta cần thực hiện lệnh này trên bất kỳ thư mục nào chứa mã Terraform hoặc trước khi chúng ta chạy bất kỳ mã Terraform nào. Việc khởi tạo một thư mục cấu hình tải xuống và cài đặt các nhà cung cấp đã được định nghĩa trong cấu hình, trong trường hợp này, chúng ta không có nhà cung cấp, nhưng trong ví dụ ở trên, điều này sẽ tải xuống nhà cung cấp AWS cho cấu hình này.
+Chúng ta cần thực hiện lệnh này trên bất kỳ thư mục nào chứa mã Terraform hoặc trước khi chúng ta chạy bất kỳ mã Terraform nào. Việc khởi tạo một thư mục cấu hình tải xuống và cài đặt các provider đã được định nghĩa trong cấu hình, trong trường hợp này, chúng ta không có provider, nhưng trong ví dụ ở trên, điều này sẽ tải xuống provider AWS cho cấu hình này.
 
-![](Images/Day58_IAC1.png)
+![](../../Days/Images/Day58_IAC1.png)
 
 Lệnh tiếp theo sẽ là terraform plan.
 
@@ -148,31 +151,31 @@ Lệnh terraform plan tạo ra một kế hoạch thực thi, cho phép bạn xe
 
 Dưới đây, bạn có thể thấy rằng với ví dụ hello-world của chúng ta, chúng ta sẽ thấy đầu ra nếu đây là một instance EC2 trên AWS, chúng ta sẽ thấy tất cả các bước mà chúng ta sẽ tạo ra.
 
-![](Images/Day58_IAC2.png)
+![](../../Days/Images/Day58_IAC2.png)
 
-Ở điểm này, chúng ta đã khởi tạo kho lưu trữ và đã tải xuống các nhà cung cấp khi cần thiết, chúng ta đã chạy một bước đi kiểm tra để đảm bảo rằng đây là những gì chúng ta muốn thấy, vì vậy bây giờ chúng ta có thể chạy và triển khai mã của chúng ta.
+Ở điểm này, chúng ta đã khởi tạo kho lưu trữ và đã tải xuống các provider khi cần thiết, chúng ta đã chạy một bước đi kiểm tra để đảm bảo rằng đây là những gì chúng ta muốn thấy, vì vậy bây giờ chúng ta có thể chạy và triển khai mã của chúng ta.
 
 `terraform apply` cho phép chúng ta làm điều này, có một biện pháp an toàn tích hợp trong lệnh này và nó sẽ cung cấp một kế hoạch về những gì sẽ xảy ra, đòi hỏi bạn phản hồi bằng cách nói `"yes"` để tiếp tục.
 
-![](Images/Day58_IAC3.png)
+![](../../Days/Images/Day58_IAC3.png)
 
 Khi chúng ta gõ `"yes"` để xác nhận, mã của chúng ta sẽ được triển khai. Không có gì thú vị nhưng bạn có thể thấy chúng ta có kết quả đầu ra mà chúng ta đã định nghĩa trong mã của mình.
 
-![](Images/Day58_IAC4.png)
+![](../../Days/Images/Day58_IAC4.png)
 
 Hiện tại, chúng ta chưa triển khai bất cứ thứ gì, chúng ta chưa thêm, thay đổi hoặc phá hủy bất cứ thứ gì, nhưng nếu chúng ta đã làm điều đó, chúng ta sẽ thấy điều đó được chỉ ra trong đoạn trên. Tuy nhiên, nếu chúng ta đã triển khai một cái gì đó và muốn loại bỏ tất cả những gì chúng ta đã triển khai, chúng ta có thể sử dụng lệnh `terraform destroy`. Một lần nữa, điều này có tính năng an toàn, bạn phải gõ `"yes"` để xác nhận, mặc dù bạn có thể sử dụng `--auto-approve` ở cuối các lệnh `apply` và `destroy` để bỏ qua sự can thiệp thủ công đó. Tuy nhiên, tôi khuyên bạn chỉ nên sử dụng lối tắt này khi học và thử nghiệm vì mọi thứ có thể biến mất nhanh hơn cả việc xây dựng.
 
 Từ đó, chúng ta đã tìm hiểu về 4 lệnh trong CLI của Terraform.
 
-`terraform init` = chuẩn bị thư mục dự án với các nhà cung cấp.
+`terraform init` = chuẩn bị thư mục dự án với các provider.
 `terraform plan` = hiển thị những gì sẽ được tạo ra và thay đổi trong lệnh tiếp theo dựa trên mã của chúng ta.
 `terraform apply` = triển khai các tài nguyên được định nghĩa trong mã của chúng ta.
 `terraform destroy` = phá hủy các tài nguyên chúng ta đã tạo ra trong dự án của chúng ta.
 Chúng ta cũng đã tìm hiểu về hai khía cạnh quan trọng của tệp mã.
 
-Nhà cung cấp (providers) = cách Terraform liên lạc với nền tảng cuối thông qua các API.
+Provider = cách Terraform liên lạc với nền tảng cuối thông qua các API.
 Tài nguyên (resources) = những gì chúng ta muốn triển khai bằng mã.
-Một điều lưu ý khác khi chạy terraform init là xem cây thư mục trước và sau để xem điều gì xảy ra và chúng ta lưu trữ nhà cung cấp và các module ở đâu.
+Một điều lưu ý khác khi chạy terraform init là xem cây thư mục trước và sau để xem điều gì xảy ra và chúng ta lưu trữ provider và các module ở đâu.
 
 ### Trạng Thái Của Terraform - Terraform state
 
@@ -220,4 +223,4 @@ Dưới đây là danh sách nhiều tài nguyên mà tôi đã liệt kê và t
 - [Terraform Tutorial - The Best Project Ideas](https://www.youtube.com/watch?v=oA-pPa0vfks)
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
 
-Hẹn gặp lại các bạn ở ngày [Day 59](day59.md)
+Hẹn gặp lại các bạn ở [ngày 59](day59.md)

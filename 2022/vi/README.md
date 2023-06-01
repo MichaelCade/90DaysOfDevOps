@@ -101,12 +101,12 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 
 ### Học cơ sở hạ tầng dưới dạng mã (Infrastructure as Code)
 
-- [✔️] 🤖 56 > [The Big Picture: IaC](Days/day56.md)
-- [✔️] 🤖 57 > [An intro to Terraform](Days/day57.md)
-- [✔️] 🤖 58 > [HashiCorp Configuration Language (HCL)](Days/day58.md)
-- [✔️] 🤖 59 > [Create a VM with Terraform & Variables](Days/day59.md)
-- [✔️] 🤖 60 > [Docker Containers, Provisioners & Modules](Days/day60.md)
-- [✔️] 🤖 61 > [Kubernetes & Multiple Environments](Days/day61.md)
+- [✔️] 🤖 56 > [Bức tranh toàn cảnh: Cơ sở hạ tầng dưới dạng mã (IaC)](Days/day56.md)
+- [✔️] 🤖 57 > [Giới thiệu về Terraform](Days/day57.md)
+- [✔️] 🤖 58 > [Ngôn ngữ cấu hình HashiCorp (HCL)](Days/day58.md)
+- [✔️] 🤖 59 > [Tạo VM với Terraform & Biến](Days/day59.md)
+- [✔️] 🤖 60 > [Docker Container, Providers & Modules](Days/day60.md)
+- [✔️] 🤖 61 > [Kubernetes & Đa môi trường](Days/day61.md)
 - [✔️] 🤖 62 > [Testing, Tools & Alternatives](Days/day62.md)
 
 ### Tự động hóa quản lý cấu hình
