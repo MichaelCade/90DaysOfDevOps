@@ -1,3 +1,13 @@
+---
+title: '#90DaysOfDevOps - Create a VM with Terraform & Variables - Day 59'
+published: false
+description: 90DaysOfDevOps - Create a VM with Terraform & Variables
+tags: 'devops, 90daysofdevops, learning'
+cover_image: null
+canonical_url: null
+id: 1049051
+---
+
 ## Tạo máy ảo với Terraform và biến
 
 Trong bài này, chúng ta sẽ tạo một hoặc hai máy ảo bằng cách sử dụng terraform trong VirtualBox. Điều này không phải là một trường hợp thông thường, VirtualBox là một lựa chọn ảo hóa máy trạm và điều này không phải là một trường hợp sử dụng cho Terraform, nhưng hiện tại tôi đang ở độ cao 36.000ft và dù tôi đã triển khai các tài nguyên trên public cloud, nhưng việc làm điều này trên máy tính xách tay của tôi nhanh hơn nhiều.
@@ -47,29 +57,29 @@ output "IPAddr_2" {
 
 Bây giờ sau khi chúng ta đã định nghĩa mã của mình, chúng ta có thể thực hiện lệnh `terraform init` trên thư mục của chúng ta để tải xuống nhà cung cấp cho Virtualbox.
 
-![](Images/Day59_IAC1.png)
+![](../../Days/Images/Day59_IAC1.png)
 
 Bạn cũng cần phải cài đặt VirtualBox trên hệ thống của bạn. Sau đó, chúng ta có thể chạy lệnh `terraform plan` để xem mã của chúng ta sẽ tạo ra gì cho chúng ta. Tiếp theo là `terraform apply`. Hình ảnh dưới đây hiển thị quá trình hoàn thành của bạn.
 
-![](Images/Day59_IAC2.png)
+![](../../Days/Images/Day59_IAC2.png)
 
 Trong Virtualbox, bạn sẽ nhìn thấy 2 máy ảo mới được khởi tạo.
 
-![](Images/Day59_IAC3.png)
+![](../../Days/Images/Day59_IAC3.png)
 
 ### Thay đổi cấu hình
 
 Hãy thay đổi cấu hình triển khai để thử nghiệm. Chúng ta chỉ cần thay đổi dòng `count` để hiển thị số lượng nút mới mong muốn của chúng ta. Khi chúng ta chạy `terraform apply`, nó sẽ trông giống như dưới đây.
 
-![](Images/Day59_IAC4.png)
+![](../../Days/Images/Day59_IAC4.png)
 
 Một khi đã hoàn thành, trong VirtualBox bạn sẽ nhìn thấy 3 máy ảo được khởi tạo và chạy.
 
-![](Images/Day59_IAC5.png)
+![](../../Days/Images/Day59_IAC5.png)
 
 Khi mọi thứ đã hoàn thành, chúng ta có thể dọn dẹp bằng cách sử dụng `terraform destroy`, tất cả máy ảo sẽ được xóa bỏ sau đó.
 
-![](Images/Day59_IAC6.png)
+![](../../Days/Images/Day59_IAC6.png)
 
 ### Biến và đầu ra
 

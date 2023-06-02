@@ -1,3 +1,12 @@
+---
+title: '#90DaysOfDevOps - Kubernetes & Multiple Environments - Day 61'
+published: false
+description: 90DaysOfDevOps - Kubernetes & Multiple Environments
+tags: 'devops, 90daysofdevops, learning'
+cover_image: null
+canonical_url: null
+id: 1048743
+---
 ## Kubernetes & Multiple Environments
 
 Cho đến nay, trong phần về Cơ sở hạ tầng mã nguồn, chúng ta đã xem xét triển khai máy ảo, mặc dù chúng ta đã sử dụng VirtualBox, nhưng nguyên tắc là giống nhau, chúng ta xác định bằng mã nguồn những gì chúng ta muốn máy ảo của mình trông như thế nào và sau đó triển khai. Tương tự cho các container Docker và trong buổi học này, chúng ta sẽ xem cách Terraform có thể được sử dụng để tương tác với các tài nguyên được hỗ trợ bởi Kubernetes.
@@ -86,23 +95,23 @@ resource "kubernetes_service" "test" {
 
 Điều đầu tiên chúng ta phải làm trong thư mục dự án mới của chúng ta là chạy lệnh terraform init.
 
-![](Images/Day61_IAC1.png)
+![](../../Days/Images/Day61_IAC1.png)
 
 Và trước khi chúng ta chạy lệnh terraform apply, để tôi cho bạn thấy rằng chúng ta không có bất kỳ `namespace` nào.
 
-![](Images/Day61_IAC2.png)
+![](../../Days/Images/Day61_IAC2.png)
 
 Khi chúng ta chạy lệnh terraform apply, điều này sẽ tạo ra 3 tài nguyên mới đó là namespace, deployment và service trong cụm Kubernetes của chúng ta.
 
-![](Images/Day61_IAC3.png)
+![](../../Days/Images/Day61_IAC3.png)
 
 Bây giờ chúng ta có thể xem các tài nguyên đã triển khai trong cụm của chúng ta.
 
-![](Images/Day61_IAC4.png)
+![](../../Days/Images/Day61_IAC4.png)
 
 Bây giờ, vì chúng ta đang sử dụng minikube như bạn đã thấy trong phần trước, điều này có một số hạn chế khi chúng ta thử nghiệm với mạng docker cho ingress. Nhưng nếu chúng ta chỉ đơn giản sử dụng lệnh `kubectl port-forward -n nginx svc/nginx 30201:80` và mở trình duyệt đến `http://localhost:30201/`, chúng ta sẽ thấy trang NGINX của chúng ta.
 
-![](Images/Day61_IAC5.png)
+![](../../Days/Images/Day61_IAC5.png)
 
 
 Nếu bạn muốn thử các bài thực hành chi tiết hơn với Terraform và Kubernetes, thì trang web [HashiCorp Learn site](https://learn.hashicorp.com/tutorials/terraform/kubernetes-provider) là một nguồn tuyệt vời để thực hiện.

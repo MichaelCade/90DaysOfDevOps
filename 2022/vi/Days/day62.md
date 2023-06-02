@@ -1,3 +1,12 @@
+---
+title: '#90DaysOfDevOps - Testing, Tools & Alternatives - Day 62'
+published: false
+description: '90DaysOfDevOps - Testing, Tools & Alternatives'
+tags: 'devops, 90daysofdevops, learning'
+cover_image: null
+canonical_url: null
+id: 1049053
+---
 ## Kiểm thử, Công cụ và Các phương pháp thay thế
 
 Khi kết thúc phần này về Cơ sở hạ tầng dưới dạng Mã, chúng ta phải đề cập đến việc kiểm thử mã nguồn, các công cụ khác nhau có sẵn và sau đó là một số phương pháp thay thế Terraform để đạt được điều này. Như tôi đã nói ở đầu phần này, tập trung của tôi là Terraform vì nó trước tiên là miễn phí và mã nguồn mở, thứ hai, nó là đa nền tảng và không phụ thuộc vào môi trường. Nhưng cũng có các phương pháp thay thế khác mà cần được xem xét, nhưng mục tiêu chung là làm cho mọi người nhận thức rằng đây là cách triển khai cơ sở hạ tầng của bạn.
