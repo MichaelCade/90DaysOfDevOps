@@ -1,13 +1,13 @@
 ---
-title: '#90DaysOfDevOps - Kubernetes & Multiple Environments - Day 61'
+title: '#90DaysOfDevOps - Kubernetes & Đa môi trường - Ngày 61'
 published: false
-description: 90DaysOfDevOps - Kubernetes & Multiple Environments
+description: 90DaysOfDevOps - Kubernetes & Đa môi trường
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1048743
 ---
-## Kubernetes & Multiple Environments
+## Kubernetes & Đa môi trường
 
 Cho đến nay, trong phần về Cơ sở hạ tầng mã nguồn, chúng ta đã xem xét triển khai máy ảo, mặc dù chúng ta đã sử dụng VirtualBox, nhưng nguyên tắc là giống nhau, chúng ta xác định bằng mã nguồn những gì chúng ta muốn máy ảo của mình trông như thế nào và sau đó triển khai. Tương tự cho các container Docker và trong buổi học này, chúng ta sẽ xem cách Terraform có thể được sử dụng để tương tác với các tài nguyên được hỗ trợ bởi Kubernetes.
 
@@ -21,7 +21,7 @@ Bây giờ chúng ta có thể sử dụng `kubectl` như đã được hiển t
 
 - Quản lý vòng đời - Terraform không chỉ là một công cụ cung cấp, nó còn cho phép thay đổi, cập nhật và xóa bỏ.
 
-### Simple Kubernetes Demo
+### Ví dụ Kubernetes đơn giản
 
 Tương tự như demo chúng ta đã tạo trong buổi học trước, bây giờ chúng ta có thể triển khai nginx vào cụm Kubernetes của chúng ta. Trong mục này, tôi sẽ sử dụng minikube để làm ví dụ. Chúng ta tạo file Kubernetes.tf và bạn có thể tìm thấy nó tại [đây](2022/Days/IaC/Kubernetes/Kubernetes.tf)
 
@@ -116,7 +116,7 @@ Bây giờ, vì chúng ta đang sử dụng minikube như bạn đã thấy tron
 
 Nếu bạn muốn thử các bài thực hành chi tiết hơn với Terraform và Kubernetes, thì trang web [HashiCorp Learn site](https://learn.hashicorp.com/tutorials/terraform/kubernetes-provider) là một nguồn tuyệt vời để thực hiện.
 
-### Multiple Environments
+### Đa môi trường
 
 Nếu chúng ta muốn lấy bất kỳ bài thực hành nào đã được thực hiện nhưng bây giờ muốn có môi trường sản xuất, staging và phát triển cụ thể trông giống nhau và tận dụng mã nguồn này, có hai phương pháp để làm được điều này với Terraform:
 

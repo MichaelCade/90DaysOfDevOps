@@ -1,9 +1,9 @@
 ---
-title: '#90DaysOfDevOps - Create a VM with Terraform & Variables - Day 59'
+title: '#90DaysOfDevOps - Tạo máy ảo với Terraform và biến - Ngày 59'
 published: false
-description: 90DaysOfDevOps - Create a VM with Terraform & Variables
+description: 90DaysOfDevOps - Tạo máy ảo với Terraform và biến
 tags: 'devops, 90daysofdevops, learning'
-cover_image: null
+cover_image: nugayll
 canonical_url: null
 id: 1049051
 ---
