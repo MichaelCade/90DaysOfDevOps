@@ -1,16 +1,15 @@
-## Create a VM with Terraform & Variables
+## Crear una VM con Terraform y Variables
 
-In this session, we are going to be creating a VM or two VMs using terraform inside VirtualBox. This is not normal, VirtualBox is a workstation virtualisation option and this would not be a use case for Terraform but I am currently 36,000ft in the air and as much as I have deployed public cloud resources this high in the clouds it is much faster to do this locally on my laptop.
+En esta sesión, vamos a crear una o dos VMs utilizando Terraform dentro de VirtualBox. Esto no es lo habitual, ya que VirtualBox es una opción de virtualización de estaciones de trabajo y este no sería un caso de uso típico para Terraform, pero actualmente estoy a 36,000 pies de altura y, aunque he implementado recursos de la nube pública a esta altitud en las nubes, es mucho más rápido hacerlo localmente en mi computadora portátil.
 
-Purely for demo purposes but the concept is the same we are going to have our desired state configuration code and then we are going to run that against the VirtualBox provider. In the past, we have used vagrant here and I covered the differences between vagrant and terraform at the beginning of the section.
+Solo con fines de demostración, pero el concepto es el mismo: vamos a tener nuestro código de configuración de estado deseado y luego lo ejecutaremos con el proveedor de VirtualBox. En el pasado, hemos utilizado Vagrant aquí y ya he cubierto las diferencias entre Vagrant y Terraform al principio de la sección.
+Crear una máquina virtual en VirtualBox
 
-### Create a virtual machine in VirtualBox
+## Lo primero que vamos a hacer es crear una nueva carpeta llamada VirtualBox. Luego podemos crear un archivo VirtualBox.tf y ahí es donde definiremos nuestros recursos. El siguiente código, que se encuentra en la carpeta VirtualBox como VirtualBox.tf, creará 2 VMs en VirtualBox.
 
-The first thing we are going to do is create a new folder called VirtualBox, we can then create a VirtualBox.tf file and this is going to be where we define our resources. The code below which can be found in the VirtualBox folder as VirtualBox.tf is going to create 2 VMs in Virtualbox.
+Puedes encontrar más información sobre el proveedor de VirtualBox de la comunidad aquí[here](https://registry.terraform.io/providers/terra-farm/virtualbox/latest/docs/resources/vm)
 
-You can find more about the community VirtualBox provider [here](https://registry.terraform.io/providers/terra-farm/virtualbox/latest/docs/resources/vm)
-
-```
+```terraform
 terraform {
   required_providers {
     virtualbox = {
@@ -20,7 +19,7 @@ terraform {
   }
 }
 
-# There are currently no configuration options for the provider itself.
+# Actualmente no hay opciones de configuración para el propio proveedor.
 
 resource "virtualbox_vm" "node" {
   count     = 2
@@ -45,53 +44,48 @@ output "IPAddr_2" {
 
 ```
 
-Now that we have our code defined we can now perform the `terraform init` on our folder to download the provider for Virtualbox.
+Ahora que hemos definido nuestro código, podemos ejecutar `terraform init` en nuestra carpeta para descargar el proveedor de VirtualBox.
 
 ![](Images/Day59_IAC1.png)
 
-You will also need to have VirtualBox installed on your system as well. We can then next run `terraform plan` to see what our code will create for us. Followed by `terraform apply` the below image shows your completed process.
+También necesitarás tener VirtualBox instalado en tu sistema. A continuación, podemos ejecutar terraform plan para ver qué creará nuestro código. Luego, ejecutamos `terraform apply`. La siguiente imagen muestra el proceso completo.
 
 ![](Images/Day59_IAC2.png)
 
-In Virtualbox, you will now see your 2 virtual machines.
+En VirtualBox, ahora verás tus 2 máquinas virtuales.
 
 ![](Images/Day59_IAC3.png)
 
-### Change configuration
+### Cambiar la configuración
 
-Let's add another node to our deployment. We can simply change the count line to show our new desired number of nodes. When we run our `terraform apply` it will look something like the below.
+Agreguemos otro nodo a nuestra implementación. Simplemente podemos cambiar la línea de conteo para indicar nuestro nuevo número deseado de nodos. Cuando ejecutemos `terraform apply`, se verá algo como lo siguiente.
 
 ![](Images/Day59_IAC4.png)
 
-Once complete in VirtualBox you can see we now have 3 nodes up and running.
+Una vez que se complete, en VirtualBox verás que ahora tenemos 3 nodos en funcionamiento.
 
 ![](Images/Day59_IAC5.png)
 
-When we are finished we can clear this up using the `terraform destroy` and our machines will be removed.
+Cuando hayamos terminado, podemos limpiar esto utilizando `terraform destroy` y nuestras máquinas serán eliminadas.
 
 ![](Images/Day59_IAC6.png)
 
-### Variables & Outputs
+### Variables y Salidas
 
-We did mention outputs when we ran our hello-world example in the last session. But we can get into more detail here.
+Mencionamos las salidas cuando ejecutamos nuestro ejemplo de "hola mundo" en la última sesión. Pero aquí podemos entrar en más detalle.
 
-But there are many other variables that we can use here as well, there are also a few different ways in which we can define variables.
+Pero hay muchas otras variables que podemos utilizar aquí, también hay algunas formas diferentes en las que podemos definir variables.
 
-- We can manually enter our variables with the `terraform plan` or `terraform apply` command
+- Podemos ingresar manualmente nuestras variables con el comando `terraform plan` o `terraform apply`.
+- Podemos definirlas en el archivo .tf dentro del bloque correspondiente.
+- Podemos utilizar variables de entorno en nuestro sistema utilizando el formato `TF_VAR_NOMBRE`.
+- Mi preferencia es usar un archivo terraform.tfvars en la carpeta de nuestro proyecto.
+- Existe la opción de utilizar un archivo \*auto.tfvars.
+- También podemos definir las variables al ejecutar `terraform plan` o `terraform apply` con las opciones `-var` o `-var-file`.
 
-- We can define them in the .tf file within the block
+Comenzando desde abajo y avanzando hacia arriba, así se define el orden en el que se definen las variables.
 
-- We can use environment variables within our system using `TF_VAR_NAME` as the format.
-
-- My preference is to use a terraform.tfvars file in our project folder.
-
-- There is an \*auto.tfvars file option
-
-- or we can define when we run the `terraform plan` or `terraform apply` with the `-var` or `-var-file`.
-
-Starting from the bottom moving up would be the order in which the variables are defined.
-
-We have also mentioned that the state file will contain sensitive information. We can define our sensitive information as a variable and we can define this as being sensitive.
+También hemos mencionado que el archivo de estado contendrá información confidencial. Podemos definir nuestra información confidencial como una variable y especificar que es confidencial.
 
 ```
 variable "some resource"  {
@@ -102,9 +96,9 @@ variable "some resource"  {
 }
 ```
 
-## Resources
+## Recursos
 
-I have listed a lot of resources down below and I think this topic has been covered so many times out there, If you have additional resources be sure to raise a PR with your resources and I will be happy to review and add them to the list.
+He enumerado muchos recursos a continuación y creo que este tema ha sido cubierto tantas veces, si tienes recursos adicionales, asegúrate de enviar una solicitud de extracción (PR) con tus recursos y estaré encantado de revisarlos y agregarlos a la lista.
 
 - [What is Infrastructure as Code? Difference of Infrastructure as Code Tools](https://www.youtube.com/watch?v=POPP2WTJ8es)
 - [Terraform Tutorial | Terraform Course Overview 2021](https://www.youtube.com/watch?v=m3cKkYXl-8o)
@@ -116,5 +110,6 @@ I have listed a lot of resources down below and I think this topic has been cove
 - [Terraform Simple Projects](https://terraform.joshuajebaraj.com/)
 - [Terraform Tutorial - The Best Project Ideas](https://www.youtube.com/watch?v=oA-pPa0vfks)
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
+- [Herramientas para Terraform](https://vergaracarmona.es/herramientas-para-terraform/)
 
-See you on [Day 60](day60.md)
+Nos vemos en el [Día 60](day60.md)

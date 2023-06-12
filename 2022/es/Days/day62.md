@@ -1,90 +1,90 @@
-## Testing, Tools & Alternatives
+## Pruebas, herramientas y alternativas
 
-As we close out this section on Infrastructure as Code we must mention testing our code, the various tools available and then some of the alternatives to Terraform to achieve this. As I said at the start of the section my focus was on Terraform because it is firstly free and open source, secondly, it is cross-platform and agnostic to environments. But there are also alternatives out there that should be considered but the overall goal is to make people aware that this is the way to deploy your infrastructure.
+Al concluir esta sección sobre la infraestructura como código, debemos mencionar la importancia de probar nuestro código, las diversas herramientas disponibles y algunas alternativas a Terraform para lograr esto. Como mencioné al inicio de la sección, mi enfoque fue en Terraform porque es gratuito y de código abierto, además de ser multiplataforma y agnóstico en cuanto a entornos. Sin embargo, existen alternativas que deben considerarse, pero el objetivo general es crear conciencia de que esta es la forma de implementar la infraestructura.
 
-### Code Rot
+### Deterioro del código
 
-The first area I want to cover in this session is code rot, unlike application code, infrastructure as code might get used and then not for a very long time. Let's take the example that we are going to be using Terraform to deploy our VM environment in AWS, perfect and it works the first time and we have our environment, but this environment doesn't change too often so the code gets left the state possibly or hopefully stored in a central location but the code does not change.
+La primera área que quiero abordar en esta sesión es el deterioro del código. A diferencia del código de aplicaciones, el código de la infraestructura como código puede ser utilizado y luego quedar sin uso durante mucho tiempo. Tomemos como ejemplo el uso de Terraform para implementar nuestro entorno de máquinas virtuales en AWS. Funciona perfectamente la primera vez y tenemos nuestro entorno, pero este entorno no cambia con mucha frecuencia, por lo que el código queda en ese estado, posiblemente almacenado en un lugar central, pero sin cambios.
 
-What if something changes in the infrastructure? But it is done out of band, or other things change in our environment.
+¿Qué sucede si algo cambia en la infraestructura? Pero se realiza fuera del flujo normal, o si otras cosas cambian en nuestro entorno.
 
-- Out of band changes
-- Unpinned versions
-- Deprecated dependencies
-- Unapplied changes
+- Cambios externos al flujo normal.
+- Versiones no fijadas.
+- Dependencias obsoletas.
+- Cambios no aplicados.
 
 ### Testing
 
-Another huge area that follows on from code rot and in general is the ability to test your IaC and make sure all areas are working the way they should.
+Otra área importante que se deriva del deterioro del código, en general, es la capacidad de probar nuestro código de infraestructura como código y asegurarnos de que todas las áreas funcionen como deberían.
 
-First up there are some built-in testing commands we can take a look at:
+Aquí hay algunos comandos de prueba incorporados que podemos utilizar:
 
-| Command              | Description                                                                                |
-| -------------------- | ------------------------------------------------------------------------------------------ |
-| `terraform fmt`      | Rewrite Terraform configuration files to a canonical format and style.                     |
-| `terraform validate` | Validates the configuration files in a directory, referring only to the configuration      |
-| `terraform plan`     | Creates an execution plan, which lets you preview the changes that Terraform plans to make |
-| Custom validation    | Validation of your input variables to ensure they match what you would expect them to be   |
+| ComandO              | Descripción                                                                                       |
+| -------------------- | ------------------------------------------------------------------------------------------------- |
+| `terraform fmt`      | Reescribe los archivos de configuración de Terraform en un formato y estilo canónicos.            |
+| `terraform validate` | Valida los archivos de configuración en un directorio, refiriéndose solo a la configuración.      |
+| `terraform plan`     | Crea un plan de ejecución que te permite previsualizar los cambios que Terraform planea realizar. |
+| Custom validation    | Validación de las variables de entrada para asegurarte de que coincidan con lo esperado.          |
 
-We also have some testing tools available external to Terraform:
+También existen herramientas de prueba externas a Terraform:
 
 - [tflint](https://github.com/terraform-linters/tflint)
 
-  - Find possible errors
-  - Warn about deprecated syntax and unused declarations.
-  - Enforce best practices, and naming conventions.
+- Encuentra posibles errores.
+- Advierte sobre sintaxis obsoletas y declaraciones no utilizadas.
+- Aplica las mejores prácticas y convenciones de nomenclatura.
 
-Scanning tools
+Herramientas de escaneo:
 
-- [checkov](https://www.checkov.io/) - scans cloud infrastructure configurations to find misconfigurations before they're deployed.
-- [tfsec](https://aquasecurity.github.io/tfsec/v1.4.2/) - static analysis security scanner for your Terraform code.
-- [terrascan](https://github.com/accurics/terrascan) - static code analyser for Infrastructure as Code.
-- [terraform-compliance](https://terraform-compliance.com/) - a lightweight, security and compliance-focused test framework against terraform to enable the negative testing capability for your infrastructure-as-code.
-- [snyk](https://docs.snyk.io/products/snyk-infrastructure-as-code/scan-terraform-files/scan-and-fix-security-issues-in-terraform-files) - scans your Terraform code for misconfigurations and security issues
+- [checkov](https://www.checkov.io/) - escanea las configuraciones de infraestructura en la nube en busca de configuraciones incorrectas antes de implementarlas.
+- [tfsec](https://aquasecurity.github.io/tfsec/v1.4.2/) - analizador de seguridad de análisis estático para tu código de Terraform.
+- [terrascan](https://github.com/accurics/terrascan) - analizador de código estático para infraestructura como código.
+- [terraform-compliance](https://terraform-compliance.com/) - un marco de prueba ligero centrado en la seguridad y el cumplimiento para Terraform, que permite la capacidad de prueba negativa para tu infraestructura como código.
+- [snyk](https://docs.snyk.io/products/snyk-infrastructure-as-code/scan-terraform-files/scan-and-fix-security-issues-in-terraform-files) - escanea tu código de Terraform en busca de configuraciones incorrectas y problemas de seguridad.
 
-Managed Cloud offering
+Oferta de Cloud gestionada:
 
-- [Terraform Sentinel](https://www.terraform.io/cloud-docs/sentinel) - embedded policy-as-code framework integrated with the HashiCorp Enterprise products. It enables fine-grained, logic-based policy decisions, and can be extended to use information from external sources.
+- [Terraform Sentinel](https://www.terraform.io/cloud-docs/sentinel) - marco de política como código integrado con los productos empresariales de HashiCorp. Permite decisiones de políticas lógicas detalladas y se puede ampliar para usar información de fuentes externas.
 
-Automated testing
+Pruebas automatizadas:
 
-- [Terratest](https://terratest.gruntwork.io/) - Terratest is a Go library that provides patterns and helper functions for testing infrastructure
+- [Terratest](https://terratest.gruntwork.io/) - Terratest es una biblioteca de Go que proporciona patrones y funciones auxiliares para probar la infraestructura.
 
-Worth a mention
+Mencionado aparte:
 
-- [Terraform Cloud](https://cloud.hashicorp.com/products/terraform) - Terraform Cloud is HashiCorp’s managed service offering. It eliminates the need for unnecessary tooling and documentation for practitioners, teams, and organizations to use Terraform in production.
+- [Terraform Cloud](https://cloud.hashicorp.com/products/terraform) - Terraform Cloud es el servicio administrado de HashiCorp. Elimina la necesidad de herramientas y documentación innecesarias para que los profesionales, equipos y organizaciones utilicen Terraform en producción.
 
-- [Terragrunt](https://terragrunt.gruntwork.io/) - Terragrunt is a thin wrapper that provides extra tools for keeping your configurations DRY, working with multiple Terraform modules, and managing remote state.
+- [Terragrunt](https://terragrunt.gruntwork.io/) - Terragrunt es una capa delgada que proporciona herramientas adicionales para mantener las configuraciones DRY, trabajar con varios módulos de Terraform y gestionar el estado remoto.
 
-- [Atlantis](https://www.runatlantis.io/) - Terraform Pull Request Automation
+- [Atlantis](https://www.runatlantis.io/) - Automatización de solicitudes de extracción de Terraform.
 
-### Alternatives
+### Alternativas
 
-We mentioned on Day 57 when we started this section that there were some alternatives and I very much plan on exploring this following on from this challenge.
+Mencionamos en el Día 57 al comenzar esta sección que existen algunas alternativas, y tengo la intención de explorar esto más a fondo después de este desafío.
 
-| Cloud Specific                  | Cloud Agnostic |
-| ------------------------------- | -------------- |
-| AWS CloudFormation              | Terraform      |
-| Azure Resource Manager          | Pulumi         |
-| Google Cloud Deployment Manager |                |
+| Específico de la nube           | Agnóstico de la nube |
+| ------------------------------- | -------------------- |
+| AWS CloudFormation              | Terraform            |
+| Azure Resource Manager          | Pulumi               |
+| Google Cloud Deployment Manager |                      |
 
-I have used AWS CloudFormation probably the most out of the above list and native to AWS but I have not used the others other than Terraform. As you can imagine the cloud-specific versions are very good in that particular cloud but if you have multiple cloud environments then you are going to struggle to migrate those configurations or you are going to have multiple management planes for your IaC efforts.
+He utilizado AWS CloudFormation probablemente más que cualquier otra de las opciones anteriores, ya que es nativo de AWS, pero no he usado las demás alternativas aparte de Terraform. Como puedes imaginar, las versiones específicas de la nube son muy buenas en esa nube en particular, pero si tienes múltiples entornos en la nube, te resultará difícil migrar esas configuraciones o tendrás múltiples planos de administración para tus esfuerzos de infraestructura como código.
 
-I think an interesting next step for me is to take some time and learn more about [Pulumi](https://www.pulumi.com/)
+Creo que el siguiente paso interesante para mí es dedicar tiempo a aprender más sobre [Pulumi](https://www.pulumi.com/)
 
-From a Pulumi comparison on their site
+Desde una comparación de Pulumi en su sitio web:
 
-> "Both Terraform and Pulumi offer the desired state infrastructure as code model where the code represents the desired infrastructure state and the deployment engine compares this desired state with the stack’s current state and determines what resources need to be created, updated or deleted."
+> "Tanto Terraform como Pulumi ofrecen el modelo de infraestructura como código de estado deseado, donde el código representa el estado deseado de la infraestructura y el motor de implementación compara este estado deseado con el estado actual del stack y determina qué recursos deben crearse, actualizarse o eliminarse".
 
-The biggest difference I can see is that unlike the HashiCorp Configuration Language (HCL) Pulumi allows for general-purpose languages like Python, TypeScript, JavaScript, Go and .NET.
+La diferencia más notable que puedo ver es que, a diferencia del lenguaje de configuración de HashiCorp (HCL), Pulumi permite utilizar lenguajes de propósito general como Python, TypeScript, JavaScript, Go y .NET.
 
-A quick overview [Introduction to Pulumi: Modern Infrastructure as Code](https://www.youtube.com/watch?v=QfJTJs24-JM) I like the ease and choices you are prompted with and want to get into this a little more.
+Una descripción general rápida: [Introducción a Pulumi: Infraestructura moderna como código.](https://www.youtube.com/watch?v=QfJTJs24-JM) Me gusta la facilidad y las opciones que se ofrecen, y quiero explorar esto un poco más.
 
-This wraps up the Infrastructure as code section and next we move on to that little bit of overlap with configuration management in particular as we get past the big picture of configuration management we are going to be using Ansible for some of those tasks and demos.
+Esto concluye la sección de infraestructura como código y a continuación pasaremos a esa pequeña superposición con la administración de la configuración, en particular, a medida que avanzamos más allá de la imagen general de la administración de la configuración, utilizaremos Ansible para algunas de esas tareas y demostraciones.
 
-## Resources
+## Recursos
 
-I have listed a lot of resources down below and I think this topic has been covered so many times out there, If you have additional resources be sure to raise a PR with your resources and I will be happy to review and add them to the list.
+A continuación, he enumerado muchos recursos y creo que este tema se ha cubierto muchas veces. Si tienes recursos adicionales, asegúrate de enviar una solicitud de extracción con tus recursos y estaré encantado de revisarlos y agregarlos a la lista.
 
 - [What is Infrastructure as Code? Difference of Infrastructure as Code Tools](https://www.youtube.com/watch?v=POPP2WTJ8es)
 - [Terraform Tutorial | Terraform Course Overview 2021](https://www.youtube.com/watch?v=m3cKkYXl-8o)
@@ -97,5 +97,6 @@ I have listed a lot of resources down below and I think this topic has been cove
 - [Terraform Tutorial - The Best Project Ideas](https://www.youtube.com/watch?v=oA-pPa0vfks)
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
 - [Pulumi - IaC in your favorite programming language!](https://www.youtube.com/watch?v=vIjeiDcsR3Q&t=51s)
+- [Herramientas para Terraform](https://vergaracarmona.es/herramientas-para-terraform/)
 
-See you on [Day 63](day63.md)
+Nos vemos en el [Día 63](day63.md)
