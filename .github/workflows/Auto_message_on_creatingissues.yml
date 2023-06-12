@@ -13,4 +13,4 @@ jobs:
       uses: peter-evans/create-or-update-comment@v1
       with:
         issue-number: ${{tojson(github.event.issue.number)}}
-        body: Hello there!👋, @${{ github.actor }} Welcome to the Solidity-Pathshala! 🚀⚡Thank you and Congratulations🎉 for opening a issue in this project. Please make sure not to start working on this issue, unless you are assigned to it.😄
+        body: Hello there!👋, @${{ github.actor }} Welcome to the 90DaysOfDevOps! 🚀⚡Thank you and Congratulations🎉 for opening a issue in this project. Please make sure not to start working on this issue, unless you are assigned to it.😄
