@@ -1,12 +1,12 @@
-## Docker Containers, Provisioners & Modules
+## Contenedores de Docker, provisionadores y módulos
 
-On [Day 59](day59.md) we provisioned a virtual machine using Terraform to our local FREE VirtualBox environment. In this section, we are going to deploy a Docker container with some configuration to our local Docker environment.
+En el [Dí 59](day59.md) provisionamos una máquina virtual utilizando Terraform en nuestro entorno local de VirtualBox GRATIS. En esta sección, vamos a implementar un contenedor de Docker con alguna configuración en nuestro entorno local de Docker.
 
-### Docker Demo
+### Demostración de Docker
 
-First up we are going to use the code block below, the outcome of the below is that we would like a simple web app to be deployed into docker and to publish this so that it is available to our network. We will be using nginx and we will make this available externally on our laptop over localhost and port 8000. We are using a docker provider from the community and you can see the docker image we are using also stated in our configuration.
+Primero, vamos a utilizar el bloque de código a continuación. El resultado de esto es que queremos desplegar una aplicación web simple en Docker y publicarla para que esté disponible en nuestra red. Vamos a utilizar nginx y lo haremos disponible externamente en nuestro portátil a través de localhost y el puerto 8000. Estamos utilizando un proveedor de Docker de la comunidad y también puedes ver la imagen de Docker que estamos utilizando en nuestra configuración.
 
-```
+```terraform
 terraform {
   required_providers {
     docker = {
@@ -33,25 +33,25 @@ resource "docker_container" "nginx" {
 }
 ```
 
-The first task is to use `terraform init` command to download the provider to our local machine.
+La primera tarea es utilizar el comando `terraform init` para descargar el proveedor en nuestra máquina local.
 
 ![](Images/Day60_IAC1.png)
 
-We then run our `terraform apply` followed by `docker ps` and you can see we have a running container.
+Luego ejecutamos `terraform apply` seguido de `docker ps` y puedes ver que tenemos un contenedor en ejecución.
 
 ![](Images/Day60_IAC2.png)
 
-If we then open a browser we can navigate to `http://localhost:8000/` and you will see we have access to our NGINX container.
+Si abrimos un navegador y navegamos a `http://localhost:8000/`, verás que tenemos acceso a nuestro contenedor NGINX.
 
 ![](Images/Day60_IAC3.png)
 
-You can find out more information on the [Docker Provider](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/container)
+Puedes encontrar más información sobre [Docker Provider](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/container)
 
-The above is a very simple demo of what can be done with Terraform plus Docker and how we can now manage this under the Terraform state. We covered docker-compose in the containers section and there is a little crossover in a way between this, infrastructure as code as well as then Kubernetes.
+Lo anterior es una demostración muy sencilla de lo que se puede hacer con Terraform y Docker, y cómo podemos administrarlo ahora bajo el estado de Terraform. Cubrimos docker-compose en la sección de contenedores y hay un poco de superposición en cierto sentido entre esto, la infraestructura como código y luego Kubernetes.
 
-To show this and how Terraform can handle a little more complexity, we are going to take the docker-compose file for WordPress and MySQL that we created with docker-compose and we will put this to Terraform. You can find the [docker-wordpress.tf](2022/Days/IaC/Docker-WordPress/docker-WordPress.tf)
+Para mostrar esto y cómo Terraform puede manejar un poco más de complejidad, vamos a tomar el archivo docker-compose de WordPress y MySQL que creamos con docker-compose y lo vamos a poner en Terraform. Puedes encontrar el [docker-wordpress.tf](2022/Days/IaC/Docker-WordPress/docker-WordPress.tf)
 
-```
+```terraform
 terraform {
   required_providers {
     docker = {
@@ -111,25 +111,25 @@ resource "docker_container" "wordpress" {
 }
 ```
 
-We again put this in a new folder and then run our `terraform init` command to pull down our provisioners required.
+Nuevamente, colocamos esto en una nueva carpeta y luego ejecutamos el comando `terraform init` para descargar los provisionadores requeridos.
 
 ![](Images/Day60_IAC4.png)
 
-We then run our `terraform apply` command and then take a look at our docker ps output we should see our newly created containers.
+Luego ejecutamos el comando `terraform apply` y luego echamos un vistazo a la salida de `docker ps` y deberíamos ver nuestros contenedores recién creados.
 
 ![](Images/Day60_IAC5.png)
 
-We can then also navigate to our WordPress front end. Much like when we went through this process with docker-compose in the containers section we can now run through the setup and our WordPress posts would be living in our MySQL database.
+También podemos navegar a nuestra interfaz de WordPress. Al igual que cuando pasamos por este proceso con docker-compose en la sección de contenedores, ahora podemos realizar la configuración y nuestras publicaciones de WordPress estarían en nuestra base de datos de MySQL.
 
 ![](Images/Day60_IAC6.png)
 
-Now we have covered containers and Kubernetes in some detail, we probably know that this is ok for testing but if you were going to be running a website you would not do this with containers alone and you would look at using Kubernetes to achieve this, Next up we are going to take a look using Terraform with Kubernetes.
+Ahora que hemos cubierto los contenedores y Kubernetes en detalle, probablemente sepamos que esto está bien para pruebas, pero si vamos a ejecutar un sitio web, no lo haríamos solo con contenedores y consideraríamos utilizar Kubernetes para lograr esto. A continuación, vamos a echar un vistazo a cómo utilizar Terraform con Kubernetes.
 
-### Provisioners
+### Provisionadores
 
-Provisioners are there so that if something cannot be declarative we have a way in which to parse this to our deployment.
+Los provisionadores están ahí para que, si algo no puede ser declarativo, tengamos una forma de enviar esto a nuestra implementación.
 
-If you have no other alternative and adding this complexity to your code is the place to go then you can do this by running something similar to the following block of code.
+Si no tienes otra alternativa y agregar esta complejidad a tu código es el camino a seguir, puedes hacerlo ejecutando algo similar al siguiente bloque de código.
 
 ```
 resource "docker_container" "db" {
@@ -142,9 +142,9 @@ resource "docker_container" "db" {
 
 ```
 
-The remote-exec provisioner invokes a script on a remote resource after it is created. This could be used for something OS-specific or it could be used to wrap in a configuration management tool. Although notice that we have some of these covered in their provisioners.
+El provisionador `remote-exec` invoca un script en un recurso remoto después de que se crea. Esto podría usarse para algo específico del sistema operativo o podría usarse para envolver en una herramienta de gestión de configuración. Aunque debes tener en cuenta que algunos de estos ya están cubiertos en sus propios provisionadores.
 
-[More details on provisioners](https://www.terraform.io/language/resources/provisioners/syntax)
+[Más detalles de provisionadores](https://www.terraform.io/language/resources/provisioners/syntax)
 
 - file
 - local-exec
@@ -154,21 +154,21 @@ The remote-exec provisioner invokes a script on a remote resource after it is cr
   - chef
   - puppet
 
-### Modules
+### Módulos
 
-Modules are containers for multiple resources that are used together. A module consists of a collection of .tf files in the same directory.
+Los módulos son contenedores para múltiples recursos que se utilizan juntos. Un módulo consiste en una colección de archivos .tf en el mismo directorio.
 
-Modules are a good way to separate your infrastructure resources as well as be able to pull in third-party modules that have already been created so you do not have to reinvent the wheel.
+Los módulos son una buena forma de separar tus recursos de infraestructura, así como de poder utilizar módulos de terceros que ya han sido creados para no tener que reinventar la rueda.
 
-For example, if we wanted to use the same project to build out some VMs, VPCs, Security Groups and then also a Kubernetes cluster we would likely want to split our resources out into modules to better define our resources and where they are grouped.
+Por ejemplo, si queremos utilizar el mismo proyecto para crear algunas VM, VPC, grupos de seguridad y también un clúster de Kubernetes, probablemente querríamos dividir nuestros recursos en módulos para definir mejor nuestros recursos y dónde se agrupan.
 
-Another benefit to modules is that you can take these modules and use them on other projects or share them publicly to help the community.
+Otra ventaja de los módulos es que puedes tomar estos módulos y usarlos en otros proyectos o compartirlos públicamente para ayudar a la comunidad.
 
-We are breaking down our infrastructure into components, components are known here as modules.
+Estamos dividiendo nuestra infraestructura en componentes, y esos componentes se conocen aquí como módulos.
 
-## Resources
+## Recursos
 
-I have listed a lot of resources down below and I think this topic has been covered so many times out there, If you have additional resources be sure to raise a PR with your resources and I will be happy to review and add them to the list.
+He enumerado muchos recursos a continuación y creo que este tema ha sido cubierto muchas veces, así que si tienes recursos adicionales, asegúrate de enviar una solicitud de extracción (PR) con tus recursos y estaré encantado de revisarlos y agregarlos a la lista.
 
 - [What is Infrastructure as Code? Difference of Infrastructure as Code Tools](https://www.youtube.com/watch?v=POPP2WTJ8es)
 - [Terraform Tutorial | Terraform Course Overview 2021](https://www.youtube.com/watch?v=m3cKkYXl-8o)
@@ -180,5 +180,6 @@ I have listed a lot of resources down below and I think this topic has been cove
 - [Terraform Simple Projects](https://terraform.joshuajebaraj.com/)
 - [Terraform Tutorial - The Best Project Ideas](https://www.youtube.com/watch?v=oA-pPa0vfks)
 - [Awesome Terraform](https://github.com/shuaibiyy/awesome-terraform)
+- [Herramientas para Terraform](https://vergaracarmona.es/herramientas-para-terraform/)
 
-See you on [Day 61](day61.md)
+Nos vemos en el [Día 61](day61.md)
