@@ -1,97 +1,96 @@
-## Getting hands-on with Jenkins
+## Aprendiendo Jenkins en la práctica
 
-The plan today is to get some hands-on with Jenkins and make something happen as part of our CI pipeline, looking at some example code bases that we can use.
+El plan de hoy es practicar con Jenkins y hacer algo como parte de nuestro flujo de integración continua (CI), revisando algunos ejemplos de bases de código que podemos utilizar.
 
-### What is a pipeline?
+### ¿Qué es un pipeline?
 
-Before we start we need to know what is a pipeline when it comes to CI, and we already covered this in the session yesterday with the following image.
+Antes de comenzar, es importante entender qué es un pipeline en el contexto de la integración continua (CI). Ya cubrimos esto en la sesión anterior con la siguiente imagen.
 
 ![](Images/Day71_CICD4.png)
 
-We want to take the processes or steps above and we want to automate them to get an outcome eventually meaning that we have a deployed application that we can then ship to our customers, end users etc.
+Queremos automatizar los procesos o pasos anteriores para obtener un resultado, lo cual implica tener una aplicación implementada que luego podamos enviar a nuestros clientes y usuarios finales.
 
-This automated process enables us to have version control through to our users and customers. Every change, feature enhancement, bug fix etc goes through this automated process confirming that everything is fine without too much manual intervention to ensure our code is good.
+Este proceso automatizado nos permite tener control de versiones hasta llegar a nuestros usuarios y clientes. Cada cambio, mejora de características, corrección de errores, etc., pasa por este proceso automatizado para confirmar que todo está bien, con la menor intervención manual posible, y asegurarnos de que nuestro código sea bueno.
 
-This process involves building the software in a reliable and repeatable manner, as well as progressing the built software (called a "build") through multiple stages of testing and deployment.
+Este proceso implica construir el software de manera confiable y repetible, y avanzar con el software construido (llamado "build") a través de múltiples etapas de prueba e implementación.
 
-A Jenkins pipeline is written into a text file called a Jenkinsfile. Which itself should be committed to a source control repository. This is also known as Pipeline as code, we could also very much liken this to Infrastructure as code which we covered a few weeks back.
+Un pipeline de Jenkins se define en un archivo de texto llamado Jenkinsfile, que debe ser incluido en un repositorio de control de código fuente. También se conoce como "Pipeline as code" (pipeline como código), y se puede comparar con "Infrastructure as code" (infraestructura como código), que cubrimos hace algunas semanas.
 
-[Jenkins Pipeline Definition](https://www.jenkins.io/doc/book/pipeline/#ji-toolbar)
+[Definición de Pipeline de Jenkins](https://www.jenkins.io/doc/book/pipeline/#ji-toolbar)
 
-### Deploying Jenkins
+### Implementación de Jenkins
 
-I had some fun deploying Jenkins, You will notice from the [documentation](https://www.jenkins.io/doc/book/installing/) that there are many options on where you can install Jenkins.
+Me divertí implementando Jenkins. Notarás en la [documentación](https://www.jenkins.io/doc/book/installing/) que hay muchas opciones para instalar Jenkins.
 
-Given that I have minikube on hand and we have used this several times I wanted to use this for this task also. (also it is free!) Although the steps are given in the [Kubernetes Installation](https://www.jenkins.io/doc/book/installing/kubernetes/) had me hitting a wall and not getting things up and running, you can compare the two when I document my steps here.
+Dado que tengo minikube a mano y lo hemos usado varias veces, quería usarlo también para esta tarea (¡y además es gratuito!). Aunque los pasos proporcionados en la [Instalación en Kubernetes](https://www.jenkins.io/doc/book/installing/kubernetes/) me llevaron a un callejón sin salida y no logré poner todo en funcionamiento, puedes comparar ambos métodos cuando documente los pasos aquí.
 
-The first step is to get our minikube cluster up and running, we can simply do this with the `minikube start` command.
+El primer paso es iniciar nuestro clúster de minikube con el comando `minikube start`.
 
 ![](Images/Day72_CICD1.png)
 
-I have added a folder with all the YAML configuration and values that can be found [here](CICD/Jenkins) Now that we have our cluster we can run the following to create our jenkins namespace. `kubectl create -f jenkins-namespace.yml`
+He agregado una carpeta con toda la configuración YAML y los valores que se pueden encontrar [aquí](CICD/Jenkins). Ahora que tenemos nuestro clúster, podemos ejecutar lo siguiente para crear nuestro espacio de nombres de Jenkins: `kubectl create -f jenkins-namespace.yml`
 
 ![](Images/Day72_CICD2.png)
 
-We will be using Helm to deploy Jenkins into our cluster, we covered helm in the Kubernetes section. We first need to add the jenkinsci helm repository `helm repo add jenkinsci https://charts.jenkins.io` then update our charts `helm repo update`.
+Utilizaremos Helm para implementar Jenkins en nuestro clúster, tal como lo cubrimos en la sección de Kubernetes. Primero necesitamos agregar el repositorio de Helm de jenkinsci con el comando `helm repo add jenkinsci https://charts.jenkins.io`, luego actualizamos nuestros charts con `helm repo update`.
 
 ![](Images/Day72_CICD3.png)
 
-The idea behind Jenkins is that it is going to save state for its pipelines, you can run the above helm installation without persistence but if those pods are rebooted, changed or modified then any pipeline or configuration you have made will be lost. We will create a volume for persistence using the jenkins-volume.yml file with the `kubectl apply -f jenkins-volume.yml` command.
+La idea detrás de Jenkins es que guardará el estado de sus pipelines. Puedes ejecutar la instalación de Helm anterior sin persistencia, pero si esos pods se reinician, cambian o modifican, se perderán todas las pipelines o configuraciones que hayas realizado. Crearemos un volumen para la persistencia utilizando el archivo jenkins-volume.yml y el comando `kubectl apply -f jenkins-volume.yml`.
 
 ![](Images/Day72_CICD4.png)
 
-We also need a service account which we can create using this YAML file and command. `kubectl apply -f jenkins-sa.yml`
+También necesitamos una cuenta de servicio que podemos crear utilizando el archivo YAML y el siguiente comando: `kubectl apply -f jenkins-sa.yml`
 
 ![](Images/Day72_CICD5.png)
 
-At this stage we are good to deploy using the helm chart, we will first define our chart using `chart=jenkinsci/jenkins` and then we will deploy using this command where the jenkins-values.yml contain the persistence and service accounts that we previously deployed to our cluster. `helm install jenkins -n jenkins -f jenkins-values.yml $chart`
+En este punto, estamos listos para implementar el chart utilizando Helm. Primero definiremos nuestro chart utilizando `chart=jenkinsci/jenkins` , y luego lo implementaremos con el siguiente comando, donde jenkins-values.yml contiene la persistencia y las cuentas de servicio que implementamos anteriormente en nuestro clúster: `helm install jenkins -n jenkins -f jenkins-values.yml $chart`
 
 ![](Images/Day72_CICD6.png)
 
-At this stage, our pods will be pulling the image but the pod will not have access to the storage so no configuration can be started in terms of getting Jenkins up and running.
+En este punto, nuestros pods descargarán la imagen, pero el pod no tendrá acceso al almacenamiento, por lo que no se puede iniciar ninguna configuración para poner en funcionamiento Jenkins.
 
-This is where the documentation did not help me massively understand what needed to happen. But we can see that we have no permission to start our Jenkins install.
+Aquí es donde la documentación no me ayudó mucho para entender lo que necesitaba suceder. Pero podemos ver que no tenemos permiso para iniciar nuestra instalación de Jenkins.
 
 ![](Images/Day72_CICD7.png)
 
-To fix the above or resolve it, we need to make sure we provide access or the right permission for our Jenkins pods to be able to write to this location that we have suggested. We can do this by using the `minikube ssh` which will put us into the minikube docker container we are running on, and then using `sudo chown -R 1000:1000 /data/jenkins-volume` we can ensure we have permissions set on our data volume.
+Para solucionar lo anterior o resolverlo, debemos asegurarnos de proporcionar acceso o los permisos adecuados para que nuestros pods de Jenkins puedan escribir en la ubicación que hemos sugerido. Podemos hacer esto utilizando el comando `minikube ssh` , que nos llevará al contenedor de Docker de minikube en el que estamos ejecutando, y luego utilizando `sudo chown -R 1000:1000 /data/jenkins-volume`, podemos asegurarnos de que tengamos permisos establecidos en nuestro volumen de datos.
 
 ![](Images/Day72_CICD8.png)
 
-The above process should fix the pods, however, if not you can force the pods to be refreshed with the `kubectl delete pod jenkins-0 -n jenkins` command. At this point, you should have 2/2 running pods called jenkins-0.
+El proceso anterior debería solucionar los pods, pero si no, puedes forzar la actualización de los pods con el comando `kubectl delete pod jenkins-0 -n jenkins`. En este punto, deberías tener 2/2 pods en ejecución llamados jenkins-0.
 
 ![](Images/Day72_CICD9.png)
 
-We now need our admin password and we can this using the following command. `kubectl exec --namespace jenkins -it svc/jenkins -c jenkins -- /bin/cat /run/secrets/chart-admin-password && echo`
+Ahora necesitamos nuestra contraseña de administrador, que podemos obtener con el siguiente comando: `kubectl exec --namespace jenkins -it svc/jenkins -c jenkins -- /bin/cat /run/secrets/chart-admin-password && echo`
 
 ![](Images/Day72_CICD10.png)
 
-Now open a new terminal as we are going to use the `port-forward` command to allow us to gain access from our workstation. `kubectl --namespace jenkins port-forward svc/jenkins 8080:8080`
+Ahora abre una nueva terminal, ya que vamos a utilizar el comando `port-forward` para permitirnos acceder desde nuestro equipo de trabajo. Ejecuta el siguiente comando:  `kubectl --namespace jenkins port-forward svc/jenkins 8080:8080`
 
 ![](Images/Day72_CICD11.png)
 
-We should now be able to open a browser and log in to `http://localhost:8080` and authenticate with the username: admin and password we gathered in a previous step.
+Ahora deberíamos poder abrir un navegador y acceder a `http://localhost:8080`, autenticándonos con el nombre de usuario "admin" y la contraseña que obtuvimos en el paso anterior.
 
 ![](Images/Day72_CICD12.png)
 
-When we have authenticated, our Jenkins welcome page should look something like this:
+Cuando nos hayamos autenticado, nuestra página de bienvenida de Jenkins debería lucir así:
 
 ![](Images/Day72_CICD13.png)
 
-From here, I would suggest heading to "Manage Jenkins" and you will see "Manage Plugins" which will have some updates available. Select all of those plugins and choose "Download now and install after restart"
+Desde aquí, te sugiero ir a "Manage Jenkins" y verás "Manage Plugins" que tendrá algunas actualizaciones disponibles. Selecciona todos esos plugins y elige "Download now and install after restart" (Descargar ahora e instalar después de reiniciar).
 
 ![](Images/Day72_CICD14.png)
 
-If you want to go even further and automate the deployment of Jenkins using a shell script this great repository was shared with me on Twitter [mehyedes/nodejs-k8s](https://github.com/mehyedes/nodejs-k8s/blob/main/docs/automated-setup.md)
+Si deseas ir aún más lejos y automatizar la implementación de Jenkins utilizando un script de shell, este gran repositorio fue compartido conmigo en Twitter: [mehyedes/nodejs-k8s](https://github.com/mehyedes/nodejs-k8s/blob/main/docs/automated-setup.md)
 
 ### Jenkinsfile
 
-Now we have Jenkins deployed in our Kubernetes cluster, we can now go back and think about this Jenkinsfile.
+Ahora que hemos implementado Jenkins en nuestro clúster de Kubernetes, podemos regresar y pensar en este Jenkinsfile.
 
-Every Jenkinsfile will likely start like this, Which is firstly where you would define the steps of your pipeline, in this instance you have Build > Test > Deploy. But we are not doing anything other than using the `echo` command to call out the specific stages.
+Cada Jenkinsfile probablemente comenzará así, que es donde definirías los pasos de tu canalización. En este caso, tienes Build > Test > Deploy. Pero no estamos haciendo nada más que usar el comando `echo` para mostrar las etapas específicas.
 
 ```
-
 Jenkinsfile (Declarative Pipeline)
 
 pipeline {
@@ -115,32 +114,31 @@ pipeline {
         }
     }
 }
-
 ```
 
-In our Jenkins dashboard, select "New Item" give the item a name, I am going to "echo1" I am going to suggest that this is a Pipeline.
+En nuestro panel de control de Jenkins, selecciona "New Item" (Nuevo elemento), dale un nombre al elemento, yo usaré "echo1" y sugeriré que se trata de una Pipeline.
 
 ![](Images/Day72_CICD15.png)
 
-Hit Ok and you will then have the tabs (General, Build Triggers, Advanced Project Options and Pipeline) for a simple test we are only interested in Pipeline. Under Pipeline you can add a script, we can copy and paste the above script into the box.
+Haz clic en "Ok" y luego verás las pestañas (General, Build Triggers, Advanced Project Options y Pipeline). Para una prueba sencilla, solo nos interesa Pipeline. Bajo Pipeline, puedes agregar un script. Copiemos y peguemos el script anterior en el cuadro.
 
-As we said above this is not going to do much but it will show us the stages of our Build > Test > Deploy
+Como mencionamos anteriormente, esto no hará mucho, pero nos mostrará las etapas de nuestra Build > Test > Deploy.
 
 ![](Images/Day72_CICD16.png)
 
-Click Save, We can now run our build using the build now highlighted below.
+Haz clic en "Save" (Guardar). Ahora podemos ejecutar nuestra compilación usando el botón "build now" resaltado a continuación.
 
 ![](Images/Day72_CICD17.png)
 
-We should also open a terminal and run the `kubectl get pods -n jenkins` to see what happens there.
+También deberíamos abrir una terminal y ejecutar `kubectl get pods -n jenkins` para ver qué sucede allí.
 
 ![](Images/Day72_CICD18.png)
 
-Ok, very simple stuff but we can now see that our Jenkins deployment and installation are working correctly and we can start to see the building blocks of the CI pipeline here.
+Bien, cosas muy simples, pero ahora podemos ver que nuestra implementación e instalación de Jenkins funcionan correctamente y podemos comenzar a ver los bloques de construcción de la canalización de CI aquí.
 
-In the next section, we will be building a Jenkins Pipeline.
+En la próxima sección, construiremos una Jenkins Pipeline.
 
-## Resources
+## Recursos
 
 - [Jenkins is the way to build, test, deploy](https://youtu.be/_MXtbjwsz3A)
 - [Jenkins.io](https://www.jenkins.io/)
@@ -151,4 +149,4 @@ In the next section, we will be building a Jenkins Pipeline.
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 73](day73.md)
+Nos vemos en el [Día 73](day73.md)
