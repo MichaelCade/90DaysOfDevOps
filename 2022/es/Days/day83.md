@@ -140,4 +140,4 @@ Next up we are going to be taking a look into data management and how DevOps pri
 - [What is ELK Stack?](https://www.youtube.com/watch?v=4X0WLg05ASw)
 - [Fluentd simply explained](https://www.youtube.com/watch?v=5ofsNyHZwWE&t=14s)
 
-See you on [Day 84](day84.md)
+Nos vemos en el [Día 84](day84.md)
