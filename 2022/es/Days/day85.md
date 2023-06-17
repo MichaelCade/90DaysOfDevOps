@@ -1,129 +1,129 @@
-## Data Services
+## Servicios de datos
 
-Databases are going to be the most common data service that we come across in our environments. I wanted to take this session to explore some of those different types of Databases and some of the use cases they each have. Some we have used and seen throughout the challenge.
+Las bases de datos serán el servicio de datos más común que encontraremos en nuestros entornos. Quería aprovechar esta sesión para explorar algunos de los diferentes tipos de bases de datos y algunos de los casos de uso que cada una tiene. Algunos los hemos utilizado y visto a lo largo del desafío.
 
-From an application development point of view choosing the right data service or database is going to be a huge decision when it comes to the performance and scalability of your application.
+Desde el punto de vista del desarrollo de aplicaciones, elegir el servicio de datos o la base de datos adecuada será una decisión importante en cuanto al rendimiento y la escalabilidad de su aplicación.
 
 https://www.youtube.com/watch?v=W2Z7fbCLSTw
 
-### Key-value
+### Clave-valor
 
-A key-value database is a type of nonrelational database that uses a simple key-value method to store data. A key-value database stores data as a collection of key-value pairs in which a key serves as a unique identifier. Both keys and values can be anything, ranging from simple objects to complex compound objects. Key-value databases are highly partitionable and allow horizontal scaling at scales that other types of databases cannot achieve.
+Una base de datos clave-valor es un tipo de base de datos no relacional que utiliza un método simple de clave-valor para almacenar datos. Una base de datos clave-valor almacena datos como una colección de pares clave-valor en los que una clave sirve como identificador único. Tanto las claves como los valores pueden ser cualquier cosa, desde objetos simples hasta objetos compuestos complejos. Las bases de datos clave-valor son altamente particionables y permiten una escalabilidad horizontal en escalas que otros tipos de bases de datos no pueden lograr.
 
-An example of a Key-Value database is Redis.
+Un ejemplo de una base de datos clave-valor es Redis.
 
-_Redis is an in-memory data structure store, used as a distributed, in-memory key–value database, cache and message broker, with optional durability. Redis supports different kinds of abstract data structures, such as strings, lists, maps, sets, sorted sets, HyperLogLogs, bitmaps, streams, and spatial indices._
+*Redis es una tienda de estructuras de datos en memoria, utilizado como base de datos distribuida en memoria clave-valor, caché y agente de mensajes, con durabilidad opcional. Redis admite diferentes tipos de estructuras de datos abstractas, como cadenas, listas, mapas, conjuntos, conjuntos ordenados, HyperLogLogs, mapas de bits, flujos e índices espaciales.*
 
 ![](Images/Day85_Data1.png)
 
-As you can see from the description of Redis this means that our database is fast but we are limited on space as a trade-off. Also, no queries or joins which means data modelling options are very limited.
+Como se puede ver en la descripción de Redis, esto significa que nuestra base de datos es rápida pero estamos limitados en espacio como un compromiso. Además, no hay consultas ni uniones, lo que significa que las opciones de modelado de datos son muy limitadas.
 
-Best for:
+Ideal para:
 
-- Caching
-- Pub/Sub
-- Leaderboards
-- Shopping carts
+- Caché
+- Pub/Sub (publicación/suscripción)
+- Tablas de clasificación
+- Carritos de compras
 
-Generally used as a cache above another persistent data layer.
+Generalmente se utiliza como una caché por encima de otra capa de datos persistente.
 
-### Wide Column
+### Columnas anchas
 
-A wide-column database is a NoSQL database that organises data storage into flexible columns that can be spread across multiple servers or database nodes, using multi-dimensional mapping to reference data by column, row, and timestamp.
+Una base de datos de columnas anchas es una base de datos NoSQL que organiza el almacenamiento de datos en columnas flexibles que pueden distribuirse en varios servidores o nodos de la base de datos, utilizando un mapeo multidimensional para hacer referencia a los datos por columna, fila y marca de tiempo.
 
-_Cassandra is a free and open-source, distributed, wide-column store, NoSQL database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure._
+*Cassandra es un sistema de gestión de bases de datos distribuido, de almacenamiento de columnas anchas, de código abierto, diseñado para manejar grandes cantidades de datos en muchos servidores de baja calidad, proporcionando alta disponibilidad sin un único punto de fallo.*
 
 ![](Images/Day85_Data2.png)
 
-No schema which means can handle unstructured data however this can be seen as a benefit to some workloads.
+Sin esquema, lo que significa que puede manejar datos no estructurados, lo cual puede ser beneficioso para algunas cargas de trabajo.
 
-Best for:
+Ideal para:
 
-- Time-Series
-- Historical Records
-- High-Write, Low-Read
+- Series temporales
+- Registros históricos
+- Alta escritura, baja lectura
 
-### Document
+### Documentos
 
-A document database (also known as a document-oriented database or a document store) is a database that stores information in documents.
+Una base de datos de documentos (también conocida como base de datos orientada a documentos o almacenamiento de documentos) es una base de datos que almacena información en documentos.
 
-_MongoDB is a source-available cross-platform document-oriented database program. Classified as a NoSQL database program, MongoDB uses JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and licensed under the Server Side Public License._
+*MongoDB es un programa de base de datos orientada a documentos de código fuente abierto, multiplataforma. Clasificado como un programa de base de datos NoSQL, MongoDB utiliza documentos similares a JSON con esquemas opcionales. MongoDB es desarrollado por MongoDB Inc. y tiene licencia bajo la Licencia Pública del Servidor.*
 
 ![](Images/Day85_Data3.png)
 
-NoSQL document databases allow businesses to store simple data without using complex SQL codes. Quickly store with no compromise to reliability.
+Las bases de datos de documentos NoSQL permiten a las empresas almacenar datos simples sin utilizar códigos SQL complejos. Almacenamiento rápido sin comprometer la confiabilidad.
 
-Best for:
+Ideal para:
 
-- Most Applications
-- Games
-- Internet of Things
+- La mayoría de las aplicaciones
+- Juegos
+- Internet de las cosas
 
-### Relational
+### Relacionales
 
-If you are new to databases but you know of them I guess that you have come across a relational database.
+Si eres nuevo en las bases de datos pero tienes conocimiento de ellas, supongo que has encontrado una base de datos relacional.
 
-A relational database is a digital database based on the relational model of data, as proposed by E. F. Codd in 1970. A system used to maintain relational databases is a relational database management system. Many relational database systems have the option of using SQL for querying and maintaining the database.
+Una base de datos relacional es una base de datos digital basada en el modelo relacional de datos, propuesto por E. F. Codd en 1970. Un sistema utilizado para mantener bases de datos relacionales es un sistema de gestión de bases de datos relacionales. Muchos sistemas de bases de datos relacionales tienen la opción de utilizar SQL para consultar y mantener la base de datos.
 
-_MySQL is an open-source relational database management system. Its name is a combination of "My", the name of co-founder Michael Widenius's daughter, and "SQL", the abbreviation for Structured Query Language._
+*MySQL es un sistema de gestión de bases de datos relacionales de código abierto. Su nombre es una combinación de "My", el nombre de la hija del cofundador Michael Widenius, y "SQL", la abreviatura de Structured Query Language (lenguaje de consulta estructurado).*
 
-MySQL is one example of a relational database there are lots of other options.
+MySQL es un ejemplo de una base de datos relacional, hay muchas otras opciones.
 
 ![](Images/Day85_Data4.png)
 
-Whilst researching relational databases the term or abbreviation **ACID** has been mentioned a lot, (atomicity, consistency, isolation, durability) is a set of properties of database transactions intended to guarantee data validity despite errors, power failures, and other mishaps. In the context of databases, a sequence of database operations that satisfies the ACID properties (which can be perceived as a single logical operation on the data) is called a transaction. For example, a transfer of funds from one bank account to another, even involving multiple changes such as debiting one account and crediting another, is a single transaction.
+Al investigar las bases de datos relacionales, se ha mencionado mucho el término o abreviatura **ACID** (atomicidad, consistencia, aislamiento, durabilidad), que es un conjunto de propiedades de transacciones de bases de datos destinadas a garantizar la validez de los datos a pesar de errores, cortes de energía y otros contratiempos. En el contexto de las bases de datos, una secuencia de operaciones de base de datos que cumple con las propiedades ACID (que se puede percibir como una sola operación lógica en los datos) se llama transacción. Por ejemplo, una transferencia de fondos de una cuenta bancaria a otra, que involucra múltiples cambios como el débito de una cuenta y el crédito de otra, es una sola transacción.
 
-Best for:
+Ideal para:
 
-- Most Applications (It has been around for years, doesn't mean it is the best)
+- La mayoría de las aplicaciones (ha estado disponible durante años, pero eso no significa que sea la mejor opción)
 
-It is not ideal for unstructured data or the ability to scale is where some of the other NoSQL mentions give a better ability to scale for certain workloads.
+No es ideal para datos no estructurados o para la capacidad de escalar, donde algunas de las otras menciones NoSQL ofrecen una mejor capacidad de escalado para ciertas cargas de trabajo.
 
-### Graph
+### Grafos
 
-A graph database stores nodes and relationships instead of tables, or documents. Data is stored just like you might sketch ideas on a whiteboard. Your data is stored without restricting it to a pre-defined model, allowing a very flexible way of thinking about and using it.
+Una base de datos de grafos almacena nodos y relaciones en lugar de tablas o documentos. Los datos se almacenan de la misma manera que podrías hacer un boceto de ideas en una pizarra. Sus datos se almacenan sin restricciones en un modelo predefinido, lo que permite una forma muy flexible de pensar y usarlos.
 
-_Neo4j is a graph database management system developed by Neo4j, Inc. Described by its developers as an ACID-compliant transactional database with native graph storage and processing_
+Neo4j es un sistema de gestión de bases de datos de grafos desarrollado por Neo4j, Inc. Descrito por sus desarrolladores como una base de datos transaccional compatible con ACID con almacenamiento y procesamiento nativos de grafos.
 
-Best for:
+Ideal para:
 
-- Graphs
-- Knowledge Graphs
-- Recommendation Engines
+- Grafos
+- Grafos de conocimiento
+- Motores de recomendación
 
-### Search Engine
+### Motor de búsqueda
 
-In the last section, we used a Search Engine database in the way of Elasticsearch.
+En la última sección, usamos una base de datos de motor de búsqueda en forma de Elasticsearch.
 
-A search-engine database is a type of non-relational database that is dedicated to the search for data content. Search-engine databases use indexes to categorise similar characteristics among data and facilitate search capability.
+Una base de datos de motor de búsqueda es un tipo de base de datos no relacional dedicada a la búsqueda de contenido de datos. Las bases de datos de motores de búsqueda utilizan índices para categorizar características similares entre los datos y facilitar la capacidad de búsqueda.
 
-_Elasticsearch is a search engine based on the Lucene library. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents._
+*Elasticsearch es un motor de búsqueda basado en la biblioteca Lucene. Proporciona un motor de búsqueda de texto completo distribuido capaz de múltiples inquilinos con una interfaz web HTTP y documentos JSON sin esquema.*
 
-Best for:
+Ideal para:
 
-- Search Engines
-- Typeahead
-- Log search
+- Motores de búsqueda
+- Búsqueda anticipada
+- Búsqueda de registros
 
-### Multi-model
+### Multi-modelo
 
-A multi-model database is a database management system designed to support multiple data models against a single, integrated backend. In contrast, most database management systems are organized around a single data model that determines how data can be organized, stored, and manipulated. Document, graph, relational, and key–value models are examples of data models that may be supported by a multi-model database.
+Una base de datos multi-modelo es un sistema de gestión de bases de datos diseñado para admitir múltiples modelos de datos en un único backend integrado. En contraste, la mayoría de los sistemas de gestión de bases de datos están organizados en torno a un solo modelo de datos que determina cómo se pueden organizar, almacenar y manipular los datos. Los modelos de documentos, grafos, relacionales y clave-valor son ejemplos de modelos de datos que pueden ser compatibles con una base de datos multi-modelo.
 
-_Fauna is a flexible, developer-friendly, transactional database delivered as a secure and scalable cloud API with native GraphQL._
+*Fauna es una base de datos flexible y fácil de usar, entregada como una API segura y escalable en la nube con GraphQL nativo.*
 
-Best for:
+Ideal para:
 
-- You are not stuck on having to choose a data model
-- ACID Compliant
-- Fast
-- No provisioning overhead
-- How do you want to consume your data and let the cloud do the heavy lifting
+- No estar limitado a elegir un modelo de datos
+- Compatible con ACID
+- Rápido
+- Sin sobrecarga de aprovisionamiento
+- Cómo quieres consumir tus datos y permitir que la nube haga el trabajo pesado
 
-That is going to wrap up this database overview session, no matter what industry you are in you are going to come across one area of databases. We are then going to take some of these examples and look at the data management and in particular the protection and storing of these data services later on in the section.
+Eso concluye esta sesión general sobre bases de datos. No importa en qué industria te encuentres, en algún momento te encontrarás con áreas de bases de datos. Luego, examinaremos algunos ejemplos de gestión de datos, especialmente la protección y el almacenamiento de estos servicios de datos más adelante en la sección.
 
-There are a ton of resources I have linked below, you could honestly spend 90 years probably deep diving into all database types and everything that comes with this.
+Hay una gran cantidad de recursos que he enlazado a continuación. Honestamente, podrías pasar 90 años sumergiéndote en todos los tipos de bases de datos y todo lo que conllevan.
 
-## Resources
+## Recursos
 
 - [Redis Crash Course - the What, Why and How to use Redis as your primary database](https://www.youtube.com/watch?v=OqCK95AS-YE)
 - [Redis: How to setup a cluster - for beginners](https://www.youtube.com/watch?v=GEg7s3i6Jak)
@@ -139,4 +139,4 @@ There are a ton of resources I have linked below, you could honestly spend 90 ye
 - [FaunaDB Basics - The Database of your Dreams](https://www.youtube.com/watch?v=2CipVwISumA)
 - [Fauna Crash Course - Covering the Basics](https://www.youtube.com/watch?v=ihaB7CqJju0)
 
-See you on [Day 86](day86.md)
+Nos vemos en el [Día 86](day86.md)
