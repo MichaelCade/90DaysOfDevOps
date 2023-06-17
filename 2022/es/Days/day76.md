@@ -1,16 +1,16 @@
-## ArgoCD Overview
+## Descripción general de ArgoCD
 
-“Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes”
+"Argo CD es una herramienta declarativa de entrega continua basada en GitOps para Kubernetes".
 
-Version control is the key here, ever made a change to your environment on the fly and have no recollection of that change and because the lights are on and everything is green you continue to keep plodding along? Ever made a change and broken everything or some of everything? You might have known you made the change and you can quickly roll back your change, that bad script or misspelling. Now ever done this on a massive scale and maybe it was not you or maybe it was not found straight away and now the business is suffering. Therefore, version control is important. Not only that but “Application definitions, configurations, and environments should be declarative, and version controlled.” On top of this (which comes from ArgoCD), they also mention that “Application deployment and lifecycle management should be automated, auditable, and easy to understand.”
+Aquí, el control de versiones es clave. ¿Alguna vez has realizado un cambio en tu entorno sobre la marcha y no tienes recuerdo de ese cambio, pero como las luces están encendidas y todo está en verde, sigues adelante? ¿Alguna vez has hecho un cambio y has roto todo o parte de todo? Es posible que hayas sabido que realizaste el cambio y que puedes revertir rápidamente ese cambio, ese script defectuoso o error ortográfico. Ahora, ¿has hecho esto a gran escala y tal vez no hayas sido tú o tal vez no se haya encontrado de inmediato, y ahora el negocio está sufriendo? Por lo tanto, el control de versiones es importante. No solo eso, sino que "las definiciones de aplicaciones, configuraciones y entornos deben ser declarativos y tener control de versiones". Además de esto (que proviene de ArgoCD), también mencionan que "la implementación de aplicaciones y la gestión del ciclo de vida deben ser automatizadas, auditables y fáciles de entender".
 
-From an Operations background but having played a lot around Infrastructure as Code this is the next step to ensuring all of that good stuff is taken care of along the way with continuous deployment/delivery workflows.
+Desde un fondo de operaciones, pero habiendo experimentado mucho con la infraestructura como código, este es el siguiente paso para asegurarse de que todas esas cosas buenas se manejen a lo largo del camino con flujos de trabajo de implementación/entrega continua.
 
-[What is ArgoCD](https://argo-cd.readthedocs.io/en/stable/)
+[¿Qué es ArgoCD?](https://argo-cd.readthedocs.io/en/stable/)
 
-### Deploying ArgoCD
+### Implementando ArgoCD
 
-We are going to be using our trusty minikube Kubernetes cluster locally again for this deployment.
+Vamos a utilizar nuestro confiable clúster local de Kubernetes minikube nuevamente para esta implementación.
 
 ```Shell
 kubectl create namespace argocd
@@ -19,47 +19,47 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 ![](Images/Day76_CICD1.png)
 
-Make sure all the ArgoCD pods are up and running with `kubectl get pods -n argocd`
+Asegúrate de que todos los pods de ArgoCD estén activos y en ejecución con `kubectl get pods -n argocd`
 
 ![](Images/Day76_CICD2.png)
 
-Also, let's check everything that we deployed in the namespace with `kubectl get all -n argocd`
+Además, verifiquemos todo lo que implementamos en el namespace con `kubectl get all -n argocd`
 
 ![](Images/Day76_CICD3.png)
 
-When the above is looking good, we then should consider accessing this via the port forward. Using the `kubectl port-forward svc/argocd-server -n argocd 8080:443` command. Do this in a new terminal.
+Cuando todo esto se vea bien, debemos considerar acceder a esto a través del reenvío de puertos. Usa el comando `kubectl port-forward svc/argocd-server -n argocd 8080:443` en una nueva terminal.
 
-Then open a new web browser and head to `https://localhost:8080`
+Luego abre un nuevo navegador web y dirígete a `https://localhost:8080`
 
 ![](Images/Day76_CICD4.png)
 
-To log in you will need a username of admin and then grab your created secret as your password use the `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d && echo`
+Para iniciar sesión, necesitarás un nombre de usuario admin y luego obtén tu contraseña creada utilizando el comando `kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d && echo`
 
 ![](Images/Day76_CICD5.png)
 
-Once you have logged in you will have your blank CD canvas.
+Una vez que hayas iniciado sesión, tendrás tu lienzo de CD en blanco.
 
 ![](Images/Day76_CICD6.png)
 
-### Deploying our application
+### Implementando nuestra aplicación
 
-Now we have ArgoCD up and running we can now start using it to deploy our applications from our Git repositories as well as Helm.
+Ahora que tenemos ArgoCD en funcionamiento, podemos comenzar a usarlo para implementar nuestras aplicaciones desde nuestros repositorios de Git, así como también Helm.
 
-The application I want to deploy is Pac-Man, yes that's right the famous game and something I use in a lot of demos when it comes to data management, this will not be the last time we see Pac-Man.
+La aplicación que quiero implementar es Pac-Man, sí, has oído bien, el famoso juego y algo que uso en muchas demostraciones cuando se trata de gestión de datos, esta no será la última vez que veamos a [Pac-Man](https://github.com/MichaelCade/pacman-tanzu.git).
 
-You can find the repository for [Pac-Man](https://github.com/MichaelCade/pacman-tanzu.git) here.
+Puedes encontrar el repositorio de Pac-Man aquí.
 
-Instead of going through each step using screenshots, I thought it would be easier to create a walkthrough video covering the steps taken for this one particular application deployment.
+En lugar de pasar por cada paso utilizando capturas de pantalla, pensé que sería más fácil crear un video tutorial que cubra los pasos tomados para la implementación de esta aplicación en particular.
 
-[ArgoCD Demo - 90DaysOfDevOps](https://www.youtube.com/watch?v=w6J413_j0hA)
+[Demo de ArgoCD - 90DaysOfDevOps](https://www.youtube.com/watch?v=w6J413_j0hA)
 
-Note - During the video, there is a service that is never satisfied as the app health is healthy this is because the LoadBalancer type set for the Pacman service is pending, in Minikube we do not have a loadbalancer configured. If you would like to test this you could change the YAML for the service to ClusterIP and use port forwarding to play the game.
+Nota: Durante el video, hay un servicio que nunca se satisface porque la salud de la aplicación es "healthy". Esto se debe a que el tipo de balanceador de carga establecido para el servicio Pacman está pendiente. En Minikube, no tenemos un balanceador de carga configurado. Si deseas probar esto, puedes cambiar el YAML del servicio a ClusterIP y utilizar el reenvío de puertos para jugar al juego.
 
-This wraps up the CICD Pipelines section, I feel there is a lot of focus on this area in the industry at the moment and you will also hear terms around GitOps also related to the methodologies used within CICD in general.
+Esto concluye la sección de canalizaciones de CI/CD. Siento que hay mucho enfoque en esta área en la industria en este momento, y también escucharás términos como GitOps relacionados con las metodologías utilizadas en CI/CD en general.
 
-The next section we move into is around Observability, another concept or area that is not new but it is more and more important as we look at our environments differently.
+La siguiente sección en la que nos adentraremos se trata de la Observabilidad, otro concepto o área que no es nueva, pero que es cada vez más importante a medida que miramos nuestros entornos de manera diferente.
 
-## Resources
+## Recursos
 
 - [Jenkins is the way to build, test, deploy](https://youtu.be/_MXtbjwsz3A)
 - [Jenkins.io](https://www.jenkins.io/)
@@ -70,4 +70,4 @@ The next section we move into is around Observability, another concept or area t
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 77](day77.md)
+Nos vemos en el [Día 77](day77.md)

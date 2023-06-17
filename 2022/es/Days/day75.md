@@ -1,52 +1,53 @@
-## GitHub Actions Overview
+## Información general sobre GitHub Actions
 
-In this section, I wanted to move on and take a look at maybe a different approach to what we just spent time on. GitHub Actions is what we will focus on in this session.
+En esta sección, quería pasar y echar un vistazo a un enfoque diferente a lo que acabamos de hacer. En esta sesión nos centraremos en GitHub Actions.
 
-GitHub Actions is a CI/CD platform that allows us to build, test and deploy amongst other tasks in our pipeline. It has the concept of workflows that build and test against a GitHub repository. You could also use GitHub Actions to drive other workflows based on events that happen within your repository.
+GitHub Actions es una plataforma de CI/CD que nos permite construir, probar y implementar, entre otras tareas, en nuestra canalización. Tiene el concepto de flujos de trabajo que construyen y prueban un repositorio de GitHub. También se puede utilizar GitHub Actions para ejecutar otros flujos de trabajo basados en eventos que ocurren dentro de tu repositorio.
+Flujos de trabajo
 
-### Workflows
+En general, en GitHub Actions, nuestra tarea se llama 
 
-Overall, in GitHub Actions, our task is called a **Workflow**.
+## workflow.
 
-- A **workflow** is the configurable automated process.
-- Defined as YAML files.
-- Contain and run one or more **jobs**
-- Will run when triggered by an **event** in your repository or can be run manually
-- You can multiple workflows per repository
-- A **workflow** will contain a **job** and then **steps** to achieve that **job**
-- Within our **workflow** we will also have a **runner** on which our **workflow** runs.
+- Un workflow es el proceso automatizado configurable.
+- Se define en archivos YAML.
+- Contiene y ejecuta uno o más trabajos.
+- Se ejecutará cuando se desencadene un evento en tu repositorio o se puede ejecutar manualmente.
+- Puedes tener varios flujos de trabajo por repositorio.
+- Un workflow contendrá un trabajo y luego pasos para lograr ese trabajo.
+- Dentro de nuestro workflow, también tendremos un runner en el que se ejecutará nuestro workflow.
 
-For example, you can have one **workflow** to build and test pull requests, another **workflow** to deploy your application every time a release is created, and still another **workflow** that adds a label every time someone opens a new issue.
+Por ejemplo, puedes tener un workflow para construir y probar solicitudes de extracción, otro workflow para implementar tu aplicación cada vez que se crea una versión, y otro workflow que agrega una etiqueta cada vez que alguien abre un nuevo problema.
 
-### Events
+## Eventos
 
-Events are specific event in a repository that triggers the workflow to run.
+Los eventos son eventos específicos en un repositorio que desencadenan la ejecución del workflow.
 
-### Jobs
+### Trabajos
 
-A job is a set of steps in the workflow that execute on a runner.
+Un trabajo es un conjunto de pasos en el workflow que se ejecutan en un runner.
 
-### Steps
+### Pasos
 
-Each step within the job can be a shell script that gets executed or an action. Steps are executed in order and they are dependent on each other.
+Cada paso dentro del trabajo puede ser un script de shell que se ejecuta o una acción. Los pasos se ejecutan en orden y dependen entre sí.
 
-### Actions
+### Acciones
 
-A repeatable custom application is used for frequently repeated tasks.
+Es una aplicación personalizada repetible que se utiliza para tareas que se repiten con frecuencia.
 
 ### Runners
 
-A runner is a server that runs the workflow, each runner runs a single job at a time. GitHub Actions provides the ability to run Ubuntu Linux, Microsoft Windows, and macOS runners. You can also host your own on a specific OS or hardware.
+Un runner es un servidor que ejecuta el workflow, cada runner ejecuta un solo trabajo a la vez. GitHub Actions proporciona la capacidad de ejecutar runners de Ubuntu Linux, Microsoft Windows y macOS. También puedes alojar tu propio runner en un sistema operativo o hardware específico.
 
-Below you can see how this looks, we have our event triggering our workflow > our workflow consists of two jobs > within our jobs we then have steps and then we have actions.
+A continuación, puedes ver cómo se ve esto. Tenemos nuestro evento que desencadena nuestro workflow > nuestro workflow consta de dos trabajos > dentro de nuestros trabajos tenemos pasos y luego acciones.
 
 ![](Images/Day75_CICD1.png)
 
 ### YAML
 
-Before we get going with a real use case let's take a quick look at the above image in the form of an example YAML file.
+Antes de comenzar con un caso de uso real, echemos un vistazo rápido a la imagen anterior en forma de un archivo YAML de ejemplo.
 
-I have added # to the comment where we can find the components of the YAML workflow.
+He agregado "#" para comentar dónde podemos encontrar los componentes del workflow YAML.
 
 ```Yaml
 #Workflow
@@ -69,17 +70,17 @@ jobs:
       - run: bats -v
 ```
 
-### Getting Hands-On with GitHub Actions
+### Comenzando con GitHub Actions
 
-I think there are a lot of options when it comes to GitHub Actions, yes it will satisfy your CI/CD needs when it comes to Building, Test, and Deploying your code and the continued steps thereafter.
+Creo que hay muchas opciones cuando se trata de GitHub Actions. Sí, satisfará tus necesidades de CI/CD en cuanto a construir, probar e implementar tu código y los pasos continuos posteriores.
 
-I can see lots of options and other automated tasks that we could use GitHub Actions for.
+Puedo ver muchas opciones y otras tareas automatizadas que podríamos utilizar GitHub Actions para realizar.
 
-### Using GitHub Actions for Linting your code
+### Utilizando GitHub Actions para el linting de tu código
 
-One option is making sure your code is clean and tidy within your repository. This will be our first example demo.
+Una opción es asegurarse de que tu código esté limpio y ordenado dentro de tu repositorio. Este será nuestro primer ejemplo práctico.
 
-I am going to be using some example code linked in one of the resources for this section, we are going to use `GitHub/super-linter` to check against our code.
+Voy a utilizar un código de ejemplo vinculado en uno de los recursos de esta sección, vamos a usar `GitHub/super-linter` para verificar nuestro código.
 
 ```Yaml
 name: Super-Linter
@@ -102,67 +103,68 @@ jobs:
 ```
 
 **github/super-linter**
-You can see from the above that for one of our steps we have an action called GitHub/super-linter and this is referring to a step that has already been written by the community. You can find out more about this here [Super-Linter](https://github.com/github/super-linter)
 
-"This repository is for the GitHub Action to run a Super-Linter. It is a simple combination of various linters, written in bash, to help validate your source code."
+Puedes ver que para uno de nuestros pasos tenemos una acción llamada GitHub/super-linter, y esto se refiere a un paso que ya ha sido escrito por la comunidad. Puedes obtener más información al respecto aquí [Super-Linter](https://github.com/github/super-linter)
 
-Also in the code snippet above it mentions GITHUB_TOKEN so I was interested to find out why and what this does and is needed for.
+"Este repositorio es para la Acción de GitHub para ejecutar un Super-Linter. Es una combinación simple de varios linters, escritos en bash, para ayudar a validar tu código fuente".
 
-"NOTE: If you pass the Environment variable `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}` in your workflow, then the GitHub Super-Linter will mark the status of each linter run in the Checks section of a pull request. Without this, you will only see the overall status of the full run. **There is no need to set the GitHub Secret as it is automatically set by GitHub, it only needs to be passed to the action.**"
+También en el fragmento de código anterior se menciona GITHUB_TOKEN, así que me interesó saber por qué y para qué se necesita esto.
 
-The bold text is important to note at this stage. We are using it but we do not need to set any environment variable within our repository.
+"NOTA: Si pasas la variable de entorno `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}` en tu workflow, entonces el Super-Linter de GitHub marcará el estado de cada ejecución del linter en la sección de comprobaciones de una solicitud de extracción. Sin esto, solo verás el estado general de la ejecución completa. **No es necesario establecer el Secreto de GitHub ya que se establece automáticamente por GitHub, solo necesita pasarse a la acción".**
 
-We will use the repository that we used in our Jenkins demo to test against.[Jenkins-HelloWorld](https://github.com/MichaelCade/Jenkins-HelloWorld)
+El texto en negrita es importante tener en cuenta en esta etapa. Lo estamos utilizando, pero no es necesario configurar ninguna variable de entorno dentro de nuestro repositorio.
 
-Here is our repository as we left it in the Jenkins sessions.
+Utilizaremos el repositorio que usamos en nuestra demostración de Jenkins para probarlo. [Jenkins-HelloWorld](https://github.com/MichaelCade/Jenkins-HelloWorld)
+
+Aquí está nuestro repositorio como lo dejamos en las sesiones de Jenkins.
 
 ![](Images/Day75_CICD2.png)
 
-For us to take advantage, we have to use the Actions tab above to choose from the marketplace which I will cover shortly or we can create our files using our super-linter code above, to create your own, you must create a new file in your repository at this exact location. `.github/workflows/workflow_name` obviously making sure the workflow_name is something useful for you to recognise, within here we can have many different workflows performing different jobs and tasks against our repository.
+Para aprovecharlo, tenemos que usar la pestaña "Actions" (Acciones) de arriba para elegir del mercado, lo cual cubriré en breve, o podemos crear nuestros propios archivos usando nuestro código de super-linter mencionado anteriormente. Para crear el tuyo propio, debes crear un nuevo archivo en tu repositorio en esta ubicación exacta: `.github/workflows/nombre_del_flujo_de_trabajo`, asegurándote de que "nombre_del_flujo_de_trabajo" sea algo útil para que lo reconozcas. Aquí dentro podemos tener muchos flujos de trabajo diferentes realizando diferentes trabajos y tareas en nuestro repositorio.
 
-We are going to create `.github/workflows/super-linter.yml`
+Vamos a crear `.github/workflows/super-linter.yml`
 
 ![](Images/Day75_CICD3.png)
 
-We can then paste our code and commit the code to our repository, if we then head to the Actions tab we will now see our Super-Linter workflow listed below,
+Luego podemos pegar nuestro código y confirmarlo en nuestro repositorio. Si luego nos dirigimos a la pestaña "Actions" (Acciones), ahora veremos nuestro workflow de Super-Linter listado a continuación.
 
 ![](Images/Day75_CICD4.png)
 
-We defined in our code that this workflow would run when we pushed anything to our repository, so in pushing the super-linter.yml to our repository we triggered the workflow.
+Hemos definido en nuestro código que este workflow se ejecutará cuando enviemos cualquier cosa a nuestro repositorio, por lo que al enviar el archivo super-linter.yml a nuestro repositorio, activamos el workflow.
 
 ![](Images/Day75_CICD5.png)
 
-As you can see from the above we have some errors most likely with my hacking ability vs my coding ability.
+Como se puede ver en el ejemplo anterior, tenemos algunos errores, probablemente debido a mi habilidad de hacker en comparación con mi habilidad de programación.
 
-Although it was not my code at least not yet, in running this and getting an error I found this [issue](https://github.com/github/super-linter/issues/2255)
+Aunque no fue mi código, al ejecutar esto y obtener un error, encontré este [issue](https://github.com/github/super-linter/issues/2255)
 
-Take #2 I changed the version of Super-Linter from version 3 to 4 and have run the task again.
+En el segundo intento, cambié la versión de Super-Linter de la versión 3 a la 4 y volví a ejecutar la tarea.
 
 ![](Images/Day75_CICD6.png)
 
-As expected my hacker coding brought up some issues and you can see them here in the [workflow](https://github.com/MichaelCade/Jenkins-HelloWorld/runs/5600278515?check_suite_focus=true)
+Como era de esperar, mi habilidad de hacker mostró algunos problemas y puedes verlos aquí en el [workflow](https://github.com/MichaelCade/Jenkins-HelloWorld/runs/5600278515?check_suite_focus=true).
 
-I wanted to show the look now on our repository when something within the workflow has failed or reported back an error.
+Quería mostrar cómo se ve ahora en nuestro repositorio cuando algo en el workflow ha fallado o ha informado un error.
 
 ![](Images/Day75_CICD7.png)
 
-Now if we resolve the issue with my code and push the changes our workflow will run again (you can see from the image it took a while to iron out our "bugs") Deleting a file is probably not recommended but it is a very quick way to show the issue being resolved.
+Ahora, si resolvemos el problema con mi código y enviamos los cambios, nuestro workflow se ejecutará nuevamente (puedes ver en la imagen que llevó un tiempo solucionar nuestros "errores"). Probablemente no se recomienda eliminar un archivo, pero es una forma muy rápida de mostrar que se ha resuelto el problema.
 
 ![](Images/Day75_CICD8.png)
 
-If you hit the new workflow button highlighted above, this is going to open the door to a huge plethora of actions. One thing you might have noticed throughout this challenge is that we don't want to reinvent the wheel we want to stand on the shoulders of giants and share our code, automation and skills far and wide to make our lives easier.
+Si haces clic en el botón de workflow nuevo resaltado anteriormente, se abrirá la puerta a una gran cantidad de acciones. Una cosa que quizás hayas notado a lo largo de este desafío es que no queremos reinventar la rueda, queremos pararnos sobre los hombros de gigantes y compartir nuestro código, automatización y habilidades de manera amplia para hacer nuestras vidas más fáciles.
 
 ![](Images/Day75_CICD9.png)
 
-Oh, I didn't show you the green tick on the repository when our workflow was successful.
+Oh, no te mostré la marca de verificación verde en el repositorio cuando nuestro workflow fue exitoso.
 
 ![](Images/Day75_CICD10.png)
 
-I think that covers things from a foundational point of view for GitHub Actions but if you are anything like me then you are probably seeing how else GitHub Actions can be used to automate a lot of tasks.
+Creo que esto cubre los aspectos fundamentales de GitHub Actions, pero si eres como yo, probablemente estés pensando en cómo más se puede usar GitHub Actions para automatizar muchas tareas.
 
-Next up we will cover another area of CD, we will be looking into ArgoCD to deploy our applications out into our environments.
+A continuación, abordaremos otra área de CD, donde veremos ArgoCD para implementar nuestras aplicaciones en nuestros entornos.
 
-## Resources
+## Recursos
 
 - [Jenkins is the way to build, test, deploy](https://youtu.be/_MXtbjwsz3A)
 - [Jenkins.io](https://www.jenkins.io/)
@@ -173,4 +175,4 @@ Next up we will cover another area of CD, we will be looking into ArgoCD to depl
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 76](day76.md)
+Nos vemos en el [Día 76](day76.md)

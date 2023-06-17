@@ -1,90 +1,90 @@
-### EFK Stack
+## Pila EFK
 
-In the previous section, we spoke about ELK Stack, which uses Logstash as the log collector in the stack, in the EFK Stack we are swapping that out for FluentD or FluentBit.
+En la sección anterior, hablamos sobre la pila ELK, que utiliza Logstash como el recolector de registros en la pila. En la pila EFK, reemplazamos Logstash por FluentD o FluentBit.
 
-Our mission in this section is to monitor our Kubernetes logs using EFK.
+Nuestra misión en esta sección es monitorear los registros de nuestro clúster de Kubernetes utilizando EFK.
 
-### Overview of EFK
+### Descripción general de EFK
 
-We will be deploying the following into our Kubernetes cluster.
+Desplegaremos lo siguiente en nuestro clúster de Kubernetes.
 
 ![](Images/Day82_Monitoring1.png)
 
-The EFK stack is a collection of 3 software bundled together, including:
+La pila EFK es una colección de 3 software que se agrupan juntos, e incluyen:
 
-- Elasticsearch: NoSQL database is used to store data and provides an interface for searching and query logs.
+- Elasticsearch: una base de datos NoSQL que se utiliza para almacenar datos y proporciona una interfaz para buscar y consultar registros.
 
-- Fluentd: Fluentd is an open source data collector for a unified logging layer. Fluentd allows you to unify data collection and consumption for better use and understanding of data.
+- Fluentd: Fluentd es un recolector de datos de código abierto para una capa de registro unificada. Fluentd te permite unificar la recopilación y el consumo de datos para un mejor uso y comprensión de los datos.
 
-- Kibana: Interface for managing and statistics logs. Responsible for reading information from elasticsearch.
+- Kibana: una interfaz para administrar y estadísticas de registros. Es responsable de leer información de Elasticsearch.
 
-### Deploying EFK on Minikube
+### Implementando EFK en Minikube
 
-We will be using our trusty minikube cluster to deploy our EFK stack. Let's start a cluster using `minikube start` on our system. I am using a Windows OS with WSL2 enabled.
+Utilizaremos nuestro confiable clúster de minikube para implementar nuestra pila EFK. Comencemos iniciando un clúster con el comando `minikube start` en nuestro sistema. Estoy utilizando un sistema operativo Windows con WSL2 habilitado.
 
 ![](Images/Day82_Monitoring2.png)
 
-I have created [efk-stack.yaml](Days/Monitoring/../../Monitoring/EFK%20Stack/efk-stack.yaml) which contains everything we need to deploy the EFK stack into our cluster, using the `kubectl create -f efk-stack.yaml` command we can see everything being deployed.
+He creado un archivo llamado [efk-stack.yaml](Days/Monitoring/../../Monitoring/EFK%20Stack/efk-stack.yaml) que contiene todo lo que necesitamos para implementar la pila EFK en nuestro clúster. Usando el comando `kubectl create -f efk-stack.yaml`, podemos ver que todo se está implementando.
 
 ![](Images/Day82_Monitoring3.png)
 
-Depending on your system and if you have run this already and have images pulled you should now watch the pods into a ready state before we can move on, you can check the progress with the following command. `kubectl get pods -n kube-logging -w` This can take a few minutes.
+Dependiendo de tu sistema y si ya has ejecutado esto antes y tienes las imágenes descargadas, ahora deberías ver los pods en estado "Ready" antes de continuar. Puedes verificar el progreso con el siguiente comando: `kubectl get pods -n kube-logging -w`. Esto puede tardar unos minutos.
 
 ![](Images/Day82_Monitoring4.png)
 
-The above command lets us keep an eye on things but I like to clarify that things are all good by just running the following `kubectl get pods -n kube-logging` command to ensure all pods are now up and running.
+El comando anterior nos permite mantener un ojo en las cosas, pero me gusta asegurarme de que todo esté bien ejecutando simplemente el siguiente comando: `kubectl get pods -n kube-logging`, para asegurarme de que todos los pods estén en funcionamiento.
 
 ![](Images/Day82_Monitoring5.png)
 
-Once we have all our pods up and running and at this stage, we should see
+Una vez que todos nuestros pods estén en funcionamiento y en esta etapa, deberíamos ver:
 
-- 3 pods associated with ElasticSearch
-- 1 pod associated with Fluentd
-- 1 pod associated with Kibana
+- 3 pods asociados con Elasticsearch
+- 1 pod asociado con Fluentd
+- 1 pod asociado con Kibana
 
-We can also use `kubectl get all -n kube-logging` to show all in our namespace, fluentd as explained previously is deployed as a daemonset, kibana as deployment and Elasticsearch as a statefulset.
+También podemos usar `kubectl get all -n kube-logging` para mostrar todo en nuestro espacio de nombres. Como se explicó anteriormente, Fluentd se implementa como un DaemonSet, Kibana como un deployment y Elasticsearch como un statefulset.
 
 ![](Images/Day82_Monitoring6.png)
 
-Now all of our pods are up and running we can now issue in a new terminal the port-forward command so that we can access our kibana dashboard. Note that your pod name will be different to the command we see here. `kubectl port-forward kibana-84cf7f59c-v2l8v 5601:5601 -n kube-logging`
+Ahora que todos nuestros pods están en funcionamiento, podemos abrir una nueva terminal y usar el comando port-forward para acceder al panel de control de Kibana. Ten en cuenta que el nombre de tu pod será diferente al comando que se muestra aquí. `kubectl port-forward kibana-84cf7f59c-v2l8v 5601:5601 -n kube-logging`
 
 ![](Images/Day82_Monitoring7.png)
 
-We can now open up a browser and navigate to this address, `http://localhost:5601` you will be greeted with either the screen you see below or you might indeed see a sample data screen or continue and configure yourself. Either way and by all means look at that test data, it is what we covered when we looked at the ELK stack in a previous session.
+Ahora podemos abrir un navegador y acceder a esta dirección, `http://localhost:5601`. Verás la siguiente pantalla o es posible que veas una pantalla de datos de muestra o continuar y configurarla tú mismo. De cualquier manera, echa un vistazo a esos datos de prueba, es lo que cubrimos cuando vimos la pila ELK en una sesión anterior.
 
 ![](Images/Day82_Monitoring8.png)
 
-Next, we need to hit the "discover" tab on the left menu and add "\*" to our index pattern. Continue to the next step by hitting "Next step".
+A continuación, necesitamos hacer clic en la pestaña "Discover" en el menú izquierdo y agregar "*" como nuestro patrón de índice. Continúa con el siguiente paso haciendo clic en "Next step".
 
 ![](Images/Day82_Monitoring9.png)
 
-In Step 2 of 2, we are going to use the @timestamp option from the dropdown as this will filter our data by time. When you hit create pattern it might take a few seconds to complete.
+En el paso 2 de 2, vamos a usar la opción @timestamp del menú desplegable, ya que esto filtrará nuestros datos por tiempo. Cuando hagas clic en "Create pattern", es posible que tarde unos segundos en completarse.
 
 ![](Images/Day82_Monitoring10.png)
 
-If we now head back to our "discover" tab after a few seconds you should start to see data coming in from your Kubernetes cluster.
+Si volvemos a la pestaña "Discover" después de unos segundos, deberíamos empezar a ver datos provenientes de nuestro clúster de Kubernetes.
 
 ![](Images/Day82_Monitoring11.png)
 
-Now that we have the EFK stack up and running and we are gathering logs from our Kubernetes cluster via Fluentd we can also take a look at other sources we can choose from if you navigate to the home screen by hitting the Kibana logo on the top left you will be greeted with the same page we saw when we first logged in.
+Ahora que tenemos la pila EFK en funcionamiento y estamos recopilando registros de nuestro clúster de Kubernetes a través de Fluentd, también podemos explorar otras fuentes que podemos elegir. Si navegas a la pantalla de inicio haciendo clic en el logotipo de Kibana en la parte superior izquierda, verás la misma página que vimos cuando iniciamos sesión por primera vez.
 
-We can add APM, Log data, metric data and security events from other plugins or sources.
+Podemos agregar APM, datos de registro, datos métricos y eventos de seguridad de otros complementos o fuentes.
 
 ![](Images/Day82_Monitoring12.png)
 
-If we select "Add log data" then we can see below that we have a lot of choices on where we want to get our logs from, you can see that Logstash is mentioned there which is part of the ELK stack.
+Si seleccionamos "Add log data", veremos que tenemos muchas opciones sobre dónde obtener nuestros registros. Puedes ver que Logstash se menciona allí, lo cual es parte de la pila ELK.
 
 ![](Images/Day82_Monitoring13.png)
 
-Under the metrics data, you will find that you can add sources for Prometheus and lots of other services.
+En los datos métricos, verás que puedes agregar fuentes para Prometheus y muchos otros servicios.
 
-### APM (Application Performance Monitoring)
+### APM (Monitoreo del rendimiento de aplicaciones)
 
-There is also the option to gather APM (Application Performance Monitoring) which collects in-depth performance metrics and errors from inside your application. It allows you to monitor the performance of thousands of applications in real time.
+También existe la opción de recopilar APM (Monitoreo del rendimiento de aplicaciones), que recopila métricas de rendimiento detalladas y errores desde el interior de tu aplicación. Te permite monitorear el rendimiento de miles de aplicaciones en tiempo real.
 
-I am not going to get into APM here but you can find out more on the [Elastic site](https://www.elastic.co/observability/application-performance-monitoring)
+No profundizaré en APM aquí, pero puedes obtener más información en la [web de Elastic](https://www.elastic.co/observability/application-performance-monitoring).
 
-## Resources
+## Recursos
 
 - [Understanding Logging: Containers & Microservices](https://www.youtube.com/watch?v=MMVdkzeQ848)
 - [The Importance of Monitoring in DevOps](https://www.devopsonline.co.uk/the-importance-of-monitoring-in-devops/)
@@ -99,4 +99,4 @@ I am not going to get into APM here but you can find out more on the [Elastic si
 - [What is ELK Stack?](https://www.youtube.com/watch?v=4X0WLg05ASw)
 - [Fluentd simply explained](https://www.youtube.com/watch?v=5ofsNyHZwWE&t=14s)
 
-See you on [Day 83](day83.md)
+Nos vemos en el [Día 83](day83.md)

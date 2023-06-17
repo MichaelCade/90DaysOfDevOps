@@ -1,104 +1,104 @@
-## The Big Picture: CI/CD Pipelines
+## El panorama general: Pipelines de CI/CD
 
-A CI/CD (Continuous Integration/Continuous Deployment) Pipeline implementation is the backbone of the modern DevOps environment.
+La implementación de un pipeline de CI/CD (Integración Continua/Implementación Continua) es el pilar del entorno moderno de DevOps.
 
-It bridges the gap between development and operations by automating the build, test and deployment of applications.
+Este puentea la brecha entre el desarrollo y las operaciones al automatizar la construcción, prueba e implementación de aplicaciones.
 
-We covered a lot of this continuous mantra in the opening section of the challenge. But to reiterate:
+Ya hemos cubierto gran parte de este mantra continuo en la sección introductoria del desafío. Pero para reiterar:
 
-Continuous Integration (CI) is a more modern software development practice in which incremental code changes are made more frequently and reliably. Automated build and test workflow steps triggered by Continuous Integration ensure that code changes being merged into the repository are reliable.
+La Integración Continua (CI) es una práctica de desarrollo de software más moderna en la que se realizan cambios incrementales de código con mayor frecuencia y confiabilidad. Los pasos automatizados de construcción y prueba desencadenados por la Integración Continua garantizan que los cambios de código que se fusionan en el repositorio sean confiables.
 
-That code / Application is then delivered quickly and seamlessly as part of the Continuous Deployment process.
+Ese código/aplicación se entrega rápidamente y sin problemas como parte del proceso de Implementación Continua.
 
-### The importance of CI/CD?
+### ¿Por qué es importante la CI/CD?
 
-- Ship software quickly and efficiently
-- Facilitates an effective process for getting applications to market as fast as possible
-- A continuous flow of bug fixes and new features without waiting months or years for version releases.
+- Entregar software de forma rápida y eficiente.
+- Facilitar un proceso efectivo para llevar las aplicaciones al mercado lo más rápido posible.
+- Un flujo continuo de correcciones de errores y nuevas funciones sin tener que esperar meses o años para las versiones.
 
-The ability for developers to make small impactful changes regular means we get faster fixes and more features quicker.
+La capacidad de que los desarrolladores realicen cambios pequeños y significativos de manera regular significa que obtenemos correcciones más rápidas y más características rápidamente.
 
-### Ok, so what does this mean?
+### Vale, ¿qué significa esto?
 
-On [Day 5](day05.md) we covered a lot of the theory behind DevOps and as already mentioned here that the CI/CD Pipeline is the backbone of the modern DevOps environment.
+En el [Día 5](day05.md) cubrimos gran parte de la teoría detrás de DevOps y, como se mencionó anteriormente, el pipeline de CI/CD es el pilar del entorno moderno de DevOps.
 
 ![DevOps](Images/Day5_DevOps8.png)
 
-I want to reiterate some of the key points on this image above, now that we are a little further into our journey of learning the fundamentals of DevOps.
+Quiero reiterar algunos de los puntos clave en esta imagen ahora que hemos avanzado un poco más en nuestro viaje de aprendizaje de los fundamentos de DevOps.
 
-We are referring to the software development life cycle (SDLC).
+Nos referimos al ciclo de vida del desarrollo de software (SDLC).
 
-The steps are usually written out within an infinity loop since it's a cycle that repeats forever.
+Los pasos generalmente se describen en un bucle infinito, ya que es un ciclo que se repite continuamente.
 
-The steps in the cycle are, developers write the **code** then it gets **built** or all compiled together then it's **tested** for bugs then it's **deployed** into production where it's used (**Operated**) by end users or customers then we **monitor** and collect feedback and finally we **plan** improvements around that feedback **rinse and repeat**.
+Los pasos en el ciclo son: los desarrolladores escriben el **código**, luego se **construye** o se compila todo junto, luego se **prueba** en busca de errores, luego se **implementa** en producción donde se utiliza (**Operación**) por los usuarios finales o clientes, luego **monitoreamos** y recopilamos comentarios y, finalmente, **planificamos** mejoras en función de esos comentarios **enjuague y repita**.
 
-### Let's go a little deeper into CI/CD
+### Profundicemos un poco más en CI/CD
 
 ### CI
 
-CI is a development practice that requires developers to integrate code into a shared repository several times a day.
+La CI es una práctica de desarrollo que requiere que los desarrolladores integren el código en un repositorio compartido varias veces al día.
 
-When the code is written and pushed to a repository like Github or GitLab that's where the magic begins.
+Cuando el código se escribe y se envía a un repositorio como GitHub o GitLab, es cuando comienza la magia.
 
 ![](Images/Day70_CICD1.png)
 
-The code is verified by an automated build which allows teams or the project owner to detect any problems early.
+El código es verificado mediante una construcción automatizada que permite a los equipos o al propietario del proyecto detectar cualquier problema temprano.
 
 ![](Images/Day70_CICD2.png)
 
-From there the code is analysed and given a series of automated tests three examples are
+A partir de ahí, el código se analiza y se somete a una serie de pruebas automatizadas. Aquí tienes tres ejemplos:
 
-- Unit testing tests the individual units of the source code
-- Validation testing makes sure that the software satisfies or fits the intended use
-- Format testing checks for syntax and other formatting errors
+- Las pruebas unitarias prueban las unidades individuales del código fuente.
+- Las pruebas de validación se aseguran de que el software cumpla con el uso previsto.
+- Las pruebas de formato verifican la sintaxis y otros errores de formato.
 
-These tests are created as a workflow and then are run every time you push to the master branch so pretty much every major development team has some sort of CI/CD workflow and remember on a development team the new code could be coming in from teams all over the world at different times of the day from developers working on all sorts of different projects it's more efficient to build an automated workflow of tests that make sure that everyone is on the same page before the code is accepted. It would take much longer for a human to do this each time.
+Estas pruebas se crean como parte de un flujo de trabajo y se ejecutan cada vez que se realiza un push a la rama principal, por lo que prácticamente todos los equipos de desarrollo importantes tienen algún tipo de flujo de trabajo de CI/CD. Recuerda que en un equipo de desarrollo, el nuevo código puede provenir de equipos de todo el mundo en diferentes momentos del día, de desarrolladores que trabajan en diferentes proyectos. Es más eficiente construir un flujo de trabajo automatizado de pruebas que asegure que todos estén en la misma página antes de que se acepte el código. A un humano le llevaría mucho más tiempo hacer esto cada vez.
 
 ![](Images/Day70_CICD3.png)
 
-Once we have our tests complete and they are successful then we can compile and send them to our repository. For example, I am using Docker Hub but this could be anywhere that then gets leveraged for the CD aspect of the pipeline.
+Una vez que tenemos nuestras pruebas completas y son exitosas, podemos compilarlas y enviarlas a nuestro repositorio. Por ejemplo, estoy utilizando Docker Hub, pero esto podría ser en cualquier lugar que luego se aproveche para la parte de CD del pipeline.
 
 ![](Images/Day70_CICD4.png)
 
-So this process is very much down to the software development process, we are creating our application, adding, fixing bugs etc and then updating our source control and versioning that whilst also testing.
+Por lo tanto, este proceso depende mucho del proceso de desarrollo de software. Creamos nuestra aplicación, agregamos, corregimos errores, etc., y luego actualizamos nuestro control de origen y versionamos eso al mismo tiempo que realizamos pruebas.
 
-Moving onto the next phase is the CD element which more and more is what we generally see from any off-the-shelf software, I would argue that we will see a trend if we get our software from a vendor such as Oracle or Microsoft we will consume that from a Docker Hub type repository and then we would use our CD pipelines to deploy that into our environments.
+Pasemos a la siguiente fase, el elemento de CD que cada vez más vemos en cualquier software comercial. Yo argumentaría que veremos una tendencia en la que, si obtenemos nuestro software de un proveedor como Oracle o Microsoft, lo consumiremos desde un repositorio similar a Docker Hub y luego usaremos nuestros pipelines de CD para implementarlo en nuestros entornos.
 
 ### CD
 
-Now we have our tested version of our code and we are ready to deploy out into the wild as I say, the Software vendor will run through this stage but I strongly believe this is how we will all deploy the off-the-shelf software we require in the future.
+Ahora tenemos nuestra versión probada de nuestro código y estamos listos para implementarla en el mundo real, como digo, el proveedor de software pasará por esta etapa, pero creo firmemente que así es como todos implementaremos el software comercial que necesitamos en el futuro.
 
-It is now time to release our code into an environment. This is going to include Production but also likely other environments as well such as staging.
+Ahora es el momento de lanzar nuestro código en un entorno. Esto incluirá la producción, pero también es probable que incluya otros entornos, como el entorno de preparación.
 
 ![](Images/Day70_CICD5.png)
 
-Our next step at least on Day 1 of v1 of the software deployment is we need to make sure we are pulling the correct code base to the correct environment. This could be pulling elements from the software repository (DockerHub) but it is more than likely that we are also pulling additional configuration from maybe another code repository, the configuration for the application for example. In the diagram below we are pulling the latest release of the software from DockerHub and then we are releasing this to our environments whilst possibly picking up configuration from a Git repository. Our CD tool is performing this and pushing everything to our environment.
+Nuestro siguiente paso, al menos en el día 1 de la versión 1 de la implementación del software, es asegurarnos de que estamos obteniendo la base de código correcta para el entorno correcto. Esto podría implicar obtener elementos del repositorio de software (DockerHub), pero es más probable que también obtengamos configuraciones adicionales de otro repositorio de código, como la configuración de la aplicación, por ejemplo. En el diagrama a continuación, obtenemos la última versión del software desde DockerHub y luego lo implementamos en nuestros entornos, mientras posiblemente recogemos la configuración de un repositorio Git. Nuestra herramienta de CD realiza esto y envía todo a nuestro entorno.
 
-It is most likely that this is not done at the same time. i.e we would go to a staging environment run against this with our configuration to make sure things are correct and this could be a manual step for testing or it could again be automated (let's go with automated) before then allowing this code to be deployed into production.
+Es muy probable que esto no se haga al mismo tiempo. Es decir, iríamos a un entorno de preparación, lo ejecutaríamos con nuestra configuración para asegurarnos de que todo está correcto, y esto podría ser un paso manual para realizar pruebas o podría ser nuevamente automatizado (vamos a decir automatizado) antes de permitir que este código se implemente en producción.
 
 ![](Images/Day70_CICD6.png)
 
-Then after this when v2 of the application comes out we rinse and repeat the steps this time we ensure our application + configuration is deployed to staging ensure everything is good and then we deploy to production.
+Después de esto, cuando se lance la versión 2 de la aplicación, repetiremos los pasos. Esta vez nos aseguraremos de que nuestra aplicación + configuración se implemente en el entorno de preparación para asegurarnos de que todo esté en orden y luego lo implementaremos en producción.
 
-### Why use CI/CD?
+### ¿Por qué utilizar CI/CD?
 
-I think we have probably covered the benefits several times but it is because it automates things that otherwise would have to be done manually it finds small problems before it sneaks into the main codebase, you can probably imagine that if you push bad code out to your customers then you're going to have a bad time!
+Creo que hemos cubierto los beneficios varias veces, pero es porque automatiza tareas que de otra manera tendrían que realizarse manualmente. Encuentra pequeños problemas antes de que se filtren en el código principal. Probablemente puedas imaginar que si envías código incorrecto a tus clientes, tendrás problemas.
 
-It also helps to prevent something that we call technical debt which is the idea that since the main code repos are constantly being built upon over time then a shortcut fix taken on day one is now an exponentially more expensive fix years later because now that band-aid of a fix would be so deeply intertwined and baked into all the code bases and logic.
+También ayuda a prevenir lo que llamamos deuda técnica, que es la idea de que, dado que los repositorios de código principales se están construyendo constantemente con el tiempo, una solución rápida tomada el primer día se convierte en una solución mucho más costosa años después, porque esa solución temporal estaría profundamente entrelazada e incorporada en todos los repositorios de código y lógica.
 
-### Tooling
+### Herramientas
 
-Like with other sections we are going to get hands-on with some of the tools that achieve the CI/CD pipeline process.
+Como en otras secciones, vamos a trabajar con algunas herramientas que logran el proceso de pipeline de CI/CD.
 
-I think it is also important to note that not all tools have to do both CI and CD, We will take a look at ArgoCD which you guessed is great at the CD element of deploying our software to a Kubernetes cluster. But something like Jenkins can work across many different platforms.
+Es importante tener en cuenta que no todas las herramientas realizan tanto CI como CD. Vamos a echar un vistazo a ArgoCD, que es excelente en el elemento de CD para implementar nuestro software en un clúster de Kubernetes. Pero algo como Jenkins puede funcionar en diferentes plataformas.
 
-I plan to look at the following:
+Planeo explorar lo siguiente:
 
 - Jenkins
 - ArgoCD
 - GitHub Actions
 
-## Resources
+## Recursos
 
 - [Jenkins is the way to build, test, deploy](https://youtu.be/_MXtbjwsz3A)
 - [Introduction to Jenkins](https://www.edx.org/course/introduction-to-jenkins)
@@ -110,4 +110,4 @@ I plan to look at the following:
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 71](day71.md)
+Nos vemos en el [Día 71](day71.md)

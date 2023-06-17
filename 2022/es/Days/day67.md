@@ -1,16 +1,16 @@
-## Using Roles & Deploying a Loadbalancer
+## Uso de Roles e Implementación de un Balanceador de Carga
 
-In the last session, we covered roles and used the `ansible-galaxy` command to help create our folder structures for some roles that we are going to use. We finished up with a much tidier working repository for our configuration code as everything is hidden away in our role folders.
+En la última sesión, cubrimos los roles y utilizamos el comando `ansible-galaxy` para crear las estructuras de carpetas para algunos roles que vamos a utilizar. Terminamos con un repositorio de trabajo mucho más ordenado para nuestro código de configuración, ya que todo está oculto en nuestras carpetas de roles.
 
-However, we have only used the apache2 role and have a working playbook3.yaml to handle our webservers.
+Sin embargo, solo hemos utilizado el rol apache2 y tenemos un playbook3.yaml funcional para manejar nuestros servidores web.
 
-At this point if you have only used `vagrant up web01 web02` now is the time to run `vagrant up loadbalancer` this will bring up another Ubuntu system that we will use as our Load Balancer/Proxy.
+En este momento, si solo has ejecutado `vagrant up web01 web02`, es hora de ejecutar `vagrant up loadbalancer`. Esto iniciará otro sistema Ubuntu que utilizaremos como nuestro balanceador de carga/proxy.
 
-We have already defined this new machine in our host's file, but we do not have the ssh key configured until it is available, so we need to also run `ssh-copy-id loadbalancer` when the system is up and ready.
+Ya hemos definido esta nueva máquina en nuestro archivo de hosts, pero no tenemos configurada la clave SSH hasta que esté disponible, así que también necesitamos ejecutar `ssh-copy-id loadbalancer` cuando el sistema esté listo.
 
-### Common role
+### Rol common
 
-I created at the end of yesterday's session the role of `common`, common will be used across all of our servers whereas the other roles are specific to use cases, now the applications I am going to install are as common as spurious and I cannot see many reasons for this to be the case but it shows the objective. In our common role folder structure, navigate to the tasks folder and you will have a main.yml. In this YAML, we need to point this to our install_tools.yml file and we do this by adding a line `- import_tasks: install_tools.yml` this used to be `include` but this is going to be depreciated soon enough so we are using import_tasks.
+Al final de la sesión de ayer, creé el rol common, que se utilizará en todos nuestros servidores, mientras que los otros roles son específicos para casos de uso. Ahora, las aplicaciones que voy a instalar son tan comunes como espurias y no veo muchas razones para que esto sea así, pero esto muestra el objetivo. En la estructura de carpetas del rol common, navega hasta la carpeta tasks y tendrás un archivo main.yml. En este archivo YAML, debemos apuntar a nuestro archivo install_tools.yml y lo hacemos agregando la línea `- import_tasks: install_tools.yml`. Anteriormente, esto se hacía con `include`, pero esto se depreciará lo suficiente pronto, por lo que estamos usando import_tasks.
 
 ```Yaml
 - name: "Install Common packages"
@@ -21,7 +21,7 @@ I created at the end of yesterday's session the role of `common`, common will be
    - figlet
 ```
 
-In our playbook, we then add in the common role for each host block.
+En nuestro playbook, luego agregamos el rol common para cada bloque de host.
 
 ```Yaml
 - hosts: webservers
@@ -37,11 +37,11 @@ In our playbook, we then add in the common role for each host block.
 
 ### nginx
 
-The next phase is for us to install and configure nginx on our loadbalancer VM. Like the common folder structure, we have the nginx based on the last session.
+La siguiente fase es instalar y configurar nginx en nuestra máquina de balanceo de carga (loadbalancer). Al igual que la estructura de carpetas common, tenemos la carpeta nginx basada en la sesión anterior.
 
-First of all, we are going to add a host block to our playbook. This block will include our common role and then our new nginx role.
+Primero, vamos a agregar un bloque de host a nuestro playbook. Este bloque incluirá nuestro rol common y luego nuestro nuevo rol nginx.
 
-The playbook can be found here. [playbook4.yml](Days/../Configmgmt/ansible-scenario4/playbook4.yml)
+El playbook se puede encontrar aquí: [playbook4.yml](Days/../Configmgmt/ansible-scenario4/playbook4.yml)
 
 ```Yaml
 - hosts: webservers
@@ -61,23 +61,23 @@ The playbook can be found here. [playbook4.yml](Days/../Configmgmt/ansible-scena
     - nginx
 ```
 
-For this to mean anything, we have to define the tasks that we wish to run, in the same way, we will modify the main.yml in tasks to point to two files this time, one for installation and one for configuration.
+Para que esto signifique algo, debemos definir las tareas que deseamos ejecutar. De la misma manera, modificaremos el archivo main.yml en tasks para que apunte a dos archivos en esta ocasión, uno para la instalación y otro para la configuración.
 
-There are some other files that I have modified based on the outcome we desire, take a look in the folder [ansible-scenario4](Days/Configmgmt/ansible-scenario4) for all the files changed. You should check the folders tasks, handlers and templates in the nginx folder and you will find those additional changes and files.
+Hay algunos otros archivos que he modificado en función del resultado que deseamos. Echa un vistazo a la carpeta [ansible-scenario4](Days/Configmgmt/ansible-scenario4) para ver todos los archivos modificados. Debes revisar las carpetas tasks, handlers y templates en la carpeta nginx, y encontrarás esos cambios y archivos adicionales.
 
-### Run the updated playbook
+### Ejecutar el playbook actualizado
 
-Since yesterday we have added the common role which will now install some packages on our system and then we have also added our nginx role which includes installation and configuration.
+Desde ayer, hemos agregado el rol common, que ahora instalará algunos paquetes en nuestro sistema, y también hemos agregado nuestro rol nginx, que incluye la instalación y configuración.
 
-Let's run our playbook4.yml using the `ansible-playbook playbook4.yml`
+Ejecutemos nuestro playbook4.yml usando `ansible-playbook playbook4.yml`
 
 ![](Images/Day67_config1.png)
 
-Now that we have our webservers and loadbalancer configured we should now be able to go to http://192.168.169.134/ which is the IP address of our loadbalancer.
+Ahora que hemos configurado nuestros servidores web y nuestro balanceador de carga, deberíamos poder acceder a http://192.168.169.134/, que es la dirección IP de nuestro balanceador de carga.
 
 ![](Images/Day67_config2.png)
 
-If you are following along and you do not have this state then it could be down to the server IP addresses you have in your environment. The file can be found in `templates\mysite.j2` and looks similar to the below: You would need to update with your web server IP addresses.
+Si estás siguiendo los pasos y no tienes este resultado, podría deberse a las direcciones IP de los servidores que tienes en tu entorno. El archivo se puede encontrar en `templates\mysite.j2` y se ve similar al siguiente: Debes actualizarlo con las direcciones IP de tus servidores web.
 
 ```J2
     upstream webservers {
@@ -94,19 +94,20 @@ If you are following along and you do not have this state then it could be down 
     }
 ```
 
-I am pretty confident that what we have installed is all good but let's use an ad-hoc command using ansible to check these common tools installation.
+Estoy bastante seguro de que lo que hemos instalado está todo bien, pero vamos a usar un comando ad-hoc con ansible para verificar la instalación de estas herramientas comunes.
 
 `ansible loadbalancer -m command -a neofetch`
 
 ![](Images/Day67_config3.png)
 
-## Resources
+## Recursos
 
 - [What is Ansible](https://www.youtube.com/watch?v=1id6ERvfozo)
 - [Ansible 101 - Episode 1 - Introduction to Ansible](https://www.youtube.com/watch?v=goclfp6a2IQ)
 - [NetworkChuck - You need to learn Ansible right now!](https://www.youtube.com/watch?v=5hycyr-8EKs&t=955s)
 - [Your complete guide to Ansible](https://www.youtube.com/playlist?list=PLnFWJCugpwfzTlIJ-JtuATD2MBBD7_m3u)
+- [Chef vs Puppet vs Ansible vs Saltstack](https://vergaracarmona.es/chef-vs-puppet-vs-ansible-vs-saltstack/)
 
-This final playlist listed above is where a lot of the code and ideas came from for this section, a great resource and walkthrough in video format.
+La lista de reproducción final mencionada anteriormente es de donde proviene gran parte del código y las ideas para esta sección, es un recurso excelente y una guía en formato de video.
 
-See you on [Day 68](day68.md)
+Nos vemos en el [Día 68](day68.md)

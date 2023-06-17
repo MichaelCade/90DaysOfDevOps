@@ -1,87 +1,87 @@
-## What is Jenkins?
+## ¿Qué es Jenkins?
 
-Jenkins is a continuous integration tool that allows continuous development, testing and deployment of newly created code.
+Jenkins es una herramienta de integración continua que permite el desarrollo, prueba e implementación continua de código recién creado.
 
-There are two ways we can achieve this with either nightly builds or continuous development. The first option is that our developers are developing throughout the day on their tasks and come to the end of the set day they push their changes to the source code repository. Then during the night we run our unit tests and build the software. This could be deemed as the old way to integrate all code.
+Existen dos formas de lograr esto: mediante compilaciones nocturnas o desarrollo continuo. La primera opción es que nuestros desarrolladores estén trabajando durante todo el día en sus tareas y, al final del día, envían sus cambios al repositorio de código fuente. Luego, durante la noche, ejecutamos nuestras pruebas unitarias y compilamos el software. Esto podría considerarse como la forma antigua de integrar todo el código.
 
 ![](Images/Day71_CICD1.png)
 
-The other option and the preferred way is that our developers are still committing their changes to source code, then when that code commit has been made there is a build process kicked off continuously.
+La otra opción y la preferida es que nuestros desarrolladores sigan enviando sus cambios al código fuente, y cuando se haya realizado ese envío de código, se inicia un proceso de compilación de forma continua.
 
 ![](Images/Day71_CICD2.png)
 
-The above methods mean that with distributed developers across the world we don't have a set time each day where we have to stop committing our code changes. This is where Jenkins comes in to act as that CI server to control those tests and build processes.
+Los métodos anteriores significan que, con desarrolladores distribuidos en todo el mundo, no tenemos un momento fijo cada día en el que tengamos que dejar de enviar nuestros cambios de código. Aquí es donde Jenkins entra en juego como el servidor de CI para controlar esas pruebas y procesos de compilación.
 
 ![](Images/Day71_CICD3.png)
 
-I know we are talking about Jenkins here but I also want to add a few more to maybe look into later on down the line to get an understanding of why I am seeing Jenkins as the overall most popular, why is that and what can the others do over Jenkins.
+Sé que estamos hablando de Jenkins aquí, pero también quiero agregar algunos más para investigar más adelante y entender por qué considero que Jenkins es el más popular en general, qué pueden hacer los demás en comparación con Jenkins.
 
-- TravisCI - A hosted, distributed continuous integration service used to build and test software projects hosted on GitHub.
-- Bamboo - Can run multiple builds in parallel for faster compilation, built-in functionality to connect with repositories and has build tasks for Ant, and Maven.
-- Buildbot - is an open-source framework for automating software build, test and release processes. It is written in Python and supports distributed, parallel execution of jobs across multiple platforms.
-- Apache Gump - Specific to Java projects, designed to build and test those Java projects every night. ensures that all projects are compatible at both API and functionality levels.
+- **TravisCI:** un servicio de integración continua alojado y distribuido utilizado para compilar y probar proyectos de software alojados en GitHub.
+- **Bamboo:** puede ejecutar múltiples compilaciones en paralelo para una compilación más rápida, tiene funcionalidad integrada para conectarse a repositorios y ofrece tareas de compilación para Ant y Maven.
+- **Buildbot:** es un marco de trabajo de código abierto para automatizar los procesos de compilación, prueba y lanzamiento de software. Está escrito en Python y admite la ejecución distribuida y en paralelo de trabajos en múltiples plataformas.
+- **Apache Gump**: específico para proyectos de Java, diseñado para compilar y probar esos proyectos de Java cada noche. Asegura que todos los proyectos sean compatibles tanto a nivel de API como de funcionalidad.
 
-Because we are now going to focus on Jenkins - Jenkins is again open source like all of the above tools and is an automation server written in Java. It is used to automate the software development process via continuous integration and facilitates continuous delivery.
+Debido a que ahora nos vamos a centrar en Jenkins, es importante destacar que Jenkins también es de código abierto, al igual que todas las herramientas mencionadas anteriormente, y es un servidor de automatización escrito en Java. Se utiliza para automatizar el proceso de desarrollo de software mediante la integración continua y facilita la entrega continua.
 
-### Features of Jenkins
+### Características de Jenkins
 
-As you can probably expect Jenkins has a lot of features spanning a lot of areas.
+Como probablemente puedas esperar, Jenkins tiene muchas características que abarcan muchas áreas.
 
-**Easy Installation** - Jenkins is a self-contained java based program ready to run with packages for Windows, macOS and Linux operating systems.
+**Fácil instalación**: Jenkins es un programa basado en Java autocontenido listo para ejecutarse con paquetes para los sistemas operativos Windows, macOS y Linux.
 
-**Easy Configuration** - Easy setup and configuration via a web interface which includes error checks and built-in help.
+**Fácil configuración**: configuración sencilla a través de una interfaz web que incluye verificaciones de errores y ayuda incorporada.
 
-**Plug-ins** - Lots of plugins are available in the Update Centre and integrate with many tools in the CI / CD toolchain.
+**Complementos**: hay muchos complementos disponibles en el Centro de actualizaciones e integran muchas herramientas en la cadena de herramientas de CI / CD.
 
-**Extensible** - In addition to the Plug-Ins available, Jenkins can be extended by that plugin architecture which provides nearly infinite options for what it can be used for.
+**Extensible**: además de los complementos disponibles, Jenkins puede ser ampliado mediante esa arquitectura de complementos, lo que brinda opciones casi infinitas para su uso.
 
-**Distributed** - Jenkins easily distributes work across multiple machines, helping to speed up builds, tests and deployments across multiple platforms.
+**Distribuido**: Jenkins distribuye fácilmente el trabajo en múltiples máquinas, lo que ayuda a acelerar las compilaciones, pruebas e implementaciones en varias plataformas.
 
-### Jenkins Pipeline
+### Pipeline de Jenkins
 
-You will have seen this pipeline but used in a much broader and we have not spoken about specific tools.
+Seguramente has visto este pipeline, pero se ha utilizado de manera más general y no hemos hablado de herramientas específicas.
 
-You are going to be committing code to Jenkins, which then will build out your application, with all automated tests, it will then release and deploy that code when each step is completed. Jenkins is what allows for the automation of this process.
+Vas a enviar código a Jenkins, que construirá tu aplicación con todas las pruebas automatizadas, y luego lanzará e implementará ese código cuando se complete cada paso. Jenkins es lo que permite la automatización de este proceso.
 
 ![](Images/Day71_CICD4.png)
 
-### Jenkins Architecture
+### Arquitectura de Jenkins
 
-First up and not wanting to reinvent the wheel, the [Jenkins Documentation](https://www.jenkins.io/doc/developer/architecture/) is always the place to start but I am going to put down my notes and learnings here as well.
+En primer lugar, y sin querer reinventar la rueda, la [Documentación de Jenkins](https://www.jenkins.io/doc/developer/architecture/) siempre es el lugar para comenzar, pero también voy a compartir aquí mis notas y aprendizajes.
 
-Jenkins can be installed on many different operating systems, Windows, Linux and macOS but then also the ability to deploy as a Docker container and within Kubernetes. [Installing Jenkins](https://www.jenkins.io/doc/book/installing/)
+Jenkins se puede instalar en muchos sistemas operativos diferentes, como Windows, Linux y macOS, pero también se puede implementar como un contenedor de Docker y dentro de Kubernetes. [Instalación de Jenkins](https://www.jenkins.io/doc/book/installing/)
 
-As we get into this we will likely take a look at installing Jenkins within a minikube cluster simulating the deployment to Kubernetes. But this will depend on the scenarios we put together throughout the rest of the section.
+Conforme avancemos, es posible que veamos cómo instalar Jenkins en un clúster de minikube para simular la implementación en Kubernetes. Sin embargo, esto dependerá de los escenarios que preparemos en el resto de la sección.
 
-Let's now break down the image below.
+Ahora vamos a desglosar la siguiente imagen.
 
-Step 1 - Developers commit changes to the source code repository.
+Paso 1: Los desarrolladores envían cambios al repositorio de código fuente.
 
-Step 2 - Jenkins checks the repository at regular intervals and pulls any new code.
+Paso 2: Jenkins verifica el repositorio a intervalos regulares y extrae cualquier código nuevo.
 
-Step 3 - A build server then builds the code into an executable, in this example, we are using maven as a well-known build server. Another area to cover.
+Paso 3: Un servidor de compilación compila el código en un ejecutable. En este ejemplo, utilizamos Maven como servidor de compilación bien conocido. Otro tema para cubrir.
 
-Step 4 - If the build fails then feedback is sent back to the developers.
+Paso 4: Si la compilación falla, se envía retroalimentación a los desarrolladores.
 
-Step 5 - Jenkins then deploys the build app to the test server, in this example, we are using selenium as a well-known test server. Another area to cover.
+Paso 5: Luego, Jenkins implementa la aplicación compilada en el servidor de pruebas. En este ejemplo, utilizamos Selenium como servidor de pruebas bien conocido. Otro tema para cubrir.
 
-Step 6 - If the test fails then feedback is passed to the developers.
+Paso 6: Si las pruebas fallan, se envía retroalimentación a los desarrolladores.
 
-Step 7 - If the tests are successful then we can release them to production.
+Paso 7: Si las pruebas son exitosas, podemos implementar en producción.
 
-This cycle is continuous, this is what allows applications to be updated in minutes vs hours, days, months, and years!
+Este ciclo es continuo, lo que permite actualizar las aplicaciones en minutos en lugar de horas, días, meses y años.
 
 ![](Images/Day71_CICD5.png)
 
-There is a lot more to the architecture of Jenkins if you require it, they have a master-slave capability, which enables a master to distribute the tasks to the slave Jenkins environment.
+Hay mucho más en la arquitectura de Jenkins si lo necesitas. Tiene una capacidad de maestro-esclavo que permite que un maestro distribuya las tareas al entorno de esclavos de Jenkins.
 
-For reference with Jenkins being open source, there are going to be lots of enterprises that require support, CloudBees is that enterprise version of Jenkins that brings support and possibly other functionality for the paying enterprise customer.
+Por si te interesa, como Jenkins es de código abierto, habrá muchas empresas que requieren soporte. CloudBees es la versión empresarial de Jenkins que brinda soporte y posiblemente otras funcionalidades para los clientes empresariales que pagan.
 
-An example of this in a customer is Bosch, you can find the Bosch case study [here](https://assets.ctfassets.net/vtn4rfaw6n2j/case-study-boschpdf/40a0b23c61992ed3ee414ae0a55b6777/case-study-bosch.pdf)
+Un ejemplo de esto en un cliente es Bosch. Puedes verlo en el [estudio de caso de Bosch](https://assets.ctfassets.net/vtn4rfaw6n2j/case-study-boschpdf/40a0b23c61992ed3ee414ae0a55b6777/case-study-bosch.pdf).
 
-I am going to be looking for a step-by-step example of an application that we can use to walk through using Jenkins and then also use this with some other tools.
+Voy a buscar un ejemplo paso a paso de una aplicación que podamos utilizar para recorrer el proceso con Jenkins y también usar otras herramientas.
 
-## Resources
+## Recursos
 
 - [Jenkins is the way to build, test, deploy](https://youtu.be/_MXtbjwsz3A)
 - [Jenkins.io](https://www.jenkins.io/)
@@ -92,4 +92,4 @@ I am going to be looking for a step-by-step example of an application that we ca
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 72](day72.md)
+Nos vemos en el [Día 72](day72.md)

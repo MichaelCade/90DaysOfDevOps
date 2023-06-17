@@ -1,12 +1,12 @@
-## Building a Jenkins Pipeline
+## Construyendo una canalización de Jenkins
 
-In the last section, we got Jenkins deployed to our Minikube cluster and we set up a very basic Jenkins Pipeline, that didn't do much at all other than echo out the stages of a Pipeline.
+En la última sección, implementamos Jenkins en nuestro clúster de Minikube y configuramos una canalización muy básica de Jenkins, que en realidad no hacía mucho más que mostrar las etapas de una canalización.
 
-You might have also seen that there are some example scripts available for us to run in the Jenkins Pipeline creation.
+También es posible que hayas visto que hay algunos scripts de ejemplo disponibles para ejecutar en la creación de la canalización de Jenkins.
 
 ![](Images/Day73_CICD1.png)
 
-The first demo script is "Declarative (Kubernetes)" and you can see the stages below.
+El primer script de demostración es "Declarative (Kubernetes)" y puedes ver las etapas a continuación.
 
 ```Yaml
 // Uses Declarative syntax to run commands inside a container.
@@ -50,21 +50,21 @@ spec:
 }
 ```
 
-You can see below the outcome of what happens when this Pipeline is run.
+A continuación, puedes ver el resultado de lo que sucede cuando se ejecuta esta canalización.
 
 ![](Images/Day73_CICD2.png)
 
-### Job creation
+### Creación del trabajo
 
-#### Goals
+#### Objetivos
 
-- Create a simple app and store it in GitHub public repository [https://github.com/scriptcamp/kubernetes-kaniko.git](https://github.com/scriptcamp/kubernetes-kaniko.git)
+- Crear una aplicación simple y almacenarla en un repositorio público de GitHub:  [https://github.com/scriptcamp/kubernetes-kaniko.git](https://github.com/scriptcamp/kubernetes-kaniko.git)
 
-- Use Jenkins to build our docker Container image and push it to the docker hub. (for this we will use a private repository)
+- Usar Jenkins para construir nuestra imagen de contenedor Docker y enviarla a Docker Hub (para esto, usaremos un repositorio privado).
 
-To achieve this in our Kubernetes cluster running in or using Minikube we need to use something called [Kaniko](https://github.com/GoogleContainerTools/kaniko#running-kaniko-in-a-kubernetes-cluster) It is general though if you are using Jenkins in a real Kubernetes cluster or you are running it on a server then you can specify an agent which will give you the ability to perform the docker build commands and upload that to DockerHub.
+Para lograr esto en nuestro clúster de Kubernetes que se ejecuta en Minikube o usando Minikube, necesitamos utilizar algo llamado [Kaniko](https://github.com/GoogleContainerTools/kaniko#running-kaniko-in-a-kubernetes-cluster). Aunque si estás utilizando Jenkins en un clúster de Kubernetes real o lo estás ejecutando en un servidor, entonces puedes especificar un agente que te permitirá ejecutar los comandos de construcción de Docker y cargarlos en DockerHub.
 
-With the above in mind, we are also going to deploy a secret into Kubernetes with our GitHub credentials.
+Con lo anterior en mente, también vamos a implementar un secreto en Kubernetes con nuestras credenciales de GitHub.
 
 ```Shell
 kubectl create secret docker-registry dockercred \
@@ -74,41 +74,41 @@ kubectl create secret docker-registry dockercred \
     --docker-email=<dockerhub-email>
 ```
 
-I want to share another great resource from [DevOpsCube.com](https://devopscube.com/build-docker-image-kubernetes-pod/) running through much of what we will cover here.
+Quiero compartir otro gran recurso de [DevOpsCube.com](https://devopscube.com/build-docker-image-kubernetes-pod/) que repasa gran parte de lo que vamos a cubrir aquí.
 
-### Adding credentials to Jenkins
+### Agregar credenciales a Jenkins
 
-However, if you were on a Jenkins system unlike ours then you will likely want to define your credentials within Jenkins and then use them multiple times within your Pipelines and configurations. We can refer to these credentials in the Pipelines using the ID we determine on creation. I went ahead and stepped through and created a user entry for DockerHub and GitHub.
+Sin embargo, si estás en un sistema de Jenkins diferente al nuestro, es probable que desees definir tus credenciales dentro de Jenkins y luego usarlas varias veces en tus canalizaciones y configuraciones. Podemos hacer referencia a estas credenciales en las canalizaciones utilizando el ID que determinamos al crearlas. Ya he creado una entrada de usuario para DockerHub y GitHub.
 
-First of all select "Manage Jenkins" and then "Manage Credentials"
+En primer lugar, selecciona "Manage Jenkins" y luego "Manage Credentials".
 
 ![](Images/Day73_CICD3.png)
 
-You will see in the centre of the page, Stores scoped to Jenkins click on Jenkins here.
+Verás en el centro de la página, Stores scoped to Jenkins, haz clic en Jenkins aquí.
 
 ![](Images/Day73_CICD4.png)
 
-Now select Global Credentials (Unrestricted)
+A continuación, selecciona Global Credentials (Unrestricted).
 
 ![](Images/Day73_CICD5.png)
 
-Then in the top left, you have Add Credentials
+Luego, en la parte superior izquierda, verás "Add Credentials".
 
 ![](Images/Day73_CICD6.png)
 
-Fill in your details for your account and then select OK, remember the ID is what you will refer to when you want to call this credential. My advice here also is that you use specific token access vs passwords.
+Completa los detalles de tu cuenta y luego selecciona OK. Recuerda que el ID es al que te referirás cuando quieras llamar a esta credencial. Mi consejo también es que utilices un acceso con token específico en lugar de contraseñas.
 
 ![](Images/Day73_CICD7.png)
 
-For GitHub, you should use a [Personal Access Token](https://vzilla.co.uk/vzilla-blog/creating-updating-your-github-personal-access-token)
+Para GitHub, deberías usar un [Personal Access Token](https://vzilla.co.uk/vzilla-blog/creating-updating-your-github-personal-access-token)
 
-I did not find this process very intuitive to create these accounts, so even though we are not using I wanted to share the process as it is not clear from the UI.
+No encontré muy intuitivo el proceso para crear estas cuentas, así que aunque no las estemos utilizando, quería compartir el proceso ya que no está claro en la interfaz de usuario.
 
-### Building the pipeline
+### Construcción de la canalización
 
-We have our DockerHub credentials deployed as a secret into our Kubernetes cluster which we will call upon for our docker deploy to the DockerHub stage in our pipeline.
+Hemos implementado nuestras credenciales de DockerHub como un secreto en nuestro clúster de Kubernetes, el cual llamaremos para implementar nuestro despliegue de Docker en la etapa de DockerHub de nuestra canalización.
 
-The pipeline script is what you can see below, this could in turn become our Jenkinsfile located in our GitHub repository which you can also see is listed in the Get the project stage of the pipeline.
+El script de la canalización es el siguiente, esto a su vez podría convertirse en nuestro Jenkinsfile ubicado en nuestro repositorio de GitHub, que también puedes ver que se enumera en la etapa "Get the project" de la canalización.
 
 ```Yaml
 podTemplate(yaml: '''
@@ -166,43 +166,43 @@ podTemplate(yaml: '''
 }
 ```
 
-To kick things on the Jenkins dashboard we need to select "New Item"
+Para iniciar las cosas en el panel de Jenkins, debemos seleccionar "New Item".
 
 ![](Images/Day73_CICD8.png)
 
-We are then going to give our item a name, select Pipeline and then hit ok.
+A continuación, vamos a darle un nombre a nuestro elemento, seleccionar "Pipeline" y luego hacer clic en "OK".
 
 ![](Images/Day73_CICD9.png)
 
-We are not going to be selecting any of the general or build triggers but have a play with these as there are some interesting schedules and other configurations that might be useful.
+No vamos a seleccionar ninguna de las opciones generales o desencadenadores de construcción, pero puedes probar con ellas, ya que hay algunas programaciones e otras configuraciones interesantes que podrían ser útiles.
 
 ![](Images/Day73_CICD10.png)
 
-We are only interested in the Pipeline tab at the end.
+Solo estamos interesados en la pestaña "Pipeline" al final.
 
 ![](Images/Day73_CICD11.png)
 
-In the Pipeline definition, we are going to copy and paste the pipeline script that we have above into the Script section and hit save.
+En la definición de la canalización, vamos a copiar y pegar el script de la canalización que se muestra arriba en la sección de Script y hacer clic en Guardar.
 
 ![](Images/Day73_CICD12.png)
 
-Next, we will select the "Build Now" option on the left side of the page.
+A continuación, seleccionaremos la opción "Build Now" en el lado izquierdo de la página.
 
 ![](Images/Day73_CICD13.png)
 
-You should now wait a short amount of time, less than a minute. and you should see under status the stages that we defined above in our script.
+Debes esperar un corto período de tiempo, menos de un minuto, y deberías ver en el estado las etapas que definimos anteriormente en nuestro script.
 
 ![](Images/Day73_CICD14.png)
 
-More importantly, if we now head on over to our DockerHub and check that we have a new build.
+Lo más importante es que si nos dirigimos a DockerHub, verifiquemos que tenemos una nueva compilación.
 
 ![](Images/Day73_CICD15.png)
 
-Overall did take a while to figure out but I wanted to stick with it to get hands-on and work through a scenario that anyone can run through using minikube and access to GitHub and dockerhub.
+En general, llevó un tiempo descubrirlo, pero quería seguir adelante para ponerlo en práctica y trabajar en un escenario que cualquiera pueda seguir utilizando Minikube y con acceso a GitHub y DockerHub.
 
-The DockerHub repository I used for this demo was a private one. But in the next section, I want to advance some of these stages and have them do something vs just printing out `pwd` and running some tests and build stages.
+El repositorio de DockerHub que utilicé para esta demostración era privado. Pero en la siguiente sección, quiero avanzar en algunas de estas etapas y hacer que hagan algo en lugar de simplemente imprimir pwd y ejecutar algunas pruebas y etapas de compilación.
 
-## Resources
+## Recursos
 
 - [Jenkins is the way to build, test, deploy](https://youtu.be/_MXtbjwsz3A)
 - [Jenkins.io](https://www.jenkins.io/)
@@ -213,4 +213,4 @@ The DockerHub repository I used for this demo was a private one. But in the next
 - [GitHub Actions](https://www.youtube.com/watch?v=R8_veQiYBjI)
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-See you on [Day 74](day74.md)
+Nos vemos en el [Día 74](day74.md)

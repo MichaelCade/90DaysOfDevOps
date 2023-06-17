@@ -1,60 +1,60 @@
-## The Big Picture: Log Management
+## El panorama general: Gestión de registros
 
-A continuation of the infrastructure monitoring challenges and solutions, log management is another puzzle piece to the overall observability jigsaw.
+Continuando con los desafíos y soluciones de monitoreo de infraestructura, la gestión de registros es otra pieza del rompecabezas de la observabilidad en general.
 
-### Log Management & Aggregation
+### Gestión y agregación de registros
 
-Let's talk about two core concepts the first of which is log aggregation and it's a way of collecting and tagging application logs from many different services and to a single dashboard that can easily be searched.
+Hablemos de dos conceptos fundamentales, el primero de los cuales es la agregación de registros. Es una forma de recopilar y etiquetar los registros de aplicaciones de muchos servicios diferentes en un único panel de control que se pueda buscar fácilmente.
 
-One of the first systems that have to be built out in an application performance management system is log aggregation. Application performance management is the part of the DevOps lifecycle where things have been built and deployed and you need to make sure that they're continuously working so they have enough resources allocated to them and errors aren't being shown to users. In most production deployments many related events emit logs across services at google a single search might hit ten different services before being returned to the user if you got unexpected search results that might mean a logic problem in any of the ten services and log aggregation helps companies like google diagnose problems in production, they've built a single dashboard where they can map every request to unique id so if you search something your search will get a unique id and then every time that search is passing through a different service that service will connect that id to what they're currently doing.
+Uno de los primeros sistemas que se deben implementar en un sistema de gestión del rendimiento de aplicaciones es la agregación de registros. La gestión del rendimiento de aplicaciones es la parte del ciclo de vida de DevOps en la que se han construido e implementado las aplicaciones, y es necesario asegurarse de que funcionen de manera continua, tengan suficientes recursos asignados y no se muestren errores a los usuarios. En la mayoría de las implementaciones en producción, muchos eventos relacionados emiten registros a través de servicios. En Google, una única búsqueda puede llegar a diez servicios diferentes antes de ser devuelta al usuario. Si obtienes resultados de búsqueda inesperados, eso podría significar un problema lógico en cualquiera de los diez servicios, y la agregación de registros ayuda a empresas como Google a diagnosticar problemas en producción. Han creado un panel de control único en el que pueden asignar cada solicitud a un identificador único. Entonces, cada vez que una solicitud pasa por un servicio diferente, ese servicio asocia ese identificador a lo que está haciendo actualmente.
 
-This is the essence of a good log aggregation platform efficiently collects logs from everywhere that emits them and makes them easily searchable in the case of a fault again.
+Esta es la esencia de una buena plataforma de agregación de registros: recopila eficientemente los registros de todos los servicios que los emiten y los hace fácilmente buscables en caso de una falla.
 
-### Example App
+### Aplicación de ejemplo
 
-Our example application is a web app, we have a typical front end and backend storing our critical data in a MongoDB database.
+Nuestra aplicación de ejemplo es una aplicación web que tiene un frontend y un backend típicos, y almacena nuestros datos críticos en una base de datos MongoDB.
 
-If a user told us the page turned all white and printed an error message we would be hard-pressed to diagnose the problem with our current stack the user would need to manually send us the error and we'd need to match it with relevant logs in the other three services.
+Si un usuario nos informa que la página se puso completamente en blanco y se mostró un mensaje de error, nos costaría diagnosticar el problema con nuestra pila actual. El usuario tendría que enviarnos manualmente el error y tendríamos que buscar los registros relevantes en los otros tres servicios.
 
 ### ELK
 
-Let's take a look at ELK, a popular open source log aggregation stack named after its three components elasticsearch, logstash and kibana if we installed it in the same environment as our example app.
+Veamos ELK, una popular pila de agregación de registros de código abierto que recibe su nombre de sus tres componentes: Elasticsearch, Logstash y Kibana. Si lo instalamos en el mismo entorno que nuestra aplicación de ejemplo.
 
-The web application would connect to the frontend which then connects to the backend, the backend would send logs to logstash and then the way that these three components work
+La aplicación web se conectaría al frontend, que a su vez se conecta al backend. El backend enviaría los registros a Logstash y así es como funcionan estos tres componentes.
 
-### The components of elk
+### Los componentes de ELK
 
-Elasticsearch, logstash and Kibana are that all the services send logs to logstash, logstash takes these logs which are text emitted by the application. For example, in the web application when you visit a web page, the web page might log this visitor's access to this page at this time and that's an example of a log message those logs would be sent to logstash.
+Elasticsearch, Logstash y Kibana son los componentes de ELK. Todos los servicios envían los registros a Logstash, que toma esos registros, que son texto emitido por la aplicación. Por ejemplo, en la aplicación web, cuando visitas una página web, la página web podría registrar el acceso del visitante a esa página en ese momento. Ese sería un ejemplo de un mensaje de registro. Esos registros se enviarían a Logstash.
 
-Logstash would then extract things from them so for that log message user did **thing**, at **time**. It would extract the time and extract the message and extract the user and include those all as tags so the message would be an object of tags and message so that you could search them easily could find all of the requests made by a specific user but logstash doesn't store things itself it stores things in elasticsearch which is an efficient database for querying text and elasticsearch exposes the results as Kibana and Kibana is a web server that connects to elasticsearch and allows administrators as the DevOps person or other people on your team, the on-call engineer to view the logs in production whenever there's a major fault. You as the administrator would connect to Kibana, and Kibana would query elasticsearch for logs matching whatever you wanted.
+Luego, Logstash extraería información de esos registros. Por ejemplo, para el mensaje de registro "El usuario hizo algo a las hora", Logstash extraería la hora, el mensaje y el usuario, y los incluiría como etiquetas. De esta manera, el mensaje sería un objeto con etiquetas y un mensaje, lo que permitiría buscarlos fácilmente y encontrar todas las solicitudes realizadas por un usuario específico. Sin embargo, Logstash no almacena los registros en sí mismo, los almacena en Elasticsearch, que es una base de datos eficiente para consultas de texto. Elasticsearch expone los resultados a Kibana, que es un servidor web que se conecta a Elasticsearch y permite a los administradores, como la persona encargada de DevOps o a otros miembros de tu equipo, ver los registros en producción cuando ocurre una falla importante. Como administrador, te conectarías a Kibana y Kibana consultaría Elasticsearch en busca de registros que coincidan con lo que deseas. 
 
-You could say hey Kibana in the search bar I want to find errors and kibana would say elasticsearch find the messages which contain the string error and then elasticsearch would return results that had been populated by logstash. Logstash would have been sent those results from all of the other services.
+Podrías decirle a Kibana en la barra de búsqueda: "quiero encontrar errores", y Kibana le diría a Elasticsearch que encuentre los mensajes que contengan la cadena "error", y luego Elasticsearch devolvería los resultados que Logstash ha registrado desde todos los demás servicios.
 
-### how would we use elk to diagnose a production problem
+### ¿Cómo usaríamos ELK para diagnosticar un problema en producción?
 
-A user says I saw error code one two three four five six seven when I tried to do this with elk setup we'd have to go to kibana enter one two three four five six seven in the search bar press enter and then that would show us the logs that corresponded to that and one of the logs might say internal server error returning one two three four five six seven and we'd see that the service that emitted that log was the backend and we'd see what time that log was emitted at so we could go to the time in that log and we could look at the messages above and below it in the backend and then we could see a better picture of what happened for the user's request and we'd be able to repeat this process going to other services until we found what caused the problem for the user.
+Un usuario dice: "Vi el código de error 1234567 cuando intenté hacer esto". Con la configuración de ELK, tendríamos que ir a Kibana, ingresar 1234567 en la barra de búsqueda, presionar Enter, y eso nos mostraría los registros correspondientes a ese código. Uno de los registros podría decir "error interno del servidor, devolviendo 1234567", y veríamos que el servicio que emitió ese registro fue el backend, y también veríamos la hora en que se emitió ese registro. Así podríamos ir a esa hora en ese registro y ver los mensajes anteriores y posteriores a él en el backend, y así podríamos tener una imagen más clara de lo que sucedió en la solicitud del usuario. Podríamos repetir este proceso para otros servicios hasta encontrar la causa del problema para el usuario.
 
-### Security and Access to Logs
+### Seguridad y acceso a los registros
 
-An important piece of the puzzle is ensuring that logs are only visible to administrators (or the users and groups that need to have access), logs can contain sensitive information like tokens only authenticated users should have access to them, you wouldn't want to expose Kibana to the internet without some way of authenticating.
+Una pieza importante del rompecabezas es asegurarse de que solo los administradores (o los usuarios y grupos que necesitan acceder) puedan ver los registros. Los registros pueden contener información sensible como tokens, y solo los usuarios autenticados deberían tener acceso a ellos. No querrías exponer Kibana a Internet sin algún tipo de autenticación.
 
-### Examples of Log Management Tools
+### Ejemplos de herramientas de gestión de registros
 
-Examples of log management platforms there's
+Algunos ejemplos de plataformas de gestión de registros son:
 
 - Elasticsearch
 - Logstash
 - Kibana
-- Fluentd - popular open source choice
-- Datadog - hosted offering, commonly used at larger enterprises,
-- LogDNA - hosted offering
+- Fluentd: elección popular de código abierto
+- Datadog: oferta alojada, comúnmente utilizada en grandes empresas
+- LogDNA: oferta alojada
 - Splunk
 
-Cloud providers also provide logging such as AWS CloudWatch Logs, Microsoft Azure Monitor and Google Cloud Logging.
+Los proveedores de servicios en la nube también ofrecen servicios de registro, como AWS CloudWatch Logs, Microsoft Azure Monitor y Google Cloud Logging.
 
-Log Management is a key aspect of the overall observability of your applications and infrastructure environment for diagnosing problems in production it's relatively simple to install a turnkey solution like ELK or CloudWatch and it makes diagnosing and triaging problems in production significantly easier.
+La gestión de registros es un aspecto clave de la observabilidad general de tus aplicaciones y entornos de infraestructura para diagnosticar problemas en producción. Es relativamente sencillo instalar una solución llave en mano como ELK o CloudWatch, y facilita significativamente el diagnóstico y la solución de problemas en producción.
 
-## Resources
+## Recursos
 
 - [The Importance of Monitoring in DevOps](https://www.devopsonline.co.uk/the-importance-of-monitoring-in-devops/)
 - [Understanding Continuous Monitoring in DevOps?](https://medium.com/devopscurry/understanding-continuous-monitoring-in-devops-f6695b004e3b)
@@ -68,4 +68,4 @@ Log Management is a key aspect of the overall observability of your applications
 - [What is ELK Stack?](https://www.youtube.com/watch?v=4X0WLg05ASw)
 - [Fluentd simply explained](https://www.youtube.com/watch?v=5ofsNyHZwWE&t=14s)
 
-See you on [Day 80](day80.md)
+Nos vemos en el [Día 80](day80.md)

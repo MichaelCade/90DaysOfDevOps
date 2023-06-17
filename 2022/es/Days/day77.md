@@ -1,67 +1,67 @@
-## The Big Picture: Monitoring
+## El panorama general: Monitoreo
 
-In this section we are going to talk about monitoring, what is it and why do we need it?
+En esta sección hablaremos sobre el monitoreo, ¿qué es y por qué lo necesitamos?
 
-### What is Monitoring?
+### ¿Qué es el monitoreo?
 
-Monitoring is the process of keeping a close eye on the entire infrastructure
+El monitoreo es el proceso de vigilar de cerca toda la infraestructura.
 
-### and why do we need it?
+### ¿Y por qué lo necesitamos?
 
-Let's assume we're managing a thousand servers these include a variety of specialised servers like application servers, database servers and web servers. We could also complicate this further with additional services and different platforms including public cloud offerings and Kubernetes.
+Supongamos que estamos administrando mil servidores, que incluyen una variedad de servidores especializados como servidores de aplicaciones, servidores de bases de datos y servidores web. También podríamos complicar esto aún más con servicios adicionales y diferentes plataformas, incluidas ofertas de nube pública y Kubernetes.
 
 ![](Images/Day77_Monitoring1.png)
 
-We are responsible for ensuring that all the services, applications and resources on the servers are running as they should be.
+Somos responsables de asegurarnos de que todos los servicios, aplicaciones y recursos en los servidores estén funcionando como deberían.
 
 ![](Images/Day77_Monitoring2.png)
 
-How do we do it? there are three ways:
+¿Cómo lo hacemos? Hay tres formas:
 
-- Login manually to all of our servers and check all the data about service processes and resources.
-- Write a script that logs in to the servers for us and checks on the data.
+- Iniciar sesión manualmente en todos nuestros servidores y verificar todos los datos sobre los procesos de servicio y los recursos.
+- Escribir un script que inicie sesión en los servidores por nosotros y verifique los datos.
 
-Both of these options would require a considerable amount of work on our part,
+Ambas opciones requerirían una cantidad considerable de trabajo de nuestra parte.
 
-The third option is easier, we could use a monitoring solution that is available in the market.
+La tercera opción es más fácil: podríamos utilizar una solución de monitoreo disponible en el mercado.
 
-Nagios and Zabbix are possible solutions that are readily available which allow us to upscale our monitoring infrastructure to include as many servers as we want.
+Nagios y Zabbix son posibles soluciones que están fácilmente disponibles y nos permiten ampliar nuestra infraestructura de monitoreo para incluir tantos servidores como deseemos.
 
 ### Nagios
 
-Nagios is an infrastructure monitoring tool that is made by a company that goes by the same name. The open-source version of this tool is called Nagios core while the commercial version is called Nagios XI. [Nagios Website](https://www.nagios.org/)
+Nagios es una herramienta de monitoreo de infraestructura creada por una empresa que lleva el mismo nombre. La versión de código abierto de esta herramienta se llama Nagios Core, mientras que la versión comercial se llama Nagios XI. Sitio [web de Nagios](ttps://www.nagios.org/)
 
-The tool allows us to monitor our servers and see if they are being sufficiently utilised or if there are any tasks of failure that need addressing.
+Esta herramienta nos permite monitorear nuestros servidores y ver si se están utilizando de manera adecuada o si hay tareas o fallas que deben abordarse.
 
 ![](Images/Day77_Monitoring3.png)
 
-Essentially monitoring allows us to achieve these two goals, check the status of our servers and services and determine the health of our infrastructure it also gives us a 40,000ft view of the complete infrastructure to see if our servers are up and running if the applications are working properly and the web servers are reachable or not.
+Básicamente, el monitoreo nos permite lograr estos dos objetivos: verificar el estado de nuestros servidores y servicios, y determinar la salud de nuestra infraestructura. También nos brinda una vista panorámica completa de la infraestructura para ver si nuestros servidores están funcionando, si las aplicaciones están funcionando correctamente y si los servidores web son accesibles o no.
 
-It will tell us that our disk has been increasing by 10 per cent for the last 10 weeks in a particular server, that it will exhaust entirely within the next four or five days and we'll fail to respond soon it will alert us when your disk or server is in a critical state so that we can take appropriate actions to avoid possible outages.
+Nos dirá, por ejemplo, que nuestro disco ha aumentado un 10 por ciento en las últimas 10 semanas en un servidor en particular, que se agotará por completo en los próximos cuatro o cinco días y que pronto fallaremos si no respondemos. Nos alertará cuando nuestro disco o servidor esté en un estado crítico para que podamos tomar las medidas adecuadas y evitar posibles interrupciones.
 
-In this case, we can free up some disk space and ensure that our servers don't fail and that our users are not affected.
+En este caso, podemos liberar algo de espacio en el disco y asegurarnos de que nuestros servidores no fallen y que nuestros usuarios no se vean afectados.
 
-The difficult question for most monitoring engineers is what do we monitor? and alternately what do we not?
+La pregunta difícil para la mayoría de los ingenieros de monitoreo es ¿qué debemos monitorear? y, alternativamente, ¿qué no debemos?
 
-Every system has several resources, which of these should we keep a close eye on and which ones can we turn a blind eye to for instance is it necessary to monitor CPU usage the answer is yes obviously nevertheless it is still a decision that has to be made is it necessary to monitor the number of open ports in the system we may or may not have to depend on the situation if it is a general-purpose server we probably won't have to but then again if it is a webserver we probably would have to.
+Cada sistema tiene varios recursos, ¿en cuáles debemos vigilar de cerca y en cuáles podemos hacer la vista gorda? Por ejemplo, ¿es necesario monitorear el uso de la CPU? La respuesta es sí, obviamente. Sin embargo, sigue siendo una decisión que debe tomarse. ¿Es necesario monitorear el número de puertos abiertos en el sistema? Puede que sí o puede que no, dependiendo de la situación. Si es un servidor de propósito general, probablemente no sea necesario, pero si es un servidor web, probablemente sí lo sea.
 
-### Continuous Monitoring
+### Monitoreo Continuo
 
-Monitoring is not a new item and even continuous monitoring has been an ideal that many enterprises have adopted for many years.
+El monitoreo no es algo nuevo, e incluso el monitoreo continuo ha sido un ideal que muchas empresas han adoptado durante muchos años.
 
-There are three key areas of focus when it comes to monitoring.
+Hay tres áreas clave de enfoque en lo que respecta al monitoreo:
 
-- Infrastructure Monitoring
-- Application Monitoring
-- Network Monitoring
+- Monitoreo de la infraestructura
+- Monitoreo de aplicaciones
+- Monitoreo de redes
 
-The important thing to note is that there are many tools available we have mentioned two generic systems and tools in this session but there are lots. The real benefit of a monitoring solution comes when you have spent the time making sure you are answering the question of what should we be monitoring and what shouldn't we?
+Lo importante es tener en cuenta que hay muchas herramientas disponibles. Hemos mencionado dos sistemas y herramientas genéricas en esta sesión, pero hay muchas más. El verdadero beneficio de una solución de monitoreo se produce cuando has invertido tiempo en asegurarte de responder a la pregunta de ¿qué debemos monitorear y qué no?
 
-We could turn on a monitoring solution in any of our platforms and it will start grabbing information but if that information is simply too much then you are going to struggle to benefit from that solution, you have to spend the time to configure it.
+Podemos activar una solución de monitoreo en cualquiera de nuestras plataformas y comenzará a recopilar información, pero si esa información es simplemente demasiada, tendrás dificultades para aprovechar esa solución. Debes dedicar tiempo a configurarla correctamente.
 
-In the next session, we will get hands-on with a monitoring tool and see what we can start monitoring.
+En la próxima sesión, nos pondremos manos a la obra con una herramienta de monitoreo y veremos qué podemos comenzar a monitorear.
 
-## Resources
+## Recursos
 
 - [The Importance of Monitoring in DevOps](https://www.devopsonline.co.uk/the-importance-of-monitoring-in-devops/)
 - [Understanding Continuous Monitoring in DevOps?](https://medium.com/devopscurry/understanding-continuous-monitoring-in-devops-f6695b004e3b)
@@ -70,4 +70,4 @@ In the next session, we will get hands-on with a monitoring tool and see what we
 - [How Prometheus Monitoring works](https://www.youtube.com/watch?v=h4Sl21AKiDg)
 - [Introduction to Prometheus monitoring](https://www.youtube.com/watch?v=5o37CGlNLr8)
 
-See you on [Day 78](day78.md)
+Nos vemos en el [Día 78](day78.md)

@@ -1,81 +1,81 @@
-## Hands-On Monitoring Tools
+## Herramientas prácticas de monitoreo
 
-In the last session, I spoke about the big picture of monitoring and I took a look into Nagios, there were two reasons for doing this. The first was this is a piece of software I have heard a lot of over the years so wanted to know a little more about its capabilities.
+En la sesión anterior, hablé sobre el panorama general del monitoreo y eché un vistazo a Nagios. Hubo dos razones para hacer esto. La primera fue que he escuchado mucho sobre este software a lo largo de los años, así que quería conocer un poco más sobre sus capacidades.
 
-Today I am going to be going into Prometheus, I have seen more and more of Prometheus in the Cloud-Native landscape but it can also be used to look after those physical resources as well outside of Kubernetes and the like.
+Hoy voy a hablar sobre Prometheus. He visto cada vez más el uso de Prometheus en el panorama de la nube nativa, pero también se puede utilizar para monitorear recursos físicos fuera de Kubernetes y similares.
 
-### Prometheus - Monitors nearly everything
+### Prometheus: Monitorea casi todo
 
-First of all, Prometheus is Open-Source that can help you monitor containers and microservice-based systems as well as physical, virtual and other services. There is a large community behind Prometheus.
+En primer lugar, Prometheus es de código abierto y puede ayudarte a monitorear contenedores, sistemas basados en microservicios, así como servicios físicos, virtuales y otros. Hay una gran comunidad detrás de Prometheus.
 
-Prometheus has a large array of [integrations and exporters](https://prometheus.io/docs/instrumenting/exporters/) The key is to export existing metrics as Prometheus metrics. On top of this, it also supports multiple programming languages.
+Prometheus cuenta con una amplia variedad de [integraciones y exportadores](https://prometheus.io/docs/instrumenting/exporters/). La clave es exportar las métricas existentes como métricas de Prometheus. Además, también es compatible con múltiples lenguajes de programación.
 
-Pull approach - If you are talking to thousands of microservices or systems and services a push method is going to be where you generally see the service pushing to the monitoring system. This brings some challenges around flooding the network, high CPU and also a single point of failure. Where Pull gives us a much better experience where Prometheus will pull from the metrics endpoint on every service.
+Enfoque pull: Si estás hablando con miles de microservicios o sistemas y servicios, generalmente verás un método de empuje (push) donde el servicio envía la información al sistema de monitoreo. Esto plantea algunos desafíos, como la saturación de la red, un alto uso de la CPU y un único punto de falla. En cambio, el enfoque pull nos brinda una experiencia mucho mejor, donde Prometheus recupera los datos desde el punto de conexión de métricas de cada servicio.
 
-Once again we see YAML for configuration for Prometheus.
+Una vez más, vemos que se utiliza YAML para la configuración de Prometheus.
 
 ![](Images/Day78_Monitoring7.png)
 
-Later on, you are going to see how this looks when deployed into Kubernetes, in particular, we have the **PushGateway** which pulls our metrics from our jobs/exporters.
+Más adelante, verás cómo se ve esto cuando se implementa en Kubernetes. En particular, tenemos el **PushGateway** que recopila nuestras métricas de nuestros trabajos/exportadores.
 
-We have the **AlertManager** which pushes alerts and this is where we can integrate into external services such as email, slack and other tooling.
+Tenemos el **AlertManager** que envía alertas y es donde podemos integrar servicios externos como correo electrónico, Slack y otras herramientas.
 
-Then we have the Prometheus server which manages the retrieval of those pull metrics from the PushGateway and then sends those push alerts to the AlertManager. The Prometheus server also stores data on a local disk. Although can leverage remote storage solutions.
+Luego tenemos el servidor de Prometheus, que se encarga de obtener las métricas mediante el enfoque pull desde el PushGateway y envía las alertas push al AlertManager. El servidor de Prometheus también almacena los datos en un disco local, aunque se pueden utilizar soluciones de almacenamiento remoto.
 
-We then also have PromQL which is the language used to interact with the metrics, this can be seen later on with the Prometheus Web UI but you will also see later on in this section how this is also used within Data visualisation tools such as Grafana.
+También contamos con PromQL, que es el lenguaje utilizado para interactuar con las métricas. Esto se puede ver posteriormente en la interfaz web de Prometheus, pero también se utilizará más adelante en esta sección en herramientas de visualización de datos como Grafana.
 
-### Ways to Deploy Prometheus
+### Formas de implementar Prometheus
 
-Various ways of installing Prometheus, [Download Section](https://prometheus.io/download/) Docker images are also available.
+Existen varias formas de instalar Prometheus. Puedes consultar la sección de [descargas](https://prometheus.io/download/) en el sitio web de Prometheus. También hay imágenes de Docker disponibles.
 
 `docker run --name prometheus -d -p 127.0.0.1:9090:9090 prom/prometheus`
 
-But we are going to focus our efforts on deploying to Kubernetes. Which also has some options.
+Pero nos centraremos en implementarlo en Kubernetes, que también ofrece algunas opciones.
 
-- Create configuration YAML files
-- Using an Operator (manager of all Prometheus components)
-- Using helm chart to deploy operator
+- Crear archivos de configuración YAML.
+- Usar un operador (encargado de todos los componentes de Prometheus).
+- Usar un chart de Helm para implementar el operador.
 
-### Deploying to Kubernetes
+### Implementación en Kubernetes
 
-We will be using our minikube cluster locally again for this quick and simple installation. As with previous touch points with minikube, we will be using helm to deploy the Prometheus helm chart.
+Utilizaremos nuestro clúster de minikube nuevamente para esta instalación rápida y sencilla. Como en puntos anteriores con minikube, usaremos Helm para implementar el chart de Helm de Prometheus.
 
 `helm repo add prometheus-community https://prometheus-community.github.io/helm-charts`
 
 ![](Images/Day78_Monitoring1.png)
 
-As you can see from the above we have also run a helm repo update, we are now ready to deploy Prometheus into our minikube environment using the `helm install stable prometheus-community/prometheus` command.
+Como se puede ver en la imagen anterior, también hemos ejecutado helm repo update. Ahora estamos listos para implementar Prometheus en nuestro entorno de minikube utilizando el comando `helm install stable prometheus-community/prometheus`.
 
 ![](Images/Day78_Monitoring2.png)
 
-After a couple of minutes, you will see several new pods appear, for this demo, I have deployed into the default namespace, I would normally push this to its namespace.
+Después de un par de minutos, verás aparecer varios nuevos pods. Para esta demostración, los he implementado en el espacio de nombres predeterminado, pero normalmente los ubicaría en su propio espacio de nombres.
 
 ![](Images/Day78_Monitoring3.png)
 
-Once all the pods are running we can also take a look at all the deployed aspects of Prometheus.
+Una vez que todos los pods estén en ejecución, también podemos ver todos los aspectos implementados de Prometheus.
 
 ![](Images/Day78_Monitoring4.png)
 
-Now for us to access the Prometheus Server UI we can use the following command to port forward.
+Para acceder a la interfaz de usuario del servidor de Prometheus, podemos utilizar el siguiente comando para realizar un reenvío de puerto.
 
 ```Shell
 export POD_NAME=$(kubectl get pods --namespace default -l "app=prometheus,component=server" -o jsonpath="{.items[0].metadata.name}")
   kubectl --namespace default port-forward $POD_NAME 9090
 ```
 
-When we first open our browser to `http://localhost:9090` we see the following very blank screen.
+Cuando abrimos nuestro navegador en `http://localhost:9090` por primera vez, vemos una pantalla en blanco.
 
 ![](Images/Day78_Monitoring5.png)
 
-Because we have deployed to our Kubernetes cluster we will automatically be picking up metrics from our Kubernetes API so we can use some PromQL to at least make sure we are capturing metrics `container_cpu_usage_seconds_total`
+Debido a que lo hemos implementado en nuestro clúster de Kubernetes, automáticamente capturaremos métricas de la API de Kubernetes. Podemos utilizar PromQL para asegurarnos de que al menos estemos capturando métricas como `container_cpu_usage_seconds_total`.
 
 ![](Images/Day78_Monitoring6.png)
 
-Short on learning PromQL and putting that into practice this is very much like I mentioned previously in that gaining metrics is great, and so is monitoring but you have to know what you are monitoring and why and what you are not monitoring and why!
+En resumen, aprender PromQL y ponerlo en práctica es muy similar a lo que mencioné anteriormente. Obtener métricas es genial, al igual que el monitoreo, pero debes saber qué estás monitoreando, por qué lo estás haciendo y qué no estás monitoreando y por qué no lo estás haciendo.
 
-I want to come back to Prometheus but for now, I think we need to think about Log Management and Data Visualisation to bring us back to Prometheus later on.
+Quiero retomar el tema de Prometheus más adelante, pero por ahora creo que debemos pensar en la gestión de registros y la visualización de datos para volver a hablar de Prometheus más adelante.
 
-## Resources
+## Recursos
 
 - [The Importance of Monitoring in DevOps](https://www.devopsonline.co.uk/the-importance-of-monitoring-in-devops/)
 - [Understanding Continuous Monitoring in DevOps?](https://medium.com/devopscurry/understanding-continuous-monitoring-in-devops-f6695b004e3b)
@@ -85,4 +85,4 @@ I want to come back to Prometheus but for now, I think we need to think about Lo
 - [Introduction to Prometheus monitoring](https://www.youtube.com/watch?v=5o37CGlNLr8)
 - [Promql cheat sheet with examples](https://www.containiq.com/post/promql-cheat-sheet-with-examples)
 
-See you on [Day 79](day79.md)
+Nos vemos en el [Día 79](day79.md)

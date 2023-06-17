@@ -1,131 +1,132 @@
-## Data Visualisation - Grafana
+## Visualización de datos: Grafana
 
-We saw a lot of Kibana over this section around Observability. But we have to also take some time to cover Grafana. But also they are not the same and they are not completely competing against each other.
+Hemos visto mucho de Kibana en esta sección sobre Observabilidad. Sin embargo, también debemos dedicar algo de tiempo a hablar sobre Grafana. Aunque no son iguales y no compiten directamente entre sí.
 
-Kibana’s core feature is data querying and analysis. Using various methods, users can search the data indexed in Elasticsearch for specific events or strings within their data for root cause analysis and diagnostics. Based on these queries, users can use Kibana’s visualisation features which allow users to visualize data in a variety of different ways, using charts, tables, geographical maps and other types of visualizations.
+La característica principal de Kibana es la consulta y el análisis de datos. Los usuarios pueden buscar datos indexados en Elasticsearch mediante varios métodos para encontrar eventos específicos o cadenas dentro de sus datos, con el fin de realizar análisis de causa raíz y diagnósticos. Basándose en estas consultas, los usuarios pueden utilizar las funciones de visualización de Kibana, que les permiten visualizar datos de diversas formas, utilizando gráficos, tablas, mapas geográficos y otros tipos de visualizaciones.
 
-Grafana started as a fork of Kibana, Grafana had an aim to supply support for metrics aka monitoring, which at that time Kibana did not provide.
+Grafana comenzó como un fork de Kibana y su objetivo era brindar soporte para métricas, es decir, monitoreo, ya que en ese momento Kibana no lo proporcionaba.
 
-Grafana is a free and Open-Source data visualisation tool. We commonly see Prometheus and Grafana together out in the field but we might also see Grafana alongside Elasticsearch and Graphite.
+Grafana es una herramienta de visualización de datos gratuita y de código abierto. A menudo vemos Prometheus y Grafana juntos en el campo, pero también es posible ver Grafana junto a Elasticsearch y Graphite.
 
-The key difference between the two tools is Logging vs Monitoring, we started the section off covering monitoring with Nagios and then into Prometheus before moving into Logging where we covered the ELK and EFK stacks.
+La diferencia clave entre las dos herramientas es que una se centra en el registro (logging) y la otra en el monitoreo (monitoring). Comenzamos la sección hablando sobre el monitoreo con Nagios, luego pasamos a Prometheus y luego al registro, donde cubrimos las pilas ELK y EFK.
 
-Grafana caters to analysing and visualising metrics such as system CPU, memory, disk and I/O utilisation. The platform does not allow full-text data querying. Kibana runs on top of Elasticsearch and is used primarily for analyzing log messages.
+Grafana se ocupa de analizar y visualizar métricas, como el uso de la CPU del sistema, la memoria, el disco y la utilización de E/S. La plataforma no permite la consulta de datos en texto completo. Kibana se ejecuta sobre Elasticsearch y se utiliza principalmente para analizar mensajes de registro.
 
-As we have already discovered with Kibana it is quite easy to deploy as well as having the choice of where to deploy, this is the same for Grafana.
+Como ya hemos descubierto con Kibana, es bastante fácil de implementar y también tenemos la opción de dónde implementarlo. Esto es lo mismo para Grafana.
 
-Both support installation on Linux, Mac, Windows, Docker or building from source.
+Ambas herramientas admiten la instalación en Linux, Mac, Windows, Docker o la construcción desde el código fuente.
 
-There are no doubt others but Grafana is a tool that I have seen spanning the virtual, cloud and cloud-native platforms so I wanted to cover this here in this section.
+Sin duda existen otras herramientas, pero Grafana es una herramienta que he visto en plataformas virtuales, en la nube y en plataformas nativas de la nube, por lo que quería cubrirla en esta sección.
 
-### Prometheus Operator + Grafana Deployment
+### Implementación de Prometheus Operator + Grafana
 
-We have covered Prometheus already in this section but as we see these paired so often I wanted to spin up an environment that would allow us to at least see what metrics we could have displayed in a visualisation. We know that monitoring our environments is important but going through those metrics alone in Prometheus or any metric tool is going to be cumbersome and it is not going to scale. This is where Grafana comes in and provides us with that interactive visualisation of those metrics collected and stored in the Prometheus database.
+Ya hemos hablado de Prometheus en esta sección, pero dado que a menudo se utilizan juntos, quería configurar un entorno que nos permita ver al menos qué métricas se pueden mostrar en una visualización. Sabemos que es importante monitorear nuestros entornos, pero revisar esas métricas solo en Prometheus o cualquier herramienta de métricas sería engorroso y no escalable. Ahí es donde entra Grafana y nos brinda la visualización interactiva de esas métricas recopiladas y almacenadas en la base de datos de Prometheus.
 
-With that visualisation, we can create custom charts, graphs and alerts for our environment. In this walkthrough, we will be using our minikube cluster.
+Con esa visualización, podemos crear gráficos personalizados, gráficos y alertas para nuestro entorno. En este recorrido, utilizaremos nuestro clúster minikube.
 
-We are going to start by cloning this down to our local system. Using `git clone https://github.com/prometheus-operator/kube-prometheus.git` and `cd kube-prometheus`
+Vamos a comenzar clonando esto en nuestro sistema local. Utiliza `git clone https://github.com/prometheus-operator/kube-prometheus.git` y `cd kube-prometheus`.
 
 ![](Images/Day83_Monitoring1.png)
 
-The first job is to create our namespace within our minikube cluster `kubectl create -f manifests/setup` if you have not been following along in previous sections we can use `minikube start` to bring up a new cluster here.
+El primer paso es crear nuestro namespace (namespace) dentro de nuestro clúster minikube  `kubectl create -f manifests/setup`. Si no has estado siguiendo las secciones anteriores, puedes usar `minikube start` para iniciar un nuevo clúster aquí.
 
 ![](Images/Day83_Monitoring2.png)
 
-Next, we are going to deploy everything we need for our demo using the `kubectl create -f manifests/` command, as you can see this is going to deploy a lot of different resources within our cluster.
+A continuación, vamos a implementar todo lo que necesitamos para nuestra demostración utilizando el comando `kubectl create -f manifests/`. Como puedes ver, esto desplegará muchos recursos diferentes en nuestro clúster.
 
 ![](Images/Day83_Monitoring3.png)
 
-We then need to wait for our pods to come up and being in the running state we can use the `kubectl get pods -n monitoring -w` command to keep an eye on the pods.
+Luego, debemos esperar a que nuestras cápsulas (pods) se inicien y estén en estado de ejecución. Podemos utilizar el comando `kubectl get pods -n monitoring -w` para supervisar las cápsulas.
 
 ![](Images/Day83_Monitoring4.png)
 
-When everything is running we can check all pods are in a running and healthy state using the `kubectl get pods -n monitoring` command.
+Cuando todo esté en ejecución, podemos verificar que todas las cápsulas estén en estado de ejecución y saludables utilizando el comando `kubectl get pods -n monitoring`.
 
 ![](Images/Day83_Monitoring5.png)
 
-With the deployment, we deployed several services that we are going to be using later on in the demo you can check these by using the `kubectl get svc -n monitoring` command.
+Con la implementación, hemos desplegado varios servicios que utilizaremos más adelante en la demostración. Puedes verificar estos servicios utilizando el comando `kubectl get svc -n monitoring`.
 
 ![](Images/Day83_Monitoring6.png)
 
-And finally, let's check on all resources deployed in our new monitoring namespace using the `kubectl get all -n monitoring` command.
+Finalmente, verifiquemos todos los recursos implementados en nuestro nuevo namespace de monitoreo utilizando el comando `kubectl get all -n monitoring`.
 
 ![](Images/Day83_Monitoring7.png)
 
-Opening a new terminal we are now ready to access our Grafana tool and start gathering and visualising some of our metrics, the command to use is`kubectl --namespace monitoring port-forward svc/grafana 3000`
+Abre una nueva terminal y ahora estamos listos para acceder a nuestra herramienta Grafana y comenzar a recopilar y visualizar algunas de nuestras métricas. El comando a utilizar es `kubectl --namespace monitoring port-forward svc/grafana 3000`.
 
 ![](Images/Day83_Monitoring8.png)
 
-Open a browser and navigate to http://localhost:3000 you will be prompted for a username and password.
+Abre un navegador y ve a http://localhost:3000, se te solicitará un nombre de usuario y una contraseña.
 
 ![](Images/Day83_Monitoring9.png)
-The default username and password to access is
+
+El nombre de usuario y la contraseña predeterminados son:
 
 ```
 Username: admin
 Password: admin
 ```
 
-However, you will be asked to provide a new password at first login. The initial screen or home page you will see will give you some areas to explore as well as some useful resources to get up to speed with Grafana and its capabilities. Notice the "Add your first data source" and "create your first dashboard" widgets we will be using later.
+Sin embargo, se te pedirá que proporciones una nueva contraseña al iniciar sesión por primera vez. La pantalla inicial o la página de inicio que verás te mostrará áreas para explorar, así como algunos recursos útiles para familiarizarte con Grafana y sus capacidades. Observa los widgets "Add your first data source" (Agregar tu primera fuente de datos) y "create your first dashboard" (crear tu primer panel), que utilizaremos más adelante.
 
 ![](Images/Day83_Monitoring10.png)
 
-You will find that there is already a prometheus data source already added to our Grafana data sources, however, because we are using minikube we need to also port forward prometheus so that this is available on our localhost, opening a new terminal we can run the following command. `kubectl --namespace monitoring port-forward svc/prometheus-k8s 9090` if on the home page of Grafana we now enter into the widget "Add your first data source" and from here we are going to select Prometheus.
+Verás que ya hay una fuente de datos de Prometheus agregada a nuestras fuentes de datos de Grafana. Sin embargo, debido a que estamos utilizando minikube, también necesitamos redirigir el puerto de Prometheus para que esté disponible en nuestro localhost. Abre una nueva terminal y ejecuta el siguiente comando: `kubectl --namespace monitoring port-forward svc/prometheus-k8s 9090`. Si ahora ingresamos en el widget "Add your first data source" en la página de inicio de Grafana, seleccionaremos Prometheus desde allí.
 
 ![](Images/Day83_Monitoring11.png)
 
-For our new data source, we can use the address http://localhost:9090 and we will also need to change the dropdown to the browser as highlighted below.
+Para nuestra nueva fuente de datos, podemos utilizar la dirección http://localhost:9090 y también debemos cambiar el menú desplegable a "Browser" como se muestra a continuación.
 
 ![](Images/Day83_Monitoring12.png)
 
-At the bottom of the page, we can now hit save and test. This should give us the outcome you see below if the port forward for Prometheus is working.
+En la parte inferior de la página, ahora podemos hacer clic en "Save & Test" (Guardar y probar). Esto debería mostrarnos el resultado que se muestra a continuación si la redirección de puerto para Prometheus está funcionando.
 
 ![](Images/Day83_Monitoring13.png)
 
-Head back to the home page and find the option to "Create your first dashboard" select "Add a new panel"
+Vuelve a la página de inicio y busca la opción "Create your first dashboard" (Crear tu primer panel) y selecciona "Add a new panel" (Agregar un nuevo panel).
 
 ![](Images/Day83_Monitoring14.png)
 
-You will see from below that we are already gathering from our Grafana data source, but we would like to gather metrics from our Prometheus data source, select the data source drop down and select our newly created "Prometheus-1"
+Verás que ya estamos recopilando información de nuestra fuente de datos de Grafana. Sin embargo, nos gustaría recopilar métricas de nuestra fuente de datos de Prometheus. Selecciona el menú desplegable de fuente de datos y elige nuestra fuente de datos recién creada "Prometheus-1".
 
 ![](Images/Day83_Monitoring15.png)
 
-If you then select the Metrics browser you will have a long list of metrics being gathered from Prometheus related to our minikube cluster.
+Si luego seleccionas "Metrics browser" (Explorador de métricas), verás una larga lista de métricas recopiladas de Prometheus relacionadas con nuestro clúster minikube.
 
 ![](Images/Day83_Monitoring16.png)
 
-For the demo I am going to find a metric that gives us some output around our system resources, `cluster:node_cpu:ratio{}` gives us some detail on the nodes in our cluster and proves that this integration is working.
+Para la demostración, voy a buscar una métrica que nos proporcione alguna información sobre los recursos del sistema. `cluster:node_cpu:ratio{}` nos proporciona algunos detalles sobre los nodos de nuestro clúster y demuestra que esta integración está funcionando.
 
 ![](Images/Day83_Monitoring17.png)
 
-Once you are happy with this as your visualisation then you can hit the apply button in the top right and you will then add this graph to your dashboard. You can go ahead and add additional graphs and other charts to give you the visuals that you need.
+Una vez que estés satisfecho con esta visualización, puedes hacer clic en el botón "Apply" (Aplicar) en la esquina superior derecha y luego agregar este gráfico a tu panel. Puedes agregar más gráficos y otros tipos de visualizaciones que necesites.
 
 ![](Images/Day83_Monitoring18.png)
 
-We can however take advantage of thousands of previously created dashboards that we can use so that we do not need to reinvent the wheel.
+Sin embargo, podemos aprovechar miles de paneles creados previamente que podemos usar para no tener que reinventar la rueda.
 
 ![](Images/Day83_Monitoring19.png)
 
-If we search Kubernetes we will see a long list of pre-built dashboards that we can choose from.
+Si buscamos "Kubernetes", veremos una larga lista de paneles preconstruidos entre los que podemos elegir.
 
 ![](Images/Day83_Monitoring20.png)
 
-We have chosen the Kubernetes API Server dashboard and changed the data source to suit our newly added Prometheus-1 data source and we get to see some of the metrics displayed below.
+Hemos elegido el panel "Kubernetes API Server" y hemos cambiado la fuente de datos para adaptarla a nuestra nueva fuente de datos "Prometheus-1", y podemos ver algunas de las métricas que se muestran a continuación.
 
 ![](Images/Day83_Monitoring21.png)
 
-### Alerting
+### Alertas
 
-You could also leverage the alertmanager that we deployed to then send alerts out to slack or other integrations, to do this you would need to port forward the alertmanager service using the below details.
+También podrías aprovechar el administrador de alertas que hemos implementado para enviar alertas a Slack u otras integraciones. Para hacer esto, deberías redirigir el puerto del servicio alertmanager utilizando los siguientes detalles:
 
-`kubectl --namespace monitoring port-forward svc/alertmanager-main 9093`
-`http://localhost:9093`
+`kubectl --namespace monitoring port-forward svc/alertmanager-main 9093
+http://localhost:9093`
 
-That wraps up our section on all things observability, I have personally found that this section has highlighted how broad this topic is but equally how important this is for our roles and that be it metrics, logging or tracing you are going to need to have a good idea of what is happening in our broad environments moving forward, especially when they can change so dramatically with all the automation that we have already covered in the other sections.
+Esto concluye nuestra sección sobre todo lo relacionado con la observabilidad. Personalmente, he encontrado que esta sección ha destacado lo amplio de este tema, pero igualmente lo importante que es para nuestros roles. Ya sea métricas, registros o trazas, necesitarás tener una buena idea de lo que está sucediendo en nuestros entornos amplios en el futuro, especialmente cuando pueden cambiar de manera tan drástica con toda la automatización que ya hemos cubierto en las otras secciones.
 
-Next up we are going to be taking a look into data management and how DevOps principles also need to be considered when it comes to Data Management.
+A continuación, vamos a echar un vistazo a la gestión de datos y cómo los principios de DevOps también deben considerarse cuando se trata de la gestión de datos.
 
-## Resources
+## Recursos
 
 - [Understanding Logging: Containers & Microservices](https://www.youtube.com/watch?v=MMVdkzeQ848)
 - [The Importance of Monitoring in DevOps](https://www.devopsonline.co.uk/the-importance-of-monitoring-in-devops/)
@@ -140,4 +141,4 @@ Next up we are going to be taking a look into data management and how DevOps pri
 - [What is ELK Stack?](https://www.youtube.com/watch?v=4X0WLg05ASw)
 - [Fluentd simply explained](https://www.youtube.com/watch?v=5ofsNyHZwWE&t=14s)
 
-See you on [Day 84](day84.md)
+Nos vemos en el [Día 84](day84.md)

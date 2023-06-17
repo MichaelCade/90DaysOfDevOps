@@ -1,84 +1,84 @@
 ## ELK Stack
 
-In this session, we are going to get a little more hands-on with some of the options we have mentioned.
+En esta sesión, vamos a profundizar un poco más en algunas de las opciones que hemos mencionado.
 
-ELK Stack is the combination of 3 separate tools:
+ELK Stack es la combinación de 3 herramientas separadas:
 
-- [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) is a distributed, free and open search and analytics engine for all types of data, including textual, numerical, geospatial, structured, and unstructured.
+- [Elasticsearch](https://www.elastic.co/what-is/elasticsearch) es un motor de búsqueda y análisis distribuido, gratuito y de código abierto para todo tipo de datos, incluidos datos textuales, numéricos, geoespaciales, estructurados y no estructurados.
 
-- [Logstash](https://www.elastic.co/logstash/) is a free and open server-side data processing pipeline that ingests data from a multitude of sources, transforms it, and then sends it to your favourite "stash."
+- [Logstash](https://www.elastic.co/logstash/) es un canal de procesamiento de datos en el lado del servidor, gratuito y de código abierto, que recopila datos de múltiples fuentes, los transforma y luego los envía a tu "almacén" favorito.
 
-- [Kibana](https://www.elastic.co/kibana/) is a free and open user interface that lets you visualize your Elasticsearch data and navigate the Elastic Stack. Do anything from tracking query load to understanding the way requests flow through your apps.
+- [Kibana](https://www.elastic.co/kibana/) es una interfaz de usuario gratuita y de código abierto que te permite visualizar tus datos de Elasticsearch y navegar por Elastic Stack. Puedes hacer desde realizar un seguimiento de la carga de consultas hasta comprender cómo fluyen las solicitudes en tus aplicaciones.
 
-ELK stack lets us reliably and securely take data from any source, in any format, then search, analyze, and visualize it in real time.
+ELK Stack nos permite tomar datos de cualquier fuente, en cualquier formato, de manera confiable y segura, y luego buscar, analizar y visualizar esos datos en tiempo real.
 
-On top of the above-mentioned components, you might also see Beats which are lightweight agents that are installed on edge hosts to collect different types of data for forwarding into the stack.
+Además de los componentes mencionados anteriormente, también puedes encontrar Beats, que son agentes ligeros instalados en hosts periféricos para recopilar diferentes tipos de datos y enviarlos al stack.
 
-- Logs: Server logs that need to be analysed are identified
+- Logs: Se identifican los registros del servidor que necesitan ser analizados.
 
-- Logstash: Collect logs and events data. It even parses and transforms data
+- Logstash: Recopila registros y datos de eventos. Incluso los analiza y transforma.
 
-- ElasticSearch: The transformed data from Logstash is Store, Search, and indexed.
+- Elasticsearch: Almacena, busca e indexa los datos transformados de Logstash.
 
-- Kibana uses Elasticsearch DB to Explore, Visualize, and Share
+- Kibana utiliza la base de datos Elasticsearch para explorar, visualizar y compartir datos.
 
 ![](Images/Day80_Monitoring8.png)
 
-[Picture taken from Guru99](https://www.guru99.com/elk-stack-tutorial.html)
+[Imagen tomada de Guru99](https://www.guru99.com/elk-stack-tutorial.html)
 
-A good resource explaining this [Is the Complete Guide to the ELK Stack](https://logz.io/learn/complete-guide-elk-stack/)
+Un buen recurso que explica esto en detalle es [The Complete Guide to the ELK Stack.](https://logz.io/learn/complete-guide-elk-stack/)
 
-With the addition of beats, the ELK Stack is also now known as Elastic Stack.
+Con la adición de Beats, ELK Stack también se conoce ahora como Elastic Stack.
 
-For the hands-on scenario, there are many places you can deploy the Elastic Stack but we are going to be using docker-compose to deploy locally on our system.
+Para el escenario práctico, hay muchos lugares donde puedes implementar Elastic Stack, pero vamos a utilizar docker-compose para implementarlo localmente en nuestro sistema.
 
-[Start the Elastic Stack with Docker Compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-stack-docker.html#get-started-docker-tls)
+[Inicia Elastic Stack con Docker Compose](https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-stack-docker.html#get-started-docker-tls)
 
 ![](Images/Day80_Monitoring1.png)
 
-You will find the original files and walkthrough that I used here [deviantony/docker-elk](https://github.com/deviantony/docker-elk)
+Encontrarás los archivos originales y el paso a paso que utilicé aquí deviantony/docker-elk.
 
-Now we can run `docker-compose up -d`, the first time this has been running will require the pulling of images.
+Ahora podemos ejecutar `docker-compose up -d`, la primera vez que se ejecute requerirá la descarga de las imágenes.
 
 ![](Images/Day80_Monitoring2.png)
 
-If you follow either this repository or the one that I used you will have either the password of "changeme" or in my repository the password of "90DaysOfDevOps". The username is "elastic"
+Si sigues este repositorio o el que utilicé, tendrás la contraseña "changeme" o en mi repositorio la contraseña "90DaysOfDevOps". El nombre de usuario es "elastic".
 
-After a few minutes, we can navigate to `http://localhost:5601/` which is our Kibana server / Docker container.
+Después de unos minutos, podemos acceder a `http://localhost:5601/`, que es nuestro servidor Kibana / contenedor Docker.
 
 ![](Images/Day80_Monitoring3.png)
 
-Your initial home screen is going to look something like this.
+Tu pantalla de inicio inicial se verá algo así.
 
 ![](Images/Day80_Monitoring4.png)
 
-Under the section titled "Get started by adding integrations" there is a "try sample data" click this and we can add one of the shown below.
+En la sección titulada "Comienza añadiendo integraciones", hay un enlace "try sample data" haz clic en él y podemos agregar uno de los que se muestran a continuación.
 
 ![](Images/Day80_Monitoring5.png)
 
-I am going to select "Sample weblogs" but this is really to get a look and feel of what data sets you can get into the ELK stack.
+Voy a seleccionar "Sample weblogs", pero esto es solo para tener una idea de los conjuntos de datos que puedes agregar al ELK Stack.
 
-When you have selected "Add Data" it takes a while to populate some of that data and then you have the "View Data" option and a list of the available ways to view that data in the dropdown.
+Una vez que hayas seleccionado "Add Data", tomará un tiempo completar la carga de algunos de esos datos y luego tendrás la opción de "View Data" y una lista de las formas disponibles de ver esos datos en el menú desplegable.
 
 ![](Images/Day80_Monitoring6.png)
 
-As it states on the dashboard view:
+Como se indica en la vista del panel de control:
 
 **Sample Logs Data**
 
-> This dashboard contains sample data for you to play with. You can view it, search it, and interact with the visualizations. For more information about Kibana, check our docs.
+> Este panel contiene datos de muestra con los que puedes experimentar. Puedes verlos, buscarlos e interactuar con las visualizaciones. Para obtener más información sobre Kibana, consulta nuestra documentación.
 
 ![](Images/Day80_Monitoring7.png)
 
-This is using Kibana to visualise data that has been added into ElasticSearch via Logstash. This is not the only option but I wanted to deploy and look at this.
+Esto utiliza Kibana para visualizar los datos que se han agregado a Elasticsearch a través de Logstash. Esta no es la única opción, pero quería implementarlo y verlo en acción.
 
-We are going to cover Grafana at some point and you are going to see some data visualisation similarities between the two, you have also seen Prometheus.
+En algún momento también cubriremos Grafana y verás similitudes en la visualización de datos entre ambas herramientas, y también has visto Prometheus.
 
-The key takeaway I have had between the Elastic Stack and Prometheus + Grafana is that Elastic Stack or ELK Stack is focused on Logs and Prometheus is focused on metrics.
+La principal diferencia entre Elastic Stack y Prometheus + Grafana que he encontrado es que Elastic Stack o ELK Stack se centra en los registros (logs) y Prometheus se centra en las métricas.
 
-I was reading this article from MetricFire [Prometheus vs. ELK](https://www.metricfire.com/blog/prometheus-vs-elk/) to get a better understanding of the different offerings.
+Estaba leyendo este artículo de MetricFire [Prometheus vs. ELK](https://www.metricfire.com/blog/prometheus-vs-elk/) para tener una mejor comprensión de las diferentes opciones.
 
-## Resources
+## Recursos
 
 - [Understanding Logging: Containers & Microservices](https://www.youtube.com/watch?v=MMVdkzeQ848)
 - [The Importance of Monitoring in DevOps](https://www.devopsonline.co.uk/the-importance-of-monitoring-in-devops/)
@@ -93,4 +93,4 @@ I was reading this article from MetricFire [Prometheus vs. ELK](https://www.metr
 - [What is ELK Stack?](https://www.youtube.com/watch?v=4X0WLg05ASw)
 - [Fluentd simply explained](https://www.youtube.com/watch?v=5ofsNyHZwWE&t=14s)
 
-See you on [Day 81](day81.md)
+Nos vemos en el [Día 81](day81.md)
