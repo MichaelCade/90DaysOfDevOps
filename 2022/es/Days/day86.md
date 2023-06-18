@@ -1,166 +1,167 @@
-## Backup all the platforms
+## Backup de todas las plataformas
 
-During this whole challenge, we discussed many different platforms and environments. One thing all of those have in common is the fact they all need some level of data protection!
+Durante todo este desafío, discutimos muchas plataformas y entornos diferentes. Una cosa que todos ellos tienen en común es que necesitan algún nivel de protección de datos.
 
-Data Protection has been around for many many years but the wealth of data that we have today and the value that this data brings means we have to make sure we are not only resilient to infrastructure failure by having multiple nodes and high availability across applications but we must also consider that we need a copy of that data, that important data in a safe and secure location if a failure scenario was to occur.
+La protección de datos ha existido durante muchos años, pero la cantidad de datos que tenemos hoy en día y el valor que estos datos aportan significa que debemos asegurarnos de no solo ser resilientes ante fallas de infraestructura teniendo múltiples nodos y alta disponibilidad en las aplicaciones, sino que también debemos considerar que necesitamos una copia de esos datos, esos datos importantes, en un lugar seguro si ocurriera un escenario de falla.
 
-We hear a lot these days it seems about cybercrime and ransomware, and don't get me wrong this is a massive threat and I stand by the fact that you will be attacked by ransomware. It is not a matter of if it is a matter of when. So even more reason to make sure you have your data secure for when that time arises. However, the most common cause for data loss is not ransomware or cybercrime it is simply accidental deletion!
+Hoy en día escuchamos mucho sobre delitos cibernéticos y ransomware, y no me malinterpretes, esta es una gran amenaza y sostengo que serás atacado por ransomware. No se trata de si sucederá, sino de cuándo sucederá. Por lo tanto, hay aún más razón para asegurarte de que tus datos estén protegidos cuando llegue ese momento. Sin embargo, la causa más común de pérdida de datos no es el ransomware ni los delitos cibernéticos, ¡sino simplemente la eliminación accidental!
 
-We have all done it, deleted something we shouldn't have and had that instant regret.
+Todos lo hemos hecho, hemos eliminado algo que no deberíamos haber eliminado y hemos sentido un arrepentimiento instantáneo.
 
-With all of the technology and automation we have discussed during the challenge, the requirement to protect any stateful data or even complex stateless configuration is still there, regardless of the platform.
+Con toda la tecnología y automatización de la que hemos hablado durante el desafío, el requisito de proteger cualquier dato con estado o incluso una configuración sin estado compleja aún está presente, independientemente de la plataforma.
 
 ![](Images/Day86_Data1.png)
 
-But we should be able to perform that protection of the data with automation in mind and be able to integrate it into our workflows.
+¡Pero deberíamos poder realizar esa protección de datos teniendo en cuenta la automatización y poder integrarla en nuestros flujos de trabajo.
 
-If we look at what backup is:
+Si analizamos lo que es un backup:
 
-_In information technology, a backup, or data backup is a copy of computer data taken and stored elsewhere so that it may be used to restore the original after a data loss event. The verb form, referring to the process of doing so, is "back up", whereas the noun and adjective form is "backup"._
+*"En tecnología de la información, un backup o copia de seguridad de datos es una copia de los datos de la computadora que se toma y se almacena en otro lugar para que se pueda usar para restaurar el original después de un evento de pérdida de datos. El verbo que se refiere al proceso de hacer esto es "respaldar", mientras que el sustantivo y el adjetivo son "backup"."*
 
-If we break this down to the simplest form, a backup is a copy and paste of data to a new location. Simply put I could take a backup right now by copying a file from my C: drive to my D: drive and I would then have a copy in case something happened to the C: drive or something was edited wrongly within the files. I could revert to the copy I have on the D: drive. Now if my computer dies where both the C & D drives live then I am not protected so I have to consider a solution or a copy of data outside of my system maybe onto a NAS drive in my house? But then what happens if something happens to my house, maybe I need to consider storing it on another system in another location, maybe the cloud is an option. Maybe I could store a copy of my important files in several locations to mitigate the risk of failure?
+Si lo desglosamos a la forma más simple, un backup es una copia y pegado de datos en una nueva ubicación. En pocas palabras, podría hacer un backup en este momento copiando un archivo de mi unidad C: a mi unidad D:, y luego tendría una copia en caso de que algo le sucediera a la unidad C: o si se editara incorrectamente algún archivo. Podría volver a la copia que tengo en la unidad D:. Ahora, si mi computadora muere, donde están tanto las unidades C: como D:, entonces no estoy protegido, por lo que debo considerar una solución o una copia de los datos fuera de mi sistema, tal vez en una unidad NAS en mi casa. Pero luego, ¿qué sucede si algo le sucede a mi casa? Tal vez necesite considerar almacenarlo en otro sistema en otra ubicación, tal vez la nube sea una opción. Quizás podría almacenar una copia de mis archivos importantes en varios lugares para mitigar el riesgo de falla.
 
-### 3-2-1 Backup Methodolgy
+### Metodología de backup 3-2-1
 
-Now seems a good time to talk about the 3-2-1 rule or backup methodology. I did a [lightning talk](https://www.youtube.com/watch?v=5wRt1bJfKBw) covering this topic.
+Ahora parece un buen momento para hablar sobre la regla 3-2-1 o metodología de backup. Hice una [charla rápida](https://www.youtube.com/watch?v=5wRt1bJfKBw) que aborda este tema.
 
-We have already mentioned before some of the extreme ends of why we need to protect our data but a few more are listed below:
+Ya hemos mencionado anteriormente algunas de las razones extremas por las que necesitamos proteger nuestros datos, pero a continuación se enumeran algunas más:
 
 ![](Images/Day86_Data2.png)
 
-Which then allows me to talk about the 3-2-1 methodology. My first copy or backup of my data should be as close to my production system as possible, the reason for this is based on speed to recovery and again going back to that original point about accidental deletion this is going to be the most common reason for recovery. But I want to be storing that on a suitable second media outside of the original or production system.
+Esto nos permite hablar sobre la metodología 3-2-1. Mi primera copia o backup de mis datos debería estar lo más cerca posible de mi sistema de producción, la razón de esto se basa en la velocidad de recuperación y nuevamente volvemos al punto original sobre la eliminación accidental, que será la razón más común para la recuperación. Pero quiero almacenar eso en un segundo medio adecuado fuera del sistema original o de producción.
 
-We then want to make sure we also send a copy of our data external or offsite this is where a second location comes in be it another house, building, data centre or the public cloud.
+Luego, queremos asegurarnos de enviar una copia de nuestros datos externamente o fuera del sitio, y aquí es donde entra en juego una segunda ubicación, ya sea otra casa, edificio, centro de datos o la nube pública.
 
 ![](Images/Day86_Data3.png)
 
-### Backup Responsibility
 
-We have most likely heard all of the myths when it comes to not having to backup, things like "Everything is stateless" I mean if everything is stateless then what is the business? no databases? word documents? There is a level of responsibility on every individual within the business to ensure they are protected but it is going to come down most likely to the operations teams to provide the backup process for the mission-critical applications and data.
+### Responsabilidad del backup
 
-Another good one is that "High availability is my backup, we have built in multiple nodes into our cluster there is no way this is going down!" apart from when you make a mistake to the database and this is replicated over all the nodes in the cluster, or there is fire, flood or blood scenario that means the cluster is no longer available and with it the important data. It's not about being stubborn it is about being aware of the data and the services, absolutely everyone should factor in high availability and fault tolerance into their architecture but that does not substitute the need for backup!
+Probablemente hayamos escuchado todos los mitos cuando se trata de no tener que hacer backups, como "Todo es sin estado". Quiero decir, si todo es sin estado, ¿qué negocio tenemos? ¿sin bases de datos? ¿documentos de Word? Existe un nivel de responsabilidad en cada persona dentro de la empresa para asegurarse de estar protegidos, pero es probable que los equipos de operaciones sean los responsables de proporcionar el proceso de backup para las aplicaciones y datos críticos para la misión.
 
-Replication can also seem to give us the offsite copy of the data and maybe that cluster mentioned above does live across multiple locations, however, the first accidental mistake would still be replicated there. But again a Backup requirement should stand alongside application replication or system replication within the environment.
+Otro buen ejemplo es "La alta disponibilidad es mi backup, hemos incorporado varios nodos en nuestro clúster, ¡no hay forma de que esto falle!". Excepto cuando se comete un error en la base de datos y se replica en todos los nodos del clúster, o si hay un incendio, inundación o escenario de sangre que significa que el clúster ya no está disponible y, con él, los datos importantes. No se trata de ser obstinados, sino de ser conscientes de los datos y los servicios. Absolutamente todos deberían tener en cuenta la alta disponibilidad y la tolerancia a fallos en su arquitectura, pero eso no sustituye la necesidad de backup.
 
-Now with all this said you can go to the extreme on the other end as well and send copies of data to too many locations which is going to not only cost but also increase the risk of being attacked as your surface area is now massively expanded.
+La replicación también puede parecer que nos proporciona una copia externa de los datos y tal vez ese clúster mencionado anteriormente esté distribuido en varias ubicaciones. Sin embargo, el primer error accidental aún se replicaría allí. Pero nuevamente, el requisito de backup debe ir junto con la replicación de la aplicación o la replicación del sistema dentro del entorno.
 
-Anyway, who looks after backup? It will be different within each business but someone should be taking it upon themselves to understand the backup requirements. But also understand the recovery plan!
+Ahora bien, con todo lo dicho, también se puede llegar al extremo opuesto y enviar copias de los datos a demasiadas ubicaciones, lo que no solo aumentará los costos, sino que también aumentará el riesgo de ser atacado, ya que tu superficie de exposición ahora se ha ampliado enormemente.
 
-### Nobody cares till everybody cares
+De todos modos, ¿quién se encarga del backup? Será diferente en cada empresa, pero alguien debería encargarse de comprender los requisitos de backup. ¡Pero también comprender el plan de recuperación!
 
-Backup is a prime example, nobody cares about backup until you need to restore something. Alongside the requirement to back our data up we also need to consider how we restore!
+### A nadie le importa hasta que a todos les importa
 
-With our text document example, we are talking about very small files so the ability to copy back and forth is easy and fast. But if we are talking about 100GB plus files then this is going to take time. Also, we have to consider the level at which we need to recover if we take a virtual machine for example.
+El backup es un ejemplo perfecto: a nadie le importa el backup hasta que necesita restaurar algo. Además del requisito de hacer copias de seguridad de nuestros datos, también debemos considerar cómo restaurarlos.
 
-We have the whole Virtual Machine, we have the Operating System, Application installation and then if this is a database server we will have some database files as well. If we have made a mistake and inserted the wrong line of code into our database I probably don't need to restore the whole virtual machine, I want to be granular on what I recover back.
+En nuestro ejemplo de documento de texto, estamos hablando de archivos muy pequeños, por lo que la capacidad de copiar de un lado a otro es fácil y rápida. Pero si hablamos de archivos de más de 100 GB, esto llevará tiempo. Además, debemos considerar el nivel al que necesitamos recuperarnos, por ejemplo, si tomamos una máquina virtual.
 
-### Backup Scenario
+Tenemos toda la máquina virtual, tenemos el sistema operativo, la instalación de la aplicación y, si se trata de un servidor de bases de datos, también tendremos algunos archivos de la base de datos. Si cometemos un error e insertamos la línea de código incorrecta en nuestra base de datos, probablemente no necesitemos restaurar toda la máquina virtual, sino que queremos ser más precisos en lo que recuperamos.
 
-I want to now start building on a scenario to protect some data, specifically, I want to protect some files on my local machine (in this case Windows but the tool I am going to use is not only free and open-source but also cross-platform) I would like to make sure they are protected to a NAS device I have locally in my home but also into an Object Storage bucket in the cloud.
+### Escenario de backup
 
-I want to back up this important data, it just so happens to be the repository for the 90DaysOfDevOps, which yes is also being sent to GitHub which is probably where you are reading this now but what if my machine was to die and GitHub was down? How would anyone be able to read the content but also how would I potentially be able to restore that data to another service?
+Ahora quiero comenzar a construir un escenario para proteger algunos datos, específicamente, quiero proteger algunos archivos en mi máquina local (en este caso, Windows, pero la herramienta que voy a usar no solo es gratuita y de código abierto, sino también multiplataforma). Me gustaría asegurarme de que estén respaldados en un dispositivo NAS que tengo localmente en mi hogar, pero también en un depósito de almacenamiento de objetos en la nube.
+
+Quiero hacer una copia de seguridad de estos datos importantes, que resulta ser el repositorio para los "90DaysOfDevOps", que sí, también se envía a GitHub, que probablemente es donde estás leyendo esto ahora, pero ¿qué pasaría si mi máquina muriera y GitHub estuviera caído? ¿Cómo podría alguien leer el contenido, pero también cómo podría restaurar esos datos en otro servicio?
 
 ![](Images/Day86_Data5.png)
 
-There are lots of tools that can help us achieve this but I am going to be using a tool called [Kopia](https://kopia.io/) an Open-Source backup tool which will enable us to encrypt, dedupe and compress our backups whilst being able to send them to many locations.
+Hay muchas herramientas que pueden ayudarnos a lograr esto, pero voy a utilizar una herramienta llamada [Kopia](https://kopia.io/), una herramienta de backup de código abierto que nos permitirá cifrar, deduplicar y comprimir nuestras copias de seguridad y enviarlas a muchos lugares.
 
-You will find the releases to download [here](https://github.com/kopia/kopia/releases) at the time of writing I will be using v0.10.6.
+Puedes encontrar las versiones para descargar [aquí](https://github.com/kopia/kopia/releases). En el momento de escribir esto, estaré usando la versión 0.10.6.
 
-### Installing Kopia
+### Instalación de Kopia
 
-There is a Kopia CLI and GUI, we will be using the GUI but know that you can have a CLI version of this as well for those Linux servers that do not give you a GUI.
+Existen una interfaz de línea de comandos (CLI) y una interfaz gráfica de usuario (GUI) de Kopia. Usaremos la GUI, pero debes saber que también puedes usar una versión de CLI para aquellos servidores Linux que no tienen una GUI.
 
-I will be using `KopiaUI-Setup-0.10.6.exe`
+Usaré `KopiaUI-Setup-0.10.6.exe`.
 
-Really quick next next installation and then when you open the application you are greeted with the choice of selecting the storage type that you wish to use as your backup repository.
+La instalación es muy rápida y luego, cuando abres la aplicación, te da la opción de seleccionar el tipo de almacenamiento que deseas utilizar como repositorio de backup.
 
 ![](Images/Day86_Data6.png)
 
-### Setting up a Repository
+### Configuración de un repositorio
 
-Firstly we would like to set up a repository using our local NAS device and we are going to do this using SMB, but we could also use NFS I believe.
+En primer lugar, nos gustaría configurar un repositorio utilizando nuestro dispositivo NAS local y lo haremos mediante SMB, aunque también podríamos usar NFS, creo.
 
 ![](Images/Day86_Data7.png)
 
-On the next screen, we are going to define a password, this password is used to encrypt the repository contents.
+En la siguiente pantalla, vamos a definir una contraseña, que se utilizará para cifrar el contenido del repositorio.
 
 ![](Images/Day86_Data8.png)
 
-Now that we have the repository configured we can trigger an ad-hoc snapshot to start writing data to it.
+Ahora que hemos configurado el repositorio, podemos iniciar una instantánea ad hoc para comenzar a escribir datos en él.
 
 ![](Images/Day86_Data9.png)
 
-First up we need to enter a path to what we want to snapshot and in our case we want to take a copy of our `90DaysOfDevOps` folder. We will get back to the scheduling aspect shortly.
+Lo primero que debemos hacer es ingresar la ruta de lo que queremos capturar en la instantánea, y en nuestro caso, queremos hacer una copia de nuestra carpeta `90DaysOfDevOps`. Volveremos a la programación más adelante.
 
 ![](Images/Day86_Data10.png)
 
-We can define our snapshot retention.
+Podemos definir la retención de nuestra instantánea.
 
 ![](Images/Day86_Data11.png)
 
-Maybe there are files or file types that we wish to exclude.
+Tal vez hay archivos o tipos de archivo que deseamos excluir.
 
 ![](Images/Day86_Data12.png)
 
-If we wanted to define a schedule we could do this on this next screen, when you first create this snapshot this is the opening page to define.
+Si quisiéramos definir una programación, podríamos hacerlo en esta próxima pantalla. Cuando creas esta instantánea, esta es la página de apertura para definirla.
 
 ![](Images/Day86_Data13.png)
 
-And you will see several other settings that can be handled here.
+Y verás que aquí se pueden manejar varios otros ajustes.
 
 ![](Images/Day86_Data14.png)
 
-Select snapshot now and the data will be written to your repository.
+Selecciona "Snapshot now" y los datos se escribirán en tu repositorio.
 
 ![](Images/Day86_Data15.png)
 
-### Offsite backup to S3
+### backup externo a S3
 
-With Kopia we can through the UI it seems only to have one repository configured at a time. But through the UI we can be creative and have multiple repository configuration files to choose from to achieve our goal of having a copy local and offsite in Object Storage.
+Con Kopia, parece que solo podemos tener un repositorio configurado a la vez a través de la interfaz gráfica. Sin embargo, a través de la interfaz gráfica, podemos ser creativos y tener varios archivos de configuración de repositorio para elegir y lograr nuestro objetivo de tener una copia local y externa en un almacenamiento de objetos.
 
-The Object Storage I am choosing to send my data to is going to Google Cloud Storage. I firstly logged into my Google Cloud Platform account and created a storage bucket. I already had the Google Cloud SDK installed on my system but running the `gcloud auth application-default login` authenticated me with my account.
+El almacenamiento de objetos que elegiré para enviar mis datos será Google Cloud Storage. Primero inicié sesión en mi cuenta de Google Cloud Platform y creé un depósito de almacenamiento. Ya tenía instalado el SDK de Google Cloud en mi sistema y al ejecutar el comando `gcloud auth application-default login` me autenticé con mi cuenta.
 
 ![](Images/Day86_Data16.png)
 
-I then used the CLI of Kopia to show me the current status of my repository after we added our SMB repository in the previous steps. I did this using the `"C:\Program Files\KopiaUI\resources\server\kopia.exe" --config-file=C:\Users\micha\AppData\Roaming\kopia\repository.config repository status` command.
+Luego usé la CLI de Kopia para mostrarme el estado actual de mi repositorio después de agregar nuestro repositorio SMB en los pasos anteriores. Hice esto usando el comando `"C:\Program Files\KopiaUI\resources\server\kopia.exe" --config-file=C:\Users\micha\AppData\Roaming\kopia\repository.config repository status`.
 
 ![](Images/Day86_Data17.png)
 
-We are now ready to replace for the demo the configuration for the repository, what we would probably do if we wanted a long-term solution to hit both of these repositories is we would create an `smb.config` file and a `object.config` file and be able to run both of these commands to send our copies of data to each location. To add our repository we ran `"C:\Program Files\KopiaUI\resources\server\kopia.exe" --config-file=C:\Users\micha\AppData\Roaming\kopia\repository.config repository create gcs --bucket 90daysofdevops`
+Ahora estamos listos para reemplazar, para la demostración, la configuración del repositorio. Lo que probablemente haríamos si quisiéramos una solución a largo plazo para ambos repositorios es crear un archivo `smb.config` y un archivo `object.config` y ejecutar ambos comandos para enviar nuestras copias de los datos a cada ubicación. Para agregar nuestro repositorio, ejecutamos el comando `"C:\Program Files\KopiaUI\resources\server\kopia.exe" --config-file=C:\Users\micha\AppData\Roaming\kopia\repository.config repository create gcs --bucket 90daysofdevops`.
 
-The above command is taking into account that the Google Cloud Storage bucket we created is called `90daysofdevops`
+El comando anterior tiene en cuenta que el depósito de Google Cloud Storage que creamos se llama `90daysofdevops`.
 
 ![](Images/Day86_Data18.png)
 
-Now that we have created our new repository we can then run the `"C:\Program Files\KopiaUI\resources\server\kopia.exe" --config-file=C:\Users\micha\AppData\Roaming\kopia\repository.config repository status` command again and will now show the GCS repository configuration.
+Ahora que hemos creado nuestro nuevo repositorio, podemos ejecutar nuevamente el comando `"C:\Program Files\KopiaUI\resources\server\kopia.exe" --config-file=C:\Users\micha\AppData\Roaming\kopia\repository.config repository`
 
 ![](Images/Day86_Data19.png)
 
-The next thing we need to do is create a snapshot and send that to our newly created repository. Using the `"C:\Program Files\KopiaUI\resources\server\kopia.exe" --config-file=C:\Users\micha\AppData\Roaming\kopia\repository.config kopia snapshot create "C:\Users\micha\demo\90DaysOfDevOps"` command we can kick off this process. You can see in the below browser that our Google Cloud Storage bucket now has kopia files based on our backup in place.
+Lo siguiente que debemos hacer es crear una instantánea y enviarla a nuestro repositorio recién creado. Usando el comando `"C:\Program Files\KopiaUI\resources\server\kopia.exe" --config-file=C:\Users\micha\AppData\Roaming\kopia\repository.config kopia snapshot create "C:\Users\micha\demo\90DaysOfDevOps"`, podemos iniciar este proceso. Como se puede ver en el navegador a continuación, nuestro depósito de Google Cloud Storage ahora tiene archivos de Kopia basados en nuestra copia de seguridad.
 
 ![](Images/Day86_Data20.png)
 
-With the above process we can settle our requirement of sending our important data to 2 different locations, 1 of which is offsite in Google Cloud Storage and of course we still have our production copy of our data on a different media type.
+Con el proceso anterior, podemos cumplir con nuestro requisito de enviar nuestros datos importantes a 2 ubicaciones diferentes, una de las cuales está fuera del sitio en Google Cloud Storage, y por supuesto, aún tenemos nuestra copia de producción de nuestros datos en un tipo de medio diferente.
 
-### Restore
+### Restauración
 
-Restore is another consideration and is very important, Kopia gives us the capability to not only restore to the existing location but also a new location.
+La restauración es otra consideración y es muy importante. Kopia nos brinda la capacidad de restaurar no solo en la ubicación existente, sino también en una ubicación nueva.
 
-If we run the command `"C:\Program Files\KopiaUI\resources\server\kopia.exe" --config-file=C:\Users\micha\AppData\Roaming\kopia\repository.config snapshot list` this will list the snapshots that we have currently in our configured repository (GCS)
+Si ejecutamos el comando `"C:\Program Files\KopiaUI\resources\server\kopia.exe" --config-file=C:\Users\micha\AppData\Roaming\kopia\repository.config snapshot list`, esto enumerará las instantáneas que tenemos actualmente en nuestro repositorio configurado (GCS).
 
 ![](Images/Day86_Data21.png)
 
-We can then mount those snapshots directly from GCS using the `"C:\Program Files\KopiaUI\resources\server\kopia.exe" --config-file=C:\Users\micha\AppData\Roaming\kopia\repository.config mount all Z:` command.
+Luego, podemos montar esas instantáneas directamente desde GCS utilizando el comando `"C:\Program Files\KopiaUI\resources\server\kopia.exe" --config-file=C:\Users\micha\AppData\Roaming\kopia\repository.config mount all Z:`.
 
 ![](Images/Day86_Data22.png)
 
-We could also restore the snapshot contents using `kopia snapshot restore kdbd9dff738996cfe7bcf99b45314e193`
+También podríamos restaurar el contenido de la instantánea usando `kopia snapshot restore kdbd9dff738996cfe7bcf99b45314e193`.
 
-The commands above are very long and this is because I was using the KopiaUI version of the kopia.exe as explained at the top of the walkthrough you can download the kopia.exe and put it into a path so you can just use the `kopia` command.
+Los comandos anteriores son muy largos y esto se debe a que estaba utilizando la versión KopiaUI de kopia.exe, como se explica al principio de la guía, puedes descargar kopia.exe y colocarlo en una ruta para que solo tengas que usar el comando `kopia`.
 
-In the next session, we will be focusing on protecting workloads within Kubernetes.
+En la próxima sesión, nos enfocaremos en proteger las cargas de trabajo dentro de Kubernetes.
 
-## Resources
+## Recursos
 
 - [Kubernetes Backup and Restore made easy!](https://www.youtube.com/watch?v=01qcYSck1c4&t=217s)
 - [Kubernetes Backups, Upgrades, Migrations - with Velero](https://www.youtube.com/watch?v=zybLTQER0yY)
@@ -168,4 +169,4 @@ In the next session, we will be focusing on protecting workloads within Kubernet
 - [Disaster Recovery vs. Backup: What's the difference?](https://www.youtube.com/watch?v=07EHsPuKXc0)
 - [Veeam Portability & Cloud Mobility](https://www.youtube.com/watch?v=hDBlTdzE6Us&t=3s)
 
-See you on [Day 87](day87.md)
+Nos vemos en el [Día 87](day87.md)
