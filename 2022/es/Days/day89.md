@@ -1,34 +1,33 @@
-## Disaster Recovery
+## Recuperación de desastres
 
-We have mentioned already how different failure scenarios will warrant different recovery requirements. When it comes to Fire, Flood and Blood scenarios we can consider these mostly disaster situations where we might need our workloads up and running in a completely different location as fast as possible or at least with near-zero recovery time objectives (RTO).
+Ya hemos mencionado cómo diferentes escenarios de falla requerirán diferentes requisitos de recuperación. Cuando se trata de escenarios de incendio, inundación y sangre, podemos considerarlos como situaciones de desastre en las que es posible que necesitemos que nuestras cargas de trabajo estén en funcionamiento en una ubicación completamente diferente lo más rápido posible, o al menos con objetivos de tiempo de recuperación cercanos a cero (RTO).
 
-This can only be achieved at scale when you automate the replication of the complete application stack to a standby environment.
+Esto solo se puede lograr a gran escala cuando se automatiza la replicación de la pila de aplicaciones completa en un entorno de espera.
 
-This allows for fast failovers across cloud regions, cloud providers or between on-premises and cloud infrastructure.
+Esto permite una conmutación por error rápida entre regiones en la nube, proveedores de nube o entre infraestructura local y en la nube.
 
-Keeping with the theme so far, we are going to concentrate on how this can be achieved using Kasten K10 using the minikube cluster that we deployed and configured a few sessions ago.
+Siguiendo con el tema hasta ahora, nos vamos a concentrar en cómo se puede lograr esto utilizando Kasten K10 utilizando el clúster de minikube que implementamos y configuramos hace algunas sesiones.
 
-We will then create another minikube cluster with Kasten K10 also installed to act as our standby cluster which in theory could be any location.
+Luego crearemos otro clúster de minikube con Kasten K10 también instalado para actuar como nuestro clúster de espera, que en teoría podría ser cualquier ubicación.
 
-Kasten K10 also has built-in functionality to ensure if something was to happen to the Kubernetes cluster it is running on that the catalogue data is replicated and available in a new one [K10 Disaster Recovery](https://docs.kasten.io/latest/operating/dr.html).
+Kasten K10 también tiene funcionalidad incorporada para asegurar que si algo le sucede al clúster de Kubernetes en el que se está ejecutando, los datos del catálogo se repliquen y estén disponibles en un nuevo clúster [Recuperación de desastres de K10](https://docs.kasten.io/latest/operating/dr.html).
 
-### Add object storage to K10
+### Agregar almacenamiento de objetos a K10
 
-The first thing we need to do is add an object storage bucket as a target location for our backups to land. Not only does this act as an offsite location but we can also leverage this as our disaster recovery source data to recover from.
+Lo primero que debemos hacer es agregar un bucket de almacenamiento de objetos como ubicación de destino para que nuestras copias de seguridad se almacenen. Esto no solo actúa como una ubicación externa, sino que también podemos aprovecharlo como nuestros datos de origen para la recuperación de desastres.
 
-I have cleaned out the S3 bucket that we created for the Kanister demo in the last session.
+He limpiado el bucket de S3 que creamos para la demostración de Kanister en la última sesión.
 
-![](Images/Day89_Data1.png)
+Reenvíe el puerto para acceder al panel de control de K10. Abra una nueva terminal y ejecute el siguiente comando:
+```bash
+kubectl --namespace kasten-io port-forward service/gateway 8080:8000
+```
 
-Port forward to access the K10 dashboard, open a new terminal to run the below command:
-
-`kubectl --namespace kasten-io port-forward service/gateway 8080:8000`
-
-The Kasten dashboard will be available at `http://127.0.0.1:8080/k10/#/`
+El panel de control de Kasten estará disponible en `http://127.0.0.1:8080/k10/#/`
 
 ![](Images/Day87_Data4.png)
 
-To authenticate with the dashboard, we now need the token which we can get with the following commands.
+Para autenticarse en el panel de control, ahora necesitamos el token que podemos obtener con los siguientes comandos.
 
 ```Shell
 TOKEN_NAME=$(kubectl get secret --namespace kasten-io|grep k10-k10-token | cut -d " " -f 1)
@@ -40,97 +39,100 @@ echo $TOKEN
 
 ![](Images/Day87_Data5.png)
 
-Now we take this token and we input that into our browser, you will then be prompted for an email and company name.
+Ahora tomamos este token y lo ingresamos en nuestro navegador. Luego se le pedirá un correo electrónico y el nombre de la empresa.
 
 ![](Images/Day87_Data6.png)
 
-Then we get access to the Kasten K10 dashboard.
+Luego obtendremos acceso al panel de control de Kasten K10.
 
 ![](Images/Day87_Data7.png)
 
-Now that we are back in the Kasten K10 dashboard we can add our location profile, select "Settings" at the top of the page and "New Profile".
+Ahora que volvemos al panel de control de Kasten K10, podemos agregar nuestro perfil de ubicación. Seleccione "Configuración" en la parte superior de la página y luego "Nuevo perfil".
 
 ![](Images/Day89_Data2.png)
 
-You can see from the image below that we have a choice when it comes to where this location profile is, we are going to select Amazon S3, and we are going to add our sensitive access credentials, region and bucket name.
+Desde la imagen a continuación, puedes ver que tenemos una opción cuando se trata de la ubicación de este perfil. Vamos a seleccionar Amazon S3 y agregaremos nuestras credenciales de acceso sensibles, región y nombre del bucket.
 
 ![](Images/Day89_Data3.png)
 
-If we scroll down on the New Profile creation window you will see, that we also can enable immutable backups which leverage the S3 Object Lock API. For this demo, we won't be using that.
+Si nos desplazamos hacia abajo en la ventana de creación del Nuevo perfil, veremos que también podemos habilitar copias de seguridad inmutables que aprovechan la API de bloqueo de objetos de S3. Para esta demostración, no vamos a utilizar eso.
 
 ![](Images/Day89_Data4.png)
 
-Hit "Save Profile" and you can now see our newly created or added location profile as per below.
+Haz clic en "Guardar perfil" y ahora puedes ver nuestro perfil de ubicación recién creado o agregado como se muestra a continuación.
 
 ![](Images/Day89_Data5.png)
 
-### Create a policy to protect the Pac-Man app to object storage
+### Crear una política para proteger la aplicación Pac-Man en el almacenamiento de objetos
 
-In the previous session, we created only an ad-hoc snapshot of our Pac-Man application, therefore we need to create a backup policy that will send our application backups to our newly created object storage location.
+En la sesión anterior, creamos solo una instantánea ad hoc de nuestra aplicación Pac-Man, por lo tanto, necesitamos crear una política de respaldo que envíe nuestras copias de seguridad de la aplicación a nuestra ubicación de almacenamiento de objetos recién creada.
 
-If you head back to the dashboard and select the Policy card you will see a screen as per below. Select "Create New Policy".
+Si regresas al panel de control y seleccionas la tarjeta de Política, verás una pantalla como se muestra a continuación. Selecciona "Crear nueva política".
 
 ![](Images/Day89_Data6.png)
 
-First, we can give our policy a useful name and description. We can also define our backup frequency for demo purposes I am using on-demand.
+Primero, podemos darle a nuestra política un nombre útil y una descripción. También podemos definir la frecuencia de respaldo. Para fines de demostración, estoy usando "bajo demanda".
 
 ![](Images/Day89_Data7.png)
 
-Next, we want to enable backups via Snapshot exports meaning that we want to send our data out to our location profile. If you have multiple you can select which one you would like to send your backups to.
+A continuación, queremos habilitar las copias de seguridad a través de exportaciones de instantáneas, lo que significa que queremos enviar nuestros datos a nuestro perfil de ubicación. Si tienes varios perfiles, puedes seleccionar a cuál de ellos quieres enviar tus copias de seguridad.
 
 ![](Images/Day89_Data8.png)
 
-Next, we select the application by either name or labels, I am going to choose by name and all resources.
+A continuación, seleccionamos la aplicación por nombre o etiquetas. Voy a elegir por nombre y todos los recursos.
 
 ![](Images/Day89_Data9.png)
 
-Under Advanced settings we are not going to be using any of these but based on our [walkthrough of Kanister yesterday](https://github.com/MichaelCade/90DaysOfDevOps/blob/main/Days/day88.md), we can leverage Kanister as part of Kasten K10 as well to take those application consistent copies of our data.
+En la configuración avanzada, no vamos a usar ninguna de estas opciones, pero según nuestro [recorrido de Kanister de ayer](https://github.com/MichaelCade/90DaysOfDevOps/blob/main/Days/day88.md), también podemos aprovechar Kanister como parte de Kasten K10 para obtener copias coherentes de la aplicación de nuestros datos.
 
 ![](Images/Day89_Data10.png)
 
-Finally, select "Create Policy" and you will now see the policy in our Policy window.
+Finalmente, selecciona "Crear política" y ahora verás la política en nuestra ventana de Políticas.
 
 ![](Images/Day89_Data11.png)
 
-At the bottom of the created policy, you will have "Show import details" we need this string to be able to import into our standby cluster. Copy this somewhere safe for now.
+En la parte inferior de la política creada, tendrás "Mostrar detalles de importación". Necesitamos esta cadena para poder importarla en nuestro clúster de espera. Copia esto en algún lugar seguro por ahora.
 
 ![](Images/Day89_Data12.png)
 
-Before we move on, we just need to select "run once" to get a backup sent to our object storage bucket.
+Antes de continuar, solo necesitamos seleccionar "ejecutar una vez" para que se envíe una copia de seguridad a nuestro bucket de almacenamiento de objetos.
 
 ![](Images/Day89_Data13.png)
 
-Below, the screenshot is just to show the successful backup and export of our data.
+A continuación, la captura de pantalla muestra el respaldo y la exportación exitosos de nuestros datos.
 
 ![](Images/Day89_Data14.png)
 
-### Create a new MiniKube cluster & deploy K10
+### Crear un nuevo clúster MiniKube e implementar K10
 
-We then need to deploy a second Kubernetes cluster and where this could be any supported version of Kubernetes including OpenShift, for education we will use the very free version of MiniKube with a different name.
+Luego, necesitamos implementar un segundo clúster de Kubernetes y esto puede ser cualquier versión admitida de Kubernetes, incluido OpenShift. Para fines educativos, utilizaremos la versión gratuita de MiniKube con un nombre diferente.
 
-Using `minikube start --addons volumesnapshots,csi-hostpath-driver --apiserver-port=6443 --container-runtime=containerd -p standby --kubernetes-version=1.21.2` we can create our new cluster.
+Usando el comando `minikube start --addons volumesnapshots,csi-hostpath-driver --apiserver-port=6443 --container-runtime=containerd -p standby --kubernetes-version=1.21.2`, podemos crear nuestro nuevo clúster.
 
 ![](Images/Day89_Data15.png)
 
-We then can deploy Kasten K10 in this cluster using:
+Luego, podemos implementar Kasten K10 en este clúster utilizando el siguiente comando:
 
-`helm install k10 kasten/k10 --namespace=kasten-io --set auth.tokenAuth.enabled=true --set injectKanisterSidecar.enabled=true --set-string injectKanisterSidecar.namespaceSelector.matchLabels.k10/injectKanisterSidecar=true --create-namespace`
+```Shell
+helm install k10 kasten/k10 --namespace=kasten-io --set auth.tokenAuth.enabled=true --set injectKanisterSidecar.enabled=true --set-string injectKanisterSidecar.namespaceSelector.matchLabels.k10/injectKanisterSidecar=true --create-namespace
+```
 
-This will take a while but in the meantime, we can use `kubectl get pods -n kasten-io -w` to watch the progress of our pods getting to the running status.
+Esto llevará un tiempo, pero mientras tanto, podemos utilizar el comando `kubectl get pods -n kasten-io -w` para seguir el progreso de nuestros pods hasta que estén en estado de ejecución.
 
-It is worth noting that because we are using MiniKube our application will just run when we run our import policy, our storageclass is the same on this standby cluster. However, something we will cover in the final session is mobility and transformation.
+Vale la pena señalar que, debido a que estamos usando MiniKube, nuestra aplicación se ejecutará cuando ejecutemos nuestra política de importación. Sin embargo, algo que cubriremos en la última sesión es la movilidad y la transformación.
 
-When the pods are up and running, we can follow the steps we went through on the previous steps in the other cluster.
+Una vez que los pods estén en ejecución, podemos seguir los pasos que realizamos en los pasos anteriores en el otro clúster.
 
-Port forward to access the K10 dashboard, open a new terminal to run the below command
+Reenvía el puerto para acceder al panel de control de K10. Abre una nueva terminal y ejecuta el siguiente comando:
+```Shell
+kubectl --namespace kasten-io port-forward service/gateway 8080:8000
+```
 
-`kubectl --namespace kasten-io port-forward service/gateway 8080:8000`
-
-The Kasten dashboard will be available at `http://127.0.0.1:8080/k10/#/`
+El panel de control de Kasten estará disponible en http://127.0.0.1:8080/k10/#/
 
 ![](Images/Day87_Data4.png)
 
-To authenticate with the dashboard, we now need the token which we can get with the following commands.
+Para autenticar en el panel de control, ahora necesitamos el token que podemos obtener con los siguientes comandos:
 
 ```Shell
 TOKEN_NAME=$(kubectl get secret --namespace kasten-io|grep k10-k10-token | cut -d " " -f 1)
@@ -142,65 +144,65 @@ echo $TOKEN
 
 ![](Images/Day87_Data5.png)
 
-Now we take this token and we input that into our browser, you will then be prompted for an email and company name.
+Ahora tomamos este token y lo ingresamos en nuestro navegador, luego se te pedirá un correo electrónico y el nombre de la empresa.
 
 ![](Images/Day87_Data6.png)
 
-Then we get access to the Kasten K10 dashboard.
+Luego obtenemos acceso al panel de control de Kasten K10.
 
 ![](Images/Day87_Data7.png)
 
-### Import Pac-Man into new the MiniKube cluster
+### Importar Pac-Man en el nuevo clúster MiniKube
 
-At this point, we are now able to create an import policy in that standby cluster and connect to the object storage backups and determine what and how we want this to look.
+En este punto, ahora podemos crear una política de importación en ese clúster de espera y conectarnos a las copias de seguridad de almacenamiento de objetos y determinar qué y cómo queremos que se vea.
 
-First, we add in our Location Profile that we walked through earlier on the other cluster, showing off dark mode here to show the difference between our production system and our DR standby location.
+Primero, agregamos nuestro perfil de ubicación que revisamos anteriormente en el otro clúster. Aquí mostramos el modo oscuro para mostrar la diferencia entre nuestro sistema de producción y nuestra ubicación de espera para recuperación ante desastres.
 
 ![](Images/Day89_Data16.png)
 
-Now we go back to the dashboard and into the policies tab to create a new policy.
+Ahora volvemos al panel de control y a la pestaña de políticas para crear una nueva política.
 
 ![](Images/Day89_Data17.png)
 
-Create the import policy as per the below image. When complete, we can create a policy. There are options here to restore after import and some people might want this option, this will go and be restored into our standby cluster on completion. We also can change the configuration of the application as it is restored and this is what I have documented in [Day 90](day90.md).
+Crea la política de importación según la imagen siguiente. Cuando esté completa, podemos crear una política. Aquí hay opciones para restaurar después de la importación y algunas personas podrían querer esta opción, esto se irá y se restaurará en nuestro clúster de espera al completarse. También podemos cambiar la configuración de la aplicación mientras se restaura, y esto es lo que he documentado en [Día 90](day90.md).
 
 ![](Images/Day89_Data18.png)
 
-I selected to import on demand, but you can set a schedule on when you want this import to happen. Because of this, I am going to run once.
+Seleccioné importar bajo demanda, pero puedes programar el momento en que deseas que ocurra esta importación. Debido a esto, voy a ejecutarlo una vez.
 
 ![](Images/Day89_Data19.png)
 
-You can see below the successful import policy job.
+A continuación, puedes ver el trabajo exitoso de la política de importación.
 
 ![](Images/Day89_Data20.png)
 
-If we now head back to the dashboard and into the Applications card, we can then select the drop-down where you see below "Removed" you will see our application here. Select Restore
+Si volvemos al panel de control y seleccionamos la tarjeta de "Aplicaciones", luego podemos seleccionar el menú desplegable donde ves "Eliminado" y veremos nuestra aplicación aquí. Selecciona "Restaurar".
 
 ![](Images/Day89_Data21.png)
 
-Here we can see the restore points we have available to us; this was the backup job that we ran on the primary cluster against our Pac-Man application.
+Aquí podemos ver los puntos de restauración que tenemos disponibles; este fue el trabajo de copia de seguridad que ejecutamos en el clúster principal para nuestra aplicación Pac-Man.
 
 ![](Images/Day89_Data22.png)
 
-I am not going to change any of the defaults as I want to cover this in more detail in the next session.
+No voy a cambiar ninguno de los valores predeterminados, ya que quiero cubrir esto con más detalle en la próxima sesión.
 
 ![](Images/Day89_Data23.png)
 
-When you hit "Restore" it will prompt you with a confirmation.
+Cuando presiones "Restaurar", te pedirá confirmación.
 
 ![](Images/Day89_Data24.png)
 
-We can see below that we are in the standby cluster and if we check on our pods, we can see that we have our running application.
+A continuación, podemos ver que estamos en el clúster de espera y si verificamos nuestros pods, veremos que nuestra aplicación se está ejecutando.
 
 ![](Images/Day89_Data25.png)
 
-We can then port forward (in real-life/production environments, you would not need this step to access the application, you would be using ingress)
+Luego podemos redirigir el puerto (en entornos de producción reales, no necesitarías este paso para acceder a la aplicación, estarías utilizando el enrutamiento).
 
 ![](Images/Day89_Data26.png)
 
-Next, we will take a look at Application mobility and transformation.
+A continuación, echaremos un vistazo a la movilidad y transformación de aplicaciones.
 
-## Resources
+## Recursos
 
 - [Kubernetes Backup and Restore made easy!](https://www.youtube.com/watch?v=01qcYSck1c4&t=217s)
 - [Kubernetes Backups, Upgrades, Migrations - with Velero](https://www.youtube.com/watch?v=zybLTQER0yY)
@@ -208,4 +210,4 @@ Next, we will take a look at Application mobility and transformation.
 - [Disaster Recovery vs. Backup: What's the difference?](https://www.youtube.com/watch?v=07EHsPuKXc0)
 - [Veeam Portability & Cloud Mobility](https://www.youtube.com/watch?v=hDBlTdzE6Us&t=3s)
 
-See you on [Day 90](day90.md)
+Nos vemos en el [Día 90](day90.md)

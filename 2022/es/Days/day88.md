@@ -1,62 +1,63 @@
-## Application-Focused Backups
+## Copias de seguridad enfocadas en aplicaciones
 
-We have already spent some time talking about data services or data-intensive applications such as databases on [Day 85](day85.md). For these data services, we have to consider how we manage consistency, especially when it comes to application consistency.
+Ya hemos dedicado tiempo a hablar sobre servicios de datos o aplicaciones intensivas en datos, como las bases de datos en [Día 85](day85.md). Para estos servicios de datos, debemos considerar cómo gestionamos la consistencia, especialmente cuando se trata de la consistencia de la aplicación.
 
-In this post, we are going to dive into that requirement around consistently protecting the application data.
+En esta publicación, profundizaremos en ese requisito de proteger de manera consistente los datos de la aplicación.
 
-To do this our tool of choice will be [Kanister](https://kanister.io/)
+Para hacer esto, nuestra herramienta elegida será [Kanister](https://kanister.io/).
 
 ![](Images/Day88_Data1.png)
 
-### Introducing Kanister
+### Introducción a Kanister
 
-Kanister is an open-source project by Kasten, that enables us to manage (backup and restore) application data on Kubernetes. You can deploy Kanister as a helm application into your Kubernetes cluster.
+Kanister es un proyecto de código abierto de Kasten que nos permite gestionar (hacer copias de seguridad y restaurar) los datos de la aplicación en Kubernetes. Puedes implementar Kanister como una aplicación Helm en tu clúster de Kubernetes.
 
-Kanister uses Kubernetes custom resources, the main custom resources that are installed when Kanister is deployed are
+Kanister utiliza recursos personalizados de Kubernetes. Los recursos personalizados principales que se instalan al implementar Kanister son:
 
-- `Profile` - is a target location to store your backups and recover from. Most commonly this will be object storage.
-- `Blueprint` - steps that are to be taken to backup and restore the database should be maintained in the Blueprint
-- `ActionSet` - is the motion to move our target backup to our profile as well as restore actions.
+- `Profile` (perfil): es un lugar de destino para almacenar tus copias de seguridad y recuperarlas. Por lo general, esto será un almacenamiento de objetos.
+- `Blueprint` (diseño): los pasos que se deben seguir para hacer una copia de seguridad y restaurar la base de datos se deben mantener en el blueprint.
+- `ActionSet` (conjunto de acciones): es el movimiento para mover nuestra copia de seguridad objetivo a nuestro perfil, así como las acciones de restauración.
 
-### Execution Walkthrough
+### Ejecución paso a paso
 
-Before we get hands-on we should take a look at the workflow that Kanister takes in protecting application data. Firstly our controller is deployed using helm into our Kubernetes cluster, Kanister lives within its namespace. We take our Blueprint of which there are many community-supported blueprints available, we will cover this in more detail shortly. We then have our database workload.
+Antes de comenzar, debemos echar un vistazo al flujo de trabajo que Kanister sigue para proteger los datos de la aplicación. En primer lugar, implementamos nuestro controlador mediante Helm en nuestro clúster de Kubernetes. Kanister se ejecuta en su propio espacio de nombres (namespace). A continuación, tomamos nuestro Blueprint, del cual hay muchos blueprints respaldados por la comunidad disponibles. Cubriremos esto en más detalle en breve. Luego, tenemos nuestra carga de trabajo de la base de datos.
 
 ![](Images/Day88_Data2.png)
 
-We then create our ActionSet.
+A continuación, creamos nuestro ActionSet.
 
 ![](Images/Day88_Data3.png)
 
-The ActionSet allows us to run the actions defined in the blueprint against the specific data service.
+El ActionSet nos permite ejecutar las acciones definidas en el blueprint contra el servicio de datos específico.
 
 ![](Images/Day88_Data4.png)
 
-The ActionSet in turn uses the Kanister functions (KubeExec, KubeTask, Resource Lifecycle) and pushes our backup to our target repository (Profile).
+A su vez, el ActionSet utiliza las funciones de Kanister (KubeExec, KubeTask, Resource Lifecycle) y envía nuestra copia de seguridad a nuestro repositorio de destino (Profile).
 
 ![](Images/Day88_Data5.png)
 
-If that action is completed/failed the respective status is updated in the Actionset.
+Si la acción se completa o falla, el estado respectivo se actualiza en el ActionSet.
 
 ![](Images/Day88_Data6.png)
 
-### Deploying Kanister
+### Implementación de Kanister
 
-Once again we will be using the minikube cluster to achieve this application backup. If you have it still running from the previous session then we can continue to use this.
+Una vez más, utilizaremos el clúster minikube para lograr esta copia de seguridad de la aplicación. Si todavía lo tienes en ejecución desde la sesión anterior, podemos seguir usándolo.
 
-At the time of writing, we are up to image version `0.75.0` with the following helm command we will install kanister into our Kubernetes cluster.
-
-`helm install kanister --namespace kanister kanister/kanister-operator --set image.tag=0.75.0 --create-namespace`
+En el momento de escribir esto, estamos en la versión de imagen 0.75.0. Con el siguiente comando de Helm, instalaremos Kanister en nuestro clúster de Kubernetes:
+```sh
+helm install kanister --namespace kanister kanister/kanister-operator --set image.tag=0.75.0 --create-namespace
+```
 
 ![](Images/Day88_Data7.png)
 
-We can use `kubectl get pods -n kanister` to ensure the pod is up and running and then we can also check our custom resource definitions are now available (If you have only installed Kanister then you will see the highlighted 3)
+Podemos usar kubectl get pods -n kanister para asegurarnos de que el pod esté en funcionamiento y también podemos verificar que las definiciones de recursos personal.
 
 ![](Images/Day88_Data8.png)
 
-### Deploy a Database
+### Despliegue de una base de datos
 
-Deploying MySQL via helm:
+Desplegar MySQL mediante Helm:
 
 ```Shell
 APP_NAME=my-production-app
@@ -68,7 +69,7 @@ kubectl get pods -n ${APP_NAME} -w
 
 ![](Images/Day88_Data9.png)
 
-Populate the MySQL database with initial data, and run the following:
+Rellenar la base de datos de MySQL con datos iniciales y ejecutar lo siguiente:
 
 ```Shell
 MYSQL_ROOT_PASSWORD=$(kubectl get secret --namespace ${APP_NAME} mysql-store -o jsonpath="{.data.mysql-root-password}" | base64 --decode)
@@ -77,9 +78,9 @@ MYSQL_EXEC="mysql -h ${MYSQL_HOST} -u root --password=${MYSQL_ROOT_PASSWORD} -Dm
 echo MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
 ```
 
-### Create a MySQL CLIENT
+### Crear un CLIENTE de MySQL
 
-We will run another container image to act as our client
+Ejecutaremos otra imagen de contenedor para actuar como nuestro cliente:
 
 ```Shell
 APP_NAME=my-production-app
@@ -92,7 +93,7 @@ Note: if you already have an existing MySQL client pod running, delete with the 
 kubectl delete pod -n ${APP_NAME} mysql-client
 ```
 
-### Add Data to MySQL
+### Agregar datos a MySQL
 
 ```Shell
 echo "create database myImportantData;" | mysql -h ${MYSQL_HOST} -u root --password=${MYSQL_ROOT_PASSWORD}
@@ -111,27 +112,28 @@ echo "select * from Accounts;" |  ${MYSQL_EXEC}
 exit
 ```
 
-You should be able to see some data as per below.
+Deberías poder ver algunos datos como se muestra a continuación.
 
 ![](Images/Day88_Data10.png)
 
-### Create Kanister Profile
+### Crear perfil Kanister
 
-Kanister provides a CLI, `kanctl` and another utility `kando` that is used to interact with your object storage provider from the blueprint and both of these utilities.
+Kanister proporciona una CLI, `kanctl`, y otra utilidad, `kando`, que se utiliza para interactuar con tu proveedor de almacenamiento de objetos desde el blueprint y ambas utilidades.
 
-[CLI Download](https://docs.kanister.io/tooling.html#tooling)
+[Descarga de la CLI](https://docs.kanister.io/tooling.html#tooling)
 
-I have gone and I have created an AWS S3 Bucket that we will use as our profile target and restore location. I am going to be using environment variables so that I can still show you the commands I am running with `kanctl` to create our kanister profile.
-
-`kanctl create profile s3compliant --access-key $ACCESS_KEY --secret-key $SECRET_KEY --bucket $BUCKET --region eu-west-2 --namespace my-production-app`
+He creado un bucket de AWS S3 que utilizaremos como destino de nuestro perfil y ubicación de restauración. Voy a utilizar variables de entorno para mostrar los comandos que ejecuto con kanctl para crear nuestro perfil Kanister.
+```sh
+kanctl create profile s3compliant --access-key $ACCESS_KEY --secret-key $SECRET_KEY --bucket $BUCKET --region eu-west-2 --namespace my-production-app
+```
 
 ![](Images/Day88_Data11.png)
 
-### Blueprint time
+### Blueprint
 
-Don't worry you don't need to create your one from scratch unless your data service is not listed here in the [Kanister Examples](https://github.com/kanisterio/kanister/tree/master/examples) but by all means, community contributions are how this project gains awareness.
+No te preocupes, no necesitas crear uno desde cero a menos que tu servicio de datos no esté listado aquí en los [Ejemplos de Kanister](https://github.com/kanisterio/kanister/tree/master/examples), pero, por supuesto, las contribuciones de la comunidad son la forma en que este proyecto gana visibilidad.
 
-The blueprint we will be using will be the below.
+El blueprint que utilizaremos será el siguiente:
 
 ```Shell
 apiVersion: cr.kanister.io/v1alpha1
@@ -213,67 +215,71 @@ actions:
           kando location delete --profile '{{ toJson .Profile }}' --path ${s3_path}
 ```
 
-To add this we will use the `kubectl create -f mysql-blueprint.yml -n kanister` command
+Para agregar esto, utilizaremos el comando `kubectl create -f mysql-blueprint.yml -n kanister`.
 
 ![](Images/Day88_Data12.png)
 
-### Create our ActionSet and Protect our application
+### Crear nuestro ActionSet y proteger nuestra aplicación
 
-We will now take a backup of the MySQL data using an ActionSet defining backup for this application. Create an ActionSet in the same namespace as the controller.
+Ahora realizaremos una copia de seguridad de los datos de MySQL utilizando un ActionSet que define la copia de seguridad para esta aplicación. Crea un ActionSet en el mismo namespace que el controlador.
+```sh
+kubectl get profiles.cr.kanister.io -n my-production-app
+```
 
-`kubectl get profiles.cr.kanister.io -n my-production-app` This command will show us the profile we previously created, we can have multiple profiles configured here so we might want to use specific ones for different ActionSets
+Este comando nos mostrará el perfil que creamos anteriormente. Podemos tener múltiples perfiles configurados aquí, por lo que podemos usar perfiles específicos para diferentes ActionSets.
 
-We are then going to create our ActionSet with the following command using `kanctl`
+Luego, crearemos nuestro ActionSet con el siguiente comando utilizando `kanctl`:
+```sh
+kanctl create actionset --action backup --namespace kanister --blueprint mysql-blueprint --statefulset my-production-app/mysql-store --profile my-production-app/s3-profile-dc5zm --secrets mysql=my-production-app/mysql-store
+```
 
-`kanctl create actionset --action backup --namespace kanister --blueprint mysql-blueprint --statefulset my-production-app/mysql-store --profile my-production-app/s3-profile-dc5zm --secrets mysql=my-production-app/mysql-store`
-
-You can see from the command above we are defining the blueprint we added to the namespace, the statefulset in our `my-production-app` namespace and also the secrets to get into the MySQL application.
+En el comando anterior, estamos definiendo el blueprint que agregamos al namespace, el statefulset en nuestro namespace `my-production-app` y también los secretos para acceder a la aplicación MySQL.
 
 ![](Images/Day88_Data13.png)
 
-Check the status of the ActionSet by taking the ActionSet name and using this command `kubectl --namespace kanister describe actionset backup-qpnqv`
+Verifica el estado del ActionSet utilizando el nombre del ActionSet con el siguiente comando: kubectl --namespace kanister describe actionset backup-qpnqv.
 
-Finally, we can go and confirm that we now have data in our AWS S3 bucket.
+Finalmente, podemos confirmar que ahora tenemos datos en nuestro bucket de AWS S3.
 
 ![](Images/Day88_Data14.png)
 
-### Restore
+### Restauración
 
-We need to cause some damage before we can restore anything, we can do this by dropping our table, maybe it was an accident, maybe it wasn't.
+Necesitamos causar algún daño antes de poder restaurar algo, podemos hacer esto eliminando nuestra tabla, tal vez fue un accidente, tal vez no lo fue.
 
-Connect to our MySQL pod.
+Conéctate a nuestro pod de MySQL.
 
 ```Shell
 APP_NAME=my-production-app
 kubectl run mysql-client --rm --env APP_NS=${APP_NAME} --env MYSQL_EXEC="${MYSQL_EXEC}" --env MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD} --env MYSQL_HOST=${MYSQL_HOST} --namespace ${APP_NAME} --tty -i --restart='Never' --image  docker.io/bitnami/mysql:latest --command -- bash
 ```
 
-You can see that our importantdata DB is there with `echo "SHOW DATABASES;" | ${MYSQL_EXEC}`
+Puedes ver que nuestra base de datos importantdata está ahí con `echo "SHOW DATABASES;" | ${MYSQL_EXEC}`.
 
-Then to drop we ran `echo "DROP DATABASE myImportantData;" | ${MYSQL_EXEC}`
+Luego, para eliminarla, ejecutamos `echo "DROP DATABASE myImportantData;" | ${MYSQL_EXEC}`.
 
-And confirmed that this was gone with a few attempts to show our database.
+Y confirmamos que se haya eliminado con algunos intentos de mostrar nuestra base de datos.
 
 ![](Images/Day88_Data15.png)
 
-We can now use Kanister to get our important data back in business using the `kubectl get actionset -n kanister` to find out the ActionSet name that we took earlier. Then we will create a restore ActionSet to restore our data using `kanctl create actionset -n kanister --action restore --from "backup-qpnqv"`
+Ahora podemos usar Kanister para restaurar nuestros datos importantes utilizando el comando `kubectl get actionset -n kanister` para encontrar el nombre del ActionSet que tomamos anteriormente. Luego, crearemos un ActionSet de restauración para restaurar nuestros datos usando `kanctl create actionset -n kanister --action restore --from "backup-qpnqv`".
 
 ![](Images/Day88_Data16.png)
 
-We can confirm our data is back by using the below command to connect to our database.
+Podemos confirmar que nuestros datos están de vuelta en nuestro pod de MySQL.
 
 ```Shell
 APP_NAME=my-production-app
 kubectl run mysql-client --rm --env APP_NS=${APP_NAME} --env MYSQL_EXEC="${MYSQL_EXEC}" --env MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD} --env MYSQL_HOST=${MYSQL_HOST} --namespace ${APP_NAME} --tty -i --restart='Never' --image  docker.io/bitnami/mysql:latest --command -- bash
 ```
 
-Now we are inside the MySQL Client, we can issue the `echo "SHOW DATABASES;" | ${MYSQL_EXEC}` and we can see the database is back. We can also issue the `echo "select * from Accounts;" | ${MYSQL_EXEC}` to check the contents of the database and our important data is restored.
+Ahora estamos dentro del Cliente de MySQL, podemos ejecutar `echo "SHOW DATABASES;" | ${MYSQL_EXEC}` y podemos ver que la base de datos está de vuelta. También podemos ejecutar `echo "select * from Accounts;" | ${MYSQL_EXEC}` para verificar el contenido de la base de datos y nuestros datos importantes están restaurados.
 
 ![](Images/Day88_Data17.png)
 
-In the next post, we take a look at Disaster Recovery within Kubernetes.
+En la próxima publicación, veremos la Recuperación de Desastres dentro de Kubernetes.
 
-## Resources
+## Recursos
 
 - [Kanister Overview - An extensible open-source framework for app-lvl data management on Kubernetes](https://www.youtube.com/watch?v=wFD42Zpbfts)
 - [Application Level Data Operations on Kubernetes](https://community.cncf.io/events/details/cncf-cncf-online-programs-presents-cncf-live-webinar-kanister-application-level-data-operations-on-kubernetes/)
@@ -283,4 +289,4 @@ In the next post, we take a look at Disaster Recovery within Kubernetes.
 - [Disaster Recovery vs. Backup: What's the difference?](https://www.youtube.com/watch?v=07EHsPuKXc0)
 - [Veeam Portability & Cloud Mobility](https://www.youtube.com/watch?v=hDBlTdzE6Us&t=3s)
 
-See you on [Day 89](day89.md)
+Nos vemos en el [Día 89](day89.md)
