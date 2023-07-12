@@ -1,4 +1,4 @@
-## Microsoft Azure Hands-On Scenarios
+## Microsoft Azure Senaryoları ve Uygulamaları 
 
 Son 6 gün, Microsoft Azure ve genel olarak halka açık buluta odaklandı. Azure'nin temel yapı taşlarını anlamak için bu temelin biraz teorik bilgi içermesi gerekiyordu, ancak bu bilgi, diğer büyük bulut sağlayıcılarında da geçerli olacaktır.
 
@@ -10,43 +10,42 @@ Bu final oturumunda, Microsoft tarafından oluşturulan ve[AZ-104 Microsoft Azur
 
 Daha önceki yazılarda, Modül 1, 2 ve 3'ün çoğunu oluşturduk.
 
-### Virtual Networking
+### Sanal Ag(Virtual Networking)
 
-Following [Module 04](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_04-Implement_Virtual_Networking.html):
+Takip edilerek [Modül 04](https://microsoftlearning.github.io/AZ-104-MicrosoftAzureAdministrator/Instructions/Labs/LAB_04-Implement_Virtual_Networking.html):
 
-I went through the above and changed a few namings for #90DaysOfDevOps. I also instead of using the Cloud Shell went ahead and logged in with my new user created on previous days with the Azure CLI on my Windows machine.
+Yukarıdakileri geçtim ve bazı adları #90DaysOfDevOps için değiştirdim. Ayrıca, Cloud Shell'i kullanmak yerine Windows makinedeki Azure CLI ile önceki günlerde oluşturduğum yeni kullanıcımla giriş yaptım.
 
-You can do this using the `az login` which will open a browser and let you authenticate to your account.
+Bunu, tarayıcıyı açacak ve hesabınıza kimlik doğrulama yapmanıza izin verecek `az login` komutunu kullanarak yapabilirsiniz.
 
-I have then created a PowerShell script and some references from the module to use to build out some of the tasks below. You can find the associated files in this folder.
-(Cloud\01VirtualNetworking)
+Daha sonra PowerShell betiği oluşturdum ve bazı referanslarını bu klasöre yerleştirerek aşağıdaki görevleri oluşturmak için modülden yararlandım.(Cloud\01VirtualNetworking)
 
-Please make sure you change the file location in the script to suit your environment.
+Lütfen scriptte dosya konumunu kendi ortamınıza uyacak şekilde değiştirin.
 
-At this first stage, we have no virtual network or virtual machines created in our environment, I only have a cloud shell storage location configured in my resource group.
+Bu ilk aşamada, ortamımızda sanal ağ veya sanal makine oluşturulmadı. Yalnızca kaynak grubumdaki bir Cloud Shell depolama konumu yapılandırdım.
 
-I first of all run my [PowerShell script](Cloud/01VirtualNetworking/Module4_90DaysOfDevOps.ps1)
+Öncelikle [PowerShell script](Cloud/01VirtualNetworking/Module4_90DaysOfDevOps.ps1) çalıştırıyorum.
 
 ![](Images/Day34_Cloud1.png)
 
-- Task 1: Create and configure a virtual network
+- Task 1: Sanal ağ oluşturma ve yapılandırma
 
 ![](Images/Day34_Cloud2.png)
 
-- Task 2: Deploy virtual machines into the virtual network
+- Task 2: Sanal ağa sanal makinelerin dağıtılması
 
 ![](Images/Day34_Cloud3.png)
 
-- Task 3: Configure private and public IP addresses of Azure VMs
+- Task 3: Azure VM'lerin özel ve genel IP adreslerini yapılandırma
 
 ![](Images/Day34_Cloud4.png)
 
-- Task 4: Configure network security groups
+- Task 4: Ağ güvenlik gruplarını yapılandırma
 
 ![](Images/Day34_Cloud5.png)
 ![](Images/Day34_Cloud6.png)
 
-- Task 5: Configure Azure DNS for internal name resolution
+- Task 5: İç isim çözümü için Azure DNS'yi yapılandırma
 
 ![](Images/Day34_Cloud7.png)
 ![](Images/Day34_Cloud8.png)
