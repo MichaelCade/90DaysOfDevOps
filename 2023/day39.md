@@ -179,7 +179,7 @@ With the following command we will create a kubernetes authentication role
 ```
 vault write auth/kubernetes/role/webapp \
         bound_service_account_names=vault \
-        bound_service_account_namespaces=default \
+        bound_service_account_namespaces=webapp \
         policies=webapp \
         ttl=24h
 ```
@@ -193,6 +193,12 @@ I am again going to be using the web app that is used in the HashiCorp tutorial 
 We will create a deployment yaml that looks like the following. 
 
 ```
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: vault
+EOF
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -217,7 +223,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: VAULT_ADDR
-              value: 'http://vault.vault:8200'
+              value: 'http://vault.vault.svc.cluster.local:8200/'
             - name: JWT_PATH
               value: '/var/run/secrets/kubernetes.io/serviceaccount/token'
             - name: SERVICE_PORT
@@ -227,3 +233,19 @@ spec:
 Create the webapp namespace 
 
 `kubectl create ns webapp`
+
+Our YAML consists of our simple web app and the service account. 
+
+`kubectl create -f deployment-01-webapp.yml -n webapp`
+
+I also want to note that the helm chart for vault will deploy 
+
+You can check that the authentication has worked by checking pods in the webapp namespace, if they are not in a running state or not there at all then something is not right as this is communicating with vault to make sure that this service is running. 
+
+Once the pod is running, we need to port forward our webapp 
+Find the pod name and then port forward that. 
+```
+kubectl get pods -n webapp 
+kubectl port-forward <PODNAME> -n webapp 8080:8080
+```
+

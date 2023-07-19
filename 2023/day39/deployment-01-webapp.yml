@@ -1,8 +1,15 @@
 ---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: vault
+  namespace: webapp
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webapp
+  namespace: webapp
   labels:
     app: webapp
 spec:
@@ -22,7 +29,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: VAULT_ADDR
-              value: 'http://127.0.0.1:8200'
+              value: 'http://vault.vault.svc.cluster.local:8200/'
             - name: JWT_PATH
               value: '/var/run/secrets/kubernetes.io/serviceaccount/token'
             - name: SERVICE_PORT
