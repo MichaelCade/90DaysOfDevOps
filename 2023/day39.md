@@ -200,7 +200,6 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: vault
-EOF
 ---
 apiVersion: apps/v1
 kind: Deployment
