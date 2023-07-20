@@ -131,6 +131,8 @@ We must now exec into our vault-0 pod to enable the secret engine.
 
 `kubectl exec --stdin=true --tty=true vault-0 -n vault -- /bin/sh`
 
+We will now have to authenticate and login using `vault login` and provide the token we discovered with root_token in a previous step. 
+
 ![](images/day39-7.png)
 
 We will now run the following commands the first will enable the secret engine and the second will create secret at the path.  
