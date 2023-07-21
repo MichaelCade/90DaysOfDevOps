@@ -236,4 +236,8 @@ Confirmation of this can be seen below, but hopefully you are seeing the same ou
 
 ![](images/day39-9.png)
 
+I wanted to also add a resource from Nathanael Frappart, Nathanael covers everything in much more detail. 
+
+[Vault kubernetes auth with AKS](https://nfrappart.github.io/2023/07/20/kubernetes-auth-aks.html)
+
 See you on [Day 40](day40.md)
