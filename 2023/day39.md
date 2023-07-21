@@ -136,17 +136,35 @@ We must now exec into our vault-0 pod to enable the secret engine.
 
 `vault secrets enable -path=secret kv-v2`
 
+## Creating a new secret for our app 
 
-`vault kv put secret/devwebapp/config username='giraffe' password='salsa'`
+As a simple test we want to create an application in its own namespace within our Kubernetes cluster to then communicate with vault in its own namespace. 
+
+This is one thing that is not defined in the tutorial linked, and I wanted to provide a bit more real life use case because yes the default namespace can be used but that doesn't mean it should be. 
+
+`vault kv put secret/devwebapp/config username='90DaysOfDevOps' password='90DaysOfDevOps'`
+
+We can confirm what we have just created with the following command: 
 
 `vault kv get secret/devwebapp/config`
 
+You can see the above commands ran in my terminal below. 
+
+![](images/day39-8.png)
+
+Next we need to enable the Kubernetes authentication method.
+
 `vault auth enable kubernetes`
+
+Configure the Kubernetes authentication method to use the location of the Kubernetes API.
 
 ```
 vault write auth/kubernetes/config \
     kubernetes_host="https://$KUBERNETES_PORT_443_TCP_ADDR:443"
 ```
+
+We can now create our policy named devwebapp that enables the read capability for secrets at path secret/data/devwebapp/config
+
 ```
 vault policy write devwebapp - <<EOF
 path "secret/data/devwebapp/config" {
@@ -155,19 +173,32 @@ path "secret/data/devwebapp/config" {
 EOF
 ```
 
+Create a Kubernetes authentication role named devweb-app, this has been taken from the tutorial from Hashicorp but notice that we define a namespace other than default. 
+
 ```
 vault write auth/kubernetes/role/devweb-app \
         bound_service_account_names=internal-app \
-        bound_service_account_namespaces=default \
+        bound_service_account_namespaces=webdevapp \
         policies=devwebapp \
         ttl=24h
 ```
+Now we can exit our vault-0 pod. 
 
 `exit`
 
-`kubectl create ns webdevapp`
+## Deploying our Application 
+
+As mentioned now back into our Kubernetes cluster, it is time to create and deploy our application to complete this demo. 
+
+Firstly, create the application namespace with
+
+`kubectl create ns devwebapp`
+
+We will now create our serviceaccount. 
 
 `kubectl create sa internal-app -n devwebapp`
+
+Now for our application, we will create the following yaml file and you will find this in the day39 folder. 
 
 ```
 cat > devwebapp.yaml <<EOF
@@ -189,9 +220,20 @@ spec:
       image: jweissig/app:0.0.1
 EOF
 ```
+We will be deploying this to our newly created namespace with the following command. 
+
 `kubectl create -f devwebapp.yaml -n devwebapp` 
+
+Check the status of the pods. 
 
 `kubectl get pods -n devwebapp`
 
+Finally we can confirm that we have the correct credentials stored in our app. 
+
 `kubectl exec --stdin=true --tty=true devwebapp -n devwebapp -c devwebapp -- cat /vault/secrets/credentials.txt`
 
+Confirmation of this can be seen below, but hopefully you are seeing the same output as I have got below. 
+
+![](images/day39-9.png)
+
+See you on [Day 40](day40.md)
