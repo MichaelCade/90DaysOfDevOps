@@ -3,13 +3,11 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: vault
-  namespace: webapp
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webapp
-  namespace: webapp
   labels:
     app: webapp
 spec:

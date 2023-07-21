@@ -131,122 +131,67 @@ We must now exec into our vault-0 pod to enable the secret engine.
 
 `kubectl exec --stdin=true --tty=true vault-0 -n vault -- /bin/sh`
 
-We will now have to authenticate and login using `vault login` and provide the token we discovered with root_token in a previous step. 
-
 ![](images/day39-7.png)
 
-We will now run the following commands the first will enable the secret engine and the second will create secret at the path.  
 
-```
-vault secrets enable -path=secret kv-v2
+`vault secrets enable -path=secret kv-v2`
 
-vault kv put secret/webapp/config username="static-user" password="static-password"
-```
 
-You can then verify with the following command 
+`vault kv put secret/devwebapp/config username='giraffe' password='salsa'`
 
-`vault kv get secret/webapp/config` 
-
-So far we have used our root token this root user can peform any operation at any path and as you can expect best practices states that we dont or should not use this account other than initial setup and configuration. 
-
-You should still be in your vault-0 pod. We are going to enable the Kubernetes authentication method with the following command: 
+`vault kv get secret/devwebapp/config`
 
 `vault auth enable kubernetes`
-
-***Vault accepts this service token from any client within the Kubernetes cluster. During authentication, Vault verifies that the service account token is valid by querying a configured Kubernetes endpoint.***
-
-Next we need to configure the Kubernetes authentication method to use the location of the Kubernetes API.
 
 ```
 vault write auth/kubernetes/config \
     kubernetes_host="https://$KUBERNETES_PORT_443_TCP_ADDR:443"
 ```
-
-## Creating a Vault Policy 
-
-For a client or application to access the secret data defined, at secret/webapp/config, requires that the read capability be granted for the path secret/data/webapp/config.
-
 ```
-vault policy write webapp - <<EOF
-path "secret/data/webapp/config" {
+vault policy write devwebapp - <<EOF
+path "secret/data/devwebapp/config" {
   capabilities = ["read"]
 }
 EOF
 ```
 
-Our Application shortly will be defined as webapp 
-
-With the following command we will create a kubernetes authentication role 
-
 ```
-vault write auth/kubernetes/role/webapp \
-        bound_service_account_names=vault \
-        bound_service_account_namespaces=webapp \
-        policies=webapp \
+vault write auth/kubernetes/role/devweb-app \
+        bound_service_account_names=internal-app \
+        bound_service_account_namespaces=default \
+        policies=devwebapp \
         ttl=24h
 ```
 
-now `exit` from the vault-0 pod and back to the local machine. 
+`exit`
 
-## Deploying our Application 
+`kubectl create ns webdevapp`
 
-I am again going to be using the web app that is used in the HashiCorp tutorial mentioned earlier. 
-
-We will create a deployment yaml that looks like the following. 
+`kubectl create sa internal-app -n devwebapp`
 
 ```
+cat > devwebapp.yaml <<EOF
 ---
 apiVersion: v1
-kind: ServiceAccount
+kind: Pod
 metadata:
-  name: vault
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: webapp
+  name: devwebapp
   labels:
-    app: webapp
+    app: devwebapp
+  annotations:
+    vault.hashicorp.com/agent-inject: "true"
+    vault.hashicorp.com/role: "devweb-app"
+    vault.hashicorp.com/agent-inject-secret-credentials.txt: "secret/data/devwebapp/config"
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: webapp
-  template:
-    metadata:
-      labels:
-        app: webapp
-    spec:
-      serviceAccountName: vault
-      containers:
-        - name: app
-          image: hashieducation/simple-vault-client:latest
-          imagePullPolicy: Always
-          env:
-            - name: VAULT_ADDR
-              value: 'http://vault.vault.svc.cluster.local:8200/'
-            - name: JWT_PATH
-              value: '/var/run/secrets/kubernetes.io/serviceaccount/token'
-            - name: SERVICE_PORT
-              value: '8080'
+  serviceAccountName: internal-app
+  containers:
+    - name: devwebapp
+      image: jweissig/app:0.0.1
+EOF
 ```
+`kubectl create -f devwebapp.yaml -n devwebapp` 
 
-Create the webapp namespace 
+`kubectl get pods -n devwebapp`
 
-`kubectl create ns webapp`
-
-Our YAML consists of our simple web app and the service account. 
-
-`kubectl create -f deployment-01-webapp.yml -n webapp`
-
-I also want to note that the helm chart for vault will deploy 
-
-You can check that the authentication has worked by checking pods in the webapp namespace, if they are not in a running state or not there at all then something is not right as this is communicating with vault to make sure that this service is running. 
-
-Once the pod is running, we need to port forward our webapp 
-Find the pod name and then port forward that. 
-```
-kubectl get pods -n webapp 
-kubectl port-forward <PODNAME> -n webapp 8080:8080
-```
+`kubectl exec --stdin=true --tty=true devwebapp -n devwebapp -c devwebapp -- cat /vault/secrets/credentials.txt`
 
