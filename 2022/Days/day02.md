@@ -53,7 +53,7 @@ The big question is how do we get those features and bug fixes into our products
 
 How do we release the new application version? This is one of the main tasks for a DevOps engineer, and the important thing here is not to just figure out how to do this once but we need to do this continuously and in an automated, efficient way which also needs to include testing!
 
-This is where we are going to end this day of learning, hopefully, this was useful. Over the next few days, we are going to dive a little deeper into some more areas of DevOps and then we will get into the sections that dive deeper into the tooling and processes and the benefits of these.
+This is where we are going to end this day of learning, hopefully, this was useful. Over the next few days, we are going to dive a little deeper into some other areas of DevOps and then we will get into the sections that dive deeper into the tooling and processes and the benefits of these.
 
 ## Resources
 
