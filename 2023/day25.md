@@ -27,7 +27,7 @@ This type of scan helps identify low-hanging fruit, such as unpatched systems or
 Authenticated scans, on the other hand, are conducted with administrative credentials.
 This allows the scanning tool to provide much more comprehensive information about potential vulnerabilities, including those that may not be easily exploitable.
 
-In the next two days we are going to take a look at containers and network vulnerability scan, which are more specific subsets os system vulnerability scanning.
+In the next two days we are going to take a look at containers and network vulnerability scan, which are more specific subsets of system vulnerability scanning.
 
 ## Why are vulnerability scans important?
 
@@ -59,11 +59,11 @@ IT departments usually undertake vulnerability scanning if they have the experti
 
 Vulnerability scans are also performed by attackers who scour the Internet to find entry points into systems and networks.
 
-Many companies have bug bountry programs, that allow enthical hackers to report vulnerabilities and gain money for that.
-Usually the bug bountry programs have boundaries, e.g. they define what is allowed and what is not.
+Many companies have bug bounty programs, that allow ethical hackers to report vulnerabilities and gain money for that.
+Usually the bug bounty programs have boundaries, e.g. they define what is allowed and what is not.
 
-Participating in big bounty programs must be done resposibly.
-Hacking is a crime, and if you are caugh you cannot just claim that you did it for good, or that you were not going to exploit your findings.
+Participating in big bounty programs must be done responsibly.
+Hacking is a crime, and if you are caught you cannot just claim that you did it for good, or that you were not going to exploit your findings.
 
 ## How often should you conduct a vulnerability scan?
 
@@ -78,8 +78,8 @@ In penetration testing professional ethical hackers combine the results of autom
 
 Penetration testers will also consider your environment (a significant factor in determining vulnerabilities’ true severity) and upgrade or downgrade the score as appropriate.
 
-A scan can detect something that is vulnerability, but it cannot be actively exploited, because of the way it is incorporated into our system.
+A scan can detect something that is a vulnerability, but cannot be actively exploited, because of the way it is incorporated into our system.
 This makes the vulnerability a low priority one, because why fix something that presents no danger to you.
 
-If an issue comes up in penetration testing then that means that this issue is exploitable, and probably a high priority - in the penetation testers managed to exploit it, so will the hackers.
+If an issue comes up in penetration testing then that means that this issue is exploitable, and probably a high priority - if the penetration testers managed to exploit it, so will the hackers.
 See you on [Day 26](day26.md).
