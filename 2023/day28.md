@@ -21,7 +21,7 @@ Let's start 😎
 
 ## Why this is the first subject of the topic "Runtime defense and monitoring" subject?
 
-Monitoring computer systems is a fundamental tool for security teams, providing visibility into what is happening within the system. Without monitoring, security teams would be unable to detect and respond to security incidents.
+Monitoring computer systems is a fundamental tool for security teams, providing visibility into what is happening within the system. Without monitoring, security teams would not be unable to detect and respond to security incidents.
 
 To illustrate this point, consider physical security. If you want to protect a building, you must have security personnel 24/7 at every entrance to control who is entering the building. In this same example, you are also tasked with controlling the security of everyone in the building therefore you must also have personnel all around. Of course, this is not scaling well therefore installing CCTV cameras at key places is a much better solution today.
 
