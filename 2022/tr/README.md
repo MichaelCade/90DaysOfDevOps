@@ -83,7 +83,7 @@ Ayrıca, orijinal depoya katkıda bulunabilir, beğenebilir veya sorunları [rep
 - [✔️] 📚 35 > [Git - Versiyon Kontrolü](Days/day35.md)
 - [✔️] 📚 36 > [Git'in Kurulumu ve Yapılandırılması](Days/day36.md)
 - [✔️] 📚 37 > [Git'i Tanıma](Days/day37.md)
-- [✔️] 📚 38 > [Başlatma ve Değişiklikler](Days/day38.md)
+- [✔️] 📚 38 > [Staging ve Değişiklikler](Days/day38.md)
 - [✔️] 📚 39 > [Görselleştirme, İptal Etme ve Geri Yükleme](Days/day39.md)
 - [✔️] 📚 40 > [Kod İçin Sosyal Ağ](Days/day40.md)
 - [✔️] 📚 41 > [Açık Kaynak Akışı](Days/day41.md)
