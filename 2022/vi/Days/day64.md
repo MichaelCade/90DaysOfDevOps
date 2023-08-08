@@ -11,7 +11,7 @@ id: 1048765
 
 ## Ansible: Bắt đầu
 
-Chúng ta đã đề cập một chút về Ansible là gì trong [bài viết ngày hôm qua](day63.md) Nhưng chúng ta sẽ có một số thông tin bổ sung ở đây. Thứ nhất, Ansible là sản phẩm của RedHat. Thứ hai, agentless , kết nối thông qua SSH và chạy các câu lệnh. Thứ ba, nó đa nền tảng (Linux & macOS, WSL2) và là mã nguồn mở (cũng có tùy chọn trả phí cho doanh nghiệp).
+Chúng ta đã đề cập một chút về Ansible là gì trong [bài viết ngày hôm qua](day63.md) Nhưng chúng ta sẽ có một số thông tin bổ sung ở đây. Thứ nhất, Ansible là sản phẩm của RedHat. Thứ hai, agentless, kết nối thông qua SSH và chạy các câu lệnh. Thứ ba, nó đa nền tảng (Linux & macOS, WSL2) và là mã nguồn mở (cũng có tùy chọn trả phí cho doanh nghiệp).
 
 ### Cài đặt Ansible
 
