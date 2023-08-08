@@ -72,7 +72,6 @@ Sau đó, chúng ta có các yêu cầu về các nodes, đây là những hệ 
 
 Bạn đã thấy rằng chúng ta có thể chạy `ansible Linux -m ping` trên máy Linux của chúng ta và nhận được phản hồi, về cơ bản, với Ansible, chúng ta có thể chạy nhiều lệnh đặc biệt. [ad hoc commands](https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html)
 
-You saw that we were able to run `ansible Linux -m ping` against our Linux machine and get a response, basically, with Ansible we can run many ad-hoc commands. Nhưng bạn có thể chạy chương trình này với một nhóm hệ thống và lấy lại thông tin đó. [ad hoc commands](https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html)
 
 Nếu bạn thấy mình lặp lại các lệnh hoặc thậm chí tệ hơn là bạn phải đăng nhập vào các hệ thống riêng lẻ để chạy các lệnh này thì Ansible có thể trợ giúp. Ví dụ: lệnh đơn giản bên dưới sẽ cung cấp cho chúng ta đầu ra của tất cả các chi tiết hệ điều hành cho tất cả các hệ thống mà chúng ta thêm vào nhóm Linux của mình.
 `ansible linux -a "cat /etc/os-release"`
