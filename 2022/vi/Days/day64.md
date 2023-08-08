@@ -46,7 +46,7 @@ Cách tôi sử dụng máy chủ cục bộ ở trên để chạy module ping 
 
 ![](../../Days/Images/Day64_config3.png)
 
-Để chúng ta chỉ định máy chủ của mình hoặc các node mà chúng ta muốn tự động hóa với các tác vụ này, chúng ttaôi cần xác định chúng. Chúng ta có thể xác định chúng bằng cách điều hướng đến thư mục /etc/ansible trên hệ thống của bạn.
+Để chúng ta chỉ định máy chủ của mình hoặc các node mà chúng ta muốn tự động hóa với các tác vụ này, chúng ta cần xác định chúng. Chúng ta có thể xác định chúng bằng cách điều hướng đến thư mục /etc/ansible trên hệ thống của bạn.
 
 ![](../../Days/Images/Day64_config4.png)
 
