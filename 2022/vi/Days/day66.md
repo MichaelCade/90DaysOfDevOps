@@ -14,7 +14,7 @@ Trong bài viết trước, chúng ta đã bắt đầu với việc tạo bài 
 
 Chúng ta cũng đã đi qua một số trường hợp sử dụng playbooks và cuối cùng, chúng ta đã có một playbooks giúp các máy chủ web01 và web02 trở thành các máy chủ riêng biệt.
 
-![](Images/Day66_config1.png)
+![](../../Days/Images/Day66_config1.png)
 
 ### Giữ mọi thứ ngăn nắp
 
@@ -58,11 +58,11 @@ sau đó, trong playbook mà hiện tại có tên là `playbook2.yml`, chúng t
 
 Bạn có thể kiểm tra điều này trong máy chủ điều khiển của mình. Nếu bạn đã sao chép các tệp từ repository, bạn sẽ nhận thấy điều gì đó đã thay đổi trong phần "write a basic index.html file"
 
-![](Images/Day66_config2.png)
+![](../../Days/Images/Day66_config2.png)
 
 Hãy tìm hiểu xem tôi đã thực hiện thay đổi đơn giản nào. Sử dụng lệnh `curl web01:8000`
 
-![](Images/Day66_config3.png)
+![](../../Days/Images/Day66_config3.png)
 
 Chúng ta vừa dọn dẹp lại playbook và bắt đầu phân tách các khu vực có thể khiến playbook trở nên phức tạp khi mở rộng quy mô.
 
@@ -72,15 +72,15 @@ Hiện tại, chúng ta đã triển khai 4 máy ảo và chúng ta đã định
 
 Để làm điều này, chúng ta sẽ sử dụng lệnh `ansible-galaxy` để quản lý các roles trong các kho repository được chia sẻ.
 
-![](Images/Day66_config4.png)
+![](../../Days/Images/Day66_config4.png)
 
 Chúng ta sẽ sử dụng `ansible-galaxy` để tạo một role cho apache2, đây là nơi chúng ta sẽ đặt các chi tiết cụ thể cho máy của web của mình.
 
-![](Images/Day66_config5.png)
+![](../../Days/Images/Day66_config5.png)
 
 Câu lệnh trên `ansible-galaxy init roles/apache2` sẽ tạo cấu trúc thư mục như ở trên. Bước tiếp theo là chúng ta cần chuyển các tác vụ mà templates hiện có của mình sang các thư mục có liên quan trong cấu trúc mới.
 
-![](Images/Day66_config6.png)
+![](../../Days/Images/Day66_config6.png)
 
 Copy và paste là cách dễ dàng để chuyển các tệp đó, nhưng chúng ta cũng cần thực hiện thay đổi với tasks/main.yml để trỏ tệp này tới apache2_install.yml.
 
@@ -97,15 +97,15 @@ Chúng ta cũng cần thay đổi playbook để có thể sử dụng role mớ
     - apache2
 ```
 
-![](Images/Day66_config7.png)
+![](../../Days/Images/Day66_config7.png)
 
 Bây giờ, chúng ta có thể chạy lại playbook của mình lần này với tên playbook mới `ansible-playbook playbook3.yml`, bạn sẽ nhận thấy một cảnh báo về việc deprecation, chúng ta có thể khắc phục ngay sau đây.
 
-![](Images/Day66_config8.png)
+![](../../Days/Images/Day66_config8.png)
 
 Ok, dù playbook của chúng ta đã hoạt động nhưng chúng ta cần sử deprecation warning ngay, để làm điều đó, tôi đã thay đổi tuỳ chọn trong tasks/main.yml thành import_tasks như bên dưới.
 
-![](Images/Day66_config9.png)
+![](../../Days/Images/Day66_config9.png)
 
 Bạn có thể tìm thấy các tệp này trong[ansible-scenario3](../../Days/Configmgmt/ansible-scenario3)
 
@@ -114,7 +114,7 @@ Chúng ta cũng sẽ tạo thêm một vài roles trong khi sử dụng `ansible
 - common = cho tất cả các máy chủ (`ansible-galaxy init roles/common`)
 - nginx = cho load balancer (`ansible-galaxy init roles/nginx`)
 
-![](Images/Day66_config10.png)
+![](../../Days/Images/Day66_config10.png)
 
 Tôi sẽ dừng phần này tại đây và trong phần tiếp theo, chúng ta sẽ bắt đầu làm việc trên các nodes khác mà chúng ta đã triển khai nhưng chưa thực hiện bất cứ điều gì.
 
