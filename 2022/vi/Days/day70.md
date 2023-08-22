@@ -31,7 +31,7 @@ Khả năng cho phép các nhà phát triển thực hiện những thay đổi 
 
 ở [Ngày 5](day05.md) chúng ta đã đề cập khá nhiều về lý thuyết về đằng sau DevOps và như đã được đề cập ở đây rằng CI/CD Pipelines là nền móng của môi trường DevOps hiện đại.
 
-![](Images/Day5_DevOps8.png)
+![](../../Days/Images/Day5_DevOps8.png)
 
 Tôi muốn nhấn mạnh một số điểm mấu chốt ở hình ảnh trên, bây giờ chúng ta đã tiến xa hơn một chút trong hành trình học DevOps cơ bản của chúng ta.
 
@@ -49,11 +49,11 @@ CI là một phương pháp phát triển yêu cầu nhà phát triển tích h�
 
 Khi mã nguồn được viết và đẩy lên một kho lưu trữ như Github hoặc GitLab, đó là nơi bắt đầu phép màu.
 
-![](Images/Day70_CICD1.png)
+![](../../Days/Images/Day70_CICD1.png)
 
 Mã nguồn được xác minh bằng quá trình xây dựng tự động, cho phép các nhóm hoặc chủ dự án phát hiện sớm bất kỳ vấn đề nào.
 
-![](Images/Day70_CICD2.png)
+![](../../Days/Images/Day70_CICD2.png)
 
 Từ đó, mã nguồn được phân tích và chạy qua một loạt các bài kiểm tra tự động, với ba ví dụ sau đây:
 
@@ -63,11 +63,11 @@ Từ đó, mã nguồn được phân tích và chạy qua một loạt các bà
 
 Các bài kiểm tra này được tạo thành một quy trình làm việc và sau đó chúng được chạy mỗi khi bạn đẩy mã lên nhánh chính (master branch), vì vậy hầu như mọi đội phát triển lớn đều có một quy trình làm việc CI/CD và hãy nhớ rằng trong một đội phát triển, mã nguồn mới có thể đến từ các đội khắp nơi trên thế giới vào các thời điểm khác nhau trong ngày từ các nhà phát triển làm việc trên nhiều dự án khác nhau. Xây dựng một quy trình làm việc tự động kiểm tra đảm bảo mọi người đều hoạt động theo cùng một tiêu chuẩn trước khi mã được chấp nhận, điều này hiệu quả hơn so với việc con người thực hiện điều này mỗi lần.
 
-![](Images/Day70_CICD3.png)
+![](../../Days/Images/Day70_CICD3.png)
 
 Khi chúng ta đã hoàn thành các bài kiểm thử và thành công, chúng ta có thể biên dịch và gửi chúng đến kho mã nguồn. Ví dụ, tôi đang sử dụng Docker Hub hoặc có thể bất cứ kho lưu trữ nào khác và sau đó sẽ được tận dụng cho khía cạnh triển khai liên tục (CD) của pipeline.
 
-![](Images/Day70_CICD4.png)
+![](../../Days/Images/Day70_CICD4.png)
 
 Vì vậy, quá trình này chủ yếu liên quan đến quá trình phát triển phần mềm. Chúng ta đang tạo ứng dụng, thêm, sửa lỗi và sau đó cập nhật quản lý mã nguồn và phiên bản cùng với việc kiểm thử.
 
@@ -79,13 +79,13 @@ Bây giờ chúng ta đã có phiên bản mã nguồn đã được kiểm th�
 
 Bây giờ là lúc phát hành mã nguồn vào môi trường. Điều này sẽ bao gồm Môi trường Sản phẩm (Production) nhưng cũng có thể bao gồm các môi trường khác như Môi trường Staging.
 
-![](Images/Day70_CICD5.png)
+![](../../Days/Images/Day70_CICD5.png)
 
 Bước tiếp theo của chúng ta, ít nhất là trong Ngày 1 của phiên bản 1 của việc triển khai phần mềm, là chúng ta cần đảm bảo rằng chúng ta đang kéo mã nguồn đúng đến môi trường đúng. Điều này có thể bao gồm việc rút các thành phần từ kho lưu trữ phần mềm (DockerHub), nhưng có khả năng chúng ta cũng đang rút cấu hình bổ sung từ một kho lưu trữ mã nguồn khác, chẳng hạn cấu hình cho ứng dụng. Trong biểu đồ dưới đây, chúng ta đang rút phiên bản phần mềm mới nhất từ DockerHub, sau đó chúng ta đang triển khai nó vào môi trường của chúng ta, có thể sẽ kèm theo việc lấy cấu hình từ một kho lưu trữ Git. Công cụ CD của chúng ta đang thực hiện việc này và đẩy mọi thứ vào môi trường của chúng ta.
 
 Rất có thể việc này không được thực hiện cùng lúc. Ví dụ, chúng ta có thể đi vào một môi trường Staging và chạy kiểm tra với cấu hình của chúng ta để đảm bảo mọi thứ đúng đắn, và đây có thể là bước kiểm tra thủ công hoặc có thể lại được thực hiện tự động (hãy chọn việc tự động). Sau đó chúng ta cho phép mã nguồn này được triển khai vào môi trường Sản phẩm.
 
-![](Images/Day70_CICD6.png)
+![](../../Days/Images/Day70_CICD6.png)
 
 Sau đó, khi phiên bản 2 của ứng dụng ra mắt, chúng ta lặp lại các bước này. Lần này, chúng ta đảm bảo rằng ứng dụng cùng cấu hình của chúng ta được triển khai vào môi trường Staging, đảm bảo mọi thứ ổn định, sau đó chúng ta triển khai vào môi trường Sản phẩm.
 
