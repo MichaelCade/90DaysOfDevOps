@@ -126,4 +126,4 @@ Tôi có kế hoạch xem xét các công cụ sau đây:
 
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-Hẹn gặp lại bạn vào [Ngày 71](day71.md)
+Hẹn gặp lại vào [Ngày 71](day71.md)
