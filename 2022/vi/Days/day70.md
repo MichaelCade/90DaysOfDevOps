@@ -11,7 +11,7 @@ id: 1048712
 
 Triển khai CI/CD Pipeline (Tích hợp liên tục/Triển khai liên tục) là xương sống của môi trường Devops hiện đại.
 
-Nó kết nối khoảng cách giữa phát triển và vận hành bằng cách tự động hóa quá trình xây dựng, kiểm thử và triển khai ứng dụng.
+Nó rút ngắn khoảng cách giữa phát triển và vận hành bằng cách tự động hóa quá trình xây dựng, kiểm thử và triển khai ứng dụng.
 
 Chúng ta đã đề cập khá nhiều về triết lý liên tục này trong phần mở đầu của chuỗi bài. Nhưng để nhấn mạnh lại:
 
