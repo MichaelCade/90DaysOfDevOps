@@ -5,7 +5,7 @@ description: 90DaysOfDevOps - Bức tranh toàn cảnh':' CI/CD Pipelines...
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
-id: 1048712
+id: 1048836
 ---  
 ## Bức tranh toàn cảnh: CI/CD Pipelines
 
