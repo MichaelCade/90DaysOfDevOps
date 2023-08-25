@@ -11,41 +11,41 @@ id: 1048712
 
 Triển khai CI/CD Pipeline (Tích hợp liên tục/Triển khai liên tục) là xương sống của môi trường Devops hiện đại.
 
-Nó kết nối khoảng cách giữa phát triển và vận hành bằng cách tự động hóa quá trình xây dựng, kiểm thử và triển khai ứng dụng.
+Nó rút ngắn khoảng cách giữa phát triển và vận hành bằng cách tự động hóa quá trình xây dựng, kiểm thử và triển khai ứng dụng.
 
 Chúng ta đã đề cập khá nhiều về triết lý liên tục này trong phần mở đầu của chuỗi bài. Nhưng để nhấn mạnh lại:
 
-Tích hợp Liên tục (CI) là một phương pháp phát triển phần mềm hiện đại hơn, trong đó sự gia tăng về thay đổi mã nguồn được thực hiện thường xuyên và đáng tin cậy hơn. Các bước làm việc xây dựng và kiểm thử tự động được kích hoạt bởi Tích hợp Liên tục đảm bảo rằng những thay đổi mã nguồn được gộp vào kho mã nguồn là đáng tin cậy.
+Tích hợp Liên tục (CI) là một phương pháp phát triển phần mềm hiện đại, trong đó thay đổi mã nguồn được thực hiện thường xuyên và đáng tin cậy hơn. Các bước xây dựng và kiểm thử tự động được kích hoạt bởi Tích hợp Liên tục đảm bảo tính tin cậy của những thay đổi mã nguồn được gộp vào kho mã nguồn.
 
-Mã nguồn/Ứng dụng sau đó được chuyển giao nhanh chóng và một cách trôi chảy như một phần của quá trình Triển khai Liên tục.
+Mã nguồn/Ứng dụng sau đó được triển khai một cách nhanh chóng và liền mạch như một phần của quá trình Triển khai Liên tục.
 
 ### Tầm quan trọng của CI/CD?
 
-* Tạo ra phần mềm nhanh chóng và hiệu quả
-* Tạo điều kiện cho một quy trình hiệu quả để đưa ứng dụng ra thị trường càng nhanh càng tốt
-* Luồng liên tục của việc khắc phục lỗi và tính năng mới mà không cần phải đợi quá trình dài hàng năm tháng cho các phiên bản được phát hành.  
+* Tạo ra phần mềm nhanh chóng và hiệu quả.
+* Tạo ra một quy trình hiệu quả để đưa ứng dụng ra thị trường nhanh nhất có thể.
+* Triển khai các bản sửa lỗi và tính năng mới liên tục mà không cần phải chờ hàng tháng hoặc hàng năm để phát hành phiên bản mới.
 
 Khả năng cho phép các nhà phát triển thực hiện những thay đổi nhỏ mang tính ảnh hưởng định kỳ nghĩa là chúng ta có thể nhận được các bản vá nhanh chóng hơn và nhiều tính năng hơn một cách nhanh chóng.
 
 ### Vậy điều này có ý nghĩa là gì? 
 
-ở [Ngày 5](day05.md) chúng ta đã đề cập khá nhiều về lý thuyết về đằng sau DevOps và như đã được đề cập ở đây rằng CI/CD Pipelines là nền móng của môi trường DevOps hiện đại.
+ở [Ngày 5](day05.md) chúng ta đã đề cập khá nhiều tới lý thuyết về DevOps và như đã được đề cập trong bài viết này, CI/CD Pipelines là nền móng của môi trường DevOps hiện đại.
 
 ![](../../Days/Images/Day5_DevOps8.png)
 
-Tôi muốn nhấn mạnh một số điểm mấu chốt ở hình ảnh trên, bây giờ chúng ta đã tiến xa hơn một chút trong hành trình học DevOps cơ bản của chúng ta.
+Tôi muốn nhấn mạnh một số điểm mấu chốt ở hình trên, bây giờ chúng ta đã tiến xa hơn một chút trong hành trình học DevOps cơ bản.
 
 Chúng ta đang đề cập đến vòng đời phát triển phần mềm (software development life cycle - SDLC).
 
 Các bước thường được viết ra bên trong các vòng lặp vô tận vì nó là một chu kỳ lặp lại mãi mãi.
 
-Các bước trong chu kỳ là việc các nhà phát triển viết mã nguồn sau đó được xây dựng hoặc biên dịch, sau đó được **kiểm thử** để tìm lỗi và **triển khai** vào môi trường sản phẩm nơi mà nó được sử dụng (**Operated - Vận hành** ) bởi người dùng cuối hoặc khách hàng sau đó chúng ta **theo giõi** và thu thập phản hồi và cuối cùng **lên kế hoạch** cải tiến xung quanh phản hồi đó và **lặp lại**.
+Các bước trong quy trình là việc các nhà phát triển viết mã nguồn sau đó được xây dựng hoặc biên dịch, sau đó được **kiểm thử** để tìm lỗi và **triển khai** vào môi trường sản phẩm nơi mà nó được sử dụng (**Operated - Vận hành** ) bởi người dùng cuối hoặc khách hàng sau đó chúng ta **theo dõi**, thu thập phản hồi và cuối cùng **lên kế hoạch** cải tiến xung quanh phản hồi đó, sau cùng là **lặp lại** toàn bộ quy trình.
 
-### Cùng đi sâu hơn một chút vào CI/CD
+### Tìm hiểu sâu hơn về CI/CD
 
 ### CI
 
-CI là một phương pháp phát triển yêu cầu nhà phát triển tích hợp mã nguồn vào kho mã nguồn nhiều lần trong một ngày.
+CI là một thực hành trong quy trình phát triển yêu cầu nhà phát triển tích hợp mã nguồn vào kho mã nguồn nhiều lần trong một ngày.
 
 Khi mã nguồn được viết và đẩy lên một kho lưu trữ như Github hoặc GitLab, đó là nơi bắt đầu phép màu.
 
@@ -71,17 +71,16 @@ Khi chúng ta đã hoàn thành các bài kiểm thử và thành công, chúng 
 
 Vì vậy, quá trình này chủ yếu liên quan đến quá trình phát triển phần mềm. Chúng ta đang tạo ứng dụng, thêm, sửa lỗi và sau đó cập nhật quản lý mã nguồn và phiên bản cùng với việc kiểm thử.
 
-Chuyển sang giai đoạn tiếp theo là yếu tố triển khai liên tục (CD), mà ngày càng nhiều chúng ta thường thấy trong bất kỳ phần mềm nào có sẵn trên thị trường. Tôi sẽ cho rằng chúng ta sẽ thấy một xu hướng, nếu chúng ta nhận phần mềm từ một nhà cung cấp như Oracle hoặc Microsoft, chúng ta sẽ tiêu thụ chúng từ một kho lưu trữ kiểu Docker Hub, sau đó chúng ta sẽ sử dụng đường ống triển khai liên tục của mình để triển khai chúng vào môi trường của chúng ta.
-
+Chuyển sang giai đoạn tiếp theo là yếu tố triển khai liên tục (CD), mà ngày càng nhiều chúng ta thường thấy trong bất kỳ phần mềm nào có sẵn trên thị trường. Chúng ta sẽ thấy một xu hướng, nếu chúng ta nhận phần mềm từ một nhà cung cấp như Oracle hoặc Microsoft, chúng ta sẽ sử dụng chúng từ một kho lưu trữ kiểu Docker Hub, sau đó sẽ sử dụng đường ống (pipeline) triển khai liên tục của mình để triển khai các phầm mềm đó lên môi trường của chúng ta.
 ### CD
 
-Bây giờ chúng ta đã có phiên bản mã nguồn đã được kiểm thử và chúng ta sẵn sàng triển khai ra ngoài như tôi nói, nhà cung cấp phần mềm sẽ trải qua giai đoạn này, nhưng tôi rất tin rằng đây là cách chúng ta sẽ triển khai tất cả phần mềm có sẵn mà chúng ta cần trong tương lai.
+Bây giờ chúng ta đã có phiên bản mã nguồn đã được kiểm thử và sẵn sàng để được triển khai, nhà cung cấp phần mềm sẽ trải qua giai đoạn này, nhưng tôi rất tin rằng đây là cách chúng ta sẽ triển khai tất cả phần mềm có sẵn mà chúng ta cần trong tương lai.
 
 Bây giờ là lúc phát hành mã nguồn vào môi trường. Điều này sẽ bao gồm Môi trường Sản phẩm (Production) nhưng cũng có thể bao gồm các môi trường khác như Môi trường Staging.
 
 ![](../../Days/Images/Day70_CICD5.png)
 
-Bước tiếp theo của chúng ta, ít nhất là trong Ngày 1 của phiên bản 1 của việc triển khai phần mềm, là chúng ta cần đảm bảo rằng chúng ta đang kéo mã nguồn đúng đến môi trường đúng. Điều này có thể bao gồm việc rút các thành phần từ kho lưu trữ phần mềm (DockerHub), nhưng có khả năng chúng ta cũng đang rút cấu hình bổ sung từ một kho lưu trữ mã nguồn khác, chẳng hạn cấu hình cho ứng dụng. Trong biểu đồ dưới đây, chúng ta đang rút phiên bản phần mềm mới nhất từ DockerHub, sau đó chúng ta đang triển khai nó vào môi trường của chúng ta, có thể sẽ kèm theo việc lấy cấu hình từ một kho lưu trữ Git. Công cụ CD của chúng ta đang thực hiện việc này và đẩy mọi thứ vào môi trường của chúng ta.
+Trong bước tiếp theo, ít nhất là trong Ngày 1 của phiên bản 1 của việc triển khai phần mềm, chúng ta cần đảm bảo việc sử dụng đúng mã nguồn cho môi trường tương ứng. Điều này có thể bao gồm việc kéo từ kho lưu trữ phần mềm (DockerHub), nhưng có khả năng chúng ta cũng sẽ kéo (pull) cấu hình bổ sung từ một kho lưu trữ mã nguồn khác, chẳng hạn cấu hình cho ứng dụng. Trong biểu đồ dưới đây, chúng ta đang kéo phiên bản phần mềm mới nhất từ DockerHub, sau đó chúng ta triển khai nó vào môi trường của mình, có thể sẽ kèm theo việc lấy cấu hình từ một kho lưu trữ Git. Công cụ CD của chúng ta đang thực hiện việc này và đẩy mọi thứ vào môi trường của chúng ta.
 
 Rất có thể việc này không được thực hiện cùng lúc. Ví dụ, chúng ta có thể đi vào một môi trường Staging và chạy kiểm tra với cấu hình của chúng ta để đảm bảo mọi thứ đúng đắn, và đây có thể là bước kiểm tra thủ công hoặc có thể lại được thực hiện tự động (hãy chọn việc tự động). Sau đó chúng ta cho phép mã nguồn này được triển khai vào môi trường Sản phẩm.
 
@@ -91,15 +90,15 @@ Sau đó, khi phiên bản 2 của ứng dụng ra mắt, chúng ta lặp lại 
 
 ### Tại sao sử dụng CI/CD?
 
-Tôi nghĩ chúng ta có thể đã bàn về những lợi ích này nhiều lần, nhưng đó là vì nó tự động hóa những thứ mà ban đầu phải được thực hiện thủ công. Nó tìm ra các vấn đề nhỏ trước khi chúng xâm nhập vào mã nguồn chính, bạn có thể tưởng tượng rằng nếu bạn đẩy mã nguồn không tốt ra cho khách hàng của bạn, thì bạn sẽ có một khoảng thời gian khó khăn!
+Tôi nghĩ chúng ta có thể đã bàn về những điều này nhiều lần, đó là vì nó tự động hóa những thứ mà ban đầu phải được thực hiện thủ công. Nó tìm ra các vấn đề nhỏ trước khi chúng ảnh hưởng vào mã nguồn chính, bạn có thể tưởng tượng rằng nếu bạn sử dụng mã nguồn không tốt cho khách hàng của bạn, bạn sẽ có một khoảng thời gian khó khăn!
 
-Nó cũng giúp ngăn chặn điều gọi là "nợ kỹ thuật" (technical debt), đó là ý tưởng rằng vì kho mã nguồn chính liên tục được xây dựng theo thời gian sau đó một sửa lỗi tạm thời được thực hiện vào ngày đầu bây giờ trở thành một sửa lỗi đắt đỏ hơn theo thời gian vì bây giờ sửa lỗi đó đã được gắn chặt chẽ và được tích hợp vào tất cả các mã nguồn và logic.
+Nó cũng giúp ngăn chặn "nợ kỹ thuật" (technical debt), vì kho mã nguồn chính liên tục được xây dựng theo thời gian sau đó một chỉnh sửa lỗi tạm thời được thực hiện vào ngày đầu tiên sẽ trở thành một chỉnh sửa lỗi đắt đỏ hơn theo thời gian, vì bây giờ chỉnh sửa đó đã được gắn chặt chẽ và được tích hợp vào tất cả các mã nguồn và logic.
 
 ### Công cụ
 
 Tương tự như các phần khác, chúng ta sẽ thực hành với một số công cụ để thực hiện quá trình CI/CD Pipeline.
 
-Tôi nghĩ nó cũng quan trọng để lưu ý rằng không phải tất cả các công cụ đều phải thực hiện cả quá trình CI và CD. Chúng ta sẽ xem xét ArgoCD, như bạn đã đoán, nó tốt ở yếu tố CD trong việc triển khai phần mềm của chúng ta lên một cụm Kubernetes. Nhưng một công cụ như Jenkins có thể làm việc trên nhiều nền tảng khác nhau.
+Tôi nghĩ quan trọng là chúng ta cần lưu ý rằng không phải tất cả các công cụ đều phải thực hiện cả quá trình CI và CD. Chúng ta sẽ xem xét ArgoCD, như bạn có thể đoán được, nó tốt ở với CD trong việc triển khai phần mềm của chúng ta lên một cụm Kubernetes. Nhưng một công cụ như Jenkins có thể làm việc trên nhiều nền tảng khác nhau.
 
 Tôi có kế hoạch xem xét các công cụ sau đây:
 
@@ -127,4 +126,4 @@ Tôi có kế hoạch xem xét các công cụ sau đây:
 
 - [GitHub Actions CI/CD](https://www.youtube.com/watch?v=mFFXuXjVgkU)
 
-Gặp bạn vào [Ngày 71](day71.md)
+Hẹn gặp lại bạn vào [Ngày 71](day71.md)
