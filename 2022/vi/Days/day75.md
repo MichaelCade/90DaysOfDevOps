@@ -10,9 +10,7 @@ id: 1049070
 
 ## Tổng quan về GitHub Actions
 
-Ở bài này, tôi muốn tiếp tục và xem xét một cách tiếp cận khác với những gì chúng ta vừa dành thời gian. Github Actions là điều chúng ta sẽ tập trung ở bài này.
-
-GitHub Actions is a CI/CD platform that allows us to build, test and deploy amongst other tasks in our pipeline. It has the concept of workflows that build and test against a GitHub repository. You could also use GitHub Actions to drive other workflows based on events that happen within your repository.
+Ở bài này, tôi muốn tiếp tục và xem xét có thể là ở một cách tiếp cận khác so với những gì chúng ta đã học ở các bài trước. Github Actions là điều chúng ta sẽ tập trung ở bài này.
 
 Github Actions là một nền tảng CI/CD cho phép chúng ta xây dựng, kiểm thử và triển khai giữa các tác vụ trong pipeline. Nó mang trong mình khái niệm về các workflow để xây dựng và kiểm thử trên một kho lưu trữ GitHub. Bạn cũng có thể sử dụng GitHub Actions để điều hướng các luồng công việc khác dựa trên các sự kiện diễn ra trong kho lưu trữ của bạn.
 
@@ -28,7 +26,7 @@ Nhìn chung, trong Github Actions, tác vụ được gọi là **Workflow**:
 - Một **workflow** sẽ chứa một **job** và sau đó là các **step** để hoàn thành **job**
 - Trong **workflow** chúng ta cũng có một **runner** mà **workflow** chạy trên đó.
 
-Ví dụ, bạn có thể có một **workflow** để xây dựng và kiểm thử các pull requests, một **workflow** khác để triển khai ứng dụng mỗi khi một bản release được tạo, và một **workflow** để đánh nhãn mỗi khi ai đó mở một vấn đề mới.
+Ví dụ, bạn có thể có một **workflow** để xây dựng và kiểm thử các pull requests, một **workflow** khác để triển khai ứng dụng mỗi khi một bản release được tạo, và một **workflow** để đánh nhãn mỗi khi ai đó mở một issue mới.
 
 ### Events
 
@@ -120,11 +118,11 @@ Bạn có thể thấy phía trên rằng đối với một trong các bước 
 
 Cũng trong đoạn mã ở trên có đề cập đến GITHUB_TOKEN, nên tôi muốn tìm hiểu tại sao nó lại cần thiết và dùng để làm gì.
 
-"GHI CHÚ: Nếu bạn truyền biến môi trường `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}` trong workflow của bạn, thì GitHub Super-Linter sẽ đánh dấu trạng thái của mỗi lần chạy linter trong phần Kiểm tra của pull request. Nếu không, bạn chỉ sẽ thấy trạng thái tổng quan của toàn bộ quá trình chạy. **Không cần thiết phải cài đặt GitHub Secret vì nó được cài đặt tự động bởi GitHub, chỉ cần truyền nó cho action.**"
+"GHI CHÚ: Nếu bạn truyền biến môi trường `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}` trong workflow của bạn, thì GitHub Super-Linter sẽ đánh dấu trạng thái của mỗi lần chạy linter trong phần Kiểm tra của pull request. Nếu không, bạn chỉ sẽ thấy trạng thái tổng quan của toàn bộ quá trình chạy. **Không cần phải thiết lập GitHub Secret vì nó được cài đặt tự động bởi GitHub, chỉ cần truyền nó cho action.**"
 
-Đoạn in đậm trên là điều quan trọng cần lưu ý ở giai đoạn này. Chúng ta đang sử dụng nó nhưng không cần thiết phải thiết lập bất kỳ biến môi trường nào trong kho lưu trữ của chúng ta.
+Đoạn in đậm trên là điều quan trọng cần lưu ý ở giai đoạn này. Chúng ta đang sử dụng nó nhưng không cần phải thiết lập bất kỳ biến môi trường nào trong kho lưu trữ của chúng ta.
 
-Chúng tôi sẽ sử dụng kho lưu trữ mà chúng tôi đã sử dụng trong bài thực hành Jenkins để kiểm tra.[Jenkins-HelloWorld](https://github.com/MichaelCade/Jenkins-HelloWorld)
+Chúng ta sẽ sử dụng kho lưu trữ mà chúng tôi đã sử dụng trong bài thực hành Jenkins để kiểm tra.[Jenkins-HelloWorld](https://github.com/MichaelCade/Jenkins-HelloWorld)
 
 Dưới đây là kho lưu trữ của chúng ta sau khi chúng ta kết thúc trong các buổi thực hành về Jenkins.
 
@@ -146,7 +144,7 @@ Chúng ta đã xác định trong mã của mình rằng workflow này sẽ ch�
 
 Như bạn có thể thấy từ trên, chúng ta có một số lỗi, có thể là do khả năng "hack" của tôi so với khả năng viết mã của tôi.  
 
-Dù đó không phải là mã của tôi, ít nhất là chưa phải, khi chạy điều này và nhận được một lỗi, tôi đã tìm thấy [vấn đề](https://github.com/github/super-linter/issues/2255)
+Dù đó không phải là mã của tôi, ít nhất là chưa phải, khi chạy điều này và nhận được một lỗi, tôi đã tìm thấy [issue](https://github.com/github/super-linter/issues/2255)
 
 Lần thứ hai, tôi đã thay đổi phiên bản Super-Linter từ phiên bản 3 lên 4 và đã chạy lại tác vụ.
 
@@ -159,11 +157,9 @@ Tôi muốn kể từ bây giờ sẽ hiển trị trên kho lưu trữ của ch
 
 ![](../../Days/Images/Day75_CICD7.png)
 
-Bây giờ nếu chúng ta giải quyết vấn đề với mã của tôi và đẩy các thay đổi, workflow của chúng ta sẽ chạy lại (bạn có thể thấy từ hình ảnh rằng nó mất một thời gian để giải quyết các "lỗi" của chúng ta). Xóa một tệp có thể không được khuyến nghị nhưng đó là một cách rất nhanh chóng để thể hiện vấn đề được giải quyết.
+Bây giờ nếu chúng ta giải quyết lỗi trong commit trên với mã của tôi và đẩy lại các thay đổi, workflow của chúng ta sẽ chạy lại (bạn có thể thấy từ hình ảnh rằng nó mất một thời gian để giải quyết các "lỗi" của chúng ta). Xóa một tệp có thể không được khuyến nghị nhưng đó là một cách rất nhanh chóng để thể hiện vấn đề được giải quyết.
 
 ![](../../Days/Images/Day75_CICD8.png)
-
-If you hit the new workflow button highlighted above, this is going to open the door to a huge plethora of actions. One thing you might have noticed throughout this challenge is that we don't want to reinvent the wheel we want to stand on the shoulders of giants and share our code, automation and skills far and wide to make our lives easier.
 
 Nếu bạn nhấp vào nút **new workflow** được đánh dấu ở trên, điều này sẽ mở ra cửa sổ cho một loạt lớn các action. Một điều bạn có thể đã nhận thấy trong suốt thử thách này là chúng tôi không muốn phải tạo lại mọi thứ, chúng tôi muốn đứng trên vai những người khổng lồ và chia sẻ mã nguồn, tự động hóa và kỹ năng của mình rộng rãi để làm cuộc sống dễ dàng hơn.
 
