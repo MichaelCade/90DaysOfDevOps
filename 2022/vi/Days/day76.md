@@ -21,7 +21,7 @@ Từ lĩnh vực Quản trị nhưng đã nghiên cứu rất nhiều về Cơ s
 
 ### Triển khai ArgoCD
 
-Chúng ta sẽ sử dụng cụm minikube Kubernetes đáng tin cậy cục bộ của chúng ta cho việc triển khai này. 
+Chúng ta sẽ sử dụng Kubernetes cluster với minikube cục bộ cho việc triển khai này. 
 
 ```Shell
 kubectl create namespace argocd
