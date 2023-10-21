@@ -4,15 +4,15 @@ Chào mọi người và mừng trở lại với phiên bản 2023 #90DaysOfDev
 
 ### Tóm tắt 2022
 
-Đầu tiên, WAO! Nhớ đến công việc này mà thôi đã nghĩ ra ở giao thừa 2021 là dành ra 90 ngày đầu của năm 2022 để học và tổng hợp tư liệu của việc học đó, ghi chú một cách cơ bản sau khi xem nhiều người cực kì giỏi hơn tôi trên Youtube.
+Đầu tiên, WAO! Nhớ đến công việc này mà tôi đã nghĩ ra ở giao thừa 2021 là dành ra 90 ngày đầu của năm 2022 để học và tổng hợp tư liệu, ghi chú một cách cơ bản sau khi xem nhiều người cực kì giỏi hơn tôi trên Youtube.
 
-Một năm nhanh chóng, chúng ta có khá nhiều con số ấn tượng ở dự án này, tôi nghĩ tôi đã đề cập ít nhất ở nơi đâu đó trong dự án, nhưng tôi chắc rằng tôi đã từng đề cập ở chỗ khác rất nhiều lần là bất kì nội dung nào mà giúp được thậm chí dù chỉ một người thì nó rất xứng đáng để làm, quả là đán kinh ngạc khi có được những con số như này từ khi dự án chúng ta được đánh dấu (stars) đến khi được phân nhánh copy từ người khác (folks).
+Một năm nhanh chóng, chúng ta có khá nhiều con số ấn tượng ở dự án này, tôi nghĩ tôi đã đề cập ít nhất ở nơi đâu đó trong dự án, nhưng tôi chắc rằng tôi đã từng đề cập ở chỗ khác rất nhiều lần là bất kì nội dung nào mà giúp được thậm chí dù chỉ một người thì nó rất xứng đáng để làm, quả là đáng kinh ngạc khi có được những con số như này từ khi dự án chúng ta được đánh dấu (stars) đến khi được phân nhánh copy từ người khác (folks).
 
 ![](images/day01-1.jpg)
 
 Cũng như, gần **500** người theo dõi dự án này.
 
-Điều đầu tiên, tôi muốn chân thành cảm ơn tất cả mọi người vì đã chia sẽ dự án này với cộng đồng. Thật là tuyệt với khi nghe rằng Microsoft và  những nhà cung cấp công nghệ lớn khác đã chia sẽ dự án này với đội ngũ của họ.
+Điều đầu tiên, tôi muốn chân thành cảm ơn tất cả mọi người vì đã chia sẻ dự án này với cộng đồng. Thật là tuyệt với khi nghe rằng Microsoft và  những nhà cung cấp công nghệ lớn khác đã chia sẻ dự án này với đội ngũ của họ.
 
 Điều thứ hai, tôi rất muốn cảm ơn những người đã đóng góp vào dự án. Điều này đã làm nên một nới mà ta có thể ghi chép cũng như học hỏi một cách minh bạch, cho đến khi có người bắt gặp lỗi sai chính tả cũng như ngữ pháp của tôi và chỉnh nó. (Tôi chắc rằng điều tương tự sẽ diễn ra trong năm nay) Nhưng điều quan trọng và thú vị nhất là cộng đồng này đã bắt đầu phiên dịch dự án này thành ngôn ngữ bản địa của họ! Thật là tuyệt
 vời khi nghĩ điều này đang đã đang diễn ra và giúp những người nói tiếng anh bản xứ học nhiều hơn về sức mạnh tuyệt vời của DevOps.
