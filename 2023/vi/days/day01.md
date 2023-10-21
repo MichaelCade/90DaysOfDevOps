@@ -1,4 +1,4 @@
-## Nhỉn lại 2022 & Chào đón 2023
+## Nhìn lại 2022 & Chào đón 2023
 
 Chào mọi người và mừng trở lại với phiên bản 2023 #90DaysOfDevOps trong bài đăng Ngày 1 này, kế hoạch là nhìn lại phiên bản năm 2022, một vài thống kê, phản hồi và những ý tưởng mà chúng ta đã có trong suốt năm qua.
 
