@@ -19,7 +19,7 @@ Có rất nhiều tùy chọn ngoài kia nhưng tôi nghĩ có lẽ chúng ta n�
 - Không có sẵn trên mọi hệ thống.
 - Dễ để bắt đầu hơn
 
-Nếu bạn chạy `nano 90DaysOfDevOps.txt`, chúng ta sẽ có một tệp mới không có gì trong đó, từ đây chúng tôi có thể thêm văn bản của mình và hướng dẫn bên dưới là những gì chúng ta muốn thay đổi tệp đó.
+Nếu bạn chạy `nano 90DaysOfDevOps.txt`, chúng ta sẽ có một tệp mới không có gì trong đó, từ đây chúng ta có thể thêm văn bản của mình và hướng dẫn bên dưới là những gì chúng ta muốn thay đổi tệp đó.
 
 ![](../../Days/Images/Day17_Linux1.png)
 

@@ -61,7 +61,7 @@ Hãy nhớ rằng Microsoft Azure là một đám mây tính phí theo mô hình
 
 Nếu bạn là một Doanh nghiệp thì bạn có thể muốn hoặc có một thoả thuận Doanh nghiệp với Microsoft để cho phép công ty của bạn sử dụng các dịch vụ của Azure.
 
-Nếu bạn giống tôi và bạn đang sử dụng Microsoft Azure cho mục đích học tập thì chúng tôi có một số tùy chọn khác.
+Nếu bạn giống tôi và bạn đang sử dụng Microsoft Azure cho mục đích học tập thì chúng ta có một số tùy chọn khác.
 
 Chúng ta có [tài khoản Microsoft Azure miễn phí](https://azure.microsoft.com/en-gb/free/) và thường sẽ có một số tín dụng (tiền) miễn phí để bạn có thể sử dụng Azure trong một khoảng thời gian.
 
@@ -120,7 +120,7 @@ Tiếp theo, chúng ta có resource group, đây là nơi chúng ta kết hợp 
 
 ![](../../Days/Images/Day29_Cloud8.png)
 
-Với những gì chúng ta có thể làm trong vài ngày tới, chúng tôi muốn tại resource group của riêng mình. Điều này được thực hiện dễ dàng trong console bằng cách nhấn "Create" trong hình ảnh ở trên.
+Với những gì chúng ta có thể làm trong vài ngày tới, chúng ta muốn tạo resource group của riêng mình. Điều này được thực hiện dễ dàng trong console bằng cách nhấn "Create" trong hình ảnh ở trên.
 
 ![](../../Days/Images/Day29_Cloud9.png)
 

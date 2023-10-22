@@ -50,7 +50,7 @@ Việc sử dụng phương pháp dockerfile phù hợp hơn nhiều với việ
 
 Dockerfile là một quy trình gồm ba bước, theo đó bạn tạo dockerfile và thêm các lệnh bạn cần để tạo nên một image.
 
-Bảng sau đây chứa một số câu lệnh dockerfile mà chúng tôi sẽ sử dụng và rất có thể bạn cũng sẽ sử dụng.
+Bảng sau đây chứa một số câu lệnh dockerfile mà chúng ta sẽ sử dụng và rất có thể bạn cũng sẽ sử dụng.
 
 | Lệnh | Mục đích |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------- |

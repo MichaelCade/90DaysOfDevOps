@@ -119,35 +119,35 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 - [✔️] 📜 68 > [Tags, Variables, Inventory & Database Server config](Days/day68.md)
 - [✔️] 📜 69 > [Tất cả những thứ còn lại của Ansible - Automation Controller, AWX, Vault](Days/day69.md)
 
-### Tạo CI/CD Pipelines
+### CI/CD pipelines
 
-- [✔️] 🔄 70 > [The Big Picture: CI/CD Pipelines](Days/day70.md)
-- [✔️] 🔄 71 > [What is Jenkins?](Days/day71.md)
-- [✔️] 🔄 72 > [Getting hands on with Jenkins](Days/day72.md)
-- [✔️] 🔄 73 > [Building a Jenkins pipeline](Days/day73.md)
+- [✔️] 🔄 70 > [Bức tranh toàn cảnh: CI/CD Pipelines](Days/day70.md)
+- [✔️] 🔄 71 > [Jenkins là gì?](Days/day71.md)
+- [✔️] 🔄 72 > [Làm quen với Jenkins](Days/day72.md)
+- [✔️] 🔄 73 > [Xây dựng Jenkins pipeline](Days/day73.md)
 - [✔️] 🔄 74 > [Hello World - Jenkinsfile App Pipeline](Days/day74.md)
-- [✔️] 🔄 75 > [GitHub Actions Overview](Days/day75.md)
-- [✔️] 🔄 76 > [ArgoCD Overview](Days/day76.md)
+- [✔️] 🔄 75 > [Tổng quan về GitHub Actions](Days/day75.md)
+- [✔️] 🔄 76 > [Tổng quan về ArgoCD](Days/day76.md)
 
 ### Giám sát, quản lý logs và trực quan hóa dữ liệu
 
-- [✔️] 📈 77 > [The Big Picture: Monitoring](Days/day77.md)
-- [✔️] 📈 78 > [Hands-On Monitoring Tools](Days/day78.md)
-- [✔️] 📈 79 > [The Big Picture: Log Management](Days/day79.md)
+- [✔️] 📈 77 > [Bức tranh toàn cảnh: Giám sát](Days/day77.md)
+- [✔️] 📈 78 > [Thực hành với công cụ giám sát](Days/day78.md)
+- [✔️] 📈 79 > [Bức tranh toàn cảnh: Quản lý log](Days/day79.md)
 - [✔️] 📈 80 > [ELK Stack](Days/day80.md)
 - [✔️] 📈 81 > [Fluentd & FluentBit](Days/day81.md)
 - [✔️] 📈 82 > [EFK Stack](Days/day82.md)
-- [✔️] 📈 83 > [Data Visualisation - Grafana](Days/day83.md)
+- [✔️] 📈 83 > [Trực quan hóa dữ liệu - Grafana](Days/day83.md)
 
 ### Lưu trữ & Bảo vệ Dữ liệu
 
-- [✔️] 🗃️ 84 > [The Big Picture: Data Management](Days/day84.md)
-- [✔️] 🗃️ 85 > [Data Services](Days/day85.md)
-- [✔️] 🗃️ 86 > [Backup all the platforms](Days/day86.md)
-- [✔️] 🗃️ 87 > [Hands-On Backup & Recovery](Days/day87.md)
-- [✔️] 🗃️ 88 > [Application Focused Backups](Days/day88.md)
-- [✔️] 🗃️ 89 > [Disaster Recovery](Days/day89.md)
-- [✔️] 🗃️ 90 > [Data & Application Mobility](Days/day90.md)
+- [✔️] 🗃️ 84 > [Bức tranh toàn cảnh: Data Management](Days/day84.md)
+- [✔️] 🗃️ 85 > [Dịch vụ dữ liệu](Days/day85.md)
+- [✔️] 🗃️ 86 > [Sao lưu tất cả các nền tảng](Days/day86.md)
+- [✔️] 🗃️ 87 > [Thực hành với sao lưu & phục hồi](Days/day87.md)
+- [✔️] 🗃️ 88 > [Sao lưu theo hướng tập trung vào ứng dụng](Days/day88.md)
+- [✔️] 🗃️ 89 > [Khắc phục thảm họa (DR)](Days/day89.md)
+- [✔️] 🗃️ 90 > [Dữ liệu & ứng dụng: Tính di động](Days/day90.md)
 
 ## License
 

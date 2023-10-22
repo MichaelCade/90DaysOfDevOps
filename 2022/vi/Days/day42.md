@@ -27,11 +27,11 @@ Không có lựa chọn nào ở trên là đúng hay sai, nhưng chúng đều 
 
 Tôi cũng muốn nói rằng nếu bạn mới bắt đầu và đang phát triển một ứng dụng, bạn nên hướng tới các container đơn gỉan khi xét về tính hiệu quả, tốc độ và kích thước. Nhưng điều đó cũng đi kèm với một cái giá, nếu bạn không biết gì về container thì đó sẽ là một quá trình học tập để buộc bản thân bạn phải hiểu lý do tại sao chúng ta sử dụng và xây dựng một mindset mới. Nếu bạn đã phát triển các ứng dụng của mình theo một cách cụ thể hoặc chưa từng sử dụng containers thì bạn có thể có nhiều vấn đề khó giải quyết hơn trước cả khi xem xét đến việc sử dụng chúng.
 
-Chúng tôi có nhiều sự lựa chọn khác nhau khi tải xuống một phần mềm nhất định, có rất nhiều hệ điều hành khác nhau mà chúng ta có thể đang sử dụng và hướng dẫn cụ thể về những gì chúng ta cần làm để cài đặt ứng dụng của mình.
+Chúng ta có nhiều sự lựa chọn khác nhau khi tải xuống một phần mềm nhất định, có rất nhiều hệ điều hành khác nhau mà chúng ta có thể đang sử dụng và hướng dẫn cụ thể về những gì chúng ta cần làm để cài đặt ứng dụng của mình.
 
 ![](../../Days/Images/Day42_Containers1.png)
 
-Gần đây, tôi nhận thấy rằng các ứng dụng mà chúng tôi có thể đã từng cần một hệ điều hành máy chủ đầy đủ, một máy ảo, một instance vật lý hoặc điện toán đám mây hiện đang phát hành các phiên bản phần mềm trên container của chúng. Tôi thấy điều này khá thú vị vì nó đứa thế giới của container và sau đó là Kubernetes tới mọi người chứ không chỉ tập trung vào các nhà phát triển ứng dụng.
+Gần đây, tôi nhận thấy rằng các ứng dụng mà chúng ta có thể đã từng cần một hệ điều hành máy chủ đầy đủ, một máy ảo, một instance vật lý hoặc điện toán đám mây hiện đang phát hành các phiên bản phần mềm trên container của chúng. Tôi thấy điều này khá thú vị vì nó đứa thế giới của container và sau đó là Kubernetes tới mọi người chứ không chỉ tập trung vào các nhà phát triển ứng dụng.
 
 ![](../../Days/Images/Day42_Containers2.png)
 
@@ -41,7 +41,7 @@ Như bạn có thể thấy như tôi đã nói trước đây, tôi sẽ không
 
 Chúng ta đã có công nghệ container trong một thời gian dài, vậy tại sao trong 10 năm qua, điều này đã trở nên phổ biến, tôi có thể nói rằng thậm chí nó còn phổ biến hơn trong 5 năm qua. Chúng ta đã có container trong nhiều thập kỷ. Nó liên quan đến các thách thức của containers hay thậm chí các images, về cách chúng ta phân phối phần mềm của mình, bởi vì nếu chúng ta chỉ có công nghệ container, thì chúng ta vẫn sẽ gặp các vấn đề giống như chúng ta đã gặp phải với quản lý phần mềm.
 
-Nếu chúng ta coi Docker như một công cụ, thì lý do khiến nó thành công là do hệ sinh thái images dễ tìm kiếm và sử dụng. Việc tích hợp vào hệ thống của bạn và thiết lập và chạy trở nên rất đơn giản. Một phần quan trọng của điều này là tính nhất quán, một trong những thách thức mà chúng ta phải đối mặt với việc triển phai, phát triển phần mềm. Không quan trọng đó là MongoDB hay nodeJS, quá trình thiết lập và chạy hai phần mềm này sẽ giống nhau. Việc tắt các ứng dụng trên cũng giống nhau. Tất cả những vấn đề vẫn sẽ tồn tại, nhưng điều tuyệt vời là khi chúng tôi kết hợp công nghệ images và containers với nhau, giờ đây chúng tôi có một bộ công cụ duy nhất giúp chúng tôi giải quyết tất cả các vấn đề được liệt kê dưới đây:
+Nếu chúng ta coi Docker như một công cụ, thì lý do khiến nó thành công là do hệ sinh thái images dễ tìm kiếm và sử dụng. Việc tích hợp vào hệ thống của bạn và thiết lập và chạy trở nên rất đơn giản. Một phần quan trọng của điều này là tính nhất quán, một trong những thách thức mà chúng ta phải đối mặt với việc triển phai, phát triển phần mềm. Không quan trọng đó là MongoDB hay nodeJS, quá trình thiết lập và chạy hai phần mềm này sẽ giống nhau. Việc tắt các ứng dụng trên cũng giống nhau. Tất cả những vấn đề vẫn sẽ tồn tại, nhưng điều tuyệt vời là khi chúng ta kết hợp công nghệ images và containers với nhau, giờ đây chúng ta có một bộ công cụ duy nhất giúp chúng ta giải quyết tất cả các vấn đề được liệt kê dưới đây:
 
 - Đầu tiên chúng ta phải tìm phần mềm trên internet.
 - Sau đó chúng ta phải tải phần mềm này về.
@@ -111,7 +111,7 @@ Sử dụng các container, bạn có thể mở rộng các container và sử 
 
 ### Container là gì?
 
-Khi chúng ta chạy các ứng dụng trên máy tính, đây có thể là VSCode hoặc trình duyệt web mà bạn đang sử dụng để đọc bài viết này. Ứng dụng đó đang chạy dưới dạng một process hoặc một thứ gì đó coi là một process. Trên máy tính xách tay hoặc hệ thống của chúng ta, chúng ta có xu hướng chạy nhiều ứng dụng hoặc như chúng tôi đã nói là các process. Khi chúng ta mở một ứng dụng mới hoặc click vào biểu tượng ứng dụng, đây là ứng dụng chúng ta muốn chạy, đôi khi ứng dụng này có thể là một dịch vụ mà chúng tôi chỉ muốn chạy nền, hệ điều hành của chúng ta có rất nhiều các dịch vụ chạy nền cung cấp cho bạn trải nghiệm người dùng mà bạn có đang có với hệ thống.
+Khi chúng ta chạy các ứng dụng trên máy tính, đây có thể là VSCode hoặc trình duyệt web mà bạn đang sử dụng để đọc bài viết này. Ứng dụng đó đang chạy dưới dạng một process hoặc một thứ gì đó coi là một process. Trên máy tính xách tay hoặc hệ thống của chúng ta, chúng ta có xu hướng chạy nhiều ứng dụng hoặc như chúng ta đã nói là các process. Khi chúng ta mở một ứng dụng mới hoặc click vào biểu tượng ứng dụng, đây là ứng dụng chúng ta muốn chạy, đôi khi ứng dụng này có thể là một dịch vụ mà chúng ta chỉ muốn chạy nền, hệ điều hành của chúng ta có rất nhiều các dịch vụ chạy nền cung cấp cho bạn trải nghiệm người dùng mà bạn có đang có với hệ thống.
 
 Biểu tượng ứng dụng đó đại diện cho một liên kết đến một tệp thực thi ở đâu đó trên hệ thống tệp của bạn, sau đó hệ điều hành sẽ tải tệp thực thi đó vào bộ nhớ. Thật thú vị, tệp thực thi đó đôi khi được nhắc tới như là một hình ảnh khi chúng ta đang nói về một process.
 

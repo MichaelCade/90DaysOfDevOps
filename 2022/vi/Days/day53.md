@@ -76,7 +76,7 @@ Bây giờ chúng ta đã có các nodes hoặc máy ảo sẵn sàng, sau đó 
 
 ![](../../Days/Images/Day53_Kubernetes10.png)
 
-Chúng tôi sẽ chọn "custom" vì chúng ta không sử dụng một trong các nền tảng được tích hợp. Trang mở đầu là nơi bạn xác định tên cluster của mình (có ghi local ở dưới nhưng bạn không thể sử dụng local, cluster của chúng ta là vagrant). Bạn có thể xác định các phiên bản Kubernetes tại đây, nhà cung cấp mạng và một số tuỳ chọn cấu hình khác để khởi động và chạy cụm Kubernetes của bạn.
+Chúng ta sẽ chọn "custom" vì chúng ta không sử dụng một trong các nền tảng được tích hợp. Trang mở đầu là nơi bạn xác định tên cluster của mình (có ghi local ở dưới nhưng bạn không thể sử dụng local, cluster của chúng ta là vagrant). Bạn có thể xác định các phiên bản Kubernetes tại đây, nhà cung cấp mạng và một số tuỳ chọn cấu hình khác để khởi động và chạy cụm Kubernetes của bạn.
 
 ![](../../Days/Images/Day53_Kubernetes11.png)
 
@@ -100,7 +100,7 @@ sudo docker run -d --privileged --restart=unless-stopped --net=host -v /etc/kube
 
 ![](../../Days/Images/Day53_Kubernetes14.png)
 
-Trong 3 ngày vừa qua, chúng ta đã sử dụng một số cách khác nhau để thiết lập và chạy với Kubernetes cluster, trong những ngày còn lại, chúng tôi sẽ xem xét khía cạnh ứng dụng của nền tảng và nó được cho là phần quan trọng nhất. Chúng ta sẽ xem xét các dịch vụ và khả năng cung cấp cũng như sử dụng dịch vụ của chúng ta trong Kubernetes.
+Trong 3 ngày vừa qua, chúng ta đã sử dụng một số cách khác nhau để thiết lập và chạy với Kubernetes cluster, trong những ngày còn lại, chúng ta sẽ xem xét khía cạnh ứng dụng của nền tảng và nó được cho là phần quan trọng nhất. Chúng ta sẽ xem xét các dịch vụ và khả năng cung cấp cũng như sử dụng dịch vụ của chúng ta trong Kubernetes.
 
 Tôi đã được nói rằng các yêu cầu xung quanh việc khởi động các rancher node yêu cầu các máy ảo phải có 4GB ram nếu không chúng sẽ gặp sự cố, tôi đã cập nhật vì các worker nodes của chúng ta chỉ có 2GB.
 

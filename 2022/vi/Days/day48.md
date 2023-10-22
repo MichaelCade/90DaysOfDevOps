@@ -43,7 +43,7 @@ Bây giờ chúng ta có thể sử dụng rất nhiều lệnh tương tự v�
 
 ![](../../Days/Images/Day48_Containers1.png)
 
-Sau đó, chúng tôi có thể chạy hình ảnh Ubuntu của mình bằng cách sử dụng `podman run -dit ubuntu` và `podman ps` để xem hình ảnh đang chạy của chúng ta.
+Sau đó, chúng ta có thể chạy hình ảnh Ubuntu của mình bằng cách sử dụng `podman run -dit ubuntu` và `podman ps` để xem hình ảnh đang chạy của chúng ta.
 
 ![](../../Days/Images/Day48_Containers2.png)
 

@@ -56,7 +56,7 @@ Hầu như tất cả các công cụ phát triển hiện đại đều hỗ tr
 - Công cụ nhóm - Cũng được đề cập trong các công cụ như Jenkins theo góc nhìn CI/CD, Slack từ góc độ dịch vụ nhắn tin và Jira từ góc độ quản lý dự án và theo dõi vấn đề.
 
 - Cloud providers - Tất cả các nhà cung cấp điện toán đám mây lớn đều hỗ trợ git, Microsoft Azure, Amazon AWS và Google Cloud Platform.
-- Các dịch vụ dựa trên Git - Sau đó, chúng ta có GitHub, GitLab và BitBucket mà chúng tôi sẽ đề cập rõ hơn ở phần sau. Các dịch vụ này có thể coi như là một mạng xã hội dành cho mã nguồn.
+- Các dịch vụ dựa trên Git - Sau đó, chúng ta có GitHub, GitLab và BitBucket mà chúng ta sẽ đề cập rõ hơn ở phần sau. Các dịch vụ này có thể coi như là một mạng xã hội dành cho mã nguồn.
 
 ### Git Cheatsheet
 
