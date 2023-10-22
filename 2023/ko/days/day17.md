@@ -214,10 +214,10 @@ httpfuzz: log.go:15: Got 200 response from the server
 httpfuzz: log.go:15: Got 200 response from the server
 ```
 
-Voila!
-Now we can at least see what the response code from the server was.
+짜잔!
+이제 최소한 서버의 응답 코드가 무엇인지 확인할 수 있습니다.
 
-Of course, we can write much more sophisticated plugins that output much more data, but for the purpose of this exercise, that is enough.
+물론 훨씬 더 많은 데이터를 출력하는 훨씬 더 정교한 플러그인을 작성할 수도 있지만, 이 연습의 목적상 이 정도면 충분합니다.
 
 
 ## 요약

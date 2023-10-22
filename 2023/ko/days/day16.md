@@ -77,7 +77,7 @@ func DontPanic(s input) {
 이런 경우 퍼징은 아무런 단서 없이 정확한 문자열 `퍼즈`를 생성할 가능성이 적기 때문에 도움이 되지 않습니다.
 그리고 이전 사례에서 코드 커버리지 변경을 트리거했던 입력(크기 4의 문자열, `z`로 시작하는 크기 4의 문자열 등)은 이제 코드 커버리지를 트리거하지 않습니다. (이전 예제에서는 `if` 체크가 5개인데 비해 지금은 하나만 있기 때문입니다)
 
-So it's important to understand that while fuzzing is a good way to detect anomalies and corner-cases in your code it is not a silver-bullet for 100% correct code.
+따라서 퍼징은 코드의 이상 징후와 코너 케이스를 감지하는 좋은 방법이지만 100% 올바른 코드를 위한 만병통치약은 아니라는 점을 이해하는 것이 중요합니다.
 
 ## 실제 예제
 
