@@ -9,7 +9,7 @@ These are small subset of challenges when it comes to running and managing appli
 Enter a Service Mesh. A Service Mesh is an application network layer that handles service-to-service communication, by providing a layer for granular traffic control, AuthN, AuthZ, and observability.
 
 
-### What are the challenges a Service Mesh aims to solve?m
+### What are the challenges a Service Mesh aims to solve?
 1. Unreliable and changing networks that are complex, while having to adapt while your microservices scale
 2. Ensuring a near zero-trust like environment where,  RBAC, AuthZ and AuthN are critical.
 3. Ensuring a data-loss prevention approach using encryption and traffic filtration techniques
