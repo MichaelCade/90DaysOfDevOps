@@ -156,7 +156,7 @@ Once the control plane is initialised, the bootstrap machine is destroyed. If yo
 
 We have covered the components that make up a Red Hat OpenShift Container Platform environment, why they are important to the environment, and what enteprise features they bring over a vanilla Kubernetes environment. We then dived into the methods available to deploy an OpenShift Cluster and the process that a Cluster build undertakes. 
 
-In [Day 58](/day58.md) will cover the steps to install Red Hat OpenShift to a VMware vSphere environment.
+In [Day 58](../day58.md) will cover the steps to install Red Hat OpenShift to a VMware vSphere environment.
 
 # Resources
 
