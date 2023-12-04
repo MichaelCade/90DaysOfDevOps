@@ -38,7 +38,7 @@ Trước khi chúng ta bắt đầu xem xét việc kiểm soát các node khác
 
 ![](../../Days/Images/Day64_config2.png)
 
-Hoặc cách sử dụng thực tế cho một module có thể là `ansible webservers -m service -a "name=httpd state=started"` điều này sẽ cho chúng tôi biết liệu tất cả máy chủ web của chúng tôi có dịch vụ httpd đang chạy hay không. Thuật ngữ máy chủ web được sử dụng trong lệnh đó.
+Hoặc cách sử dụng thực tế cho một module có thể là `ansible webservers -m service -a "name=httpd state=started"` điều này sẽ cho chúng ta biết liệu tất cả máy chủ web có dịch vụ httpd đang chạy hay không. Thuật ngữ máy chủ web được sử dụng trong lệnh đó.
 
 ### hosts
 
@@ -50,11 +50,11 @@ Cách tôi sử dụng máy chủ cục bộ ở trên để chạy module ping 
 
 ![](../../Days/Images/Day64_config4.png)
 
-Tệp chúng tôi muốn chỉnh sửa là tệp hosts, sử dụng trình soạn thảo văn bản, chúng ta có thể định nghĩa máy chủ của mình. Tệp hosts chứa nhiều hướng dẫn về cách sử dụng và sửa đổi tệp. Chúng ta sẽ cuộn xuống dưới cùng và sẽ tạo một nhóm mới có tên là [windows] và thêm địa chỉ IP `10.0.0.1` của chúng ta cho máy chủ lưu đó và lưu lại tệp.
+Tệp chúng ta muốn chỉnh sửa là tệp hosts, sử dụng trình soạn thảo văn bản, chúng ta có thể định nghĩa máy chủ của mình. Tệp hosts chứa nhiều hướng dẫn về cách sử dụng và sửa đổi tệp. Chúng ta sẽ cuộn xuống dưới cùng và sẽ tạo một nhóm mới có tên là [windows] và thêm địa chỉ IP `10.0.0.1` của chúng ta cho máy chủ lưu đó và lưu lại tệp.
 
 ![](../../Days/Images/Day64_config5.png)
 
-Tuy nhiên, hãy nhớ rằng tôi đã nói rằng bạn sẽ cần có sẵn SSH để cho phép Ansible kết nối với hệ thống của bạn. Như bạn có thể thấy bên dưới khi tôi chạy `ansible windows -m ping`, chúng tôi không thể truy cập được vì mọi thứ không kết nối được qua SSH.
+Tuy nhiên, hãy nhớ rằng tôi đã nói rằng bạn sẽ cần có sẵn SSH để cho phép Ansible kết nối với hệ thống của bạn. Như bạn có thể thấy bên dưới khi tôi chạy `ansible windows -m ping`, chúng ta không thể truy cập được vì mọi thứ không kết nối được qua SSH.
 
 ![](../../Days/Images/Day64_config6.png)
 

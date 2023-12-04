@@ -81,7 +81,7 @@ Bây giờ chúng ta cần địa chỉ IP cho máy chủ thực tế của mìn
 
 ![](../../Days/Images/Day47_Containers9.png)
 
-Sau đó, chúng tôi có thể lấy IP này, mở trình duyệt và truy cập `http://172.25.218.154:8080/` IP của bạn có thể khác. Điều này xác nhận rằng có thể truy cập được NGINX.
+Sau đó, chúng ta có thể lấy IP này, mở trình duyệt và truy cập `http://172.25.218.154:8080/` IP của bạn có thể khác. Điều này xác nhận rằng có thể truy cập được NGINX.
 
 ![](../../Days/Images/Day47_Containers10.png)
 

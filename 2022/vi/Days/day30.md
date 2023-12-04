@@ -62,7 +62,7 @@ Tôi chưa từng xem xét vấn đề này trước đây nhưng tôi có thể
 
 ### Role-Based Access Control
 
-Chúng ta đã đề cập vào [ngày 29](day29.md) phạm vi mà chúng tôi sẽ đề cập ở đây, chúng tôi có thể đặt kiểm soát RBAC của mình cho một trong những dịch vụ dưới đây.
+Chúng ta đã đề cập vào [ngày 29](day29.md) phạm vi mà chúng ta sẽ đề cập ở đây, chúng ta có thể đặt kiểm soát RBAC của mình cho một trong những dịch vụ dưới đây.
 
 - Subscriptions
 - Management Group
@@ -140,7 +140,7 @@ Sau đó, tôi thêm một người dùng user1@90DaysOfDevOps.com và nếu ch�
 
 ![](../../Days/Images/Day30_Cloud14.png)
 
-Nếu có khoảng 100 yêu cầu như thế này, chúng ta sẽ không muốn thực hiện tất cả điều này trong bảng điều khiển mà chúng tôi muốn tận dụng hoặc là các tuỳ chọn hàng loạt (bulk options) để tạo, mời, và xoá người dùng hoặc bạn có thể muốn sử dụng Powershell để làm điều này một cách tự động để có thể scale.
+Nếu có khoảng 100 yêu cầu như thế này, chúng ta sẽ không muốn thực hiện tất cả điều này trong bảng điều khiển mà chúng ta muốn tận dụng hoặc là các tuỳ chọn hàng loạt (bulk options) để tạo, mời, và xoá người dùng hoặc bạn có thể muốn sử dụng Powershell để làm điều này một cách tự động để có thể scale.
 
 Bây giờ, chúng ta có thể vào Resource group của mình và chỉ định rằng trong nhóm tài nguyên 90DaysOfDevOps, chúng ta muốn chủ sở hữu (owner) của nó là nhóm chúng ta vừa mới tạo.
 

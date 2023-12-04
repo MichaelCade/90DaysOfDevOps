@@ -38,7 +38,7 @@ Tiếp theo chúng ta sẽ commit tệp này với commit đầu tiên của ch�
 
 ### Commit các thay đổi
 
-Chúng ta rất có thể muốn thêm nhiều tệp hơn hoặc thậm chí thay đổi các tệp chúng ta có trong thư mục của mình. Chúng tôi đã thực hiện commit đầu tiên của mình ở trên. Nhưng bây giờ, chúng ta sẽ thêm nhiều chi tiết và nhiều tệp hơn.
+Chúng ta rất có thể muốn thêm nhiều tệp hơn hoặc thậm chí thay đổi các tệp chúng ta có trong thư mục của mình. Chúng ta đã thực hiện commit đầu tiên của mình ở trên. Nhưng bây giờ, chúng ta sẽ thêm nhiều chi tiết và nhiều tệp hơn.
 
 Chúng ta có thể lặp lại các quy trình của mình như trước đó, tạo hoặc chỉnh sửa tệp của mình > `git add .` để thêm tất cả các file vào khu vực staging sau đó sử dụng `git commit -m "meaningful message"`. Nhưng để đưa ra một thông điệp có ý nghĩa cho thay đổi trong commit của mình, bạn có lẽ không nên viết ra những thứ như `git commit -m "Chà, tôi đã thay đổi một số mã vì nó không hoạt động và khi tôi sửa mã đó, tôi cũng đã thêm một số thứ mới trong readme.md để đảm bảo rằng mọi người đều biết về trải nghiệm của người dùng và sau đó tôi pha một ấm trà."` Ý tôi là điều này cũng có thể sẽ hiệu quả mặc dù hơi dài dòng nhưng các tốt hơn ở đây là nên thêm thông điệp bằng một trình soạn thảo văn bản.
 
@@ -68,7 +68,7 @@ Câu trả lời là có nhưng đừng coi đây là một lối tắt, bạn p
 
 ### Xoá tệp
 
-Còn việc xoá tệp khỏi dự án của chúng tôi thì sao, có thể chúng ta có một tệp khác trong thư mục mà chúng ta đã cam kết nhưng hiện tại dự án không còn cần hoặc sử dụng tệp đó nữa, các tốt nhất là chúng ta nên xoá tệp đó.
+Còn việc xoá tệp khỏi dự án của chúng ta thì sao, có thể chúng ta có một tệp khác trong thư mục mà chúng ta đã cam kết nhưng hiện tại dự án không còn cần hoặc sử dụng tệp đó nữa, các tốt nhất là chúng ta nên xoá tệp đó.
 
 Chỉ vì chúng ta xoá tệp đó khỏi thư mục, git vẫn biết tệp này và chúng ta cũng cần xoá tệp khỏi repository. Bạn có thể thấy workflow như bên dưới.
 

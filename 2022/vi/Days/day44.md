@@ -82,7 +82,7 @@ Quay lại tab Containers/Apps, nhấp vào container đang chạy của bạn. 
 
 ![](../../Days/Images/Day44_Containers15.png)
 
-Khi chúng tôi nhấn vào nút đó ở trên, chắc chắn rằng một trang web sẽ được mở ra và hiển thị nội dung tương tự như bên dưới.
+Khi chúng ta nhấn vào nút đó ở trên, chắc chắn rằng một trang web sẽ được mở ra và hiển thị nội dung tương tự như bên dưới.
 
 Container này cũng có thêm một số chi tiết về container và image của chúng ta.
 
@@ -118,7 +118,7 @@ Bạn có thể thấy bên dưới khi chúng ta chạy lệnh, giờ đây ch�
 
 ![](../../Days/Images/Day44_Containers21.png)
 
-Chúng tôi có bash shell nhưng chúng ta không có gì khác, đó là lý do tại sao container image này nhỏ hơn 30 MB.
+Chúng ta có bash shell nhưng chúng ta không có gì khác, đó là lý do tại sao container image này nhỏ hơn 30 MB.
 
 ![](../../Days/Images/Day44_Containers22.png)
 

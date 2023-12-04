@@ -28,7 +28,7 @@ Dự án AWX hay viết tắt là AWX là một dự án cộng đồng mã ngu�
 
 Nếu bạn đang tìm kiếm một giải pháp cho doanh nghiệp thì bạn nên xem xét Automation Controller hoặc bạn có thể đã nghe tới cái tên Ansible Tower. Ansible Automation Controller là control plan cho nền tảng tự động của Ansible (Ansible Automation Platform).
 
-Cả AWX và Automation Controller có những tính năng sau trong tất cả những tính năng khác mà chúng tôi đã đề cập trong loạt bài viết này cho tới thời điểm hiện tại.
+Cả AWX và Automation Controller có những tính năng sau trong tất cả những tính năng khác mà chúng ta đã đề cập trong loạt bài viết này cho tới thời điểm hiện tại.
 
 - Giao diện người dùng
 - Kiểm soát truy cập dựa trên role (Role-Based Access Control)
@@ -138,6 +138,6 @@ Bây giờ, chúng ta đã từng sử dụng `ansible-galaxy` để tạo một
 
 Playlist cuối cùng được liệt kê ở trên có rất nhiều đoạn mã và ý tưởng cho bài viết này, nó là một video hướng dẫn tuyệt vời.
 
-Bài đăng này kết thúc phần về quản lý cấu hình, tiếp theo chúng ta sẽ chuyển qua phần về CI/CD Pipelines và một số công cụ và quy trình mà chúng tôi có thể thấy và sử dụng để đạt được quy trình làm việc cho quá trình phát triển và phát hành ứng dụng.
+Bài đăng này kết thúc phần về quản lý cấu hình, tiếp theo chúng ta sẽ chuyển qua phần về CI/CD Pipelines và một số công cụ và quy trình mà chúng ta có thể thấy và sử dụng để đạt được quy trình làm việc cho quá trình phát triển và phát hành ứng dụng.
 
 Hẹn gặp lại vào [ngày 70](day70.md)
