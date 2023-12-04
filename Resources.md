@@ -4,7 +4,7 @@ Day-01
 
 - [https://www.youtube.com/watch?v=Xrgk023l4lI](https://www.youtube.com/watch?v=Xrgk023l4lI) DevOps in 5 Minutes
 - [https://www.youtube.com/watch?v=\_Gpe1Zn-1f&t=43s](https://www.youtube.com/watch?v=_Gpe1Zn-1fE&t=43s&ab_channel=HiteshChoudhary) What is DevOps? Easy Way
-- [https://www.youtube.com/watch?v=7l_n97Mt0ko](tv) DevOps roadmap 2022 | Success Roadmap 2022
+- [https://www.youtube.com/watch?v=7l_n97Mt0ko](https://www.youtube.com/watch?v=7l_n97Mt0ko&t=16s) DevOps roadmap 2022 | Success Roadmap 2022
 
 Day-02
 
