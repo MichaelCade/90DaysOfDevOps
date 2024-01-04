@@ -43,15 +43,17 @@ Uma vez implantado, vamos operá-lo. E operá-lo pode envolver algo como você c
 
 ## Monitoramento
 
-Todas as partes acima levam à etapa final porque você precisa ter monitoramento, especialmente em torno de questões operacionais, solução de problemas de escalonamento automático, como se você não soubesse que há um problema se não tiver monitoramento instalado para informar que há um problema portanto, algumas das coisas para as quais você pode criar monitoramento são utilização de memória, utilização de espaço em disco, utilização da CPU, API endpoint, tempo de resposta, a rapidez com que esse endpoint está respondendo e uma grande parte disso também são logs. Os logs oferecem aos desenvolvedores a capacidade de ver o que está acontecendo sem precisar acessar os sistemas de produção.
+Todas as partes acima levam à etapa final que é o monitoramento, especialmente em torno de questões operacionais como solução de problemas de escalonamento automático. Você não saberá que há um problema se não tiver monitoramento implementado.
+Algum dos elementos para os quais você pode desenvolver monitoramento incluem a utilização de memória, a utilização da CPU, o espaço em disco, API endpoint, tempo de resposta, e o quão rapidamente esse endpoint está respondendo.
+Além disso, uma parte significativa disso são os logs. Os logs proporcionam aos desenvolvedores a capacidade de ver o que está acontecendo sem precisar acessar sistemas de produção.
 
 ## Limpe & Repita
 
-Uma vez implementado, você volta ao início, ao estágio de planejamento, e repassa tudo novamente.
+Uma vez implementado, você volta imediatamente à etapa de planejamento e passa por todo o processo novamente.
 
-## Contínua
+## Contínuo
 
-Muitas ferramentas nos ajudam a alcançar o processo contínuo acima, todo esse código e o objetivo final de ser completamente automatizado, a infraestrutura em nuvem ou qualquer ambiente é frequentemente descrito como Integração Contínua/Entrega Contínua/Implantação Contínua ou “CI/CD” para abreviar. Passaremos uma semana inteira sobre CI/CD mais tarde nos 90 dias com alguns exemplos e orientações para compreender os fundamentos.
+Muitas ferramentas nos ajudam a alcançar o processo contínuo acima, onde todo esse código e o objetivo final de ser completamente automatizado, seja em infraestrutura na nuvem ou em qualquer outro ambiente é frequentemente descrito como Integração Contínua /Entrega Contínua/ Implantação Contínua, ou "CI/CD" de forma abreviada. Passaremos uma semana inteira focando em CI/CD mais adiante, no decorrer dos próximos 90 dias, com exemplos e demonstrações para compreender os fundamentos.
 
 ### Entrega Contínua
 
@@ -65,13 +67,13 @@ Integração Contínua = Plano > Código > Construir > Teste > Lançamento(Relea
 
 ### Implantação Contínua
 
-Se você tiver uma versão bem-sucedida de sua integração contínua, mude para a implantação contínua, que traz as seguintes fases
+Se você tiver uma versão bem-sucedida de sua Integração Contínua, avance para a Implantação Contínua, que inclui as seguintes fases
 
-O lançamento(release) da Integração Contínua foi bem-sucedida = Implantação Contínua = Implantar > Operar > Monitorar
+Lançamento (Release) da Integração Contínua bem sucedido = Implantação Contínua = Implantação > Operação > Monitoramento
 
-Você pode ver essas três noções Contínuas acima como uma simples coleção de fases do ciclo de vida do DevOps.
+Você pode ver essas três noções contínuas acima como a simples coleção de fases do Ciclo de Vida DevOps.
 
-Esta última parte foi uma recapitulação para mim no Dia 3, mas acho que isso torna as coisas mais claras para mim.
+Esta última parte foi uma recapitulação do Dia 3 para mim, mas acho que isso torna as coisas mais claras para mim.
 
 ### Recursos
 
