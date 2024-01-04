@@ -1,19 +1,25 @@
+Day 2: The Digital Factory
+=========================
 
-# About Me
+## Video
+[![Day 2: The Digital Facotry ](https://img.youtube.com/vi/xeX4HGLeJQw/0.jpg)](https://youtu.be/xeX4HGLeJQw?si=CJ75C8gUBcdWAQTR)
+
+
+## About Me
 I'm [Romano Roth](https://www.linkedin.com/in/romanoroth/), Chief of DevOps and Partner at [Zühlke](https://www.zuehlke.com/en). My journey with Zuhlke began 21 years ago. Over the years, I've evolved from an expert software engineer and software architect to a consultant. Throughout this journey, one question has always fueled my passion: **How can we continuously deliver value while ensuring quality and automation?**
 
 When the DevOps movement began to gain momentum, I was naturally drawn to it. Today, I’m one of the organizers of the monthly [DevOps Meetup in Zürich](https://www.meetup.com/de-DE/DevOps-Meetup-Zurich/) and president of [DevOps Days Zürich](https://www.devopsdays.ch/), an annual conference part of the global DevOps movement. DevOps isn't just a professional interest; it's my passion. That’s why I’ve my own [YouTube channel](https://www.youtube.com/c/RomanoRoth), where I've curated over 100 videos centered on DevOps, architecture, and leadership.
 
 ![Romano Roth](Images/day02-1.jpg)
 
-# What is DevOps?
+## What is DevOps?
 DevOps is a mindset, a culture, and a set of technical practices. It provides communication, integration, automation, and close cooperation among all the people needed to plan, develop, test, deploy, release, and maintain a product.
 
 In short: **Bringing People, Process, and Technology together to continuously deliver value!**
 
 ![What is DevOps](Images/day02-2.png)
 
-# What are the challenges with DevOps
+## What are the challenges with DevOps
 **Cultural Resistance:** One of the biggest challenges is changing the organizational culture. DevOps requires shifting from traditional siloed roles to a collaborative approach with shared responsibility. This can be met with resistance from teams used to working in siloed organizations.
 
 **Cognitive Load:** Numerous technical practices and tools exist for various stages of the DevOps lifecycle, from ideation over continuous integration over continuous deployment to release on demand. Integrating and maintaining all these technical practices and tools to develop great products can be challenging.
@@ -22,7 +28,7 @@ In short: **Bringing People, Process, and Technology together to continuously de
 
 ![What are the challenges with DevOps](Images/day02-3.jpg)
 
-# How can we scale DevOps?
+## How can we scale DevOps?
 Scaling DevOps, especially in larger organizations, requires a strategic approach beyond tools and technologies. Here are some considerations to scale DevOps effectively:
 - **Cultural Transformation**: Foster a collaborative environment that values learning from failures.
 - **Standardization**: Adopt consistent tools and processes across teams to maintain uniformity.
@@ -36,7 +42,7 @@ Scaling DevOps, especially in larger organizations, requires a strategic approac
 - **Collaboration Platforms**: Use tools that enhance team communication like GitLab, GitHub, and Azure DevOps….
 - **Regular Reviews**: Continuously assess and adjust DevOps practices as the organization grows and changes.
 
-# What is Is Platform Engineering?
+## What is Is Platform Engineering?
 
 Platform Engineering and DevOps are not the same, but they are closely related and often overlap in many organizations.
 
@@ -48,7 +54,7 @@ Platform Engineering and DevOps are not the same, but they are closely related a
 
 ![What is Is Platform Engineering?](Images/day02-4.png)
 
-# What is a Digital Factory?
+## What is a Digital Factory?
 
 Throughout my work on various projects across diverse industries and clients, I've observed that **many companies share common challenges and objectives**. I think they all want to build great products, have a faster time to market, and be more efficient. And what they want is to **build up a digital factory**.
 
@@ -58,7 +64,7 @@ The teams constantly monitor the drones. **Telemetry and business data are colle
 
 ![What is is a Digital Factory?](Images/day02-5.jpg)
 
-# How can we implement Digital Factory?
+## How can we implement Digital Factory?
 
 To build a digital factory, you need a holistic approach.
 - **Architecture:** Design architectures that align with your technology strategy, ensuring adaptability, scalability, and flexibility.
