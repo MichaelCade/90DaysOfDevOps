@@ -2,7 +2,7 @@ Day 9: Why should developers care about container security?
 =========================
 
 ## Video
-[![Day 9: Why should developers care about container security? ](https://youtu.be/z0Si8aE_W4Y)
+![Day 9: Why should developers care about container security? ](https://youtu.be/z0Si8aE_W4Y)
 
 
 ## About Me
