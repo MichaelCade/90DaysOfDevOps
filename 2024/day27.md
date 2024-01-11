@@ -15,185 +15,85 @@ This presentation will give a broad overview of Ansible and its architecture and
 
 Participants will get first-hand insights into Ansible, its strengths, weaknesses, and the potential of event-driven automation within the DevOps world.
 
-## Demos
+> [!NOTE]
+> The below content is a copy of the [lab repository's] README for convenience.
 
-<details>
+---
 
-<summary>Prerequisites</summary>
+# Event-Driven Ansible Lab
 
-### Ansible Inventory
+This is a lab designed to demonstrate Ansible and how Event-Driven Ansible (**EDA**) builds on top of its capabilities.
+
+The setup is done with Ansible, too. It will install **Ansible, EDA, Prometheus**, and **Alertmanager** on a VM to demonstrate some of the capabilities of EDA.
+
+## Prerequisites
+
+To follow along with this lab in its entirety, you will need four VMs:
 
 > [!NOTE]
-> For this inventory file to work, you need to create VMs accordingly and adjust the IP addresses to fit your lab environment.
+> If you want to skip Ansible basics and go straight to EDA, you'll need just the `eda-controller.example.com` VM and can skip the others.
 
-Ansible utilizes so-called inventories to manage a list of hosts and groups of hosts. Below is the inventory for the demo environment used in this presentation.
+| VM name            | OS          |
+|--------------------|-------------|
+| eda-controller.example.com | CentOS/Rocky 8.9 |
+| company.example.com        | CentOS/Rocky 8.9 |
+| internal.example.com       | Ubuntu 22.04     |
+| webshop.example.com        | OpenSUSE 15.5    |
 
-```yaml
-hosts:
-  webservers:
-    hosts:
-      webshop.example.com:  # Ubuntu
-        ansible_host: 192.168.1.10
-        webserver: apache2
-      company.example.com:  # Ubuntu
-        ansible_host: 192.168.1.11
-        webserver: nginx
-      internal.example.com:  # CentOS Stream
-        ansible_host: 192.168.1.12
-        webserver: httpd
+**You'll need to be able to SSH to each of these VMs as root using SSH keys.**
+
+## Lab Setup
+
+### Clone the repository and create a Python virtual environment
+
+```bash
+git clone https://github.com/mocdaniel/lab-event-driven-ansible.git
+cd lab-event-driven-ansible
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
-You can copy-paste this inventory into a file called `hosts.yml` and use it for the following demos.
+### Install Ansible and other dependencies
 
-</details>
-
-<details>
-
-<summary>Lab 1: Ansible Basics</summary>
-
-### Demo 1: Ansible Basics
-
-#### Ansible from the CLI via `ansible`
-
-The first example installs a webserver on all hosts in the `webservers` group. The installed webserver is defined as a **host variable** in the inventory file `hosts.yml` (*see above*).
-
-```console
-ansible \
-   webservers  \
-  -i hosts.yml \
-  -m package   \
-  -a 'name="{{ webserver }}"'
+```bash
+pip install -r requirements.txt
 ```
 
-#### Ansible from the CLI via `ansible-playbook`
-
-The second example utilizes the following **playbook** to **install** and **start** the defined webserver on all hosts in the `webservers` group.
+### Create the inventory file
 
 ```yaml
 ---
-- name: Install webservers
-  hosts: webservers
-  vars:
-    package: "{{ webserver }}"
-  become: true
-  tasks:
-    - name: Install webserver
-      ansible.builtin.package:
-        name: "{{ package }}"
-        state: present
-
-    - name: Start webserver
-      ansible.builtin.service:
-          name: "{{ package }}"
-          state: started
+# hosts.yml
+webservers:
+  hosts:
+    webshop.example.com:
+      ansible_host: <ip-address>
+      webserver: nginx
+    company.example.com:
+      ansible_host: <ip-address>
+      webserver: httpd
+    internal.example.com:
+      ansible_host: <ip-address>
+      webserver: apache2
+eda_controller:
+  hosts:
+    eda-controller.example.com:
+      ansible_host: <ip-address>
 ```
 
-Save this playbook as `playbook.yml` and run it with the following command.
-
-```console
-ansible-playbook \
-  -i hosts.yml \
-    playbook.yml
+### Install Needed Roles and Collections
+    
+```bash
+ansible-galaxy install -r requirements.yml
 ```
 
-You will see a separated output for each task in the playbook. In the end, you should be able to access the webserver on each host in the `webservers` group.
+### Run the Setup Playbook
 
-> [!TIP]
-> Ansible is **idempotent** - try running the playbook again and see how the output differs.
+After you created the inventory file and filled in the IP addresses, you can run the setup playbook:
 
-</details>
-
-<details>
-
-<summary>Lab 2: Event-driven Ansible and Generic Webhooks</summary>
-
-### Demo 2: Event-driven Ansible and Generic Webhooks
-
-#### Prerequisites
-
-For this demo, we will use `localhost` as the target host. Therefore, we need to adjust our inventory file `hosts.yml` accordingly:
-
-```yaml
-hosts:
-  localhost: {}
-
-The first demo of event-driven Ansible shows how to use a generic webhook to trigger a playbook run. Copy the following rulebook into a file called `rulebook.yml`.
-
-```yaml
-- name: Listen to webhook events
-  hosts: all
-  sources:
-    - ansible.eda.webhook:
-        host: 0.0.0.0
-        port: 5000
-  rules:
-    - name: Debug event output
-      condition: event.payload.greeting is defined
-      action:
-        debug:
-          msg: "Hello {{ event.payload.greeting }}!"
-
-    - name: Greet stranger
-      condition: 1 == 1  # default case
-      action:
-        debug:
-          msg: Hello World!
+```bash
+ansible-playbook playbooks/setup.yml
 ```
 
-#### Start the EDA server
-
-To start the EDA server, run the following command.
-
-```console
-ansible-rulebook \
-  -i hosts.yml \
-  --rulebook rulebook.yml
-```
-
-#### Trigger the webhook
-
-Once the EDA server is running, we can open a second terminal session and double-check that it is listening on the correct port:
-
-```console
-netstat -lntup | grep 5000
-```
-
-Now, we can trigger the webhook from our second terminal session using `curl`, first with empty input:
-
-```console
-curl \
-  -H "Content-Type: application/json" \
-  -d '{}' \
-  http://localhost:5000/endpoint
-```
-
-If we switch over to the first terminal session, we should see the output of the second rule, which is the default case:
-
-```console
-Hello World!
-```
-
-Now, we can trigger the webhook again, this time with a payload:
-
-```console
-curl \
-  -H "Content-Type: application/json" \
-  -d '{"greeting": "Daniel"}' \
-  http://localhost:5000/endpoint
-```
-
-If we switch over to the first terminal session again, we should see the output of the first rule, which is the case for a defined `greeting` in the payload:
-
-```console
-Hello Daniel!
-```
-
-</details>
-
-## Resources
-
-- [Ansible Documentation](https://docs.ansible.com/)
-- [Installing Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installing-and-upgrading-ansible)
-- [Ansible Galaxy](https://galaxy.ansible.com/)
-- [EDA Documentation](https://ansible.readthedocs.io/projects/rulebook/en/stable/introduction.html)
-- [Installing and Running EDA](https://ansible.readthedocs.io/projects/rulebook/en/stable/installation.html)
+> [!CAUTION]
+> Due to a known bug with Python on MacOS, you need to run `export NO_PROXY="*"` on MacOS before running the playbook
