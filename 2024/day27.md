@@ -16,7 +16,7 @@ This presentation will give a broad overview of Ansible and its architecture and
 Participants will get first-hand insights into Ansible, its strengths, weaknesses, and the potential of event-driven automation within the DevOps world.
 
 > [!NOTE]
-> The below content is a copy of the [lab repository's] README for convenience.
+> The below content is a copy of the [lab repository's](https://github.com/mocdaniel/lab-event-driven-ansible) README for convenience.
 
 ---
 
@@ -28,7 +28,7 @@ The setup is done with Ansible, too. It will install **Ansible, EDA, Prometheus*
 
 ## Prerequisites
 
-To follow along with this lab in its entirety, you will need four VMs:
+To follow along with this lab in its entirety, you will need three VMs:
 
 > [!NOTE]
 > If you want to skip Ansible basics and go straight to EDA, you'll need just the `eda-controller.example.com` VM and can skip the others.
@@ -37,8 +37,7 @@ To follow along with this lab in its entirety, you will need four VMs:
 |--------------------|-------------|
 | eda-controller.example.com | CentOS/Rocky 8.9 |
 | company.example.com        | CentOS/Rocky 8.9 |
-| internal.example.com       | Ubuntu 22.04     |
-| webshop.example.com        | OpenSUSE 15.5    |
+| webshop.example.com       | Ubuntu 22.04     |
 
 **You'll need to be able to SSH to each of these VMs as root using SSH keys.**
 
@@ -68,13 +67,10 @@ webservers:
   hosts:
     webshop.example.com:
       ansible_host: <ip-address>
-      webserver: nginx
+      webserver: apache2
     company.example.com:
       ansible_host: <ip-address>
       webserver: httpd
-    internal.example.com:
-      ansible_host: <ip-address>
-      webserver: apache2
 eda_controller:
   hosts:
     eda-controller.example.com:
@@ -97,3 +93,76 @@ ansible-playbook playbooks/setup.yml
 
 > [!CAUTION]
 > Due to a known bug with Python on MacOS, you need to run `export NO_PROXY="*"` on MacOS before running the playbook
+
+---
+
+## Demos
+
+### Lab 1: Ansible Basics
+
+<details>
+
+<summary>Ansible from the CLI via ansible</summary>
+
+#### Ansible from the CLI via `ansible`
+
+The first example installs a webserver on all hosts in the `webservers` group. The installed webserver is defined as a **host variable** in the inventory file `hosts.yml` (*see above*).
+
+```console
+ansible \
+   webservers  \
+  -m package   \
+  -a 'name="{{ webserver }}"' \
+  --one-line
+```
+
+Afterwards, we can start the webserver on all hosts in the `webservers` group.
+
+```console
+ansible \
+   webservers  \
+  -m service   \
+  -a 'name="{{ webserver }}" state=started' \
+  --one-line
+```
+
+Go on and check if the web servers are running on the respective hosts.
+
+> [!TIP]
+> Ansible is **idempotent** - try running the commands again and see how the output differs.
+
+</details>
+
+<details>
+
+<summary>Ansible from the CLI via ansible-playbook</summary>
+
+#### Ansible from the CLI via `ansible-playbook`
+
+The second example utilizes the following **playbook** to **gather** and **display information** for all hosts in the `webservers` group, utilizing the **example** role from the lab repository.
+
+```yaml
+---
+- name: Example role
+  hosts: webservers
+  gather_facts: false
+  vars:
+    greeting: "Hello World!"
+  pre_tasks:
+    - name: Say Hello
+      ansible.builtin.debug:
+        msg: "{{ greeting }}"
+  roles:
+    - role: example
+  post_tasks:
+    - name: Say goodbye
+      ansible.builtin.debug:
+        msg: Goodbye!
+```
+
+```console
+ansible-playbook \
+    playbooks/example.yml
+```
+
+</details>
