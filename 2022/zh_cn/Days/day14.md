@@ -1,76 +1,54 @@
 ---
-title: '#90DaysOfDevOps - The Big Picture: DevOps and Linux - Day 14'
+title: '#90DaysOfDevOps - 概览： DevOps 与 Linux - 第十四天'
 published: false
-description: 90DaysOfDevOps - The Big Picture DevOps and Linux
+description: 90DaysOfDevOps - 概览： DevOps 与 Linux
 tags: 'devops, 90daysofdevops, learning'
 cover_image: null
 canonical_url: null
 id: 1049033
 ---
-## The Big Picture: DevOps and Linux
-Linux and DevOps share very similar cultures and perspectives; both are focused on customization and scalability. Both of these aspects of Linux are of particular importance for DevOps.
+## 概览： DevOps 与 Linux
+Linux和DevOps有着非常相似的文化和观点；两者都专注于定制化和可扩展性。Linux 的这两个方面对于 DevOps 来说都特别重要。
 
-A lot of technologies start on Linux, especially if they are related to software development or managing infrastructure.
+许多技术都是从Linux开始的，特别是当它们与软件开发或基础设施管理有关的时候。
 
-As well lots of open source projects, especially DevOps tools, were designed to run on Linux from the start.
+此外，许多开源项目，尤其是DevOps工具，从一开始就被设计为在Linux上运行。
 
-From a DevOps perspective or in fact any operations role perspective you are going to come across Linux I would say mostly. There is a place for WinOps but the majority of the time you are going to be administering and deploying Linux servers. 
+从DevOps或任何运营角色的角度来看，我会认为你将接触到Linux。WinOps是一种选择，但大多数时候你需要管理和部署Linux服务器。
 
-I have been using Linux on a daily basis for a number of years but my go to desktop machine has always been either macOS or Windows. However, when I moved into the Cloud Native role I am in now I took the plunge to make sure that my laptop was fully Linux based and my daily driver, whilst I still needed Windows for work-based applications and a lot of my audio and video gear does not run on Linux I was forcing myself to run a Linux desktop full time to get a better grasp of a lot of the things we are going to touch on over the next 7 days. 
+几年来，我一直在使用Linux，但我的桌面电脑一直是macOS或Windows。当我转变成为云原生角色（Cloud Native role）时，我需要确保我的笔记本电脑完全基于Linux和我的日常驱动程序，我仍然需要Windows用于工作的应用程序，而且我的许多音频和视频设备无法在Linux上运行，我强迫自己只运行Linux桌面以更好地掌握很多东西。我们将在接下来的7天里进行讨论。
 
-## Getting Started 
-I am not suggesting you do the same as me by any stretch as there are easier options and less destructive but I will say taking that full-time step forces you to learn faster on how to make things work on Linux. 
+## 开始
+我并不是要求你和我一样完全使用Linux，因为有更简单、破坏性更小的选择。但我会说，只使用Linux可以迫使你更快地学习如何在Linux上工作。
 
-For the majority of these 7 days, I am actually going to deploy a Virtual Machine in Virtual Box on my Windows machine. I am also going to deploy a desktop version of a Linux distribution, whereas a lot of the Linux servers you will be administering will likely be servers that come with no GUI and everything is shell-based. However, as I said at the start a lot of the tools that we covered throughout this whole 90 days started out on Linux I would also strongly encourage you to take the dive into running that Linux Desktop for that learning experience as well. 
+在这7天的大部分时间里，我将在Windows电脑上的Virtual Box中部署虚拟机。我打算部署Linux发行版的桌面版本，而实际工作中你将管理的许多Linux服务器可能是没有GUI的服务器，并且一切都是基于shell的。但是，正如我在开始时所说，我们在整个90天学习中介绍的许多工具都是从Linux开始的，我也强烈建议你潜心使用该Linux桌面以获得学习体验。
 
-
-
-For the rest of this post, we are going to concentrate on getting a Ubuntu Desktop virtual machine up and running in our Virtual Box environment. Now we could just download [Virtual Box](https://www.virtualbox.org/) and grab the latest [Ubuntu ISO](https://ubuntu.com/download) from the sites linked and go ahead and build out our desktop environment but that wouldn't be very DevOps of us, would it? 
-
-
+在这篇文章的其余部分，我们将专注于在我们的Virtual Box环境中启动并运行Ubuntu桌面虚拟机。现在我们可以下载[Virtual Box](https://www.virtualbox.org/)并从链接的站点获取最新的[Ubuntu ISO](https://ubuntu.com/download)，然后继续构建我们的桌面环境，但这一步对我们来说不是很DevOps，对吧？
 
 Another good reason to use most Linux distributions is that they are free and open-source. We are also choosing Ubuntu as it is probably the most widely used distribution deployed not thinking about mobile devices and enterprise RedHat Enterprise servers. I might be wrong there but with CentOS and the history there I bet Ubuntu is high on the list and it's super simple. 
+使用大多数Linux发行版的另一个理由是它们是免费和开源的。我们选择Ubuntu，因为它可能是使用最广泛的发行版，目前没有考虑移动设备和企业RedHat Enterprise服务器。我可能是错的，但对于 CentOS 和那里的历史，我敢打赌Ubuntu是比较热门的，而且它非常简单。
 
 
+## 简介：HashiCorp Vagrant 
+Vagrant 是一个CLI程序，用于管理虚拟机的生命周期。我们可以使用vagrant在许多不同的平台上启动虚拟机，包括vSphere，Hyper-v，Virtual Box和Docker。它也有其他提供商，我们将使用Virtual Box，所以我们可以用到它。
 
-## Introducing HashiCorp Vagrant 
+我们需要做的第一件事是在我们的机器上安装Vagrant，当您转到下载页面时，您将看到供你选择的所有操作系统。[HashiCorp Vagrant](https://www.vagrantup.com/downloads) 我正在使用Windows，所以我下载了二进制文件并继续在我的系统上安装它。
 
+接下来，我们还需要安装[Virtual Box](https://www.virtualbox.org/wiki/Downloads)。同样的，它也可以被安装在许多不同的操作系统上。如果你运行的是Windows，macOS或Linux，那么可以选择它和vagrant，我们的安装环节就到此为止。
 
-
-Vagrant is a CLI utility that manages the lifecycle of your virtual machines. We can use vagrant to spin up and down virtual machines across many different platforms including vSphere, Hyper-v, Virtual Box and also Docker. It does have other providers but we will stick with that we are using Virtual Box here so we are good to go. 
-
-
-
-The first thing we need to do is get Vagrant installed on our machine, when you go to the downloads page you will see all the operating systems listed for your choice. [HashiCorp Vagrant](https://www.vagrantup.com/downloads) I am using Windows so I grabbed the binary for my system and went ahead and installed this to my system. 
+这两个安装过程都非常简单，并且周围都有很棒的社区，所以如果你有问题，请随时联系他们，我也可以尝试提供帮助。
 
 
+## 我们的第一个VAGRANTFILE
 
-Next up we also need to get [Virtual Box](https://www.virtualbox.org/wiki/Downloads) installed. Again this can also be installed on many different operating systems again a good reason to choose this and vagrant is that if you are running Windows, macOS, or Linux then we have you covered here. 
+VAGRANT文件描述了我们要部署的计算机类型，还定义了此计算机的配置和预配。
 
-
-
-Both installations are pretty straightforward. If you have issues both have great communities around them also feel free to reach out and I can try to assist also. 
-
+在保存这些和组织你的VAGRANT文件时，我倾向于将它们放在我工作区的文件夹中。您可以在下面看到这在我的系统上的外观。希望在此之后，你将与Vagrant一起玩，并体验启动不同系统的便利性，这可以帮助你不断探索Linux桌面。
 
 
-## Our first VAGRANTFILE
+![](../../Days/Images/Day14_Linux1.png)
 
-
-
-The VAGRANTFILE describes the type of machine we want to deploy. It also defines how we want the configuration and provisioning of this machine need to look. 
-
-
-
-When it comes to saving these and organizing your VAGRANTFILEs I tend to put them in their own folders in my workspace. You can see below how this looks on my system. Hopefully following this you will play around with Vagrant and see the ease of spinning up different systems, it is also great for that rabbit hole is known as distro hopping for Linux Desktops. 
-
-
-
-![](Images/Day14_Linux1.png)
-
-
-
-Let's take a look at that VAGRANTFILE then and see what we are building. 
-
+让我们看一下VAGRANT文件，看看我们正在构建什么。
 
 
 ``` 
@@ -93,12 +71,9 @@ end
 
 ```
 
-This is a very simple VAGRANTFILE overall we are saying we want a specific "box" a box being possibly either a public image or private build of the system you are looking for. You can find a long list of "boxes" publicly available here in the [public catalog of Vagrant boxes](https://app.vagrantup.com/boxes/search) 
+总的来说，这是一个非常简单的VAGRANTFILE。我们想要一个特定的“盒子”，一个盒子可能是您正在寻找的系统的公共映像或私有版本。您可以在[public catalog of Vagrant boxes](https://app.vagrantup.com/boxes/search) 中找到一系列公开的“盒子”。
 
-
-
-Next line we are saying we want to use a specific provider in this case it is `VirtualBox` and then we want to define our machine's memory to `8GB and our number of CPUs to `4`. My experience also tells me that you may want to also add the following line if you experience display issues. This will set the video memory to what you want, I would ramp this right up to `128MB but depends on your system. 
-
+下一行我们说我们想使用特定的程序，这次使用的是`VirtualBox`。我们还将机器的内存`8GB`和CPU的数量定义为`4`。根据我的经验，如果您遇到问题，您可能还需要添加以下行。这会将视频内存设置为您想要的，我会将其提升到128MB ，但这取决于您的系统。
 
 
 ```
@@ -107,66 +82,50 @@ v.customize ["modifyvm", :id, "--vram", ""]
 
 ```
 
-I have also placed a copy of this specific vagrant file in the [Linux Folder](Linux/VAGRANTFILE) 
+我还在[Linux 文件夹](Linux/VAGRANTFILE) 中放置了这个特定vagrant文件的副本。
 
 
+## 配置我们的 Linux 桌面
 
-## Provisioning our Linux Desktop
-
-
-
-We are now ready to get our first machine up and running, in your workstations terminal. In my case I am using PowerShell on my Windows machine, navigate to your projects folder and where you will find your VAGRANTFILE. Once there you can type the command `vagrant up` and if everything is correct then you will see something like the below.  
+现在，我们已经准备好在工作站的终端中启动并运行我们的第一台机器。就我而言，我正在Windows机器上使用PowerShell。导航到您的项目文件夹，您将在其中找到您的VAGRANTFILE。到达那里后，您可以输入命令`vagrant up`，如果一切正常，您将看到类似以下内容。
 
 
-
-![](Images/Day14_Linux2.png)
-
+![](../../Days/Images/Day14_Linux2.png)
 
 
-Another thing to add here is that the network will be set to `NAT` on your virtual machine, at this stage we don't really need to know about NAT and I plan to have a whole session talking about in the next section about Networking. But know that it is the easy button when it comes to getting a machine on your home network, it is also the default networking mode on Virtual Box. You can find out more in the [Virtual Box documentation](https://www.virtualbox.org/manual/ch06.html#network_nat)
+此处要添加的另一样东西是，网络将设置为虚拟机上的网络`NAT`。在此阶段，我们不需要了解NAT，我计划在网络的章节中讨论它。这是在家庭网络上获取机器的简单按钮，它也是[Virtual Box documentation](https://www.virtualbox.org/manual/ch06.html#network_nat)上的默认网络模式。你可以在虚拟盒子文档中找到更多信息。
 
 
-
-Once `vagrant up` is complete we can now use `vagrant ssh` to jump straight into the terminal of our new VM. 
-
+`vagrant up`完成后，我们现在可以使用`vagrant ssh`直接跳转到新 VM 的终端。
 
 
-![](Images/Day14_Linux3.png)
+![](../../Days/Images/Day14_Linux3.png)
+
+这是我们接下来的几天里将进行大部分探索的地方，但我还想深入了解我为您的开发人员工作站所做的一些自定义，当将其作为日常驱动程序运行时，使你的工作变得更加简单。当然，有一个很酷的非标准终端，才像是在做DevOps，对吧？
 
 
-
-This is where we will do most of our exploring over the next few days but I also want to dive into some customizations for your developer workstation that I have done and it makes your life much simpler when running this as your daily driver, and of course, are you really in DevOps unless you have a cool nonstandard terminal? 
-
+在Virtual Box中进行确认，您应该会在选择VM时看到登录提示。
 
 
-But just to confirm in Virtual Box you should see the login prompt when you select your VM. 
+![](../../Days/Images/Day14_Linux4.png)
 
-
-
-![](Images/Day14_Linux4.png)
-
-
-
-Oh and if you made it this far and you have been asking "WHAT IS THE USERNAME & PASSWORD?" 
-
-
+如果你做到了这一步，你会问“用户名和密码是什么？”
 
 - Username = vagrant 
 
 - Password = vagrant 
 
+明天我们将了解一些命令以及它们的作用，终端将成为实现一切的地方。
 
-
-Tomorrow we are going to get into some of the commands and what they do, The terminal is going to be the place to make everything happen.  
-
-## Resources 
+## 相关资料 
 
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
-There are going to be lots of resources I find as we go through and much like the Go resources I am generally going to be keeping them to FREE content so we can all partake and learn here. 
+随着我们的学习，我会发现很多资源，就像Go资源一样，我通常会将它们保留为免费内容，以便我们都可以在这里参与和学习。
 
 As I mentioned next up we will take a look at the commands we might be using on a daily whilst in our Linux environments. 
+正如我接下来会提到的，我们将看看我们在Linux环境中可能每天使用的命令。
 
-See you on [Day15](day15.md)
+[第十五天](day15.md)见
 
