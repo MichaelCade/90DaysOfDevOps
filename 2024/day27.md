@@ -19,7 +19,6 @@ Participants will get first-hand insights into Ansible, its strengths, weaknesse
 > The below content is a copy of the [lab repository's](https://github.com/mocdaniel/lab-event-driven-ansible) README for convenience.
 
 ---
-
 # Event-Driven Ansible Lab
 
 This is a lab designed to demonstrate Ansible and how Event-Driven Ansible (**EDA**) builds on top of its capabilities.
@@ -78,7 +77,7 @@ eda_controller:
 ```
 
 ### Install Needed Roles and Collections
-    
+
 ```bash
 ansible-galaxy install -r requirements.yml
 ```
@@ -307,7 +306,7 @@ For this demo, the second **ruleset** in our rulebook is the one we're intereste
       condition: event.alert.labels.alertname == 'MySQL not running' and event.alert.status == 'firing'
       action:
         run_playbook:
-          playbook: ./playbook.yml
+          name: ./playbook.yml
     - name: Debug event output
       condition: 1 == 1
       action:
