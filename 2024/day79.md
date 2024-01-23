@@ -22,6 +22,8 @@ By the end of the session, attendees will have been exposed to ideas blending co
 
 ## Notes
 
+“I'm not a great programmer; I'm just a good programmer with great habits.” ~Kent Beck
+
 [The Programmer's Brain](https://www.amazon.co.uk/Programmers-Brain-every-programmer-cognition/dp/1617298670)
 
 [The Phoenix Project](https://www.amazon.co.uk/Phoenix-Project-Devops-Helping-Business/dp/1942788290/ref=sr_1_1?crid=3V9HEJTJXFZR5&keywords=the+phoenix+project&qid=1705009649&s=books&sprefix=the+phoenix+project%2Cstripbooks%2C181&sr=1-1)
