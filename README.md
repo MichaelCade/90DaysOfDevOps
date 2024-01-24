@@ -43,14 +43,14 @@ The two images below will take you to the 2022 and 2023 edition of the learning 
       <img src="2024.png?raw=true" alt="2024" style="border: 2px solid #555; border-radius: 8px; width: 100%; max-width: 400px;" />
     </a>
     <br />
-    <em>Year 2024 - Community Edition: 90 Sessions, 90 Speakers</em>
+    <em>Year 2024 - Community Edition: 90 Sessions</em>
   </div>
 
 </div>
 
 
 
-
+## 
 
 From this year we have built website for 90DaysOfDevops Challenge :rocket:	:technologist: - [Link for website](https://www.90daysofdevops.com/#/2023)
 
