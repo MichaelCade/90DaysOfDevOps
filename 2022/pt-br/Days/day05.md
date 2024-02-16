@@ -43,43 +43,44 @@ Uma vez implantado, vamos operá-lo. E operá-lo pode envolver algo como você c
 
 ## Monitoramento
 
-All of the above parts lead to the final step because you need to have monitoring, especially around operational issues auto-scaling troubleshooting like you don't know
-there's a problem if you don't have monitoring in place to tell you that there's a problem so some of the things you might build monitoring for are memory utilization CPU utilization disk space, API endpoint, response time, how quickly that endpoint is responding and a big part of that as well is logs. Logs give developers the ability to see what is happening without having to access production systems.
+Todas as partes acima levam à etapa final que é o monitoramento, especialmente em torno de questões operacionais como solução de problemas de escalonamento automático. Você não saberá que há um problema se não tiver monitoramento implementado.
+Algum dos elementos para os quais você pode desenvolver monitoramento incluem a utilização de memória, a utilização da CPU, o espaço em disco, API endpoint, tempo de resposta, e o quão rapidamente esse endpoint está respondendo.
+Além disso, uma parte significativa disso são os logs. Os logs proporcionam aos desenvolvedores a capacidade de ver o que está acontecendo sem precisar acessar sistemas de produção.
 
-## Rinse & Repeat
+## Limpe & Repita
 
-Once that's in place you go right back to the beginning to the planning stage and go through the whole thing again
+Uma vez implementado, você volta imediatamente à etapa de planejamento e passa por todo o processo novamente.
 
-## Continuous
+## Contínuo
 
-Many tools help us achieve the above continuous process, all this code and the ultimate goal of being completely automated, cloud infrastructure or any environment is often described as Continuous Integration/ Continuous Delivery/Continous Deployment or “CI/CD” for short. We will spend a whole week on CI/CD later on in the 90 Days with some examples and walkthroughs to grasp the fundamentals.
+Muitas ferramentas nos ajudam a alcançar o processo contínuo acima, onde todo esse código e o objetivo final de ser completamente automatizado, seja em infraestrutura na nuvem ou em qualquer outro ambiente é frequentemente descrito como Integração Contínua /Entrega Contínua/ Implantação Contínua, ou "CI/CD" de forma abreviada. Passaremos uma semana inteira focando em CI/CD mais adiante, no decorrer dos próximos 90 dias, com exemplos e demonstrações para compreender os fundamentos.
 
-### Continuous Delivery
+### Entrega Contínua
 
-Continuous Delivery = Plan > Code > Build > Test
+Entrega Contínua = Planejar > Codar > Construir > Testar
 
-### Continuous Integration
+### Integração Contínua
 
-This is effectively the outcome of the Continuous Delivery phases above plus the outcome of the Release phase. This is the case for both failure and success but this is fed back into continuous delivery or moved to Continuous Deployment.
+Este é efetivamente o resultado das fases de Entrega Contínua acima, mais o resultado da fase de Lançamento(Release). Esse é o caso tanto do fracasso quanto do sucesso, mas isso é realimentado na entrega contínua ou movido para a implantação contínua.
 
-Continuous Integration = Plan > Code > Build > Test > Release
+Integração Contínua = Plano > Código > Construir > Teste > Lançamento(Release)
 
-### Continuous Deployment
+### Implantação Contínua
 
-If you have a successful release from your continuous integration then move to Continuous Deployment which brings in the following phases
+Se você tiver uma versão bem-sucedida de sua Integração Contínua, avance para a Implantação Contínua, que inclui as seguintes fases
 
-CI Release is Success = Continuous Deployment = Deploy > Operate > Monitor
+Lançamento (Release) da Integração Contínua bem sucedido = Implantação Contínua = Implantação > Operação > Monitoramento
 
-You can see these three Continuous notions above as the simple collection of phases of the DevOps Lifecycle.
+Você pode ver essas três noções contínuas acima como a simples coleção de fases do Ciclo de Vida DevOps.
 
-This last bit was a bit of a recap for me on Day 3 but think this makes things clearer for me.
+Esta última parte foi uma recapitulação do Dia 3 para mim, mas acho que isso torna as coisas mais claras para mim.
 
-### Resources
+### Recursos
 
-- [DevOps for Developers – Software or DevOps Engineer?](https://www.youtube.com/watch?v=a0-uE3rOyeU)
-- [Techworld with Nana -DevOps Roadmap 2022 - How to become a DevOps Engineer? What is DevOps?](https://www.youtube.com/watch?v=9pZ2xmsSDdo&t=125s)
-- [How to become a DevOps Engineer in 2021 - DevOps Roadmap](https://www.youtube.com/watch?v=5pxbp6FyTfk)
+- [DevOps para desenvolvedores – Engenheiro de software ou DevOps?](https://www.youtube.com/watch?v=a0-uE3rOyeU)
+- [Techworld with Nana -DevOps Roadmap 2022 - Como se tornar um engenheiro DevOps? O que é DevOps?](https://www.youtube.com/watch?v=9pZ2xmsSDdo&t=125s)
+- [Como se tornar um engenheiro DevOps em 2021 - DevOps Roadmap](https://www.youtube.com/watch?v=5pxbp6FyTfk)
 
-If you made it this far then you will know if this is where you want to be or not.
+Se você chegou até aqui, saberá se é aqui que deseja estar ou não.
 
-See you on [Day 6](day06.md).
+Vejo você no [Dia 6](day06.md).

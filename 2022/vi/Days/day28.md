@@ -16,7 +16,7 @@ Nhưng việc bắt đầu tìm hiểu về điện toán đám mây sẽ là m�
 
 ![](../../Days/Images/Day28_Cloud1.png)
 
-Vậy các dịch vụ public cloud (đám mây công cộng) có yêu cầu tư duy DevOps không? Câu trả lời của tôi ở đây là không, nhưng để thực sự tận dụng được những lợi thế của điện toán đám mây và để tránh những hoá đơn khổng lồ cho dịch vụ điện todayán, việc nghĩ đến DevOps và Cloud cùng với nhau là điều rất quan trọng.
+Vậy các dịch vụ public cloud (đám mây công cộng) có yêu cầu tư duy DevOps không? Câu trả lời của tôi ở đây là không, nhưng để thực sự tận dụng được những lợi thế của điện toán đám mây và để tránh những hoá đơn khổng lồ cho dịch vụ điện toán, việc nghĩ đến DevOps và Cloud cùng với nhau là điều rất quan trọng.
 
 Nếu chúng ta xem xét ý nghĩa của public cloud từ góc độ high level, thì có thể nói nó loại bỏ trách nhiệm quản lý các máy chủ và giúp chúng ta tập trung hơn vào những khía cạnh khác quan trọng hơn đó là ứng dụng và người sử dụng. Xét cho cùng, đám mây công cộng cũng chỉ là máy tính của người khác. 
 
