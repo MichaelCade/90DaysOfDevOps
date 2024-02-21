@@ -1,7 +1,21 @@
 # The Reverse Technology Thrust
 
 ## Description
-This session provides a journey overview of large scale public institution who had to learn the painful way about learning DevOps practices instead of investing in tooling.
+This session provides a journey overview of large-scale public institutions that had to learn the painful way of DevOps practices instead of investing in tooling to accelerate innovation.
+
+## Talking points
+
+### A Guiding Coalition 
+
+### Practices vs Tools
+
+### Continuous Learning
+
+### Continuous Designing
+
+### Measure what matters
+
+### Fail, Learn, Repeat
 
 ## Author
 
