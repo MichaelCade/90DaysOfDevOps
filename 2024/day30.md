@@ -27,6 +27,8 @@ In this session I am going to show you how GitHub builds GitHub with GitHub. Git
 
 - Read about [GitHub Advanced Security (GHAS) -](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security)
 
+- Play the [Secure Code Game](https://gh.io/securecodegame) to try all of the above for free, plus trying out your skills on finding and fixing security issues.
+
 - Learn more about all of the ways to work with the [GitHub API](https://docs.github.com/en/rest?apiVersion=2022-11-28)
 
 ## Video
