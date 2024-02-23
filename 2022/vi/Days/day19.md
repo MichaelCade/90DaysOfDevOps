@@ -255,7 +255,7 @@ Bạn có thể thấy từ hình ảnh bên dưới rằng chúng ta đã thự
 
 Yêu cầu cuối cùng là "Thông báo tạo tài khoản thành công được hiển thị." Chúng ta đã có dòng này ở dòng trên cùng của mã và có thể thấy ảnh chụp màn hình ở trên có dòng `90DaysOfDevOps user account being created` được hiển thị.
 
-Bây giờ tập lệnh này có thể được sử dụng để nhanh chóng tích hợp và thiết lập người dùng mới trên hệ thống Linux của chúng ta. Nhưng có lẽ thay vì một vài người trong lịch sử phải giải quyết vấn đề này và sau đó phải lấy cho người khác tên người dùng hoặc mật khẩu mới của họ, chúng tôi có thể thêm một số đầu vào của người dùng mà chúng tôi đã đề cập trước đó để nắm bắt các biến của chúng tôi.
+Bây giờ tập lệnh này có thể được sử dụng để nhanh chóng tích hợp và thiết lập người dùng mới trên hệ thống Linux của chúng ta. Nhưng có lẽ thay vì một vài người trong lịch sử phải giải quyết vấn đề này và sau đó phải lấy cho người khác tên người dùng hoặc mật khẩu mới của họ, chúng ta có thể thêm một số đầu vào của người dùng mà chúng ta đã đề cập trước đó để nắm bắt các biến.
 
 ```
 #! /usr/bin/bash

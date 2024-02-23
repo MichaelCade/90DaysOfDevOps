@@ -48,7 +48,7 @@ Sau đó, trong drop-down, bạn có thể thấy chúng ta có ba tuỳ chọn 
 
 ![](../../Days/Images/Day32_Cloud5.png)
 
-Có rất nhiều tuỳ chọn nâng cao hơn có sẵn cho tài khoản lưu trữ của bạn, nhưng hiện tại, chúng tôi không cần phải truy cập vào các phần này. Các tuỳ chọn này là về mã hoá và bảo vệ dữ liệu.
+Có rất nhiều tuỳ chọn nâng cao hơn có sẵn cho tài khoản lưu trữ của bạn, nhưng hiện tại, chúng ta không cần phải truy cập vào các phần này. Các tuỳ chọn này là về mã hoá và bảo vệ dữ liệu.
 
 ### Ổ đĩa được quản lý - Managed Disks
 

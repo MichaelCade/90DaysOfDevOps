@@ -78,7 +78,7 @@ resource "aws_instance" "90daysofdevops" {
 }
 ```
 
-Từ ví dụ trên, bạn có thể thấy chúng tôi cũng đang chạy lệnh `yum update` và cài đặt `httpd` vào máy chủ EC2 của chúng tôi.
+Từ ví dụ trên, bạn có thể thấy chúng ta cũng đang chạy lệnh `yum update` và cài đặt `httpd` vào máy chủ EC2.
 
 Nếu chúng ta nhìn vào toàn bộ tệp main.tf, nó có thể trông giống như sau:
 

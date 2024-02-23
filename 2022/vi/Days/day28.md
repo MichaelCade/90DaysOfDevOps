@@ -90,7 +90,7 @@ Trước khi chúng ta đi vào một nhà cung cấp cụ thể, tôi đã tạ
 
 [Link to Twitter Poll](https://twitter.com/MichaelCade1/status/1486814904510259208?s=20&t=x2n6QhyOXSUs7Pq0itdIIQ)
 
-Bất kỳ nhà cung cấp nào nhận được tỷ lệ phần trăm cao nhất, chúng tôi sẽ tìm hiểu sâu hơn về cách dịch vụ của nhà cung cấp đó. Tôi nghĩ điều quan trọng cần đề cập là các dịch vụ từ các nhà cung cấp này đều khá giống nhau, đó là lý do tại sao tôi nói là hãy bắt đầu với một nhà cung cấp bất kì. Tôi nhận thấy rằng, khi biết nền tảng của một nhà cung cấp như cách tạo máy ảo, thiết lập mạng,... thì tôi đã có thể sử dụng dịch vụ của các nhà cung cấp khác và có thể nhanh chóng sử dụng chúng.
+Bất kỳ nhà cung cấp nào nhận được tỷ lệ phần trăm cao nhất, chúng ta sẽ tìm hiểu sâu hơn về cách dịch vụ của nhà cung cấp đó. Tôi nghĩ điều quan trọng cần đề cập là các dịch vụ từ các nhà cung cấp này đều khá giống nhau, đó là lý do tại sao tôi nói là hãy bắt đầu với một nhà cung cấp bất kì. Tôi nhận thấy rằng, khi biết nền tảng của một nhà cung cấp như cách tạo máy ảo, thiết lập mạng,... thì tôi đã có thể sử dụng dịch vụ của các nhà cung cấp khác và có thể nhanh chóng sử dụng chúng.
 
 Dù như thế nào, tôi cũng sẽ chia sẻ một số tài nguyên **MIỄN PHÍ** về cả ba nhà cung cấp lớn nhất.
 

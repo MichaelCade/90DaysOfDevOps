@@ -81,9 +81,9 @@ volumes:
   wordpress_data: {}
 ```
 
-Chúng ta khai báo một phiên bản và sau đó một phần lớn của tệp docker-compose.yml này được tạo thành từ các services, chúng tôi có service DB và service WordPress. Bạn có thể thấy mỗi trong số đó có một image được xác định bằng version tag. Bây giờ chúng ta sẽ tạo các volumes để có thể lưu trữ cơ sở dữ liệu của mình ở đó.
+Chúng ta khai báo một phiên bản và sau đó một phần lớn của tệp docker-compose.yml này được tạo thành từ các services, chúng ta có service DB và service WordPress. Bạn có thể thấy mỗi trong số đó có một image được xác định bằng version tag. Bây giờ chúng ta sẽ tạo các volumes để có thể lưu trữ cơ sở dữ liệu của mình ở đó.
 
-Sau đó, chúng tôi có một số biến môi trường (environment) như mật khẩu và tên người dùng. Các tệp này có thể trở nên rất phức tạp nhưng tệp cấu hình YAML đơn giản hóa giao diện tổng thể của chúng.
+Sau đó, chúng ta có một số biến môi trường (environment) như mật khẩu và tên người dùng. Các tệp này có thể trở nên rất phức tạp nhưng tệp cấu hình YAML đơn giản hóa giao diện tổng thể của chúng.
 
 ### Xây dựng dự án
 
@@ -103,7 +103,7 @@ Tiếp theo, chúng ta có thể xác thực việc đã thiết lập và chạ
 
 ![](../../Days/Images/Day46_Containers4.png)
 
-Chúng tôi có thể trải qua quá trình thiết lập WordPress và sau đó có thể bắt đầu xây dựng trang web của mình với bảng điều khiển bên dưới.
+Chúng ta có thể trải qua quá trình thiết lập WordPress và sau đó có thể bắt đầu xây dựng trang web của mình với bảng điều khiển bên dưới.
 
 ![](../../Days/Images/Day46_Containers5.png)
 
@@ -149,7 +149,7 @@ Bây giờ, khi chúng ta sử dụng lại `docker-compose up -d`, các ứng d
 
 Thú thật rằng khi tôi bắt đầu tìm hiểu về docker-compose và các khả năng của nó, tôi đã bối rối không biết nó nằm ở đâu bên cạnh hoặc với các công cụ Điều phối containers (Container Orchestration) như Kubernetes, mọi thứ chúng ta đã làm ở đây trong bản demo ngắn này đều tập trung vào một máy chủ khi chạy WordPress và DB trên máy tính để bàn cục bộ. Chúng ta không có nhiều máy ảo hoặc nhiều máy chủ vật lý, chúng ta cũng không thể dễ dàng mở rộng và thu nhỏ các yêu cầu của ứng dụng của mình.
 
-Phần tiếp theo của chúng tôi sẽ đề cập đến Kubernetes nhưng trước tiên chúng tôi có một vài ngày nữa về Container nói chung.
+Phần tiếp theo của chúng ta sẽ đề cập đến Kubernetes nhưng trước tiên chúng ta có một vài ngày nữa về Container nói chung.
 
 Đây cũng là một nguồn tài nguyên tuyệt vời cho các mẫu ứng dụng docker-compose với nhiều tích hợp khác nhau. [Awesome-Compose](https://github.com/docker/awesome-compose)
 

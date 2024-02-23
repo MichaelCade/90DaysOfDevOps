@@ -112,7 +112,7 @@ jobs:
 ```
 
 **github/super-linter**
-Bạn có thể thấy phía trên rằng đối với một trong các bước của chúng tôi, chúng tôi có một action được gọi là `GitHub/super-linter` và điều này đang tham chiếu đến một step đã được cộng đồng viết trước đó. Bạn có thể tìm hiểu thêm về nó tại đây [Super-Linter](https://github.com/github/super-linter)
+Bạn có thể thấy phía trên rằng đối với một trong các bước, chúng ta có một action được gọi là `GitHub/super-linter` và điều này đang tham chiếu đến một step đã được cộng đồng viết trước đó. Bạn có thể tìm hiểu thêm về nó tại đây [Super-Linter](https://github.com/github/super-linter)
 
 "Kho lưu trữ này dành cho GitHub Action để chạy Super-Linter. Đây là một sự kết hợp đơn giản của các trình kiểm tra mã nguồn khác nhau, được viết bằng bash, để giúp xác minh mã nguồn của bạn."
 
@@ -122,7 +122,7 @@ Cũng trong đoạn mã ở trên có đề cập đến GITHUB_TOKEN, nên tôi
 
 Đoạn in đậm trên là điều quan trọng cần lưu ý ở giai đoạn này. Chúng ta đang sử dụng nó nhưng không cần phải thiết lập bất kỳ biến môi trường nào trong kho lưu trữ của chúng ta.
 
-Chúng ta sẽ sử dụng kho lưu trữ mà chúng tôi đã sử dụng trong bài thực hành Jenkins để kiểm tra.[Jenkins-HelloWorld](https://github.com/MichaelCade/Jenkins-HelloWorld)
+Chúng ta sẽ sử dụng kho lưu trữ mà chúng ta đã sử dụng trong bài thực hành Jenkins để kiểm tra.[Jenkins-HelloWorld](https://github.com/MichaelCade/Jenkins-HelloWorld)
 
 Dưới đây là kho lưu trữ của chúng ta sau khi chúng ta kết thúc trong các buổi thực hành về Jenkins.
 
@@ -161,7 +161,7 @@ Bây giờ nếu chúng ta giải quyết lỗi trong commit trên với mã c�
 
 ![](../../Days/Images/Day75_CICD8.png)
 
-Nếu bạn nhấp vào nút **new workflow** được đánh dấu ở trên, điều này sẽ mở ra cửa sổ cho một loạt lớn các action. Một điều bạn có thể đã nhận thấy trong suốt thử thách này là chúng tôi không muốn phải tạo lại mọi thứ, chúng tôi muốn đứng trên vai những người khổng lồ và chia sẻ mã nguồn, tự động hóa và kỹ năng của mình rộng rãi để làm cuộc sống dễ dàng hơn.
+Nếu bạn nhấp vào nút **new workflow** được đánh dấu ở trên, điều này sẽ mở ra cửa sổ cho một loạt lớn các action. Một điều bạn có thể đã nhận thấy trong suốt thử thách này là chúng ta không muốn phải tạo lại mọi thứ, chúng ta muốn đứng trên vai những người khổng lồ và chia sẻ mã nguồn, tự động hóa và kỹ năng của mình rộng rãi để làm cuộc sống dễ dàng hơn.
 
 ![](../../Days/Images/Day75_CICD9.png)
 

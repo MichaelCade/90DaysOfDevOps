@@ -28,7 +28,7 @@ Tôi đã bắt đầu áp dụng quản lý phiên bản không chỉ đối v�
 
 Tuy nhiên, để tránh hiểu lầm **Quản lý phiên bản không hoạt động như một bản sao lưu**
 
-Một lợi ích khác của quản lý phiên bản là khả năng quản lý nhiều phiên bản của một dự án. Lấy ví dụ như chúng ta có một ứng dụng miễn phí và sau đó là ứng dụng trả phí có sẵn trên tất cả các hệ điều hành. Phần lớn mã được chia sẽ giữa hai ứng dụng. Chúng tôi có thể sao chép và dán mã của mình cho từng commit vào từng ứng dụng, nhưng điều đó sẽ rất lộn xộn, đặc biệt là khi bạn mở rộng quy mô phát triển với nhiều nhân sự, cũng sẽ rất dễ mắc lỗi.
+Một lợi ích khác của quản lý phiên bản là khả năng quản lý nhiều phiên bản của một dự án. Lấy ví dụ như chúng ta có một ứng dụng miễn phí và sau đó là ứng dụng trả phí có sẵn trên tất cả các hệ điều hành. Phần lớn mã được chia sẽ giữa hai ứng dụng. Chúng ta có thể sao chép và dán mã của mình cho từng commit vào từng ứng dụng, nhưng điều đó sẽ rất lộn xộn, đặc biệt là khi bạn mở rộng quy mô phát triển với nhiều nhân sự, cũng sẽ rất dễ mắc lỗi.
 
 Ứng dụng trả phí là nơi chúng ta có các chứ năng bổ sung, hãy gọi chúng là các commit trả phí, bản miễn phí sẽ chỉ chứa các commit bình thường. 
 

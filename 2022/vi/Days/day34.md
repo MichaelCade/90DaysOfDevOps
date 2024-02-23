@@ -33,7 +33,7 @@ Sau đó, tôi đã tạo tập lệnh PowerShell và tham khảo từ module đ
 
 Vui lòng đảm bảo rằng bạn thay đổi vị trí tệp trong tập lệnh phù hợp với môi trường của mình.
 
-Ở giai đoạn đầu tiên này, chúng tôi không có mạng ảo hoặc máy ảo nào được tạo trong môi trường của mình, tôi chỉ có một cloud shell storage được định cấu hình trong resource group của mình.
+Ở giai đoạn đầu tiên này, chúng ta không có mạng ảo hoặc máy ảo nào được tạo trong môi trường của mình, tôi chỉ có một cloud shell storage được định cấu hình trong resource group của mình.
 
 Trước hết, tôi chạy [PowerShell script](../../Days/Cloud/01VirtualNetworking/Module4_90DaysOfDevOps.ps1) của mình
 
@@ -98,7 +98,7 @@ Tôi gặp một vấn đề khác ở đây là tài khoản của tôi không 
 ![](../../Days/Images/Day34_Cloud14.png)
 ![](../../Days/Images/Day34_Cloud15.png)
 
-Sau đó, tôi có thể quay lại tài khoản michael.cade@90DaysOfDevOps.com của mình và tiếp tục phần này. Ở đây chúng tôi đang chạy lại vài bài test tương tự nhưng bây giờ đã có thể truy cập được.
+Sau đó, tôi có thể quay lại tài khoản michael.cade@90DaysOfDevOps.com của mình và tiếp tục phần này. Ở đây chúng ta đang chạy lại vài bài test tương tự nhưng bây giờ đã có thể truy cập được.
 
 ![](../../Days/Images/Day34_Cloud16.png)
 
@@ -194,6 +194,6 @@ Bài lab này kết thúc phần tìm hiểu về Microsoft Azure nói riêng v�
 - [Google Cloud Digital Leader Certification Course](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s)
 - [AWS Basics for Beginners - Full Course](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s)
 
-Tiếp theo, chúng ta sẽ đi sâu vào các hệ thống kiểm soát phiên bản, cụ thể là xung quanh git và sau đó là tổng quan về kho lưu trữ mã và chúng tôi sẽ chọn GitHub vì đây là lựa chọn ưa thích của tôi.
+Tiếp theo, chúng ta sẽ đi sâu vào các hệ thống kiểm soát phiên bản, cụ thể là xung quanh git và sau đó là tổng quan về kho lưu trữ mã và chúng ta sẽ chọn GitHub vì đây là lựa chọn ưa thích của tôi.
 
 Hẹn gặp lại vào [ngày 35](day35.md)

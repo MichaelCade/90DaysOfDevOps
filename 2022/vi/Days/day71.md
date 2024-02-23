@@ -52,7 +52,7 @@ Như bạn mong đợi, Jenkins có nhiều đặc điểm bảo phủ nhiều l
 
 ### Jenkins Pipeline
 
-Bạn sẽ thấy pipeline này nhưng được sử dụng ở phạm vi rộng hơn và ở đây chúng tôi đề cập tới các công cụ cụ thể.
+Bạn sẽ thấy pipeline này nhưng được sử dụng ở phạm vi rộng hơn và ở đây chúng ta đề cập tới các công cụ cụ thể.
 
 Bạn commit mã nguồn tới Jenkins, nơi sau đó sẽ xây dựng ứng dụng của bạn, với tất cả bài kiểm thử tự động, nó sẽ phát hành và triển khai mã nguồn đó khi mỗi bước được hoàn thành. Jenkins sẽ tự động hoá quá trình này.
 
