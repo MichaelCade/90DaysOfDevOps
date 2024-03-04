@@ -2,7 +2,7 @@ Day 64: Let’s Do DevOps: Writing a New Terraform /Tofu AzureRm Data Source —
 =========================
 
 ## Video
-[![Day 64: Let’s Do DevOps: Writing a New Terraform /Tofu AzureRm Data Source — All Steps! ](https://i.imgur.com/XZpYLj3.png)](https://www.youtube.com/watch?v=FIVOYwK0rEY)
+[![Day 64: Let’s Do DevOps: Writing a New Terraform /Tofu AzureRm Data Source — All Steps! ](https://i.imgur.com/XZpYLj3.png)](https://youtu.be/AtqivV8iBdE)
 
 ## About Me
 I'm [Kyler Middleton](https://www.linkedin.com/in/kylermiddleton/), Cloud Security Chick, Day Two Podcast host, Hashi Ambassador, and AWS Cloud Builder. 
