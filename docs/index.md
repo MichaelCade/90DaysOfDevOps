@@ -21,13 +21,13 @@ This will **not cover all things** "DevOps" but it will cover the areas that I f
 The two images below will take you to the 2022 and 2023 edition of the learning journey. 
 
 <p align="center">
- <a href="2022">
+ <a href="https://github.com/MichaelCade/90DaysOfDevOps/blob/main/2022.md">
  <img src="2022.png?raw=true" alt="2022" width="70%" height="70%" />
 </p>
 
 </a>
 <p align="center">
- <a href="2023.md">
+ <a href="https://github.com/MichaelCade/90DaysOfDevOps/blob/main/2023.md">
  <img src="2023.png?raw=true" alt="2023" width="70%" height="70%" />
 </p>
 </a>
