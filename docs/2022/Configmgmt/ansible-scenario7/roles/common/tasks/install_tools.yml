@@ -1,6 +1,0 @@
-- name: "Install Common packages"
-  apt: name={{ item }} state=latest
-  with_items:
-   - neofetch
-   - tree
-   - figlet

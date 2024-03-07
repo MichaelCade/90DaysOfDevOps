@@ -16,18 +16,16 @@ This will **not cover all things** "DevOps" but it will cover the areas that I f
 
 [![Discord Invite Link](https://dcbadge.vercel.app/api/server/vqwPrNQsyK)](https://discord.gg/vqwPrNQsyK)
 
-![GitHub Repo Stars](https://img.shields.io/github/stars/michaelcade/90daysofdevops?style=social?)
-
 The two images below will take you to the 2022 and 2023 edition of the learning journey. 
 
 <p align="center">
- <a href="2022">
+ <a href="https://github.com/MichaelCade/90DaysOfDevOps/blob/main/2022.md">
  <img src="2022.png?raw=true" alt="2022" width="70%" height="70%" />
 </p>
 
 </a>
 <p align="center">
- <a href="2023.md">
+ <a href="https://github.com/MichaelCade/90DaysOfDevOps/blob/main/2023.md">
  <img src="2023.png?raw=true" alt="2023" width="70%" height="70%" />
 </p>
 </a>
@@ -35,8 +33,6 @@ The two images below will take you to the 2022 and 2023 edition of the learning 
 From this year we have built website for 90DaysOfDevops Challenge :rocket:	:technologist: - [Link for website](https://www.90daysofdevops.com/#/2023)
 
 The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1)
-
-
 
 ## License
 
