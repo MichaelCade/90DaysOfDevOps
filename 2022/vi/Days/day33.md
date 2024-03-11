@@ -58,7 +58,7 @@ Chúng ta cũng có Virtual Network Peering. Điều này cho phép các mạng 
 | ILB              | 1010     | Azure LoadBalancer | \*          | \*                  | 10000            | Allow  |
 | Deny All Inbound | 4000     | \*                 | \*          | \*                  | \*               | DENY   |
 
-Chúng tôi cũng có Application Security Groups (ASGs)
+Chúng ta cũng có Application Security Groups (ASGs)
 
 - Trường hợp NSG tập trung vào dải địa chỉ IP có thể khó duy trì đối với môi trường đang phát triển.
 - ASG cho phép xác định tên thật (Monikers) cho các vai trò ứng dụng khác nhau (Máy chủ web, máy chủ DB, WebApp1, v.v.)
@@ -106,7 +106,7 @@ Azure PowerShell is a set of cmdlets for managing Azure resources directly from 
 
 We can see below that you can connect to your subscription using the PowerShell command `Connect-AzAccount`
 
-Trước khi chúng tôi bắt đầu với Azure PowerShell, chúng ta nên biết tới PowerShell. PowerShell là một framework quản lý cấu hình và tự động hóa tác vụ, một command-line shell và ngôn ngữ kịch bản. Nó giống với những gì chúng ta đã tìm hiểu trong phần shell scripting cho Linux. PowerShell lúc đầu được sử dụng rộng rãi trên hệ điều hành Windows nhưng giờ đây nó đã có trên nhiều nền tảng.
+Trước khi chúng ta bắt đầu với Azure PowerShell, chúng ta nên biết tới PowerShell. PowerShell là một framework quản lý cấu hình và tự động hóa tác vụ, một command-line shell và ngôn ngữ kịch bản. Nó giống với những gì chúng ta đã tìm hiểu trong phần shell scripting cho Linux. PowerShell lúc đầu được sử dụng rộng rãi trên hệ điều hành Windows nhưng giờ đây nó đã có trên nhiều nền tảng.
 
 Azure PowerShell là một tập hợp các lệnh ghép ngắn để quản lý tài nguyên Azure trực tiếp từ dòng lệnh PowerShell.
 

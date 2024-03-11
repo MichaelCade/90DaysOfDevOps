@@ -89,7 +89,7 @@ Chúng ta có thể đảo ngược điều này và bắt đầu với commit h
 
 ### Xem một commit 
 
-Việc có thể xem nội dung commit là một điều tuyệt vời nếu bạn có ý thức tuân theo các best practices và có những nội dung commit có ý nghĩa. Tuy nhiên, cũng có lệnh `git show` cho phép chúng tôi kiểm tra và xem một commit.
+Việc có thể xem nội dung commit là một điều tuyệt vời nếu bạn có ý thức tuân theo các best practices và có những nội dung commit có ý nghĩa. Tuy nhiên, cũng có lệnh `git show` cho phép chúng ta kiểm tra và xem một commit.
 
 Chúng ta có thể sử dụng `git log --oneline --reverse` để lấy danh sách các commit của mình rồi lấy chúng và chạy `git show <commit ID>`
 
@@ -119,7 +119,7 @@ Sẽ có lúc bạn có thể đã sử dụng `git add .` nhưng có những t�
 
 ![](../../Days/Images/Day39_Git19.png)
 
-Chúng ta cũng có thể thực hiện tương tự với các tệp đã sửa đổi, chẳng hạn như main.js và hủy thực hiện commit, như ở trên chúng tôi có chữ M màu xanh lá cây để sửa đổi và sau đó bên dưới chúng ta sẽ hủy thực hiện những thay đổi đó.
+Chúng ta cũng có thể thực hiện tương tự với các tệp đã sửa đổi, chẳng hạn như main.js và hủy thực hiện commit, như ở trên chúng ta có chữ M màu xanh lá cây để sửa đổi và sau đó bên dưới chúng ta sẽ hủy thực hiện những thay đổi đó.
 
 ![](../../Days/Images/Day39_Git20.png)
 
@@ -147,7 +147,7 @@ Ví dụ: hãy xóa tệp quan trọng nhất trong thư mục của chúng ta, 
 
 ![](../../Days/Images/Day39_Git24.png)
 
-Bây giờ, không còn readme.md trong thư mục làm việc của chúng tôi. Chúng ta có thể đã sử dụng `git rm readme.md` và nó sẽ được phản ánh trong cơ sở dữ liệu git. Chúng ta cũng hãy xóa nó khỏi đây để mô phỏng việc nó bị xóa hoàn toàn.
+Bây giờ, không còn readme.md trong thư mục làm việc của chúng ta. Chúng ta có thể đã sử dụng `git rm readme.md` và nó sẽ được phản ánh trong cơ sở dữ liệu git. Chúng ta cũng hãy xóa nó khỏi đây để mô phỏng việc nó bị xóa hoàn toàn.
 
 ![](../../Days/Images/Day39_Git25.png)
 

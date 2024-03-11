@@ -26,11 +26,11 @@ Nói chung, ít nhất là trên các máy trạm của nhà phát triển, tôi
 
 ![](../../Days/Images/Day16_Linux1.png)
 
-Bây giờ chúng ta đã cập nhật Ubuntu VM với các bản cài đặt mới nhất. Bây giờ chúng tôi muốn cài thêm một số phần mềm ở đây.
+Bây giờ chúng ta đã cập nhật Ubuntu VM với các bản cài đặt mới nhất. Bây giờ chúng ta muốn cài thêm một số phần mềm ở đây.
 
 Hãy chọn `figlet` - một chương trình tạo biểu ngữ văn bản.
 
-Nếu chúng tôi nhập `figlet` trong terminal, bạn sẽ thấy rằng chúng ta chưa cài đặt nó trên hệ thống của mình.
+Nếu chúng ta nhập `figlet` trong terminal, bạn sẽ thấy rằng chúng ta chưa cài đặt nó trên hệ thống của mình.
 
 ![](../../Days/Images/Day16_Linux2.png)
 
@@ -92,19 +92,19 @@ Trên Windows, bạn có ổ C: và đó là thứ mà chúng ta coi là gốc. 
 
 ![](../../Days/Images/Day16_Linux13.png)
 
-- `/lib` - Chúng tôi đã đề cập rằng `/bin` là nơi chứa các tệp nhị phân và tệp thực thi của chúng tôi, và `/lib` là nơi bạn sẽ tìm thấy các thư viện dùng chung cho các tệp đó.
+- `/lib` - Chúng ta đã đề cập rằng `/bin` là nơi chứa các tệp nhị phân và tệp thực thi, và `/lib` là nơi bạn sẽ tìm thấy các thư viện dùng chung cho các tệp đó.
 
 ![](../../Days/Images/Day16_Linux14.png)
 
-- `/media` - Đây là nơi chúng tôi sẽ tìm thấy các thiết bị di động.
+- `/media` - Đây là nơi chúng ta sẽ tìm thấy các thiết bị di động.
 
 ![](../../Days/Images/Day16_Linux15.png)
 
-- `/mnt` - Đây là điểm gắn kết tạm thời. Chúng tôi sẽ đề cập sâu hơn trong phần tiếp theo về lưu trữ.
+- `/mnt` - Đây là điểm gắn kết tạm thời. Chúng ta sẽ đề cập sâu hơn trong phần tiếp theo về lưu trữ.
 
 ![](../../Days/Images/Day16_Linux16.png)
 
-- `/opt` - Optional software packages (gói phần mềm tùy chọn). Bạn sẽ nhận thấy ở đây rằng chúng tôi có một số phần mềm virtual box và vagrant được lưu trữ ở đây.
+- `/opt` - Optional software packages (gói phần mềm tùy chọn). Bạn sẽ nhận thấy ở đây rằng chúng ta có một số phần mềm virtual box và vagrant được lưu trữ ở đây.
 
 ![](../../Days/Images/Day16_Linux17.png)
 
@@ -128,15 +128,15 @@ Trên Windows, bạn có ổ C: và đó là thứ mà chúng ta coi là gốc. 
 
 ![](../../Days/Images/Day16_Linux22.png)
 
-- `/usr` - Nếu chúng tôi với tư cách là người dùng đã cài đặt các gói phần mềm, gói phần mềm đó thường sẽ được cài đặt ở vị trí `/usr/bin`.
+- `/usr` - Nếu chúng ttaôi với tư cách là người dùng đã cài đặt các gói phần mềm, gói phần mềm đó thường sẽ được cài đặt ở vị trí `/usr/bin`.
 
 ![](../../Days/Images/Day16_Linux23.png)
 
-- `/var` - Các ứng dụng của chúng tôi được cài đặt trong thư mục `bin`. Chúng tôi cần một nơi nào đó để lưu trữ tất cả các tệp logs, đó chính là `/var`
+- `/var` - Các ứng dụng của chúng ta được cài đặt trong thư mục `bin`. Chúng ta cần một nơi nào đó để lưu trữ tất cả các tệp logs, đó chính là `/var`
 
 ## Lưu trữ (Storage)
 
-Khi đề cập tới một hệ thống Linux hoặc bất kỳ hệ thống nào, chúng ta có thể muốn biết các ổ đĩa có sẵn và chúng tôi có bao nhiêu dung lượng trống trên các đĩa đó. Một vài lệnh sau đây giúp xác định và sử dụng cũng như quản lý bộ lưu trữ.
+Khi đề cập tới một hệ thống Linux hoặc bất kỳ hệ thống nào, chúng ta có thể muốn biết các ổ đĩa có sẵn và chúng ta có bao nhiêu dung lượng trống trên các đĩa đó. Một vài lệnh sau đây giúp xác định và sử dụng cũng như quản lý bộ lưu trữ.
 
 - `lsblk` Liệt kê các thiết bị khối (List Block devices). `sda` là đĩa vật lý của chúng ta và sau đó `sda1, sda2, sda3` là các phân vùng của chúng ta trên đĩa đó.
 
@@ -156,7 +156,7 @@ Nếu bạn không muốn unmount ổ đĩa đó và bạn sẽ sử dụng nó 
 
 Sau khi bạn chỉnh sửa tệp cấu hình `fstab`, bạn có thể kiểm tra hoạt động bằng lệnh `sudo mount -a` nếu không có lỗi thì các thay đổi của bạn sẽ vẫn ở đó dù khởi động lại hệ thống.
 
-Chúng tôi sẽ đề cập đến cách bạn chỉnh sửa tệp bằng trình soạn thảo văn bản trong ngày hôm sau
+Chúng ta sẽ đề cập đến cách bạn chỉnh sửa tệp bằng trình soạn thảo văn bản trong ngày hôm sau
 
 ## Tài liệu tham khảo
 

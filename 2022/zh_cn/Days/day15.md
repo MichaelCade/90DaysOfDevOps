@@ -1,208 +1,190 @@
 ---
-title: '#90DaysOfDevOps - Linux Commands for DevOps (Actually everyone) - Day 15'
+title: '#90DaysOfDevOps - DevOps 中的Linux命令 (通用) - 第十五天'
 published: false
-description: 90DaysOfDevOps - Linux Commands for DevOps (Actually everyone)
+description: 90DaysOfDevOps - DevOps 中的Linux命令 (通用)
 tags: "devops, 90daysofdevops, learning"
 cover_image: null
 canonical_url: null
 id: 1048834
 ---
-## Linux Commands for DevOps (Actually everyone)
+## DevOps 中的Linux命令 (通用)
 
-I mentioned it [yesterday](day14.md) that we are going to be spending a lot of time in the terminal with some commands to get stuff done. 
+我[昨天](day14.md)提到，我们将在终端上花费大量时间使用一些命令来完成工作。
 
-I also mentioned that with our vagrant provisioned VM we can use `vagrant ssh` and gain access to our box. You will need to be in the same directory as we provisioned it from.
+我还提到，通过我们的vagran提供的VM，我们可以使用`vagrant ssh`访问我们的盒子。你需要位于我们预配它的同一目录中。
 
-For SSH you won't need the username and password, you will only need that if you decide to login to the Virtual Box console. 
+对于 SSH，你不需要用户名和密码，只有在您决定登录Virtual Box控制台时才需要用户名和密码。
 
-This is where we want to be as per below: 
+这就是我们想要的地方，如图下所示：
 
-![](Images/Day15_Linux1.png)
+![](../../Days/Images/Day15_Linux1.png)
 
-## Commands 
+## 命令 
 
-Obviously I cannot cover all the commands here, there are  pages and pages of documentation that cover these but also if you are ever in your terminal and you just need to understand options to a specific command we have the `man` pages short for manual. We can use this to go through each of the commands we touch on during this post to find out more options for each one. We can run `man man` which will give you the help for manual pages. To escape the man pages you should press `q` for quit. 
+我无法涵盖此处的所有命令，有一页又一页的文档涵盖了这些命令，但是如果你在终端中并且只需要了解特定命令的选项，我们有`man`将手册的页面缩短。我们可以使用它来浏览我们在这篇文章中提到的每个命令，以找出每个命令的更多选项。我们可以运行`man man`它将为你提供手册页的帮助。若要退出手册页，你应该按`q`退出。
 
-![](Images/Day15_Linux2.png)
-![](Images/Day15_Linux3.png)
+![](../../Days/Images/Day15_Linux2.png)
+![](../../Days/Images/Day15_Linux3.png)
 
-`sudo` If you are familar with Windows and the right click `run as administrator` we can think of `sudo` as very much this. When you run a command with this command you will be running it as `root` it will prompt you for the password before running the command. 
+`sudo`如果您熟悉Windows和右键单击`以管理员身份运行`，`sudo`意义与之类似。当你将此命令与你要运行的命令一起使用时，会在运行命令之前提示您输入密码，并以`root`的身份运行命令。
 
-![](Images/Day15_Linux4.png)
+![](../../Days/Images/Day15_Linux4.png)
 
-For one off jobs like installing applications or services you might need that `sudo command` but what if you have several tasks to deal with and you want to live as `sudo` for a while? This is where you can use `sudo su` again the same as `sudo` once entered you will be prompted for your `root` password. In a test VM like ours this is fine but I would find it very hard for us to be rolling around as `root` for prolonged periods, bad things can happen. To get out of this elevated position you simply type in `exit` 
+对于安装应用程序或服务等一次性工作，您可能需要用到`sudo command`，但是如果您有多项任务要处理并且想`sudo`一段时间怎么办？你可以再次使用`sudo su`与使用`sudo`输入`root`密码相同的方法。在像我们这样的测试虚拟机中，这没什么问题。但我发现我们很难四处走动，因为 root 长时间可能会发生不好的事情。要摆脱这个更高的位置，您只需输入`exit`。
 
-![](Images/Day15_Linux5.png)
+![](../../Days/Images/Day15_Linux5.png)
 
-I find myself using `clear` all the time, the `clear` command does exactly what it says it is going to clear the screen of all previous commands, putting your prompt to the top and giving you a nice clean workspace. Windows I think is `cls` in the .mdprompt. 
+我发现自己一直在使用`clear`，`clear`命令完全按照它所说的去做，它将清除所有先前命令的显示内容，将您的提示放在顶部并为您提供一个漂亮干净的工作区。我认为在Windows中的命令提示符（cmd prompt）是`cls`。
 
-![](Images/Day15_Linux6.png)
+![](../../Days/Images/Day15_Linux6.png)
 
-Let's now look at some commands where we can actually create things within our system and then visualise them in our terminal, first of all we have `mkdir` this will allow us to create a folder in our system. With the following command we can create a folder in our home directory called Day15 `mkdir Day15`
+现在让我们看一些命令，我们可以在其中实际创建系统内容，然后在终端中可视化它们，首先，我们有`mkdir`这将允许我们在系统中创建一个文件夹。使用以下命令，我们可以在主目录中创建一个名为 Day15 `mkdir Day15`的文件夹。
 
-![](Images/Day15_Linux7.png)
+![](../../Days/Images/Day15_Linux7.png)
 
-With `cd` this allows us to change directory, so for us to move into our newly created directory we can do this with `cd Day15` tab can also be used to autocomplete the directory available. If we want to get back to where we started we can use `cd ..`
+有了`cd`，我们可以更改目录，因此对于我们移动到新创建的目录。我们可以使用tab用于自动完成可用的目录`cd Day15`。如果我们想回到我们开始的地方，我们可以使用`cd ..`。
 
-![](Images/Day15_Linux8.png)
+![](../../Days/Images/Day15_Linux8.png)
 
-`rmdir` allows for us to remove the directory, if we run `rmdir Day15` then the folder will be removed (note that this will only work if you have nothing in the folder)
+`rmdir`允许我们删除目录，如果我们运行`rmdir Day15`，那么该文件夹将被删除（注意：这仅在文件夹中没有任何内容时才有效）
 
-![](Images/Day15_Linux9.png)
+![](../../Days/Images/Day15_Linux9.png)
 
-I am sure we have all done it where we have navigated to the depths of our file system to a directory and not known where we are. `pwd` gives us the print out of the working directory, pwd as much as it looks like password it stands for print working directory. 
+我敢肯定，我们都在导航到文件系统深处的目录并且不知道我们在哪里。`pwd`为我们提供了工作目录的打印输出，PWD就像密码的缩写，它代表打印工作目录。
 
-![](Images/Day15_Linux10.png)
+![](../../Days/Images/Day15_Linux10.png)
 
-We know how to create folders and directories but how do we create files? We can create files using the `touch` command if we were to run `touch Day15` this would create a file. Ignore `mkdir` we are going see this again later.
+我们知道了如何创建文件夹和目录，但如何创建文件？如果我们运行`touch Day15`，我们将使用`touch`命令创建文件。忽略`mkdir`，稍后将再次看到这个命令。
 
-![](Images/Day15_Linux11.png)
+![](../../Days/Images/Day15_Linux11.png)
 
-`ls` I can put my house on this, you will use this command so many times, this is going to list the all the files and folders in the current directory. Let's see if we can see that file we just created. 
+`ls`我很肯定，你会多次使用这个命令，这将列出当前目录中的所有文件和文件夹。让我们看看我们是否可以看到我们刚刚创建的文件。
 
-![](Images/Day15_Linux12.png)
+![](../../Days/Images/Day15_Linux12.png)
 
-How can we find files on our Linux system? `locate` is going to allow us to search our file system. If we use `locate Day15` it will report back that location of the file. Bonus round is that if you know that the file does exist but you get a blank result then run `sudo updatedb` which will index all the files in the file system then run your `locate` again. If you do not have `locate` available to you, you can install it using this command `sudo apt install mlocate` 
+我们如何在Linux系统上找到文件？`locate`将允许我们搜索我们的文件系统。如果我们使用它`locate Day15`，它将报告文件的位置。如果您知道该文件确实存在，但得到一个空白结果，则可以运行`sudo updatedb`将再次索引文件系统中的所有你的`locate`文件。如果您没有`locate`，可以使用此命令`sudo apt install mlocate`安装它
 
-![](Images/Day15_Linux13.png)
+![](../../Days/Images/Day15_Linux13.png)
 
-What about moving files from one location to another? `mv` is going to allow you to move your files. Example `mv Day15 90DaysOfDevOps` will move your file to the 90DaysOfDevOps folder. 
+将文件从一个位置移动到另一个位置该怎么做？`mv`将允许你移动文件。示例：`mv Day15 90DaysOfDevOps`将文件移动到 90DaysOfDevOps 文件夹。
 
-![](Images/Day15_Linux14.png)
+![](../../Days/Images/Day15_Linux14.png)
 
-We have moved our file but what if we want to rename it now to something else? We can do that using the `mv` command again... WOT!!!? yep we can simply use `mv Day15 day15` to change to upper case or we could use `mv day15 AnotherDay` to change it altogether, now use `ls` to check the file. 
+我们已经移动了文件，但是如果我们现在想将其重命名怎么办？我们可以再次使用该`mv`命令来执行此操作...是的，我们可以简单地用`mv Day15 day15`更改为大写，或者我们可以完全`mv day15 AnotherDay`更改它，现在用`ls`检查文件。
 
-![](Images/Day15_Linux15.png)
+![](../../Days/Images/Day15_Linux15.png)
 
-Enough is enough, let's now get rid (delete)of our file and maybe even our directory if we have one created. `rm` simply `rm AnotherDay` will remove our file. We will also use quite a bit `rm -R` which will recursively work through a folder or location. We might also use `rm -R -f` to force the removal of all of those files. Spoiler if you run `rm -R -f /` add sudo to it and you can say goodbye to your system....! 
+现在让我们摆脱（删除）我们的文件，甚至我们的目录（如果我们创建了一个）。`rm AnotherDay`会删除我们的文件。我们还将经常使用`rm -R`的递归方式处理文件夹或位置。我们还可能使用`rm -R -f`强制删除所有这些文件。如果你运行`rm -R -f /`添加sudo，你可以说和你的系统说再见....！
 
-![](Images/Day15_Linux16.png)
+![](../../Days/Images/Day15_Linux16.png)
 
-We have looked at moving files around but what if I just want to copy files from one folder to another, simply put its very similar to the `mv` command but we use `cp` so we can now say `cp Day15 Desktop` 
+我们已经了解移动文件，但是如果我只想将文件从一个文件夹复制到另一个文件夹，与`mv`命令非常相似，但我们使用`cp`，因此我们现在可以用`cp Day15 Desktop`。
 
-![](Images/Day15_Linux17.png)
+![](../../Days/Images/Day15_Linux17.png)
 
-We have created folders and files but we haven't actually put any contents into our folder, we can add contents a few ways but an easy way is `echo` we can also use `echo` to print out a lot of things in our terminal, I personally use echo a lot to print out system variables to know if they are set or not at least. we can use `echo "Hello #90DaysOfDevOps" > Day15` and this will add this to our file. We can also append to our file using `echo "Commands are fun!" >> Day15` 
+我们已经创建了文件夹和文件，但我们没有将任何内容放入我们的文件夹中，我们可以通过几种方式添加内容，但一个简单的方法是`echo`我们还可以用`echo`在我们的终端中打印出很多东西。我经常使用echo来打印出系统变量，以了解它们是否被设置。我们可以使用`echo "Hello #90DaysOfDevOps" > Day15`，这会将其添加到我们的文件中。我们还可以使用以下命令`echo "Commands are fun!" >> Day15`附加到我们的文件。
 
-![](Images/Day15_Linux18.png)
+![](../../Days/Images/Day15_Linux18.png)
 
-Another one of those commands you will use a lot! `cat` short for concatenate. We can use `cat Day15` to see the contents inside the file. Great for quickly reading those configuration files. 
+您将经常使用其中的另一个命令！`cat`是连接词（concatenate）的缩写。我们可以用它来`cat Day15`查看文件内的内容。非常适合快速读取配置文件。
 
-![](Images/Day15_Linux19.png)
+![](../../Days/Images/Day15_Linux19.png)
 
-If you have a long complex configuration file and you want or need to find something fast in that file vs reading every line then `grep` is your friend, this will allow us to search your file for a specific word using `cat Day15 | grep "#90DaysOfDevOps"`
+如果你有一个很长的复杂配置文件，并且你希望或需要在该文件中找到快速内容而不是阅读每一行，那么`grep`就是你的朋友。我们能够使用`cat Day15 | grep "#90DaysOfDevOps"`。
 
-![](Images/Day15_Linux20.png)
+![](../../Days/Images/Day15_Linux20.png)
 
-If you are like me and you use that `clear` command a lot then you might miss some of the commands previously ran, we can use `history` to find out all those commands we have run prior. `history -c` will remove the history. 
+如果您像我一样并且经常使用`clear`命令，那么您可能会丢失之前运行的一些命令，我们可以用来`history`找出我们之前运行过的所有`clear`命令。`history -c`将删除历史记录。
 
-When you run `history` and you would like to pick a specific command you can use `!3` to choose the 3rd command in the list. 
+当您运行`history`并想要选择一个特定命令时，您可以使用该命令选择列表中的第三个命令`!3`。
 
-You are also able to use `history | grep "Command` to search for something specific. 
+您还可以使用`history | grep "Command"`来搜索特定内容。
 
-On servers to trace back when was a command executed, it can be useful to append the date and time to each command in the history file.
+在服务器上追溯已执行的命令，将日期和时间附加到历史记录文件的每个命令中可能很有用。
 
-The following system variable controls this behaviour:
+以下系统变量控制此行为：
 ```
 HISTTIMEFORMAT="%d-%m-%Y %T "
 ```
-You can easily add to your bash_profile:
+您可以轻松地添加到bash_profile：
 ```
 echo 'export HISTTIMEFORMAT="%d-%m-%Y %T "' >> ~/.bash_profile
 ```
-So as useful to allow the history file grow bigger:
+为了将历史记录文件变大：
 
 ```
 echo 'export HISTSIZE=100000' >> ~/.bash_profile
 echo 'export HISTFILESIZE=10000000' >> ~/.bash_profile
 ```
 
-![](Images/Day15_Linux21.png)
+![](../../Days/Images/Day15_Linux21.png)
 
-Need to change your password? `passwd` is going allow us to change our password. Note that when you add your password in like this when it is hidden it will not be shown in `history` however if your command has `-p PASSWORD` then this will be visible in your `history`. 
+需要更改密码？`passwd`允许我们更改密码。请注意，当你像这样添加隐藏密码时，它将不会显示在`history`。如果你的命令有`-p PASSWORD`，那么这将显示在你的`history`。
 
-![](Images/Day15_Linux22.png)
+![](../../Days/Images/Day15_Linux22.png)
 
-We might also want to add new users to our system, we can do this with `useradd` we have to add the user using our `sudo` command, we can add a new user with `sudo useradd NewUser`
+我们可能还想在系统添加新用户，我们可以用到`useradd`。我们必须使用我们的`sudo`命令添加用户，我们可以添加一个新用户`sudo useradd NewUser`。
 
-![](Images/Day15_Linux23.png)
+![](../../Days/Images/Day15_Linux23.png)
 
-Creating a group again requires `sudo` and we can use `sudo groupadd DevOps` then if we want to add our new user to that group we can do this by running `sudo usermod -a -G DevOps` `-a` is add and `-G` is group name. 
+再次创建一个组需要用到`sudo`，我们可以使用`sudo groupadd DevOps`。如果我们想将新用户添加到该组，我们可以通过运行`sudo usermod -a -G DevOps`来做到这一点。`-a`是添加，`-G`是组名。
 
-![](Images/Day15_Linux24.png)
+![](../../Days/Images/Day15_Linux24.png)
 
-How do we add users to the `sudo` group, this would be a very rare occassion for this to happen but in order to do this it would be `usermod -a -G sudo NewUser` 
+我们如何将用户添加到`sudo`组中。这是非常罕见的情况，但要做到这一点可以使用`usermod -a -G sudo NewUser`。
 
-### Permissions 
+### 权限 
 
-read, write and execute are the permissions we have on all of our files and folders on our Linux system. 
+读取、写入和执行是我们对Linux系统上所有文件和文件夹的权限。
 
-A full list: 
+完整列表：
+- 0 = 无 `---`
+- 1 = 仅执行 `--X`
+- 2 = 仅写入 `-W-`
+- 3 = 写入和执行 `-WX`
+- 4 = 只可读 `R--`
+- 5 = 可读和执行 `R-X`
+- 6 = 可读和写入 `RW-`
+- 7 = 可读、写入和执行 `RWX`
 
-- 0 = None `---`
-- 1 = Execute only `--X`
-- 2 = Write only `-W-`
-- 3 = Write & Exectute `-WX`
-- 4 = Read Only `R--`
-- 5 = Read & Execute `R-X`
-- 6 = Read & Write `RW-`
-- 7 = Read, Write & Execute `RWX`
+你还将看到`777`或`775`，这些数字表示上述列表相同的含义，但每个数字代表**用户 - 组 - 每个人**的权限。
 
-You will also see `777` or `775` and these represent the same numbers as the list above but each one represents **User - Group - Everyone**
+让我们看一下我们的文件。`ls -al Day15`，你可以看到上面提到的3个组，用户和组有读写，但每个人都只有读。
 
-Let's take a look at our file. `ls -al Day15` you can see the 3 groups mentioned above, user and group has read & write but everyone only has read. 
+![](../../Days/Images/Day15_Linux25.png)
 
-![](Images/Day15_Linux25.png)
+我们可以通过`chmod`更改此设置。如果你在系统上创建大量二进制文件，并且你需要提供执行这些二进制文件的能力，你可能会发现自己需要这样做。`chmod 750 Day15`，现在运行`ls -al Day15`。如果你想运行整个文件夹，那么你可以使用`-R`递归地做到这一点。
 
-We can change this using `chmod` you might find yourself doing this if you are creating binaries a lot on your systems as well and you need to give the ability to execute those binaries. `chmod 750 Day15` now run `ls -al Day15` if you want to run this for a whole folder then you can use `-R` to recursively do that. 
+![](../../Days/Images/Day15_Linux26.png)
 
-![](Images/Day15_Linux26.png)
+如何更改文件的所有者？我们可以使用`chown`。如果我们想将Day15的所有权从用户`vagrant`更改为`NewUser`，我们可以再次用到`sudo chown NewUser Day15`，并根据实际情况使用`-R`。
 
-What about changing the owner of the file? We can use `chown` for this operation, if we wanted to change the ownership of our `Day15` from user `vagrant` to `NewUser` we can run `sudo chown NewUser Day15` again `-R` can be used. 
+![](../../Days/Images/Day15_Linux27.png)
 
-![](Images/Day15_Linux27.png)
+当你有一个只需要特定的输出时，你会用到`awk`。比如运行`who`时，我们会得到包含信息的行，但也许我们只需要名称。我们可以运行`who | awk '{print $1}'`以获取第一列的列表。
 
-A command that you will come across is `awk` where this comes in real use is when you have an output that you only need specific data from. like running `who` we get lines with information, but maybe we only need the names. We can run `who | awk '{print $1}'` to get just a list of that first column. 
+![](../../Days/Images/Day15_Linux28.png)
 
-![](Images/Day15_Linux28.png)
+如果你希望从标准输入中读取数据流，并生成和执行命令行。这意味着它可以接受命令的输出并将其作为另一个命令的输入，`xargs`是此一个有用的工具。例如，我想要系统上所有Linux用户帐户的列表。运行`cut -d: -f1 < /etc/passwd`并获取我们在下面看到的长列表。
 
-If you are looking to read streams of data from standard input, then generates and executes command lines; meaning it can take output of a command and passes it as argument of another command. `xargs` is a useful tool for this use case. If for example I want a list of all the Linux user accounts on the system I can run. `cut -d: -f1 < /etc/passwd` and get the long list we see below. 
+![](../../Days/Images/Day15_Linux29.png)
 
-![](Images/Day15_Linux29.png)
+如果我想压缩该列表，我可以通过`cut -d: -f1 < /etc/passwd | sort | xargs`，使用`xargs`来实现。
 
-If I want to compact that list I can do so by using `xargs` in a command like this `cut -d: -f1 < /etc/passwd | sort | xargs` 
+![](../../Days/Images/Day15_Linux30.png)
 
-![](Images/Day15_Linux30.png)
+我也没有介绍`cut`，它允许我们从文件的每一行中删除部分内容。它可用于按字节位置、字符和字段剪切行的一部分。`cut -d " " -f 2 list.txt`命令允许我们删除我们拥有的第一个字母并仅显示我们的数字。这里有很多组合可以使用此命令，我确信我花了太多时间尝试使用此命令。而我可以手动提取数据，更快地完成这一操作。
 
-I didn't mention the `cut` command either, this allows us to remove sections from each line of a file. It can be used to cut parts of a line by byte position, character and field. The `cut -d " " -f 2 list.txt` command allows us to remove that first letter we have and just display our numbers. There are so many combinations that can be used here with this command, I am sure I have spent too much time trying to use this command when I could have extracted data quicker manually. 
-
-![](Images/Day15_Linux31.png)
+![](../../Days/Images/Day15_Linux31.png)
 
 Also to note if you type a command and you are no longer with happy with it and you want to start again just hit control + c and this will cancel that line and start you fresh. 
+还要注意的是，如果你输入一个命令并且不再满意它，你想重新开始，只需按下`control + c`，这将取消该行并重新开始。
 
-## Resources 
+## 相关资料 
 
 - [Learn the Linux Fundamentals - Part 1](https://www.youtube.com/watch?v=kPylihJRG70)
 - [Linux for hackers (don't worry you don't need be a hacker!)](https://www.youtube.com/watch?v=VbEx7B_PTOE)
 
-See you on [Day16](day16.md)
+[第十六天](day16.md)见
 
-This is a pretty heavy list already but I can safely say that I have used all of these commands in my day to day, be it from an administering Linux servers or in my Linux Desktop, it is very easy when you are in Windows or macOS to navigate the UI but in Linux Servers they are not there, everything is done through the terminal. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+这是一个相当长的列表，但我可以肯定地说，我在日常中使用了所有这些命令。无论是从管理Linux服务器还是在我的Linux桌面上。在Windows或macOS中，你有图像界面。但在Linux服务器中，一切都是通过终端完成的。

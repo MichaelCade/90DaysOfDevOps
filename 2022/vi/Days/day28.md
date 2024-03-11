@@ -16,7 +16,7 @@ Nhưng việc bắt đầu tìm hiểu về điện toán đám mây sẽ là m�
 
 ![](../../Days/Images/Day28_Cloud1.png)
 
-Vậy các dịch vụ public cloud (đám mây công cộng) có yêu cầu tư duy DevOps không? Câu trả lời của tôi ở đây là không, nhưng để thực sự tận dụng được những lợi thế của điện toán đám mây và để tránh những hoá đơn khổng lồ cho dịch vụ điện todayán, việc nghĩ đến DevOps và Cloud cùng với nhau là điều rất quan trọng.
+Vậy các dịch vụ public cloud (đám mây công cộng) có yêu cầu tư duy DevOps không? Câu trả lời của tôi ở đây là không, nhưng để thực sự tận dụng được những lợi thế của điện toán đám mây và để tránh những hoá đơn khổng lồ cho dịch vụ điện toán, việc nghĩ đến DevOps và Cloud cùng với nhau là điều rất quan trọng.
 
 Nếu chúng ta xem xét ý nghĩa của public cloud từ góc độ high level, thì có thể nói nó loại bỏ trách nhiệm quản lý các máy chủ và giúp chúng ta tập trung hơn vào những khía cạnh khác quan trọng hơn đó là ứng dụng và người sử dụng. Xét cho cùng, đám mây công cộng cũng chỉ là máy tính của người khác. 
 
@@ -90,7 +90,7 @@ Trước khi chúng ta đi vào một nhà cung cấp cụ thể, tôi đã tạ
 
 [Link to Twitter Poll](https://twitter.com/MichaelCade1/status/1486814904510259208?s=20&t=x2n6QhyOXSUs7Pq0itdIIQ)
 
-Bất kỳ nhà cung cấp nào nhận được tỷ lệ phần trăm cao nhất, chúng tôi sẽ tìm hiểu sâu hơn về cách dịch vụ của nhà cung cấp đó. Tôi nghĩ điều quan trọng cần đề cập là các dịch vụ từ các nhà cung cấp này đều khá giống nhau, đó là lý do tại sao tôi nói là hãy bắt đầu với một nhà cung cấp bất kì. Tôi nhận thấy rằng, khi biết nền tảng của một nhà cung cấp như cách tạo máy ảo, thiết lập mạng,... thì tôi đã có thể sử dụng dịch vụ của các nhà cung cấp khác và có thể nhanh chóng sử dụng chúng.
+Bất kỳ nhà cung cấp nào nhận được tỷ lệ phần trăm cao nhất, chúng ta sẽ tìm hiểu sâu hơn về cách dịch vụ của nhà cung cấp đó. Tôi nghĩ điều quan trọng cần đề cập là các dịch vụ từ các nhà cung cấp này đều khá giống nhau, đó là lý do tại sao tôi nói là hãy bắt đầu với một nhà cung cấp bất kì. Tôi nhận thấy rằng, khi biết nền tảng của một nhà cung cấp như cách tạo máy ảo, thiết lập mạng,... thì tôi đã có thể sử dụng dịch vụ của các nhà cung cấp khác và có thể nhanh chóng sử dụng chúng.
 
 Dù như thế nào, tôi cũng sẽ chia sẻ một số tài nguyên **MIỄN PHÍ** về cả ba nhà cung cấp lớn nhất.
 

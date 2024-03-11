@@ -34,7 +34,7 @@ Là một phần của danh sách dài các ứng dụng có sẵn trong arkade,
 
 ![](../../Days/Images/Day51_Kubernetes3.png)
 
-Chúng tôi cũng sẽ cần kubectl như một phần của các công cụ, vì vậy bạn cũng có thể cài đặt nó thông qua arkade hoặc tôi tin rằng theo như tài liệu của minikube, nó cũng được cài đặt thông qua câu lệnh curl ở bên trên. Chúng ta sẽ nói về kubectl ở phần sau của bài viết.
+Chúng ta cũng sẽ cần kubectl như một phần của các công cụ, vì vậy bạn cũng có thể cài đặt nó thông qua arkade hoặc tôi tin rằng theo như tài liệu của minikube, nó cũng được cài đặt thông qua câu lệnh curl ở bên trên. Chúng ta sẽ nói về kubectl ở phần sau của bài viết.
 
 ### Bắt đầu và chạy Kubernetes cluster
 
