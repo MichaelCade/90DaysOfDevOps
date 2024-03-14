@@ -4,17 +4,23 @@
 
 This note accompanies my contribution for 2024 edition of 90DaysOfDevOps, which consists of:
 
-- A video: [Link]()
-- A presentation deck for reference: [Link]()
+- A video: [Link coming..]()
+- A presentation deck for reference: [Link coming..]()
 - This markdown file and a summary below, and a blog post where I have more details.
 
 ## What is Workload Identity Federation?
 
-WIF is..
+Workload Identity Federation allows you to access Microsoft Entra protected resources without needing to manage secrets. It is based on Open ID Connect, and supports specific scenarios like federation with GitHub and Azure DevOps, as well as a range of other documented scenarios.
+
+The way that this works, is that you use workload identity federation to configure a user-assigned managed identity or app registration in Microsoft Entra ID to trust tokens from an external identity provider (IdP).
+
+[Read more about Workload Identity Federation at Microsoft Learn](https://learn.microsoft.com/en-us/entra/workload-id/workload-identity-federation?WT.mc_id=linkedin&sharingId=EM-MVP-5001872)
 
 ## What are Service Connections?
 
-Service Connections..
+Service Connections in Azure DevOps can be used to connect to resources in pipelines, and by using an Azure Resource Manager connection with Workload Identity Federation, we can basically connect to any Entra ID protected API and resource.
+
+[Read more about Service Connections using Azure Resource Manager with Workload Identity Federation](https://learn.microsoft.com/nb-no/azure/devops/pipelines/library/connect-to-azure?view=azure-devops&WT.mc_id=linkedin&sharingId=EM-MVP-5001872)
 
 ## About Microsoft APIs protected by Entra ID
 
