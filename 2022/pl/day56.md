@@ -58,7 +58,7 @@ With Infrastructure as Code we have the ability to automate all these tasks end 
 This can be used in almost all platforms, virtualisation, cloud based workloads and also cloud-native infrastructure such as Kubernetes and containers. 
 
 ### Infrastructure Provisioning 
-Not all IaC cover all of the below, You will find that the tool we are going to be using during this section only really covers the the first 2 areas of below; Terraform is that tool we will be covering and this allows us to start from nothing and define in code what our infrastructure should look like and then deploy that, it will also enable us to manage that infrastructure and also initially deploy an application but at that point it is going to lose track of the application which is where the next section comes in and something like Ansible as a configuration management tool might work better on that front. 
+Not all IaC cover all of the below, You will find that the tool we are going to be using during this section only really covers the first 2 areas of below; Terraform is that tool we will be covering and this allows us to start from nothing and define in code what our infrastructure should look like and then deploy that, it will also enable us to manage that infrastructure and also initially deploy an application but at that point it is going to lose track of the application which is where the next section comes in and something like Ansible as a configuration management tool might work better on that front. 
 
 Without jumping ahead tools like chef, puppet and ansible are best suited to deal with the initial application setup and then to manage those applications and their configuration. 
 

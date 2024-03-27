@@ -30,7 +30,7 @@ When you have the converted file we will want to add
 - Front Cover 
 - Possibly look at either using readme.md and the blog to introduce 
 - A table of contents
-- Special Thanks & Contributers 
+- Special Thanks & Contributors 
 - Repository Info 
 
 ### Markdown to PDF 
