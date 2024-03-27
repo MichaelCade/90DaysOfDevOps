@@ -30,7 +30,7 @@ International speaker, holds Philosophy B.A & M.A degrees, plays the piano and t
 
 <br/>
 
-## DRP Resoruces
+## DRP Resources
 
 #### Code examples
 

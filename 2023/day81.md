@@ -85,7 +85,7 @@ There's much more to what we can see in Prometheus. If you have this up in your 
 Hit *ctrl+c* to exist the dashboard process.
 
 ### Grafana
-Grafana is an open-source and multi-platform analystics and visualization system that can be deployed alongside Prometheus to help us visually chart our apps and infra performance.
+Grafana is an open-source and multi-platform analytics and visualization system that can be deployed alongside Prometheus to help us visually chart our apps and infra performance.
 
 I've already installed the sample addons which contained Grafana. Let's check the services and see that it's there.
 
