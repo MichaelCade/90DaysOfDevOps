@@ -1,5 +1,6 @@
-name: ci 
+name: Web App Deployment
 on:
+  workflow_dispatch:
   push:
     branches:
       - web_app
