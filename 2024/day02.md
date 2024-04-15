@@ -2,7 +2,7 @@ Day 2: The Digital Factory
 =========================
 
 ## Video
-[![Day 2: The Digital Facotry ](https://img.youtube.com/vi/xeX4HGLeJQw/0.jpg)](https://youtu.be/xeX4HGLeJQw?si=CJ75C8gUBcdWAQTR)
+[![Day 2: The Digital Factory ](https://img.youtube.com/vi/xeX4HGLeJQw/0.jpg)](https://youtu.be/xeX4HGLeJQw?si=CJ75C8gUBcdWAQTR)
 
 
 ## About Me

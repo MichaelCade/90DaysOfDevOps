@@ -5,8 +5,7 @@ Welcome to day 72 of the 2024 edition of 90 Days of DevOps!
 Today's session is titled "Infrastructure as Code with Pulumi", and it is led by Scott Lowe.
 
 ## Video
-
-A link to the video will be inserted once the video is published.
+[![Day 72: Infrastructure as Code with Pulumi](https://img.youtube.com/vi/ph-olCjRXQs/0.jpg)](https://www.youtube.com/watch?v=ph-olCjRXQs)
 
 ## Additional Notes
 
