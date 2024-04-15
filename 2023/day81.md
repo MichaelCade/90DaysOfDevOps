@@ -18,7 +18,7 @@ Istio provides details around:
 I have set up specific days to cover deeper observability but, let's get it going and use some tools like:
 - Prometheus
 - Grafana
-- Jaegar
+- Jaeger
 - Kiali 
 
 One consideration is that there are more production and enterprise-ready offerings that absolutely should be explored.
@@ -135,12 +135,12 @@ Go back to where the Istio dashboards are located, and click the Service dashboa
 
 I'll dive more into these details in future days. Kill the dashboard by hitting *ctrl+c*
 
-### Jaegar
-Jaegar is all ready to go. It's an excellent tracing tool to help piece together a trace, which is comprised of multiple spans for a given request flow.
+### Jaeger
+Jaeger is all ready to go. It's an excellent tracing tool to help piece together a trace, which is comprised of multiple spans for a given request flow.
 
 Let's enable the dashboard:
 ```
-istioctl dashboard jaegar
+istioctl dashboard jaeger
 ```
 A new window should pop up with a curious-looking gopher. That gopher is inspecting stuff.
 
@@ -156,10 +156,10 @@ I picked the ratings service which shows me all the spans it's associated with i
 
 All the different traces:
 
-![all_traces_jaegar](images/Day81-5.png)
+![all_traces_jaeger](images/Day81-5.png)
 
 All the different spans within the *ratings* trace:
-![all_spans_jaegar](images/Day81-6.png)
+![all_spans_jaeger](images/Day81-6.png)
 
 
 Ever used wireshark before?
