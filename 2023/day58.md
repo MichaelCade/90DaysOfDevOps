@@ -297,7 +297,7 @@ In the middle (3) we have an overall status of the cluster, and connectivity to 
 
 Clicking the Administrator word in the top left-hand side (above screenshot, 1), you can switch to the Developer mode, which you can see below.
 
-On the the developer homepage screen, you can see straight away you are presented with a rich-deployment options to get up and running, you can deploy Kubernetes Operators for services, Helm Charts, import code from Git which can be built into a container by the cluster, deploy app samples, bring in individual containers, import content from your local machine, and control who can access your projects (Kubernetes namespaces with more features added in).
+On the developer homepage screen, you can see straight away you are presented with a rich-deployment options to get up and running, you can deploy Kubernetes Operators for services, Helm Charts, import code from Git which can be built into a container by the cluster, deploy app samples, bring in individual containers, import content from your local machine, and control who can access your projects (Kubernetes namespaces with more features added in).
 
 ![Red Hat OpenShift - Web Console - Developer Homepage](images/Day58%20-%20OpenShift%20Cluster%20Install/Red%20Hat%20OpenShift%20-%20Web%20Console%20-%20Developer%20Homepage.jpg)
 

@@ -48,7 +48,7 @@ tags can be added at the task level as well so we can get really granular on whe
 
 `tag: always` this will ensure no matter what --tags you are using in your command if something is tagged with the always value then it will always be ran when you run the ansible-playbook command. 
 
-With tags we can also bundle multiple tags together and if we choose to run `ansible-playbook playbook5.yml --tags proxy,web` this will run all of the items with those tags. Obviously in our instance that would mean the same as running the the playbook but if we had multiple other plays then this would make sense. 
+With tags we can also bundle multiple tags together and if we choose to run `ansible-playbook playbook5.yml --tags proxy,web` this will run all of the items with those tags. Obviously in our instance that would mean the same as running the playbook but if we had multiple other plays then this would make sense. 
 
 You can also define more than one tag. 
 

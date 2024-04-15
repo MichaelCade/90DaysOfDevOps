@@ -11,7 +11,7 @@
 
 A universal truth and recurring theme in the DevOps world is automation. From providing infrastructure to testing code to deploying to production, many parts of the DevOps lifecycle get automated already. One popular technology for managing infrastructure and configuration in an automated way is Ansible, but are we fully utilizing its capabilities yet?
 
-This presentation will give a broad overview of Ansible and its architecture and use-cases, before exploring a relatively new feature, Event-driven Ansible (EDA). Analzying applications of event-driven Ansible, participants will see that automated management is nice, but automatic management is awesome, not just regarding DevOps principles, but also in terms of reaction times, the human tendency for minor mistakes, and toil for operators.
+This presentation will give a broad overview of Ansible and its architecture and use-cases, before exploring a relatively new feature, Event-driven Ansible (EDA). Analyzing applications of event-driven Ansible, participants will see that automated management is nice, but automatic management is awesome, not just regarding DevOps principles, but also in terms of reaction times, the human tendency for minor mistakes, and toil for operators.
 
 Participants will get first-hand insights into Ansible, its strengths, weaknesses, and the potential of event-driven automation within the DevOps world.
 
@@ -242,7 +242,7 @@ Jan 11 16:35:29 eda-controller ansible-rulebook[56882]: {'payload': {'foo': 'bar
 'received_at': '2024-01-11T15:35:29.798401Z', 'uuid': '6ebf8dd2-60a2-455a-9383-97b81f535366'}}
 ```
 
-A rule that always evaluates to `true` is not very useful, so let's change the rule to only print the the value of `foo` if the `foo` key is present in the event's payload, and `no foo :(` otherwise:
+A rule that always evaluates to `true` is not very useful, so let's change the rule to only print the value of `foo` if the `foo` key is present in the event's payload, and `no foo :(` otherwise:
 
 ```yaml
 ---

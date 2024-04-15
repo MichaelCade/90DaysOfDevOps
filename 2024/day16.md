@@ -15,7 +15,7 @@
 
 ## Overview
 
-Performance testing has long been a critical part of a DevOps engineer's toolbox, allowing engineers to better understand the systems they build and maintain by simulating varying degrees of traffic at scale. However, existing performance frameworks are often limited in their ability to simulate realistic user scenarios at scale. Additionaly, performance testing frameworks are almost universally infamous for their poor developer/user experience, difficulty in integration with CI/CD and modern cloud environments, and lack of built-in quality reporting options.
+Performance testing has long been a critical part of a DevOps engineer's toolbox, allowing engineers to better understand the systems they build and maintain by simulating varying degrees of traffic at scale. However, existing performance frameworks are often limited in their ability to simulate realistic user scenarios at scale. Additionally, performance testing frameworks are almost universally infamous for their poor developer/user experience, difficulty in integration with CI/CD and modern cloud environments, and lack of built-in quality reporting options.
 
 <b>Simulation frameworks</b> represent the next step in performance testing, delivering on performance frameworks' core value proposition(s) while extending their functionality to embrace new testing techniques and modern developer needs. Simulation frameworks achieve this by:
 
@@ -79,7 +79,7 @@ The majority of performance testing frameworks neglect or are outright incompati
 
 - Having to write custom integration reporting plugins or integrate clunky third-party options in order to publish test results to modern DevOps analytics platforms.
 
-- Having to effectively micromanage deployment to avoid OOM or other compatability issues with CI/CD pipelines or distributed environments like Kubernetes.
+- Having to effectively micromanage deployment to avoid OOM or other compatibility issues with CI/CD pipelines or distributed environments like Kubernetes.
 
 - Having to "guess" appropriate testing configuration values not just for initial testing but after infrastructure or application changes, resulting in significant time wasted manually tweaking tests to get good signal on the impact of changes.
 
@@ -214,7 +214,7 @@ However, the granularity of unit tests can make composing them into meaningful t
 
 ### A|B Testing, Chaos, and Learned Configuration
 
-One of the the most frequent (and awkward) questions engineers encounter when setting up performance testing is - "how should I setup this test"? While existing application analystics can provide insight into how an application performs now, we want to account for unexpected and future scenarios. 
+One of the most frequent (and awkward) questions engineers encounter when setting up performance testing is - "how should I setup this test"? While existing application analytics can provide insight into how an application performs now, we want to account for unexpected and future scenarios. 
 
 Simply setting concurrency to maximum will likely cause the application to fail, but will provide no insight as to where issues <i>begin</i> to arise. Likewise, setting concurrency too low means the application will not be placed under proper stress, resulting in test results delivering no value. This challenge compounds when testing different environments (such as development or staging environments) which may have differing levels of resource allocation.
 
