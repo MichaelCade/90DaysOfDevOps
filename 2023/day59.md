@@ -1,6 +1,6 @@
 # Deploying a Sample Application on Red Hat OpenShift: Handling Security Context Constraints (SCC)
 
-On [Day 58](/day58.md) we finished looking around the developer and administrator interfaces of a newly deployed cluster.
+On [Day 58](day58.md) we finished looking around the developer and administrator interfaces of a newly deployed cluster.
 
 In this submission (Day 59), we will walk through the process of deploying a sample MongoDB application to a newly deployed Red Hat OpenShift cluster. However, this deployment will fail due to the default security context constraints (SCC) in OpenShift. We will explain why the deployment fails, how to resolve the issue, and provide a brief overview of SCC in OpenShift with examples.
 
@@ -473,7 +473,7 @@ If they do need some sort of privilege, then defining tight RBAC and SCC control
 
 In this post, we discussed how the default security context constraints in OpenShift can prevent deployments from running as expected. We provided a solution to the specific issue of running an initContainer as root for a MongoDB application. Understanding and managing SCCs in OpenShift is essential for maintaining secure and compliant applications within your cluster.
 
-On [Day 60](/day60.md)](/day60.md), we will look at OpenShift Projects Creation, Configuration and Governance, for example consuming SCC via the project level, and other features of Red Hat OpenShift.
+On [Day 60](day60.md), we will look at OpenShift Projects Creation, Configuration and Governance, for example consuming SCC via the project level, and other features of Red Hat OpenShift.
 
 ## Resources
 
