@@ -1,6 +1,5 @@
-# Day 32: 90DaysofDevOps
-
-## Cracking Cholera’s Code: Victorian Insights for Today’s Technologist
+# Day 32 - Cracking Cholera’s Code: Victorian Insights for Today’s Technologist
+[![Watch the video](thumbnails/day32.png)](https://www.youtube.com/watch?v=YnMEcjTlj3E)
 
 ### Overview
 

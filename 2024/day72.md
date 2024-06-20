@@ -1,4 +1,5 @@
-# Day 72: Infrastructure as Code with Pulumi
+# Day 72 - Infrastructure as Code with Pulumi
+[![Watch the video](thumbnails/day72.png)](https://www.youtube.com/watch?v=ph-olCjRXQs)
 
 Welcome to day 72 of the 2024 edition of 90 Days of DevOps!
 

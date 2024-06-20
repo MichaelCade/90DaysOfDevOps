@@ -1,4 +1,5 @@
-# Day 79 - 90DaysOfDevops
+# Day 79 - DevEdOps
+[![Watch the video](thumbnails/day79.png)](https://www.youtube.com/watch?v=5-Pa2odaGeg)
 
 ## DevEdOps
 

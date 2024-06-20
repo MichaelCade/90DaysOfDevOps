@@ -1,5 +1,6 @@
-Day 30: How GitHub Builds GitHub with GitHub
-=========================
+# Day 30 - How GitHub delivers GitHub using GitHub
+[![Watch the video](thumbnails/day30.png)](https://www.youtube.com/watch?v=wKC1hTE9G90)
+
 
 Hello!👋
 

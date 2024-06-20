@@ -1,6 +1,5 @@
-# Day 77 - Connect to Microsoft Graph in Azure DevOps using Workload Identity Federation - Jan Vidar Elven
-
-![day77](./Images/day77.png)
+# Day 77 - Connect to Microsoft APIs in Azure DevOps Pipelines using Workload Identity Federation
+[![Watch the video](thumbnails/day77.png)](https://www.youtube.com/watch?v=-KCgEC58PHQ)
 
 This note accompanies my contribution for 2024 edition of 90DaysOfDevOps, which consists of:
 

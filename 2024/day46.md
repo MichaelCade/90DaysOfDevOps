@@ -1,4 +1,5 @@
-# **AWS Systems Manager**
+# Day 46 - Mastering AWS Systems Manager: Simplifying Infrastructure Management
+[![Watch the video](thumbnails/day46.png)](https://www.youtube.com/watch?v=d1ZnS8L85sw)
 
 AWS Systems Manager is a powerful, fully managed service that simplifies operational tasks for AWS and on-premises resources. This centralized platform empowers DevOps professionals to automate operational processes, maintain compliance, and reduce operational costs effectively.
 

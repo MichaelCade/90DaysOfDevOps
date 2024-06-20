@@ -1,4 +1,5 @@
-# Day 21: Advanced Code Coverage with Jenkins, GitHub and API Mocking
+# Day 26 - Advanced Code Coverage with Jenkins and API Mocking
+[![Watch the video](thumbnails/day26.png)](https://www.youtube.com/watch?v=ZBaQ71CI_lI)
 
 Presentation by [Oleg Nenashev](https://linktr.ee/onenashev),
 Jenkins core maintainer, developer advocate and community builder at Gradle

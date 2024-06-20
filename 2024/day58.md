@@ -1,4 +1,5 @@
-# The Reverse Technology Thrust
+# Day 58 -  The Reverse Technology Thrust
+[![Watch the video](thumbnails/day58.png)](https://www.youtube.com/watch?v=tmwjQnSTE5k)
 
 ![](../2024/Images/theReverseTechnologyThrust/CY24-90DevOps_The_Reverse_Technology_Thrust_01.png)
 

@@ -1,5 +1,6 @@
-Using code dependency analysis to decide what to test
-===================
+# Day 15 - Using code dependency analysis to decide what to test
+[![Watch the video](thumbnails/day15.png)](https://www.youtube.com/watch?v=e9kDdUxQwi4)
+
 
 By [Patrick Kusebauch](https://github.com/patrickkusebauch)
 
