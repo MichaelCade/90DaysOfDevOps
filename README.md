@@ -6,11 +6,19 @@
 
 [![RepoRater](https://repo-rater.eddiehub.io/api/badge?owner=MichaelCade&name=90DaysOfDevOps)](https://repo-rater.eddiehub.io/rate?owner=MichaelCade&name=90DaysOfDevOps) [![Website](https://img.shields.io/website?url=https%3A%2F%2Fwww.90daysofdevops.com)](https://www.90daysofdevops.com) [![GitHub Repo stars](https://img.shields.io/github/stars/MichaelCade/90DaysOfDevOps)](https://github.com/MichaelCade/90DaysOfDevOps) [![GitHub Repo stars](https://img.shields.io/github/forks/MichaelCade/90DaysOfDevOps)](https://github.com/MichaelCade/90DaysOfDevOps)  [![GitHub Repo issues](https://img.shields.io/github/issues/MichaelCade/90DaysOfDevOps)](https://github.com/MichaelCade/90DaysOfDevOps)  
 
-This repository is used to document my journey on getting a better foundational knowledge of "DevOps". I will be starting this journey on the 1st January 2022 but the idea is that we take 90 days which just so happens to be January 1st to March 31st.
+This repository started as a way to document my journey on getting a better foundational knowledge of "DevOps". It was started on the 1st January 2022 and ran to the 31st March 2022 which is 90 Days! 
 
-The reason for documenting these days is so that others can take something from it and also hopefully enhance the resources.
+What started off as a learning in public project has quickly become a structured way of learning the foundations of DevOps principles, processes and tooling. Maybe you can help contribute some resources you have found useful to the project. 
 
-This will **not cover all things** "DevOps" but it will cover the areas that I feel will benefit my learning and understanding overall.
+2022 - Written content by myself but then translated and corrected and enhanced by the community 
+2023 - Focus on Security and other topics we did not get to in 2022, Perspectives from communinty subject matter experts. 
+2024 - Community Sessions by the community, 91 Sessions shared on YouTube. Different Media with intent to build out resources here as well. 
+
+2025 - Where should we take this next? Are we finished? 
+
+This will **not cover all things** "DevOps" but it will cover some of the areas that will benefit your learning and understanding overall in this space. The encouragement here is to read & watch the content, be curious, provide feedback and discuss within the community your findings.
+
+The project is not a sponsored operation by any vendors and everything is accessible using free, community and open source software. 
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N33YRCS)
 
@@ -18,7 +26,7 @@ This will **not cover all things** "DevOps" but it will cover the areas that I f
 
 ![GitHub Repo Stars](https://img.shields.io/github/stars/michaelcade/90daysofdevops?style=social?)
 
-The two images below will take you to the 2022 and 2023 edition of the learning journey. 
+The to images below will take you to the 2022, 2023 and 2024 editions of the learning journey. 
 
 <div style="display: flex; justify-content: center; align-items: center;">
 
@@ -48,15 +56,7 @@ The two images below will take you to the 2022 and 2023 edition of the learning 
 
 </div>
 
-
-
-## 
-
-From this year we have built website for 90DaysOfDevops Challenge :rocket:	:technologist: - [Link for website](https://www.90daysofdevops.com/#/2023)
-
 The quickest way to get in touch is going to be via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1)
-
-
 
 ## License
 

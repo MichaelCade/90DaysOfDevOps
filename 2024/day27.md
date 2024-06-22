@@ -1,6 +1,5 @@
-# Day 27: 90DaysofDevOps
-
-## From Automated to Automatic - Event-Driven Infrastructure Management with Ansible 
+# Day 27 - From Automated to Automatic - Event-Driven Infrastructure Management with Ansible
+[![Watch the video](thumbnails/day27.png)](https://www.youtube.com/watch?v=BljdQTewSic)
 
 **Daniel Bodky**
 - [Twitter](https://twitter.com/d_bodky)

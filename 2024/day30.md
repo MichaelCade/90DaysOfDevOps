@@ -1,5 +1,6 @@
-Day 30: How GitHub Builds GitHub with GitHub
-=========================
+# Day 30 - How GitHub delivers GitHub using GitHub
+[![Watch the video](thumbnails/day30.png)](https://www.youtube.com/watch?v=wKC1hTE9G90)
+
 
 Hello!👋
 
@@ -26,6 +27,8 @@ In this session I am going to show you how GitHub builds GitHub with GitHub. Git
 - Get started with a [Codespaces template](https://github.com/codespaces)
 
 - Read about [GitHub Advanced Security (GHAS) -](https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security)
+
+- Play the [Secure Code Game](https://gh.io/securecodegame) to try all of the above for free, plus trying out your skills on finding and fixing security issues.
 
 - Learn more about all of the ways to work with the [GitHub API](https://docs.github.com/en/rest?apiVersion=2022-11-28)
 
