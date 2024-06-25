@@ -4,7 +4,7 @@
  To get the IP address of a Docker container, you can use the `docker inspect` command followed by the container ID or name. Here's an example:
 
 ```bash
-docker inspect <container_id_or_name> -f '{{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}'
+docker inspect <container_id_or_name> -f '{{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}}'
 ```
 
 Replace `<container_id_or_name>` with the ID or name of your container. This command will return the IP address associated with the container in the default bridge network.
@@ -12,13 +12,13 @@ Replace `<container_id_or_name>` with the ID or name of your container. This com
 In your case, you can use:
 
 ```bash
-docker inspect es2 latest -f '{{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}'
+docker inspect es2 latest -f '{{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}}'
 ```
 
 And for the other container:
 
 ```bash
-docker inspect s latest -f '{{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}'
+docker inspect s latest -f '{{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}}'
 ```
 
 Regarding your question about using Kubernetes or Windows Server Cluster, it's a matter of preference and use case. Both have their pros and cons. Kubernetes is more flexible and can be used with various operating systems, but it might require more effort to set up and manage. On the other hand, Windows Server Cluster is easier to set up and manage but is limited to Windows OS. You should choose the one that best fits your needs and resources.
