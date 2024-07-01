@@ -101,7 +101,7 @@ You'll need to sign up for a Red Hat account to access the trial and get the sof
 
 # Next Steps - Understanding the OpenShift Architecture + Spinning up an instance!
 
-In [day 57](/day57.md) we will dive into the Architecture and components of OpenShift, moving onto spinning up our own OpenShift Environment in [day 58](/day58.md).
+In [day 57](day57.md) we will dive into the Architecture and components of OpenShift, moving onto spinning up our own OpenShift Environment in [day 58](day58.md).
 
 # Resources
 
