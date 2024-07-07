@@ -141,12 +141,12 @@ Cách nhanh nhất để liên lạc với tôi là thông qua Twitter tại [@M
 
 ### Lưu trữ & Bảo vệ Dữ liệu
 
-- [✔️] 🗃️ 84 > [Bức tranh toàn cảnh: Data Management](Days/day84.md)
+- [✔️] 🗃️ 84 > [Bức tranh toàn cảnh: Quản lý dữ liệu](Days/day84.md)
 - [✔️] 🗃️ 85 > [Dịch vụ dữ liệu](Days/day85.md)
 - [✔️] 🗃️ 86 > [Sao lưu tất cả các nền tảng](Days/day86.md)
 - [✔️] 🗃️ 87 > [Thực hành với sao lưu & phục hồi](Days/day87.md)
 - [✔️] 🗃️ 88 > [Sao lưu theo hướng tập trung vào ứng dụng](Days/day88.md)
-- [✔️] 🗃️ 89 > [Khắc phục thảm họa (DR)](Days/day89.md)
+- [✔️] 🗃️ 89 > [Khôi phục thảm họa (DR)](Days/day89.md)
 - [✔️] 🗃️ 90 > [Dữ liệu & ứng dụng: Tính di động](Days/day90.md)
 
 ## License
