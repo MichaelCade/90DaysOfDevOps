@@ -10,9 +10,9 @@ This repository started as a way to document my journey on getting a better foun
 
 What started off as a learning in public project has quickly become a structured way of learning the foundations of DevOps principles, processes and tooling. Maybe you can help contribute some resources you have found useful to the project. 
 
-2022 - Written content by myself but then translated and corrected and enhanced by the community 
-2023 - Focus on Security and other topics we did not get to in 2022, Perspectives from communinty subject matter experts. 
-2024 - Community Sessions by the community, 91 Sessions shared on YouTube. Different Media with intent to build out resources here as well. 
+- 2022 - Written content by myself but then translated and corrected and enhanced by the community 
+- 2023 - Focus on Security and other topics we did not get to in 2022, Perspectives from communinty subject matter experts. 
+- 2024 - Community Sessions by the community, 91 Sessions shared on YouTube. Different Media with intent to build out resources here as well. 
 
 2025 - Where should we take this next? Are we finished? 
 
