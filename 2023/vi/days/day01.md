@@ -8,7 +8,7 @@ Chào mọi người và mừng trở lại với năm 2023 của #90DaysOfDevOp
 
 Một năm nhanh chóng, chúng ta có khá nhiều con số ấn tượng ở dự án này, tôi nghĩ tôi đã đề cập ít nhất ở nơi đâu đó trong dự án, nhưng tôi nhấn mạnh ở mọi lúc rằng là bất kì nội dung nào mà giúp được hoặc thậm chí dù chỉ một người thì nó rất xứng đáng để làm, quả là đáng kinh ngạc khi có được những con số như này từ khi dự án chúng ta được đánh dấu (stars) đến khi được phân nhánh từ những người khác (folks).
 
-![day1-1](/2023/images/day01-1.jpg)
+![day1-1](../../images/day01-1.jpg)
 
 Cũng như, gần **500** người theo dõi dự án này.
 
@@ -16,7 +16,7 @@ Cũng như, gần **500** người theo dõi dự án này.
 
 Điều thứ hai, tôi rất muốn cảm ơn những người đã đóng góp vào dự án. Điều này đã làm nên một nơi mà ta có thể ghi chú cũng như học hỏi một cách minh bạch, có khi lại được bắt gặp lỗi sai chính tả cũng như ngữ pháp của tôi và giúp sửa nó. (Tôi chắc rằng điều tương tự sẽ diễn ra trong năm nay) Nhưng điều quan trọng và thú vị nhất là mọi người trong cộng đồng này đã bắt tay vào phiên dịch dự án này thành ngôn ngữ bản địa của họ! Thật là tuyệt vời khi nghĩ rằng nó đang đã đang diễn ra và giúp những người không nói được tiếng bản xứ học nhiều hơn về sức mạnh tuyệt vời của DevOps.
 
-![day1-2](/2023/images/day01-2.png)
+![day1-2](../../images/day01-2.jpg)
 
 Nếu bạn muốn tìm hiểu về những bạn đã đóng góp vào dự án, thì bạn có thể đến với [Contributors](https://github.com/MichaelCade/90DaysOfDevOps/blob/main/Contributors.md)
 
