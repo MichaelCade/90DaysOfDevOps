@@ -52,7 +52,6 @@ I have added some other stories where DevOps has changed the game within some of
 
 ## Resources
 
-- [How Netflix Thinks of DevOps](https://www.youtube.com/watch?v=UTKIT6STSVM)
 - [16 Popular DevOps Use Cases & Real Life Applications [2021]](https://www.upgrad.com/blog/devops-use-cases-applications/)
 - [DevOps: The Amazon Story](https://www.youtube.com/watch?v=ZzLa0YEbGIY)
 - [How Etsy makes DevOps work](https://www.networkworld.com/article/2886672/how-etsy-makes-devops-work.html)
