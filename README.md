@@ -25,7 +25,7 @@ The project is not a sponsored operation by any vendors and everything is access
 
 ![GitHub Repo Stars](https://img.shields.io/github/stars/michaelcade/90daysofdevops?style=social?)
 
-The to images below will take you to the 2022, 2023 and 2024 editions of the learning journey. 
+
 
 <div style="display: flex; justify-content: center; align-items: center;">
 
@@ -50,7 +50,7 @@ The to images below will take you to the 2022, 2023 and 2024 editions of the lea
       <img src="2024.png?raw=true" alt="2024" style="border: 2px solid #555; border-radius: 8px; width: 100%; max-width: 400px;" />
     </a>
     <br />
-    <em>Year 2024 - Community Edition: 90 Sessions</em>
+    <em>Community Edition: 90 Sessions</em>
   </div>
 
 </div>
