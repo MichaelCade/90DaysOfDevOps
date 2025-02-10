@@ -10,11 +10,10 @@ This repository started as a way to document my journey on getting a better foun
 
 What started off as a learning in public project has quickly become a structured way of learning the foundations of DevOps principles, processes and tooling. Maybe you can help contribute some resources you have found useful to the project. 
 
-- 2022 - Written content by myself but then translated and corrected and enhanced by the community 
-- 2023 - Focus on Security and other topics we did not get to in 2022, Perspectives from communinty subject matter experts. 
-- 2024 - Community Sessions by the community, 91 Sessions shared on YouTube. Different Media with intent to build out resources here as well. 
+- DevOps - Written content by myself but then translated and corrected and enhanced by the community 
+- DevSecOps - Focus on Security and other topics we did not get to in 2022, Perspectives from communinty subject matter experts. 
+- Community Edition - Community Sessions by the community, 91 Sessions shared on YouTube. Different Media with intent to build out resources here as well. 
 
-2025 - Where should we take this next? Are we finished? 
 
 This will **not cover all things** "DevOps" but it will cover some of the areas that will benefit your learning and understanding overall in this space. The encouragement here is to read & watch the content, be curious, provide feedback and discuss within the community your findings.
 
@@ -32,18 +31,18 @@ The to images below will take you to the 2022, 2023 and 2024 editions of the lea
 
   <div style="margin: 10px; text-align: center;">
     <a href="2022.md">
-      <img src="2022.png?raw=true" alt="2022" style="border: 2px solid #555; border-radius: 8px; width: 100%; max-width: 400px;" />
+      <img src="DevOps.jpg?raw=true" alt="DevOps" style="border: 2px solid #555; border-radius: 8px; width: 100%; max-width: 400px;" />
     </a>
     <br />
-    <em>Year 2022 - This is where we start, 110k words </em>
+    <em>DevOps - This is where we start, 90Days, 110k words! </em>
   </div>
 
   <div style="margin: 10px; text-align: center;">
     <a href="2023.md">
-      <img src="2023.png?raw=true" alt="2023" style="border: 2px solid #555; border-radius: 8px; width: 100%; max-width: 400px;" />
+      <img src="DevSecOps.jpg?raw=true" alt="DevSecOps" style="border: 2px solid #555; border-radius: 8px; width: 100%; max-width: 400px;" />
     </a>
     <br />
-    <em>Year 2023 - Continues... Some help from my friends</em>
+    <em>DevSecOps - Continues... Some help from my friends</em>
   </div>
 
   <div style="margin: 10px; text-align: center;">
