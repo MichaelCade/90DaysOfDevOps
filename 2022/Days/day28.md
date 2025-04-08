@@ -49,7 +49,7 @@ Some will also see the public cloud as a much wider offering that includes those
 ![](Images/Day28_Cloud5.png)
 _thousands more companies could land on this, I am merely picking from local, regional, telco and global brands I have worked with and am aware of._
 
-We mentioned in the SaaS section that Cloud removed the responsibility or the burden of having to administer parts of a system. If SaaS we see a lot of the abstraction layers removed i.e the physical systems, network, storage, operating system, and even application to some degree. When it comes to the cloud there are various levels of abstraction we can remove or keep depending on your requirements.
+We mentioned in the SaaS section that Cloud removed the responsibility or the burden of having to administer parts of a system. In SaaS, we see a lot of the abstraction layers removed i.e the physical systems, network, storage, operating system, and even application to some degree. When it comes to the cloud there are various levels of abstraction we can remove or keep depending on your requirements.
 
 We have already mentioned SaaS but there are at least two more to mention regarding the public cloud.
 
