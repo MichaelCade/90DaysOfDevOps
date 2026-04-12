@@ -33,10 +33,10 @@ To send us a pull request, please:
 1. Fork the repository.
 2. Modify the source; please focus on the **specific** change you are contributing.
 3. Ensure local tests pass.
-4. Updated the documentation, if required.
-4. Commit to your fork [using a clear commit messages](http://chris.beams.io/posts/git-commit/). We ask you to please use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
-5. Send us a pull request, answering any default questions in the pull request.
-6. Pay attention to any automated failures reported in the pull request, and stay involved in the conversation.
+4. Update the documentation, if required.
+5. Commit to your fork [using clear commit messages](http://chris.beams.io/posts/git-commit/). We ask you to please use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+6. Send us a pull request, answering any default questions in the pull request.
+7. Pay attention to any automated failures reported in the pull request, and stay involved in the conversation.
 
 GitHub provides additional document on [forking a repository](https://help.github.com/articles/fork-a-repo/) and
 [creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
@@ -54,7 +54,7 @@ This is a rough outline of what a contributor's workflow looks like:
 Example:
 
 ``` shell
-git remote add upstream https://github.com/vmware-samples/packer-examples-for-vsphere.git
+git remote add upstream https://github.com/MichaelCade/90DaysOfDevOps.git
 git checkout -b my-new-feature main
 git commit -s -a
 git push origin my-new-feature
@@ -62,7 +62,7 @@ git push origin my-new-feature
 
 ### Staying In Sync With Upstream
 
-When your branch gets out of sync with the  90DaysOfDevOps/main branch, use the following to update:
+When your branch gets out of sync with the `90DaysOfDevOps/main` branch, use the following to update:
 
 ``` shell
 git checkout my-new-feature
