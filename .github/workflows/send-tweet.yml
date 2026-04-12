@@ -1,10 +1,16 @@
 name: Send a Tweet
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   tweet:
+    # Only run in the upstream repo; secrets guard applied at step level
+    if: github.repository == 'MichaelCade/90DaysOfDevOps'
     runs-on: ubuntu-latest
     steps:
-      - uses: ethomson/send-tweet-action@v1
+      - name: Send tweet
+        uses: ethomson/send-tweet-action@v1
         with:
           status: "👋 Hey Everyone!. This is an automated message 🤖 to let you know that there has been an update on the #90DaysOfDevOps repository, Commit message (${{ github.event.head_commit.message }}) You can check it out https://github.com/MichaelCade/90DaysOfDevOps"
           consumer-key: ${{ secrets.TWITTER_CONSUMER_API_KEY }}
