@@ -232,6 +232,7 @@ Day-28
 - [https://www.youtube.com/watch?v=NKEFWyqJ5XA&list=WL&index=130&t=12s](https://www.youtube.com/watch?v=NKEFWyqJ5XA&list=WL&index=130&t=12s) Microsoft Azure Fundamentals
 - [https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s](https://www.youtube.com/watch?v=UGRDM86MBIQ&list=WL&index=131&t=10s) Google Cloud Digital Leader Certification Course
 - [https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s](https://www.youtube.com/watch?v=ulprqHHWlng&t=5352s) AWS Basics for Beginners - Full Course
+- [https://aws.amazon.com/architecture/well-architected/](https://aws.amazon.com/architecture/well-architected/) AWS Well-Architected Framework - Best practices for building secure, high-performing cloud architectures
 
 Day-29
 
@@ -415,6 +416,8 @@ Day-49
 - [https://www.youtube.com/watch?v=X48VuDVv0do](https://www.youtube.com/watch?v=X48VuDVv0do) TechWorld with Nana - Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]
 - [https://terraform.joshuajebaraj.com/](https://github.com/shuaibiyy/awesome-terraform) TechWorld with Nana - Kubernetes Crash Course for Absolute Beginners
 - [https://www.youtube.com/watch?v=KVBON1lA9N8](https://www.youtube.com/watch?v=KVBON1lA9N8) Kunal Kushwaha - Kubernetes Tutorial for Beginners | What is Kubernetes? Architecture Simplified!
+- [https://github.com/kelseyhightower/kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way) Kubernetes The Hard Way - Bootstrap Kubernetes manually to understand each component
+- [https://www.eksworkshop.com/](https://www.eksworkshop.com/) Amazon EKS Workshop - Hands-on workshop for deploying and managing applications on EKS
 
 Day-50
 
@@ -515,6 +518,8 @@ Day-57
 - [https://www.youtube.com/watch?v=YcJ9IeukJL8&list=WL&index=16&t=11s](https://www.youtube.com/watch?v=YcJ9IeukJL8&list=WL&index=16&t=11s) KodeKloud - Terraform for DevOps Beginners + Labs: Complete Step by Step Guide!
 - [https://terraform.joshuajebaraj.com/](https://github.com/shuaibiyy/awesome-terraform) Terraform Simple Projects
 - [https://www.youtube.com/watch?v=oA-pPa0vfks](https://www.youtube.com/watch?v=oA-pPa0vfks) Terraform Tutorial - The Best Project Ideas
+- [https://www.terraform-best-practices.com/](https://www.terraform-best-practices.com/) Terraform Best Practices - Community driven best practices guide for Terraform
+- [https://github.com/terraform-aws-modules](https://github.com/terraform-aws-modules) Terraform AWS Modules - Collection of reusable and battle-tested Terraform modules for AWS
 - [https://github.com/shuaibiyy/awesome-terraform](https://github.com/shuaibiyy/awesome-terraform)
 
 Day-58
