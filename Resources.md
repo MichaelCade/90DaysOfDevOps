@@ -732,7 +732,7 @@ Day-78
 - [https://www.youtube.com/watch?v=4t71iv_9t_4](https://www.youtube.com/watch?v=4t71iv_9t_4) Top 5 - DevOps Monitoring Tools
 - [https://www.youtube.com/watch?v=h4Sl21AKiDg](https://www.youtube.com/watch?v=h4Sl21AKiDg) How Prometheus Monitoring works
 - [https://www.youtube.com/watch?v=5o37CGlNLr8](https://www.youtube.com/watch?v=5o37CGlNLr8) Introduction to Prometheus monitoring
-- [https://www.containiq.com/post/promql-cheat-sheet-with-examples](https://www.containiq.com/post/promql-cheat-sheet-with-examples) Promql cheat sheet with examples
+- [https://prometheus.io/docs/prometheus/latest/querying/basics/](https://prometheus.io/docs/prometheus/latest/querying/basics/) Promql cheat sheet with examples
 
 Day-79
 
@@ -742,7 +742,7 @@ Day-79
 - [https://www.youtube.com/watch?v=4t71iv_9t_4](https://www.youtube.com/watch?v=4t71iv_9t_4) Top 5 - DevOps Monitoring Tools
 - [https://www.youtube.com/watch?v=h4Sl21AKiDg](https://www.youtube.com/watch?v=h4Sl21AKiDg) How Prometheus Monitoring works
 - [https://www.youtube.com/watch?v=5o37CGlNLr8](https://www.youtube.com/watch?v=5o37CGlNLr8) Introduction to Prometheus monitoring
-- [https://www.containiq.com/post/promql-cheat-sheet-with-examples](https://www.containiq.com/post/promql-cheat-sheet-with-examples) Promql cheat sheet with examples
+- [https://prometheus.io/docs/prometheus/latest/querying/basics/](https://prometheus.io/docs/prometheus/latest/querying/basics/) Promql cheat sheet with examples
 - [https://www.youtube.com/watch?v=J0csO_Shsj0](https://www.youtube.com/watch?v=J0csO_Shsj0) Log Management for DevOps | Manage application, server, and cloud logs with Site24x7
 - [https://devops.com/log-management-what-devops-teams-need-to-know/](https://devops.com/log-management-what-devops-teams-need-to-know/) Log Management what DevOps need to know
 - [https://www.youtube.com/watch?v=4X0WLg05ASw](https://www.youtube.com/watch?v=4X0WLg05ASw) What is ELK Stack?
@@ -757,7 +757,7 @@ Day-80
 - [https://www.youtube.com/watch?v=4t71iv_9t_4](https://www.youtube.com/watch?v=4t71iv_9t_4) Top 5 - DevOps Monitoring Tools
 - [https://www.youtube.com/watch?v=h4Sl21AKiDg](https://www.youtube.com/watch?v=h4Sl21AKiDg) How Prometheus Monitoring works
 - [https://www.youtube.com/watch?v=5o37CGlNLr8](https://www.youtube.com/watch?v=5o37CGlNLr8) Introduction to Prometheus monitoring
-- [https://www.containiq.com/post/promql-cheat-sheet-with-examples](https://www.containiq.com/post/promql-cheat-sheet-with-examples) Promql cheat sheet with examples
+- [https://prometheus.io/docs/prometheus/latest/querying/basics/](https://prometheus.io/docs/prometheus/latest/querying/basics/) Promql cheat sheet with examples
 - [https://www.youtube.com/watch?v=J0csO_Shsj0](https://www.youtube.com/watch?v=J0csO_Shsj0) Log Management for DevOps | Manage application, server, and cloud logs with Site24x7
 - [https://devops.com/log-management-what-devops-teams-need-to-know/](https://devops.com/log-management-what-devops-teams-need-to-know/) Log Management what DevOps need to know
 - [https://www.youtube.com/watch?v=4X0WLg05ASw](https://www.youtube.com/watch?v=4X0WLg05ASw) What is ELK Stack?
@@ -772,7 +772,7 @@ Day-81
 - [https://www.youtube.com/watch?v=4t71iv_9t_4](https://www.youtube.com/watch?v=4t71iv_9t_4) Top 5 - DevOps Monitoring Tools
 - [https://www.youtube.com/watch?v=h4Sl21AKiDg](https://www.youtube.com/watch?v=h4Sl21AKiDg) How Prometheus Monitoring works
 - [https://www.youtube.com/watch?v=5o37CGlNLr8](https://www.youtube.com/watch?v=5o37CGlNLr8) Introduction to Prometheus monitoring
-- [https://www.containiq.com/post/promql-cheat-sheet-with-examples](https://www.containiq.com/post/promql-cheat-sheet-with-examples) Promql cheat sheet with examples
+- [https://prometheus.io/docs/prometheus/latest/querying/basics/](https://prometheus.io/docs/prometheus/latest/querying/basics/) Promql cheat sheet with examples
 - [https://www.youtube.com/watch?v=J0csO_Shsj0](https://www.youtube.com/watch?v=J0csO_Shsj0) Log Management for DevOps | Manage application, server, and cloud logs with Site24x7
 - [https://devops.com/log-management-what-devops-teams-need-to-know/](https://devops.com/log-management-what-devops-teams-need-to-know/) Log Management what DevOps need to know
 - [https://www.youtube.com/watch?v=4X0WLg05ASw](https://www.youtube.com/watch?v=4X0WLg05ASw) What is ELK Stack?
@@ -788,7 +788,7 @@ Day-82
 - [https://www.youtube.com/watch?v=4t71iv_9t_4](https://www.youtube.com/watch?v=4t71iv_9t_4) Top 5 - DevOps Monitoring Tools
 - [https://www.youtube.com/watch?v=h4Sl21AKiDg](https://www.youtube.com/watch?v=h4Sl21AKiDg) How Prometheus Monitoring works
 - [https://www.youtube.com/watch?v=5o37CGlNLr8](https://www.youtube.com/watch?v=5o37CGlNLr8) Introduction to Prometheus monitoring
-- [https://www.containiq.com/post/promql-cheat-sheet-with-examples](https://www.containiq.com/post/promql-cheat-sheet-with-examples) Promql cheat sheet with examples
+- [https://prometheus.io/docs/prometheus/latest/querying/basics/](https://prometheus.io/docs/prometheus/latest/querying/basics/) Promql cheat sheet with examples
 - [https://www.youtube.com/watch?v=J0csO_Shsj0](https://www.youtube.com/watch?v=J0csO_Shsj0) Log Management for DevOps | Manage application, server, and cloud logs with Site24x7
 - [https://devops.com/log-management-what-devops-teams-need-to-know/](https://devops.com/log-management-what-devops-teams-need-to-know/) Log Management what DevOps need to know
 - [https://www.youtube.com/watch?v=4X0WLg05ASw](https://www.youtube.com/watch?v=4X0WLg05ASw) What is ELK Stack?
@@ -803,7 +803,7 @@ Day-83
 - [https://www.youtube.com/watch?v=4t71iv_9t_4](https://www.youtube.com/watch?v=4t71iv_9t_4) Top 5 - DevOps Monitoring Tools
 - [https://www.youtube.com/watch?v=h4Sl21AKiDg](https://www.youtube.com/watch?v=h4Sl21AKiDg) How Prometheus Monitoring works
 - [https://www.youtube.com/watch?v=5o37CGlNLr8](https://www.youtube.com/watch?v=5o37CGlNLr8) Introduction to Prometheus monitoring
-- [https://www.containiq.com/post/promql-cheat-sheet-with-examples](https://www.containiq.com/post/promql-cheat-sheet-with-examples) Promql cheat sheet with examples
+- [https://prometheus.io/docs/prometheus/latest/querying/basics/](https://prometheus.io/docs/prometheus/latest/querying/basics/) Promql cheat sheet with examples
 - [https://www.youtube.com/watch?v=J0csO_Shsj0](https://www.youtube.com/watch?v=J0csO_Shsj0) Log Management for DevOps | Manage application, server, and cloud logs with Site24x7
 - [https://devops.com/log-management-what-devops-teams-need-to-know/](https://devops.com/log-management-what-devops-teams-need-to-know/) Log Management what DevOps need to know
 - [https://www.youtube.com/watch?v=4X0WLg05ASw](https://www.youtube.com/watch?v=4X0WLg05ASw) What is ELK Stack?

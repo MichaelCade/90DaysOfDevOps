@@ -92,6 +92,6 @@ Tôi muốn nhắc lại về Prometheus nhưng bây giờ, tôi nghĩ chúng ta
 - [Top 5 - DevOps Monitoring Tools](https://www.youtube.com/watch?v=4t71iv_9t_4)
 - [How Prometheus Monitoring works](https://www.youtube.com/watch?v=h4Sl21AKiDg)
 - [Introduction to Prometheus monitoring](https://www.youtube.com/watch?v=5o37CGlNLr8)
-- [Promql cheat sheet with examples](https://www.containiq.com/post/promql-cheat-sheet-with-examples)
+- [Promql cheat sheet with examples](https://prometheus.io/docs/prometheus/latest/querying/basics/)
 
 Hẹn gặp lại vào [ngày 79](day79.md)
