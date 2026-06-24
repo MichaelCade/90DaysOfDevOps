@@ -25,4 +25,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: .
           publish_branch: gh-pages
-          exclude_assets: '.github,.git,template_repository'
+          exclude_assets: '.github,template_repository'
