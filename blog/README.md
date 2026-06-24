@@ -6,7 +6,7 @@ This section is for community-submitted posts merged through pull requests.
 
 ## Blog Posts
 
-- [Welcome to the Community Blog](posts/2026-06-24-community-welcome.md)
+- [Welcome to the Community Blog](/blog/posts/2026-06-24-community-welcome.md)
 
 ## Submit a Blog Post
 
