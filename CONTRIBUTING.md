@@ -38,6 +38,28 @@ To send us a pull request, please:
 6. Send us a pull request, answering any default questions in the pull request.
 7. Pay attention to any automated failures reported in the pull request, and stay involved in the conversation.
 
+## Submit a Blog Post
+
+We welcome community blog contributions for publishing on the GitHub Pages site.
+
+Please follow these requirements:
+
+1. Create your post file in `/blog/posts/` using this filename format: `YYYY-MM-DD-short-title.md`.
+2. Start from `/blog/_template.md` and include all required metadata fields:
+   - `title`
+   - `author`
+   - `date` (YYYY-MM-DD)
+   - `tags` (list)
+   - `summary`
+3. Keep content original, respectful, and relevant to DevOps, DevSecOps, platform engineering, cloud, automation, SRE, or adjacent community learning topics.
+4. Add local images under a suitable folder in the repository and use relative links.
+5. Open a pull request with the **Blog Post Submission** template and complete every checklist item.
+
+Review expectations:
+
+- Blog pull requests require maintainer review.
+- Posts may be edited or declined if they do not meet topic, originality, quality, or community standards.
+
 GitHub provides additional document on [forking a repository](https://help.github.com/articles/fork-a-repo/) and
 [creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
 
