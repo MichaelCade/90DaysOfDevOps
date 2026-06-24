@@ -6,6 +6,9 @@ on:
       - "blog/posts/*.md"
       - "blog/_template.md"
 
+permissions:
+  contents: read
+
 jobs:
   validate-blog-posts:
     runs-on: ubuntu-latest
@@ -103,4 +106,3 @@ jobs:
 
           print("All changed blog posts passed metadata and local link validation.")
           PY
-
