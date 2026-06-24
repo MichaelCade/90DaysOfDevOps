@@ -1,0 +1,106 @@
+name: Blog Post Validation
+
+on:
+  pull_request:
+    paths:
+      - "blog/posts/*.md"
+      - "blog/_template.md"
+
+jobs:
+  validate-blog-posts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Collect changed blog posts
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          git diff --name-only "$BASE_SHA" "$HEAD_SHA" -- 'blog/posts/*.md' > changed_blog_posts.txt
+          echo "Changed posts:"
+          cat changed_blog_posts.txt || true
+
+      - name: Validate metadata and local links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from datetime import datetime
+          import re
+          import sys
+
+          changed_file_list = Path("changed_blog_posts.txt")
+          changed_files = []
+          if changed_file_list.exists():
+              changed_files = [line.strip() for line in changed_file_list.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+          if not changed_files:
+              print("No changed blog post files detected.")
+              raise SystemExit(0)
+
+          required_fields = ["title", "author", "date", "tags", "summary"]
+          all_errors = []
+
+          for rel_path in changed_files:
+              path = Path(rel_path)
+              if not path.exists():
+                  continue
+
+              text = path.read_text(encoding="utf-8")
+              lines = text.splitlines()
+              errors = []
+
+              if not lines or lines[0].strip() != "---":
+                  errors.append("Missing YAML front matter opening delimiter '---'.")
+              else:
+                  end_idx = None
+                  for idx in range(1, len(lines)):
+                      if lines[idx].strip() == "---":
+                          end_idx = idx
+                          break
+                  if end_idx is None:
+                      errors.append("Missing YAML front matter closing delimiter '---'.")
+                      front_matter_lines = []
+                  else:
+                      front_matter_lines = lines[1:end_idx]
+
+                  if end_idx is not None:
+                      front_matter_text = "\n".join(front_matter_lines)
+                      for field in required_fields:
+                          if not re.search(rf"(?m)^{field}\s*:", front_matter_text):
+                              errors.append(f"Missing required metadata field: {field}")
+
+                      date_match = re.search(r'(?m)^date\s*:\s*"?(.*?)"?\s*$', front_matter_text)
+                      if date_match:
+                          date_value = date_match.group(1).strip()
+                          try:
+                              datetime.strptime(date_value, "%Y-%m-%d")
+                          except ValueError:
+                              errors.append("Invalid date format. Expected YYYY-MM-DD.")
+
+              for link in re.findall(r"\[[^\]]+\]\(([^)]+)\)", text):
+                  target = link.strip()
+                  if not target or target.startswith(("http://", "https://", "mailto:", "#")):
+                      continue
+                  target = target.split("#", 1)[0].split("?", 1)[0]
+                  if not target:
+                      continue
+                  resolved = (path.parent / target).resolve()
+                  if not resolved.exists():
+                      errors.append(f"Broken local link: {link}")
+
+              if errors:
+                  all_errors.append(f"{rel_path}:")
+                  all_errors.extend([f"  - {err}" for err in errors])
+
+          if all_errors:
+              print("Validation failed:\n")
+              print("\n".join(all_errors))
+              sys.exit(1)
+
+          print("All changed blog posts passed metadata and local link validation.")
+          PY
+
