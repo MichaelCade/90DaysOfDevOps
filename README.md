@@ -21,8 +21,6 @@ The project is not a sponsored operation by any vendors and everything is access
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N33YRCS)
 
-[![Discord Invite Link](https://dcbadge.vercel.app/api/server/vqwPrNQsyK)](https://discord.gg/vqwPrNQsyK)
-
 ![GitHub Repo Stars](https://img.shields.io/github/stars/michaelcade/90daysofdevops?style=social?)
 
 
