@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  labels:
+    name: mongo
+  name: mongo
+  annotations:
+    source: "https://github.com/saintdle/pacman-tanzu"
+spec:
+  replicas: 1
+  serviceName: mongo
+  selector:
+    matchLabels:
+      name: mongo
+  template:
+    metadata:
+      labels:
+        name: mongo
+    spec:
+      initContainers:
+      - args:
+        - |
+          mkdir -p /bitnami/mongodb
+          chown -R "1001:1001" "/bitnami/mongodb"
+        command:
+        - /bin/bash
+        - -ec
+        image: docker.io/bitnami/bitnami-shell:10-debian-10-r158
+        imagePullPolicy: Always
+        name: volume-permissions
+        resources: {}
+        securityContext:
+          runAsUser: 0
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /bitnami/mongodb
+          name: mongo-db
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        fsGroup: 1001
+      serviceAccountName: default
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - name: mongo-db
+        persistentVolumeClaim:
+          claimName: mongo-storage
+      containers:
+      - image: bitnami/mongodb:4.4.8
+        name: mongo
+        env:
+        - name: MONGODB_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: database-admin-password
+              name: mongodb-users-secret
+        - name: MONGODB_DATABASE
+          valueFrom:
+            secretKeyRef:
+              key: database-name
+              name: mongodb-users-secret
+        - name: MONGODB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              key: database-password
+              name: mongodb-users-secret
+        - name: MONGODB_USERNAME
+          valueFrom:
+            secretKeyRef:
+              key: database-user
+              name: mongodb-users-secret
+        readinessProbe:
+          exec:
+           command:
+            - /bin/sh
+            - -i
+            - -c
+            - mongo 127.0.0.1:27017/$MONGODB_DATABASE -u $MONGODB_USERNAME -p $MONGODB_PASSWORD
+              --eval="quit()"
+        ports:
+        - name: mongo
+          containerPort: 27017
+        volumeMounts:
+          - name: mongo-db
+            mountPath: /bitnami/mongodb/

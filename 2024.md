@@ -1,0 +1,123 @@
+# 90DaysOfDevOps
+
+<p align="center">
+ <img src="logo.png?raw=true" alt="90DaysOfDevOps Logo" width="50%" height="50%" />
+</p>
+
+Welcome to 2024, we have some exciting stuff going on here and we want to use the 2024 edition to celebrate the community. 
+
+For those new around here this repository was started in 2022 with my learning journey into DevOps, getting a better foundational knowledge of "DevOps". In 2023 we invited some friends to contribute on their subject to enable the community more learning content and resources. 
+
+In 2024 we are going big and getting more of the community involved and exploring a new format. For each day we will have a video session from a member of the community sharing their story, demos and or projects. 
+
+A big thing about the repository has been the accessibility in regards that all tools and hands-on scenarios we have walked through are freely available to the community. This will continue to be the ethos of this community and event. 
+
+You will find all your 2024 sessions on the link below 
+
+<p align="center">
+<a href="https://www.youtube.com/playlist?list=PLsKoqAvws1psCnkDaTPRHaqcTLSTPDFBR">
+ <img src="2024/Images/YouTubePlaylist.jpg?raw=true" alt="YouTube Playlist" width="50%" height="50%" />
+</a> 
+</p>
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N33YRCS)
+
+If you have questions and want to get involved then join the discord and share your questions and stories with the community.
+
+[![](https://dcbadge.vercel.app/api/server/vqwPrNQsyK)](https://discord.gg/vqwPrNQsyK)
+
+Or contact us via Twitter, my handle is [@MichaelCade1](https://twitter.com/MichaelCade1) you can find the authors for 2023 also on Twitter linked below.
+
+## Agenda
+
+- [✔️][✔️] ♾️ 1 > [2024 - Community Edition - Introduction](2024/day01.md) - Michael Cade
+- [✔️][✔️] ♾️ 2 > [The Digital Factory](2024/day02.md) - Romano Roth
+- [✔️][✔️] ♾️ 3 > [High-performing engineering teams and the Holy Grail](2024/day03.md) - Jeremy Meiss
+- [✔️][✔️] ♾️ 4 > [Manage Kubernetes Add-Ons for Multiple Clusters Using Cluster Run-Time State](2024/day04.md) - Gianluca Mardente
+- [✔️][✔️] ♾️ 5 > [Cross-functional empathy](2024/day05.md) - Chris Kranz
+- [✔️][✔️] ♾️ 6 > [Kubernetes RBAC with Ansible](2024/day06.md) - Elif Samedin & Andrei Buzoianu
+- [✔️][✔️] ♾️ 7 > [Automate like a pro: Dealing with test automation hassles](2024/day07.md) - Mesut Durukal
+- [✔️][✔️] ♾️ 8 > [Culinary Coding: Crafting Infrastructure Recipes with OpenTofu](2024/day08.md) - Kaiwalya Koparkar
+- [✔️][✔️] ♾️ 9 > [Why should developers care about container security?](2024/day09.md) - Eric Smalling
+- [✔️][✔️] ♾️ 10 > [Is Kubernetes Too Complicated?](2024/day10.md) - Julia Furst
+- [✔️][✔️] ♾️ 11 > [Building Resilience: A Journey of Crafting and Validating Our Disaster Recovery Plan](2024/day11.md) - Yedidya Schwartz
+- [✔️][✔️] ♾️ 12 > [Know your data: The Stats behind the Alerts](2024/day12.md) - Dave McAllister
+- [✔️][✔️] ♾️ 13 > [Architecting for Versatility](2024/day13.md) - Tim Banks
+- [✔️][✔️] ♾️ 14 > [An introduction to API Security in Kubernetes](2024/day14.md) - Geoff Burke
+- [✔️][✔️] ♾️ 15 > [Using code dependency analysis to decide what to test](2024/day15.md) - Patrick Kusebauch 
+- [✔️][✔️] ♾️ 16 > [Smarter, Better, Faster, Stronger - Testing at Scale](2024/day16.md) - Ada Lündhé
+- [✔️][✔️] ♾️ 17 > [From Chaos to Resilience: Decoding the Secrets of Production Readiness](2024/day17.md) - Alejandro Pedraza Borrero
+- [✔️][✔️] ♾️ 18 > [Platform Engineering Is Not About Tech](2024/day18.md) - Nicolò Cambiaso Erizzo & Francesca Carta
+- [✔️][✔️] ♾️ 19 > [Building Efficient and Secure Docker Images with Multi-Stage Builds](2024/day19.md) - Pradumna V Saraf
+- [✔️][✔️] ♾️ 20 > [Navigating the Vast DevOps Terrain: Strategies for Learning and Staying Current](2024/day20.md) - Kunal Kushwaha
+- [✔️][✔️] ♾️ 21 > [Azure ARM now got Bicep](2024/day21.md) - Tushar Kumar
+- [✔️][✔️] ♾️ 22 > [Test in Production with Kubernetes and Telepresence](2024/day22.md) - Mohammad-Ali A'râbi
+- [✔️][✔️] ♾️ 23 > [SQL Server 2022 on Linux Containers and Kubernetes from Zero to a Hero!](2024/day23.md) - Yitzhak David
+- [✔️][✔️] ♾️ 24 > [DevSecOps - Defined, Explained & Explored](2024/day24.md) - Sameer Paradkar
+- [✔️][✔️] ♾️ 25 > [Kube-Nation: Exploring the Land of Kubernetes](2024/day25.md) - Siddhant Khisty & Aakansha Priya
+- [✔️][✔️] ♾️ 26 > [Advanced Code Coverage with Jenkins and API Mocking](2024/day26.md) - Oleg Nenashev 
+- [✔️][✔️] ♾️ 27 > [From Automated to Automatic - Event-Driven Infrastructure Management with Ansible](2024/day27.md) - Daniel Bodky
+- [✔️][✔️] ♾️ 28 > [Talos Linux on VMware vSphere](2024/day28.md) - Michael Cade
+- [✔️][✔️] ♾️ 29 > [Practical introduction to OpenTelemetry tracing](2024/day29.md) - Nicolas Fränkel
+- [✔️][✔️] ♾️ 30 > [How GitHub delivers GitHub using GitHub](2024/day30.md) - April Edwards
+- [✔️][✔️] ♾️ 31 > [GitOps on AKS](2024/day31.md) - Richard Hooper, Wesley Haakman, Karl Cooke
+- [✔️][✔️] ♾️ 32 > [Cracking Cholera’s Code: Victorian Insights for Today’s Technologist](2024/day32.md) - Simon Copsey
+- [✔️][✔️] ♾️ 33 > [GitOps made simple with ArgoCD and GitHub Actions](2024/day33.md) - Arsh Sharma 
+- [✔️][✔️] ♾️ 34 > [How to Implement Automated Deployment Pipelines for Your DevOps Projects](2024/day34.md) - Neel Shah
+- [✔️][✔️] ♾️ 35 > [Azure for DevSecOps Operators](2024/day35.md) - Kevin Evans
+- [✔️][✔️] ♾️ 36 > [Policy-as-Code Super-Powers! Rethinking Modern IaC With Service Mesh And CNI](2024/day36.md) - Kat Morgan & Marino Wijay
+- [✔️][✔️] ♾️ 37 > [The Lean DevOps Playbook: Make it a success from Day one](2024/day37.md) - Aman Sharma
+- [✔️][✔️] ♾️ 38 > [Open Standards: Empowering Cloud-Native Innovation](2024/day38.md) - Kunal Verma
+- [✔️][✔️] ♾️ 39 > [Is TLS in Kubernetes really that hard to understand?](2024/day39.md) - Shivang Shandilya
+- [✔️][✔️] ♾️ 40 > [Infrastructure as Code - A look at Azure Bicep and Terraform](2024/day40.md) - Sarah Lean
+- [✔️][✔️] ♾️ 41 > [My journey to reimagining DevOps: Ushering in the Second Wave](2024/day41.md) - Brit Myers
+- [✔️][✔️] ♾️ 42 > [The North Star: Risk-driven security](2024/day42.md) - Jonny Tyers
+- [✔️][✔️] ♾️ 43 > [Let's go sidecarless in Ambient Mesh!](2024/day43.md) - Leon Nunes
+- [✔️][✔️] ♾️ 44 > [Exploring Firecracker](2024/day44.md) - Irine Kokilashvili
+- [✔️][✔️] ♾️ 45 > [Microsoft DevOps Solutions or how to integrate the best of Azure DevOps and GitHub](2024/day45.md) - Peter De Tender
+- [✔️][✔️] ♾️ 46 > [Mastering AWS Systems Manager: Simplifying Infrastructure Management](2024/day46.md) - Adit Modi
+- [✔️][✔️] ♾️ 47 > [Azure logic app, low / no code](2024/day47.md) - Ian Engelbrecht
+- [✔️][✔️] ♾️ 48 > [From Puddings to Platforms: Bringing Ideas to life with ChatGPT](2024/day48.md) - Anthony Spiteri
+- [✔️][✔️] ♾️ 49 > [From Confusion To Clarity: How Gherkin And Specflow Ensures Clear Requirements and Bug-Free Apps](2024/day49.md) - Steffen Jørgensen
+- [✔️][✔️] ♾️ 50 > [State of cloud native 2024](2024/day50.md) - Saiyam Pathak
+- [✔️][✔️] ♾️ 51 > [DevOps with Windows](2024/day51.md) - Nuno do Carmo 
+- [✔️][✔️] ♾️ 52 > [Creating a custom Dev Container for your GitHub Codespace to start with Terraform on Azure](2024/day52.md) - Patrick Koch
+- [✔️][✔️] ♾️ 53 > [Gickup - Keep your repositories safe](2024/day53.md) - Andreas Wachter 
+- [✔️][✔️] ♾️ 54 > [Mastering AWS OpenSearch: Terraform Provisioning and Cost Efficiency Series](2024/day54.md) - Ranjini Ganeshan 
+- [✔️][✔️] ♾️ 55 > [Bringing Together IaC and CM with Terraform Provider for Ansible](2024/day55.md) - Razvan Ionescu
+- [✔️][✔️] ♾️ 56 > [Automated database deployment within the DevOps process](2024/day56.md) - Marc Müller
+- [✔️][✔️] ♾️ 57 > [A practical guide to Test-Driven Development of infrastructure code](2024/day57.md) - David Pazdera
+- [✔️][✔️] ♾️ 58 > [The Reverse Technology Thrust](2024/day58.md)  - Rom Adams
+- [✔️][✔️] ♾️ 59 > [Continuous Delivery pipelines for cloud infrastructure](2024/day59.md) - Michael Lihs
+- [✔️][✔️] ♾️ 60 > [Migrating a monolith to Cloud-Native and the stumbling blocks that you don’t know about](2024/day60.md) - JJ Asghar
+- [✔️][✔️] ♾️ 61 > [Demystifying Modernisation: True Potential of Cloud Technology](2024/day61.md) - Anupam Phoghat
+- [✔️][✔️] ♾️ 62 > [Shifting Left for DevSecOps Using Modern Edge Platforms](2024/day62.md) - Michael Grimshaw & Lauren Bradley
+- [✔️][✔️] ♾️ 63 > [Diving into Container Network Namespaces](2024/day63.md) - Marino Wijay
+- [✔️][✔️] ♾️ 64 > [Let’s Do DevOps: Writing a New Terraform /Tofu AzureRm Data Source — All Steps!](2024/day64.md) - Kyler Middleton
+- [✔️][✔️] ♾️ 65 > [Azure pertinent DevOps for non-coders](2024/day65.md) - Sucheta Gawade
+- [✔️][✔️] ♾️ 66 > [A Developer's Journey to the DevOps: The Synergy of Two Worlds](2024/day66.md) - Jonah Andersson
+- [✔️][✔️] ♾️ 67 > [Art of DevOps: Harmonizing Code, Culture, and Continuous Delivery](2024/day67.md) - Rohit Ghumare
+- [✔️][✔️] ♾️ 68 > [Service Mesh for Kubernetes 101: The Secret Sauce to Effortless Microservices Management](2024/day68.md) - Mohd Imran
+- [✔️][✔️] ♾️ 69 > [Enhancing Kubernetes security, visibility, and networking control logic](2024/day69.md) - Dean Lewis
+- [✔️][✔️] ♾️ 70 > [Simplified Cloud Adoption with Microsoft's Terraforms Azure Landing Zone Module](2024/day70.md) - Simone Bennett
+- [✔️][✔️] ♾️ 71 > [Chatbots are going to destroy infrastructures and your cloud bills](2024/day71.md) - Stanislas Girard 
+- [✔️][✔️] ♾️ 72 > [Infrastructure as Code with Pulumi](2024/day72.md) - Scott Lowe
+- [✔️][✔️] ♾️ 73 > [Introducing the Terraform Test Framework](2024/day73.md) - Ned Bellavance 
+- [✔️][✔️] ♾️ 74 > [Workload Identity Federation with Azure DevOps and Terraform](2024/day74.md) - Arindam Mitra
+- [✔️][✔️] ♾️ 75 > [Distracted Development](2024/day75.md) - Josh Ether
+- [✔️][✔️] ♾️ 76 > [All you need to know about AWS CDK](2024/day76.md) - Amogha Kancharla
+- [✔️][✔️] ♾️ 77 > [Connect to Microsoft APIs in Azure DevOps Pipelines using Workload Identity Federation](2024/day77.md) - Jan Vidar Elven
+- [✔️][✔️] ♾️ 78 > [Scaling Terraform Deployments with GitHub Actions: Essential Configurations](2024/day78.md) - Thomas Thornton
+- [✔️][✔️] ♾️ 79 > [DevEdOps](2024/day79.md) - Adam Leskis
+- [✔️][✔️] ♾️ 80 > [Unlocking K8s Troubleshooting Best Practices with Botkube](2024/day80.md) - Maria Ashby
+- [✔️][✔️] ♾️ 81 > [Leveraging Kubernetes to build a better Cloud Native Development Experience](2024/day81.md) - Nitish Kumar
+- [✔️][✔️] ♾️ 82 > [Dev Containers in VS Code](2024/day82.md) - Chris Ayers
+- [✔️][✔️] ♾️ 83 > [Saving Cloud Costs Using Existing Prometheus Metrics](2024/day83.md) - Pavan Gudiwada 
+- [✔️][✔️] ♾️ 84 > [Hacking Kubernetes For Beginners](2024/day84.md) - Benoit Entzmann
+- [✔️][✔️] ♾️ 85 > [Reuse, Don't Repeat - Creating an Infrastructure as Code Module Library](2024/day85.md) - Sam Cogan
+- [✔️][✔️] ♾️ 86 > [Tools To Make Your Terminal DevOps and Kubernetes Friendly](2024/day86.md) - Maryam Tavakkoli
+- [✔️][✔️] ♾️ 87 > [Hands-on Performance Testing with k6](2024/day87.md) - Pepe Cano
+- [✔️][✔️] ♾️ 88 > [What Developers Want from Internal Developer Portals](2024/day88.md) - Ganesh Datta
+- [✔️][✔️] ♾️ 89 > [Seeding Infrastructures: Merging Terraform with Generative AI for Effortless DevOps Gardens](2024/day89.md) - Renaldi Gondosubroto
+- [✔️][✔️] ♾️ 90 > [Fighting fire with fire: Why we cannot always prevent technical issues with more tech](2024/day90.md) - Anaïs Urlichs
+- [✔️][✔️] ♾️ 91 > [Team Topologies and Platform Engineering](2024/day90.md) - Joep Piscaer

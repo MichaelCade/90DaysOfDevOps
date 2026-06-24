@@ -1,0 +1,9 @@
+http_port: 8000
+https_port: 4443
+html_welcome_msg: "Hello 90DaysOfDevOps - Welcome to Day 68!"
+
+mysql_user_name: root
+mysql_user_password: vagrant
+db_user: devops
+db_pass: DevOps90
+db_name: 90DaysOfDevOps

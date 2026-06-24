@@ -1,0 +1,19 @@
+- name: "Install Common packages"
+  apt: name={{ item }} state=latest
+  with_items:
+   - python3-pip
+   - mysql-client
+   - python3-mysqldb
+   - libmysqlclient-dev
+
+- name: Ensure mysql-server is installed latest version
+  apt: name=mysql-server state=latest
+
+- name: Installing python module MySQL-python
+  pip:
+    name: PyMySQL
+
+- name: Ensure mysql-server is running
+  service:
+    name: mysql
+    state: started

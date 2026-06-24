@@ -1,0 +1,12 @@
+    upstream webservers {
+        server 192.168.169.131:8000;
+        server 192.168.169.132:8000;
+    }
+
+    server {
+        listen 80;
+
+        location / {   
+                proxy_pass http://webservers;
+        }
+    }

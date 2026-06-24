@@ -1,0 +1,8 @@
+apm-server:
+  host: 0.0.0.0:8200
+
+output:
+  elasticsearch:
+    hosts: ['http://elasticsearch:9200']
+    username: elastic
+    password: ${ELASTIC_PASSWORD}

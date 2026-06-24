@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pacman-ingress
+  namespace: pacman
+spec:
+  rules:
+  - host: pacman.com
+    http:
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: pacman
+              port: 
+                number: 80

@@ -1,0 +1,9 @@
+- name: Simple Play
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: Ping me
+      ping:
+    - name: print os
+      debug:
+        msg: "{{ ansible_os_family }}"

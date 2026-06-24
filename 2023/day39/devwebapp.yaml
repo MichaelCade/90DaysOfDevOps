@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: devwebapp
+  labels:
+    app: devwebapp
+  annotations:
+    vault.hashicorp.com/agent-inject: "true"
+    vault.hashicorp.com/role: "devweb-app"
+    vault.hashicorp.com/agent-inject-secret-credentials.txt: "secret/data/devwebapp/config"
+spec:
+  serviceAccountName: internal-app
+  containers:
+    - name: devwebapp
+      image: jweissig/app:0.0.1

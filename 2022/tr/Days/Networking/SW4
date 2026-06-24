@@ -1,0 +1,58 @@
+enable 
+configure terminal 
+
+hostname SW4
+
+aaa new-model
+aaa session-id unique
+aaa authentication login default local
+aaa authorization exec default local none
+vtp mode transparent
+vlan 10,20,30,40,50,60,70,80,90,100,200
+
+int gig0/0
+ no switchport
+ no shut
+ ip address 10.10.88.114 255.255.255.0
+
+lldp run
+
+enable password access123
+username admin password access123
+no ip domain-lookup
+
+ip domain-name 90DaysOfDevOps.net
+ip ssh version 2
+ip scp server enable
+crypto key generate rsa general-keys modulus 1024
+
+snmp-server community public RW
+snmp-server trap link ietf
+snmp-server enable traps snmp linkdown linkup
+snmp-server enable traps syslog
+snmp-server manager
+
+logging history debugging
+logging snmp-trap emergencies
+logging snmp-trap alerts
+logging snmp-trap critical
+logging snmp-trap errors
+logging snmp-trap warnings
+logging snmp-trap notifications
+logging snmp-trap informational
+logging snmp-trap debugging
+
+line con 0
+exec-timeout 0 0
+privilege level 15
+logging synchronous
+
+line vty 0 15
+ exec-timeout 0 0
+ logging synchronous
+ login local
+ transport input all
+ privilege level 15
+
+do copy run start
+end
