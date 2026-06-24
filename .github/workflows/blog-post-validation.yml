@@ -80,7 +80,9 @@ jobs:
                       if date_match:
                           date_value = date_match.group(1).strip()
                           try:
-                              datetime.strptime(date_value, "%Y-%m-%d")
+                              post_date = datetime.strptime(date_value, "%Y-%m-%d").date()
+                              if post_date > datetime.now().date():
+                                  errors.append("Date cannot be in the future.")
                           except ValueError:
                               errors.append("Invalid date format. Expected YYYY-MM-DD.")
 
