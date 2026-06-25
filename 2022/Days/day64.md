@@ -58,10 +58,20 @@ However, remember I said you will need to have SSH available to enable Ansible t
 ![](Images/Day64_config6.png)
 
 I have now also started adding some additional hosts to our inventory, another name for this file as this is where you are going to define all of your devices, could be network devices, switches and routers for example also would be added here and grouped. In our hosts file though I have also added my credentials for accessing the Linux group of systems.
+Troubleshooting: SSH Host Key Checking Error
+If Ansible fails to connect and you see an error like:
+
+`Using a SSH password instead of a key is not possible because Host Key checking is enabled and sshpass does not support this. 
+Please add this host's fingerprint to your known_hosts file to manage this host.`
+
+This happens often in lab environments such as Vagrant where host keys frequently change.
+To bypass host key checking temporarily (for testing only), run:
+
+`export ANSIBLE_HOST_KEY_CHECKING=False`
 
 ![](Images/Day64_config7.png)
 
-Now if we run `ansible Linux -m ping` we get success as per below.
+Now if we run `ansible linux -m ping` we get success as per below.
 
 ![](Images/Day64_config8.png)
 
@@ -69,7 +79,7 @@ We then have the node requirements, these are the target systems you wish to aut
 
 ### Ansible Commands
 
-You saw that we were able to run `ansible Linux -m ping` against our Linux machine and get a response, basically, with Ansible we can run many ad-hoc commands. But you can run this against a group of systems and get that information back. [ad hoc commands](https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html)
+You saw that we were able to run `ansible linux -m ping` against our Linux machine and get a response, basically, with Ansible we can run many ad-hoc commands. But you can run this against a group of systems and get that information back. [ad hoc commands](https://docs.ansible.com/ansible/latest/user_guide/intro_adhoc.html)
 
 If you find yourself repeating commands or even worse you are having to log into individual systems to run these commands then Ansible can help there. For example, the simple command below would give us the output of all the operating system details for all of the systems we add to our Linux group.
 `ansible linux -a "cat /etc/os-release"`
