@@ -93,6 +93,6 @@ I want to come back to Prometheus but for now, I think we need to think about Lo
 - [Top 5 - DevOps Monitoring Tools](https://www.youtube.com/watch?v=4t71iv_9t_4)
 - [How Prometheus Monitoring works](https://www.youtube.com/watch?v=h4Sl21AKiDg)
 - [Introduction to Prometheus monitoring](https://www.youtube.com/watch?v=5o37CGlNLr8)
-- [Promql cheat sheet with examples](https://www.containiq.com/post/promql-cheat-sheet-with-examples)
+- [Promql cheat sheet with examples](https://prometheus.io/docs/prometheus/latest/querying/basics/)
 
 See you on [Day 79](day79.md)

@@ -62,7 +62,7 @@ La gestión de registros es un aspecto clave de la observabilidad general de tus
 - [Top 5 - DevOps Monitoring Tools](https://www.youtube.com/watch?v=4t71iv_9t_4)
 - [How Prometheus Monitoring works](https://www.youtube.com/watch?v=h4Sl21AKiDg)
 - [Introduction to Prometheus monitoring](https://www.youtube.com/watch?v=5o37CGlNLr8)
-- [Promql cheat sheet with examples](https://www.containiq.com/post/promql-cheat-sheet-with-examples)
+- [Promql cheat sheet with examples](https://prometheus.io/docs/prometheus/latest/querying/basics/)
 - [Log Management for DevOps | Manage application, server, and cloud logs with Site24x7](https://www.youtube.com/watch?v=J0csO_Shsj0)
 - [Log Management what DevOps need to know](https://devops.com/log-management-what-devops-teams-need-to-know/)
 - [What is ELK Stack?](https://www.youtube.com/watch?v=4X0WLg05ASw)
