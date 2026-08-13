@@ -162,7 +162,7 @@ Esta obra está licenciada sob
 
 ## Histórico de estrelas
 
-[![Star History Chart](https://api.star-history.com/svg?repos=MichaelCade/90DaysOfDevOps&type=Timeline)](https://star-history.com/#MichaelCade/90DaysOfDevOps&Timeline)
+[![Star History Chart](https://star-history.dera.page/svg?repos=MichaelCade/90DaysOfDevOps&type=Timeline)](https://star-history.dera.page/#MichaelCade/90DaysOfDevOps&Timeline)
 
 [cc-by-nc-sa]: http://creativecommons.org/licenses/by-nc-sa/4.0/
 [cc-by-nc-sa-image]: https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png
